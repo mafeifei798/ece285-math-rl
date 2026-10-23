@@ -1,0 +1,41 @@
+{
+  "version": "b_fix_integration_20261021",
+  "training_authorized_in_this_task": false,
+  "source_hashes": {
+    "experiments/b_fix_integration_20261021/README.txt": "d312098f238c183bcfa84a20bb36bc4939786e036dba83da425d641083db00f2",
+    "experiments/b_fix_integration_20261021/bounded_advantage.py": "f9f6b40b49f2400bc4d5de4f3ac65a4cd4394fac2a062389ddef2f23adaaff83",
+    "experiments/b_fix_integration_20261021/build_training_version.py": "06e220062ed11d1c3ca019d9b5b60c4637801f54c871d441a3d1473cbc1a6468",
+    "experiments/b_fix_integration_20261021/replay.py": "d84837b342f7250960c76924c2a54a266105a9549872e8b9771cf5da320687bc",
+    "experiments/b_fix_integration_20261021/rewards.py": "a3e1ab067d4510209b676dc0678715e8dcdb657fdb9a2e5a5436c246df944033",
+    "experiments/b_fix_integration_20261021/trainer.py": "36b7f97378e988203c6a19771f51bb79a65b71f402f9b199251e4d725865590f",
+    "experiments/b_fix_integration_20261021/vendor/grpo_trainer_0_23_1.py": "f217183c84be9b38b23454920eb1b914726aa3c4b9dd4c076d455bdaa67bf1b8",
+    "experiments/b_fix_integration_20261021/vendor/trl_utils_0_23_1.py": "07cccc9023d60528544390d70efc0a505d2dc1e92473133c045d33f7ed976360",
+    "experiments/b_qwen7b_6m_20261021/frozen_prm.py": "575ff18cfb511c15763199db127cd4989e12243994d7016c590ef289692f8735",
+    "experiments/b_qwen7b_6m_20261021/support.py": "ebb6a1dc1f981a0d3b122d6c83f900a656c183c8055a494d5e4ad63900940ef5",
+    "experiments/qwen7b_offline_20261021/core.py": "0d9bf018e7e8054f5c991a81c346a7dd37688dc68ef45384e8531c7dffd9dcab",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/source_manifest.json": "ee3cbcc88f761c33cc376957c2768db6b2b213c72facaa5e810c8b92646c26c7",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training/common.py": "d7b19e2cfff0db5097b5dc6d2df6b85d391e1718657dcb85bf042e4351a95174",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training/reward.py": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training_b/prm_reward.py": "0da9a07f046d2aba064245e0046944833c6e6ddeca1aa0f01b518d456fe64078",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training_b/train_b.py": "7c264e0b419effa7871a6b503c515a0353bfd7d48bc6a4d7ba5ff47805c483ac",
+    "experiments/reward_repair_v2_20261021/v2core.py": "553030153f9019fdb94ab0fb50873b4bcbcfe18df6d9177c964ee5ff7c5e5d14",
+    "experiments/reward_repair_v3_20261021/repairs.py": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+    "training/baseline_config.json": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+    "training/common.py": "d7b19e2cfff0db5097b5dc6d2df6b85d391e1718657dcb85bf042e4351a95174",
+    "training/reward.py": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+    "training/train_baseline.py": "407505f628f0731adb8c668f47f0ef691b761362d670e456823c7ec998be3cd5",
+    "data/prepared/train.jsonl": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",
+    "experiments/b_fix_integration_20261021/verify_release.py": "ac1c960606aa2b26ede1757a9fe7d18189a02767317defd99adc14642724bd76"
+  },
+  "replay_input_hashes": {
+    "combined.jsonl": "f30a8e8e6bcfa9f8fc744c58bed49cd84d50e138c949ec370709fee55f4ef897",
+    "paired_scores.jsonl": "f50e63cc90c5e3e7efa742104671173be0bcd2c30238950c2303b7fd9f69b0d6",
+    "unit_metadata.json": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+    "rollouts.jsonl": "a4f44bc233940c93532ab9c8df4529b95c8bea42b391a9b17409b074725d39bf",
+    "train.jsonl": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e"
+  },
+  "trusted_runtime_inputs": {
+    "runs/A_seed17/checkpoint-280/training_args.bin": "b7ae255392a6c8a59d9f0ab8d0b183803c24aa0eed067ce8ae059954b86d0f93",
+    "receipts/assets.json": "34724eedd77820c8b02d4dd4c4fd7cb7f52aad907b3546d7f9c0806379958239"
+  }
+}

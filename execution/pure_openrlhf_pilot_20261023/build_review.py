@@ -1,0 +1,28 @@
+import html,json,pathlib
+H=pathlib.Path(__file__).resolve().parent
+s=json.loads((H/'latest_snapshot.json').read_text())
+esc=lambda x:html.escape(str(x))
+rows=[]
+for arm,a in s['arms'].items():
+ st=a['status'] or {}; ds=a['diagnostics']; n=sum(x['diagnostic']['rows'] for x in ds)
+ metric=lambda key:sum(x['diagnostic']['counts'][key] for x in ds)
+ rate=lambda value:f'{100*value/n:.1f}%' if n else '待产生'
+ correct=sum(x['diagnostic']['outcomes']['correct'] for x in ds)
+ rows.append('<tr>'+''.join(f'<td>{esc(x)}</td>' for x in [arm,st.get('status','待运行'),st.get('batch_step',0),st.get('tokens',0),rate(metric('empty')),rate(metric('short')),rate(metric('truncated')),rate(correct)])+'</tr>')
+gates='；'.join(f'第{k.removeprefix("gate_").removesuffix(".json")}批：通过' for k in s['gates']) or '真实更新门槛尚未完成'
+comparison=('<pre>'+esc(json.dumps(s['comparison'],ensure_ascii=False,indent=2))+'</pre>') if s['comparison'] else '<p>完整配对评测尚未完成，当前不能判断 P-PRM 是否优于 P-VR。</p>'
+body=f'''<!doctype html><html lang="zh"><meta charset="utf-8"><title>PURE 小规模配对试验</title><style>
+body{{font:16px/1.7 system-ui,-apple-system,sans-serif;background:#f4f6f8;color:#17212b;margin:0}}main{{max-width:1100px;margin:40px auto;padding:0 26px}}h1{{font-size:30px}}h2{{font-size:21px;margin-top:30px}}.card{{background:white;border:1px solid #dce3e9;border-radius:12px;padding:24px;margin:18px 0}}table{{width:100%;border-collapse:collapse;font-size:14px}}th,td{{text-align:left;border-bottom:1px solid #e4e9ed;padding:12px 8px}}th{{background:#eef3f7}}.tag{{color:#375672;font-size:14px}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}}a{{color:#285c88}}li{{margin:7px 0}}</style><main>
+<p class="tag">ECE285 · 独立实验版本 · seed17 · 不自动扩到600万 token</p><h1>纯结果奖励 vs 纯过程奖励：先跑小规模对照</h1>
+<p>状态采集：{esc(s['utc'])}（UTC）；控制器：{esc(s['controller']['status'])}。</p>
+<section class="card"><h2>真实进度</h2><table><tr><th>组别</th><th>状态</th><th>完成批次</th><th>训练 token</th><th>空回答</th><th>≤32 token</th><th>截断</th><th>训练采样答对率</th></tr>{''.join(rows)}</table><p>{esc(gates)}。</p><p>表中是截至当前已提交批次的训练输出统计，不是测试准确率。短回答包含正确简短解答，不能直接视为投机。</p></section>
+<section class="card"><h2>这轮只回答三个问题</h2><ol><li>纯 PRM 是否逐渐鼓励空白、缺答案的短输出？记录真实输出、PRM 分数和送入 loss 的 advantage。</li><li>PRM 奖励改善时，实际数学准确率是否也改善？最后统一评测 MATH500 和 GSM8K。</li><li>若没有明显退化或投机，是否有足够依据再扩大预算？本轮不自动启动600万 token。</li></ol></section>
+<section class="card"><h2>两组如何公平比较</h2><p>相同 Qwen2.5-Math-1.5B 基座、零初始化 LoRA、seed17、题目顺序、采样数、学习率和优化器。P-VR 只用最终答案结果；P-PRM 只用官方 PURE-PRM-7B。两组共享官方 OpenRLHF 信号与 loss 路径、KL 和单次归一化。</p><p>每批4题×8回答，每组最多40批，保留第2/10/20/40批。固定更新数和题数，而非固定实际 token：避免短输出额外获得更新。预计每组约100万训练 token；理论上限262万。评测生成与 PRM 成本另外统计。</p><p>第2批先核验真实更新、冻结参数、初始样本一致和 advantage 只归一化一次。权重以独立副本同步到 vLLM，避免 BF16 merge/unmerge 改动冻结基座。旧 A/B、veRL 和无更新联调结果均保留。</p></section>
+<section class="card"><h2>停止规则与结论边界</h2><p>在第10/20/40批检查：连续两个不重叠的5批窗口均出现空回答≥25%，或短且无法可靠提取完整答案≥50%，则两组停在相同批次做评测。短且答对不触发停止。数值异常或冻结参数变化则按技术故障停止，保留证据。</p><p>64题验证曲线只作描述，存在已知 PRM800K 覆盖，不选最优 checkpoint。最终用固定共同 checkpoint 完整评测500+1319题，提供配对置信区间。单 seed、小预算能排查退化，不能保证检出微小提升，也不是官方分布式配置的完整复现。</p></section>
+<section class="card"><h2>最终配对结果</h2>{comparison}</section>
+<section class="card"><h2>早期短回答人工核对（09:23 UTC）</h2><p>P-VR 前2批的64条回答中：空回答0，≤32 token回答2，截断8。两条短回答分别报243和9，标准答案77，均为错误。它们的平均 advantage 约+0.190和+0.185，同组6条长错答也约+0.198至+0.204。因此需继续观察，但不能把此现象归因于 PRM，也不能凭两条样本认定已形成短答投机。</p><p>当时 P-PRM 尚无完成的更新批次，不能判断其退化与否。P-VR 两批各耗时255和263秒；共享 GPU 下，全程剩余训练加评测暂估8–12小时，待 P-PRM 实测后更新。这个估计不是完成承诺。</p><p><a href="status_analysis_20261023T092327Z.json">原文样例与检查记录</a></p></section>
+<section class="card"><h2>真实 PRM 信号预警（09:45 UTC）</h2><p>两臂第2批共同验收已通过，初始化和首批样本完全一致，P-VR 已从 checkpoint 续跑。P-PRM 前64条输出没有空回答，但第2批有3条短且未答对的输出被正向强化：直接报243、报9（标准答案77），以及在题目完整时要求补充题目。</p><p>三条原生 PRM 分数约0.738 / 0.895 / 0.809，进入 loss 的平均 advantage 为+1.00 / +1.58 / +1.34；未重复归一化。它们占该批正的逐回答平均 advantage 之和约27.9%，这不是梯度范数比例。它证明当前过程信号会误奖励，但两步不足以判定投机趋势或准确率下降。保持既定试验设置继续观察。</p><p><a href="prm_short_signal_warning_20261023T0945.json">原文、PRM分数和实际训练信号</a></p></section>
+<section class="card"><h2>更新与采样精度的额外检查</h2><p>独立 CPU 核验发现，P-VR 第一步的首层 q_proj / gate_proj 中，BF16 合并后分别仅约0.0287% / 0.0368%的权重元素发生可表示变化。LoRA 参数确实更新，但微小增量在采样副本中受到舍入影响。两组共享此实现；这不能推断整网输出不变或40步无学习，解释小预算的阴性结果时必须保留这一限制，不据此中途改学习率或奖励。</p><p><a href="first_update_independent_review.json">首批实际更新独立验收</a> · <a href="merge_precision_check.json">BF16 合并精度证据</a></p></section>
+<p><a href="signal_decomposition_review.html">三条短回答的PRM / baseline / advantage精确拆解</a></p><p><a href="CONTINUATION.txt">继续执行说明</a> · <a href="latest_snapshot.json">原始状态证据</a> · <a href="../../experiments/pure_openrlhf_pilot_20261023/protocol.json">冻结实验设置</a></p></main></html>'''
+(H/'review.html').write_text(body)
+print(H/'review.html')

@@ -1,0 +1,75 @@
+{
+  "repository": "CJReinforce/PURE",
+  "branch": "openrlhf",
+  "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+  "downloaded_utc": "2026-10-23T07:48:44.210418+00:00",
+  "mode": "read_only_source_snapshot_no_code_execution",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 11343,
+      "sha256": "480d5d974a3c42965b3fad1199f5e298ffb7b4000650a27eaae64ec2f8296a17",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/README.md"
+    },
+    {
+      "path": "examples/scripts/train_pure.sh",
+      "bytes": 1457,
+      "sha256": "71100bfa923377d6f03241907f097b5cf3c53b551a270a8d83dc326759422a9f",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/examples/scripts/train_pure.sh"
+    },
+    {
+      "path": "openrlhf/cli/train_pure_ray.py",
+      "bytes": 14648,
+      "sha256": "3d4967c8014247cbbaf01bce575c3ed37f242aa483e488e04e9fca70d15f20ef",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/cli/train_pure_ray.py"
+    },
+    {
+      "path": "openrlhf/models/actor.py",
+      "bytes": 10784,
+      "sha256": "201ddd61a0dc68d1378b02c23e99151f71f6236e9ef25d06b6bed8f33f5129d2",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/models/actor.py"
+    },
+    {
+      "path": "openrlhf/trainer/pure_trainer.py",
+      "bytes": 20075,
+      "sha256": "84115c07708973fa8233492895ed156777b6f60a9596dfd1bfaade7d254b30d9",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/pure_trainer.py"
+    },
+    {
+      "path": "openrlhf/trainer/ray/ppo_actor.py",
+      "bytes": 23265,
+      "sha256": "abaecd5db880326b38133cd83d0a2913decb491f7d2b82414e32c3ea5a15f5b3",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ray/ppo_actor.py"
+    },
+    {
+      "path": "openrlhf/trainer/ppo_utils/experience_maker.py",
+      "bytes": 51954,
+      "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py"
+    },
+    {
+      "path": "openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "bytes": 8272,
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/replay_buffer.py"
+    },
+    {
+      "path": "openrlhf/datasets/prompts_dataset.py",
+      "bytes": 1933,
+      "sha256": "8d84a8c0cff3f29feb6fb166213139d97c79f5bb77085ebb51fb58b75be5d743",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/datasets/prompts_dataset.py"
+    },
+    {
+      "path": "data/filter_math_answers.py",
+      "bytes": 695,
+      "sha256": "bd3d8525425525dee50e1af8897b4dd69e6989b157f7c8b04dd58327421c92fa",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/data/filter_math_answers.py"
+    },
+    {
+      "path": "openrlhf/models/loss.py",
+      "bytes": 13007,
+      "sha256": "9238e0aa7bc71ef33e346fa54d40bfdaad44849b7b03ac45879bd6346d4b1347",
+      "source": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/models/loss.py"
+    }
+  ]
+}

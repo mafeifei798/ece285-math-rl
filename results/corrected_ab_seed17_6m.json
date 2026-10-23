@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-10-22T14:49:40.067991+00:00",
+  "run_status": "completed",
+  "scope": "Corrected-only A/B, seed17, 6M generated completion tokens per arm; no new reward/loss.",
+  "all_three_independent_audits_passed": true,
+  "datasets": {
+    "math500": {
+      "A_correct": 270,
+      "B_correct": 269,
+      "n": 500,
+      "A_accuracy": 0.54,
+      "B_accuracy": 0.538,
+      "B_minus_A_pp": -0.2,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.0,
+        3.5999999999999996
+      ],
+      "A_only_correct": 47,
+      "B_only_correct": 46
+    },
+    "gsm8k": {
+      "A_correct": 884,
+      "B_correct": 857,
+      "n": 1319,
+      "A_accuracy": 0.6702047005307051,
+      "B_accuracy": 0.6497346474601972,
+      "B_minus_A_pp": -2.047005307050796,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.245640636846096,
+        0.0758150113722517
+      ],
+      "A_only_correct": 120,
+      "B_only_correct": 93
+    }
+  },
+  "qualitative_case_review": {
+    "loss_stratum": {
+      "body_correct_stale_box": 31,
+      "body_math_error": 8,
+      "ambiguous": 5
+    },
+    "gain_stratum": {
+      "body_correct_stale_box": 6,
+      "ambiguous": 1
+    },
+    "status": "Assistant qualitative review; post-hoc selected stratum; official rewards unchanged."
+  },
+  "limitations": [
+    "One training seed; paired question intervals exclude training-seed variability.",
+    "No significant advantage for B established, and no equivalence established.",
+    "Checked implementation fidelity is not proof that the verifier or PRM has perfect mathematical validity.",
+    "No causal attribution of the accuracy gap to PRM misses, normalization or stale boxes."
+  ],
+  "no_new_training_or_model_generation": true
+}

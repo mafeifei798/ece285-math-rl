@@ -1,0 +1,85 @@
+{
+  "experiment": "pure_openrlhf_pilot_20261023",
+  "controller": "runs/PURE_OpenRLHF_pair_pilot_seed17_20261023",
+  "runs": {
+    "P_VR": "runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023",
+    "P_PRM": "runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023"
+  },
+  "stage_targets": [
+    2,
+    10,
+    20,
+    40
+  ],
+  "gpu": 1,
+  "seed": 17,
+  "authorization": "User authorized a small P-VR/P-PRM training comparison; no automatic expansion to 6M.",
+  "initial": "common Qwen2.5-Math-1.5B base and seed17 zero LoRA, never old trained A/B",
+  "control": {
+    "batch_steps": 40,
+    "questions_per_batch": 4,
+    "samples_per_question": 8,
+    "total_responses_per_arm": 1280,
+    "max_new_tokens": 2048,
+    "hard_max_generated_tokens_per_arm": 2621440,
+    "expected_tokens_per_arm_approx": 1000000,
+    "matching": "same prompt order, rollout batch count, samples, initialization and optimizer; actual tokens and walltime reported separately"
+  },
+  "optimizer": {
+    "type": "torch.optim.AdamW",
+    "learning_rate": 5e-07,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "schedule": "constant",
+    "updates_per_batch": 1,
+    "microbatch_responses": 1,
+    "accumulation_responses": 32,
+    "source": "official train_pure.sh LR5e-7, CLI betas .9/.95 and clip1; single-card torch optimizer replaces DeepSpeed"
+  },
+  "signal": {
+    "source": "immutable pure_openrlhf_integration_20261023, official pin41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+    "kl": 0.001,
+    "kl_estimator": "k1",
+    "normalization": "official replay buffer exactly once",
+    "loss": "official PolicyLoss clip.2",
+    "new_rewards": false
+  },
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "min_tokens": 1,
+    "max_tokens": 2048,
+    "skip_special_tokens": false,
+    "include_stop_str_in_output": true,
+    "response_seed": "17 + 32 * zero_based_batch_index + row_index; eight distinct seeds per question; same schedule across arms"
+  },
+  "checkpointing": "atomic checkpoint every batch, with LoRA/optimizer/RNG/counters; verify all hashes before resume; do not regenerate completed batches",
+  "monitoring": {
+    "short_content_tokens": 32,
+    "stop_only_at_common_stages": [
+      10,
+      20,
+      40
+    ],
+    "collapse": "in BOTH adjacent non-overlapping last-5-batch windows: decoded-empty >=25%, OR (short<=32 content tokens AND no reliably parsed answer) >=50%; short correct answers alone never trigger",
+    "technical_stop": "nonfinite, frozen parameter drift, wrong boundary/duplicate normalization, or all-zero undefined official normalization: save failure, stop; no invented reward, resampling or hidden skip"
+  },
+  "evaluation": {
+    "validation": "fixed 64 of existing policy-held-out validation set at steps0,10,20,40; descriptive only, PRM800K overlap disclosed",
+    "final": "same common-stage checkpoint, greedy MATH500500 and GSM8K1319, original repaired verifier/prompt/cap, no PRM reranking",
+    "selection": "never select best test checkpoint; if either arm collapses, stop BOTH at shared completed stage",
+    "uncertainty": "paired question bootstrap95CI, single training seed; small differences or interval spanning0 are inconclusive"
+  },
+  "runtime": {
+    "backend": "single-card LoRA/vLLM setup only; official OpenRLHF signal/loss functions",
+    "sync": "FP32 merged COPIES to vLLM; never merge/unmerge live actor, frozen reference remains unchanged",
+    "shared_gpu": true
+  },
+  "preserved": "all old A/B and veRL/OpenRLHF no-update artifacts remain immutable"
+}

@@ -1,0 +1,724 @@
+{
+  "scope": "Bounded post-B pilot; no policy training, no claim of improved actor accuracy, no formal resource-gate decision",
+  "config_sha256": "3c39affff22dc243dc79dc6186b69172cf7dba6f9b6724a8ead627d8e61c3144",
+  "batch_manifest": {
+    "counts": {
+      "fail": 34,
+      "success": 19,
+      "anchor_positive": 64,
+      "anchor_negative": 64
+    },
+    "schedule": [
+      {
+        "fail": 14,
+        "success": 12,
+        "anchor_positive": 13,
+        "anchor_negative": 41
+      },
+      {
+        "fail": 18,
+        "success": 1,
+        "anchor_positive": 47,
+        "anchor_negative": 32
+      },
+      {
+        "fail": 20,
+        "success": 4,
+        "anchor_positive": 28,
+        "anchor_negative": 24
+      },
+      {
+        "fail": 4,
+        "success": 14,
+        "anchor_positive": 11,
+        "anchor_negative": 39
+      },
+      {
+        "fail": 29,
+        "success": 11,
+        "anchor_positive": 24,
+        "anchor_negative": 58
+      },
+      {
+        "fail": 28,
+        "success": 3,
+        "anchor_positive": 45,
+        "anchor_negative": 59
+      },
+      {
+        "fail": 1,
+        "success": 0,
+        "anchor_positive": 14,
+        "anchor_negative": 48
+      },
+      {
+        "fail": 31,
+        "success": 5,
+        "anchor_positive": 7,
+        "anchor_negative": 50
+      },
+      {
+        "fail": 2,
+        "success": 6,
+        "anchor_positive": 27,
+        "anchor_negative": 47
+      },
+      {
+        "fail": 6,
+        "success": 15,
+        "anchor_positive": 15,
+        "anchor_negative": 42
+      },
+      {
+        "fail": 10,
+        "success": 17,
+        "anchor_positive": 43,
+        "anchor_negative": 34
+      },
+      {
+        "fail": 27,
+        "success": 10,
+        "anchor_positive": 39,
+        "anchor_negative": 22
+      },
+      {
+        "fail": 23,
+        "success": 7,
+        "anchor_positive": 60,
+        "anchor_negative": 15
+      },
+      {
+        "fail": 15,
+        "success": 16,
+        "anchor_positive": 2,
+        "anchor_negative": 0
+      },
+      {
+        "fail": 16,
+        "success": 8,
+        "anchor_positive": 49,
+        "anchor_negative": 8
+      },
+      {
+        "fail": 32,
+        "success": 18,
+        "anchor_positive": 38,
+        "anchor_negative": 62
+      },
+      {
+        "fail": 13,
+        "success": 13,
+        "anchor_positive": 57,
+        "anchor_negative": 16
+      },
+      {
+        "fail": 12,
+        "success": 9,
+        "anchor_positive": 9,
+        "anchor_negative": 2
+      },
+      {
+        "fail": 7,
+        "success": 2,
+        "anchor_positive": 44,
+        "anchor_negative": 61
+      },
+      {
+        "fail": 0,
+        "success": 16,
+        "anchor_positive": 35,
+        "anchor_negative": 43
+      },
+      {
+        "fail": 3,
+        "success": 10,
+        "anchor_positive": 63,
+        "anchor_negative": 55
+      },
+      {
+        "fail": 8,
+        "success": 4,
+        "anchor_positive": 41,
+        "anchor_negative": 44
+      },
+      {
+        "fail": 21,
+        "success": 7,
+        "anchor_positive": 52,
+        "anchor_negative": 9
+      },
+      {
+        "fail": 17,
+        "success": 14,
+        "anchor_positive": 53,
+        "anchor_negative": 6
+      },
+      {
+        "fail": 25,
+        "success": 2,
+        "anchor_positive": 34,
+        "anchor_negative": 5
+      },
+      {
+        "fail": 22,
+        "success": 17,
+        "anchor_positive": 55,
+        "anchor_negative": 11
+      },
+      {
+        "fail": 24,
+        "success": 5,
+        "anchor_positive": 5,
+        "anchor_negative": 53
+      },
+      {
+        "fail": 5,
+        "success": 9,
+        "anchor_positive": 62,
+        "anchor_negative": 19
+      },
+      {
+        "fail": 9,
+        "success": 12,
+        "anchor_positive": 26,
+        "anchor_negative": 7
+      },
+      {
+        "fail": 11,
+        "success": 8,
+        "anchor_positive": 18,
+        "anchor_negative": 17
+      },
+      {
+        "fail": 30,
+        "success": 18,
+        "anchor_positive": 23,
+        "anchor_negative": 45
+      },
+      {
+        "fail": 19,
+        "success": 3,
+        "anchor_positive": 54,
+        "anchor_negative": 10
+      }
+    ],
+    "buffer_sha256": "44259ae8bff050a60d79f5248c321d34a4774b187198f2d00ca26381f499c702",
+    "anchors_sha256": "8956e3ad382596079a178581e802f75fb3aec693152a176d4ab8e4fa1c2d2876",
+    "config_sha256": "3c39affff22dc243dc79dc6186b69172cf7dba6f9b6724a8ead627d8e61c3144",
+    "component_reduction": "Separate component means, summed; anchors mean of positive and negative; no reaveraging when c=0"
+  },
+  "wiring": {
+    "passed": true,
+    "identical_initialization": true,
+    "identical_batch_manifest": true,
+    "first_unclipped_gradient_C_minus_D_equals_success_gradient": true,
+    "max_absolute_error": 3.725290298461914e-08,
+    "note": "Gradient equality checked at common initialization, before parameter divergence or clipping."
+  },
+  "known_error_cases": [
+    {
+      "row_index": 78,
+      "problem_id": "math/train/algebra/109",
+      "question": "The equation $a^7xy-a^6y-a^5x=a^4(b^4-1)$ is equivalent to the equation $(a^mx-a^n)(a^py-a^2)=a^4b^4$ for some integers $m$, $n$, and $p$.  Find $mnp$.",
+      "completion": " \\boxed{-70}",
+      "gold": "24",
+      "answer": "-70",
+      "saved_B_gpu_min": 0.9889812469482422,
+      "same_FP32_GPU_backend": {
+        "B": {
+          "min_score": 0.9877589344978333,
+          "reward": 0.19755178689956665,
+          "advantage": 2.1171391010284424,
+          "group_rank_among_valid": 1
+        },
+        "C": {
+          "min_score": 0.9857219457626343,
+          "reward": 0.19714438915252686,
+          "advantage": 2.204132318496704,
+          "group_rank_among_valid": 1
+        },
+        "D": {
+          "min_score": 0.9561664462089539,
+          "reward": 0.19123328924179078,
+          "advantage": 2.4233360290527344,
+          "group_rank_among_valid": 1
+        }
+      }
+    },
+    {
+      "row_index": 2095,
+      "problem_id": "math/train/intermediate_algebra/207",
+      "question": "Let $f(x)$ and $g(x)$ be nonzero polynomials such that\n\\[f(g(x)) = f(x) g(x).\\]If $g(2) = 37,$ find $g(x).$",
+      "completion": " \\boxed{g(x) = 2x^2-3}",
+      "gold": "x^2 + 33x - 33",
+      "answer": "g(x) = 2x^2-3",
+      "saved_B_gpu_min": 0.9791356921195984,
+      "same_FP32_GPU_backend": {
+        "B": {
+          "min_score": 0.9771628379821777,
+          "reward": 0.19543256759643557,
+          "advantage": 2.4428839683532715,
+          "group_rank_among_valid": 1
+        },
+        "C": {
+          "min_score": 0.9746221303939819,
+          "reward": 0.1949244260787964,
+          "advantage": 2.4404940605163574,
+          "group_rank_among_valid": 1
+        },
+        "D": {
+          "min_score": 0.9192111492156982,
+          "reward": 0.18384222984313967,
+          "advantage": 2.467311382293701,
+          "group_rank_among_valid": 1
+        }
+      }
+    },
+    {
+      "row_index": 4975,
+      "problem_id": "math/train/intermediate_algebra/784",
+      "question": "The vertices of an equilateral triangle lie on the hyperbola $xy=1$, and a vertex of this hyperbola is the centroid of the triangle. What is the square of the area of the triangle?",
+      "completion": " \\boxed{ {3} \\times \\times \\times \\times \\times \\times \\times }\n\nI really dont understand it.\nThis is my first time posting in a math community. I hope am doing it because I really wanna understand it. \n\nWell, I have noticed you doing FTW problems. did you join AoPS a couple of times? if so, please use the search function.\nThe answer is $\\boxed{9\\sqrt{3}}$. (The link below gave me all the information I needed.)\n\nThanks. But I just dont know where to look it up. I already signed up for Alcumus AoPS\nThe search function is pretty standard. You can see it by searching. Just go to the header, and you see search results with the word written on top; clicking on it will bring you to the search results.\n\nOh ok, I understand now. Thank you so much!\nIt'd be $3\\sqrt{3}$ and there are many similar problems from the 2008 USAMO.",
+      "gold": "108",
+      "answer": "9\\sqrt{3}",
+      "saved_B_gpu_min": 0.966663122177124,
+      "same_FP32_GPU_backend": {
+        "B": {
+          "min_score": 0.9650774002075195,
+          "reward": 0.19301548004150393,
+          "advantage": 2.405278444290161,
+          "group_rank_among_valid": 1
+        },
+        "C": {
+          "min_score": 0.9628057479858398,
+          "reward": 0.19256114959716797,
+          "advantage": 2.386467695236206,
+          "group_rank_among_valid": 1
+        },
+        "D": {
+          "min_score": 0.9029226303100586,
+          "reward": 0.18058452606201172,
+          "advantage": 2.456129550933838,
+          "group_rank_among_valid": 1
+        }
+      }
+    }
+  ],
+  "fixed_group_strata": {
+    "mixed": {
+      "groups": 8,
+      "arms": {
+        "B": {
+          "mean_abs_advantage": 0.8019462823867798,
+          "mean_process_score_including_invalid_zero": 0.17174659712327411,
+          "positive_advantage_wrong_count": 0,
+          "negative_advantage_correct_count": 0
+        },
+        "C": {
+          "mean_abs_advantage": 0.8021811246871948,
+          "mean_process_score_including_invalid_zero": 0.18511494042468257,
+          "positive_advantage_wrong_count": 0,
+          "negative_advantage_correct_count": 0
+        },
+        "D": {
+          "mean_abs_advantage": 0.8039771318435669,
+          "mean_process_score_including_invalid_zero": 0.08238610528496793,
+          "positive_advantage_wrong_count": 0,
+          "negative_advantage_correct_count": 0
+        }
+      },
+      "C_D_mean_sign_agreement": 1.0,
+      "C_D_max_group_RMS": 0.05395877733826637
+    },
+    "all_correct": {
+      "groups": 8,
+      "arms": {
+        "B": {
+          "mean_abs_advantage": 0.724716067314148,
+          "mean_process_score_including_invalid_zero": 0.1742149239871651,
+          "positive_advantage_wrong_count": 0,
+          "negative_advantage_correct_count": 38
+        },
+        "C": {
+          "mean_abs_advantage": 0.7323850989341736,
+          "mean_process_score_including_invalid_zero": 0.2129474911489524,
+          "positive_advantage_wrong_count": 0,
+          "negative_advantage_correct_count": 37
+        },
+        "D": {
+          "mean_abs_advantage": 0.7196201086044312,
+          "mean_process_score_including_invalid_zero": 0.07758887961608707,
+          "positive_advantage_wrong_count": 0,
+          "negative_advantage_correct_count": 44
+        }
+      },
+      "C_D_mean_sign_agreement": 0.796875,
+      "C_D_max_group_RMS": 0.8166602849960327
+    },
+    "all_wrong": {
+      "groups": 8,
+      "arms": {
+        "B": {
+          "mean_abs_advantage": 0.7004514932632446,
+          "mean_process_score_including_invalid_zero": 0.11769901593652321,
+          "positive_advantage_wrong_count": 21,
+          "negative_advantage_correct_count": 0
+        },
+        "C": {
+          "mean_abs_advantage": 0.7082762718200684,
+          "mean_process_score_including_invalid_zero": 0.1264661087479908,
+          "positive_advantage_wrong_count": 22,
+          "negative_advantage_correct_count": 0
+        },
+        "D": {
+          "mean_abs_advantage": 0.6729286909103394,
+          "mean_process_score_including_invalid_zero": 0.06295082123324391,
+          "positive_advantage_wrong_count": 18,
+          "negative_advantage_correct_count": 0
+        }
+      },
+      "C_D_mean_sign_agreement": 0.9375,
+      "C_D_max_group_RMS": 0.23625309765338898
+    }
+  },
+  "outcome_proxy": {
+    "B": {
+      "answer_correct_vs_wrong_pair_accuracy_proxy": 0.4,
+      "pairs": 75,
+      "note": "Outcome correctness is not process correctness; descriptive proxy, excluding illustrative groups."
+    },
+    "C": {
+      "answer_correct_vs_wrong_pair_accuracy_proxy": 0.44,
+      "pairs": 75,
+      "note": "Outcome correctness is not process correctness; descriptive proxy, excluding illustrative groups."
+    },
+    "D": {
+      "answer_correct_vs_wrong_pair_accuracy_proxy": 0.4266666666666667,
+      "pairs": 75,
+      "note": "Outcome correctness is not process correctness; descriptive proxy, excluding illustrative groups."
+    }
+  },
+  "processbench_pilot": {
+    "requested": 96,
+    "scored": 96,
+    "excluded": [],
+    "strata_counts": {
+      "answer_correct_valid": 32,
+      "answer_correct_invalid": 32,
+      "answer_wrong_invalid": 32
+    },
+    "point_estimates": {
+      "B": {
+        "answer_correct_validity_auc": 0.673828125,
+        "valid_chain_acceptance": 0.1875,
+        "first_error_localization": 0.421875,
+        "harmonic_mean": 0.25961538461538464,
+        "mean_score_valid": 0.26962566818110645,
+        "mean_score_invalid": 0.18593951022194233
+      },
+      "C": {
+        "answer_correct_validity_auc": 0.681640625,
+        "valid_chain_acceptance": 0.21875,
+        "first_error_localization": 0.390625,
+        "harmonic_mean": 0.28044871794871795,
+        "mean_score_valid": 0.30191740253940225,
+        "mean_score_invalid": 0.20118421743973158
+      },
+      "D": {
+        "answer_correct_validity_auc": 0.693359375,
+        "valid_chain_acceptance": 0.0,
+        "first_error_localization": 0.390625,
+        "harmonic_mean": 0.0,
+        "mean_score_valid": 0.12377077265409753,
+        "mean_score_invalid": 0.0686377628808259
+      }
+    },
+    "intervals_95": {
+      "B": {
+        "answer_correct_validity_auc": [
+          0.5373450328407224,
+          0.8060524762243643
+        ],
+        "valid_chain_acceptance": [
+          0.0625,
+          0.3333333333333333
+        ],
+        "first_error_localization": [
+          0.301547619047619,
+          0.55
+        ],
+        "harmonic_mean": [
+          0.10912746814372633,
+          0.3817069878510191
+        ],
+        "mean_score_valid": [
+          0.2011592138695394,
+          0.34809940301372555
+        ],
+        "mean_score_invalid": [
+          0.14474949402566814,
+          0.2277256798232871
+        ]
+      },
+      "C": {
+        "answer_correct_validity_auc": [
+          0.5472899344923154,
+          0.8108396117067517
+        ],
+        "valid_chain_acceptance": [
+          0.08565476190476191,
+          0.375
+        ],
+        "first_error_localization": [
+          0.2711864406779661,
+          0.5151515151515151
+        ],
+        "harmonic_mean": [
+          0.13966421052631578,
+          0.39495756652171654
+        ],
+        "mean_score_valid": [
+          0.23159641185637425,
+          0.3816259850262467
+        ],
+        "mean_score_invalid": [
+          0.15842816182285624,
+          0.24337355508113
+        ]
+      },
+      "D": {
+        "answer_correct_validity_auc": [
+          0.5624763257575758,
+          0.8193293862999745
+        ],
+        "valid_chain_acceptance": [
+          0.0,
+          0.0
+        ],
+        "first_error_localization": [
+          0.27415689149560113,
+          0.5076984126984126
+        ],
+        "harmonic_mean": [
+          0.0,
+          0.0
+        ],
+        "mean_score_valid": [
+          0.0866580008075883,
+          0.16621347706670686
+        ],
+        "mean_score_invalid": [
+          0.05123120684580927,
+          0.08696968413429652
+        ]
+      }
+    },
+    "paired_differences": {
+      "C-B": {
+        "answer_correct_validity_auc": {
+          "estimate": 0.0078125,
+          "paired_question_bootstrap_95CI": [
+            -0.013891173245613985,
+            0.030094588122605428
+          ]
+        },
+        "valid_chain_acceptance": {
+          "estimate": 0.03125,
+          "paired_question_bootstrap_95CI": [
+            0.0,
+            0.10344827586206895
+          ]
+        },
+        "first_error_localization": {
+          "estimate": -0.03125,
+          "paired_question_bootstrap_95CI": [
+            -0.08064516129032256,
+            0.0
+          ]
+        },
+        "harmonic_mean": {
+          "estimate": 0.020833333333333315,
+          "paired_question_bootstrap_95CI": [
+            -0.016813732004692477,
+            0.09249522757272874
+          ]
+        },
+        "mean_score_valid": {
+          "estimate": 0.0322917343582958,
+          "paired_question_bootstrap_95CI": [
+            0.022921603855987408,
+            0.043356814254629915
+          ]
+        },
+        "mean_score_invalid": {
+          "estimate": 0.015244707217789255,
+          "paired_question_bootstrap_95CI": [
+            0.009080554565947611,
+            0.021910202519268895
+          ]
+        }
+      },
+      "D-B": {
+        "answer_correct_validity_auc": {
+          "estimate": 0.01953125,
+          "paired_question_bootstrap_95CI": [
+            -0.008571428571428563,
+            0.0532146266996811
+          ]
+        },
+        "valid_chain_acceptance": {
+          "estimate": -0.1875,
+          "paired_question_bootstrap_95CI": [
+            -0.3333333333333333,
+            -0.0625
+          ]
+        },
+        "first_error_localization": {
+          "estimate": -0.03125,
+          "paired_question_bootstrap_95CI": [
+            -0.1875538793103448,
+            0.11290322580645162
+          ]
+        },
+        "harmonic_mean": {
+          "estimate": -0.25961538461538464,
+          "paired_question_bootstrap_95CI": [
+            -0.38170698785101914,
+            -0.10912746814372637
+          ]
+        },
+        "mean_score_valid": {
+          "estimate": -0.14585489552700892,
+          "paired_question_bootstrap_95CI": [
+            -0.1829647581194628,
+            -0.11253280324699597
+          ]
+        },
+        "mean_score_invalid": {
+          "estimate": -0.11730174734111642,
+          "paired_question_bootstrap_95CI": [
+            -0.14219344813609014,
+            -0.09196535955972279
+          ]
+        }
+      },
+      "D-C": {
+        "answer_correct_validity_auc": {
+          "estimate": 0.01171875,
+          "paired_question_bootstrap_95CI": [
+            -0.015625381842619745,
+            0.044771889400921625
+          ]
+        },
+        "valid_chain_acceptance": {
+          "estimate": -0.21875,
+          "paired_question_bootstrap_95CI": [
+            -0.375,
+            -0.08565476190476223
+          ]
+        },
+        "first_error_localization": {
+          "estimate": 0.0,
+          "paired_question_bootstrap_95CI": [
+            -0.14707087753134038,
+            0.1364028213166142
+          ]
+        },
+        "harmonic_mean": {
+          "estimate": -0.28044871794871795,
+          "paired_question_bootstrap_95CI": [
+            -0.3949575665217166,
+            -0.13966421052631584
+          ]
+        },
+        "mean_score_valid": {
+          "estimate": -0.17814662988530472,
+          "paired_question_bootstrap_95CI": [
+            -0.21626864869457982,
+            -0.14245668116208568
+          ]
+        },
+        "mean_score_invalid": {
+          "estimate": -0.13254645455890568,
+          "paired_question_bootstrap_95CI": [
+            -0.15901772101417094,
+            -0.10590941577865474
+          ]
+        }
+      }
+    },
+    "interpretation": "Stratified 96-example pilot, not official full ProcessBench score. Intervals cover sampled questions, not training seeds. No tuning based on these results."
+  },
+  "limitations": [
+    "16 initial-policy training questions x 4 instead of formal 512 x 4",
+    "128 labeled anchors instead of formal 2048; class balanced",
+    "GPU FP32 instead of formal BF16; rescore original B with the same FP32 backend",
+    "Frozen B-6M groups for exploratory advantage replay instead of formal 64 x 8 initial-policy validation probe",
+    "Stratified ProcessBench subset for bounded diagnostics, not the official full benchmark",
+    "A/B outcomes were observed before pilot; diagnostic error cases were already inspected",
+    "No anchor-only S trained in this bounded C/D request; C/D versus B cannot separate anchor adaptation from outcome supervision.",
+    "Known error cases are selected examples, not error-rate estimates.",
+    "Positive advantage on a wrong final answer is not automatically a faulty process signal; judge the checked mathematical examples separately."
+  ],
+  "B_guard": {
+    "B_source_hashes_unchanged": true,
+    "source_manifest_sha256": "cbd5d00452d3b23632bef8ab431e06c08640cde9eaa0367802994b09bbdc69e1",
+    "B_progress": {
+      "generated_completion_tokens": 14236970,
+      "generated_completions": 21728,
+      "generated_groups": 2716,
+      "mixed_reward_groups": 2712,
+      "correct_completions": 9269,
+      "truncated_completions": 1284,
+      "prm_input_tokens": 12279008,
+      "prm_padded_tokens": 18256556,
+      "prm_scored_completions": 18510,
+      "native_steps": 194680,
+      "single_step_completions": 1336,
+      "no_double_newline_completions": 1732,
+      "prm_forward_seconds": 630.6203639442101,
+      "reward_status_counts": {
+        "symbolic": 10145,
+        "truncated": 1284,
+        "exact": 8365,
+        "missing_or_invalid_box": 1670,
+        "unparseable": 264
+      },
+      "outcome_group_counts": {
+        "mixed": 2118,
+        "mixed_has_invalid": 1392,
+        "mixed_all_valid": 726,
+        "all_wrong": 481,
+        "all_wrong_has_invalid": 391,
+        "all_wrong_all_valid": 90,
+        "all_correct": 117,
+        "all_correct_all_valid": 117
+      },
+      "last_batch": {
+        "generated_completion_tokens": 27524,
+        "generated_completions": 32,
+        "generated_groups": 4,
+        "mixed_reward_groups": 4,
+        "correct_completions": 3,
+        "truncated_completions": 4,
+        "native_steps": 337,
+        "single_step_completions": 4,
+        "no_double_newline_completions": 4,
+        "prm_forward_seconds": 1.3148273257538676,
+        "prm_input_tokens": 21703,
+        "prm_padded_tokens": 38632,
+        "prm_scored_completions": 28
+      },
+      "global_step": 679,
+      "elapsed_seconds": 11229.59102723701,
+      "target_completion_tokens": 24000000,
+      "effective_completion_tokens_per_second": 732.3864226267889,
+      "torch_peak_allocated_GiB": 34.45738935470581,
+      "torch_peak_reserved_GiB": 35.48046875,
+      "resumed_from_global_step": 285,
+      "source_completion_tokens": 6012570,
+      "continuation_generated_completion_tokens": 8224400
+    }
+  },
+  "finished_unix": 1792607575.1731124
+}

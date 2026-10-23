@@ -1,0 +1,10 @@
+# Pinned, mutually compatible GRPO/vLLM stack; full resolved lock saved on server.
+torch==2.8.0
+transformers==4.56.2
+trl==0.23.1
+peft==0.17.1
+accelerate==1.10.1
+datasets==4.1.1
+vllm==0.10.2
+math-verify==0.8.0
+pytest==8.4.2

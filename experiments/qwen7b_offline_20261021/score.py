@@ -1,0 +1,216 @@
+"""Score existing CoTs with frozen PRMs and measure single-GPU inference cost."""
+import argparse
+import importlib.metadata
+import json
+import os
+from pathlib import Path
+import sys
+import time
+from core import (PIN, atomic_json, encode_native, encode_qwen, read_jsonl,
+                  sha256, verified_inputs, write_jsonl)
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("root", type=Path)
+    parser.add_argument("output", type=Path)
+    parser.add_argument("model", choices=["qwen7b", "h4"])
+    args = parser.parse_args()
+    root, out, name = args.root.resolve(), args.output.resolve(), args.model
+    manifest = verified_inputs(root, out)
+    result_path = out / f"scores_{name}.jsonl"
+    if result_path.exists():
+        raise RuntimeError("Complete frozen scores already exist; inspect instead of repeating")
+    import torch
+    from transformers import AutoModel, AutoModelForTokenClassification, AutoTokenizer
+    torch.set_num_threads(4)
+    torch.set_num_interop_threads(1)
+    torch.manual_seed(20261021)
+    torch.backends.cuda.matmul.allow_tf32 = False
+    torch.backends.cudnn.allow_tf32 = False
+    assert os.environ.get("CUDA_VISIBLE_DEVICES") == "0"
+    free, total = torch.cuda.mem_get_info()
+    assert free > 55 * 1024**3, "Use only an idle GPU; do not displace other jobs"
+    load_start = time.monotonic()
+    if name == "qwen7b":
+        assets = json.loads((out / "model_assets.json").read_text())
+        assert assets["complete"] and assets["revision"] == PIN
+        # A Python-identifier directory avoids Transformers' dotted local-module-name bug.
+        path = root / "models/qwen25_math_prm_7b"
+        for record in assets["files"]:
+            assert sha256(path / record["name"]) == record["sha256"]
+        tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True, padding_side="right")
+        cls = AutoModel
+        model, loading_info = cls.from_pretrained(path, local_files_only=True, trust_remote_code=True,
+                    torch_dtype=torch.bfloat16, attn_implementation="sdpa", output_loading_info=True)
+        # The released checkpoint also includes a generation-only lm_head. The
+        # official PRM class uses its two-layer score head, not this unused head.
+        assert not loading_info['missing_keys'] and not loading_info['mismatched_keys']
+        assert set(loading_info['unexpected_keys']) == {'lm_head.weight'}
+        from safetensors import safe_open
+        index = json.loads((path / 'model.safetensors.index.json').read_text())['weight_map']
+        state = model.state_dict()
+        assert set(state) == set(index) - {'lm_head.weight'}
+        checked = 0
+        for shard in sorted(set(index.values())):
+            with safe_open(path / shard, framework='pt', device='cpu') as weights:
+                for key in weights.keys():
+                    if key == 'lm_head.weight':
+                        continue
+                    assert torch.equal(state[key], weights.get_tensor(key)), 'Incorrect required scoring tensor: ' + key
+                    checked += 1
+        loading_info.update(expected_unused_generation_head='lm_head.weight',
+                            required_scoring_tensors_checked=checked,
+                            all_required_tensors_exactly_match_checkpoint=True)
+        atomic_json(out / 'qwen_loading_info.json', loading_info)
+        model = model.to("cuda:0").eval()
+        context = min(int(model.config.max_position_embeddings), 4096)
+        def encode(q, c, norm):
+            return encode_qwen(tokenizer, q, c, normalize=norm)
+    else:
+        assets = json.loads((root / "receipts/B_prm_assets.json").read_text())
+        path = Path(assets["model_path"])
+        for filename, record in assets["files"].items():
+            assert sha256(path / filename) == record["sha256"]
+        tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True, padding_side="right")
+        model = AutoModelForTokenClassification.from_pretrained(path, local_files_only=True,
+                    torch_dtype=torch.bfloat16, attn_implementation="sdpa").to("cuda:0").eval()
+        context = int(model.config.max_position_embeddings)
+        def encode(q, c, norm):
+            return encode_native(tokenizer, q, c, context, normalize_crlf=norm)
+    model.requires_grad_(False)
+    model.config.use_cache = False
+    parameter_versions = {n: p._version for n, p in model.named_parameters()}
+    load_seconds = time.monotonic() - load_start
+    rows = read_jsonl(root / "runs/B_seed17_6M/rollouts.jsonl")
+    questions = {r["problem_id"]: r["problem"] for r in read_jsonl(root / "data/prepared/train.jsonl")}
+    plan, rejected, aliases = [], [], {}
+    preparation_start = time.monotonic()
+    for index in manifest["eligible_rows"]:
+        row = rows[index]
+        raw = encode(questions[row["problem_id"]], row["completion"], False)
+        if len(raw["input_ids"]) > context:
+            rejected.append({"source_row": index, "view": "raw", "reason": "context_overflow", "tokens": len(raw["input_ids"])})
+            continue
+        assert len(raw["positions"]) == row["step_count"]
+        plan.append({"source_row": index, "view": "raw", "encoding": raw})
+        if "\r\n" in row["completion"]:
+            norm = encode(questions[row["problem_id"]], row["completion"], True)
+            if len(norm["input_ids"]) > context:
+                rejected.append({"source_row": index, "view": "normalized", "reason": "context_overflow", "tokens": len(norm["input_ids"])})
+            elif norm["input_ids"] == raw["input_ids"] and norm["positions"] == raw["positions"]:
+                aliases[str(index)] = "raw"
+            else:
+                plan.append({"source_row": index, "view": "normalized", "encoding": norm})
+        else:
+            aliases[str(index)] = "raw"
+    plan.sort(key=lambda r: (len(r["encoding"]["input_ids"]), r["source_row"], r["view"]))
+    plan_path = out / f"encoding_{name}.json"
+    atomic_json(plan_path, {"context_cap": context, "encoded_views": len(plan), "aliases": aliases,
+                "rejected": rejected, "ordering": [{"row": r["source_row"], "view": r["view"],
+                "tokens": len(r["encoding"]["input_ids"])} for r in plan],
+                "preparation_seconds": time.monotonic() - preparation_start})
+    batch_size = manifest["microbatch"]
+    done_path = out / f"scores_{name}.partial.jsonl"
+    existing = read_jsonl(done_path) if done_path.exists() else []
+    assert [(r["source_row"], r["view"]) for r in existing] == [(r["source_row"], r["view"]) for r in plan[:len(existing)]]
+    if existing:
+        raise RuntimeError("Partial inference exists; inspect the failure before an explicit continuation")
+
+    @torch.inference_mode()
+    def forward(records):
+        encodings = [r["encoding"] for r in records]
+        inputs = tokenizer.pad([{"input_ids": e["input_ids"]} for e in encodings], padding=True,
+                               return_tensors="pt").to("cuda:0")
+        torch.cuda.synchronize()
+        start = time.perf_counter()
+        output = model(**inputs, use_cache=False)
+        logits = output.logits if hasattr(output, "logits") else output[0]
+        assert logits.shape[:2] == inputs.input_ids.shape and logits.shape[-1] == 2
+        assert torch.isfinite(logits).all()
+        scores = [logits[i, e["positions"]].float().softmax(-1)[:, 1].cpu().tolist() for i, e in enumerate(encodings)]
+        torch.cuda.synchronize()
+        seconds = time.perf_counter() - start
+        return scores, seconds, sum(len(e["input_ids"]) for e in encodings), inputs.input_ids.numel()
+
+    # A fixed short/medium/long warm-up is excluded from timed production throughput.
+    warm_indices = sorted(set([0, len(plan)//2, len(plan)-1]))
+    warm_start = time.monotonic()
+    for index in warm_indices:
+        forward([plan[index]])
+    warm_seconds = time.monotonic() - warm_start
+    torch.cuda.reset_peak_memory_stats()
+    model_memory = torch.cuda.memory_allocated()
+    nvsmi_before = torch.cuda.mem_get_info()
+    started = time.monotonic()
+    forward_seconds, tokens, padded, calls = 0., 0, 0, 0
+    max_driver_used = total - nvsmi_before[0]
+    repeat_max = 0.
+    with done_path.open("a") as stream:
+        for offset in range(0, len(plan), batch_size):
+            group = plan[offset:offset + batch_size]
+            scores, seconds, ntok, ptok = forward(group)
+            forward_seconds += seconds; tokens += ntok; padded += ptok; calls += 1
+            max_driver_used = max(max_driver_used, total - torch.cuda.mem_get_info()[0])
+            if calls == 1 or calls % 128 == 0:
+                repeated, _, _, _ = forward(group)
+                difference = max(abs(a-b) for x,y in zip(scores,repeated) for a,b in zip(x,y))
+                repeat_max = max(repeat_max, difference)
+                assert difference <= 1e-7, "Identical input inference changed"
+            for record, probability in zip(group, scores):
+                e = record["encoding"]
+                assert len(probability) == len(e["steps"]) and all(0 <= p <= 1 for p in probability)
+                entry = {"source_row": record["source_row"], "view": record["view"],
+                         "problem_id": rows[record["source_row"]]["problem_id"],
+                         "step_scores": probability, "min_score": min(probability), "step_count": len(probability),
+                         "positions": e["positions"], "spans": e["spans"], "input_tokens": len(e["input_ids"]),
+                         "raw_sha256": e["raw_sha256"], "input_ids_sha256": __import__('hashlib').sha256(
+                             json.dumps(e["input_ids"], separators=(',',':')).encode()).hexdigest()}
+                stream.write(json.dumps(entry, ensure_ascii=False, allow_nan=False) + "\n")
+            stream.flush()
+            progress = {"model": name, "complete": False, "completed_views": offset + len(group), "total_views": len(plan),
+                        "forward_seconds": forward_seconds, "wall_seconds": time.monotonic()-started,
+                        "input_tokens": tokens, "padded_tokens": padded, "forward_calls": calls,
+                        "allocated_peak_GiB": torch.cuda.max_memory_allocated()/1024**3,
+                        "reserved_peak_GiB": torch.cuda.max_memory_reserved()/1024**3}
+            if calls % 16 == 0 or offset + len(group) == len(plan):
+                atomic_json(out / f"progress_{name}.json", progress)
+                print(json.dumps(progress), flush=True)
+    all_scores = read_jsonl(done_path)
+    lookup = {(r["source_row"],r["view"]):r for r in all_scores}
+    # Verify causal alignment at original marker/prefix endpoints without new generations.
+    prefix_checks = []
+    known = {r["source_row"]:r for r in plan if r["view"] == "raw"}
+    for row_id in [3932, 5521, 1812, 2295, 2095]:
+        record = known[row_id]
+        e = record["encoding"]
+        for step in sorted(set([0,len(e["positions"])-1])):
+            pe = dict(e, input_ids=e["input_ids"][:e["positions"][step]+1], positions=[e["positions"][step]])
+            ps, _, _, _ = forward([{"encoding":pe}])
+            full = lookup[(row_id,"raw")]["step_scores"][step]
+            prefix_checks.append({"source_row":row_id,"step":step+1,"full":full,"prefix":ps[0][0],"difference":abs(full-ps[0][0])})
+    assert not model.training and all(not p.requires_grad and p.grad is None and p._version == parameter_versions[n]
+                                      for n,p in model.named_parameters())
+    write_jsonl(result_path, all_scores)
+    wall = time.monotonic()-started
+    receipt = {**progress, "complete": True, "load_and_verify_seconds": load_seconds, "warmup_seconds":warm_seconds,
+               "model_memory_allocated_GiB":model_memory/1024**3,"GPU_total_GiB":total/1024**3,
+               "GPU_initial_free_GiB":free/1024**3,"GPU_name":torch.cuda.get_device_name(0),
+               "driver_used_memory_at_timed_start_GiB":(total-nvsmi_before[0])/1024**3,
+               "driver_used_memory_max_observed_GiB":max_driver_used/1024**3,
+               "parameter_count":sum(p.numel() for p in model.parameters()),
+               "dtype":"bfloat16", "softmax_dtype":"float32", "microbatch":batch_size,
+               "production_views_per_second":len(plan)/forward_seconds,
+               "unpadded_input_tokens_per_second":tokens/forward_seconds,
+               "padded_input_tokens_per_second":padded/forward_seconds,
+               "wall_seconds_including_controls":wall,
+               "repeat_max_difference":repeat_max,"prefix_checks":prefix_checks,
+               "model_frozen_verified":True,"model_weight_updates":0,"new_rollouts":0,"new_training":False,
+               "versions":{p:importlib.metadata.version(p) for p in ['torch','transformers','trl']},
+               "benchmark_scope":"single scorer only; excludes actor, optimizer, generation and model download; length-bucketed batches"}
+    atomic_json(out / f"receipt_{name}.json",receipt)
+    print(json.dumps(receipt),flush=True)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,514 @@
+{
+  "observed_unix": 1792640175.502319,
+  "complete": true,
+  "arms": {
+    "A": {
+      "run": "/srv/research/ece285_math_rl_project/runs/A_seed17",
+      "summary_path": "/srv/research/ece285_math_rl_project/runs/A_seed17/evaluation/evaluation_summary.json",
+      "status": "completed",
+      "global_step": 280,
+      "actual_completion_tokens": 6020163,
+      "train_seconds": 7797.67692423705,
+      "evaluation_seconds": 2412.7114057540894,
+      "results": {
+        "math500": {
+          "count": 500,
+          "correct": 281.0,
+          "accuracy": 0.562,
+          "generated_tokens": 357104,
+          "truncated": 36,
+          "predictions_sha256": "97795da6d7c6360d7e314b1d7755e9542464c438143f7de0f2c363b339e3586d"
+        },
+        "gsm8k": {
+          "count": 1319,
+          "correct": 925.0,
+          "accuracy": 0.7012888551933283,
+          "generated_tokens": 497906,
+          "truncated": 25,
+          "predictions_sha256": "22091ebd7dc6055254a8087b6d78e6fa62cd63367526b60ea91c7d8a3e8d6349"
+        }
+      },
+      "evaluation_contract": {
+        "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+        "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+        "data_manifest_sha256": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459",
+        "reward_code_sha256": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+        "adapter_sha256": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b"
+      },
+      "evaluation_summary": {
+        "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/A_seed17/final_adapter",
+        "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+        "greedy": true,
+        "started_unix": 1792549114.6398847,
+        "datasets": {
+          "math500": {
+            "count": 500,
+            "correct": 281.0,
+            "accuracy": 0.562,
+            "generated_tokens": 357104,
+            "truncated": 36,
+            "predictions_sha256": "97795da6d7c6360d7e314b1d7755e9542464c438143f7de0f2c363b339e3586d"
+          },
+          "gsm8k": {
+            "count": 1319,
+            "correct": 925.0,
+            "accuracy": 0.7012888551933283,
+            "generated_tokens": 497906,
+            "truncated": 25,
+            "predictions_sha256": "22091ebd7dc6055254a8087b6d78e6fa62cd63367526b60ea91c7d8a3e8d6349"
+          }
+        },
+        "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+        "prm800k_known_question_overlap": {
+          "train": 6993,
+          "validation": 500,
+          "math500": 0,
+          "gsm8k": 0,
+          "processbench_unique_questions": 847
+        },
+        "finished_unix": 1792551527.3512902,
+        "elapsed_seconds": 2412.7114057540894
+      },
+      "train_accounting": {
+        "generated_completion_tokens": 6020163,
+        "generated_completions": 8960,
+        "generated_groups": 1120,
+        "mixed_reward_groups": 875,
+        "correct_completions": 3725,
+        "truncated_completions": 541,
+        "reward_status_counts": {
+          "symbolic": 4043,
+          "truncated": 541,
+          "exact": 3358,
+          "missing_or_invalid_box": 924,
+          "unparseable": 94
+        },
+        "last_batch": {
+          "generated_completion_tokens": 20463,
+          "generated_completions": 32,
+          "generated_groups": 4,
+          "mixed_reward_groups": 3,
+          "correct_completions": 9,
+          "truncated_completions": 2
+        }
+      },
+      "metrics": {
+        "train_runtime": 7775.77,
+        "train_samples_per_second": 82.307,
+        "train_steps_per_second": 2.572,
+        "total_flos": 0.0,
+        "train_loss": 9.237129571114825e-05
+      }
+    },
+    "B_old_H4": {
+      "run": "/srv/research/ece285_math_rl_project/runs/B_seed17_6M",
+      "summary_path": "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json",
+      "status": "completed",
+      "global_step": 285,
+      "actual_completion_tokens": 6012570,
+      "train_seconds": 7605.244539586827,
+      "evaluation_seconds": 2732.9765074253082,
+      "results": {
+        "math500": {
+          "count": 500,
+          "correct": 255.0,
+          "accuracy": 0.51,
+          "generated_tokens": 362158,
+          "truncated": 40,
+          "predictions_sha256": "ba7b53076d39033c6a64fa2f6bc7c27cbae6ed1eecfa309681f74e3a8850351c"
+        },
+        "gsm8k": {
+          "count": 1319,
+          "correct": 820.0,
+          "accuracy": 0.621683093252464,
+          "generated_tokens": 540951,
+          "truncated": 52,
+          "predictions_sha256": "423818082af5d5c756370e54074b1432cf01b35720cf9765b16c87726657bd4e"
+        }
+      },
+      "evaluation_contract": {
+        "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+        "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+        "data_manifest_sha256": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459",
+        "reward_code_sha256": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+        "adapter_sha256": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed"
+      },
+      "evaluation_summary": {
+        "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285",
+        "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+        "greedy": true,
+        "started_unix": 1792592794.250081,
+        "datasets": {
+          "math500": {
+            "count": 500,
+            "correct": 255.0,
+            "accuracy": 0.51,
+            "generated_tokens": 362158,
+            "truncated": 40,
+            "predictions_sha256": "ba7b53076d39033c6a64fa2f6bc7c27cbae6ed1eecfa309681f74e3a8850351c"
+          },
+          "gsm8k": {
+            "count": 1319,
+            "correct": 820.0,
+            "accuracy": 0.621683093252464,
+            "generated_tokens": 540951,
+            "truncated": 52,
+            "predictions_sha256": "423818082af5d5c756370e54074b1432cf01b35720cf9765b16c87726657bd4e"
+          }
+        },
+        "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+        "prm800k_known_question_overlap": {
+          "train": 6993,
+          "validation": 500,
+          "math500": 0,
+          "gsm8k": 0,
+          "processbench_unique_questions": 847
+        },
+        "finished_unix": 1792595527.2265882,
+        "elapsed_seconds": 2732.9765074253082
+      },
+      "train_accounting": {
+        "generated_completion_tokens": 6012570,
+        "generated_completions": 9120,
+        "generated_groups": 1140,
+        "mixed_reward_groups": 1139,
+        "correct_completions": 3699,
+        "truncated_completions": 550,
+        "prm_input_tokens": 5033827,
+        "prm_padded_tokens": 7483925,
+        "prm_scored_completions": 7472,
+        "native_steps": 80692,
+        "single_step_completions": 454,
+        "no_double_newline_completions": 682,
+        "prm_forward_seconds": 249.6971059809439,
+        "reward_status_counts": {
+          "symbolic": 4141,
+          "truncated": 550,
+          "exact": 3331,
+          "missing_or_invalid_box": 985,
+          "unparseable": 113
+        },
+        "outcome_group_counts": {
+          "mixed": 896,
+          "mixed_has_invalid": 652,
+          "mixed_all_valid": 244,
+          "all_wrong": 212,
+          "all_wrong_has_invalid": 184,
+          "all_wrong_all_valid": 28,
+          "all_correct": 32,
+          "all_correct_all_valid": 32
+        },
+        "last_batch": {
+          "generated_completion_tokens": 18678,
+          "generated_completions": 32,
+          "generated_groups": 4,
+          "mixed_reward_groups": 4,
+          "correct_completions": 18,
+          "truncated_completions": 2,
+          "native_steps": 297,
+          "single_step_completions": 3,
+          "no_double_newline_completions": 3,
+          "prm_forward_seconds": 0.6184169868938625,
+          "prm_input_tokens": 13459,
+          "prm_padded_tokens": 17755,
+          "prm_scored_completions": 27
+        }
+      },
+      "metrics": {
+        "train_runtime": 7606.3702,
+        "train_samples_per_second": 84.14,
+        "train_steps_per_second": 2.629,
+        "total_flos": 0.0,
+        "train_loss": 7.47404545300493e-05
+      }
+    },
+    "Bprime_Qwen7B": {
+      "run": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M",
+      "summary_path": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json",
+      "status": "completed",
+      "global_step": 283,
+      "actual_completion_tokens": 6014788,
+      "train_seconds": 8456.389113070909,
+      "evaluation_seconds": 2857.2313277721405,
+      "results": {
+        "math500": {
+          "count": 500,
+          "correct": 276.0,
+          "accuracy": 0.552,
+          "generated_tokens": 361901,
+          "truncated": 40,
+          "predictions_sha256": "a13962e2986af46cebcca1f5a0167d528d85a627f7f9ed8afbfd9bf4bfc66bad"
+        },
+        "gsm8k": {
+          "count": 1319,
+          "correct": 894.0,
+          "accuracy": 0.6777862016679302,
+          "generated_tokens": 516288,
+          "truncated": 32,
+          "predictions_sha256": "67f945e1b06a9675e3e750a6693f2c008adfba7fd2c3f98cd1c4ae53e1c89c3f"
+        }
+      },
+      "evaluation_contract": {
+        "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+        "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+        "data_manifest_sha256": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459",
+        "reward_code_sha256": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+        "adapter_sha256": "5284202599581fac8308d7e900a97e49908f5d41a800dd6e7e632602559ad567"
+      },
+      "evaluation_summary": {
+        "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283",
+        "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+        "greedy": true,
+        "started_unix": 1792634228.6124067,
+        "datasets": {
+          "math500": {
+            "count": 500,
+            "correct": 276.0,
+            "accuracy": 0.552,
+            "generated_tokens": 361901,
+            "truncated": 40,
+            "predictions_sha256": "a13962e2986af46cebcca1f5a0167d528d85a627f7f9ed8afbfd9bf4bfc66bad"
+          },
+          "gsm8k": {
+            "count": 1319,
+            "correct": 894.0,
+            "accuracy": 0.6777862016679302,
+            "generated_tokens": 516288,
+            "truncated": 32,
+            "predictions_sha256": "67f945e1b06a9675e3e750a6693f2c008adfba7fd2c3f98cd1c4ae53e1c89c3f"
+          }
+        },
+        "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+        "prm800k_known_question_overlap": {
+          "train": 6993,
+          "validation": 500,
+          "math500": 0,
+          "gsm8k": 0,
+          "processbench_unique_questions": 847
+        },
+        "finished_unix": 1792637085.8437343,
+        "elapsed_seconds": 2857.2313277721405
+      },
+      "train_accounting": {
+        "generated_completion_tokens": 6014788,
+        "generated_completions": 9056,
+        "generated_groups": 1132,
+        "mixed_reward_groups": 1130,
+        "correct_completions": 3690,
+        "truncated_completions": 518,
+        "prm_input_tokens": 5397056,
+        "prm_padded_tokens": 7869781,
+        "prm_scored_completions": 7476,
+        "native_steps": 81182,
+        "single_step_completions": 348,
+        "no_double_newline_completions": 533,
+        "prm_forward_seconds": 592.8959347987548,
+        "reward_status_counts": {
+          "symbolic": 4138,
+          "truncated": 518,
+          "exact": 3338,
+          "missing_or_invalid_box": 934,
+          "unparseable": 128
+        },
+        "outcome_group_counts": {
+          "mixed": 893,
+          "mixed_has_invalid": 654,
+          "mixed_all_valid": 239,
+          "all_wrong": 207,
+          "all_wrong_has_invalid": 173,
+          "all_wrong_all_valid": 34,
+          "all_correct": 32,
+          "all_correct_all_valid": 32
+        },
+        "last_batch": {
+          "generated_completion_tokens": 18529,
+          "generated_completions": 32,
+          "generated_groups": 4,
+          "mixed_reward_groups": 4,
+          "correct_completions": 17,
+          "truncated_completions": 2,
+          "native_steps": 252,
+          "single_step_completions": 1,
+          "no_double_newline_completions": 1,
+          "prm_forward_seconds": 1.863077760208398,
+          "prm_input_tokens": 17346,
+          "prm_padded_tokens": 25078,
+          "prm_scored_completions": 30
+        }
+      },
+      "metrics": {
+        "train_runtime": 8457.4614,
+        "train_samples_per_second": 75.673,
+        "train_steps_per_second": 2.365,
+        "total_flos": 0.0,
+        "train_loss": 7.368242972032266e-05
+      }
+    }
+  },
+  "paired_comparisons": {
+    "Bprime_minus_A": {
+      "math500": {
+        "n": 500,
+        "difference_pp": -1.0,
+        "new_only_correct": 31,
+        "other_only_correct": 36,
+        "both_correct": 245,
+        "both_wrong": 188,
+        "paired_problem_bootstrap_95ci_pp": [
+          -4.2,
+          2.1999999999999997
+        ],
+        "bootstrap_draws": 10000,
+        "scope": "Fixed trained seed17 policies; uncertainty over questions only, not training seeds"
+      },
+      "gsm8k": {
+        "n": 1319,
+        "difference_pp": -2.350265352539803,
+        "new_only_correct": 67,
+        "other_only_correct": 98,
+        "both_correct": 827,
+        "both_wrong": 327,
+        "paired_problem_bootstrap_95ci_pp": [
+          -4.245640636846096,
+          -0.45489006823351025
+        ],
+        "bootstrap_draws": 10000,
+        "scope": "Fixed trained seed17 policies; uncertainty over questions only, not training seeds"
+      }
+    },
+    "Bprime_minus_B_old_H4": {
+      "math500": {
+        "n": 500,
+        "difference_pp": 4.2,
+        "new_only_correct": 47,
+        "other_only_correct": 26,
+        "both_correct": 229,
+        "both_wrong": 198,
+        "paired_problem_bootstrap_95ci_pp": [
+          0.8,
+          7.6
+        ],
+        "bootstrap_draws": 10000,
+        "scope": "Fixed trained seed17 policies; uncertainty over questions only, not training seeds"
+      },
+      "gsm8k": {
+        "n": 1319,
+        "difference_pp": 5.610310841546626,
+        "new_only_correct": 130,
+        "other_only_correct": 56,
+        "both_correct": 764,
+        "both_wrong": 369,
+        "paired_problem_bootstrap_95ci_pp": [
+          3.639120545868082,
+          7.58150113722517
+        ],
+        "bootstrap_draws": 10000,
+        "scope": "Fixed trained seed17 policies; uncertainty over questions only, not training seeds"
+      }
+    }
+  },
+  "same_base_data_verifier_config": true,
+  "evaluation_code_sha256": "fd3eaf0a0d47c64907f73fb528d0dc21ab2534c16d82a7b170a3eabd6ce4b256",
+  "Bprime_controller": {
+    "status": "completed",
+    "pid": 2608261,
+    "started_unix": 1792625572.5675504,
+    "target_completion_tokens": 6000000,
+    "scope": "Only one seed17 Bprime pilot and 6M training plus fixed evaluation. No C/D, no extension to24M, no old-run resume. Preserve all original A/B code and results.",
+    "preflight_receipt_sha256": "20fa0207fe6b2036efcf1c8bb38321c9321f2a29b87a7f99bebbee2f090728d3",
+    "heartbeat_unix": 1792637093.577337,
+    "child_pid": null,
+    "gpu": 0,
+    "log": "/srv/research/ece285_math_rl_project/logs/B_Qwen7B_seed17_6M_evaluation_6M.log",
+    "last_child_exit_code": 0,
+    "finished_unix": 1792637093.5773356,
+    "preservation": {
+      "passed": true,
+      "hashed_original_files": 358,
+      "inventoried_original_files": 513
+    },
+    "all_evaluations_completed": true,
+    "no_C_D_launched": true
+  },
+  "Bprime_milestone": {
+    "target_completion_tokens": 6000000,
+    "actual_completion_tokens": 6014788,
+    "overshoot": 14788,
+    "global_step": 283,
+    "checkpoint": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283",
+    "checkpoint_sha256": {
+      "completion_accounting.json": "b2c98008662301374140a871d5cb5e85389ebf7ba2bea430393c896303158e6b",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+      "README.md": "78126f95e986f22f2cc5ea59277057787d878ef5e59f7d920b443f05b43176f7",
+      "chat_template.jinja": "c564d12c9977b8942423753b0c409a11f50142508ced170e9fe1c2f5b803cf70",
+      "rng_state.pth": "380ea4c8cd98947f1467989cee861a01701152bda5069365b8a056f85666b1ba",
+      "tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+      "scheduler.pt": "87cfb57c4f4bdd7e1b937d39164f1bfc3cb655cfe235ad93f07162e0a2c60eb4",
+      "optimizer.pt": "6ab0f175a119c4ec51dafb3b29b229ce94025473b68013d7840c42c8c46739cb",
+      "training_args.bin": "d9929b306381645c949d0d0c57ac1a9170cd17d7211ee7e70465059ba7163a0d",
+      "trainer_state.json": "a2b80915f84d197c00121b625805214827655217dd6d50451d3cb43b7e46bccf",
+      "adapter_config.json": "69d7c10a263245588efcefc9731079f1a0c9036b775bcef37b29da281a2823c2",
+      "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+      "adapter_model.safetensors": "5284202599581fac8308d7e900a97e49908f5d41a800dd6e7e632602559ad567",
+      "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+    },
+    "evaluation_dir": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation",
+    "status": "completed",
+    "saved_unix": 1792634206.4164727,
+    "evaluation": {
+      "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "adapter": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283",
+      "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+      "greedy": true,
+      "started_unix": 1792634228.6124067,
+      "datasets": {
+        "math500": {
+          "count": 500,
+          "correct": 276.0,
+          "accuracy": 0.552,
+          "generated_tokens": 361901,
+          "truncated": 40,
+          "predictions_sha256": "a13962e2986af46cebcca1f5a0167d528d85a627f7f9ed8afbfd9bf4bfc66bad"
+        },
+        "gsm8k": {
+          "count": 1319,
+          "correct": 894.0,
+          "accuracy": 0.6777862016679302,
+          "generated_tokens": 516288,
+          "truncated": 32,
+          "predictions_sha256": "67f945e1b06a9675e3e750a6693f2c008adfba7fd2c3f98cd1c4ae53e1c89c3f"
+        }
+      },
+      "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+      "prm800k_known_question_overlap": {
+        "train": 6993,
+        "validation": 500,
+        "math500": 0,
+        "gsm8k": 0,
+        "processbench_unique_questions": 847
+      },
+      "finished_unix": 1792637085.8437343,
+      "elapsed_seconds": 2857.2313277721405
+    }
+  },
+  "advantage_audits": {
+    "passed": true,
+    "count": 283
+  },
+  "originals_preserved": {
+    "passed": true,
+    "hashed_original_files": 358,
+    "inventoried_original_files": 513
+  },
+  "limitations": [
+    "One training seed17 only.",
+    "Paired confidence intervals account for evaluation questions, not seed variability.",
+    "Same original outcome verifier used for all arms; independent semantic repairs remain excluded.",
+    "PRM capacity, pretrained weights and required native scoring format change together; not a pure size-only effect."
+  ]
+}

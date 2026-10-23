@@ -1,0 +1,91 @@
+{
+  "repository": "CJReinforce/PURE",
+  "branch": "openrlhf",
+  "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+  "extraction": "ast.unparse selected original nodes; verified AST equality ignoring location",
+  "rank_shim": "single-process dist.get_rank returns0 for PolicyLoss diagnostic only",
+  "vendor_sha256": "539479a97a120162d4bc2f26e0098cd305b0907beca495f75996cc031214c223",
+  "nodes": [
+    {
+      "source_file": "source_openrlhf_extra/openrlhf/utils/utils.py",
+      "source_sha256": "c5de92d748498b20ecf673bab91c92c71e26dcc3c0dce180ce7c503f983b2924",
+      "source_class": null,
+      "name": "right_padding",
+      "line_start": 129,
+      "line_end": 146,
+      "ast_sha256": "d50d254671b7fd4a4ac399efda42acbf520dfe32f477e6b29694c4822566dd88"
+    },
+    {
+      "source_file": "source_openrlhf_extra/openrlhf/utils/utils.py",
+      "source_sha256": "c5de92d748498b20ecf673bab91c92c71e26dcc3c0dce180ce7c503f983b2924",
+      "source_class": null,
+      "name": "turn_process_reward_logits_to_reward",
+      "line_start": 149,
+      "line_end": 183,
+      "ast_sha256": "c1d202a33faeb27eebd607cc8b8fbedf2ec8e6762d3499c15e55515676e93ee3"
+    },
+    {
+      "source_file": "source_openrlhf_extra/openrlhf/models/utils.py",
+      "source_sha256": "48ee3fd0d02d76b5fa3a7886b3f78b8c623d54b632d93cf66dfbc8a7536dc8a2",
+      "source_class": null,
+      "name": "compute_approx_kl",
+      "line_start": 7,
+      "line_end": 34,
+      "ast_sha256": "7e7f1fe5d7169a61065c0b1f2c2276351025f70abc8bb0146c0c51d7abf8aa31"
+    },
+    {
+      "source_file": "source_openrlhf_extra/openrlhf/models/utils.py",
+      "source_sha256": "48ee3fd0d02d76b5fa3a7886b3f78b8c623d54b632d93cf66dfbc8a7536dc8a2",
+      "source_class": null,
+      "name": "compute_reward",
+      "line_start": 37,
+      "line_end": 74,
+      "ast_sha256": "f18ec9e61253b233ca1ea1eb2f17ba8a8edb0afb15059f6bd090051f3f2a185d"
+    },
+    {
+      "source_file": "source_openrlhf_extra/openrlhf/models/utils.py",
+      "source_sha256": "48ee3fd0d02d76b5fa3a7886b3f78b8c623d54b632d93cf66dfbc8a7536dc8a2",
+      "source_class": null,
+      "name": "masked_mean",
+      "line_start": 83,
+      "line_end": 86,
+      "ast_sha256": "3bb4e3cdb0ead516d1a15f48ccfcf065f2f6c983fd4006232d363db2c541631c"
+    },
+    {
+      "source_file": "source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+      "source_sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
+      "source_class": "NaiveExperienceMaker",
+      "name": "process_experiences",
+      "line_start": 608,
+      "line_end": 736,
+      "ast_sha256": "5dedc903a1f8fa87e9ccd15a05d25f1f9b54f8c78b0ea00cc30e0d826a2a5005"
+    },
+    {
+      "source_file": "source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "source_sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "source_class": "NaiveReplayBuffer",
+      "name": "normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_sha256": "9da378ed9070e9de94f61ab4153088df64382d1a2a4b46f38f00595d4ac33cd4"
+    },
+    {
+      "source_file": "source_openrlhf/openrlhf/models/loss.py",
+      "source_sha256": "9238e0aa7bc71ef33e346fa54d40bfdaad44849b7b03ac45879bd6346d4b1347",
+      "source_class": null,
+      "name": "PolicyLoss",
+      "line_start": 56,
+      "line_end": 89,
+      "ast_sha256": "62640055662dcd636c1e8570c3a182c62c8c1eefd4344c29781dd7908bd0a829"
+    },
+    {
+      "source_file": "source_openrlhf_extra/openrlhf/models/utils.py",
+      "source_sha256": "48ee3fd0d02d76b5fa3a7886b3f78b8c623d54b632d93cf66dfbc8a7536dc8a2",
+      "source_class": null,
+      "name": "log_probs_from_logits",
+      "line_start": 77,
+      "line_end": 80,
+      "ast_sha256": "3ca3310b18f04dcbd954cd3eadbe7c059a8db6b1ddb2928ab7d2a5935be277c5"
+    }
+  ]
+}

@@ -1,0 +1,1130 @@
+{
+  "passed": true,
+  "new_generations": 0,
+  "optimizer_steps": 0,
+  "model_loaded": false,
+  "torch_imported": false,
+  "widths": [
+    2048,
+    7168,
+    8192
+  ],
+  "replayed_batches": [
+    "A:16",
+    "A:22",
+    "A:166",
+    "A:264",
+    "A:280",
+    "B:6",
+    "B:106",
+    "B:144"
+  ],
+  "skipped_batches": [
+    "B:210"
+  ],
+  "immutable_inputs": {
+    "inputs": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
+      "sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d"
+    },
+    "qwen": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/qwen_single/scored.jsonl",
+      "sha256": "3681d0cdf0d017d877339eaeb6481421bf4faa23b4b09570afba49f99d811d72"
+    },
+    "pure": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/scoring_single/scored.jsonl",
+      "sha256": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5"
+    },
+    "prior": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/per_response_metrics.jsonl",
+      "sha256": "c9aa812f71838a3edcd8f5c1960b59e010506ac51696260804be6e5c099d8452"
+    }
+  },
+  "script_sha256": "061f3cddf28729bc90af66640014063a1ff4e8384441d5d3198d87106f0853e7",
+  "width2048_reference_max_abs_error": 4.824354649102247e-07,
+  "same_existing_valid_token_masks": true,
+  "same_existing_rewards_and_groups": true,
+  "aggregate": {
+    "P_VR": {
+      "2048": {
+        "empty_cases": 8,
+        "positive_raw": 0,
+        "positive_white": 0,
+        "min_raw": -0.20033482142857142,
+        "max_raw": 0.0,
+        "min_white": -1.1994576577336353,
+        "max_white": -0.31674266921947863
+      },
+      "7168": {
+        "empty_cases": 8,
+        "positive_raw": 0,
+        "positive_white": 0,
+        "min_raw": -0.05723852040816327,
+        "max_raw": 0.0,
+        "min_white": -1.4509421452775022,
+        "max_white": -0.42338793434478844
+      },
+      "8192": {
+        "empty_cases": 8,
+        "positive_raw": 0,
+        "positive_white": 0,
+        "min_raw": -0.050083705357142856,
+        "max_raw": 0.0,
+        "min_white": -1.4632204256018462,
+        "max_white": -0.42851561107231056
+      }
+    },
+    "QWEN_PRM": {
+      "2048": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.47380946743007213,
+        "max_raw": 0.6391723385569609,
+        "min_white": 2.151486197346223,
+        "max_white": 3.215257739255957
+      },
+      "7168": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.49249732116153044,
+        "max_raw": 0.5396136196203787,
+        "min_white": 2.1047779141144516,
+        "max_white": 2.9244679981357096
+      },
+      "8192": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.49343171384810336,
+        "max_raw": 0.5346356836735496,
+        "min_white": 2.095428545496922,
+        "max_white": 2.90356157559821
+      }
+    },
+    "PURE_NATIVE": {
+      "2048": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.45378743710292563,
+        "max_raw": 0.6184752012953242,
+        "min_white": 1.9367849610990655,
+        "max_white": 3.644203801506131
+      },
+      "7168": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.4039673268856695,
+        "max_raw": 0.5304534868304241,
+        "min_white": 1.9712034759600299,
+        "max_white": 3.532981933125222
+      },
+      "8192": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.4014763213748067,
+        "max_raw": 0.5260524011071791,
+        "min_white": 1.972747837306072,
+        "max_white": 3.533305489244547
+      }
+    },
+    "PURE_RL_PROMPT": {
+      "2048": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.4529093563648412,
+        "max_raw": 0.6203488253115508,
+        "min_white": 1.97109733728837,
+        "max_white": 3.637937841807841
+      },
+      "7168": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.45453872091635183,
+        "max_raw": 0.5268931173869228,
+        "min_white": 1.9759668898644613,
+        "max_white": 3.4757757607410915
+      },
+      "8192": {
+        "empty_cases": 8,
+        "positive_raw": 8,
+        "positive_white": 8,
+        "min_raw": 0.4541141547876706,
+        "max_raw": 0.5222203319906914,
+        "min_white": 1.9759610942343215,
+        "max_white": 3.4795792181573155
+      }
+    }
+  },
+  "details": [
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": -0.12472098214285714,
+      "white": -1.0492102722235046,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": -0.035634566326530615,
+      "white": -0.972757164638012,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": -0.031180245535714284,
+      "white": -0.9689095496435308,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": -0.12332589285714286,
+      "white": -1.1994576577336353,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": -0.035235969387755105,
+      "white": -1.4509421452775022,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": -0.030831473214285716,
+      "white": -1.4632204256018462,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": -0.04457310267857143,
+      "white": -0.9175619231657142,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": -0.01273517219387755,
+      "white": -1.0210702006014767,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": -0.011143275669642858,
+      "white": -1.0256487819114308,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.0,
+      "white": -0.31674266921947863,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.0,
+      "white": -0.42338793434478844,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.0,
+      "white": -0.42851561107231056,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": -0.09828404017857142,
+      "white": -0.6734570778531416,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": -0.028081154336734693,
+      "white": -0.5912373865485228,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": -0.024571010044642856,
+      "white": -0.5870165929736773,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": -0.05678013392857143,
+      "white": -0.6055613414172424,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": -0.016222895408163265,
+      "white": -0.5250146833050152,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": -0.014195033482142858,
+      "white": -0.5212006436897154,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": -0.20033482142857142,
+      "white": -1.0684348931662169,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": -0.05723852040816327,
+      "white": -0.7506755734044395,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": -0.050083705357142856,
+      "white": -0.7356671829469529,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 2048,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.0,
+      "white": -0.6777313121034981,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 7168,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.0,
+      "white": -0.7018851413741923,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "P_VR",
+      "width": 8192,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.0,
+      "white": -0.7029098870775968,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.5346633876320759,
+      "white": 2.485038847248402,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.5096407131057988,
+      "white": 2.4789299714898134,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.508389579379485,
+      "white": 2.478168858706105,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.5303374411896941,
+      "white": 2.459682452044402,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.508629948815734,
+      "white": 2.4060787828062282,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.5075445741970359,
+      "white": 2.4025551454452594,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.5150598157092623,
+      "white": 2.151486197346223,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.5040396925564236,
+      "white": 2.1213090967178476,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.5034886863987816,
+      "white": 2.1194429637579613,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.6391723385569609,
+      "white": 3.215257739255957,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.5396136196203787,
+      "white": 2.9244679981357096,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.5346356836735496,
+      "white": 2.90356157559821,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.47380946743007213,
+      "white": 2.3165841581484177,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.49249732116153044,
+      "white": 2.4361417720315344,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.49343171384810336,
+      "white": 2.439510315438964,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.5431006155551971,
+      "white": 2.8945338631876236,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.5122867028526323,
+      "white": 2.815387273165213,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.5107460072175041,
+      "white": 2.810588950952289,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.5049907711561,
+      "white": 2.6734191131841487,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.5013162620696419,
+      "white": 2.794624214699394,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.501132536615319,
+      "white": 2.79637810601499,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 2048,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.5955325696420385,
+      "white": 2.2835683745590405,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 7168,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.5270193484156391,
+      "white": 2.1047779141144516,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "QWEN_PRM",
+      "width": 8192,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.5235936873543191,
+      "white": 2.095428545496922,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.5230388980940638,
+      "white": 3.181820643024273,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.500455738301381,
+      "white": 3.1926338083894574,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.49932658031174687,
+      "white": 3.1926613095416427,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.509146297265952,
+      "white": 2.9507308128645047,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.48895320559963307,
+      "white": 2.851135084016276,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.4879435510163171,
+      "white": 2.8452098928407494,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.4596949877943209,
+      "white": 1.9367849610990655,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.4560895835389867,
+      "white": 1.9712034759600299,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.45590931332622,
+      "white": 1.972747837306072,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.6184752012953242,
+      "white": 3.644203801506131,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.5304534868304241,
+      "white": 3.3463433318493516,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.5260524011071791,
+      "white": 3.328292510687472,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.47901627197094915,
+      "white": 3.1358825124601775,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.4931015110419709,
+      "white": 3.2001217754948117,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.49380577299552203,
+      "white": 3.202119672726932,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.48060729159603666,
+      "white": 2.742143348444916,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.4689745365258914,
+      "white": 2.8240303072386492,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.4683928987723841,
+      "white": 2.827360734012077,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.5070632578283824,
+      "white": 3.4039632684524603,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.4981114575224342,
+      "white": 3.532981933125222,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.49766386750713676,
+      "white": 3.533305489244547,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 2048,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.45378743710292563,
+      "white": 2.2085931829813985,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 7168,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.4039673268856695,
+      "white": 2.05929308058954,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_NATIVE",
+      "width": 8192,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.4014763213748067,
+      "white": 2.0513891724960307,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.5119801416187671,
+      "white": 3.3203798273046305,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.48933776657323574,
+      "white": 3.3201228268419607,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 13,
+      "batch_id": "A:16",
+      "raw": 0.48820564782095915,
+      "white": 3.3196771811838754,
+      "valid_tokens": 11990,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.4953231295968188,
+      "white": 2.6130676979449348,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.4757346959632094,
+      "white": 2.479668711461192,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 56,
+      "batch_id": "A:22",
+      "raw": 0.4747552742815289,
+      "white": 2.4721588952794837,
+      "valid_tokens": 17488,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.46303004348997673,
+      "white": 1.97109733728837,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.45453872091635183,
+      "white": 1.9759668898644613,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 80,
+      "batch_id": "A:166",
+      "raw": 0.4541141547876706,
+      "white": 1.9759610942343215,
+      "valid_tokens": 16858,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.6203488253115508,
+      "white": 3.637937841807841,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.5268931173869228,
+      "white": 3.3798786271656507,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 113,
+      "batch_id": "A:264",
+      "raw": 0.5222203319906914,
+      "white": 3.362142069882263,
+      "valid_tokens": 29316,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.4529093563648412,
+      "white": 2.9157894720702893,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.46936440638395577,
+      "white": 2.987966265283138,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 148,
+      "batch_id": "A:280",
+      "raw": 0.47018715888491147,
+      "white": 2.989866006408292,
+      "valid_tokens": 18752,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.49828334358692283,
+      "white": 2.7413395261480464,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.48898905148778676,
+      "white": 2.7981723358452184,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 162,
+      "batch_id": "B:6",
+      "raw": 0.4885243368828299,
+      "white": 2.8001417041332926,
+      "valid_tokens": 19047,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.49716382188984604,
+      "white": 3.2701882943401483,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.4895979988103505,
+      "white": 3.4757757607410915,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 198,
+      "batch_id": "B:106",
+      "raw": 0.4892197076563757,
+      "white": 3.4795792181573155,
+      "valid_tokens": 18724,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 2048,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.5384623213555545,
+      "white": 2.713083644268116,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 7168,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.4847253420224113,
+      "white": 2.573451792441201,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    },
+    {
+      "arm": "PURE_RL_PROMPT",
+      "width": 8192,
+      "index": 226,
+      "batch_id": "B:144",
+      "raw": 0.4820384930557542,
+      "white": 2.565914770812421,
+      "valid_tokens": 14157,
+      "response_tokens": 1
+    }
+  ],
+  "scope": "Only change the denominator N in pinned verl RLOO on saved trajectories. No longer responses generated; not a full long-context training/evaluation result.",
+  "formula": "baseline_i = sum_{k!=i,same_prompt} sum_{valid t} return[k,t] / ((G-1)*N); whiten once over unchanged valid tokens",
+  "vr_caveat": "P-VR here follows pinned verl shared-token-baseline implementation; paper Eq7 uses a separate response-level VR baseline."
+}

@@ -1,0 +1,1070 @@
+{
+  "passed": true,
+  "scored_rows": 288,
+  "scored_empty_rows": 9,
+  "replayed_rows": 256,
+  "replayed_empty_rows": 8,
+  "replayed_batches": [
+    "A:16",
+    "A:22",
+    "A:166",
+    "A:264",
+    "A:280",
+    "B:6",
+    "B:106",
+    "B:144"
+  ],
+  "skipped_batches": [
+    {
+      "batch_id": "B:210",
+      "indices": [
+        277
+      ],
+      "reasons": [
+        "ValueError('Response exceeds fixed completion width')"
+      ],
+      "policy": "Exclude the entire 32-row batch from advantage replay; retain all raw scoring"
+    }
+  ],
+  "provenance": {
+    "inputs": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
+    "input_sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d",
+    "qwen_scored_sha256": "422ecbcebb5df0160182e3780f0dd0beeeb0f8192784758bfcb02452e9127f74",
+    "pure_scored_sha256": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5",
+    "evidence_sha256": "c5d618afda5433b24c4b246372b5ede7acdcc3f34558ca6ada59f410b5768ad0",
+    "reconstruction_length_mismatches": 9
+  },
+  "scoring": {
+    "empty": {
+      "QWEN_PRM": {
+        "n": 9,
+        "signed_positive": 9,
+        "positive_probability_min": 0.9981897473335266,
+        "positive_probability_max": 0.9999724626541138,
+        "mean_positive_probability": 0.9996182719866434,
+        "reward_rank_first": 9
+      },
+      "PURE_NATIVE": {
+        "n": 9,
+        "signed_positive": 9,
+        "positive_probability_min": 0.6791787147521973,
+        "positive_probability_max": 0.9987356066703796,
+        "mean_positive_probability": 0.938110715813107,
+        "reward_rank_first": 9
+      },
+      "PURE_RL_PROMPT": {
+        "n": 9,
+        "signed_positive": 9,
+        "positive_probability_min": 0.9511421918869019,
+        "positive_probability_max": 0.9895108342170715,
+        "mean_positive_probability": 0.975037415822347,
+        "reward_rank_first": 8
+      }
+    },
+    "group_comparisons": {
+      "QWEN_PRM__vs__PURE_NATIVE": {
+        "groups": 36,
+        "defined_groups": 36,
+        "mean_group_spearman": 0.5648148148148148,
+        "groups_detail": [
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/number_theory/107",
+            "group_type": "mixed",
+            "spearman": 0.7380952380952381
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/precalculus/599",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/algebra/197",
+            "group_type": "mixed",
+            "spearman": 0.6666666666666666
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/number_theory/11",
+            "group_type": "mixed",
+            "spearman": -0.2619047619047619
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/prealgebra/647",
+            "group_type": "mixed",
+            "spearman": 0.8809523809523809
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/intermediate_algebra/473",
+            "group_type": "mixed",
+            "spearman": 0.5714285714285714
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/number_theory/369",
+            "group_type": "mixed",
+            "spearman": 0.7142857142857143
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/intermediate_algebra/895",
+            "group_type": "mixed",
+            "spearman": 0.9285714285714286
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/306",
+            "group_type": "mixed",
+            "spearman": 0.8095238095238095
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/647",
+            "group_type": "mixed",
+            "spearman": 0.5714285714285714
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/prealgebra/633",
+            "group_type": "mixed",
+            "spearman": 0.8571428571428571
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/537",
+            "group_type": "mixed",
+            "spearman": 0.7142857142857143
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/prealgebra/1142",
+            "group_type": "mixed",
+            "spearman": 0.40476190476190477
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/algebra/230",
+            "group_type": "mixed",
+            "spearman": 0.7142857142857143
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/number_theory/713",
+            "group_type": "all_wrong",
+            "spearman": 0.7619047619047619
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/geometry/623",
+            "group_type": "mixed",
+            "spearman": -0.14285714285714285
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/prealgebra/303",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/geometry/211",
+            "group_type": "mixed",
+            "spearman": 0.5476190476190477
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/algebra/593",
+            "group_type": "mixed",
+            "spearman": 0.6904761904761905
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/precalculus/593",
+            "group_type": "all_wrong",
+            "spearman": 0.30952380952380953
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/intermediate_algebra/606",
+            "group_type": "mixed",
+            "spearman": 0.7857142857142857
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/counting_and_probability/680",
+            "group_type": "mixed",
+            "spearman": 0.9523809523809523
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/counting_and_probability/42",
+            "group_type": "all_wrong",
+            "spearman": 0.5476190476190477
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/intermediate_algebra/102",
+            "group_type": "all_wrong",
+            "spearman": 0.19047619047619047
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/intermediate_algebra/355",
+            "group_type": "mixed",
+            "spearman": 0.0
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/prealgebra/382",
+            "group_type": "mixed",
+            "spearman": 0.6190476190476191
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/number_theory/583",
+            "group_type": "all_wrong",
+            "spearman": 0.0
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/prealgebra/1049",
+            "group_type": "mixed",
+            "spearman": 0.7857142857142857
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/809",
+            "group_type": "all_wrong",
+            "spearman": 0.7857142857142857
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/128",
+            "group_type": "mixed",
+            "spearman": 0.5714285714285714
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/1252",
+            "group_type": "mixed",
+            "spearman": 0.6428571428571429
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/prealgebra/844",
+            "group_type": "all_wrong",
+            "spearman": 0.14285714285714285
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/geometry/128",
+            "group_type": "mixed",
+            "spearman": 0.7142857142857143
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/precalculus/183",
+            "group_type": "mixed",
+            "spearman": -0.2857142857142857
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/counting_and_probability/351",
+            "group_type": "all_wrong",
+            "spearman": 0.6190476190476191
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/algebra/936",
+            "group_type": "mixed",
+            "spearman": 0.9761904761904762
+          }
+        ]
+      },
+      "QWEN_PRM__vs__PURE_RL_PROMPT": {
+        "groups": 36,
+        "defined_groups": 36,
+        "mean_group_spearman": 0.5416666666666666,
+        "groups_detail": [
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/number_theory/107",
+            "group_type": "mixed",
+            "spearman": 0.47619047619047616
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/precalculus/599",
+            "group_type": "mixed",
+            "spearman": 0.7857142857142857
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/algebra/197",
+            "group_type": "mixed",
+            "spearman": 0.6190476190476191
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/number_theory/11",
+            "group_type": "mixed",
+            "spearman": -0.30952380952380953
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/prealgebra/647",
+            "group_type": "mixed",
+            "spearman": 0.7857142857142857
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/intermediate_algebra/473",
+            "group_type": "mixed",
+            "spearman": 0.4523809523809524
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/number_theory/369",
+            "group_type": "mixed",
+            "spearman": 0.7142857142857143
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/intermediate_algebra/895",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/306",
+            "group_type": "mixed",
+            "spearman": 0.6666666666666666
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/647",
+            "group_type": "mixed",
+            "spearman": 0.6666666666666666
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/prealgebra/633",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/537",
+            "group_type": "mixed",
+            "spearman": 0.5
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/prealgebra/1142",
+            "group_type": "mixed",
+            "spearman": 0.3333333333333333
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/algebra/230",
+            "group_type": "mixed",
+            "spearman": 0.40476190476190477
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/number_theory/713",
+            "group_type": "all_wrong",
+            "spearman": 0.5952380952380952
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/geometry/623",
+            "group_type": "mixed",
+            "spearman": 0.14285714285714285
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/prealgebra/303",
+            "group_type": "mixed",
+            "spearman": 0.2619047619047619
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/geometry/211",
+            "group_type": "mixed",
+            "spearman": 0.5238095238095238
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/algebra/593",
+            "group_type": "mixed",
+            "spearman": 0.4523809523809524
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/precalculus/593",
+            "group_type": "all_wrong",
+            "spearman": 0.47619047619047616
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/intermediate_algebra/606",
+            "group_type": "mixed",
+            "spearman": 0.8571428571428571
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/counting_and_probability/680",
+            "group_type": "mixed",
+            "spearman": 0.8809523809523809
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/counting_and_probability/42",
+            "group_type": "all_wrong",
+            "spearman": 0.7380952380952381
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/intermediate_algebra/102",
+            "group_type": "all_wrong",
+            "spearman": 0.16666666666666666
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/intermediate_algebra/355",
+            "group_type": "mixed",
+            "spearman": 0.9761904761904762
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/prealgebra/382",
+            "group_type": "mixed",
+            "spearman": 0.5476190476190477
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/number_theory/583",
+            "group_type": "all_wrong",
+            "spearman": 0.14285714285714285
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/prealgebra/1049",
+            "group_type": "mixed",
+            "spearman": 0.8333333333333334
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/809",
+            "group_type": "all_wrong",
+            "spearman": 0.7857142857142857
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/128",
+            "group_type": "mixed",
+            "spearman": 0.30952380952380953
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/1252",
+            "group_type": "mixed",
+            "spearman": 0.8333333333333334
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/prealgebra/844",
+            "group_type": "all_wrong",
+            "spearman": 0.30952380952380953
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/geometry/128",
+            "group_type": "mixed",
+            "spearman": 0.8571428571428571
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/precalculus/183",
+            "group_type": "mixed",
+            "spearman": -0.6190476190476191
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/counting_and_probability/351",
+            "group_type": "all_wrong",
+            "spearman": 0.5476190476190477
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/algebra/936",
+            "group_type": "mixed",
+            "spearman": 0.9761904761904762
+          }
+        ]
+      },
+      "PURE_NATIVE__vs__PURE_RL_PROMPT": {
+        "groups": 36,
+        "defined_groups": 36,
+        "mean_group_spearman": 0.796957671957672,
+        "groups_detail": [
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/number_theory/107",
+            "group_type": "mixed",
+            "spearman": 0.7380952380952381
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/precalculus/599",
+            "group_type": "mixed",
+            "spearman": 0.7619047619047619
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/algebra/197",
+            "group_type": "mixed",
+            "spearman": 0.8333333333333334
+          },
+          {
+            "batch_id": "A:16",
+            "problem_id": "math/train/number_theory/11",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/prealgebra/647",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/intermediate_algebra/473",
+            "group_type": "mixed",
+            "spearman": 0.5476190476190477
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/number_theory/369",
+            "group_type": "mixed",
+            "spearman": 1.0
+          },
+          {
+            "batch_id": "A:22",
+            "problem_id": "math/train/intermediate_algebra/895",
+            "group_type": "mixed",
+            "spearman": 0.9761904761904762
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/306",
+            "group_type": "mixed",
+            "spearman": 0.8095238095238095
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/647",
+            "group_type": "mixed",
+            "spearman": 0.9285714285714286
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/prealgebra/633",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:166",
+            "problem_id": "math/train/intermediate_algebra/537",
+            "group_type": "mixed",
+            "spearman": 0.8809523809523809
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/prealgebra/1142",
+            "group_type": "mixed",
+            "spearman": 0.6428571428571429
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/algebra/230",
+            "group_type": "mixed",
+            "spearman": 0.6904761904761905
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/number_theory/713",
+            "group_type": "all_wrong",
+            "spearman": 0.7142857142857143
+          },
+          {
+            "batch_id": "A:264",
+            "problem_id": "math/train/geometry/623",
+            "group_type": "mixed",
+            "spearman": 0.9047619047619048
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/prealgebra/303",
+            "group_type": "mixed",
+            "spearman": 0.40476190476190477
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/geometry/211",
+            "group_type": "mixed",
+            "spearman": 0.9523809523809523
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/algebra/593",
+            "group_type": "mixed",
+            "spearman": 0.8809523809523809
+          },
+          {
+            "batch_id": "A:280",
+            "problem_id": "math/train/precalculus/593",
+            "group_type": "all_wrong",
+            "spearman": 0.6904761904761905
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/intermediate_algebra/606",
+            "group_type": "mixed",
+            "spearman": 0.9761904761904762
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/counting_and_probability/680",
+            "group_type": "mixed",
+            "spearman": 0.9285714285714286
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/counting_and_probability/42",
+            "group_type": "all_wrong",
+            "spearman": 0.6666666666666666
+          },
+          {
+            "batch_id": "B:6",
+            "problem_id": "math/train/intermediate_algebra/102",
+            "group_type": "all_wrong",
+            "spearman": 0.9761904761904762
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/intermediate_algebra/355",
+            "group_type": "mixed",
+            "spearman": -0.023809523809523808
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/prealgebra/382",
+            "group_type": "mixed",
+            "spearman": 0.8333333333333334
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/number_theory/583",
+            "group_type": "all_wrong",
+            "spearman": 0.9523809523809523
+          },
+          {
+            "batch_id": "B:106",
+            "problem_id": "math/train/prealgebra/1049",
+            "group_type": "mixed",
+            "spearman": 0.9761904761904762
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/809",
+            "group_type": "all_wrong",
+            "spearman": 1.0
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/128",
+            "group_type": "mixed",
+            "spearman": 0.6428571428571429
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/algebra/1252",
+            "group_type": "mixed",
+            "spearman": 0.7619047619047619
+          },
+          {
+            "batch_id": "B:144",
+            "problem_id": "math/train/prealgebra/844",
+            "group_type": "all_wrong",
+            "spearman": 0.9523809523809523
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/geometry/128",
+            "group_type": "mixed",
+            "spearman": 0.8571428571428571
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/precalculus/183",
+            "group_type": "mixed",
+            "spearman": 0.7619047619047619
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/counting_and_probability/351",
+            "group_type": "all_wrong",
+            "spearman": 0.40476190476190477
+          },
+          {
+            "batch_id": "B:210",
+            "problem_id": "math/train/algebra/936",
+            "group_type": "mixed",
+            "spearman": 0.9523809523809523
+          }
+        ]
+      }
+    },
+    "outcome_concordance": {
+      "P_VR": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 324,
+        "incorrect_higher": 0,
+        "tied": 0,
+        "concordance": 1.0
+      },
+      "QWEN_PRM": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 244,
+        "incorrect_higher": 80,
+        "tied": 0,
+        "concordance": 0.7530864197530864
+      },
+      "PURE_NATIVE": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 207,
+        "incorrect_higher": 117,
+        "tied": 0,
+        "concordance": 0.6388888888888888
+      },
+      "PURE_RL_PROMPT": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 211,
+        "incorrect_higher": 113,
+        "tied": 0,
+        "concordance": 0.6512345679012346
+      }
+    },
+    "all_group_types": {
+      "mixed": 28,
+      "all_wrong": 8
+    }
+  },
+  "advantage": {
+    "empty": {
+      "P_VR": {
+        "n": 8,
+        "positive_raw_terminal": 0,
+        "positive_whitened_terminal": 0,
+        "rank_first": 2,
+        "correct_peer_count": 23,
+        "outranked_correct_peer_count": 0,
+        "min_whitened_terminal": -1.1994576454162598,
+        "max_whitened_terminal": -0.3167426586151123,
+        "length_matched_batch_subset": {
+          "n": 4,
+          "positive_whitened": 0
+        }
+      },
+      "QWEN_PRM": {
+        "n": 8,
+        "positive_raw_terminal": 8,
+        "positive_whitened_terminal": 8,
+        "rank_first": 8,
+        "correct_peer_count": 23,
+        "outranked_correct_peer_count": 23,
+        "min_whitened_terminal": 2.1562294960021973,
+        "max_whitened_terminal": 3.2180492877960205,
+        "length_matched_batch_subset": {
+          "n": 4,
+          "positive_whitened": 4
+        }
+      },
+      "PURE_NATIVE": {
+        "n": 8,
+        "positive_raw_terminal": 8,
+        "positive_whitened_terminal": 8,
+        "rank_first": 8,
+        "correct_peer_count": 23,
+        "outranked_correct_peer_count": 23,
+        "min_whitened_terminal": 1.9367849826812744,
+        "max_whitened_terminal": 3.6442034244537354,
+        "length_matched_batch_subset": {
+          "n": 4,
+          "positive_whitened": 4
+        }
+      },
+      "PURE_RL_PROMPT": {
+        "n": 8,
+        "positive_raw_terminal": 8,
+        "positive_whitened_terminal": 8,
+        "rank_first": 7,
+        "correct_peer_count": 23,
+        "outranked_correct_peer_count": 22,
+        "min_whitened_terminal": 1.9710971117019653,
+        "max_whitened_terminal": 3.6379377841949463,
+        "length_matched_batch_subset": {
+          "n": 4,
+          "positive_whitened": 4
+        }
+      }
+    },
+    "comparisons": {
+      "QWEN_PRM__vs__PURE_NATIVE": {
+        "all": {
+          "n": 256,
+          "raw_terminal_sign_changes": 59,
+          "white_terminal_sign_changes": 42,
+          "mean_token_advantage_sign_changes": 68
+        },
+        "mixed": {
+          "n": 200,
+          "raw_terminal_sign_changes": 48,
+          "white_terminal_sign_changes": 32,
+          "mean_token_advantage_sign_changes": 47
+        },
+        "all_correct": {
+          "n": 0,
+          "raw_terminal_sign_changes": 0,
+          "white_terminal_sign_changes": 0,
+          "mean_token_advantage_sign_changes": 0
+        },
+        "all_wrong": {
+          "n": 56,
+          "raw_terminal_sign_changes": 11,
+          "white_terminal_sign_changes": 10,
+          "mean_token_advantage_sign_changes": 21
+        }
+      },
+      "QWEN_PRM__vs__PURE_RL_PROMPT": {
+        "all": {
+          "n": 256,
+          "raw_terminal_sign_changes": 63,
+          "white_terminal_sign_changes": 43,
+          "mean_token_advantage_sign_changes": 66
+        },
+        "mixed": {
+          "n": 200,
+          "raw_terminal_sign_changes": 52,
+          "white_terminal_sign_changes": 31,
+          "mean_token_advantage_sign_changes": 47
+        },
+        "all_correct": {
+          "n": 0,
+          "raw_terminal_sign_changes": 0,
+          "white_terminal_sign_changes": 0,
+          "mean_token_advantage_sign_changes": 0
+        },
+        "all_wrong": {
+          "n": 56,
+          "raw_terminal_sign_changes": 11,
+          "white_terminal_sign_changes": 12,
+          "mean_token_advantage_sign_changes": 19
+        }
+      },
+      "PURE_NATIVE__vs__PURE_RL_PROMPT": {
+        "all": {
+          "n": 256,
+          "raw_terminal_sign_changes": 36,
+          "white_terminal_sign_changes": 23,
+          "mean_token_advantage_sign_changes": 26
+        },
+        "mixed": {
+          "n": 200,
+          "raw_terminal_sign_changes": 28,
+          "white_terminal_sign_changes": 21,
+          "mean_token_advantage_sign_changes": 22
+        },
+        "all_correct": {
+          "n": 0,
+          "raw_terminal_sign_changes": 0,
+          "white_terminal_sign_changes": 0,
+          "mean_token_advantage_sign_changes": 0
+        },
+        "all_wrong": {
+          "n": 56,
+          "raw_terminal_sign_changes": 8,
+          "white_terminal_sign_changes": 2,
+          "mean_token_advantage_sign_changes": 4
+        }
+      }
+    },
+    "group_strata": {
+      "mixed": {
+        "rows": 200,
+        "groups": 25,
+        "variants": {
+          "P_VR": {
+            "positive_terminal": 116,
+            "mean_absolute_token_advantage": 1.072519047621082
+          },
+          "QWEN_PRM": {
+            "positive_terminal": 172,
+            "mean_absolute_token_advantage": 0.8280507880412887
+          },
+          "PURE_NATIVE": {
+            "positive_terminal": 166,
+            "mean_absolute_token_advantage": 0.8061549687631956
+          },
+          "PURE_RL_PROMPT": {
+            "positive_terminal": 163,
+            "mean_absolute_token_advantage": 0.8539426087611234
+          }
+        }
+      },
+      "all_correct": {
+        "rows": 0,
+        "groups": 0,
+        "variants": {
+          "P_VR": {
+            "positive_terminal": 0,
+            "mean_absolute_token_advantage": null
+          },
+          "QWEN_PRM": {
+            "positive_terminal": 0,
+            "mean_absolute_token_advantage": null
+          },
+          "PURE_NATIVE": {
+            "positive_terminal": 0,
+            "mean_absolute_token_advantage": null
+          },
+          "PURE_RL_PROMPT": {
+            "positive_terminal": 0,
+            "mean_absolute_token_advantage": null
+          }
+        }
+      },
+      "all_wrong": {
+        "rows": 56,
+        "groups": 7,
+        "variants": {
+          "P_VR": {
+            "positive_terminal": 0,
+            "mean_absolute_token_advantage": 0.48993598430007507
+          },
+          "QWEN_PRM": {
+            "positive_terminal": 43,
+            "mean_absolute_token_advantage": 0.8219908285889322
+          },
+          "PURE_NATIVE": {
+            "positive_terminal": 51,
+            "mean_absolute_token_advantage": 0.8261784809589805
+          },
+          "PURE_RL_PROMPT": {
+            "positive_terminal": 51,
+            "mean_absolute_token_advantage": 0.7949129698530929
+          }
+        }
+      }
+    },
+    "task_coefficient": 0.5,
+    "softmin_temperature": 0.1,
+    "response_width": 2048,
+    "kl": 0.0,
+    "whitening_calls_per_batch": 1,
+    "oracle_checks": 32,
+    "independent_signal_oracle_passed": true
+  },
+  "costs": {
+    "elapsed_seconds": 367.5517204059288,
+    "peak_allocated_GiB": 13.631380081176758,
+    "peak_reserved_GiB": 14.548828125,
+    "new_generations": 0,
+    "optimizer_steps": 0,
+    "model_frozen": true,
+    "policy_model_loaded": false,
+    "model_revision": "b0cce6763f2317762c9cb46720c8fe7b07f44a88",
+    "costs": {
+      "native_raw": {
+        "seconds": 176.28766881814227,
+        "scored_responses": 288,
+        "prm_input_tokens": 186838,
+        "padded_tokens": 186838
+      },
+      "official_rl_prompt": {
+        "seconds": 177.85477241594344,
+        "scored_responses": 288,
+        "prm_input_tokens": 192638,
+        "padded_tokens": 192638
+      }
+    },
+    "forward_seconds": 354.1984216850251
+  },
+  "remote_evidence": {
+    "passed": true,
+    "rows": 288,
+    "empty_rows": 9,
+    "variants": [
+      "native_raw",
+      "official_rl_prompt"
+    ],
+    "costs": {
+      "native_raw": {
+        "seconds": 176.28766881814227,
+        "scored_responses": 288,
+        "prm_input_tokens": 186838,
+        "padded_tokens": 186838
+      },
+      "official_rl_prompt": {
+        "seconds": 177.85477241594344,
+        "scored_responses": 288,
+        "prm_input_tokens": 192638,
+        "padded_tokens": 192638
+      }
+    },
+    "elapsed_seconds": 367.5517204059288,
+    "forward_seconds": 354.1984216850251,
+    "peak_allocated_GiB": 13.631380081176758,
+    "peak_reserved_GiB": 14.548828125,
+    "input_sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d",
+    "qwen_results_sha256": "422ecbcebb5df0160182e3780f0dd0beeeb0f8192784758bfcb02452e9127f74",
+    "model_assets_sha256": "d65ae3c32912b888142799dc64dfdfc9caa0772c288dca334b2dab4d78a09b56",
+    "model_revision": "b0cce6763f2317762c9cb46720c8fe7b07f44a88",
+    "matched_checkpoint_tensors": 340,
+    "primary_microbatch": 1,
+    "primary_forward": "Literal model-card single-example forward without padding",
+    "batch2_empty_sensitivity_recorded": true,
+    "extra_single_empty_forwards_per_variant": 9,
+    "extra_batch2_pair_forwards_per_variant": 9,
+    "cost_scope": "Per-variant time includes nine independent single and nine paired empty diagnostics; primary token totals exclude diagnostics",
+    "official_source_commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+    "identical_canonical_steps": true,
+    "all_independent_serializations_equal": true,
+    "empty_terminal_step": "EOS-only boundary from official RL; literal model-card steps=[] has no score",
+    "official_rl_prompt_scope": "Official prompt string with fixed canonical steps; not literal actor-token split or truncation emulation",
+    "new_generations": 0,
+    "optimizer_steps": 0,
+    "policy_model_loaded": false,
+    "model_frozen": true,
+    "training_started": false
+  },
+  "limitations": [
+    "288 rows selected as nine full historical batches containing empty answers; not representative sampling.",
+    "All raw scores retained. Whole B:210 batch excluded only from token-advantage replay because one reconstructed response exceeds fixed width.",
+    "Old logs did not save emitted token IDs; reconstruction with logged-length agreement still does not prove exact original tokens.",
+    "KL fixed to zero; this is an offline counterfactual, not historical A/B advantages or a prediction of future training.",
+    "Native-input formats differ by PRM. Raw-question and official-RL-prompt variants use shared canonical steps, not the official literal token splitter.",
+    "Final-answer concordance is not process correctness; there are no new human step labels.",
+    "No winner selected, no training launched, no reward or answer-verification rules changed."
+  ],
+  "training_started": false,
+  "new_generations": 0,
+  "optimizer_steps": 0
+}

@@ -1,0 +1,79 @@
+from pathlib import Path
+import html
+import json
+
+HERE = Path(__file__).resolve().parent
+a = json.loads((HERE / 'offline_analysis.json').read_text())
+g = json.loads((HERE / 'guard_acceptance.json').read_text())
+inputs = [json.loads(x) for x in (HERE / 'inputs.jsonl').read_text().splitlines()]
+scores = [json.loads(x) for x in (HERE / 'remote/frozen_scoring_v2/scored.jsonl').read_text().splitlines()]
+labels = {
+    'P_VR': 'P-VR：最终答案奖励',
+    'P_PRM': 'P-PRM：原 PURE 过程目标',
+    'ZERO_EMPTY_NOT_ADOPTED': '假设把空回答过程奖励清零（未采用）',
+    'OFFICIAL_MIX_GT_AVAILABLE': '官方 PRM+VR 组合：所有展示题有 GT',
+    'OFFICIAL_MIX_FIXED_10PCT': '官方组合：固定 10% 训练题有 GT',
+}
+table = ''.join(f'<tr><td>{labels[k]}</td><td>{v["positive_raw_advantage"]}/{v["n"]}</td>'
+    f'<td>{v["positive_whitened_advantage"]}/{v["n"]}</td>'
+    f'<td>{v["min_whitened_advantage"]:.3f} ～ {v["max_whitened_advantage"]:.3f}</td></tr>'
+    for k,v in a['aggregate'].items())
+native_rows = ''.join(f'<tr><td>{html.escape(r["batch_id"])}</td><td>{html.escape(r["problem_id"])}</td>'
+    f'<td>{s["native"]["step_scores"][0]:.8f}</td><td>{s["direct_official_positive_probabilities"][0]:.8f}</td>'
+    f'<td>{r["old_reward"]:.1f}／未调用 PRM</td></tr>'
+    for r,s in zip(inputs,scores) if not r['completion'].strip())
+examples = ''.join(f'<tr><td>{html.escape(r["batch_id"])}</td><td>{int(r["correct_peers"])}/7</td>'
+    f'<td>{r["variants"]["P_VR"]["whitened_terminal_advantage"]:.4f}</td>'
+    f'<td>{r["variants"]["P_PRM"]["whitened_terminal_advantage"]:.4f}</td>'
+    f'<td>{r["variants"]["ZERO_EMPTY_NOT_ADOPTED"]["whitened_terminal_advantage"]:.4f}</td></tr>'
+    for r in a['empty_cases'])
+page = '''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PURE 空回答高分：根因与离线修复边界</title><style>
+:root{color-scheme:light;--ink:#152a3a;--sub:#567080;--line:#dbe5eb;--blue:#165d86}*{box-sizing:border-box}body{margin:0;background:#f1f5f8;color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:1120px;margin:auto;padding:36px 28px 60px}header{background:#122f46;color:white;border-radius:18px;padding:30px 32px}header p{color:#d4e7f3}h1{font-size:30px;line-height:1.35;margin:10px 0}h2{font-size:22px;margin:0 0 14px}h3{font-size:17px;margin:20px 0 8px}p{margin:10px 0}.eyebrow{font-size:13px;letter-spacing:.1em;color:#acd7ef}.status{display:inline-block;background:#fce7b6;color:#634000;border-radius:20px;padding:3px 12px;font-size:13px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}.card,section{background:white;border:1px solid var(--line);border-radius:14px;padding:24px}.card b{font-size:28px;display:block;color:var(--blue)}.card small,.sub{color:var(--sub)}section{margin:18px 0}a{color:var(--blue);text-underline-offset:3px}header a{color:#c6ebff}.callout{border-left:4px solid #d9a12a;background:#fff8e8;padding:13px 18px;margin:15px 0}.ok{border-color:#2a8d81;background:#eef8f4}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:11px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:#edf4f8;font-weight:600}code{background:#edf2f6;padding:2px 5px;border-radius:4px;font-size:13px}.scroll{overflow:auto}li{margin:8px 0}footer{font-size:13px;color:var(--sub)}details{margin-top:14px}summary{cursor:pointer;color:var(--blue);font-weight:600}@media(max-width:760px){main{padding:18px 14px}header{padding:24px}.cards{grid-template-columns:1fr}h1{font-size:25px}section{padding:20px}}
+</style></head><body><main>
+<header><div class="eyebrow">ECE285 · OFFLINE AUDIT · 2026-10-22 PT</div><h1>空回答高分：主要是 PRM 的任务完整性盲点</h1>
+<p>原生 Qwen 调用复现了高分；没有发现把低分读成高分、错取类别或重复归一化导致这一现象的证据。</p>
+<span class="status">仅冻结评分与 CPU 回放 · 0 次参数更新 · 正式训练仍未就绪</span></header>
+<div class="cards"><div class="card"><small>现有 A/B 日志中的真实空回答</small><b>9 / 18,048</b><small>A：5 / 9,088；B：4 / 8,960</small></div>
+<div class="card"><small>9 条空回答的原生 PRM 正类分数</small><b>0.9982–1.0000</b><small>范围上界四舍五入；不是推导正确率</small></div>
+<div class="card"><small>正常批次加入共同保护后的变化</small><b>0</b><small>32 条精确 token：reward、advantage、loss 梯度逐项相同</small></div></div>
+
+<section><h2>1. 根因究竟在哪</h2><ol>
+<li><b>模型层：</b>9 条真实空回答在冻结 Qwen PRM 上均得到极高正类分数。逐条按 Qwen 官方示例直接 forward，与接入层的批量评分最大差异只有 <code>0.0000284</code>，无法解释高分本身。</li>
+<li><b>接口层：</b>我们的 <code>steps or ['']</code> 会建立一个空的末尾评分边界；但 Qwen 示例的 <code>join(steps) + marker</code> 在空列表时也会产生同一个 marker。288 条输入的原生 token 序列逐条一致。因此删除这一行并不能证明已修复模型。</li>
+<li><b>PURE 层：</b>固定官方版本会给末尾 EOS 建立评分边界。高正类分数经过签名变换与 soft-min 后，空回答得到接近 <code>+0.5</code> 的任务奖励。RLOO 正确地使用了一个语义上有问题的分数。</li>
+</ol><p>PURE 论文 §5.1 Case 3 已讨论空回答与无关短句拿高分，并使用少量最终答案监督缓解。该现象并非 Qwen 独有，也不是换成 PURE 自己的 PRM 就有保证消失。<a href="https://arxiv.org/html/2504.15275v3#S5.SS1">论文原文</a> · <a href="https://huggingface.co/Qwen/Qwen2.5-Math-PRM-7B">Qwen 官方接口</a></p>
+<div class="callout"><b>不能倒推旧 B 的失败原因：</b>旧 A/B 的这 9 条空回答没有被 PRM 评分，原奖励均为 0。此次发现是 PURE 纯过程奖励接入后的风险，不能用它解释旧 B 为什么不如 A。</div></section>
+
+<section><h2>2. 为什么“空回答奖励清零”不够</h2><p>PURE 使用有正有负的过程奖励。若其他回答的过程回报为负，空回答的 0 仍可能高于基线；经过 RLOO 和唯一一次 whitening，仍可能鼓励 EOS。下面是对已保存回答的数值反事实回放。</p>
+<div class="scroll"><table><thead><tr><th>离线方案</th><th>正原始 advantage</th><th>正归一化 advantage</th><th>归一化 advantage 范围</th></tr></thead><tbody>@@TABLE@@</tbody></table></div>
+<p class="sub">共 8 个可重建的 32 回答批次，每批含 1 条空回答。历史记录没有原始 token IDs；此处重建 token、令 KL=0，并使用固定官方 RLOO。不是历史实际梯度，也不是新训练收益。4 个全批长度与日志一致的子集内，P-PRM 与清零方案同样各有 4/4 为正。</p>
+<div class="callout">10% GT 选择在全部 6,993 道训练题上用 seed17 固定抽取 699 道。本次 8 个空回答所在题恰好全部未入选，因此不能拿这列断言官方 10% 方法整体无效。“全部展示题有 GT”一列只是条件分支分析，也不等于论文的 10% 设置。</div>
+<details><summary>查看 8 个批次的空回答 advantage</summary><div class="scroll"><table><thead><tr><th>历史批次</th><th>同题其余回答答对数</th><th>P-VR</th><th>P-PRM</th><th>强行清零</th></tr></thead><tbody>@@EXAMPLES@@</tbody></table></div></details></section>
+
+<section><h2>3. 已实现的最小保护：两组共同暂停，不改奖励</h2>
+<p>独立版本 <code>GuardedPureIntegration</code> 在生成后、准备信号前与 backward 前检查纯空白回答。若发现，保存完整批次、实际 token 与原因，然后抛出明确异常，停止本次更新。</p>
+<ul><li><b>同一规则作用于 P-VR 与 P-PRM。</b>不删除空回答，不偷偷补采，不清零或设负奖励，也不改变 loss mask。</li>
+<li><b>正常回答原样走旧实现。</b>32 条精确 token 回放中，两组的步骤位置、reward、return、advantage 均逐项一致；loss 对 log-prob 的梯度差异为 0，whitening 仍只有一次。</li>
+<li><b>不会把语义判断伪装成格式检查。</b>“Thank you.”、无框答案、单数字仍是非空内容，不被这条保护过滤；它们的 PRM 风险仍存在。</li>
+<li><b>这是一条实验停机规则，非 PURE 官方奖励算法。</b>若以后任何一组触发，不能把不同训练预算的结果冒充完成的公平对照。评测时仍保留所有空答案，按原验答器计分。</li></ul>
+<div class="callout ok">已解决：空回答不会在这个独立保护版本中悄悄进入参数更新。<br>未解决：PRM 对空内容／无关内容的语义高分。停机不等于把评分器训练好了。</div>
+<p><a href="../../experiments/pure_empty_boundary_20261022/guard.py">保护代码</a> · <a href="guard_acceptance.json">CPU 验收收据</a> · <a href="acceptance_receipt.json">完整结论与边界</a></p></section>
+
+<section><h2>4. 正式实验如何保持标准与公平</h2>
+<p><b>保留 P-VR / P-PRM 原定义。</b>同一策略初始化、题目、采样、token 预算、KL、RLOO、PPO 和验答器；当前独立保护也相同。原 A/B 与原 PURE 联调证据全部保留。</p>
+<p>若要使用已有的、针对该问题的训练方案，官方提供的是独立命名的 <b>PURE-PRM+VR</b>。其步骤奖励与最终答案奖励在 token 层结合，再走同一官方优势计算。它可作为单独的标准比较，不能悄悄取代 P-PRM。本次只做离线反事实，未安装混合训练入口。</p>
+<p>即使所有展示题都提供 GT，8 条中仍有 7 条的归一化空回答 advantage 为正。因此不能承诺“加上官方混合就彻底修好了”。要保证空回答被负向学习，需要明确改变任务完成约束、奖励或 PRM；这些都超出纯接入纠错。</p>
+<p><b>当前判断：</b>接入基本正确，纯过程目标的边界风险已证实。保留标准 baseline，采用共同停机保护；不把自定义空回答惩罚塞进 baseline，也不据此启动纯 P-PRM 长训练。</p></section>
+
+<section><h2>5. 证据、成本与限制</h2>
+<p>取所有含空回答的历史 update 批次，共 9 × 32 = 288 条，对冻结 7B PRM 重新评分。没有加载策略模型，没有新采样，没有优化器。GPU 阶段含加载共约 138 秒，峰值 Torch allocated 13.90 GiB，reserved 15.31 GiB；进程已退出。</p>
+<p>9 条历史回答的重建 token 长度与日志不同；其中 B:210 的一条同组长回答从日志 2,048 重建为 2,057，超过固定上限。保留其原生 PRM 分数，整个批次不进入 advantage 比较，未静默截断或填造分数。其余重建误差也在 JSON 中标出。</p>
+<details><summary>9 条真实空回答：原生评分与旧奖励</summary><div class="scroll"><table><thead><tr><th>批次</th><th>题号</th><th>接入分数</th><th>官方逐条 forward</th><th>原 A/B 记录</th></tr></thead><tbody>@@NATIVE@@</tbody></table></div></details>
+<p>证据：<a href="offline_analysis.json">反事实数值</a> · <a href="remote/frozen_scoring_v2/scored.jsonl">288 条冻结评分</a> · <a href="selection.json">选择与完整日志计数</a> · <a href="preservation.json">原文件哈希保护</a> · <a href="remote_exit_check.json">进程退出</a> · <a href="first_attempt.json">首轮传输未完成的失败记录</a></p>
+<p>官方源代码：<a href="https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/fsdp_workers.py#L1357-L1462">末尾步骤构造</a> · <a href="https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/ppo/ray_trainer.py#L1194-L1204">过程／结果奖励组合</a>。固定 commit：<code>b174e508</code>。</p></section>
+<footer>这是根因核验与更新前保护报告，不是新方法精度结果。空回答样本按异常定位选取，不能用这些结果估计整体 PRM 错误率。</footer>
+</main></body></html>'''
+page = page.replace('@@TABLE@@',table).replace('@@EXAMPLES@@',examples).replace('@@NATIVE@@',native_rows)
+(HERE / 'review.html').write_text(page)
+print(HERE / 'review.html')

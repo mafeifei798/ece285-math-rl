@@ -1,0 +1,123 @@
+{
+  "repository": "https://github.com/CJReinforce/PURE",
+  "branch": "verl",
+  "commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "retrieved_utc": "2026-10-23T04:45:03.192813+00:00",
+  "files": {
+    "README.md": {
+      "bytes": 8358,
+      "sha256": "f6c3edc397eab5d14dc13ecbaec41002f89dc93fd3d41041c5e8efedd1a50c1b",
+      "git_blob": "bc3c3d74e10494d4f08262db4989aef0456a3217",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/README.md"
+    },
+    "requirements.txt": {
+      "bytes": 281,
+      "sha256": "dcc0242b03ca3c742b13a2bd4be7a7fff93dbd38d0dcc11780ea1ee279f05af5",
+      "git_blob": "430c38cee1611d860503872b3a1a686e5696ffb5",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/requirements.txt"
+    },
+    "setup.py": {
+      "bytes": 2196,
+      "sha256": "ea317680cc223d68a4c0ca7c767e49b7c3493151e318f77770dbef4e78f0886c",
+      "git_blob": "e687d9571bff0ee702b96f385bd4029cf4e9f6ba",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/setup.py"
+    },
+    "pyproject.toml": {
+      "bytes": 2389,
+      "sha256": "7c891488e70d038d55a3581fcc6bf7d6fa43b7c6ebc696c446354ed239279c60",
+      "git_blob": "659b05942c099d9b63501c33f570e4452775ebe9",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/pyproject.toml"
+    },
+    "verl/trainer/config/ppo_trainer.yaml": {
+      "bytes": 6773,
+      "sha256": "ad15e67b4a474dcc2804cfed8f13019e575f7481d913cb069e555506e3639874",
+      "git_blob": "3d783704d57ef1031ca35f90fb18bdce08cd4a57",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/config/ppo_trainer.yaml"
+    },
+    "verl/trainer/main_ppo.py": {
+      "bytes": 7915,
+      "sha256": "169264545c7c2eab0dbe688df5fd74caa4ad1877a8a4d672fae44eef3f15ae86",
+      "git_blob": "d9a96d4f477d01a33ddbc4717315a175683ac0e6",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/main_ppo.py"
+    },
+    "verl/trainer/ppo/core_algos.py": {
+      "bytes": 15064,
+      "sha256": "1d28d55bb213594a987762a1871557cf12353d6e51c07a9f35257050986b0913",
+      "git_blob": "478e9f32eb1013c75bdb6cba2d963c5457153594",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/ppo/core_algos.py"
+    },
+    "verl/trainer/ppo/ray_trainer.py": {
+      "bytes": 60574,
+      "sha256": "e03a99a04e0c88e8275464adbc269750c920ec36b001e0b12ef2ba1465f7b1ad",
+      "git_blob": "70007f71f2bd5fbfc291356b81a42bde2f106983",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/ppo/ray_trainer.py"
+    },
+    "verl/workers/fsdp_workers.py": {
+      "bytes": 77234,
+      "sha256": "f9f7ab7d96ad7aec4910f821e7295753fcee7dcfcdca732bfe3ad2073ca0774f",
+      "git_blob": "9e1d5fdf6770cb354be300fb9a044d6916b3c459",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/fsdp_workers.py"
+    },
+    "verl/workers/actor/dp_actor.py": {
+      "bytes": 14523,
+      "sha256": "c56303913c3d2a41200b2a91fd12ac45c253e6206b6a07980fbce91656fa5130",
+      "git_blob": "0eee1c55ccd8b26026133854bb35a5c7b569e27c",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/actor/dp_actor.py"
+    },
+    "verl/workers/reward_manager/blank.py": {
+      "bytes": 3055,
+      "sha256": "de67db879eaf67a59dbce76fc97d032c33d6582ce67ca7e46693b3e9e98ca27a",
+      "git_blob": "b991e8ae0832aec2729530187a5dad4969e25e5b",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/reward_manager/blank.py"
+    },
+    "verl/workers/reward_manager/prime.py": {
+      "bytes": 8328,
+      "sha256": "f96270b7a204fb7cf7a2ec75b1263a2f32b71da6093937243f3c6a6177617693",
+      "git_blob": "793d13d5997ffe9a154b9e0fb9dc8aedd39f5df8",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/reward_manager/prime.py"
+    },
+    "verl/utils/torch_functional.py": {
+      "bytes": 19857,
+      "sha256": "cf9ecbfa6afed9981e3c14cea740509cc398da18250f7f2f990a2f56107beaae",
+      "git_blob": "32bfda2278f7b686a8c0791f88a5bafeb0f811cb",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/utils/torch_functional.py"
+    },
+    "PRM/finetune.py": {
+      "bytes": 2901,
+      "sha256": "2ae8604dd7aeee7577c50028da3a7cf831a2c68186f09b12a6f2390c3f0c4fa1",
+      "git_blob": "f8b55684b4fdce0e1e6b4dfcdcd0dabd39439641",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/PRM/finetune.py"
+    },
+    "PRM/eval/bon.py": {
+      "bytes": 3354,
+      "sha256": "d9453dec5c1007e640e61463790626e26a89c77e9cbc4a18bb394e313cad95de",
+      "git_blob": "1e02835611a77a96177f4ef2d38a46db2d766fa5",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/PRM/eval/bon.py"
+    },
+    "PRM/eval/process_bench.py": {
+      "bytes": 6453,
+      "sha256": "f7000cf52b553873e57e2c7f26eed0d297b971fe26fd75dc8a1b060657179228",
+      "git_blob": "653224bec11103a359ab48b87b92c8eeaadcacef",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/PRM/eval/process_bench.py"
+    },
+    "verl/utils/dataset/rl_dataset.py": {
+      "bytes": 11646,
+      "sha256": "c99cdb169eff1ba5ca6a13f9e6fc68502c13769267034350037622a248d8a8f2",
+      "git_blob": "04fbdfa30ede661ca6994e51f271fb741f9ceebe",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/utils/dataset/rl_dataset.py"
+    },
+    "verl/workers/rollout/vllm_rollout/vllm_rollout.py": {
+      "bytes": 10859,
+      "sha256": "0526302a68d34d8c50687032136ac8b958a17efaf76d7e116efbc1d1ed94098b",
+      "git_blob": "4af7eca12fc83b3b542207a8a897ad00d057628f",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/rollout/vllm_rollout/vllm_rollout.py"
+    },
+    "verl/workers/sharding_manager/fsdp_vllm.py": {
+      "bytes": 7700,
+      "sha256": "b4c868936144a018bd2f0483738367401320fce0c0f5b9f1e0c314876862ee05",
+      "git_blob": "c79d3031689966b4dcff7cbf3fc8645592484b9f",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/sharding_manager/fsdp_vllm.py"
+    }
+  },
+  "executed_official_code": false
+}

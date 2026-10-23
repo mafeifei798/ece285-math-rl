@@ -1,0 +1,17 @@
+{
+  "version": "b_baseline_corrected_20261021",
+  "role": "corrected_only_B_baseline",
+  "method_changes": false,
+  "fixes": ["question_bound_percentage_verification", "PRM_only_CRLF_canonicalization", "unit_status_process_eligibility"],
+  "reward": "valid: y + 0.2 * min(native_step_scores); invalid: 0",
+  "advantage": "original pinned TRL group standardization of mixed reward",
+  "group_size": 8,
+  "process_coefficient": 0.2,
+  "prm": "Qwen/Qwen2.5-Math-PRM-7B",
+  "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+  "PRM_frozen": true,
+  "normalization_changed": false,
+  "homogeneous_group_special_rule": false,
+  "training_authorized": false,
+  "scope": "Independent corrected-only implementation and no-update replay; no model loading, new rollout, optimizer or training launch."
+}

@@ -1,0 +1,376 @@
+{
+  "created_utc": "2026-10-23T04:26:57.029110+00:00",
+  "status": "complete_with_qualitative_review",
+  "generation_finished_utc": "2026-10-23T03:47:23.512788+00:00",
+  "predictions": 3992,
+  "official_grading_changed": false,
+  "training": false,
+  "official_results_scope": "498 MATH held-out validation questions and 500 GSM8K train-split held-out questions; not the original test scores",
+  "datasets": {
+    "math_validation": {
+      "n": 498,
+      "cells": {
+        "A_original": {
+          "n": 498,
+          "correct": 289,
+          "accuracy": 0.5803212851405622,
+          "truncated": 38,
+          "status_counts": {
+            "symbolic": 177,
+            "unparseable": 6,
+            "exact": 267,
+            "truncated": 38,
+            "missing_or_invalid_box": 10
+          },
+          "mean_generated_tokens": 699.1767068273092,
+          "generated_tokens": 348190,
+          "single_terminal_box": 32,
+          "early_last_box": 49,
+          "starts_with_box": 457,
+          "multiple_boxes": 398,
+          "nontrivial_text_after_last_box": 109,
+          "valid_last_box": 486
+        },
+        "A_final_only": {
+          "n": 498,
+          "correct": 287,
+          "accuracy": 0.5763052208835341,
+          "truncated": 38,
+          "status_counts": {
+            "symbolic": 152,
+            "exact": 269,
+            "missing_or_invalid_box": 36,
+            "truncated": 38,
+            "unit_exact": 1,
+            "unparseable": 2
+          },
+          "mean_generated_tokens": 679.1164658634539,
+          "generated_tokens": 338200,
+          "single_terminal_box": 163,
+          "early_last_box": 43,
+          "starts_with_box": 266,
+          "multiple_boxes": 226,
+          "nontrivial_text_after_last_box": 107,
+          "valid_last_box": 455
+        },
+        "B_original": {
+          "n": 498,
+          "correct": 272,
+          "accuracy": 0.5461847389558233,
+          "truncated": 51,
+          "status_counts": {
+            "symbolic": 191,
+            "exact": 250,
+            "truncated": 51,
+            "unparseable": 3,
+            "missing_or_invalid_box": 3
+          },
+          "mean_generated_tokens": 749.3313253012049,
+          "generated_tokens": 373167,
+          "single_terminal_box": 16,
+          "early_last_box": 68,
+          "starts_with_box": 475,
+          "multiple_boxes": 407,
+          "nontrivial_text_after_last_box": 124,
+          "valid_last_box": 491
+        },
+        "B_final_only": {
+          "n": 498,
+          "correct": 266,
+          "accuracy": 0.5341365461847389,
+          "truncated": 38,
+          "status_counts": {
+            "exact": 250,
+            "missing_or_invalid_box": 47,
+            "symbolic": 160,
+            "truncated": 38,
+            "unit_symbolic": 1,
+            "unparseable": 2
+          },
+          "mean_generated_tokens": 673.1787148594377,
+          "generated_tokens": 335243,
+          "single_terminal_box": 144,
+          "early_last_box": 53,
+          "starts_with_box": 284,
+          "multiple_boxes": 232,
+          "nontrivial_text_after_last_box": 111,
+          "valid_last_box": 445
+        }
+      },
+      "paired_contrasts": {
+        "B_minus_A_original": {
+          "point_pp": -3.413654618473896,
+          "ci95_pp": [
+            -6.827309236947792,
+            0.0
+          ],
+          "positive_question_differences": 29,
+          "negative_question_differences": 46
+        },
+        "B_minus_A_final_only": {
+          "point_pp": -4.216867469879518,
+          "ci95_pp": [
+            -7.83132530120482,
+            -0.8032128514056224
+          ],
+          "positive_question_differences": 29,
+          "negative_question_differences": 50
+        },
+        "prompt_effect_A": {
+          "point_pp": -0.4016064257028112,
+          "ci95_pp": [
+            -4.618473895582329,
+            3.815261044176707
+          ],
+          "positive_question_differences": 59,
+          "negative_question_differences": 61
+        },
+        "prompt_effect_B": {
+          "point_pp": -1.2048192771084338,
+          "ci95_pp": [
+            -5.8232931726907635,
+            3.413654618473896
+          ],
+          "positive_question_differences": 64,
+          "negative_question_differences": 70
+        },
+        "interaction": {
+          "point_pp": -0.8032128514056224,
+          "ci95_pp": [
+            -5.622489959839357,
+            4.021084337349325
+          ],
+          "positive_question_differences": 56,
+          "negative_question_differences": 64
+        }
+      }
+    },
+    "gsm8k_validation": {
+      "n": 500,
+      "cells": {
+        "A_original": {
+          "n": 500,
+          "correct": 380,
+          "accuracy": 0.76,
+          "truncated": 3,
+          "status_counts": {
+            "exact": 360,
+            "symbolic": 89,
+            "missing_or_invalid_box": 34,
+            "truncated": 3,
+            "unit_exact": 7,
+            "unparseable": 5,
+            "unit_symbolic": 2
+          },
+          "mean_generated_tokens": 347.666,
+          "generated_tokens": 173833,
+          "single_terminal_box": 12,
+          "early_last_box": 27,
+          "starts_with_box": 485,
+          "multiple_boxes": 424,
+          "nontrivial_text_after_last_box": 174,
+          "valid_last_box": 465
+        },
+        "A_final_only": {
+          "n": 500,
+          "correct": 338,
+          "accuracy": 0.676,
+          "truncated": 17,
+          "status_counts": {
+            "exact": 318,
+            "symbolic": 128,
+            "missing_or_invalid_box": 27,
+            "truncated": 17,
+            "unit_symbolic": 4,
+            "unit_exact": 6
+          },
+          "mean_generated_tokens": 414.67,
+          "generated_tokens": 207335,
+          "single_terminal_box": 74,
+          "early_last_box": 72,
+          "starts_with_box": 345,
+          "multiple_boxes": 272,
+          "nontrivial_text_after_last_box": 220,
+          "valid_last_box": 472
+        },
+        "B_original": {
+          "n": 500,
+          "correct": 368,
+          "accuracy": 0.736,
+          "truncated": 11,
+          "status_counts": {
+            "exact": 348,
+            "symbolic": 106,
+            "missing_or_invalid_box": 21,
+            "truncated": 11,
+            "unit_exact": 8,
+            "unparseable": 4,
+            "unit_symbolic": 2
+          },
+          "mean_generated_tokens": 380.416,
+          "generated_tokens": 190208,
+          "single_terminal_box": 2,
+          "early_last_box": 60,
+          "starts_with_box": 497,
+          "multiple_boxes": 416,
+          "nontrivial_text_after_last_box": 195,
+          "valid_last_box": 479
+        },
+        "B_final_only": {
+          "n": 500,
+          "correct": 295,
+          "accuracy": 0.59,
+          "truncated": 25,
+          "status_counts": {
+            "exact": 280,
+            "symbolic": 140,
+            "truncated": 25,
+            "missing_or_invalid_box": 47,
+            "unparseable": 1,
+            "unit_exact": 4,
+            "unit_symbolic": 3
+          },
+          "mean_generated_tokens": 420.324,
+          "generated_tokens": 210162,
+          "single_terminal_box": 54,
+          "early_last_box": 92,
+          "starts_with_box": 346,
+          "multiple_boxes": 254,
+          "nontrivial_text_after_last_box": 220,
+          "valid_last_box": 448
+        }
+      },
+      "paired_contrasts": {
+        "B_minus_A_original": {
+          "point_pp": -2.4,
+          "ci95_pp": [
+            -5.4,
+            0.6
+          ],
+          "positive_question_differences": 24,
+          "negative_question_differences": 36
+        },
+        "B_minus_A_final_only": {
+          "point_pp": -8.6,
+          "ci95_pp": [
+            -12.2,
+            -5.0
+          ],
+          "positive_question_differences": 22,
+          "negative_question_differences": 65
+        },
+        "prompt_effect_A": {
+          "point_pp": -8.4,
+          "ci95_pp": [
+            -13.0,
+            -3.8
+          ],
+          "positive_question_differences": 48,
+          "negative_question_differences": 90
+        },
+        "prompt_effect_B": {
+          "point_pp": -14.6,
+          "ci95_pp": [
+            -19.400000000000002,
+            -9.8
+          ],
+          "positive_question_differences": 45,
+          "negative_question_differences": 118
+        },
+        "interaction": {
+          "point_pp": -6.2,
+          "ci95_pp": [
+            -10.8,
+            -1.6
+          ],
+          "positive_question_differences": 48,
+          "negative_question_differences": 79
+        }
+      }
+    }
+  },
+  "qualitative_summary": {
+    "A_original": {
+      "n": 12,
+      "consistency": {
+        "agree": 8,
+        "unresolved": 1,
+        "disagree": 2,
+        "no_valid_box": 1
+      },
+      "computation": {
+        "correct": 8,
+        "incorrect_incomplete": 1,
+        "incorrect": 3
+      },
+      "official_correct": 6
+    },
+    "A_final_only": {
+      "n": 12,
+      "consistency": {
+        "agree": 7,
+        "unresolved": 3,
+        "no_valid_box": 1,
+        "disagree": 1
+      },
+      "computation": {
+        "correct": 7,
+        "incorrect_incomplete": 2,
+        "incorrect": 2,
+        "internally_conflicting": 1
+      },
+      "official_correct": 5
+    },
+    "B_original": {
+      "n": 12,
+      "consistency": {
+        "agree": 9,
+        "disagree": 3
+      },
+      "computation": {
+        "correct": 8,
+        "incorrect": 4
+      },
+      "official_correct": 6
+    },
+    "B_final_only": {
+      "n": 12,
+      "consistency": {
+        "agree": 8,
+        "unresolved": 3,
+        "disagree": 1
+      },
+      "computation": {
+        "correct": 6,
+        "incorrect_incomplete": 2,
+        "incorrect": 3,
+        "internally_conflicting": 1
+      },
+      "official_correct": 5
+    }
+  },
+  "conclusions_zh": [
+    "本轮四组推理已完成。新提示下B仍低于A：MATH差4.22个百分点，GSM8K差8.60个百分点。",
+    "新提示提高了单个末尾框的结构合规率，但没有建立数学正文一致性已经改善的证据；不能将本轮解释为排除格式问题后的纯数学能力比较。",
+    "固定48条助理定性审读中，最后正文结论与末框相同的数量：A为8/12到7/12，B为9/12到8/12。明确冲突虽减少，未形成稳定结论的回答增多。",
+    "GSM8K上新提示使A下降8.4个百分点、B下降14.6个百分点；B对这一次提示变化更敏感。该结论限于本轮checkpoint、验证题和固定提示对。",
+    "保留原提示结果作为主报告；本次提示干预作为未能修复B表现的负结果，不替换原测试成绩，不自动搜索新提示或启动训练。"
+  ],
+  "limitations": [
+    "Question-hash and ID disjointness from current RL training and original test sets; paraphrase/pretraining exposure not ruled out.",
+    "All498 MATH validation questions appear in the known PRM800K question inventory; not a PRM-clean benchmark. No PRM is used in this inference comparison.",
+    "This isolates inference prompt sensitivity on fixed policies, not causal training-time PRM effects.",
+    "Small blind consistency sample is qualitative; full-set box-position compliance is not proof of mathematical consistency.",
+    "Confidence intervals resample questions, not training seeds. Multiple contrasts are exploratory, unadjusted intervals.",
+    "Full chain validity is not exhaustively scored.",
+    "Early wrong boxes corrected by the final box are not final box-body disagreements.",
+    "Generated code and claimed tool outputs were read as text, never executed.",
+    "Prompt style can suggest assignment; hiding group labels does not ensure perfect reviewer blinding."
+  ],
+  "hashes": {
+    "qualitative_annotations_blinded_v1.json": "579720d8d7069f1247ec639c60fb1aef30be7b7a61beb68504ca8f23a7697f80",
+    "qualitative_review_unblinded.json": "44be248f247414e9adc548729e4e1e244dd7b9270d267f812a6360dfe44cebe7",
+    "supplementary_failure_analysis.json": "631ab810c56a028ef5a6757fe8a0c8c3769c6d1b5963a188150240b3ca28a7dd"
+  },
+  "predictions_sha256": "7ae033a7a4752e8e41923f8ded9b4f3256f6d1971172df8b9548596462587767"
+}

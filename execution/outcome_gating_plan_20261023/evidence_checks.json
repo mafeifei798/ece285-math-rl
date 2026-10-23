@@ -1,0 +1,36 @@
+{
+  "scope": "Planning-only CPU arithmetic and feasibility checks on preserved B rollouts. Not a trainer integration, new training, or real-model test.",
+  "responses": 8960,
+  "groups": 1120,
+  "correct_count_distribution": {
+    "0": 212,
+    "1": 132,
+    "2": 133,
+    "3": 151,
+    "4": 135,
+    "5": 124,
+    "6": 130,
+    "7": 73,
+    "8": 30
+  },
+  "potentially_informative_shuffle_groups": 776,
+  "potentially_informative_shuffle_fraction": 0.6928571428571428,
+  "one_cpu_permutation_changed_groups": 678,
+  "cpu_permutation_seed": 285,
+  "all_G_S_group_reward_multisets_equal": true,
+  "all_verifier_incorrect_G_reward_advantages_nonpositive": true,
+  "existing_B_verifier_incorrect_positive_advantage_responses": 577,
+  "limitations": [
+    "Verifier-incorrect is not a human process-error label.",
+    "These are B-policy samples, not the future online G/S sample distribution.",
+    "The reward-advantage sign guarantee excludes the separate KL term and does not guarantee a parameter-level probability change.",
+    "A random permutation can be identity and does not isolate mathematics from length/format correlations."
+  ],
+  "source_sha256": {
+    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json": "891b34d4206ae3dd8de98ac8855a9c8a291276c008317bf3a48297e15fe9ea9c",
+    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/A.json": "349499cb60cd50d89c5e46d7cf6d6f62485d603193dfdcb2db24954ce9d08dff",
+    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/B.json": "49080a483822eec80b5fd623168095267bdc9fd09115c9465de352ece25aa399",
+    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/rollouts.jsonl": "adfc269057091108f0c84274b78164d1795d19b85856297f9876d60e191ff304",
+    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_prompt_validation_20261022/final_analysis_summary.json": "6550a68a02b6876483fb279b1a73163a3220d620a07703d36177a9ebe7806ded"
+  }
+}

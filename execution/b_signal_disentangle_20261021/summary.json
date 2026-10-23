@@ -1,0 +1,514 @@
+{
+  "complete": true,
+  "scope": "Fixed v3 repaired7B-B answers and scores; no trained-policy performance claim",
+  "rows": 9056,
+  "groups": 1132,
+  "signal_stats": {
+    "outcome_only_same_rollouts": {
+      "mixed": {
+        "groups": 893,
+        "mean_abs_advantage": 0.819732129573822,
+        "max_abs_advantage": 2.4741740226745605,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      },
+      "all_correct": {
+        "groups": 33,
+        "mean_abs_advantage": 0.0,
+        "max_abs_advantage": 0.0,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      },
+      "all_wrong": {
+        "groups": 206,
+        "mean_abs_advantage": 0.0,
+        "max_abs_advantage": 0.0,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      }
+    },
+    "repaired_original_B": {
+      "mixed": {
+        "groups": 893,
+        "mean_abs_advantage": 0.8162078261375427,
+        "max_abs_advantage": 2.474236011505127,
+        "correct_negative_rows": 6,
+        "wrong_positive_rows": 4
+      },
+      "all_correct": {
+        "groups": 33,
+        "mean_abs_advantage": 0.7958360314369202,
+        "max_abs_advantage": 2.4503936767578125,
+        "correct_negative_rows": 107,
+        "wrong_positive_rows": 0
+      },
+      "all_wrong": {
+        "groups": 206,
+        "mean_abs_advantage": 0.7342867255210876,
+        "max_abs_advantage": 2.465564250946045,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 564
+      }
+    },
+    "homogeneous_only_bounded": {
+      "mixed": {
+        "groups": 893,
+        "mean_abs_advantage": 0.8162078261375427,
+        "max_abs_advantage": 2.474236011505127,
+        "correct_negative_rows": 6,
+        "wrong_positive_rows": 4
+      },
+      "all_correct": {
+        "groups": 33,
+        "mean_abs_advantage": 0.04608127847313881,
+        "max_abs_advantage": 0.15651297569274902,
+        "correct_negative_rows": 107,
+        "wrong_positive_rows": 0
+      },
+      "all_wrong": {
+        "groups": 206,
+        "mean_abs_advantage": 0.014041448943316936,
+        "max_abs_advantage": 0.1604781597852707,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 564
+      }
+    },
+    "bounded_process_hold_old_outcome_denominator": {
+      "mixed": {
+        "groups": 893,
+        "mean_abs_advantage": 0.7859351634979248,
+        "max_abs_advantage": 2.5569517612457275,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      },
+      "all_correct": {
+        "groups": 33,
+        "mean_abs_advantage": 0.04608127847313881,
+        "max_abs_advantage": 0.15651297569274902,
+        "correct_negative_rows": 107,
+        "wrong_positive_rows": 0
+      },
+      "all_wrong": {
+        "groups": 206,
+        "mean_abs_advantage": 0.014041448943316936,
+        "max_abs_advantage": 0.1604781597852707,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 564
+      }
+    },
+    "bounded_residual_recommended": {
+      "mixed": {
+        "groups": 893,
+        "mean_abs_advantage": 0.8554436564445496,
+        "max_abs_advantage": 2.6429178714752197,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      },
+      "all_correct": {
+        "groups": 33,
+        "mean_abs_advantage": 0.04608127847313881,
+        "max_abs_advantage": 0.15651297569274902,
+        "correct_negative_rows": 107,
+        "wrong_positive_rows": 0
+      },
+      "all_wrong": {
+        "groups": 206,
+        "mean_abs_advantage": 0.014041448943316936,
+        "max_abs_advantage": 0.1604781597852707,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 564
+      }
+    },
+    "homogeneous_off_diagnostic_only": {
+      "mixed": {
+        "groups": 893,
+        "mean_abs_advantage": 0.8162078261375427,
+        "max_abs_advantage": 2.474236011505127,
+        "correct_negative_rows": 6,
+        "wrong_positive_rows": 4
+      },
+      "all_correct": {
+        "groups": 33,
+        "mean_abs_advantage": 0.0,
+        "max_abs_advantage": 0.0,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      },
+      "all_wrong": {
+        "groups": 206,
+        "mean_abs_advantage": 0.0,
+        "max_abs_advantage": 0.0,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      }
+    },
+    "lambda_0p02_diagnostic_only": {
+      "mixed": {
+        "groups": 893,
+        "mean_abs_advantage": 0.8196914792060852,
+        "max_abs_advantage": 2.4741852283477783,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 0
+      },
+      "all_correct": {
+        "groups": 33,
+        "mean_abs_advantage": 0.7805315852165222,
+        "max_abs_advantage": 2.3918440341949463,
+        "correct_negative_rows": 107,
+        "wrong_positive_rows": 0
+      },
+      "all_wrong": {
+        "groups": 206,
+        "mean_abs_advantage": 0.6694612503051758,
+        "max_abs_advantage": 2.4162261486053467,
+        "correct_negative_rows": 0,
+        "wrong_positive_rows": 564
+      }
+    }
+  },
+  "normalization": {
+    "mixed": {
+      "normalization_gain": {
+        "n": 893,
+        "median": 1.8749042022002076,
+        "p90": 2.587610132268934,
+        "p99": 2.8602746858749333,
+        "min": 1.5752197329983173,
+        "max": 2.9801572319792964
+      },
+      "gain_above_10_groups": 0,
+      "gain_above_100_groups": 0,
+      "tenfold_coefficient_actual_amplitude_ratio": {
+        "n": 893,
+        "median": 1.0037379264831543,
+        "p90": 1.0098034143447876,
+        "p99": 1.0174041318893432,
+        "min": 0.9800117015838623,
+        "max": 1.023886799812317
+      }
+    },
+    "all_correct": {
+      "normalization_gain": {
+        "n": 33,
+        "median": 16.28962324251297,
+        "p90": 37.294521406479184,
+        "p99": 73.06369167214997,
+        "min": 11.781921623075592,
+        "max": 80.28356103554498
+      },
+      "gain_above_10_groups": 33,
+      "gain_above_100_groups": 0,
+      "tenfold_coefficient_actual_amplitude_ratio": {
+        "n": 33,
+        "median": 0.9855620861053467,
+        "p90": 0.9886984467506409,
+        "p99": 0.9894003009796143,
+        "min": 0.9326143860816956,
+        "max": 0.9895107746124268
+      }
+    },
+    "all_wrong": {
+      "normalization_gain": {
+        "n": 204,
+        "median": 77.52583418807792,
+        "p90": 230.24577859035386,
+        "p99": 593.1323203587382,
+        "min": 11.23295720608882,
+        "max": 835.9316547301573
+      },
+      "gain_above_10_groups": 204,
+      "gain_above_100_groups": 81,
+      "tenfold_coefficient_actual_amplitude_ratio": {
+        "n": 204,
+        "median": 0.9347776472568512,
+        "p90": 0.980458927154541,
+        "p99": 0.9896548676490784,
+        "min": 0.5706659555435181,
+        "max": 0.9899916648864746
+      }
+    }
+  },
+  "within_question_rank_reviews": {
+    "896": {
+      "valid": 7,
+      "explicit_error": 1,
+      "proof_gap_or_terminology_excluded": 0,
+      "pairs": 7,
+      "inversions": 6,
+      "details": [
+        {
+          "valid_row": 896,
+          "error_row": 899,
+          "valid_score": 0.47219666838645935,
+          "error_score": 0.9473810195922852,
+          "inverted": true,
+          "tie": false
+        },
+        {
+          "valid_row": 897,
+          "error_row": 899,
+          "valid_score": 0.8944211602210999,
+          "error_score": 0.9473810195922852,
+          "inverted": true,
+          "tie": false
+        },
+        {
+          "valid_row": 898,
+          "error_row": 899,
+          "valid_score": 0.998217761516571,
+          "error_score": 0.9473810195922852,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 900,
+          "error_row": 899,
+          "valid_score": 0.9252299070358276,
+          "error_score": 0.9473810195922852,
+          "inverted": true,
+          "tie": false
+        },
+        {
+          "valid_row": 901,
+          "error_row": 899,
+          "valid_score": 0.7118317484855652,
+          "error_score": 0.9473810195922852,
+          "inverted": true,
+          "tie": false
+        },
+        {
+          "valid_row": 902,
+          "error_row": 899,
+          "valid_score": 0.9145963191986084,
+          "error_score": 0.9473810195922852,
+          "inverted": true,
+          "tie": false
+        },
+        {
+          "valid_row": 903,
+          "error_row": 899,
+          "valid_score": 0.5976078510284424,
+          "error_score": 0.9473810195922852,
+          "inverted": true,
+          "tie": false
+        }
+      ],
+      "interpretation": "Within-question descriptive pairs, not independent observations. No ranking-accuracy estimate if no clean/error pairs."
+    },
+    "4984": {
+      "valid": 8,
+      "explicit_error": 0,
+      "proof_gap_or_terminology_excluded": 0,
+      "pairs": 0,
+      "inversions": 0,
+      "details": [],
+      "interpretation": "Within-question descriptive pairs, not independent observations. No ranking-accuracy estimate if no clean/error pairs."
+    },
+    "6344": {
+      "valid": 0,
+      "explicit_error": 6,
+      "proof_gap_or_terminology_excluded": 2,
+      "pairs": 0,
+      "inversions": 0,
+      "details": [],
+      "interpretation": "Within-question descriptive pairs, not independent observations. No ranking-accuracy estimate if no clean/error pairs."
+    },
+    "8744": {
+      "valid": 4,
+      "explicit_error": 3,
+      "proof_gap_or_terminology_excluded": 1,
+      "pairs": 12,
+      "inversions": 0,
+      "details": [
+        {
+          "valid_row": 8744,
+          "error_row": 8746,
+          "valid_score": 0.961243748664856,
+          "error_score": 0.15974101424217224,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8744,
+          "error_row": 8749,
+          "valid_score": 0.961243748664856,
+          "error_score": 0.3711366057395935,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8744,
+          "error_row": 8750,
+          "valid_score": 0.961243748664856,
+          "error_score": 0.09842541813850403,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8745,
+          "error_row": 8746,
+          "valid_score": 0.992061972618103,
+          "error_score": 0.15974101424217224,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8745,
+          "error_row": 8749,
+          "valid_score": 0.992061972618103,
+          "error_score": 0.3711366057395935,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8745,
+          "error_row": 8750,
+          "valid_score": 0.992061972618103,
+          "error_score": 0.09842541813850403,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8748,
+          "error_row": 8746,
+          "valid_score": 0.963230550289154,
+          "error_score": 0.15974101424217224,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8748,
+          "error_row": 8749,
+          "valid_score": 0.963230550289154,
+          "error_score": 0.3711366057395935,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8748,
+          "error_row": 8750,
+          "valid_score": 0.963230550289154,
+          "error_score": 0.09842541813850403,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8751,
+          "error_row": 8746,
+          "valid_score": 0.9403530955314636,
+          "error_score": 0.15974101424217224,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8751,
+          "error_row": 8749,
+          "valid_score": 0.9403530955314636,
+          "error_score": 0.3711366057395935,
+          "inverted": false,
+          "tie": false
+        },
+        {
+          "valid_row": 8751,
+          "error_row": 8750,
+          "valid_score": 0.9403530955314636,
+          "error_score": 0.09842541813850403,
+          "inverted": false,
+          "tie": false
+        }
+      ],
+      "interpretation": "Within-question descriptive pairs, not independent observations. No ranking-accuracy estimate if no clean/error pairs."
+    }
+  },
+  "cross_platform_numeric_check": {
+    "stored_vs_local_FP32_max": 9.655952453613281e-06,
+    "stored_vs_independent_FP64_max": 7.235649956083279e-06,
+    "local_FP32_vs_independent_FP64_max": 3.982247108513803e-06,
+    "sign_changes_on_stored_abs_A_above_1e_minus_3": 0,
+    "policy": "Preserve saved actual advantages. Cross-platform FP32 differences are recorded against independent FP64, not required to be bitwise identical. No tensor in any trainer is changed."
+  },
+  "reward_order_reversed_by_advantage": 0,
+  "reward_pairs_checked": 31696,
+  "proposed_process_term_bound": 0.175,
+  "observed_max_process_term": 0.17132142186164856,
+  "prior_H4_vs_Qwen_review": {
+    "reviewed_usable": 29,
+    "clean_solutions": 7,
+    "erroneous_solutions": 20,
+    "uncertain_solutions": 2,
+    "determinate_first_error_solutions": 18,
+    "certain_valid_prefix_steps": 77,
+    "h4": {
+      "clean_solutions_falsely_rejected_at_0p5": 6,
+      "erroneous_solutions_fully_passed_at_0p5": 3,
+      "first_error_steps_missed_at_0p5": 18,
+      "first_error_location_exact_at_0p5": 0,
+      "valid_prefix_steps_falsely_rejected_at_0p5": 14,
+      "clean_solutions_negative_advantage": 2,
+      "erroneous_solutions_positive_advantage": 10
+    },
+    "qwen7b": {
+      "clean_solutions_falsely_rejected_at_0p5": 3,
+      "erroneous_solutions_fully_passed_at_0p5": 1,
+      "first_error_steps_missed_at_0p5": 6,
+      "first_error_location_exact_at_0p5": 12,
+      "valid_prefix_steps_falsely_rejected_at_0p5": 3,
+      "clean_solutions_negative_advantage": 2,
+      "erroneous_solutions_positive_advantage": 8
+    },
+    "chain_AUROC": {
+      "h4": 0.6178571428571429,
+      "qwen7b": 0.9357142857142857,
+      "difference": 0.31785714285714284,
+      "difference_95_percentile_interval": [
+        0.08730158730158732,
+        0.55
+      ],
+      "clean_solutions": 7,
+      "erroneous_solutions": 20,
+      "paired_resampling_unit": "previously reviewed question/solution",
+      "bootstrap_repetitions": 2000
+    },
+    "answer_correct_internal_AUROC": {
+      "h4": 0.7142857142857143,
+      "qwen7b": 0.8333333333333334,
+      "difference": 0.11904761904761907,
+      "difference_95_percentile_interval": [
+        -0.2857142857142857,
+        0.5277777777777778
+      ],
+      "clean_solutions": 7,
+      "erroneous_solutions": 6,
+      "paired_resampling_unit": "previously reviewed question/solution",
+      "bootstrap_repetitions": 2000
+    }
+  },
+  "review_protocol": {
+    "new_groups": [
+      896,
+      4984
+    ],
+    "new_group_selection": "random.Random(286), uniform2 of31 other repaired all-correct groups",
+    "targeted_previously_known_groups": [
+      6344,
+      8744
+    ],
+    "reviewer": "Codex single reviewer; not independent human gold",
+    "score_blinding": "Not a blinded independent study; some earlier case scores were known. Mathematical reasons provided for every label.",
+    "ranking_definition": "Whole trace contains an explicit mathematical false statement vs fully valid trace; recovered false starts remain explicit errors, with subtype. Proof gaps and wording ambiguity excluded.",
+    "not_population_estimates": true
+  },
+  "limitations": [
+    "Offline results identify score errors and signal amplification, not causal shares of B-minus-A accuracy.",
+    "Advantage amplitudes are not parameter gradient contributions; no backward or optimizer was run.",
+    "All-error groups do not establish a valid-vs-invalid ranking inversion.",
+    "One literal false inequality may be a symbol typo; it does not prove broad inability to judge mathematics.",
+    "Across-question AUROC in prior sparse reviews is not within-question ranking accuracy.",
+    "A negative advantage on one valid trace is not alone proof of a harmful policy update.",
+    "The bounded rule preserves existing PRM within-outcome ordering; it cannot repair a wrong ordering."
+  ],
+  "new_training": false,
+  "actor_generation": 0,
+  "PRM_forward_calls": 0,
+  "PRM_updates": 0
+}

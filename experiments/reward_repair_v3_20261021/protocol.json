@@ -1,0 +1,32 @@
+{
+  "version": "reward-repair-v3-20261021",
+  "enabled_scope": "engineering repair and offline replay only",
+  "training_authorized": false,
+  "actor_generation_authorized": false,
+  "PRM_adaptation_authorized": false,
+  "shared_verifier": "typed percentage units, frozen question/gold hash binding",
+  "PRM_view": "CRLF->LF copy, native double-LF step boundaries, raw CoT preserved",
+  "bug_fix_reward": "y+0.2*min(p); invalid=0",
+  "bug_fix_advantage": "unchanged GRPO group8 sample std +1e-4",
+  "extra_objective": {
+    "status": "proposal and offline diagnostic only; not enabled",
+    "formula": "A_outcome_GRPO + 0.2*(m_i-mean_group(m))",
+    "maximum_abs_process_term_group8": 0.175,
+    "all_B_C_D_must_share_if_adopted": true
+  },
+  "arms": {
+    "A": "outcome-only GRPO with common repaired verifier",
+    "B": "common frozen public PRM initialization",
+    "C": "same PRM initialization; L_fail+L_success+L_step adaptation then freeze",
+    "D": "same as C except success weak supervision coefficient c=0"
+  },
+  "controls": [
+    "same actor starting checkpoint, data, generated-token budget, seeds and optimizer across arms",
+    "same PRM initialization and native input rule across B/C/D",
+    "same adaptation batches, anchors, optimizer and number of updates across C/D",
+    "old H4 C/D adapters are not an adaptation control for Qwen7B B",
+    "old-rule A/B results stay historical; rescoring cannot undo their training gradients"
+  ],
+  "data_selection": "no quarantine, no partner filtering, no new data selection",
+  "source_protection": "331 frozen original input file hashes verified before and after"
+}

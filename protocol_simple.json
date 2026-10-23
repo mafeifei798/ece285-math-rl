@@ -1,0 +1,378 @@
+{
+  "version": "2.6-importance-and-prespecified-replication-gate",
+  "date": "2026-10-20",
+  "status": "Document-only amendment; A/17 continuation was previously launched, live status not refreshed; no B/C/D runs or PRM adaptation launched in this review",
+  "execution_root": "/srv/research/ece285_math_rl_project",
+  "execution_contract": "Immutable original training/baseline_config.json plus explicit operations/continuation_24m.json; continuation receipts under runs/A_seed17_24M",
+  "supersedes_execution_scope": "protocol.json version 1.0 online adaptation",
+  "title": "Asymmetric Offline Process-Reward Adaptation for Mathematical RL",
+  "core_comparison": "D_asymmetric_offline_vs_C_symmetric_offline",
+  "actor": "Qwen/Qwen2.5-Math-1.5B",
+  "prm": "HuggingFaceH4/Qwen2.5-Math-1.5B-Instruct-PRM-0.2",
+  "actor_lora_rank": 16,
+  "prm_lora_rank": 8,
+  "train_dataset": "MATH train excluding fixed 500-problem validation split",
+  "offline_buffer_source": "same frozen initial actor; same fixed buffer across comparisons",
+  "offline_buffer_problems": 512,
+  "offline_samples_per_problem": 4,
+  "offline_buffer_admission": "complete, reliably parsed, verifiably correct or incorrect; exclude truncation and ambiguous parsing",
+  "public_labeled_anchor_prefix_count": 2048,
+  "anchor_decontamination": "exclude validation, test, and ProcessBench questions by ID and normalized text",
+  "prm_pooling_temperature": 0.2,
+  "prm_pooling_weights_detached": true,
+  "anchor_beta": 1.0,
+  "prm_update_C": "mean_wrong_bag_CE + mean_correct_bag_CE + beta * mean_anchor_step_CE",
+  "prm_update_D": "mean_wrong_bag_CE + beta * mean_anchor_step_CE",
+  "matched_prm_exposure_C_D": [
+    "wrong trajectories",
+    "anchor examples",
+    "optimizer steps",
+    "initialization seed"
+  ],
+  "prm_adaptation_phases": 1,
+  "freeze_prm_during_all_RL": true,
+  "refresh_offline_buffer_during_RL": false,
+  "actor_correct_rollouts_retained": true,
+  "process_reward_lambda": 0.2,
+  "policy_process_score": "minimum native-step correctness probability",
+  "group_size": 8,
+  "max_new_tokens_initial": 2048,
+  "temperature": 1.0,
+  "microbatch_initial": 1,
+  "seed_list": [
+    17,
+    42,
+    83
+  ],
+  "core_runs": [
+    "A_outcome_GRPO",
+    "B_unadapted_frozen_PRM",
+    "C_symmetric_offline_frozen_PRM",
+    "D_asymmetric_offline_frozen_PRM"
+  ],
+  "necessary_control": "C_symmetric_offline_frozen_PRM",
+  "policy_generated_tokens_per_run_provisional": 24000000,
+  "policy_generated_tokens_total_provisional": 288000000,
+  "formal_budget_status": "24M completion tokens per executed run, fixed 6M/12M/24M milestones. Prospective probe gate selects one paired seed (96M total) or three (288M ceiling), before B/C/D RL. A/17 has already been observed and authorized to continue; its configuration and continuation are unchanged. PRM, probe and evaluation costs are extra. Only A/17 continuation was previously launched.",
+  "test_primary": "MATH500 single-generation accuracy, subject to checkpoint-corpus overlap audit",
+  "test_transfer": "GSM8K test single-generation accuracy",
+  "mechanism_test": "secondary evaluation on fixed ProcessBench MATH solutions; all B/C/D reward models score the same solutions; no tuning",
+  "processbench_for_hyperparameter_tuning": false,
+  "main_checkpoint": "final 24M cumulative completion-token checkpoint; intermediate 6M and 12M checkpoints are retained, not selected by test score",
+  "total_cost_includes": [
+    "offline buffer generation",
+    "PRM adaptation",
+    "PRM scoring",
+    "actor RL",
+    "evaluation",
+    "shared validation-probe generation and scoring"
+  ],
+  "report_axes": [
+    "actor generated tokens",
+    "total GPU hours"
+  ],
+  "pin_before_execution": [
+    "model revisions",
+    "library versions",
+    "dataset manifests",
+    "prompt template",
+    "verifier configuration",
+    "LoRA targets",
+    "learning rates",
+    "fixed offline PRM update budget",
+    "GRPO loss and reward scaling",
+    "evaluation decoding",
+    "uniform final token budget",
+    "resource-gate thresholds, seed-17 probe models, selected seed list and decision receipt before B/C/D RL"
+  ],
+  "first_48h_goal": "verify the C/D loss switch, parse/step-boundary plumbing, nonempty success/failure buffer classes, data manifests and overlap audit, and measured memory/throughput/truncation; no efficacy claim",
+  "review_date": "2026-10-21",
+  "test_supplementary": "full MATH test, exposure-aware and not a clean generalization claim",
+  "test_primary_overlap_audit_status": "MATH500 and GSM8K have zero exact normalized question overlap with the pinned public PRM800K 12000-question inventory; unknown inherited pretraining exposure and paraphrases remain unverified",
+  "processbench_threshold": 0.5,
+  "processbench_overlap_reporting": true,
+  "grpo_loss_type": "grpo",
+  "grpo_scale_rewards": "group",
+  "grpo_multi_objective_aggregation": "sum_then_normalize",
+  "grpo_advantage_epsilon": 0.0001,
+  "rl_truncated_or_unparseable_reward": 0.0,
+  "prm_loss_reaverage_remaining_terms": false,
+  "prm_batch_matching_C_D": "Same failure, success, anchor batches; same updates and optimizer; successful-trajectory term has coefficient 1 in C and 0 in D",
+  "known_dataset_risk": "PRM800K includes 4,500 original MATH test problems in its extended training split; new-anchor deduplication does not remove inherited PRM exposure",
+  "pre_rl_checkpoint_evaluation": true,
+  "policy_evaluation": "shared initial policy plus 6M, 12M and final 24M milestones; same prompt, greedy decoding, length cap and verifier; no PRM reranking or voting",
+  "primary_estimand": "D minus C single-generation MATH500 accuracy at the fixed 24M checkpoint, averaged across the preselected paired seeds; the one-seed branch is exploratory rather than a replicated method-effect claim",
+  "secondary_policy_contrasts": [
+    "D minus A",
+    "D minus B",
+    "each final policy minus the shared initial policy"
+  ],
+  "paired_seed_scope": "seeds 17, 42, 83 apply to PRM adaptation and actor initialization, data shuffling and torch RNG; pinned TRL colocated vLLM engine uses seed 0; C/D adaptation uses matched seeds; fixed buffer and anchor manifest shared across all seeds",
+  "uncertainty": "95% paired question-cluster bootstrap, resampling each question with all arm/selected-seed predictions together; report each paired-seed difference and, only with three seeds, training-seed mean/std. Single-seed results are explicitly exploratory and have no estimate of seed variance; question intervals do not capture training randomness or fully account for the resource-selection procedure.",
+  "practical_interpretation": "D-C evaluates the loss change and D-A/B practical value in this setting. The one-seed branch is exploratory. Positive PRM diagnostics alone do not establish improved mathematical reasoning; uncertain or small differences are inconclusive. Passing the resource gate is not evidence of method equivalence or futility.",
+  "mechanism_metrics": {
+    "full_subset": [
+      "first-error localization accuracy on error-containing solutions",
+      "correct-chain acceptance on error-free solutions",
+      "harmonic mean of these two rates"
+    ],
+    "decision_threshold": 0.5,
+    "primary_mechanism_subset": "final_answer_correct == true",
+    "valid_chain_label": "label == -1",
+    "valid_chain_score": "minimum correctness probability over native step boundaries",
+    "ranking_metric": "AUROC = P(score_valid > score_invalid) + 0.5 * P(tie)",
+    "purpose": "test whether answer-correct valid and invalid reasoning are better ranked; a common strictly increasing score transform cannot improve AUROC",
+    "limitations": "AUROC neither proves causal mediation of policy gains nor excludes reward-scale effects in RL; no PRM outputs have yet been evaluated",
+    "audit_and_reporting": "report class counts and known overlap; if either class is empty after audit, report AUROC unavailable; no test-based threshold or checkpoint selection",
+    "sample_counts_before_overlap_stratification": {
+      "all_solutions": 1000,
+      "unique_questions": 955,
+      "answer_correct_solutions": 500,
+      "answer_correct_unique_questions": 500,
+      "answer_correct_valid": 406,
+      "answer_correct_invalid": 94
+    },
+    "uncertainty": "Paired question-cluster bootstrap for PRM differences; group multiple solutions and all PRM variants/seeds for the same problem. Report valid/invalid counts in each known-overlap stratum; mark AUROC unavailable if either class is empty.",
+    "interpretation": "Secondary, overlap-aware mechanism evidence. The 500-solution answer-correct AUROC subset is not a much larger independent clean test set, and higher PRM metrics do not establish policy improvement.",
+    "models_compared": [
+      "B_original",
+      "S_anchor_only",
+      "C_symmetric",
+      "D_asymmetric"
+    ],
+    "bootstrap": {
+      "replicates": 2000,
+      "rng_seed": 285,
+      "confidence_level": 0.95,
+      "unit": "question cluster; retain all solutions, PRM variants and paired seeds for each resampled question",
+      "statistics": "Compute each PRM metric and paired D-C or D-S differences per seed, plus the paired-seed mean; bootstrap the metric or difference itself, not overlapping marginal intervals.",
+      "interval": "percentile; also report paired-seed point estimates and dispersion separately",
+      "invalid_replicates": "AUROC requires both classes. Report missing-class bootstrap frequency and mark estimates unavailable when the underlying stratum lacks either class; do not manufacture a zero AUROC.",
+      "interpretation": "Small differences with uncertainty covering zero remain inconclusive. These are exploratory mechanism diagnostics, not a selector or a substitute for the policy endpoint."
+    }
+  },
+  "phase_order": [
+    "continue already authorized A/17 without changing its configuration; live status is not refreshed by this document review",
+    "freeze buffer, anchors, adaptation settings, splitter, shared validation probe and resource thresholds before seed-17 C/D scoring",
+    "prepare seed-17 PRM controls, score the shared B/S/C/D probe, resolve technical failures, then lock the one- or three-seed resource branch",
+    "prioritize paired C/D seed 17, then remaining A/B seed 17, each at the fixed 24M endpoint",
+    "only if the pre-RL gate selected three seeds, prepare matched PRMs and complete A/B/C/D for seeds 42 and 83; do not inspect test accuracy to decide replication",
+    "evaluate policy and overlap-aware PRM diagnostics; report paired question-cluster intervals, seed dispersion only when replicated, resource decisions and unfinished runs"
+  ],
+  "replication_policy": "Apply the prespecified shared-probe gate once, using seed-17 C/D PRMs, after technical validation and before B/C/D RL. Lock [17] for all four arms if the gate passes, otherwise [17,42,83]. Complete each selected matched four-arm set subject to resources. Do not add or drop seeds after inspecting downstream accuracy or ProcessBench.",
+  "resource_fallback": "Do not change the already-authorized A/17 continuation or silently reduce the 24M endpoint. If the selected schedule exceeds resources, report unfinished matched sets and actual costs. Any further budget/protocol change must be documented before affected runs, never chosen from favorable results; training launches remain separate actions.",
+  "core_direction_unchanged": true,
+  "policy_generated_tokens_per_run": 24000000,
+  "policy_generated_tokens_total": 288000000,
+  "continuation_comparison_policy": "Record and match the 6M checkpoint/resume boundary across subsequent arms and seeds. The original checkpoint restores policy, optimizer, scheduler, data progress and Python/NumPy/torch RNG; vLLM separate engine RNG was not saved and restarts at engine seed 0.",
+  "budget_amendments": [
+    {
+      "recorded_utc": "2026-10-21T04:46:15.258213+00:00",
+      "previous_per_run": 6000000,
+      "previous_total": 72000000,
+      "new_per_run": 24000000,
+      "new_total": 288000000,
+      "reason": "User instruction to extend each run to 24M while preserving 6M/12M/24M results",
+      "known_at_amendment": "A/17 6M training and evaluation completed; this is not represented as a predeclared 24M budget from the start",
+      "source_checkpoint": "runs/A_seed17/checkpoint-280",
+      "source_actual_completion_tokens": 6020163,
+      "launch_scope": "A/17 continuation only"
+    }
+  ],
+  "grpo_scaling_interpretation": {
+    "formal_setting": "group; retained in all four arms, including the existing outcome-only continuation",
+    "same_outcome_valid_group": "A_i = (m_i - mean(m)) / (sample_std(m) + 5e-4), since lambda=0.2 and epsilon=1e-4",
+    "meaning": "The 0.2 coefficient preserves correct-versus-wrong reward ordering but does not cap normalized PRM advantages. Equality to standardized process scores is approximate when ignoring epsilon, not exact.",
+    "supported_alternative": "Pinned TRL 0.23.1 supports scale_rewards=False or none; this option is verified but not enabled in the formal comparison.",
+    "no_silent_change": "Do not change scaling during the current A continuation or only in B/C/D. Any future scaling ablation is separately specified, budgeted and paired.",
+    "source": "https://huggingface.co/docs/trl/v0.23.1/grpo_trainer"
+  },
+  "reward_diagnostics_plan": {
+    "status": "planned; does not claim B/C/D instrumentation or scoring has been executed",
+    "strata": [
+      "all-correct outcome groups",
+      "all-wrong outcome groups",
+      "mixed-outcome groups"
+    ],
+    "invalid_handling": "Also flag groups containing truncated/unparseable outputs; report valid-only strata so same-outcome algebra is not confused with invalid-response penalties.",
+    "report_per_stratum": [
+      "group count and fraction",
+      "mean absolute advantage",
+      "advantage standard deviation",
+      "outcome reward and PRM-score means/standard deviations",
+      "fraction of zero-variance rewards"
+    ],
+    "stratum_basis": "Use outcome labels, not combined reward variation. A mixed_reward_groups counter from an outcome-only runner cannot be reused as the outcome-type classifier once process rewards are added.",
+    "observational_limitation": "Group-conditioned training diagnostics describe exposure; they do not isolate causal effects of training only on that group.",
+    "paired_C_D_analysis": {
+      "population": "same frozen initial-policy probe trajectories and groups for both PRMs",
+      "outcomes_fixed_before_PRM_comparison": true,
+      "report": "C-D score/reward/advantage differences, paired question-bootstrap intervals, sample/group counts by fixed all-correct/all-wrong/mixed outcome type; flag invalid groups separately",
+      "empty_strata": "Report unavailable and actual counts; do not select new prompts or resample based on the observed strata.",
+      "online_caution": "Each trained policy changes both its sampled solutions and group membership. Online group rates and conditional averages are descriptive, not paired causal subgroup treatment effects.",
+      "not_policy_accuracy_strata": "These are reward/advantage diagnostics. They are not D-C test-accuracy effects after selecting examples on each trained policy outcome."
+    }
+  },
+  "step_segmentation_plan": {
+    "formal_rule": "Freeze the native double-newline splitter and PRM boundary extraction before any B/C/D formal run; same rule for B/C/D and C/D buffer scoring.",
+    "records": [
+      "nonempty step count",
+      "completion token length",
+      "tokens per step",
+      "no-internal-double-newline indicator",
+      "empty or invalid score sequence indicator"
+    ],
+    "no_delimiter_behavior": "Score a complete nonempty delimiter-free response as one native step, appending the model-card separator for scoring. Do not silently turn it into a long synthetic list of token chunks.",
+    "risk": "A fixed splitter does not prevent the policy from avoiding delimiters; track this failure mode and PRM reward versus answer correctness.",
+    "change_policy": "No adaptive splitter changes during a formal run. Any alternate splitting rule requires a separate matched sensitivity study; no efficacy claim from monitoring alone.",
+    "source": "https://huggingface.co/HuggingFaceH4/Qwen2.5-Math-1.5B-Instruct-PRM-0.2"
+  },
+  "prm_only_control_S": {
+    "loss": "L_step; both weak outcome terms have coefficient zero",
+    "extra_RL_runs": 0,
+    "matched_to_C_D": [
+      "PRM initialization and LoRA configuration",
+      "optimizer and learning rate",
+      "anchor batches and loss coefficient",
+      "update count and seed"
+    ],
+    "contrast_D_minus_S": "added failure weak supervision at fixed anchor adaptation",
+    "contrast_S_minus_B": "anchor-only adaptation relative to original frozen PRM",
+    "evaluation": "Score the same fixed ProcessBench MATH solutions as B/C/D; report costs separately. Do not use diagnostics to choose an adaptation checkpoint.",
+    "budget": "Extra PRM adaptation and evaluation costs are reported; 12 planned RL runs and 288M completion-token target are unchanged.",
+    "status": "planned, not launched"
+  },
+  "statistical_power_plan": {
+    "primary_endpoint_unchanged": true,
+    "planning_not_observed": "No C/D predictions exist; the 10% disagreement rate is an illustrative assumption, not a measured project quantity.",
+    "single_seed_paired_n": 500,
+    "assumed_disagreement_probability": 0.1,
+    "two_sided_alpha": 0.05,
+    "target_power": 0.8,
+    "approximation": "For paired binary differences d in {-1,0,1}, Var(d)=q-delta^2. Near the null, SE approximately sqrt(q/n). MDE approximately (z_.975+z_.8)*sqrt(q/n).",
+    "approximate_SE_pp": 1.4142135623730951,
+    "approximate_95pct_half_width_pp": 2.7718076486993555,
+    "approximate_80pct_power_MDE_pp": 3.962039811599346,
+    "seed_correlation": "The single-seed planning calculation is not the MDE of a three-seed mean. Actual uncertainty depends on covariance across seeds within questions. Keep each question across all arms/seeds as one cluster; also report seed dispersion.",
+    "actual_reporting": [
+      "per-seed counts C-wrong/D-correct and C-correct/D-wrong",
+      "per-seed disagreement rates",
+      "mean paired accuracy difference and question-cluster interval",
+      "paired-seed differences and standard deviation"
+    ],
+    "decision": "An interval spanning zero or substantial seed inconsistency is inconclusive, not proof of equivalence. Do not move the primary claim to a more favorable diagnostic after observing results.",
+    "extra_benchmarks": "GSM8K remains the prespecified transfer evaluation. No new benchmark is silently added to the primary pooled endpoint; any additional set requires contamination audit and a separate stated estimand.",
+    "replication_branch": "The stated roughly 4-point MDE is a single-seed planning illustration. If the resource gate selects one seed, no cross-seed standard deviation is reported; all conclusions remain exploratory. Three seeds do not imply a threefold independent question sample."
+  },
+  "peer_review_amendment": {
+    "recorded_utc": "2026-10-21T06:51:28.451465+00:00",
+    "scope": "Clarify proposal and prospective analysis before C/D training. No running source/config/checkpoint modification and no new training launch.",
+    "unchanged": [
+      "core loss switch c=1 versus c=0",
+      "four RL arms",
+      "24M tokens per run",
+      "three paired seeds",
+      "policy accuracy primary endpoint",
+      "group normalization"
+    ],
+    "added": [
+      "PRM-only anchors control",
+      "power calculation",
+      "outcome-stratified advantage diagnostics",
+      "step-format diagnostics",
+      "explicit PRM subset sizes"
+    ],
+    "known_results": "A/17 6M baseline has been observed. These amendments are not described as preregistered before baseline results."
+  },
+  "pre_RL_PRM_check": {
+    "status": "planned; no new rollout generation, PRM scoring or training launched in this review",
+    "data": "64 deterministically selected questions from the existing validation split, excluded from new adaptation buffer and anchors; not claimed free of inherited PRM/pretraining exposure",
+    "selection": "Sort validation problem IDs by SHA256 of the string 285: followed by the problem ID; take the first 64 before looking at generated outcomes or PRM scores.",
+    "rollouts": "Shared frozen initial policy; eight samples/question, temperature 1.0, maximum 2048 completion tokens, fixed generation seed 285; identical saved trajectories for B/S/C/D and all PRM seeds",
+    "sample_count": 512,
+    "maximum_generated_completion_tokens": 1048576,
+    "cost": "Additional probe generation and PRM inference are recorded separately from each 24M policy-training budget and included in end-to-end GPU hours.",
+    "fixed_group_definition": "Compute the outcome type once from the shared initial-policy rollout group. Keep every group and separately flag invalid or truncated outputs; do not resample to obtain favorable or balanced types.",
+    "metrics": [
+      "B/S/C/D sequence-score Pearson and Spearman correlations with tie handling",
+      "paired C-D absolute score/reward differences",
+      "paired C-D advantage differences using the exact implemented normalization and invalid-output handling",
+      "within-group rank disagreement and zero-variance fraction",
+      "paired score/reward/advantage differences within fixed all-correct/all-wrong/mixed groups"
+    ],
+    "numerical_audit": [
+      "Verify nonzero intended losses and finite gradients",
+      "Verify adapter parameter updates, distinct checkpoint identities and expected c settings",
+      "Repeat deterministic PRM inference to measure numerical variability",
+      "If C/D advantages are numerically identical on the probe, inspect loss wiring, checkpoint loading and update magnitude before formal B/C/D runs"
+    ],
+    "technical_gate": "Resolve nonfinite values, invalid loading, missing updates or loss-wiring errors before applying the resource rule or launching B/C/D. Verify repeat deterministic scoring; a failed technical audit cannot count as a gate pass. Finite-probe similarity is not scientific evidence of downstream futility.",
+    "no_test_selection": "Correlation and ProcessBench values do not choose checkpoints, adaptation settings or replication. Only the fixed shared-probe C/D advantage rule determines [17] versus [17,42,83], before B/C/D RL; no later accuracy-based expansion, seed dropping or selective arm continuation.",
+    "limitation": "Differences on the finite initial-policy probe do not guarantee downstream gains; identity on that probe does not prove equality over future policy distributions.",
+    "resource_gate": {
+      "status": "prospective engineering resource rule; not yet evaluated",
+      "freeze_time": "Declared before C/D adaptation, shared-probe scoring and B/C/D RL; after A/17 baseline evidence already existed. Not claimed preregistered before all project results.",
+      "models": "Apply once to C and D adapted with seed 17; score the same 64-question, eight-response-per-question initial-policy probe. Other selected PRM seeds are adapted later for their paired runs.",
+      "eligibility": "All 64 fixed groups and all 512 responses must be retained; finite, validated scores and actual GRPO advantages are required. Use the same invalid/truncation handling as training. Missing responses or failed audits block the decision, not trigger the reduced branch.",
+      "advantage_definition": "A_{h,i}=(R_{h,i}-mean_j R_{h,j})/(sample_std_j R_{h,j}+1e-4), computed separately for C/D on the identical eight responses in question group h.",
+      "sign_definition": "sign_eps(a)=0 when abs(a)<=1e-6, +1 when a>1e-6, otherwise -1; same dead band for C and D, fixed before scoring.",
+      "sign_agreement": "mean_{h,i} 1[sign_eps(A_C[h,i])==sign_eps(A_D[h,i])] over all 512 responses, with zero/nonzero counts disclosed.",
+      "sign_agreement_minimum": 0.99,
+      "group_rms_definition": "d_h=sqrt((1/8)*sum_i (A_C[h,i]-A_D[h,i])**2); use max_h d_h over all 64 groups, not a pooled mean that can hide a rare large change.",
+      "maximum_per_group_rms_difference": 0.05,
+      "decision": "PASS only if sign agreement >=0.99 AND max_h d_h <=0.05, following a passed technical audit. PASS -> [17] for every A/B/C/D arm. FAIL -> planned [17,42,83] for every arm. Lock and record before B/C/D RL.",
+      "reduced_branch_total_policy_tokens": 96000000,
+      "full_branch_total_policy_tokens": 288000000,
+      "interpretation": "0.99 and 0.05 are prespecified compute-saving heuristics, not learned cutoffs, significance levels or a proven bound on policy-gradient differences, future-policy behavior or accuracy. Typical nondegenerate group-normalized advantages have order-one scale, but small probe RMS does not imply small parameter-gradient changes.",
+      "evidence_reporting": "Save probe trajectory manifest, PRM hashes, numerical audit, all advantages and group RMS values, aggregate agreement including zero pairs, outcome-stratified diagnostics, selected seed list, timestamp and planned token total. Report a triggered gate as a resource decision and one-seed findings as exploratory.",
+      "no_adaptive_reversal": "Do not use seed-17 accuracy or ProcessBench to expand, reverse the gate, choose a PRM or change thresholds. Any later extension is a separately documented follow-up, not part of this locked comparison.",
+      "not_authorization": "This document amendment does not launch or modify any run."
+    }
+  },
+  "prm_correct_reasoning_prior": "D omits positive outcome weak supervision from current-policy successful trajectories during adaptation. D still inherits the original public PRM, uses positive/negative public anchors, and sees failed trajectories containing possibly valid prefixes; all-correct-group behavior does not depend on anchors alone.",
+  "outcome_vs_mixed_reward_interpretation": {
+    "rule": "A assigns zero to both complete incorrect and invalid/truncated outputs. B/C/D may assign positive lambda*m to complete incorrect outputs, while invalid/truncated outputs get zero.",
+    "A_contrasts": "B-A, C-A and D-A include this completion preference as part of the full mixed-reward intervention; do not attribute those differences solely to mathematical process correctness.",
+    "C_D_contrast": "C/D share the same rule, so it is not an extra assignment difference. Their learned PRM values can still alter completion/truncation behavior, which must be reported.",
+    "normalization_unchanged": true
+  },
+  "failure_attribution_limits": "Outcome-label noise, lost useful supervision, score calibration, weak adaptation and policy-distribution drift can coexist. These controls constrain explanations but do not uniquely separate label noise from distribution drift; an imprecise null does not prove any one mechanism.",
+  "final_review_amendment": {
+    "recorded_utc": "2026-10-21T07:06:32.706733+00:00",
+    "scope": "Document and prospective analysis clarification only; no run launched or altered",
+    "added": [
+      "Shared validation rollout precheck of actual rewards and advantages",
+      "Explicit AUROC and paired-difference bootstrap",
+      "Fixed-group paired C-D diagnostics and post-treatment selection caveat",
+      "Precise LCA appendix reference",
+      "Non-identification of noise versus drift",
+      "A-versus-mixed completion-reward interpretation"
+    ],
+    "not_added": [
+      "ProcessBench-based model selection or continuation gate",
+      "Automatic stopping based on high score correlation",
+      "Fifth RL arm",
+      "New outcome reward formula or normalization change"
+    ],
+    "known_results": "A/17 baseline evidence already existed; these additions precede B/C/D experiments but are not represented as pre-baseline preregistration."
+  },
+  "policy_generated_tokens_total_semantics": "Maximum planned policy-training allocation, not an unconditional commitment: 96M if the fixed gate selects seed 17 only, otherwise 288M for seeds 17/42/83. Actual tokens can overshoot the cap by the last update and must be reported.",
+  "policy_generated_tokens_total_minimum_plan": 96000000,
+  "seed_list_semantics": "Maximum paired-seed list; the deterministic pre-RL resource gate fixes selected_seed_list to [17] or [17,42,83]. Seed 17 is always first and is never selected for favorable performance.",
+  "importance_and_staging_amendment": {
+    "recorded_utc": "2026-10-21T07:24:58.182353+00:00",
+    "scope": "Proposal and prospective replication plan only; no running configuration or training source changes, new training launches, model scoring or submission.",
+    "importance": "Mathematical RL needs reliable rewards to favor valid reasoning over lucky answers.",
+    "changed": "Fixed one-versus-three paired-seed resource gate based jointly on probe advantage sign agreement and maximum per-group RMS difference.",
+    "unchanged": [
+      "core loss and reward formulas",
+      "four RL arms",
+      "24M per executed run",
+      "6M/12M/24M checkpoints",
+      "D-C MATH500 primary comparison",
+      "group normalization",
+      "already-authorized A/17 continuation"
+    ],
+    "known_results": "A/17 baseline evidence existed; the new gate precedes C/D preparation and their policy results. No new PRM or policy result is asserted."
+  }
+}

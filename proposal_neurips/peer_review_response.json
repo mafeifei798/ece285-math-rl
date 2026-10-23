@@ -1,0 +1,131 @@
+{
+  "review_date": "2026-10-20",
+  "counts": {
+    "all_solutions": 1000,
+    "unique_questions": 955,
+    "answer_correct_solutions": 500,
+    "answer_correct_unique_questions": 500,
+    "answer_correct_valid": 406,
+    "answer_correct_invalid": 94
+  },
+  "power": {
+    "primary_endpoint_unchanged": true,
+    "planning_not_observed": "No C/D predictions exist; the 10% disagreement rate is an illustrative assumption, not a measured project quantity.",
+    "single_seed_paired_n": 500,
+    "assumed_disagreement_probability": 0.1,
+    "two_sided_alpha": 0.05,
+    "target_power": 0.8,
+    "approximation": "For paired binary differences d in {-1,0,1}, Var(d)=q-delta^2. Near the null, SE approximately sqrt(q/n). MDE approximately (z_.975+z_.8)*sqrt(q/n).",
+    "approximate_SE_pp": 1.4142135623730951,
+    "approximate_95pct_half_width_pp": 2.7718076486993555,
+    "approximate_80pct_power_MDE_pp": 3.962039811599346,
+    "seed_correlation": "The single-seed planning calculation is not the MDE of a three-seed mean. Actual uncertainty depends on covariance across seeds within questions. Keep each question across all arms/seeds as one cluster; also report seed dispersion.",
+    "actual_reporting": [
+      "per-seed counts C-wrong/D-correct and C-correct/D-wrong",
+      "per-seed disagreement rates",
+      "mean paired accuracy difference and question-cluster interval",
+      "paired-seed differences and standard deviation"
+    ],
+    "decision": "An interval spanning zero or substantial seed inconsistency is inconclusive, not proof of equivalence. Do not move the primary claim to a more favorable diagnostic after observing results.",
+    "extra_benchmarks": "GSM8K remains the prespecified transfer evaluation. No new benchmark is silently added to the primary pooled endpoint; any additional set requires contamination audit and a separate stated estimand."
+  },
+  "literature_checks": {
+    "LCA": {
+      "url": "https://arxiv.org/abs/2606.27739v2",
+      "v2_date": "2026-09-26",
+      "metadata": "Authors report accepted EMNLP 2026 Oral, camera-ready; proposal cites the verified arXiv v2 without relying on proceedings availability.",
+      "noise_experiment": "Appendix E.3 replaces 5/10/15/20 percent of correct trajectories with error-containing ones while keeping correct outcome labels; this is already studied, not our novel observation."
+    },
+    "PRIME": {
+      "url": "https://arxiv.org/html/2502.01456v2",
+      "scope": "Outcome-supervised online implicit rewards are not explicit correctness labels on every token. Outcome supervision does not directly identify which steps are valid."
+    },
+    "PURE": {
+      "url": "https://arxiv.org/html/2504.15275v3",
+      "scope": "Min-form credit assignment reduces but does not eliminate PRM hacking; one-step/no-delimiter behavior is discussed. Our sequence minimum reward is not a PURE reproduction."
+    },
+    "TRL": {
+      "url": "https://huggingface.co/docs/trl/v0.23.1/grpo_trainer",
+      "verified": "group, batch, none scaling; False aliases none; formal scaling unchanged"
+    },
+    "H4_PRM": {
+      "url": "https://huggingface.co/HuggingFaceH4/Qwen2.5-Math-1.5B-Instruct-PRM-0.2",
+      "verified": "Training and scoring separator is double newline; LABEL_1 is correctness."
+    }
+  },
+  "accepted": [
+    "limitations/significance wording",
+    "normalization caveat and stratified monitoring",
+    "step-count and missing-delimiter monitoring",
+    "PRM-only anchor control",
+    "power limitation",
+    "explicit LoRA rank ownership",
+    "prioritize C/D"
+  ],
+  "not_adopted": [
+    "replacing primary policy accuracy with PRM diagnostics solely for power",
+    "claiming diagnostic AUROC has a much larger clean sample",
+    "silently disabling normalization after A has begun",
+    "adding multiple unaudited benchmarks",
+    "claiming zero use of human labels"
+  ],
+  "artifacts_note": "This is a document and protocol review, not new model training or a training instrumentation deployment.",
+  "second_review_2026_10_21": {
+    "adopted": [
+      "Pre-RL shared-rollout PRM comparison, including actual reward/advantage differences",
+      "Explicit AUROC bootstrap intervals and restrained interpretation",
+      "C-D reward and advantage analysis by fixed outcome type",
+      "Specific LCA v2 Appendix E.3 citation",
+      "Completion preference caveat for comparisons against A"
+    ],
+    "qualified": [
+      "High correlation or close raw scores do not establish identical RL learning signals after normalization; no significance-based continuation gate is introduced.",
+      "Group membership based on a trained policy is post-treatment; online strata are descriptive. Paired diagnostics use the same initial-policy samples.",
+      "Diagnostics do not uniquely identify label noise versus distribution drift.",
+      "D retains the pretrained PRM's prior as well as anchors; it has not discarded all knowledge of correct reasoning."
+    ],
+    "LCA_source": "https://arxiv.org/html/2606.27739v2",
+    "LCA_exact_location": "Appendix E.3, paragraphs explaining controlled replacement of 5/10/15/20 percent of originally correct trajectories with error-containing trajectories while retaining correct labels",
+    "formal_core_unchanged": true,
+    "new_RL_runs": 0,
+    "training_changes": false,
+    "submission_made": false
+  },
+  "third_review_2026_10_21": {
+    "adopted": [
+      "Restore explicit problem importance in section 1",
+      "Prespecified compute-saving replication gate before B/C/D RL"
+    ],
+    "qualified": [
+      "Sign agreement alone ignores advantage magnitude; require a per-group RMS bound as well.",
+      "Thresholds are engineering heuristics, not a mathematical bound or a futility/equivalence test.",
+      "Fix replication from the shared seed-17 PRM probe, not from seed-17 downstream results.",
+      "One-seed outcomes are exploratory and cannot establish seed stability."
+    ],
+    "resource_gate": {
+      "status": "prospective engineering resource rule; not yet evaluated",
+      "freeze_time": "Declared before C/D adaptation, shared-probe scoring and B/C/D RL; after A/17 baseline evidence already existed. Not claimed preregistered before all project results.",
+      "models": "Apply once to C and D adapted with seed 17; score the same 64-question, eight-response-per-question initial-policy probe. Other selected PRM seeds are adapted later for their paired runs.",
+      "eligibility": "All 64 fixed groups and all 512 responses must be retained; finite, validated scores and actual GRPO advantages are required. Use the same invalid/truncation handling as training. Missing responses or failed audits block the decision, not trigger the reduced branch.",
+      "advantage_definition": "A_{h,i}=(R_{h,i}-mean_j R_{h,j})/(sample_std_j R_{h,j}+1e-4), computed separately for C/D on the identical eight responses in question group h.",
+      "sign_definition": "sign_eps(a)=0 when abs(a)<=1e-6, +1 when a>1e-6, otherwise -1; same dead band for C and D, fixed before scoring.",
+      "sign_agreement": "mean_{h,i} 1[sign_eps(A_C[h,i])==sign_eps(A_D[h,i])] over all 512 responses, with zero/nonzero counts disclosed.",
+      "sign_agreement_minimum": 0.99,
+      "group_rms_definition": "d_h=sqrt((1/8)*sum_i (A_C[h,i]-A_D[h,i])**2); use max_h d_h over all 64 groups, not a pooled mean that can hide a rare large change.",
+      "maximum_per_group_rms_difference": 0.05,
+      "decision": "PASS only if sign agreement >=0.99 AND max_h d_h <=0.05, following a passed technical audit. PASS -> [17] for every A/B/C/D arm. FAIL -> planned [17,42,83] for every arm. Lock and record before B/C/D RL.",
+      "reduced_branch_total_policy_tokens": 96000000,
+      "full_branch_total_policy_tokens": 288000000,
+      "interpretation": "0.99 and 0.05 are prespecified compute-saving heuristics, not learned cutoffs, significance levels or a proven bound on policy-gradient differences, future-policy behavior or accuracy. Typical nondegenerate group-normalized advantages have order-one scale, but small probe RMS does not imply small parameter-gradient changes.",
+      "evidence_reporting": "Save probe trajectory manifest, PRM hashes, numerical audit, all advantages and group RMS values, aggregate agreement including zero pairs, outcome-stratified diagnostics, selected seed list, timestamp and planned token total. Report a triggered gate as a resource decision and one-seed findings as exploratory.",
+      "no_adaptive_reversal": "Do not use seed-17 accuracy or ProcessBench to expand, reverse the gate, choose a PRM or change thresholds. Any later extension is a separately documented follow-up, not part of this locked comparison.",
+      "not_authorization": "This document amendment does not launch or modify any run."
+    },
+    "core_loss_reward_and_arms_unchanged": true,
+    "per_run_tokens_unchanged": 24000000,
+    "new_RL_runs": 0,
+    "training_changes": false,
+    "submission_made": false,
+    "known_before_change": "A/17 baseline results already existed; C/D preparation and RL remain unrun."
+  }
+}

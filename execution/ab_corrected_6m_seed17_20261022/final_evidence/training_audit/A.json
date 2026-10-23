@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "arm": "A",
+  "run": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022",
+  "audited_unix": 1792678714.5458453,
+  "source_release_sha256": "9eac99ad38cf0ebb389f295655024eff1a09ff530ca05462bd2d9bcfcdbe6907",
+  "source_files_checked": 34,
+  "runtime_inputs_checked": 3,
+  "recomputed": {
+    "totals": {
+      "generated_completion_tokens": 6022435,
+      "generated_completions": 9088,
+      "generated_groups": 1136,
+      "mixed_reward_groups": 884,
+      "correct_completions": 3766,
+      "truncated_completions": 492,
+      "prm_input_tokens": 0,
+      "prm_padded_tokens": 0,
+      "prm_scored_completions": 0,
+      "reward_status_counts": {
+        "symbolic": 4077,
+        "truncated": 492,
+        "exact": 3369,
+        "missing_or_invalid_box": 1002,
+        "unparseable": 113,
+        "unit_symbolic": 11,
+        "unit_exact": 24
+      },
+      "outcome_group_counts": {
+        "mixed": 884,
+        "all_correct": 29,
+        "all_wrong": 223
+      }
+    },
+    "last_batch": {
+      "generated_completion_tokens": 22757,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 2,
+      "correct_completions": 5,
+      "truncated_completions": 1,
+      "prm_input_tokens": 0,
+      "prm_padded_tokens": 0,
+      "prm_scored_completions": 0
+    },
+    "global_step": 284,
+    "previous_update_tokens": 5999678,
+    "group_order_sha256": "9c47e6e5b028d6495649f9730e07a8e7c160bc74ce76d23d786057f69ece4fa6",
+    "advantage_check": {
+      "present": true,
+      "rows_checked": 9088,
+      "max_abs_error": 9.058772976189289e-08,
+      "max_rounding_allowance": 0.002394185791015625
+    }
+  },
+  "actual_completion_tokens": 6022435,
+  "overshoot_tokens": 22435,
+  "prm_scoring_seconds": 0.0,
+  "checkpoint": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+  "checkpoint_files_checked": 16,
+  "adapter_tensors_checked": 392,
+  "checkpoint_adapter_sha256": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+  "final_adapter_sha256": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+  "final_adapter_logical_tensors_match": true,
+  "optional_group_diagnostics": [],
+  "configuration": {
+    "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "data_manifest_sha256": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459",
+    "initial_adapter_sha256": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7",
+    "shared_arguments_sha256": "bea41b423fdf195815c8babd68cb87807ff87753c47173bdbf7775ca80a31962"
+  },
+  "training_wall_seconds": 9734.869893026073,
+  "pytorch_peak_allocated_GiB": 31.59526300430298,
+  "limitations": [
+    "This audit is CPU postprocessing only; it does not replay gradients or score responses with a PRM.",
+    "Token totals are independently summed from saved counts, not retokenized; runtime completion-mask checks provide the separate generation check.",
+    "Stored outcome labels are checked for consistency, not mathematically rejudged; a separate frozen-verifier evaluation replay is needed.",
+    "Independent advantage arithmetic uses FP64 over FP32 rewards with an explicit rounding allowance; exact tensor preservation relies on the live loss guards.",
+    "Source and checkpoint hashes establish linkage to saved receipts, not an external cryptographic trust anchor.",
+    "PRM scoring elapsed time is receipt-checked, not independently remeasured; it includes encoding, padding, transfer, inference and score extraction.",
+    "A single arm audit does not establish A/B equality of shared configuration or question order; compare both audit outputs and run configurations."
+  ],
+  "artifact_hashes": {
+    "status.json": "f24d0308f4913bab0ba7b01349a9ff7dbb084346fd194c1071beca7be1090744",
+    "run_config.json": "f9708fe8a7fec69d6afacb6476bd9c7acf657e837c5ac1dbb3c59d736b0afd6f",
+    "progress.json": "45e2098bbe3b183547728a2f2eece1297c89b6b72c00ca96021933b546adadc6",
+    "live_audits.json": "e20e6e099a53c858a1fa8dcea93f9e9de0712692453d50d395ef62138f54326b",
+    "rollouts.jsonl": "6ceb2e86ba1ddb53feeaca21fa30f7588b6b25dfcc1dd8549dd5928775d31caf"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "PURE independent CPU replay and real no-update validation only",
+  "files": {
+    "experiments/b_qwen7b_6m_20261021/frozen_prm.py": "575ff18cfb511c15763199db127cd4989e12243994d7016c590ef289692f8735",
+    "experiments/b_qwen7b_6m_20261021/support.py": "ebb6a1dc1f981a0d3b122d6c83f900a656c183c8055a494d5e4ad63900940ef5",
+    "experiments/pure_integration_20261022/alignment.py": "bed6156c8426bd62638396480735e93544353ac14f18f8a5d06301d46066b2a5",
+    "experiments/pure_integration_20261022/approved_plan.json": "ba95a96c69ef0e936e7d7c147f63d14d5ac761f3f29d27a914f1928ced771488",
+    "experiments/pure_integration_20261022/common.py": "3c8e5b92e67e9a3918924d8ce79ab30d74580c8e18c7bf9c827cfafdcf8a1890",
+    "experiments/pure_integration_20261022/no_update.py": "d84c02807e2d455a6379f740b6298079aa4a9eb17352bbd28d3bbaef769c8c58",
+    "experiments/pure_integration_20261022/offline_check.py": "d579afef9a0889ce9dd8ebede639305c31067537b747de93b7a90ba99146e781",
+    "experiments/pure_integration_20261022/prm.py": "d47cf609b6fdc427b19582e14bf55e1c5cb181bde0929e89b4950b77855d1370",
+    "experiments/pure_integration_20261022/signals.py": "825a67d958aeaec316fd854ec3df0775ac7b17609e7e0842d63a114909f0b491",
+    "experiments/pure_integration_20261022/trainer.py": "3c9eeb60eba07092e5e3ba77b76ad35a457aabbccf85b04fa81b80f19a05e606",
+    "experiments/pure_integration_20261022/vendor/manifest.json": "f838f00e5de87a1678a04a4dd4d7e9a2ef0c6176fe8e4da4ee01f7b8c0bbc55a",
+    "experiments/pure_integration_20261022/vendor/pure_core.py": "ddeb99f76d3cd85ea649b14aab1d7cb50e157f773a625d3fa0ba5be506df7432",
+    "experiments/qwen7b_offline_20261021/core.py": "0d9bf018e7e8054f5c991a81c346a7dd37688dc68ef45384e8531c7dffd9dcab",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/source_manifest.json": "ee3cbcc88f761c33cc376957c2768db6b2b213c72facaa5e810c8b92646c26c7",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training/common.py": "d7b19e2cfff0db5097b5dc6d2df6b85d391e1718657dcb85bf042e4351a95174",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training/reward.py": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training_b/prm_reward.py": "0da9a07f046d2aba064245e0046944833c6e6ddeca1aa0f01b518d456fe64078",
+    "experiments/reward_repair_v2_20261021/legacy_snapshot/training_b/train_b.py": "7c264e0b419effa7871a6b503c515a0353bfd7d48bc6a4d7ba5ff47805c483ac",
+    "experiments/reward_repair_v2_20261021/v2core.py": "553030153f9019fdb94ab0fb50873b4bcbcfe18df6d9177c964ee5ff7c5e5d14",
+    "experiments/reward_repair_v3_20261021/repairs.py": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+    "experiments/pure_integration_20261022/dispatch_no_update.py": "00995e9ddf1fb80341530a34f4197e6477c85c64efc02420bdaea085e3a93a2f"
+  }
+}

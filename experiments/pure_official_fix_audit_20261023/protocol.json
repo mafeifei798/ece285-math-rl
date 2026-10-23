@@ -1,0 +1,42 @@
+{
+  "status": "offline verification only; formal training is not authorized",
+  "recommended_source_family": "PURE official OpenRLHF branch",
+  "pinned_commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+  "preserve_previous_family": "PURE veRL b174e508a4469663543cfcb366be78cf199d20bf and original A/B remain unchanged",
+  "purpose": "Remove direct separator/EOS policy-gradient reinforcement following one complete official signal path; do not claim semantic PRM reliability is fixed.",
+  "arms": {
+    "P_VR_OpenRLHF": "Frozen existing answer verifier; outcome reward and official response-level RLOO; no PRM forward.",
+    "P_PRM_OpenRLHF": "Frozen official PURE PRM scores; signed two-class score, softmin temperature 0.1, official process coefficient 1 and actual-peer-token baseline; no answer correctness signal."
+  },
+  "shared_signal_path": [
+    "Use the same fixed question groups, valid token mask and canonical step/end positions for both arms in offline replay.",
+    "Execute pinned process_experiences for the selected reward mode, with token reward_baseline for the PRM branch.",
+    "Use reverse cumulative returns, then mask step separator and final response positions to zero, as official OpenRLHF does for both reward modes.",
+    "Trim padding, apply the pinned replay buffer normalization once, and preserve all original zero advantages as the code does.",
+    "Do not apply veRL whitening first, GRPO group normalization afterwards, or an extra empty-answer reward."
+  ],
+  "future_runtime_requirements_not_executed": [
+    "A paired implementation must use the same source family, initial policy, frozen data split, seed, sampler, token budget and evaluator.",
+    "Use the official minimum-new-token setting of 1 for both arms; verify its semantics in the actual installed generation backend. This blocks immediate EOS, not every whitespace-only or irrelevant answer.",
+    "Persist exact emitted token IDs and separator positions during real-model no-update checks; historical reconstructed IDs are insufficient for end-to-end acceptance.",
+    "Verify one normalization in the actual trainer loss path, unchanged policy weights, and shared masking on ordinary correct/incorrect answers as well as empty cases.",
+    "All-zero-advantage batches must fail validation explicitly until their runtime handling is specified; do not silently invent a normalization fallback.",
+    "Single-A100 LoRA settings remain a resource adaptation, not a claim to reproduce the paper's distributed full-parameter experiment."
+  ],
+  "not_recommended_as_final_baseline": "Only transplanting boundary masking and normalization onto veRL raw advantages. This is a useful mechanism ablation, but mixes source families and materially alters P-VR normalization.",
+  "not_added": [
+    "empty-answer negative reward",
+    "length bonus or penalty",
+    "semantic content judge",
+    "answer correctness term inside P-PRM",
+    "output filtering or replacement sampling",
+    "new training or generation"
+  ],
+  "known_remaining_limits": [
+    "Raw PRM scores and their ranking of empty or unhelpful answers remain unchanged.",
+    "Empty answer rewards may still affect other responses' baselines.",
+    "Nonempty irrelevant content may retain positive advantages.",
+    "Boundary suppression also removes normal EOS/separator gradients in P-VR; it is not a neutral software bug fix.",
+    "Zero direct EOS loss gradient does not hold EOS probabilities fixed under shared parameter updates."
+  ]
+}

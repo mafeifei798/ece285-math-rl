@@ -1,0 +1,92 @@
+[
+  {
+    "path": "eval/math_eval.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/math_eval.py",
+    "sha256": "fac387436a25b538bf87463d7f861d22ba6f7802de32f4c8ddeb2408c024ff4e",
+    "bytes": 15398
+  },
+  {
+    "path": "eval/evaluate.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/evaluate.py",
+    "sha256": "ec397765a8049848f8e95955fe9ba80cfadc507394dc8a4854d40fce0d8f9ac0",
+    "bytes": 3975
+  },
+  {
+    "path": "eval/rm_maj_eval.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/rm_maj_eval.py",
+    "sha256": "f79a1cce8123a69424decc9de7ccd4bf7ef417f67e28b59fe740b274568d4e13",
+    "bytes": 3139
+  },
+  {
+    "path": "eval/trajectory.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/trajectory.py",
+    "sha256": "18bb7fd90f29de0ab4718c63ae261387805f99896e90d15cc943706936b16b21",
+    "bytes": 6706
+  },
+  {
+    "path": "eval/process.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/process.py",
+    "sha256": "426ac9010a4d36ce19b55d944b58e3191c364f0e8fd6788cf7f48ddbf698cc9f",
+    "bytes": 1239
+  },
+  {
+    "path": "eval/README.md",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/README.md",
+    "sha256": "8e06e5422ef9d33ff55c2c7c70534d053553e7663080f95179afeafcad112829",
+    "bytes": 496
+  },
+  {
+    "path": "eval/sh/run.sh",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/sh/run.sh",
+    "sha256": "63249f6eae438612db1decf87a3cb09b18b5c783e5d6aeba227589649a7723d0",
+    "bytes": 252
+  },
+  {
+    "path": "eval/sh/eval.sh",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/sh/eval.sh",
+    "sha256": "bbd8ff6ac1a0871c3481b583461b962865bed95eced3527505264b5c6ccac051",
+    "bytes": 1012
+  },
+  {
+    "path": "eval/sh/eval_single_node.sh",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/sh/eval_single_node.sh",
+    "sha256": "b14e4c3b0ef70d47b00a5cac009f99b3ea8168a188fbbd568d84061563daecbc",
+    "bytes": 1596
+  },
+  {
+    "path": "eval/sh/convert_and_evaluate_gpu.sh",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/eval/sh/convert_and_evaluate_gpu.sh",
+    "sha256": "cf986d235e6e8143897b1495fbf7573454cc5bfe7c02b2300a5426fc75198d26",
+    "bytes": 4719
+  },
+  {
+    "path": "PRM/train_stage_1.sh",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/PRM/train_stage_1.sh",
+    "sha256": "65af95cb421343ddd5ebc9cf94b54ae1c4279e28c6ed3483a37a02f91d914a5b",
+    "bytes": 983
+  },
+  {
+    "path": "PRM/train_stage_2.sh",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/PRM/train_stage_2.sh",
+    "sha256": "141a713fb6d6d6b2e3706ca746cfbba5c03468cf7b8876946721dd2ac3b78945",
+    "bytes": 984
+  },
+  {
+    "path": "verl/workers/curriculum_learning/base.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/curriculum_learning/base.py",
+    "sha256": "49380ddf2d4c75943970f0a1432b63dfc3f95c0b64c206b6bf29e2f9f9aada5d",
+    "bytes": 1692
+  },
+  {
+    "path": "verl/workers/curriculum_learning/remove_extreme.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/curriculum_learning/remove_extreme.py",
+    "sha256": "dd0bed788be5f6092e4100385fb644a3a2a7a943680f22c790ca537453f41688",
+    "bytes": 495
+  },
+  {
+    "path": "verl/workers/curriculum_learning/interquartile.py",
+    "url": "https://raw.githubusercontent.com/CJReinforce/PURE/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/curriculum_learning/interquartile.py",
+    "sha256": "018db7dee74613df28be6b3ea086a49c284b76af01fbda5f1edd29a7f90b46d2",
+    "bytes": 1134
+  }
+]

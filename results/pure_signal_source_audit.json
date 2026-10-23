@@ -1,0 +1,218 @@
+{
+  "created_utc": "2026-10-23T10:06:37.155171+00:00",
+  "scope": "Read-only source and existing-evidence audit; no training/source modifications or launches",
+  "upstream": {
+    "repository": "CJReinforce/PURE",
+    "branch": "openrlhf",
+    "live_api_checked": true,
+    "head": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+    "commit_date": "2025-03-25T07:15:20Z",
+    "matches_pin": true,
+    "api": "https://api.github.com/repos/CJReinforce/PURE/branches/openrlhf"
+  },
+  "conclusion": "No missing official short/refusal/format safeguard was found in the active OpenRLHF PURE PRM-only path. For the same logits, groups, lengths, masks and log probabilities, official signal functions preserve the observed wrong positive updates. This is not a claim that the complete official recipe generates the same responses or frequencies.",
+  "findings": [
+    {
+      "name": "generation_minimum",
+      "path": "openrlhf/trainer/ppo_utils/experience_maker.py",
+      "line_start": 1019,
+      "line_end": 1026,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L1019-L1026",
+      "finding": "min_tokens=1, special tokens retained. This prevents zero raw emitted tokens, not semantically empty or short irrelevant content."
+    },
+    {
+      "name": "prompt",
+      "path": "openrlhf/cli/train_pure_ray.py",
+      "line_start": 268,
+      "line_end": 271,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/cli/train_pure_ray.py#L268-L271",
+      "finding": "Official default explicitly requests steps separated by double newline. Our archived prepared Question/Answer prompt omits that clause; actual content is preserved for A/B comparability."
+    },
+    {
+      "name": "eos_processing",
+      "path": "openrlhf/models/actor.py",
+      "line_start": 155,
+      "line_end": 181,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/models/actor.py#L155-L181",
+      "finding": "process_sequences sets a processed EOS endpoint even at generation cap; at least one action is kept. No refusal/semantic-empty check."
+    },
+    {
+      "name": "step_boundary",
+      "path": "openrlhf/trainer/ppo_utils/experience_maker.py",
+      "line_start": 1094,
+      "line_end": 1116,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L1094-L1116",
+      "finding": "Tokenizer IDs whose decoded strings end with double newline are separators; final processed EOS is also a scored step. A no-separator response has one scored step."
+    },
+    {
+      "name": "prm_input",
+      "path": "openrlhf/trainer/ppo_utils/experience_maker.py",
+      "line_start": 825,
+      "line_end": 870,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L825-L870",
+      "finding": "Retain actor prompt IDs; replace each step-ending separator or EOS with a single newline, score that newline position. No separate judge prompt or completion-quality filter."
+    },
+    {
+      "name": "signed_softmin",
+      "path": "openrlhf/utils/utils.py",
+      "line_start": 149,
+      "line_end": 183,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/utils/utils.py#L149-L183",
+      "finding": "Two-class logits become p_positive minus p_negative and softmin weights at temperature0.1. With exactly one step the softmin weight is exactly1; a wrongly high PRM score remains positive."
+    },
+    {
+      "name": "baseline",
+      "path": "openrlhf/trainer/ppo_utils/experience_maker.py",
+      "line_start": 698,
+      "line_end": 712,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L698-L712",
+      "finding": "Token baseline is total peer process reward divided by total actual peer action length, multiplied by content-token count of each current step. No correctness/refusal filtering."
+    },
+    {
+      "name": "optional_verifier",
+      "path": "openrlhf/trainer/ppo_utils/experience_maker.py",
+      "line_start": 714,
+      "line_end": 726,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L714-L726",
+      "finding": "Only reward_mode containing VR uses solved minus1 followed by sequence leave-one-out and adds it at the final boundary. In an all-wrong group this entire verifier advantage is zero."
+    },
+    {
+      "name": "kl_return_boundary_mask",
+      "path": "openrlhf/trainer/ppo_utils/experience_maker.py",
+      "line_start": 225,
+      "line_end": 250,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L225-L250",
+      "finding": "After baseline subtract fixed KL; reverse cumulative return; set separator and final boundary advantages0. Boundary masking does not remove positive credit from preceding content tokens."
+    },
+    {
+      "name": "normalization",
+      "path": "openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "line_start": 213,
+      "line_end": 254,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/replay_buffer.py#L213-L254",
+      "finding": "Once-normalize global rollout token advantages, preserve pre-existing zeros. Count excludes zeros while variance numerator retains them; source semantics preserved locally."
+    },
+    {
+      "name": "normalization_call_site",
+      "path": "openrlhf/trainer/pure_trainer.py",
+      "line_start": 225,
+      "line_end": 235,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/pure_trainer.py#L225-L235",
+      "finding": "Normalize once before PPO train unless explicitly disabled; replay buffer cleared afterward."
+    },
+    {
+      "name": "ppo_safeguard",
+      "path": "openrlhf/models/loss.py",
+      "line_start": 56,
+      "line_end": 89,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/models/loss.py#L56-L89",
+      "finding": "PPO ratio clip0.2 and avg_ratio>10 multiplies loss by0. Neither detects incorrect math/refusal; measured three rows have ratio1."
+    },
+    {
+      "name": "reward_clip_argument",
+      "path": "openrlhf/cli/train_pure_ray.py",
+      "line_start": 215,
+      "line_end": 215,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/cli/train_pure_ray.py#L215-L215",
+      "finding": "reward_clip_range defaults(-10,10), but PURE active experience path imports and never calls compute_reward; no active clamp found there. Such bounds would not change observed positive signed scores anyway."
+    },
+    {
+      "name": "lora_default",
+      "path": "openrlhf/cli/train_pure_ray.py",
+      "line_start": 167,
+      "line_end": 172,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/cli/train_pure_ray.py#L167-L172",
+      "finding": "lora_rank default0; official train_pure.sh does not enable LoRA, so its learning rate is a full-parameter recipe."
+    },
+    {
+      "name": "official_recipe",
+      "path": "examples/scripts/train_pure.sh",
+      "line_start": 21,
+      "line_end": 47,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/examples/scripts/train_pure.sh#L21-L47",
+      "finding": "Temperature0.5, PRMVR, group4, rollout64prompts, trainbatch128, LR5e-7, KL.001, prompt1024, generation2048, distributedZeRO2. These are not our pilot batch/LoRA/prompt settings."
+    },
+    {
+      "name": "scheduler",
+      "path": "openrlhf/trainer/ray/ppo_actor.py",
+      "line_start": 233,
+      "line_end": 253,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ray/ppo_actor.py#L233-L253",
+      "finding": "Constant scheduler, zero warmup. CLI lr_warmup_ratio declaration is not used in this active scheduler."
+    },
+    {
+      "name": "official_admitted_failure",
+      "path": "README.md",
+      "line_start": 96,
+      "line_end": 102,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/README.md#L96-L102",
+      "finding": "Official documentation says irrelevant thanks/happy-birthday outputs can score positive, describes hacking and a step100 pre-hacking checkpoint; token baseline addresses excessively long single-step collapse, not all semantically empty responses."
+    }
+  ],
+  "current_batch": {
+    "evidence": "execution/pure_openrlhf_pilot_20261023/prm_signal_decomposition.json",
+    "rows": [
+      2,
+      4,
+      15
+    ],
+    "signed_prm_rewards": [
+      0.4765625,
+      0.7890625,
+      0.6171875
+    ],
+    "softmin_weight_each": 1,
+    "baseline_additions": [
+      0.0009520798971758255,
+      0.0010680180733884676,
+      0.0034890338766760897
+    ],
+    "mean_raw_content_returns": [
+      0.4774187757418706,
+      0.790141589111752,
+      0.6207397176373389
+    ],
+    "final_response_mean_advantages": [
+      1.0005089044570923,
+      1.5785071849822998,
+      1.344118595123291
+    ],
+    "once_normalization_factor": 2.163020455889138,
+    "all_three_raw_returns_already_positive": true,
+    "all_three_group_outcomes_all_wrong": true,
+    "PRMVR_same_batch_outcome_LOO_would_be_zero": true,
+    "replay_max_abs_error": 2.5603106079685745e-07
+  },
+  "paper_version": {
+    "url": "https://arxiv.org/html/2504.15275v3",
+    "date": "2025-10-23",
+    "framework": "veRL",
+    "sections": [
+      "3.4 Eq7",
+      "4.2",
+      "4.3",
+      "5.1 Case3"
+    ],
+    "differences": [
+      "Eq7 uses fixed maximum length N instead of actual peer length in this older OpenRLHF branch",
+      "Paper temperature1, group8, rollout64prompts, minibatch512, generation8192,500steps for Qwen-Math",
+      "Paper LR1e-6 VR/hybrid and5e-7 PRM; our two arms share5e-7 for controlled pilot",
+      "Paper reports best checkpoint; our fixed shared-stage pilot does not select by test score"
+    ],
+    "mechanism": "Paper explicitly describes meaningless/empty replies receiving high causal-PRM reward and uses auxiliary ground truth to mitigate it; min-form delays rather than eliminates this failure."
+  },
+  "adaptation_limits": [
+    "Official example is full-parameter finetuning; our actor is LoRA rank16 alpha32. Same numerical LR is not same effective policy update and is not a validated LoRA optimum.",
+    "Our shared single A100 execution uses32responses/update rather than distributed official256responses/rollout or final-paper512.",
+    "Our actor prompt and original repaired verifier are retained from prior project, not replaced by the official prompt and verifier.",
+    "Our actor/vLLM initialization uses TRL only as runtime and frozen reference disables adapters; rewards/baseline/normalization/loss are official extracted functions, not TRL GRPO.",
+    "Safe FP32 merged-copy to BF16 vLLM avoids frozen-base merge/unmerge drift but introduces numerical differences from unmerged-LoRA training. Step1 first-layer q/gate check found only0.028695/0.036817percent BF16 weight entries changed; this does not prove whole-model or later updates are ineffective.",
+    "Our LoRA pilot can test feasibility and early behavior under this adapted protocol; it cannot alone reproduce or refute full-paper performance."
+  ],
+  "not_claimed": [
+    "Three pathological examples are not proof of trained collapse or measured downstream accuracy drop.",
+    "Positive mean advantage is a loss coefficient, not a gradient norm or proportion of total parameter update.",
+    "Normalization rescales these errors but did not create their positive sign.",
+    "Switching to PRMVR is a method/experimental-arm change, not a missing bug fix; no such change was made."
+  ]
+}

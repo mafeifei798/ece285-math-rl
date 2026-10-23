@@ -1,0 +1,27 @@
+{
+  "version": "reward-repair-v2-20261021",
+  "files": {
+    "README.txt": "94d152689f0fa93ecc9e52b7cb92c5566314336fa367ddf6c7f3a0c21550874c",
+    "admission.py": "cf53dff36185c33c9e516493a6f451e4db00fa6d33aa32580f32e92902d504a5",
+    "b_audit_patch.py": "bdde845b66e52b3a404b1b7953ba7b3847a2f7296293b6113e3ae43f05e35fa9",
+    "build_inputs.py": "41ead7e05545424f3c2bd50f6c5ebdca5339f31da34f00c6af6a34258d6dfb0f",
+    "legacy_snapshot/source_manifest.json": "ee3cbcc88f761c33cc376957c2768db6b2b213c72facaa5e810c8b92646c26c7",
+    "legacy_snapshot/training/common.py": "d7b19e2cfff0db5097b5dc6d2df6b85d391e1718657dcb85bf042e4351a95174",
+    "legacy_snapshot/training/reward.py": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+    "legacy_snapshot/training_b/prm_reward.py": "0da9a07f046d2aba064245e0046944833c6e6ddeca1aa0f01b518d456fe64078",
+    "legacy_snapshot/training_b/train_b.py": "7c264e0b419effa7871a6b503c515a0353bfd7d48bc6a4d7ba5ff47805c483ac",
+    "make_report.py": "4142cd9dff832f2af1273c01496f2356e07417b79e19cacf96dd13a3088b0075",
+    "prepare_replay.py": "2bd91e9001f2b18e5e4ce3efe5b9e3f9a7b9d52008cd3d60442aa0171723e34d",
+    "protect_originals.py": "48e935a2ea6f0940d423aeadfa32767be2d80c414a6241f6cc95606ec33295dd",
+    "replay_failure_guard.py": "555578827569ba35c6dbcc9698949d07579ca73c9a7984468e92c93be0874c8d",
+    "replay_offline.py": "d82c94a89346182a82a0fbb7b78d1dc0d1946a3018ee6ffee4568f610e2be107",
+    "score_frozen.py": "a7f03a6c87b71323f29de93bf840c73eea8dc289e2096809d771f2ed907f12b3",
+    "test_v2.py": "d1137e2904fe541693eb092dd5df6b9407a9911b8f76d4b5eda1d4de7e7d786d",
+    "trl_kernel.py": "43a39d6403319f1ddd925e8d0eb70730ee50ac5fdb98b7ab19ce45c2e22f0a7d",
+    "v2core.py": "553030153f9019fdb94ab0fb50873b4bcbcfe18df6d9177c964ee5ff7c5e5d14",
+    "verify_results.py": "fe3749bfb2e961277e9ba8bb8fe81f22576dfe52ab7a79cfb432dcfc35c26641"
+  },
+  "new_training": false,
+  "model_updates": 0,
+  "development_note": "Initial 16 regression tests passed. The added stub-accounting test initially missed json in its fixture namespace; that fixture was corrected and the final 17-test suite passed before paired inference. No actor training ran."
+}

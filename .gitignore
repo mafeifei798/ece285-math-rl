@@ -1,0 +1,27 @@
+# Data and model artifacts stay outside Git.
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+models/
+data/
+runs/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.pkl
+*.tar
+*.tar.gz
+*.zip
+*.jsonl
+.pytest_cache/

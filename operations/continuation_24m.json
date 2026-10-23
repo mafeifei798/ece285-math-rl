@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "authorization": "Continue the existing baseline to 24M completion tokens per run; retain 6M, 12M and 24M results; do not restart training from the base model.",
+  "origin_run": "runs/A_seed17",
+  "source_checkpoint": "runs/A_seed17/checkpoint-280",
+  "source_global_step": 280,
+  "source_completion_tokens": 6020163,
+  "run_dir": "runs/A_seed17_24M",
+  "target_completion_tokens": 24000000,
+  "milestones": [6000000, 12000000, 24000000],
+  "project_planned_completion_tokens": 288000000,
+  "planned_arms": 4,
+  "planned_seeds": [17, 42, 83],
+  "launch_scope": "A seed 17 continuation only; other arms and seeds are not queued",
+  "checkpoint_policy": "First complete optimizer update at or above each cumulative milestone; preserve full checkpoint outside rolling-checkpoint rotation and report actual tokens and overshoot.",
+  "evaluation_policy": "Retain completed 6M evaluation; after training, evaluate saved 12M and 24M policies with the unchanged greedy MATH500/GSM8K evaluator. No test-based stopping or checkpoint selection.",
+  "wall_limit_hours": 48,
+  "rng_limitation": "Python, NumPy, torch CPU and CUDA RNG states are restored. The original checkpoint does not contain the separate vLLM engine RNG stream; its seed-0 engine restarts. This is checkpoint continuation, not a claim of bitwise equivalence to an uninterrupted run."
+}

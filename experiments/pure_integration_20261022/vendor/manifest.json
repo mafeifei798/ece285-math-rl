@@ -1,0 +1,41 @@
+{
+  "commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "functions": {
+    "masked_mean": {
+      "source": "verl/utils/torch_functional.py",
+      "line": 118,
+      "sha256": "5b9d3ba4196063f1ed5f38cc188f709cbe53bb19c21e374ff6a4d3b515b6f118"
+    },
+    "masked_var": {
+      "source": "verl/utils/torch_functional.py",
+      "line": 123,
+      "sha256": "9582c6ca30c8a862c5ca0c7e12b80a1a2ecffd7b0cde762edd55a4f2d282a0b2"
+    },
+    "masked_whiten": {
+      "source": "verl/utils/torch_functional.py",
+      "line": 141,
+      "sha256": "c200dde1e644f490fc6e3e89cdd8ec55fec8550544629061b93fc25097c6efdb"
+    },
+    "compute_return": {
+      "source": "verl/trainer/ppo/core_algos.py",
+      "line": 71,
+      "sha256": "96ad01089d285829efbc716bbbc3cba88f8f364755de335dffff7684515e0aa4"
+    },
+    "compute_rloo_outcome_advantage": {
+      "source": "verl/trainer/ppo/core_algos.py",
+      "line": 186,
+      "sha256": "33174ef8692c5939bc609673fa6eac37331b17a969624f87ab2573f13ec36dab"
+    },
+    "compute_policy_loss": {
+      "source": "verl/trainer/ppo/core_algos.py",
+      "line": 296,
+      "sha256": "e58ad6ce541963b15410eb9900338d63282a91d23f9f3c9b0449cbe18fcbdbaf"
+    },
+    "kl_penalty": {
+      "source": "verl/trainer/ppo/core_algos.py",
+      "line": 376,
+      "sha256": "494f2e37c5b0c30d41c7d4945e33eaaf01b1fa291400f38ed7d8b032638b68cf"
+    }
+  },
+  "file_sha256": "ddeb99f76d3cd85ea649b14aab1d7cb50e157f773a625d3fa0ba5be506df7432"
+}

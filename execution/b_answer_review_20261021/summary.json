@@ -1,0 +1,132 @@
+{
+  "scope": "Fixed 30 random +20 targeted B-6M answers, 469 native segments; no new training",
+  "reviewer": "Codex step-by-step audit with independent arithmetic/CAS verification; not independent multi-human labels",
+  "threshold": 0.5,
+  "random_seed": 20261021,
+  "population": 7472,
+  "stats": {
+    "R": {
+      "n": 30,
+      "chains": {
+        "contains_errors": 20,
+        "clean_valid": 7,
+        "uncertain": 2,
+        "ill_posed": 1
+      },
+      "clean_valid_low_min_below_05": [
+        "R02",
+        "R04",
+        "R10",
+        "R24",
+        "R26",
+        "R30"
+      ],
+      "error_containing_all_steps_ge_05": [
+        "R01",
+        "R07",
+        "R14"
+      ],
+      "first_error_scored_ge_05": [
+        "R01",
+        "R03",
+        "R05",
+        "R07",
+        "R12",
+        "R13",
+        "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R23",
+        "R25",
+        "R27",
+        "R28",
+        "R29"
+      ]
+    },
+    "S": {
+      "n": 20,
+      "chains": {
+        "clean_valid": 5,
+        "contains_errors": 15
+      },
+      "clean_valid_low_min_below_05": [
+        "S01",
+        "S02",
+        "S03",
+        "S08"
+      ],
+      "error_containing_all_steps_ge_05": [
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "first_error_scored_ge_05": [
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ]
+    },
+    "random_valid_answer_negative_advantages": [
+      "R02",
+      "R04"
+    ],
+    "CRLF_affected": [
+      {
+        "id": "R20",
+        "native_steps": 5,
+        "normalized_steps": 9
+      },
+      {
+        "id": "R23",
+        "native_steps": 19,
+        "normalized_steps": 20
+      },
+      {
+        "id": "S03",
+        "native_steps": 3,
+        "normalized_steps": 5
+      },
+      {
+        "id": "S08",
+        "native_steps": 19,
+        "normalized_steps": 21
+      }
+    ]
+  },
+  "alignment_passed": true,
+  "forward_replayed_records": 5,
+  "max_replayed_min_difference": 0.02249699831008911,
+  "max_prefix_vs_full_difference": 2.2351741790771484e-08,
+  "outcome_verifier_anomaly": "R04: mathematically correct 20% versus gold20 gives reward0; independent replay confirms parse20% as1/5",
+  "input_anomaly": "R18: question largest has no maximum; reference solution instead minimizes and yields592",
+  "limitations": [
+    "30-answer random sample only; do not estimate global rate from targeted20 or pool all50",
+    "A score below0.5 is a fixed diagnostic classification; it is not by itself proof of negative RL advantage or poor global ranking",
+    "Locally correct steps after previous errors are not counted as unambiguous false penalties",
+    "Corrected initial guesses and unrepaired mathematical errors are reported separately",
+    "No causal attribution of the full A/B accuracy gap to a single observed failure mode",
+    "Two random cases retain uncertain text and one has an ill-posed question; do not force labels"
+  ],
+  "initial_review_sha256": "1decdd23e089fe3b8d838a0746924a45d6a486d19a717f478df7f1f382df9dcb"
+}

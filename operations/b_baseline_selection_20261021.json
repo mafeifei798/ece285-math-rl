@@ -1,0 +1,14 @@
+{
+  "user_decision": "baseline only fixes implementation errors; keep the original reward and GRPO objective",
+  "selected_baseline": "experiments/b_baseline_corrected_20261021",
+  "selected_baseline_evidence": "execution/b_baseline_corrected_20261021",
+  "bounded_advantage_version": {
+    "path": "experiments/b_fix_integration_20261021",
+    "status": "archived_unselected_method_experiment",
+    "used_as_baseline": false,
+    "new_training_launched": false
+  },
+  "original_AB": "preserved",
+  "proposal": "unchanged",
+  "training_launch": "none"
+}

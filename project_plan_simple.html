@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ECE285 简化项目：先调整过程评分器，再做数学 RL</title>
+<style>
+:root{--ink:#18283d;--muted:#52647b;--line:#d9e3ee;--blue:#205897}*{box-sizing:border-box}body{margin:0;background:#f3f6fa;color:var(--ink);font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:940px;margin:30px auto;background:#fff;padding:38px 44px;border:1px solid var(--line);border-radius:12px}h1{font-size:28px;line-height:1.4}h2{font-size:20px;margin:28px 0 10px}p{margin:10px 0}a{color:var(--blue);overflow-wrap:anywhere}.meta{color:var(--muted);font-size:14px}.lead{background:#edf4ff;border-left:4px solid var(--blue);padding:14px 18px}.flow{font-weight:600;text-align:center;border:1px solid var(--line);padding:14px}table{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0}th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}th{background:#eef3f8}pre{background:#f4f6f9;padding:14px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.7 ui-monospace,Menlo,monospace}li{margin:6px 0}summary{cursor:pointer;font-weight:600;color:var(--blue)}footer{border-top:1px solid var(--line);padding-top:15px;margin-top:25px;font-size:13px;color:var(--muted)}@media(max-width:650px){main{margin:0;padding:22px 17px}h1{font-size:23px}table{display:block;overflow:auto}}@media print{body{background:white;font-size:10pt}main{border:0;margin:0;padding:0}h1{font-size:20pt}h2{font-size:13pt}tr{break-inside:avoid}details{display:none}}
+</style></head><body><main>
+<p class="meta">ECE285 · 简化执行版 v2.2 · 2026-10-20 · 3 人 / 1–2 张 RTX 5090</p>
+<h1>先调整一次过程评分器，再做数学 RL</h1>
+<p class="meta">Asymmetric Offline Process-Reward Adaptation for Mathematical RL</p>
+<div class="lead"><strong>研究问题：</strong>用最终答案更新过程评分器时，避免把“答案正确”误当作“整篇推导没有错误”，能否改善后续 GRPO 的数学准确率？<br><strong>范围：</strong>沿用原项目的监督规则，将评分器适配移到 RL 开始前。适配一次后冻结，RL 全程只更新解题模型。</div>
+
+<h2>一句话讲懂</h2>
+<p>有的解答中间算错、最后却碰巧答对。我们不因为答案对，就教评分器给整篇推导背书。先用一小批固定解答和已有步骤标签调整评分器，再让它给正常数学 RL 提供奖励。</p>
+<p class="flow">固定解题模型生成一批解答 → 离线调整评分器一次 → 冻结评分器 → 普通 GRPO 训练解题模型 → 独立做题评测</p>
+<p>对完整且可可靠判错的解答，只提供“整篇至少存在一处错误”的弱标签，不编造错误位置。公开 PRM800K 的真实步骤标签同时保留正确和错误示例，帮助抑制评分器只会判错的退化。所有答对解答仍正常获得 RL 的结果奖励。</p>
+
+<h2>四组训练，D 对 C 是核心比较</h2>
+<table><thead><tr><th>组别</th><th>训练奖励</th><th>要回答的问题</th></tr></thead><tbody>
+<tr><td>A · 结果奖励基线</td><td>最终答案正确性</td><td>普通 GRPO 的表现是多少？</td></tr>
+<tr><td>B · 现成过程奖励</td><td>最终答案 + 原始冻结评分器</td><td>B 对 A：现成过程奖励有没有帮助？</td></tr>
+<tr><td>C · 对称适配控制</td><td>最终答案 + 对称适配后冻结的评分器</td><td>C 对 B：整个适配包有没有帮助？</td></tr>
+<tr><td>D · 我们的方法</td><td>最终答案 + 不对称适配后冻结的评分器</td><td>D 对 C：仅移除正向弱监督是否有益？</td></tr>
+</tbody></table>
+<p>C 和 D 都使用相同公开步骤标签、相同失败解答、相同更新步数。C 额外把终答正确的解答当作“整篇无错”；D 不施加这一弱监督项。<strong>D 对 C 是方法归因比较，D 对 A/B 是实际价值比较。</strong>四组共用同一 GRPO 实现；本版不再把 PRPO 自定义训练器列为必做。</p>
+
+<h2>我们具体改什么</h2>
+<p>改动位于<strong>评分器的适配损失</strong>，通过改变评分器提供的过程奖励作用于后续 RL。保留已有模型结构和步骤聚合，不提出新的 GRPO 算法。最接近的 <a href="https://arxiv.org/html/2606.27739v2">LCA</a> 已研究结果监督训练 PRM、软最大聚合和单侧标签噪声；这些都属于已有工作。我们的增量限定为：<strong>在已有步骤标签辅助下，检验不对称离线适配是否改善下游数学 RL。</strong></p>
+<p>这是范围明确的课程研究。我们检验一个具体权衡：减少“答案对但过程有错”的错误监督，能否补偿同时少用有价值的正确解答的代价。现有证据支持标签问题存在；是否改善评分器、是否提高数学准确率，仍是待验证假设。定向检索不构成“首次提出”的证明。</p>
+<details><summary>实现时用的公式（讨论时可以先跳过）</summary>
+<pre>p_t = PRM 对第 t 个原生步骤的正确概率；e_t = 1 - p_t
+w_t = softmax(e_t / T)；E(τ) = Σ stop_gradient(w_t) · e_t
+L_wrong   = mean_verified_wrong[-log E(τ)]
+L_correct = mean_verified_correct[-log(1 - E(τ))]
+L_anchor  = mean_public_labeled_steps[BCE(p_t, gold)]
+
+C：L_PRM = L_wrong + L_correct + β L_anchor
+D：L_PRM = L_wrong             + β L_anchor
+初始固定 T=0.2、β=1.0；各项独立取均值，C/D 错误与锚点暴露次数对齐。
+
+B/C/D：R(τ) = 1[final answer correct] + λ min_t p_t
+初始固定 λ=0.2；A 只有第一项。
+最低分聚合是已有做法，不等于完整 PURE 的信用分配，也不算本项目创新。
+评分器在 RL 期间完全冻结。步骤分通过一个序列奖励进入普通 GRPO。
+终答正确的奖励较高不保证每个 token 的梯度方向或最终性能。</pre>
+</details>
+
+<h2>设备与工作量</h2>
+<ul>
+<li><strong>模型：</strong>解题模型 Qwen2.5-Math-1.5B + LoRA；评分器为现成 <a href="https://huggingface.co/HuggingFaceH4/Qwen2.5-Math-1.5B-Instruct-PRM-0.2">H4 1.5B PRM</a>，只做一次短程 LoRA 适配。两个模型可分阶段加载；先实测 5090 显存和吞吐。</li>
+<li><strong>固定数据：</strong>MATH train 划出 500 题验证；从剩余训练题固定抽 512 题，每题生成 4 条，得到至多 2,048 条适配解答。保留完整、可判定的输出。使用相同的固定适配库；不随 RL 反复刷新。</li>
+<li><strong>公开标签：</strong>固定 2,048 个 PRM800K 已标注前缀，排除与验证、测试及 ProcessBench 重合的问题。它是额外现成监督，必须披露，不需要团队新标注。</li>
+<li><strong>RL：</strong>TRL + PEFT + Math-Verify，每题 8 条，初始最大生成 2,048 token，微批从 1 开始。四组生成设置、数据顺序和 LoRA 配置一致。</li>
+<li><strong>正式规模：</strong>暂定每组每 seed 6M 策略生成 token，4 组 × 3 seed = 72M；先用硬件 profile 核算，再统一冻结额度。适配生成、PRM 推理/训练和评测成本均计入。GPU 小时尚未实测，不能据 token 数承诺工期。</li>
+</ul>
+<p>主指标改为经过 checkpoint 训练语料重叠审计的 MATH500 单次生成准确率，GSM8K 测迁移；测试时只使用解题模型。PRM800K 原始训练划分纳入了 4,500 道 MATH test 题，因此完整 MATH 仅作补充、披露已知重叠。实际数据交集核查仍是正式训练前的必做事项。ProcessBench 检查评分器是否更会辨错，不能用它调超参数。报告三 seed、逐题配对比较、输出长度和截断率，同时展示等生成 token 与含评分成本的 GPU 小时结果。</p>
+
+<h2>怎样判断改动有没有价值</h2>
+<p><strong>先看策略：</strong>增加训练前初始模型的评测行，不增加第五个训练组。所有策略都独立做题、贪心输出，不让评分器选答案，也不做投票。预先把 MATH500 上 D−C 的准确率差定为主要比较，报告 17/42/83 每个配对 seed 的差值及 95% 题目簇配对 bootstrap 区间；D 对 A/B 衡量实际价值。</p>
+<p><strong>再看评分器：</strong>用同一批 ProcessBench MATH 解答评价 B/C/D。除了固定阈值 0.5 的首错和正确链接受指标，再只看“最终答案正确”的解答，用 AUROC 衡量评分器能否把推导有效的解答排在过程含错的解答前面。所有分数减去同一个数，不会改善排序；这比只看拒绝率更有说服力。直接使用公开标签与同一份评分输出，无须新增人工标注或大模型 judge。</p>
+<p>这些诊断不用于调参。评分器排序改善也不能单独证明策略能力提高；最终仍由独立做题准确率及跨 seed 的稳定性判断。所有结果都尚待实验。</p>
+
+<h2>前两天和三人分工</h2>
+<table><thead><tr><th>负责人</th><th>第一阶段交付</th></tr></thead><tbody>
+<tr><td>Hongyi Ding：RL</td><td>跑通 A 和 B 的小批次流程，测吞吐、显存、截断率，冻结训练与解码配置。</td></tr>
+<tr><td>Jasmine Jiang：小改动</td><td>建立固定适配库，使用同一函数实现 C/D 的唯一损失开关，输出两个可复用评分器 checkpoint。</td></tr>
+<tr><td>Yang Zeng：评测</td><td>完成数据去重、逐题准确率、评分器评测、成本记录与统计脚本。</td></tr>
+</tbody></table>
+<p>48 小时的交付是训练流程正确运行、成功/失败样本都可用、数据清单与实测成本。资源不足时，在正式实验前统一缩小四组预算。随后先完成四组第一 seed，再按原计划完成其余两 seed，不看哪一个 seed 好再决定保留谁。C/D 适配及策略训练使用配对 seed，离线库和公开标签固定。四周是暂定工作窗口，实际长度由实测预算共同约束。</p>
+
+<details><summary>Proposal 英文摘要草稿</summary>
+<p>We study a simple offline adaptation rule for process reward models used in mathematical reinforcement learning. Final-answer correctness can provide noisy trajectory-level supervision: a correct answer does not certify that every intermediate step is valid. Starting from a pretrained explicit PRM, we use verified failed solutions as weak evidence of at least one error, withhold all-correct pseudo-labels from successful solutions, and retain a fixed set of public step annotations. After this one-time adaptation, we freeze the PRM and combine its scores with verifiable outcome rewards in a standard GRPO pipeline. Controlled comparisons against outcome-only GRPO, an unadapted PRM, and symmetric offline adaptation isolate the effect of the supervision rule. We evaluate single-generation mathematical accuracy, process-error detection, and total computational cost. Our contribution is a bounded adaptation study with a specific loss modification, rather than a new policy optimization algorithm.</p>
+</details>
+<footer>本版替代此前“轮间在线更新 PRM”的执行范围。当前为规划与文献核实阶段，未启动模型训练。来源：<a href="https://arxiv.org/html/2606.27739v2">LCA</a>；<a href="https://arxiv.org/html/2502.01456v2">PRIME</a>；<a href="https://arxiv.org/html/2504.15275v3">PURE</a>；<a href="https://huggingface.co/datasets/Qwen/ProcessBench">ProcessBench</a>。公开数据统计仍保存在本项目 evidence/，旧规划保留供追溯。</footer>
+</main></body></html>
