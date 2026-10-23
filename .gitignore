@@ -11,10 +11,10 @@ venv/
 *.key
 id_rsa*
 id_ed25519*
-models/
-data/
-runs/
-checkpoints/
+/models/
+/data/
+/runs/
+/checkpoints/
 *.safetensors
 *.pt
 *.pth

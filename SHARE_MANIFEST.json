@@ -611,6 +611,18 @@
       "redacted": false
     },
     {
+      "path": "execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/models/actor.py",
+      "original_sha256": "201ddd61a0dc68d1378b02c23e99151f71f6236e9ef25d06b6bed8f33f5129d2",
+      "shared_sha256": "201ddd61a0dc68d1378b02c23e99151f71f6236e9ef25d06b6bed8f33f5129d2",
+      "redacted": false
+    },
+    {
+      "path": "execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/models/loss.py",
+      "original_sha256": "9238e0aa7bc71ef33e346fa54d40bfdaad44849b7b03ac45879bd6346d4b1347",
+      "shared_sha256": "9238e0aa7bc71ef33e346fa54d40bfdaad44849b7b03ac45879bd6346d4b1347",
+      "redacted": false
+    },
+    {
       "path": "execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
       "original_sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
       "shared_sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
@@ -638,6 +650,12 @@
       "path": "execution/pure_official_fix_audit_20261023/source_openrlhf_extra/manifest.json",
       "original_sha256": "b511bf381b74fa906c6991ba6c8be8e3a446b92eb00ce73c29af744bf35d3ff2",
       "shared_sha256": "b511bf381b74fa906c6991ba6c8be8e3a446b92eb00ce73c29af744bf35d3ff2",
+      "redacted": false
+    },
+    {
+      "path": "execution/pure_official_fix_audit_20261023/source_openrlhf_extra/openrlhf/models/utils.py",
+      "original_sha256": "48ee3fd0d02d76b5fa3a7886b3f78b8c623d54b632d93cf66dfbc8a7536dc8a2",
+      "shared_sha256": "48ee3fd0d02d76b5fa3a7886b3f78b8c623d54b632d93cf66dfbc8a7536dc8a2",
       "redacted": false
     },
     {
