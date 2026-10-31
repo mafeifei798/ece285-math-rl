@@ -1,0 +1,71 @@
+{
+  "checked_date_local": "2026-10-29",
+  "sources": [
+    {
+      "id": "papo",
+      "paper": "https://arxiv.org/html/2603.26535v4",
+      "repository": "https://github.com/tanzelin430/PAPO",
+      "commit": "7d260f0a7a6e23d289e32bbc96f80408dddfa1d5",
+      "file": "verl/verl/trainer/ppo/core_algos.py:333-481",
+      "blob": "a217ada4182dd918b3d0db1b4d45a093445e0868",
+      "scope": "Current paper plus pinned executable advantage function; current paper and old pinned code settings are distinguished."
+    },
+    {
+      "id": "nsr",
+      "paper": "https://arxiv.org/html/2506.01347",
+      "repository": "https://github.com/TianHongZXY/RLVR-Decomposed",
+      "commit": "d858167b0d83139b1f79517e1a7266a78e018349",
+      "file": "verl/trainer/ppo/core_algos.py:115-204",
+      "blob": "75e4c4afb1ce008ba1606858d7bf8463f0c20ee1",
+      "scope": "Paper, README, advantage implementation and Qwen7B launch script. No third-party training run."
+    },
+    {
+      "id": "thinktwice",
+      "paper": "https://arxiv.org/html/2604.01591",
+      "repository": "https://github.com/CSSLab/ThinkTwice",
+      "commit": "f5341576e672251055a791216fdc6dfc7ebb8bb0",
+      "scope": "Paper methodology/cost, README and source search. Training core not fully audited; official README asks 2+ GPUs, which does not establish a single-card adaptation is impossible."
+    },
+    {
+      "id": "3po",
+      "paper": "https://arxiv.org/html/2608.09805",
+      "repository": "https://github.com/insait-institute/C3PO",
+      "commit": "82671b011815d0024009f701c52a939edcab60b9",
+      "scope": "Paper methods and README/model-card source search. IVON/Seq-MIS training implementation not ported or executed."
+    },
+    {
+      "id": "dbb",
+      "paper": "https://arxiv.org/html/2603.18444",
+      "scope": "Paper v2 method, implementation details and evaluation protocol. No verified dedicated official repository or executed implementation."
+    },
+    {
+      "id": "tp-grpo",
+      "paper": "https://arxiv.org/html/2507.23317",
+      "repository": "https://github.com/cs-holder/tp_grpo",
+      "scope": "Original paper method and limitations. Related non-normalized process signals already exist; do not claim avoiding standardization is new."
+    },
+    {
+      "id": "prior-eleven-repositories",
+      "local_report": "../github_reference_audit_20261029/REPORT.txt",
+      "scope": "Prior 11-repository review reused. Nine relevant code paths; PROF/DAPO document/tree-only boundaries retained."
+    }
+  ],
+  "readmes": [
+    {
+      "id": "NSR_README",
+      "blob": "41c88747f81925238e8ddcd7baaabc96830d1d64",
+      "url": "https://github.com/TianHongZXY/RLVR-Decomposed/blob/main/README.md"
+    },
+    {
+      "id": "THINKTWICE_README",
+      "blob": "df5f564d81d29402a30c392764f4718680466645",
+      "url": "https://github.com/CSSLab/ThinkTwice/blob/main/README.md"
+    },
+    {
+      "id": "C3PO_README",
+      "blob": "902566ac8f7c6dc023773c25d4daef1e7509ace3",
+      "url": "https://github.com/insait-institute/C3PO/blob/main/README.md"
+    }
+  ],
+  "no_external_training_run": true
+}

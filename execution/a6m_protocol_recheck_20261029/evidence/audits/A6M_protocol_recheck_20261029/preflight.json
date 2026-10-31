@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "protected_files": 797,
+  "questions": 1819,
+  "generations": 1819,
+  "historical_checkpoint_sha256_verified": true,
+  "same_base_and_initial_LoRA_verified": true,
+  "all_reference_questions_gold_and_verifier_identical": true,
+  "matched_inference_protocol_except_scheduling": true,
+  "new_training": false,
+  "CUDA_initialized": false,
+  "source_release_sha256": "d367ded2061e6efb3205baf303177ef0dbcb710b293f0763237a403f4ce5df8b"
+}

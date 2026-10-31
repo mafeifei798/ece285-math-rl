@@ -1,0 +1,41 @@
+PURE empty-response audit completed; no formal training authorized or started.
+
+Source: experiments/pure_empty_boundary_20261022/
+- guard.py: new shared whole-batch stop, no reward or loss edits.
+- score_existing.py: completed frozen PRM scoring of 288 saved A/B responses.
+- verify_guard.py: CPU exact-token parity on the saved 32-response PURE probe.
+- analyze.py: counterfactual numerical analysis only, never a training entry.
+
+Primary evidence: review.html, acceptance_receipt.json, offline_analysis.json,
+guard_acceptance.json, preservation.json, remote_exit_check.json.
+Remote frozen scoring: audits/PURE_empty_boundary_20261022/frozen_scoring_v2.
+PID 3173565 exited; no policy was loaded and no new completions were generated.
+First attempt failed its row-count assertion before model import while upload
+was incomplete. It was preserved; completed-input SHA256 verified before v2.
+
+Nine natural empty responses all score near 1 with both native/direct calls.
+Pinned PURE paper section 5.1 Case 3 explicitly discusses this failure.
+Qwen model-card serialization produces the same native input as the adapter.
+Thus treating removal of steps-or-empty fallback as a semantic fix is invalid.
+
+Eight reconstructed full batches support offline advantage comparisons at
+KL=0. One full batch B:210 is excluded because one reconstructed 2048-token
+response becomes 2057 tokens. Preserve this exclusion and the 9 length
+mismatches; do not claim exact original IDs for historical A/B logs.
+All 8 empty cases remain positive after task-reward zeroing and whitening.
+Only the existing PURE no-update 32-response probe has exact original IDs.
+
+Guard changes are an explicit experiment stop policy, NOT official PURE
+algorithm, reward correction, filtering, or a PRM capability improvement.
+Normal batches preserve both arms' tensors and log-prob gradients exactly.
+If any arm trips, retain the complete batch and stop; never silently drop,
+resample, clamp advantages, or claim matched-budget training is complete.
+Evaluation still counts empty outputs under the unchanged verifier.
+
+PURE-PRM+VR was inspected as a separate published option, offline only.
+All-GT conditional analysis is NOT the paper's 10-percent-label experiment.
+Fixed 10-percent selection here happens to label none of the 8 empty questions.
+No mixture, empty penalty, outcome gate, PRM swap or formal run was installed.
+
+Report HTML saved; automated browser preview was blocked by the tool's local
+file-protocol policy. No workaround was attempted; local links were checked.

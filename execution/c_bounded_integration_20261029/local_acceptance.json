@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "real_loss_rows": 72,
+  "wrong_answers": 47,
+  "wrong_positive": 0,
+  "max_independent_FP64_error": 9.058772976189289e-08,
+  "known_old_cases": {
+    "old-case-78": 0.0,
+    "old-case-2095": 0.0,
+    "old-case-4975": 0.0
+  },
+  "original_parameters_unchanged": true,
+  "optimizer_steps": 0,
+  "new_formal_RL": false,
+  "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+  "live_signal_file_sha256": "995cd1531597ec4b49ca078758426496af2976ec5bfd0e0b7d43c27bf1c6159c"
+}

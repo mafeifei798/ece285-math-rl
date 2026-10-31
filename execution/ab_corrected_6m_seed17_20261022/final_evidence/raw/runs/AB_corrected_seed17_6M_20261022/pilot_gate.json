@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "checks": {
+    "A_two_updates": true,
+    "A_parameters_updated": true,
+    "A_finite_gradient": true,
+    "A_finite_metrics": true,
+    "A_actual_loss_audit": true,
+    "A_accounting": true,
+    "A_original_reward": true,
+    "A_no_verifier_exceptions": true,
+    "B_two_updates": true,
+    "B_parameters_updated": true,
+    "B_finite_gradient": true,
+    "B_finite_metrics": true,
+    "B_actual_loss_audit": true,
+    "B_accounting": true,
+    "B_original_reward": true,
+    "B_no_verifier_exceptions": true,
+    "same_initial_actor_adapter": true,
+    "same_initial_samples": true,
+    "same_training_arguments": true,
+    "B_frozen_PRM": true,
+    "B_native_weights_verified": true,
+    "B_process_reward_exercised": true,
+    "real_LoRA_inference": true
+  },
+  "pilot_extra_completion_tokens": {
+    "A": 42485,
+    "B": 40728
+  },
+  "release_sha256": "9eac99ad38cf0ebb389f295655024eff1a09ff530ca05462bd2d9bcfcdbe6907",
+  "finished_unix": 1792654583.0301049,
+  "scope": "Engineering gate only, no test accuracy or reward/loss selection"
+}

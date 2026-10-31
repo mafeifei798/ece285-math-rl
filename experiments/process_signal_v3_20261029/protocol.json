@@ -1,0 +1,55 @@
+{
+  "status": "independent_candidate_CPU_only_no_new_training_dispatch",
+  "research_question": "At fixed small policy and frozen discriminative PRM, how does scaling correct-subset process preferences affect mathematical accuracy and training signals?",
+  "common": {
+    "model": "Qwen2.5-Math-1.5B original base plus shared LoRA16 initialization",
+    "PRM": "same frozen Qwen2.5-Math-PRM-7B + completed512-step C adapter",
+    "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+    "group_size": 8,
+    "coefficient": 0.2,
+    "outcome_epsilon": 0.0001,
+    "process_epsilon": 0.000001,
+    "post_combination_normalization": false,
+    "process_aggregation": "unchanged minimum native step correctness probability",
+    "verifier": "unchanged reward_repair_v3_20261021",
+    "format_reward": false,
+    "length_reward": false,
+    "PRM_updates_in_RL": false,
+    "lambda_sweep": false
+  },
+  "arms": {
+    "A": {"mode": "outcome", "role": "actual original TRL outcome advantage retained"},
+    "C_mix": {"mode": "mixed", "role": "actual original TRL y+0.2m normalized advantage retained"},
+    "C_PAPO_controlled": {"mode": "papo", "role": "same outcome term plus correctly gated separately standardized process term"},
+    "C_bounded": {"mode": "bounded", "role": "same outcome term plus correctly gated centered process probability differences"}
+  },
+  "comparisons": {
+    "C_bounded_vs_C_PAPO_controlled": "isolate process standardization at same scorer/outcome term/lambda/epsilon",
+    "C_bounded_vs_A": "does the process component improve on reliable outcome-only training?",
+    "C_PAPO_controlled_vs_C_mix": "test separated correct-subset process preferences versus normalized scalar mixing",
+    "C_mix_vs_A": "test simple process/outcome mixing in this fixed setting"
+  },
+  "official_PAPO_reference": {
+    "repository": "tanzelin430/PAPO",
+    "commit": "7d260f0a7a6e23d289e32bbc96f80408dddfa1d5",
+    "core_path": "verl/verl/trainer/ppo/core_algos.py:333-481",
+    "native_outcome_epsilon": 0.000001,
+    "native_lambda_default": 1.0,
+    "controlled_port_changes": ["common original GRPO outcome epsilon1e-4", "lambda0.2 shared with existing arms", "same frozen discriminative C score instead of separate rubric LLM grader"],
+    "full_paper_reproduction": false
+  },
+  "budget": {
+    "existing_triplet": "continue its immutable1M-per-arm seed17 controller without edits",
+    "new_PAPO_training_allocated_tokens": 0,
+    "additional_seeds_or_6M_authorized_here": false,
+    "future_comparison": "new arm requires separately reviewed GPU no-update acceptance and an explicit budget decision"
+  },
+  "evaluation": {
+    "development": "existing500-question held-out MATH validation; fixed prompts/greedy/cap2048/verifier",
+    "test_sets": "do not use MATH500/GSM8K to choose new settings; current pilot test protocol remains unchanged",
+    "statistics": "paired question differences and intervals; single seed is exploratory; absence of significance is not equivalence",
+    "costs": ["all generated completion tokens including failures and truncations", "PRM input and padded tokens", "PRM forward time", "optimizer updates", "wall time with GPU sharing disclosed"],
+    "process_validity": "correct final answer is not a valid-proof label; diagnostic PRM agreement cannot replace independent mathematical checking"
+  },
+  "original_ABCD_and_current_sources": "read-only; never import this candidate into the active controller"
+}

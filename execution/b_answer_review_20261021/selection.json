@@ -1,0 +1,289 @@
+{
+  "seed": 20261021,
+  "source_rows": 9120,
+  "eligible_complete_parseable_rows": 7472,
+  "excluded": {
+    "truncated": 550,
+    "missing_or_invalid_box": 985,
+    "unparseable": 113
+  },
+  "random_n": 30,
+  "targeted_n": 20,
+  "targeted_rule": {
+    "answer_correct_min_le_005": 8,
+    "answer_wrong_min_ge_080": 8,
+    "single_native_segment_long_text": 4
+  },
+  "targeted_eligible_pool_sizes": {
+    "answer_correct_min_le_005": 1079,
+    "answer_wrong_min_ge_080": 227,
+    "single_native_segment_long_text": 286
+  },
+  "random_draw": "Uniform answer-level sampling without replacement among complete, parseable, PRM-scored outputs; no length/score/subject filter",
+  "same_question_can_recur": true,
+  "sampling_is_not_50_iid_answers": true,
+  "prior_known_error_rows_not_forced_into_targeted_set": [
+    78,
+    2095,
+    4975
+  ],
+  "sources": {
+    "rollouts.jsonl": "2d5309f259bf454d9e446dea750a9bcbea6e3c1349ae483c9862e0beac540228",
+    "train.jsonl": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",
+    "prm800k_train_questions.jsonl": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076"
+  },
+  "selection": [
+    {
+      "review_id": "R01",
+      "source_row": 5521,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R02",
+      "source_row": 3932,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R03",
+      "source_row": 5853,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R04",
+      "source_row": 8519,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R05",
+      "source_row": 112,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R06",
+      "source_row": 3892,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R07",
+      "source_row": 4124,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R08",
+      "source_row": 3175,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R09",
+      "source_row": 6417,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R10",
+      "source_row": 6465,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R11",
+      "source_row": 2358,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R12",
+      "source_row": 4883,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R13",
+      "source_row": 4069,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R14",
+      "source_row": 4136,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R15",
+      "source_row": 3,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R16",
+      "source_row": 9081,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R17",
+      "source_row": 2223,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R18",
+      "source_row": 188,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R19",
+      "source_row": 524,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R20",
+      "source_row": 6833,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R21",
+      "source_row": 6280,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R22",
+      "source_row": 5915,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R23",
+      "source_row": 6325,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R24",
+      "source_row": 604,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R25",
+      "source_row": 1209,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R26",
+      "source_row": 4694,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R27",
+      "source_row": 4160,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R28",
+      "source_row": 885,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R29",
+      "source_row": 1083,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "R30",
+      "source_row": 3116,
+      "sampling_category": "uniform_random"
+    },
+    {
+      "review_id": "S01",
+      "source_row": 4457,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S02",
+      "source_row": 2957,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S03",
+      "source_row": 2295,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S04",
+      "source_row": 2495,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S05",
+      "source_row": 1948,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S06",
+      "source_row": 796,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S07",
+      "source_row": 1852,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S08",
+      "source_row": 745,
+      "sampling_category": "answer_correct_min_le_005"
+    },
+    {
+      "review_id": "S09",
+      "source_row": 7434,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S10",
+      "source_row": 2852,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S11",
+      "source_row": 1812,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S12",
+      "source_row": 3469,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S13",
+      "source_row": 7480,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S14",
+      "source_row": 7169,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S15",
+      "source_row": 166,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S16",
+      "source_row": 8950,
+      "sampling_category": "answer_wrong_min_ge_080"
+    },
+    {
+      "review_id": "S17",
+      "source_row": 6030,
+      "sampling_category": "single_native_segment_long_text"
+    },
+    {
+      "review_id": "S18",
+      "source_row": 4575,
+      "sampling_category": "single_native_segment_long_text"
+    },
+    {
+      "review_id": "S19",
+      "source_row": 8813,
+      "sampling_category": "single_native_segment_long_text"
+    },
+    {
+      "review_id": "S20",
+      "source_row": 2056,
+      "sampling_category": "single_native_segment_long_text"
+    }
+  ],
+  "reviewer": "Codex reasoning audit, not independent human annotation; uncertain cases are retained",
+  "blind_packet": "Scores, final outcome, gold answer, reference solution and targeted subclass hidden in the first review packet"
+}

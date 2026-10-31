@@ -1,0 +1,23 @@
+{
+  "version": "c_bounded_integration_20261029_v2",
+  "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+  "formal_RL_authorized": false,
+  "optimizer_constructed": false,
+  "actor_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "audit_overrides": {
+    "max_steps": 1,
+    "report_to": [],
+    "save_strategy": "no",
+    "logging_strategy": "no",
+    "vllm_gpu_memory_utilization": 0.15
+  },
+  "overrides_reason": "One no-update batch with lower vLLM cache footprint on shared GPU; reward/verifier/GRPO clipping/KL unchanged",
+  "sampling": {
+    "group_size": 8,
+    "questions": 4,
+    "temperature": 1.0,
+    "cap": 2048,
+    "seed": 17
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "arm": "A",
+  "phase": "continue",
+  "global_step": 48,
+  "accounting": {
+    "generated_completion_tokens": 1005003,
+    "generated_completions": 1536,
+    "generated_groups": 192,
+    "correct_completions": 641,
+    "truncated_completions": 90,
+    "prm_input_tokens": 0,
+    "prm_padded_tokens": 0,
+    "prm_scored_completions": 0,
+    "prm_forward_seconds": 0.0,
+    "outcome_group_counts": {
+      "mixed": 152,
+      "all_wrong": 33,
+      "all_correct": 7
+    },
+    "status_counts": {
+      "truncated": 90,
+      "symbolic": 643,
+      "exact": 593,
+      "missing_or_invalid_box": 191,
+      "unparseable": 19
+    },
+    "loss_rows": 1536,
+    "loss_wrong_positive": 0,
+    "process_nonzero_rows": 0,
+    "process_abs_sum": 0.0,
+    "outcome_abs_sum": 1018.2059230804443,
+    "positive_advantage_rows": 585,
+    "empty_rows": 1,
+    "short_wrong_rows": 18
+  },
+  "target_tokens": 1000000,
+  "budget_overshoot": 5003,
+  "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+  "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+  "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+  "PRM_frozen": true,
+  "originals_preserved": true,
+  "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+  "seconds": 4414.32337641716,
+  "metrics": {
+    "train_runtime": 4378.3608,
+    "train_samples_per_second": 146.173,
+    "train_steps_per_second": 4.568,
+    "total_flos": 0.0,
+    "train_loss": 1.030435274174124e-05
+  }
+}

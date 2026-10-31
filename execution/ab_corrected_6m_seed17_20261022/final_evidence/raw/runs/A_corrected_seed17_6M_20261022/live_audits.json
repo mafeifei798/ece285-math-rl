@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "global_step": 284,
+  "loss_calls": 9088,
+  "loss_rows": 9088,
+  "generation_batches": 284,
+  "original_TRL_advantages_retained": true,
+  "loss_input_values_preserved": true,
+  "PRM_frozen": null
+}

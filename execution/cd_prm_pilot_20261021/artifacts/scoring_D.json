@@ -1,0 +1,14 @@
+{
+  "complete": true,
+  "arm": "D",
+  "device": "cuda:0",
+  "dtype": "float32",
+  "cuda_initialized": true,
+  "scores_sha256": "6764a27040011e732e2a22fb34a83eef1ad27729d87309fdb36c9499d1219536",
+  "count": 312,
+  "scored": 284,
+  "input_tokens": 191929,
+  "repeated_single_vs_batch_max_difference": 5.125999450683594e-06,
+  "elapsed_seconds": 35.354934468865395,
+  "adapter_sha256": "584e502cab6dca28c89874d82448e929125d91f1a5eeeb396ba4017f9a005e50"
+}

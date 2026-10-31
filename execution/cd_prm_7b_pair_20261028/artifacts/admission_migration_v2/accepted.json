@@ -1,0 +1,15 @@
+{
+  "accepted": true,
+  "unix": 1793175163.996788,
+  "old_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
+  "new_release_sha256": "b35e38b2addc45b36703812b47bc1595b9a36a34a68801baa2d318c82893cc8e",
+  "anchors_sha256": "d0ce3590b256a3f30d951c9ee87acbf1dd46faca51a39f72f10b3245c7be898d",
+  "source_changed": [
+    "prepare.py"
+  ],
+  "unchanged_config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+  "retained_unique_native_inputs": 2035,
+  "new_or_replaced_native_inputs": 13,
+  "PRM_updates_before_admission": 0,
+  "actor_updates": 0
+}

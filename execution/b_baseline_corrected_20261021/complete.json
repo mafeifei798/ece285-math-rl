@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "rows": 9056,
+  "groups": 1132,
+  "generation_batches": 283,
+  "loss_calls": 27168,
+  "tested_ratio_profiles": [
+    0,
+    -0.7,
+    0.5
+  ],
+  "original_TRL_advantage_tensor_preserved": true,
+  "advantages_at_loss_bitwise_equal_to_TRL": true,
+  "second_normalization_detected": true,
+  "negative_controls_detected": [
+    "second_group_normalization",
+    "rescale_after_buffer",
+    "shuffle_advantage_without_tag",
+    "missing_provenance_tag"
+  ],
+  "max_vs_independent_fp64": 7.235649956083279e-06,
+  "max_loss_error": 4.470348358154297e-08,
+  "group_stats": {
+    "mixed": {
+      "groups": 893,
+      "mean_abs_advantage": 0.8162078565384491,
+      "correct_negative_rows": 6,
+      "wrong_positive_rows": 4
+    },
+    "all_correct": {
+      "groups": 33,
+      "mean_abs_advantage": 0.795836034296151
+    },
+    "all_wrong": {
+      "groups": 206,
+      "mean_abs_advantage": 0.7342866592638269
+    }
+  },
+  "accounting": {
+    "generated_completion_tokens": 6014788,
+    "generated_completions": 9056,
+    "generated_groups": 1132,
+    "mixed_reward_groups": 1130,
+    "correct_completions": 3708,
+    "truncated_completions": 518,
+    "prm_input_tokens": 0,
+    "prm_padded_tokens": 0,
+    "prm_scored_completions": 7476,
+    "prm_forward_seconds": 0.0,
+    "reward_status_counts": {
+      "symbolic": 4112,
+      "truncated": 518,
+      "exact": 3329,
+      "missing_or_invalid_box": 934,
+      "unparseable": 128,
+      "unit_exact": 27,
+      "unit_symbolic": 8
+    },
+    "outcome_group_counts": {
+      "mixed": 893,
+      "all_wrong": 206,
+      "all_correct": 33
+    },
+    "last_batch": {
+      "generated_completion_tokens": 18529,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 4,
+      "correct_completions": 17,
+      "truncated_completions": 2,
+      "prm_forward_seconds": 0.0,
+      "prm_input_tokens": 0,
+      "prm_padded_tokens": 0,
+      "prm_scored_completions": 30
+    }
+  },
+  "exact_TRL_method_ast_hashes": {
+    "_prepare_inputs": "b7df1a9f58b87e485a2ee42ac70bf068f6a51f462acf7d3325d78a4e430cfd48",
+    "compute_loss": "97222e567db31a64c8a2f2c140b1d71884e13f3d3f9fde26585709561672cd60",
+    "_compute_loss": "472de01f262bf35790a29c9b9f7791977011ade062008f5a26ee32167c98d13e"
+  },
+  "pinned_TRL_sha256": "f217183c84be9b38b23454920eb1b914726aa3c4b9dd4c076d455bdaa67bf1b8",
+  "synthetic_only": [
+    "token identity tensors",
+    "current/old/reference log probabilities",
+    "entropy"
+  ],
+  "real_inputs": [
+    "raw completion text",
+    "question/gold",
+    "EOS/length",
+    "native cached step scores",
+    "original 8-way groups"
+  ],
+  "model_loads": 0,
+  "actor_generation": 0,
+  "PRM_model_forward_calls": 0,
+  "backward_calls": 0,
+  "optimizer_steps": 0,
+  "new_training": false,
+  "hashes_unchanged": true,
+  "limitation": "This verifies reward/advantage/buffer/loss integration, not live model loading, GPU numerical behavior, or accuracy improvements.",
+  "max_vs_saved_v3_advantages": 0.0,
+  "method_changes": false,
+  "advantage_rule": "original_mixed_reward_group_standardization"
+}

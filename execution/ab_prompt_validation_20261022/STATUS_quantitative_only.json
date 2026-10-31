@@ -1,0 +1,15 @@
+{
+  "status": "quantitative_analysis_complete_qualitative_review_pending",
+  "updated_utc": "2026-10-23T03:48:08.773854+00:00",
+  "training": false,
+  "official_results_ready": true,
+  "results_scope": "new_validation_only",
+  "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+  "completed_predictions": 3992,
+  "original_results_preserved": true,
+  "qualitative_review_complete": false,
+  "interpretation": [
+    "MATH 预留验证题：在新提示下，B的准确率仍低于A，配对区间未跨0。",
+    "GSM8K 验证题（来自train split）：在新提示下，B的准确率仍低于A，配对区间未跨0。"
+  ]
+}

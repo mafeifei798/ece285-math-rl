@@ -1,0 +1,23 @@
+{
+  "status": "waiting_for_gpu",
+  "pid": 4131163,
+  "started_unix": 1792696240.534454,
+  "heartbeat_unix": 1792696240.6932282,
+  "script_sha256": "4ef6eae9e9ba7f2c900d88d61a522f4e733ad66a84cb6921a9d363cc5ec1cca5",
+  "release_sha256": "1a5f57dcf2823f6fc91b2e37baf66bef96851ab809e09253fcb2d69fc1df3c84",
+  "training": false,
+  "scope": "No generation until GPU1 is unused. Then exactly the frozen four-cell validation run and CPU analysis.",
+  "maximum_wait_seconds": 43200,
+  "interval_seconds": 60,
+  "child_pid": null,
+  "gpu_check": {
+    "gpu": 1,
+    "memory_used_MiB": 32207,
+    "utilization_percent": 100,
+    "active_compute_processes": [
+      "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 3618365, 1762",
+      "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 4101640, 30430"
+    ],
+    "idle": false
+  }
+}

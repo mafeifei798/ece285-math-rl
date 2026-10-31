@@ -1,0 +1,18 @@
+{
+  "status": "analysis_complete_with_qualitative_review",
+  "updated_utc": "2026-10-23T04:26:57.029110+00:00",
+  "training": false,
+  "official_results_ready": true,
+  "results_scope": "new_validation_only",
+  "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+  "completed_predictions": 3992,
+  "original_results_preserved": true,
+  "qualitative_review_complete": true,
+  "interpretation": [
+    "本轮四组推理已完成。新提示下B仍低于A：MATH差4.22个百分点，GSM8K差8.60个百分点。",
+    "新提示提高了单个末尾框的结构合规率，但没有建立数学正文一致性已经改善的证据；不能将本轮解释为排除格式问题后的纯数学能力比较。",
+    "固定48条助理定性审读中，最后正文结论与末框相同的数量：A为8/12到7/12，B为9/12到8/12。明确冲突虽减少，未形成稳定结论的回答增多。",
+    "GSM8K上新提示使A下降8.4个百分点、B下降14.6个百分点；B对这一次提示变化更敏感。该结论限于本轮checkpoint、验证题和固定提示对。",
+    "保留原提示结果作为主报告；本次提示干预作为未能修复B表现的负结果，不替换原测试成绩，不自动搜索新提示或启动训练。"
+  ]
+}

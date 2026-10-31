@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import subprocess
 
-SSH = ['ssh', '-p', '11032', '-i', '/home/researcher/.ssh/fym_125_76_110_84_ed25519',
+SSH = ['ssh', '-p', '11032', '-i', '/home/researcher/.ssh/research_server_ed25519',
        '-o', 'BatchMode=yes', '-o', 'IdentitiesOnly=yes', '-o', 'StrictHostKeyChecking=yes',
        '-o', 'ConnectTimeout=12', 'researcher@server.example.invalid',
        '/srv/research/ece285_math_rl_project/.venv/bin/python -']

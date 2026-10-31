@@ -1,0 +1,45 @@
+{
+  "outcome_0_single_True": {
+    "n": 280,
+    "score_mean": 0.7024775300174951,
+    "score_median": 0.7960805892944336,
+    "length_mean": 184.20714285714286
+  },
+  "outcome_0_single_False": {
+    "n": 3493,
+    "score_mean": 0.1567573179450537,
+    "score_median": 0.06941547244787216,
+    "length_mean": 747.7265960492414
+  },
+  "outcome_1_single_True": {
+    "n": 174,
+    "score_mean": 0.6687461938280826,
+    "score_median": 0.7624151706695557,
+    "length_mean": 174.91954022988506
+  },
+  "outcome_1_single_False": {
+    "n": 3525,
+    "score_mean": 0.148088952160196,
+    "score_median": 0.08725224435329437,
+    "length_mean": 507.04595744680853
+  },
+  "matched_pair_outcome_proxy": {
+    "all": {
+      "pairs": 7156,
+      "pairwise_AUC": 0.44997205142537733
+    },
+    "both_multistep": {
+      "pairs": 6261,
+      "pairwise_AUC": 0.47212905286695417
+    },
+    "length_ratio_0.8_1.25": {
+      "pairs": 1979,
+      "pairwise_AUC": 0.4787771601819101
+    },
+    "same_step_count": {
+      "pairs": 448,
+      "pairwise_AUC": 0.5044642857142857
+    }
+  },
+  "positive_wrong_high_prm_candidates": 15
+}

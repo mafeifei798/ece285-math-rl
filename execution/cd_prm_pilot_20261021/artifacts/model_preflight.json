@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "actual_model_gradient_switch_max_abs_error": 1.3224780559539795e-06,
+  "gradient_norm": 24.559200286865234,
+  "save_reload_max_abs_error": 0.0,
+  "trainable_parameters": 9232384,
+  "only_lora_updated": true,
+  "frozen_classifier": true,
+  "cuda_initialized": true,
+  "note": "Technical smoke uses one public anchor for synthetic loss wiring only. Its adapter is never loaded into C/D or used for scoring."
+}

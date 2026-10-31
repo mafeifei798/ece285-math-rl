@@ -1,0 +1,7 @@
+{
+  "time": 1792744075.4055462,
+  "new_run_exists": false,
+  "target_processes": [],
+  "gpu": "0, NVIDIA A100-SXM4-80GB, 31549 MiB, 100 %\n1, NVIDIA A100-SXM4-80GB, 66586 MiB, 100 %\n",
+  "processes": "3397300, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 14584 MiB\n3398229, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3538 MiB\n3399155, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 18070 MiB\n3609705, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 1814 MiB\n2394579, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 1144 MiB\n3618365, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 2066 MiB\n2394540, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1480 MiB\n2877618, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1308 MiB\n3116884, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 942 MiB\n3144012, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1086 MiB\n3145332, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1302 MiB\n3169497, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1152 MiB\n3292698, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 940 MiB\n3299142, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1072 MiB\n3300327, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 936 MiB\n3318521, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 938 MiB\n3334960, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 938 MiB\n"
+}

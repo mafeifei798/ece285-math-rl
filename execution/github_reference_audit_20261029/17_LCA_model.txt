@@ -1,0 +1,67 @@
+https://github.com/JiaTianyu20031016/MIL/blob/d8dc4593a95f8ed142d5c9166140e8843cb208fc/MILmodel/mil_model_for_prm.py
+Upstream blob: 37674bd237447a44a7b5065f1328839a66e45bb1
+EXCERPT ONLY
+415: class SoftMinPoolMILModelforPRM(BaseMILModel):
+416:     """
+417:     'Soft' version of MinPoolMILModelforPRM where segment probabilities are combined using a weighted average with softmin weights based on the positive class probabilities, rather than taking a hard minimum.
+418:     Control the softness of the minimum with a temperature parameter, and optionally apply instance dropout for regularization as in MinPoolMILModelforPRM.
+419:     """
+420: 
+421:     supported_modules = ("classifier",)
+422: 
+423:     def __init__(self, pretrained_model, decision_threshold=0.5, dropout=0.0, temperature=1, **kwargs):
+424:         self.temperature = temperature
+425:         self.dropout = dropout
+426:         super().__init__(pretrained_model, decision_threshold=decision_threshold, **kwargs)
+427: 
+428:     def _init_weights(self, **kwargs):
+429:         hidden_size = self.pretrained_model.config.hidden_size
+430:         self.backbone_dtype = next(self.pretrained_model.parameters()).dtype
+431:         self.classifier = MLP(input_dim=hidden_size, hidden_dim=hidden_size, output_dim=2).to(dtype=self.backbone_dtype)
+432: 
+433:     def _forward_impl(self, eval, batch: Batch) -> Tuple[Tensor, Tensor, Optional[Dict[str, Tensor]]]:
+434:         segment_ids: Tensor = batch["segment_input_ids"]
+435:         segment_mask: Tensor = batch["segment_attention_mask"]
+436:         document_ids: Tensor = batch["input_ids"]
+437:         document_mask: Tensor = batch["attention_mask"]
+438: 
+439:         if segment_ids.dim() != 3 or segment_mask.dim() != 3:
+440:             raise ValueError("Segment tensors must be 3D with shape [batch, segments, seq_len].")
+441: 
+442:         batch_size, max_segments, segment_length = segment_ids.shape
+443:         dtype = self.backbone_dtype
+444:         device = segment_ids.device
+445: 
+446:         if max_segments == 0 or segment_length == 0:
+447:             doc_probs = torch.zeros((batch_size, 2), dtype=dtype, device=device)
+448:             doc_probs[:, 0] = 1.0
+449:             empty = torch.zeros((0, 2), dtype=dtype, device=device)
+450:             return doc_probs, empty, None
+451: 
+452:         # forward
+453:         outputs = self.pretrained_model(
+454:             input_ids=document_ids,
+455:             attention_mask=document_mask,
+456:             output_hidden_states=True,
+457:         )
+458: 
+459:         # extract segment embeddings at each segment's end position
+460:         end_positions = batch["segment_ends"]  # shape [batch, max_segments]
+461:         batch_indices = torch.arange(batch_size, device=device).unsqueeze(1).expand(-1, max_segments)
+462:         segment_embeddings_grid = outputs.hidden_states[-1][batch_indices, end_positions] # shape [batch, max_segments, hidden]
+463:         segment_logits_grid = self.classifier(segment_embeddings_grid)    # shape [batch, max_segments, classes]
+464:         segment_probs_grid = torch.softmax(segment_logits_grid, dim=-1)   # shape [batch, max_segments, classes]
+465: 
+466:         # document-level prediction by 'soft' minimum segment probability for the positive class
+467:         # the softmin weights are computed as a softmax over the negative of the positive class probabilities, so that segments with lower positive probability get higher weight in the final document prediction
+468:         positive_probs = segment_probs_grid[..., 1]  # shape [batch, max_segments]
+469:         valid_segment_mask = segment_mask.any(dim=-1)  # shape [batch, max_segments]
+470:         masked_positive_probs = positive_probs.masked_fill(~valid_segment_mask, torch.inf)  # treat invalid segments as having max positive probability
+471:         # we apply stop_gradient to the softmin weights
+472:         softmin_weights = torch.softmax((1 - masked_positive_probs) / self.temperature, dim=1).detach()  # shape [batch, max_segments]
+473:         
+474:         if not eval:
+475:             # random dropout of some valid segments during training for regularization (similar to DropBlock)
+476:             # the dropout probability is scaled by the softmin weights 
+477:             # so that segments with lower positive probability are more likely to be dropped, encouraging the model to consider multiple segments rather than just the most negative one
+478:             doc_positive_prob = batch.get("positive_prob")

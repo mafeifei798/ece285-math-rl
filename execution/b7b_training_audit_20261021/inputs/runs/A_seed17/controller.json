@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "pid": 1290279,
+  "started_unix": 1792549107.4278772,
+  "gpu": 0,
+  "training_restarted": false,
+  "adapter_sha256": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b",
+  "evaluation_code_sha256": "fd3eaf0a0d47c64907f73fb528d0dc21ab2534c16d82a7b170a3eabd6ce4b256",
+  "header_receipt_sha256": "27a323af35cb1581643f32adbf311fa3faf1125cf760e013b0a4be843bbd4317",
+  "child_pid": 1290324,
+  "evaluation_exit_code": 0,
+  "finished_unix": 1792551530.4775279,
+  "arm": "A_outcome_GRPO",
+  "seed": 17,
+  "recovery": true,
+  "prior_attempt": "controller_before_evaluation_recovery.json"
+}

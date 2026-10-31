@@ -1,0 +1,22 @@
+{
+  "A.json": {
+    "sha256": "349499cb60cd50d89c5e46d7cf6d6f62485d603193dfdcb2db24954ce9d08dff",
+    "bytes": 4208
+  },
+  "B.json": {
+    "sha256": "49080a483822eec80b5fd623168095267bdc9fd09115c9465de352ece25aa399",
+    "bytes": 4248
+  },
+  "A.stdout.log": {
+    "sha256": "349499cb60cd50d89c5e46d7cf6d6f62485d603193dfdcb2db24954ce9d08dff",
+    "bytes": 4208
+  },
+  "B.stdout.log": {
+    "sha256": "49080a483822eec80b5fd623168095267bdc9fd09115c9465de352ece25aa399",
+    "bytes": 4248
+  },
+  "dispatch.json": {
+    "sha256": "8c04f394de4af26455c22450ec53548011faa368f092aedcda90b48e2a70f584",
+    "bytes": 1457
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "implementation_checks_passed": true,
+  "real_no_update_passed": true,
+  "formal_training_started": false,
+  "optimizer_steps": 0,
+  "ready_for_formal_training": false,
+  "reason": "Observed empty-response high process score under the approved terminal-step adapter; reward protocol decision needed before training. No optimizer/resume lifecycle tested.",
+  "actor": "Qwen2.5-Math-1.5B",
+  "prm": "Qwen2.5-Math-PRM-7B",
+  "gpu": "A100-SXM4-80GB",
+  "official_commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "historical_replay_exact_original_token_ids_available": false,
+  "measured": {
+    "passed": true,
+    "standalone_P_VR_without_PRM_verified": true,
+    "separator_position_corrections": 67,
+    "actual_generation_reused": true,
+    "real_rows": 32,
+    "real_tokens": 26557,
+    "real_steps": 446,
+    "terminated": 27,
+    "truncated": 5,
+    "original_parameter_hashes_unchanged": true,
+    "optimizer_steps": 0,
+    "checks": {
+      "P_VR": {
+        "max_advantage_error": 1.1920928955078125e-07,
+        "mean": -7.559602721585179e-08,
+        "unbiased_std": 0.9999999403953552,
+        "task_reward_sum": 15.0,
+        "gradient_norm": 0.047847493399450144,
+        "whitening_calls": 1,
+        "loss_rows": 32
+      },
+      "P_PRM": {
+        "max_advantage_error": 2.980232238769531e-07,
+        "mean": 4.740182024676187e-09,
+        "unbiased_std": 0.9999998807907104,
+        "task_reward_sum": -4.066583156585693,
+        "gradient_norm": 0.05595469012311761,
+        "whitening_calls": 1,
+        "loss_rows": 32
+      }
+    },
+    "measured_peak_own_process_GiB": 46.708984375,
+    "measured_peak_torch_allocated_GiB": 43.22085094451904,
+    "measured_peak_device_total_GiB": 53.27099609375,
+    "empty_response_positive_probability": [
+      0.99991774559021
+    ],
+    "edge_forward_probabilities": [
+      [
+        0.99991774559021
+      ],
+      [
+        0.99991774559021
+      ],
+      [
+        0.9594592452049255,
+        0.9921841025352478
+      ],
+      [
+        0.7256486415863037
+      ]
+    ],
+    "run_result_sha256": "b06c240b749f06e71e76a8047e9499be7d268569e4a132a0c07c05dbbdc6a161",
+    "real_signal_file_sha256": "d6368fdf0b7ee8a5ac882f6059e3b6017e5ec202dc34e26d67fba37248de661f"
+  },
+  "source_note": "Final GPU run used final_gpu_tested_source.tar, reused the exact generated IDs from attempt 2, and retested separator-token positions plus standalone P-VR interface.",
+  "preservation": {
+    "local_files": 7,
+    "remote_hashed": 598,
+    "remote_inventory": 710
+  }
+}

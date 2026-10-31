@@ -1,0 +1,10 @@
+{
+  "type": "counterfactual arithmetic on saved scores, not PRM training or RL results",
+  "source_row": 2095,
+  "original_advantage": 2.440088787259933,
+  "scores_times_0_1_advantage": 2.4075889226928373,
+  "without_std_centered_reward": 0.16268552904948594,
+  "single_step_failure_loss": 3.8697153368091173,
+  "single_step_failure_derivative_wrt_correctness_logit": 0.9791356921195984,
+  "running_training_modified": false
+}

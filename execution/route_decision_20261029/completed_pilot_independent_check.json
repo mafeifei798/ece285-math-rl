@@ -1,0 +1,319 @@
+{
+  "created_utc": "2026-10-29T22:40:42.559964+00:00",
+  "read_only_remote": true,
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "arms": {
+    "initial": {
+      "n": 500,
+      "correct": 261.0,
+      "accuracy": 0.522,
+      "predictions_sha256": "5140d13d584f79955e2daef318763423e3b7204be459eb8ead5e642050806343",
+      "summary_matches_saved_labels": true,
+      "validation_contract": {
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "validation_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+        "seed": 285,
+        "temperature": 0.0,
+        "cap": 2048,
+        "prompt": "unchanged data/prepared/validation.jsonl prompt",
+        "verifier": "reward_repair_v3_20261021",
+        "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+        "vllm_cache_fraction": 0.15,
+        "batch_size": 32
+      }
+    },
+    "A": {
+      "n": 500,
+      "correct": 252.0,
+      "accuracy": 0.504,
+      "predictions_sha256": "7da7dca097eef3a656526909555b0bd77300160aa6890a1db5decec879d29a42",
+      "summary_matches_saved_labels": true,
+      "validation_contract": {
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "validation_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+        "seed": 285,
+        "temperature": 0.0,
+        "cap": 2048,
+        "prompt": "unchanged data/prepared/validation.jsonl prompt",
+        "verifier": "reward_repair_v3_20261021",
+        "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+        "vllm_cache_fraction": 0.15,
+        "batch_size": 32
+      },
+      "rollout_count": 1536,
+      "unique_training_questions": 192,
+      "responses_per_question_histogram": {
+        "8": 192
+      },
+      "training": {
+        "passed": true,
+        "arm": "A",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1005003,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 641,
+          "truncated_completions": 90,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 152,
+            "all_wrong": 33,
+            "all_correct": 7
+          },
+          "status_counts": {
+            "truncated": 90,
+            "symbolic": 643,
+            "exact": 593,
+            "missing_or_invalid_box": 191,
+            "unparseable": 19
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 1018.2059230804443,
+          "positive_advantage_rows": 585,
+          "empty_rows": 1,
+          "short_wrong_rows": 18
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 5003,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 4414.32337641716,
+        "metrics": {
+          "train_runtime": 4378.3608,
+          "train_samples_per_second": 146.173,
+          "train_steps_per_second": 4.568,
+          "total_flos": 0.0,
+          "train_loss": 1.030435274174124e-05
+        }
+      }
+    },
+    "C_mix": {
+      "n": 500,
+      "correct": 259.0,
+      "accuracy": 0.518,
+      "predictions_sha256": "c2c7007f753bfb110cd55032a1e3351126b162f851b1438b2cbda87d8a3c4b8b",
+      "summary_matches_saved_labels": true,
+      "validation_contract": {
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "validation_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+        "seed": 285,
+        "temperature": 0.0,
+        "cap": 2048,
+        "prompt": "unchanged data/prepared/validation.jsonl prompt",
+        "verifier": "reward_repair_v3_20261021",
+        "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+        "vllm_cache_fraction": 0.15,
+        "batch_size": 32
+      },
+      "rollout_count": 1536,
+      "unique_training_questions": 192,
+      "responses_per_question_histogram": {
+        "8": 192
+      },
+      "training": {
+        "passed": true,
+        "arm": "C_mix",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1001853,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 637,
+          "truncated_completions": 81,
+          "prm_input_tokens": 883527,
+          "prm_padded_tokens": 883527,
+          "prm_scored_completions": 1232,
+          "prm_forward_seconds": 184.16543034510687,
+          "outcome_group_counts": {
+            "mixed": 158,
+            "all_wrong": 31,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 81,
+            "symbolic": 652,
+            "exact": 580,
+            "missing_or_invalid_box": 206,
+            "unparseable": 17
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 82,
+          "process_nonzero_rows": 1536,
+          "process_abs_sum": 257.18624782562256,
+          "outcome_abs_sum": 1059.5601687431335,
+          "positive_advantage_rows": 711,
+          "empty_rows": 2,
+          "short_wrong_rows": 20
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 1853,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 1946.477795600891,
+        "metrics": {
+          "train_runtime": 1869.1152,
+          "train_samples_per_second": 342.408,
+          "train_steps_per_second": 10.7,
+          "total_flos": 0.0,
+          "train_loss": 1.0662081573779384e-05
+        }
+      }
+    },
+    "C_bounded": {
+      "n": 500,
+      "correct": 265.0,
+      "accuracy": 0.53,
+      "predictions_sha256": "91a2dea1217bf24c5045520d4a12a4af34b41680cb5950a056f1aa769aa03a1d",
+      "summary_matches_saved_labels": true,
+      "validation_contract": {
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "validation_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+        "seed": 285,
+        "temperature": 0.0,
+        "cap": 2048,
+        "prompt": "unchanged data/prepared/validation.jsonl prompt",
+        "verifier": "reward_repair_v3_20261021",
+        "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+        "vllm_cache_fraction": 0.15,
+        "batch_size": 32
+      },
+      "rollout_count": 1536,
+      "unique_training_questions": 192,
+      "responses_per_question_histogram": {
+        "8": 192
+      },
+      "training": {
+        "passed": true,
+        "arm": "C_bounded",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1009017,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 633,
+          "truncated_completions": 99,
+          "prm_input_tokens": 880996,
+          "prm_padded_tokens": 880996,
+          "prm_scored_completions": 1252,
+          "prm_forward_seconds": 196.80329023580998,
+          "outcome_group_counts": {
+            "mixed": 153,
+            "all_wrong": 36,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 99,
+            "symbolic": 663,
+            "exact": 589,
+            "missing_or_invalid_box": 173,
+            "unparseable": 12
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 614,
+          "process_abs_sum": 25.888538628816605,
+          "outcome_abs_sum": 1007.1336522102356,
+          "positive_advantage_rows": 627,
+          "empty_rows": 0,
+          "short_wrong_rows": 19
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 9017,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 2325.8090081214905,
+        "metrics": {
+          "train_runtime": 2249.5209,
+          "train_samples_per_second": 284.505,
+          "train_steps_per_second": 8.891,
+          "total_flos": 0.0,
+          "train_loss": 9.940945915332122e-06
+        }
+      }
+    }
+  },
+  "paired": {
+    "C_bounded minus A": {
+      "delta_pp": 2.6,
+      "wins": 29,
+      "losses": 16,
+      "paired_question_bootstrap95_pp": [
+        0.0,
+        5.2
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029
+    },
+    "C_bounded minus C_mix": {
+      "delta_pp": 1.2,
+      "wins": 25,
+      "losses": 19,
+      "paired_question_bootstrap95_pp": [
+        -1.4000000000000001,
+        3.8
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029
+    },
+    "C_bounded minus initial": {
+      "delta_pp": 0.8,
+      "wins": 22,
+      "losses": 18,
+      "paired_question_bootstrap95_pp": [
+        -1.6,
+        3.4000000000000004
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029
+    },
+    "C_mix minus A": {
+      "delta_pp": 1.4000000000000001,
+      "wins": 23,
+      "losses": 16,
+      "paired_question_bootstrap95_pp": [
+        -1.0,
+        3.8
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029
+    },
+    "A minus initial": {
+      "delta_pp": -1.7999999999999998,
+      "wins": 19,
+      "losses": 28,
+      "paired_question_bootstrap95_pp": [
+        -4.3999999999999995,
+        0.8
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029
+    }
+  },
+  "all_four_generation_contracts_equal_except_arm_and_adapter": true,
+  "verifier_rerun": false,
+  "limitation": "Recounts saved binary labels and checks hashes/contracts. Does not rejudge mathematical correctness or include training-seed uncertainty.",
+  "passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "pid": 2398979,
+  "started_unix": 1792607120.747107,
+  "source_hashes": {
+    "preflight_model.py": "71a934399cf13a5c3db435974bac7adf064471a0377c6ede2bc9521b5cac5cff",
+    "pilot_common.py": "19fa41e9645b28f7ce685f6bab8a3c7a940db866540d22a5cdc6f85ccdf95c76",
+    "run_pilot.py": "62fb3dad46c102e282f04c7ae47e9d66272b51e62d334dee8be01f50db6e81e2",
+    "check.py": "eb6bf6e7439599a8df9561e737902c68fe1f016faf552a5457bb7fb7a09664a1",
+    "prepare.py": "d867b5d6dd9ac01c8463a0f975e0599afa8d86c81e8bf7b52b9c6b64416ff6c6",
+    "adapt.py": "a2662389e2364c86a80449a86da00c0e05dada1c888d3f4737597561e483ae7f",
+    "config.json": "3c39affff22dc243dc79dc6186b69172cf7dba6f9b6724a8ead627d8e61c3144"
+  },
+  "scope": "Authorized bounded GPU PRM pilot after B independently failed; no actor updates, no C/D RL, no formal replication-gate decision",
+  "status": "completed",
+  "updated_unix": 1792607576.1114824,
+  "child_pid": null,
+  "summary": "/srv/research/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/artifacts/summary.json",
+  "C_D_RL_started": false
+}

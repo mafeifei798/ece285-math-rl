@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "same_data_budget_loss_and_optimizer": true,
+  "differences": {
+    "pilot_deviations": [
+      [
+        "16 initial-policy training questions x 4 instead of formal 512 x 4",
+        "128 labeled anchors instead of formal 2048; class balanced",
+        "CPU FP32 instead of GPU BF16; rescore original B in the same FP32 backend",
+        "Frozen B-6M groups for exploratory advantage replay instead of formal 64 x 8 initial-policy validation probe",
+        "Stratified ProcessBench subset for bounded diagnostics, not the official full benchmark",
+        "A/B outcomes were observed before pilot; diagnostic error cases were already inspected"
+      ],
+      [
+        "16 initial-policy training questions x 4 instead of formal 512 x 4",
+        "128 labeled anchors instead of formal 2048; class balanced",
+        "GPU FP32 instead of formal BF16; rescore original B with the same FP32 backend",
+        "Frozen B-6M groups for exploratory advantage replay instead of formal 64 x 8 initial-policy validation probe",
+        "Stratified ProcessBench subset for bounded diagnostics, not the official full benchmark",
+        "A/B outcomes were observed before pilot; diagnostic error cases were already inspected"
+      ]
+    ],
+    "tf32": [
+      null,
+      false
+    ],
+    "scope": [
+      "Authorized bounded CPU-only PRM pilot; no actor updates, no C/D RL, no formal replication-gate decision",
+      "Authorized bounded GPU PRM pilot after B independently failed; no actor updates, no C/D RL, no formal replication-gate decision"
+    ],
+    "device": [
+      "cpu",
+      "cuda:0"
+    ],
+    "migration_reason": [
+      null,
+      "CPU pilot superseded before buffer completion or C/D adaptation, because B independently failed a pre-existing numerical assertion and GPU0 became idle. Same selected data, loss, seed, budget; FP32 retained."
+    ]
+  }
+}

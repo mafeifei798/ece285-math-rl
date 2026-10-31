@@ -1,0 +1,56 @@
+https://github.com/SchumiDing/srpocode/blob/662bbc6c2815900ca96e39106f31e8988f2d961a/verl2/verl/workers/reward_manager/naive4.py
+Upstream blob: d958f4e85ca29a5e8fb259bd3a5811d8357166b4
+EXCERPT ONLY
+393:         # 第二步：样本内归一化（segment_norms）
+394:         segment_norms = [info['segment_rewards'] for info in per_sample_info]
+395:         print("segment_norms[0]", segment_norms[0], flush=True)
+396: 
+397:         zscores = []
+398:         for j in range(0, len(segment_norms), repeat_times):
+399:             meanV = 0.5
+400:             num = 0
+401:             data = []
+402:             for i in range(j, j+repeat_times):
+403:                 maskedLength = torch.sum(response_mask[i])
+404:                 data.extend(segment_norms[i][:maskedLength-1].tolist())
+405:                 num += maskedLength-1
+406:             meanV = torch.mean(torch.tensor(data))
+407:             stdV = torch.std(torch.tensor(data))
+408:             for i in range(j, j+repeat_times):
+409:                 maskedLength = torch.sum(response_mask[i])
+410:                 zscores.append((segment_norms[i][:maskedLength-1] - meanV)/stdV)
+411:             
+412:         for i, row in enumerate(segment_norms):
+413:             T = per_sample_info[i]['T']
+414:             maskedLength = torch.sum(response_mask[i])
+415:             row[:maskedLength-1] = zscores[i]
+416:         # for i, row in enumerate(segment_norms):
+417:         #     print(row.shape, flush=True)
+418:         segment_norms = torch.stack(segment_norms)
+419:         # print(f"length: {len(per_sample_info)}")
+420:         rollout_raw_reward = [info['seq_reward'] for i, info in enumerate(per_sample_info)]
+421:         rewards_tensor = [info['segment_rewards'] for info in per_sample_info]
+422:         rewards_tensor = torch.stack(rewards_tensor)
+423:         # # 第三步：rollout-level 归一化 -> beta
+424:         for i in range(len(rollout_raw_reward)//repeat_times):
+425:             # print(f"i: {i}")
+426:             rollout_reward = rollout_raw_reward[(i)*repeat_times:(i+1)*repeat_times]
+427:             mean = float(sum(rollout_reward) / len(rollout_reward))
+428:             # std = float(torch.std(torch.tensor(rollout_reward
+429:             #                                    , dtype=torch.float32)))
+430:             # if std != 0:
+431:             #     tz_scores = (torch.tensor(rollout_reward) - mean) / std
+432:             # else:
+433:             #     tz_scores = torch.zeros(len(rollout_reward))
+434:             tz_scores = torch.tensor(rollout_reward)
+435:             tz_scores = tz_scores - mean
+436:             for j in range(i*repeat_times, (i+1)*repeat_times):
+437:                 # if std == 0:
+438:                 #     per_sample_info[j]['beta'] = 0
+439:                 # else:
+440:                     per_sample_info[j]['beta'] = tz_scores.tolist()[j-i*repeat_times]
+441:         # 第四步：构建 final advantages 并广播到时间步
+442:         for idx, info in enumerate(per_sample_info):
+443:             seg_norms = segment_norms[idx]
+444:             beta = info['beta']
+445:             per_timestep_adv = seg_norms + beta

@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-23T07:33:13.195147+00:00",
+  "files": {
+    "scoring_single/scored.jsonl": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5",
+    "scoring_single/result.json": "c5d618afda5433b24c4b246372b5ede7acdcc3f34558ca6ada59f410b5768ad0",
+    "qwen_single/scored.jsonl": "3681d0cdf0d017d877339eaeb6481421bf4faa23b4b09570afba49f99d811d72",
+    "qwen_single/result.json": "a499ac215b3d72abefc031a0a5d648ce2946cc83aa4e60be1ae080ab37b66e16"
+  },
+  "processes": "    PID     ELAPSED S COMMAND\n",
+  "pure_release_sha256": "bb702b408216dd3cab3e655d82b1b68a901641ca4d2e84a94c5df6b5b58af84a",
+  "training_started": false,
+  "original_controller_status": {
+    "status": "failed",
+    "pid": 3537458,
+    "error": "RuntimeError('Frozen scoring exited 1; inspect saved evidence')",
+    "training": false
+  },
+  "single_status": {
+    "status": "completed",
+    "pid": 3597588,
+    "optimizer_steps": 0,
+    "new_generations": 0
+  },
+  "qwen_status": {
+    "status": "completed",
+    "pid": 3673617,
+    "optimizer_steps": 0,
+    "new_generations": 0
+  }
+}

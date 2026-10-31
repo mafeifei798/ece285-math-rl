@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "pid": 1113327,
+  "started_unix": 1793256431.9981468,
+  "source_release_sha256": "b35e38b2addc45b36703812b47bc1595b9a36a34a68801baa2d318c82893cc8e",
+  "completed_stages": [
+    "score_B",
+    "score_C",
+    "score_D",
+    "analyze"
+  ],
+  "active_child": null,
+  "policy_optimizer_updates": 0,
+  "PRM_optimizer_updates": 0,
+  "source_sha256": "7769106b5059a89eeb5b08e5a825ca2dfc2449434f11894b176c36529994d93d",
+  "original_controller_unchanged": true,
+  "stage_started_unix": 1793256992.1100545,
+  "finished_unix": 1793256996.7436967,
+  "preservation": {
+    "files_checked": 89,
+    "unchanged": true,
+    "manifest_sha256": "e120f2641344df3aacf12fd953a9851a91b080321b6ae239ffad5a6350ea2890"
+  },
+  "summary_sha256": "eda2d3082c9fba2b56fccd45b3e62a77f85567f96a11ec164104dc7386db749f",
+  "scores": {
+    "B": {
+      "arm": "B",
+      "sha256": "639f61e50e73204dc490d7351d25016d4fc2e61332ebc6e559ccbe6d63042dfa",
+      "rows": 728,
+      "input_tokens_this_invocation": 462750,
+      "elapsed_seconds_this_invocation": 135.63740515708923,
+      "peak_allocated_GiB": 13.624773025512695,
+      "native_scoring": true,
+      "normalize_crlf": true,
+      "actor_updates": 0,
+      "adapter_sha256": null
+    },
+    "C": {
+      "arm": "C",
+      "sha256": "b75a7c173c0ea7f492dec832730973d6da7cda64be1d4c77245d3d7ca369c02e",
+      "rows": 728,
+      "input_tokens_this_invocation": 462750,
+      "elapsed_seconds_this_invocation": 193.60856890678406,
+      "peak_allocated_GiB": 13.993298530578613,
+      "native_scoring": true,
+      "normalize_crlf": true,
+      "actor_updates": 0,
+      "adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356"
+    },
+    "D": {
+      "arm": "D",
+      "sha256": "ed6f787516c7ff62617255cd2b345c8ffe5b3bb9fc61b696c8a0b71040698c3d",
+      "rows": 728,
+      "input_tokens_this_invocation": 462750,
+      "elapsed_seconds_this_invocation": 194.20793104171753,
+      "peak_allocated_GiB": 13.993298530578613,
+      "native_scoring": true,
+      "normalize_crlf": true,
+      "actor_updates": 0,
+      "adapter_sha256": "ab3a1856c576779a9955854d697ecf754381032de933bfad39b47775d7a9a4ab"
+    }
+  }
+}

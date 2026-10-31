@@ -1,0 +1,62 @@
+{
+  "starting": {
+    "own_process_bytes": 0,
+    "device_used_bytes": 7027490816,
+    "samples": 5
+  },
+  "actor_and_vllm_load": {
+    "own_process_bytes": 29079109632,
+    "device_used_bytes": 36122918912,
+    "samples": 50
+  },
+  "prm_load": {
+    "own_process_bytes": 43421532160,
+    "device_used_bytes": 50408718336,
+    "samples": 15
+  },
+  "parameter_hash_before": {
+    "own_process_bytes": 43421532160,
+    "device_used_bytes": 50467438592,
+    "samples": 55
+  },
+  "reuse_saved_generation": {
+    "own_process_bytes": 43421532160,
+    "device_used_bytes": 50446467072,
+    "samples": 1
+  },
+  "native_prm_scoring": {
+    "own_process_bytes": 44247810048,
+    "device_used_bytes": 51293716480,
+    "samples": 16
+  },
+  "native_edge_forwards": {
+    "own_process_bytes": 44247810048,
+    "device_used_bytes": 51293716480,
+    "samples": 1
+  },
+  "old_and_reference_logps": {
+    "own_process_bytes": 48790241280,
+    "device_used_bytes": 55836147712,
+    "samples": 12
+  },
+  "signals": {
+    "own_process_bytes": 48792338432,
+    "device_used_bytes": 55836147712,
+    "samples": 3
+  },
+  "P_VR_backward": {
+    "own_process_bytes": 50153390080,
+    "device_used_bytes": 57195102208,
+    "samples": 28
+  },
+  "P_PRM_backward": {
+    "own_process_bytes": 50153390080,
+    "device_used_bytes": 57199296512,
+    "samples": 32
+  },
+  "parameter_hash_after": {
+    "own_process_bytes": 50153390080,
+    "device_used_bytes": 57199296512,
+    "samples": 56
+  }
+}

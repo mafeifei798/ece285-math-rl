@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>PURE 官方空回答处理：源码与离线回放</title>
+<style>body{font-family:system-ui,-apple-system,sans-serif;background:#f5f7fb;color:#1b2940;margin:0;line-height:1.7}
+main{max-width:1060px;margin:auto;padding:36px 25px 60px}h1{font-size:28px;line-height:1.4}h2{font-size:21px;margin-top:30px}
+.card{background:#fff;border:1px solid #dce3ef;border-radius:13px;padding:19px 23px;margin:19px 0}.lead{border-left:5px solid #2868bd}
+.muted{color:#5f6d80}table{border-collapse:collapse;width:100%;font-size:14px;background:white}td,th{padding:11px;border-bottom:1px solid #dce3ef;text-align:left;vertical-align:top}th{background:#e9eff8}
+.scroll{overflow-x:auto}code,pre{background:#edf2f8;border-radius:5px}code{padding:2px 5px}pre{white-space:pre-wrap;padding:14px;font-size:13px}a{color:#1659ac}li{margin:7px 0}
+.tag{display:inline-block;border-radius:20px;padding:3px 12px;background:#e5effa;font-size:13px;margin-right:7px}</style>
+<main><span class="tag">固定源码审计</span><span class="tag">CPU 离线验证</span><span class="tag">0 次训练更新</span>
+<h1>PURE 官方如何处理空回答，哪些修法有依据？</h1>
+<div class="card lead"><b>明确结论：</b>官方两个分支存在实质差异。OpenRLHF 默认把步骤边界和回答末端的 advantage 置零，并在归一化后保持为零；此前参照的 veRL 没有这一步。我们已在固定回答上验证：它消除了 8 条 EOS-only 空回答的直接策略梯度信号，但没有把错误 PRM 分数修正成正确分数。</div>
+<p>建议采用<b>同一固定 OpenRLHF 信号实现的 P-VR / P-PRM 成对基线</b>，不要仅拼接 mask 后称作 veRL 的 bug fix。这里已完成的是独立信号模块与离线回放；尚未接入或启动新训练。</p>
+<h2>1. 为什么论文有提升，又有空回答高分？</h2>
+<div class="card"><p>论文 §5.1 Case 3 明确讨论了空回答和无关短句：因果 PRM 在给当前步骤打分时，不知道后面不会再解题。作者采用少量结果奖励辅助来缓解这一问题；纯 PRM 仍会投机。§4.2 报告的是训练期间保存的最佳 checkpoint，而不是保证最终模型不退化。<a href="https://arxiv.org/html/2504.15275v3#S5.SS1">Case 3</a> · <a href="https://arxiv.org/html/2504.15275v3#S4.SS2">实验与选点协议</a></p>
+<p>早期 OpenRLHF README 也写明：纯 PRM 模型在发生投机前表现良好，并以 step 100 的保存模型为例。因此阶段性有效与后续失败可以同时成立。<a href="https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/README.md#L96-L102">官方训练说明</a></p>
+<p class="muted">论文 v3 的实验使用 veRL；OpenRLHF 是官方另一实现分支。采用它不能称为 v3 表格结果的精确复现。PURE-PRM+VR 的约 10% GT 辅助属于混合奖励，本轮没有加入 P-PRM。</p></div>
+<h2>2. 两个官方分支真正差在哪</h2>
+<div class="scroll"><table><tr><th>环节</th><th>此前固定的 veRL</th><th>固定 OpenRLHF</th></tr>
+<tr><td>源码</td><td><code>b174e508</code></td><td><code>41f9363b</code></td></tr>
+<tr><td>EOS / 步骤边界</td><td>保留在正常策略梯度中</td><td>默认边界 advantage 置 0，归一化后保持 0</td></tr>
+<tr><td>PRM baseline</td><td>其他回答的 token return 求和，除以固定响应宽度</td><td>其他回答总过程奖励 / 其他回答实际 token 数，按本步骤 token 数扣除</td></tr>
+<tr><td>纯 VR baseline</td><td>也进入上述 token return 公式</td><td>序列级 leave-one-out；代码的 solved−1 常数平移在 LOO 中抵消</td></tr>
+<tr><td>PRM 系数</td><td>0.5</td><td>1；使用该分支原实现，不额外调系数</td></tr>
+<tr><td>归一化</td><td>一次全批次 masked whitening</td><td>一次官方 replay-buffer normalize，保留原本为零的优势</td></tr>
+<tr><td>最低生成长度</td><td>所核对配方未设置 min_tokens</td><td>默认 min_new_tokens / min_tokens=1；不保证语义非空</td></tr></table></div>
+<p>源码：<a href="https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L245-L250">边界屏蔽</a> · <a href="https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L699-L726">分模式 baseline</a> · <a href="https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/replay_buffer.py#L213-L254">归一化</a> · <a href="https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L1024">最低生成长度</a></p>
+<h2>3. 现有 rollout 的实际验证结果</h2>
+<p>沿用之前的 288 条评分记录；保持整批排除 <code>B:210</code> 的规则（其中一条重构长度超过 2048），对其余 8 个完整批次、256 条回答回放，含 8 条空回答。所有原文、验答结果、问题分组和边界重构固定。</p>
+<div class="scroll"><table><tr><th>完整 OpenRLHF 信号链</th><th>屏蔽前空回答优势为正</th><th>进入 loss 前优势为正</th><th>进入 loss 前精确为 0</th></tr><tr><td>P-VR：结果奖励</td><td>0/8</td><td>0/8</td><td>8/8</td></tr><tr><td>P-PRM：PURE 原生题目输入</td><td>8/8</td><td>0/8</td><td>8/8</td></tr><tr><td>P-PRM：PURE 官方 RL 提示词输入</td><td>8/8</td><td>0/8</td><td>8/8</td></tr></table></div>
+<p>上表使用官方函数原样抽取执行；独立 float64 检查最大归一化误差 <code>4.88e-07</code>。全部 2,627 个边界位置的最终优势为 0；包括正常回答的末端，不能把所有末端都称为真实 EOS，截断回答的最后有效 token 也在其中。</p>
+<div class="card"><b>这证明了什么：</b>在这批重构 EOS-only 回答上，<code>advantage=0</code>，因此该 action 的直接 PPO 策略梯度项为 0。额外的 ratio=1 合成 log-prob 求导检查也通过；不是对模型权重做训练。<br><b>没有证明什么：</b>PRM 高分与奖励排序仍在；空回答仍进入同题其他回答的 baseline；“谢谢”等非空无关文本仍可得到正优势。共享参数更新也仍可能改变 EOS 概率。</div>
+<p>完整结果：<a href="openrlhf_signal_reference_summary.json">汇总</a> · <a href="openrlhf_signal_reference_rows.jsonl">逐回答</a> · <a href="openrlhf_signal_reference_receipts.json">源码调用与 oracle 收据</a> · <a href="independent_full_reference_review.json">独立全链复核</a>。逐回答文件中的 <code>task_reward_sum</code> 仅记录过程奖励之和，VR 臂该字段为 0，不代表其结果奖励为 0。</p>
+<h2>4. 为什么不把“只加 mask”直接叫修复完成</h2>
+<p>单独移植 OpenRLHF 的 mask+normalize 到 veRL 原始优势，也把 Qwen / PURE 三种 PRM 配置的 8/8 正空回答优势降为 0。但它同时把 P-VR 对空 EOS 的负信号清零。在 P-VR 的 143,705 个正文 token 中，50,404 个原始零优势从 veRL 归一化后的负值回到 0，<b>没有发生正负方向翻转</b>。这说明两种归一化并非可互换的“实现细节”。</p>
+<p>该移植保留为机制诊断；推荐方案使用完整同源 OpenRLHF 信号链。<a href="boundary_replay.json">窄移植结果</a> · <a href="independent_boundary_review.json">独立复核</a></p>
+<h2>5. 具体方案与公平控制</h2>
+<ol><li><b>P-VR 与 P-PRM 一起采用固定 OpenRLHF 实现。</b>P-VR 用现有验答结果，P-PRM 只用冻结 PURE PRM；共享边界、归一化和 sampler 约定。</li>
+<li><b>不添加空回答负奖励或长度奖励。</b>不依据答案正确与否筛掉 P-PRM 的回答，不把少量 GT 辅助偷偷放进纯 PRM 臂。</li>
+<li><b>后续真实模型联调保存 emitted token IDs。</b>按官方步骤定位逐一核对；两臂共同检查最低生成长度 1、边界和 loss 的一次归一化。当前旧日志重构不构成这项验收。</li>
+<li><b>控制实验条件。</b>同一初始 1.5B policy、训练题目、seed、rollout token 预算、LoRA、评测提示词与验答器；单卡小 batch 明示为资源适配。原 A/B 与旧 veRL 对照全部保留，不把新结果覆盖到旧实验名下。</li>
+<li><b>保留剩余风险。</b>全零优势批次目前在离线适配器中明确报错；尚未安装自动跳过或替代归一化规则。正式训练需要先完成完整 runtime 联调，不能由这次 CPU 结果推断准确率会提高。</li></ol>
+<p>实施协议：<a href="../../experiments/pure_official_fix_audit_20261023/protocol.json">protocol.json</a>。本轮未启动正式训练、模型 forward 或新生成。</p>
+<h2>6. 可复现文件与保存检查</h2>
+<p>源码：<a href="../../experiments/pure_official_fix_audit_20261023/openrlhf_signal_reference.py">完整同源信号回放</a> · <a href="../../experiments/pure_official_fix_audit_20261023/boundary_adapter.py">边界与归一化适配器</a> · <a href="../../experiments/pure_official_fix_audit_20261023/replay_boundary.py">窄移植诊断</a></p>
+<p>已核对 163 个旧 PURE 代码/证据文件和 7 个已登记原 A/B 关键文件，hash 全部保持不变。<a href="preservation.json">保存凭据</a></p>
+<p class="muted">数据围绕空回答所在批次选取，不代表完整数据分布；没有新人工过程标签。KL 在离线回放中设为 0（旧日志缺少 old/ref log-prob），并非正式训练的 KL 配置变更。本轮不把空回答机制归因为旧 B 准确率下降：旧 B 对空回答跳过 PRM、给零分。</p>
+</main></html>

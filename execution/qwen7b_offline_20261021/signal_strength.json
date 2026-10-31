@@ -1,0 +1,140 @@
+{
+  "h4_raw": {
+    "mixed": {
+      "groups": 895,
+      "mean_abs_advantage": 0.8145105171561704,
+      "RMS_advantage": 0.9352102725011124,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_correct": {
+      "groups": 32,
+      "mean_abs_advantage": 0.7450045101722935,
+      "RMS_advantage": 0.930978601775185,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_wrong": {
+      "groups": 212,
+      "mean_abs_advantage": 0.7271157060367112,
+      "RMS_advantage": 0.9263058044790395,
+      "groups_with_max_abs_advantage_below_0p01": 1,
+      "groups_with_max_abs_advantage_below_0p1": 1
+    }
+  },
+  "qwen7b_raw": {
+    "mixed": {
+      "groups": 895,
+      "mean_abs_advantage": 0.8136984891183389,
+      "RMS_advantage": 0.9352265824752863,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_correct": {
+      "groups": 32,
+      "mean_abs_advantage": 0.7798670709034923,
+      "RMS_advantage": 0.9329351784832418,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_wrong": {
+      "groups": 212,
+      "mean_abs_advantage": 0.7337333624641618,
+      "RMS_advantage": 0.9228226309804829,
+      "groups_with_max_abs_advantage_below_0p01": 1,
+      "groups_with_max_abs_advantage_below_0p1": 1
+    }
+  },
+  "h4_repaired": {
+    "mixed": {
+      "groups": 896,
+      "mean_abs_advantage": 0.81493183378013,
+      "RMS_advantage": 0.9352103674488155,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_correct": {
+      "groups": 32,
+      "mean_abs_advantage": 0.7457411574505386,
+      "RMS_advantage": 0.930930330441361,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_wrong": {
+      "groups": 211,
+      "mean_abs_advantage": 0.7283808908716861,
+      "RMS_advantage": 0.9262508337279995,
+      "groups_with_max_abs_advantage_below_0p01": 1,
+      "groups_with_max_abs_advantage_below_0p1": 1
+    }
+  },
+  "qwen7b_repaired": {
+    "mixed": {
+      "groups": 896,
+      "mean_abs_advantage": 0.8141779732068893,
+      "RMS_advantage": 0.9352265332414295,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_correct": {
+      "groups": 32,
+      "mean_abs_advantage": 0.7740240103357792,
+      "RMS_advantage": 0.9331905504001684,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_wrong": {
+      "groups": 211,
+      "mean_abs_advantage": 0.7330786715020532,
+      "RMS_advantage": 0.9227608492453514,
+      "groups_with_max_abs_advantage_below_0p01": 1,
+      "groups_with_max_abs_advantage_below_0p1": 1
+    }
+  },
+  "outcome_only_raw": {
+    "mixed": {
+      "groups": 895,
+      "mean_abs_advantage": 0.8171917462856743,
+      "RMS_advantage": 0.9352092424061463,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_correct": {
+      "groups": 32,
+      "mean_abs_advantage": 0.0,
+      "RMS_advantage": 0.0,
+      "groups_with_max_abs_advantage_below_0p01": 32,
+      "groups_with_max_abs_advantage_below_0p1": 32
+    },
+    "all_wrong": {
+      "groups": 212,
+      "mean_abs_advantage": 0.0,
+      "RMS_advantage": 0.0,
+      "groups_with_max_abs_advantage_below_0p01": 212,
+      "groups_with_max_abs_advantage_below_0p1": 212
+    }
+  },
+  "outcome_only_repaired": {
+    "mixed": {
+      "groups": 896,
+      "mean_abs_advantage": 0.8176106490843397,
+      "RMS_advantage": 0.9352093631382048,
+      "groups_with_max_abs_advantage_below_0p01": 0,
+      "groups_with_max_abs_advantage_below_0p1": 0
+    },
+    "all_correct": {
+      "groups": 32,
+      "mean_abs_advantage": 0.0,
+      "RMS_advantage": 0.0,
+      "groups_with_max_abs_advantage_below_0p01": 32,
+      "groups_with_max_abs_advantage_below_0p1": 32
+    },
+    "all_wrong": {
+      "groups": 211,
+      "mean_abs_advantage": 0.0,
+      "RMS_advantage": 0.0,
+      "groups_with_max_abs_advantage_below_0p01": 211,
+      "groups_with_max_abs_advantage_below_0p1": 211
+    }
+  }
+}

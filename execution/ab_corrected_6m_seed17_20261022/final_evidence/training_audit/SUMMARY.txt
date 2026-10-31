@@ -1,0 +1,53 @@
+Completed A/B training audits — actual remote evidence
+Generated locally UTC: 2026-10-22T14:20:20.316946+00:00
+Result: both passed, no failed check and no schema repair required.
+
+Audited script SHA256: 1ffb2ccc15d55e3c18a19fb44371f3bb6f5af2a426465d4dc209816faf14bd97
+Both subprocesses exit0; exclusive new outputs. No training/evaluation/model/source files changed.
+
+Checks passed for each arm:
+- Pinned source and runtime-input hashes
+- Authorized reward/GRPO/data/model configuration
+- All rollout rows: 32 per optimizer update, 8 per same-question group
+- All completion/status/outcome/group counts and token accounting
+- Original reward formula on every saved rollout
+- Stored GRPO advantage, with explicit FP32 rounding tolerance
+- CRLF canonical step counts, raw hashes and valid PRM statuses for B
+- PRM input and padded token totals reconstructed from scoring microbatches
+- First whole optimizer update reaching 6M and bounded overshoot
+- Final checkpoint step, accounting and file hashes
+- Live loss coverage, unchanged-advantage and frozen-PRM receipts
+- Checkpoint and final_adapter logical tensor/config equality
+
+Paired configuration verification: model revision, data manifest, initial adapter, shared training-argument hashes and source release exactly match.
+Full prompt-order hashes differ because the run lengths differ; equality of the common prefix is outside this single-arm audit and belongs to pair-signal analysis.
+
+A: 6,022,435 completion tokens; 284 updates; 9,088 responses; 1,136 groups.
+Budget overshoot 22,435; preceding update total 5,999,678.
+Advantage rows checked 9,088; maximum absolute arithmetic discrepancy 9.05877297619e-08.
+Checkpoint files verified 16; adapter tensors matched 392.
+Source files verified 34; runtime inputs 3.
+PRM inputs 0; padded tokens 0; scored responses 0; scoring elapsed 0.000000s.
+Training callback elapsed 9734.869893s.
+
+B: 6,008,457 completion tokens; 280 updates; 8,960 responses; 1,120 groups.
+Budget overshoot 8,457; preceding update total 5,994,508.
+Advantage rows checked 8,960; maximum absolute arithmetic discrepancy 9.13467769825e-06.
+Checkpoint files verified 16; adapter tensors matched 392.
+Source files verified 34; runtime inputs 3.
+PRM inputs 5,281,779; padded tokens 7,724,200; scored responses 7,304; scoring elapsed 593.345539s.
+Training callback elapsed 7979.461001s.
+
+Limits:
+- This audit is CPU postprocessing only; it does not replay gradients or score responses with a PRM.
+- Token totals are independently summed from saved counts, not retokenized; runtime completion-mask checks provide the separate generation check.
+- Stored outcome labels are checked for consistency, not mathematically rejudged; a separate frozen-verifier evaluation replay is needed.
+- Independent advantage arithmetic uses FP64 over FP32 rewards with an explicit rounding allowance; exact tensor preservation relies on the live loss guards.
+- Source and checkpoint hashes establish linkage to saved receipts, not an external cryptographic trust anchor.
+- PRM scoring elapsed time is receipt-checked, not independently remeasured; it includes encoding, padding, transfer, inference and score extraction.
+- A single arm audit does not establish A/B equality of shared configuration or question order; compare both audit outputs and run configurations.
+- The difference in total training elapsed time is observational; serial runs do not isolate PRM overhead from system load, caching, or generation distributions.
+- No mathematical correctness audit, evaluation-result claim, or causal attribution of the A/B accuracy gap is made here.
+
+Raw reports: A.json, B.json; stdout matches the reports byte-for-byte.
+Dispatch: dispatch.json. SHA256/size of downloaded artifacts: download_manifest.json.

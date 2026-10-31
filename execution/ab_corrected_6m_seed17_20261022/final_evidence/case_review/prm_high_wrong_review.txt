@@ -1,0 +1,99 @@
+PRM高分但outcome=0的10条：针对性数学核对
+
+该样本是刻意按最高最低步骤分挑选，不能计算整体误判率。全部逐步阅读，未使用外部judge/GPU，没有修改源结果，也不生成训练标签。
+
+结论：4条有明确数值错误（937、7852、6426、7181）；4条正文数学正确但boxing/单位/答案对象不合协议（3831、8748、675、5529）；2条为合法答案/等价表示被single-gold拒绝（5033、1318）。仅7181的实际advantage为正，其余9条均负。
+
+row 3831 | math/train/algebra/1209
+What is the distance, in units, between the points $(-3, -4)$ and $(4, -5)$? Express your answer in simplest radical form.
+数学结论：正文推导和最终文字答案正确；boxed提取对象是占位词，不能算PRM漏判数学错误。
+独立核对：坐标差为7与-1，距离=sqrt(49+1)=sqrt(50)=5sqrt(2)。
+最小PRM=0.982557；实际advantage=-0.238125；mixed组，存储结果2/8正确。
+验答层：协议拒绝：提取text{answer}，不是正文最终5sqrt(2)。不宜把所有正文正确但未正确boxing的输出都作为数学真错。
+第1段，PRM=0.982557：开头框住distance和answer占位词，最后一个boxed为text{answer}；最终正确的5sqrt(2)未框住。
+
+row 937 | math/train/prealgebra/747
+What is $4\cdot 6+8\cdot 3-28\div 2$?
+数学结论：明确算术/伪执行输出错误，PRM未给出低分；但实际advantage仍为负。
+独立核对：4*6+8*3-28/2=24+24-14=34；所写Python计算也应打印34.0。
+最小PRM=0.979668；实际advantage=-1.071960；mixed组，存储结果5/8正确。
+验答层：数学错误，与单位或解析无关。
+第1段，PRM=0.982288：开头boxed{36}已与算式值34不符。
+第7段，PRM=0.999718：正确的计算代码后声称output 36.0，并把36作为最终答案；代码实际结果34.0。
+
+row 8748 | math/train/counting_and_probability/578
+The probability it will rain on Saturday is $60\%$, and the probability it will rain on Sunday is $25\%$. If the probability of rain on a given day is independent of the weather on any other day, what is the probability it will rain on both days, expressed as a percent?
+数学结论：独立事件概率与正文15%正确；boxed里保留0.15，未按题意用百分数表达。
+独立核对：(60/100)*(25/100)=3/20=0.15=15%。
+最小PRM=0.979195；实际advantage=-1.402749；mixed组，存储结果6/8正确。
+验答层：请求单位固定为percent_value，boxed 0.15在该输出单位下不等于gold 15。此处没有新的百分号归一化bug证据。
+第1段，PRM=0.979195：boxed{0.15}是正确的无量纲概率，但题目要求以百分数表示；同段后文已经正确写15%，未重新boxing。
+
+row 5033 | math/train/precalculus/663
+Find a unit vector that is orthogonal to both $\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}$ and $\begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix}.$
+数学结论：模型给出合法单位正交向量；与gold反向也同样满足题意。PRM高分有数学依据，outcome 0是单gold语义局限。
+独立核对：v=(2/3,-2/3,-1/3)，v·(1,1,0)=0，v·(1,0,2)=0，||v||²=(4+4+1)/9=1；题目未限定方向。
+最小PRM=0.974821；实际advantage=-0.074823；mixed组，存储结果1/8正确。
+验答层：真正的语义假阴性：单个gold向量的代数相等检查不能覆盖题目的多个合法答案。
+第4段，PRM=0.974821：输出是gold的相反向量；题目只要求a unit vector，两者均合法。
+
+row 7852 | math/train/counting_and_probability/739
+At the Gooddog Obedience School, dogs can learn to do three tricks: sit, stay, and roll over. Of the dogs at the school: \begin{tabular}{l@{\qquad}l}
+50 dogs can sit & 17 dogs can sit and stay \\
+29 dogs can stay & 12 dogs can stay and roll over \\
+34 dogs can roll over & 18 dogs can sit and roll over \\
+9 dogs can do all three & 9 dogs can do none
+\end{tabular} How many dogs are in the school?
+数学结论：容斥公式正确，但代入后的加减算错，PRM漏过明确错误；实际advantage仍为负。
+独立核对：50+29+34-17-12-18+9=75；再加9只不会任何技能的狗，共84。
+最小PRM=0.973037；实际advantage=-0.318761；mixed组，存储结果2/8正确。
+验答层：数学错误，与提取或答案表示无关。
+第8段，PRM=0.973037：把50+29+34-17-12-18+9算成65，实际75。
+第9段，PRM=0.999680：65+9=74本身加法正确，但沿用了错误的65，因此最终总数错。
+
+row 675 | math/train/number_theory/810
+How many distinct positive factors does 32 have?
+数学结论：因数分解、约数个数6和列出的6个因数均正确；框住集合而非题目要求的个数。
+独立核对：32=2^5，约数数目5+1=6；集合{1,2,4,8,16,32}确有6个元素。
+最小PRM=0.969785；实际advantage=-0.968543；mixed组，存储结果5/8正确。
+验答层：协议/答案对象不匹配，不是错误的数学推导。
+第1段，PRM=0.969785：正文两次明确给出个数6，但最终boxed内容为因数集合；集合与数值gold 6不是同一答案对象。
+
+row 6426 | math/train/prealgebra/169
+If $M = 2007 \div 3$, $N = M \div 3$, and $X = M - N$, then what is the value of $X$?
+数学结论：变量关系与代码写对，伪执行输出/最终答案错；PRM漏过，实际advantage仍负。
+独立核对：M=2007/3=669；N=669/3=223；X=M-N=446。
+最小PRM=0.964589；实际advantage=-1.071363；mixed组，存储结果5/8正确。
+验答层：数学错误，提取669与正文最终答案一致。
+第1段，PRM=0.964589：开头boxed{669}是M而非所问X。
+第7段，PRM=0.999812：print(X)后声称669.0；按前面的正确代码实际应是446.0。
+
+row 7181 | math/train/counting_and_probability/310
+Every morning when Tim wakes up, he groggily searches around his sock drawer and picks two socks randomly. If he has 10 gray-bottomed socks and 8 white-bottomed socks in his drawer, what is the probability that he picks a matching pair?
+数学结论：组合计数及精确概率73/153正确；转成百分数时算错，最后boxed 47.77%不正确。本条实际advantage为正。
+独立核对：(C(10,2)+C(8,2))/C(18,2)=(45+28)/153=73/153；乘100=7300/153=47.71241830065…，常规两位小数为47.71%，不是47.77%。
+最小PRM=0.964052；实际advantage=+0.076435；mixed组，存储结果1/8正确。
+验答层：不能仅当成百分数与分数表示等价：输出47.77%本身数值不等于73/153，且不是正确的所示精度近似。
+第1段，PRM=0.964052：开头boxed{?}是占位符，后续有最终boxed，不据此判为数学算错。
+第8段，PRM=0.993807：73/153*100写成约47.77%；实际47.712418…，误差约0.05758个百分点，不能由两位小数的常规四舍五入得到。
+第9段，PRM=0.999983：最终boxed{47.77%}延续错误近似，且题目未要求舍去精确分数。
+
+row 1318 | math/train/algebra/1253
+Find the interval of all $x$ such that both $2x$ and $3x$ are in the interval $(1,2)$.
+数学结论：推导和解集完全正确；双边不等式与gold开区间等价，outcome 0来自表示等价覆盖不足。
+独立核对：1<2x<2给1/2<x<1；1<3x<2给1/3<x<2/3；交集即1/2<x<2/3，等价开区间(1/2,2/3)。
+最小PRM=0.963506；实际advantage=-0.532228；mixed组，存储结果3/8正确。
+验答层：语义等价假阴性：不等式与interval不是字符串/表达式直接相等，但定义同一集合。
+第9段，PRM=0.999989：boxed里是正确的双边不等式；gold是相同解集的开区间表示。
+
+row 5529 | math/train/intermediate_algebra/964
+Evaluate $\left|{-4+\frac{7}{6}i}\right|$.
+数学结论：复数模的全程计算正确；boxed只覆盖根号内分数，严格提取丢掉外层sqrt。
+独立核对：|-4+7i/6|=sqrt(16+49/36)=sqrt(625/36)=25/6=4.1666…。
+最小PRM=0.962108；实际advantage=-0.970051；mixed组，存储结果5/8正确。
+验答层：boxing范围问题；并非PRM放过sqrt(625/36)=625/36这类错误，原文实际正确写25/6。
+第8段，PRM=0.968141：写成sqrt(boxed{625/36})=25/6；数学等式正确，但框住的是平方模/被开方数而非模，提取返回625/36。
+
+解释：第7181条虽正文给出正确的精确概率73/153，但后面百分比换算错，不应归为单纯单位等价。其混合组仅1个stored-correct样本，其余多个无效零分，因此0.192810左右的混合reward高于组均值，得到+0.076435优势。其他3条真错虽然PRM漏判，结果奖励仍把其actual advantage压为负，不能说这些高分错答都被强化。
+
+5033和1318说明outcome也有数学语义覆盖不足：一个gold不能覆盖正反两个合法单位向量，普通表达式等价也未覆盖区间与不等式形式。修复这种能力属于独立验答设计工作，当前审查只揭示范围，不篡改既有结果。

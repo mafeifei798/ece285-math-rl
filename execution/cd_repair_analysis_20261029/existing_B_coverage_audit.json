@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "all_rows": 8960,
+    "rows_outside_known_probes_validation_tests": 8424,
+    "eligible_0": 3543,
+    "eligible_1": 3297,
+    "bare_0": 25,
+    "bare_1": 8
+  },
+  "bare_distinct_questions": {
+    "0": 24,
+    "1": 8
+  },
+  "no_data_selected": true,
+  "no_model_calls": true,
+  "no_training": true
+}

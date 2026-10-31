@@ -1,0 +1,62 @@
+{
+  "R01_product": "3/161840",
+  "R05_c_count": 223,
+  "R08_expanded_shift": "x**3 + 6*x**2 + 7*x + 5",
+  "R08_poly_from_roots_exists": false,
+  "R12_factorization": {
+    "3": 3,
+    "7": 1,
+    "11": 1,
+    "13": 1,
+    "37": 1,
+    "101": 1,
+    "9901": 1
+  },
+  "R12_true_count": 255,
+  "R12_claimed_code_actual_count": 0,
+  "R13_expected": "2/3",
+  "R15_tan_difference": "t**3",
+  "R17_parity_counts": {
+    "odd": 990,
+    "even": 1015,
+    "difference": 25
+  },
+  "R20_claimed_code_actual_min": 4,
+  "R23_original_value": 18,
+  "R23_claimed_code_actual_value": 34,
+  "R25_distance_time_speed": {
+    "distance": 102,
+    "time": 2.0,
+    "speed": 51.0
+  },
+  "R29_derivative_at_1": "-1/8",
+  "S13_max_missing_n_below_200": 15,
+  "S09_P_plus_Q": 31,
+  "S14_pairs": [
+    [
+      26,
+      25
+    ],
+    [
+      10,
+      7
+    ]
+  ],
+  "S15_coefficient": "1/6",
+  "S18_F5_equivalence_remainder": "0",
+  "S18_numerator_factor": "13829*(x**2 - sqrt(19)*x - 91)",
+  "S20_radius_squared": "35/2",
+  "R04_outcome_percent": {
+    "reward": 0.0,
+    "status": "symbolic",
+    "answer": "20\\%"
+  },
+  "R04_outcome_number": {
+    "reward": 1.0,
+    "status": "exact",
+    "answer": "20"
+  },
+  "R04_parse_gold": "[20]",
+  "R04_parse_percent": "[20*(1/100)]",
+  "S06_solve_nonsymbol_target": "[]"
+}

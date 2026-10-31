@@ -1,0 +1,180 @@
+{
+  "passed": true,
+  "scope": "frozen veRL raw advantage + official OpenRLHF boundary/normalizer transplant",
+  "not_full_openrlhf_reproduction": true,
+  "arms": {
+    "P_VR": {
+      "rows": 256,
+      "empty": 8,
+      "empty_raw_positive": 0,
+      "empty_normalized_positive_before": 0,
+      "empty_normalized_positive_after": 0,
+      "empty_direct_loss_gradient_nonzero_before": 8,
+      "empty_direct_loss_gradient_nonzero_after": 0,
+      "empty_normalized_range_before": [
+        -1.1994576454162598,
+        -0.3167426586151123
+      ],
+      "empty_peer_baseline_contribution_range": [
+        0.0,
+        0.0
+      ],
+      "valid_tokens": 146332,
+      "boundary_tokens": 2627,
+      "content_tokens": 143705,
+      "content_sign_changes": 50404,
+      "normalized_terminal_nonzero_after": 0,
+      "nonempty_mean_adv_sign_changes": 54,
+      "mean_sequence_adv_rank_spearman": 0.7734161812220742,
+      "reward_and_reward_rank_unchanged": true
+    },
+    "QWEN_PRM": {
+      "rows": 256,
+      "empty": 8,
+      "empty_raw_positive": 8,
+      "empty_normalized_positive_before": 8,
+      "empty_normalized_positive_after": 0,
+      "empty_direct_loss_gradient_nonzero_before": 8,
+      "empty_direct_loss_gradient_nonzero_after": 0,
+      "empty_normalized_range_before": [
+        2.1514861583709717,
+        3.2152576446533203
+      ],
+      "empty_peer_baseline_contribution_range": [
+        3.485031109968466e-05,
+        3.4875311290046996e-05
+      ],
+      "valid_tokens": 146332,
+      "boundary_tokens": 2627,
+      "content_tokens": 143705,
+      "content_sign_changes": 0,
+      "normalized_terminal_nonzero_after": 0,
+      "nonempty_mean_adv_sign_changes": 0,
+      "mean_sequence_adv_rank_spearman": 0.9419642857142857,
+      "reward_and_reward_rank_unchanged": true
+    },
+    "PURE_NATIVE": {
+      "rows": 256,
+      "empty": 8,
+      "empty_raw_positive": 8,
+      "empty_normalized_positive_before": 8,
+      "empty_normalized_positive_after": 0,
+      "empty_direct_loss_gradient_nonzero_before": 8,
+      "empty_direct_loss_gradient_nonzero_after": 0,
+      "empty_normalized_range_before": [
+        1.9367849826812744,
+        3.6442034244537354
+      ],
+      "empty_peer_baseline_contribution_range": [
+        2.6788454436297927e-05,
+        3.478903506350305e-05
+      ],
+      "valid_tokens": 146332,
+      "boundary_tokens": 2627,
+      "content_tokens": 143705,
+      "content_sign_changes": 0,
+      "normalized_terminal_nonzero_after": 0,
+      "nonempty_mean_adv_sign_changes": 2,
+      "mean_sequence_adv_rank_spearman": 0.9196428571428571,
+      "reward_and_reward_rank_unchanged": true
+    },
+    "PURE_RL_PROMPT": {
+      "rows": 256,
+      "empty": 8,
+      "empty_raw_positive": 8,
+      "empty_normalized_positive_before": 8,
+      "empty_normalized_positive_after": 0,
+      "empty_direct_loss_gradient_nonzero_before": 8,
+      "empty_direct_loss_gradient_nonzero_after": 0,
+      "empty_normalized_range_before": [
+        1.9710971117019653,
+        3.6379377841949463
+      ],
+      "empty_peer_baseline_contribution_range": [
+        3.1469181911753754e-05,
+        3.4145566002864924e-05
+      ],
+      "valid_tokens": 146332,
+      "boundary_tokens": 2627,
+      "content_tokens": 143705,
+      "content_sign_changes": 0,
+      "normalized_terminal_nonzero_after": 0,
+      "nonempty_mean_adv_sign_changes": 0,
+      "mean_sequence_adv_rank_spearman": 0.921875,
+      "reward_and_reward_rank_unchanged": true
+    }
+  },
+  "rows_scored_previously": 288,
+  "rows_replayed": 256,
+  "empty_replayed": 8,
+  "skipped_batches": [
+    {
+      "batch_id": "B:210",
+      "indices": [
+        277
+      ],
+      "reason": "unchanged whole-batch exclusion from previous replay"
+    }
+  ],
+  "input_hashes": {
+    "inputs": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d",
+    "qwen": "3681d0cdf0d017d877339eaeb6481421bf4faa23b4b09570afba49f99d811d72",
+    "pure": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5"
+  },
+  "historical_tokens_reconstructed": true,
+  "width": 2048,
+  "group_size": 8,
+  "batch_size": 32,
+  "process_coefficient": 0.5,
+  "softmin_temperature": 0.1,
+  "offline_kl": 0,
+  "normalization_calls_per_branch": 1,
+  "rewards_changed": false,
+  "verifier_changed": false,
+  "whole_group_selection_unchanged": true,
+  "float64_oracle_max_abs_error": 4.520204308633424e-07,
+  "matched_previous_replay": true,
+  "cpu_only": true,
+  "optimizer_steps": 0,
+  "new_generations": 0,
+  "synthetic_limit_example": {
+    "raw": [
+      [
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      [
+        -0.4000000059604645,
+        -0.4000000059604645
+      ],
+      [
+        0.699999988079071,
+        0.0
+      ]
+    ],
+    "normalized": [
+      [
+        0.5170366168022156,
+        0.0
+      ],
+      [
+        -1.206418514251709,
+        0.0
+      ],
+      [
+        0.689382016658783,
+        0.0
+      ]
+    ],
+    "conclusion": "a nonboundary content token can remain positively reinforced",
+    "generated_model_answer": false
+  },
+  "limitations": [
+    "Selected empty-containing batches, not a representative sample.",
+    "Historical generated token IDs unavailable; reconstruction and canonical boundaries reused.",
+    "KL zero because historical old/ref logprobs unavailable; not a historical gradient replay.",
+    "PRM scores/rankings and empty contribution to peer baselines remain unchanged.",
+    "Every arm also loses normal EOS/step-boundary gradients; this is an algorithm variant.",
+    "Synthetic logprob derivatives do not demonstrate learned accuracy or stability."
+  ]
+}

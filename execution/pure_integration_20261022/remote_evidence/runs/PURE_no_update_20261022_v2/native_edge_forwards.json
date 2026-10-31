@@ -1,0 +1,302 @@
+{
+  "texts": [
+    "",
+    " \r\n\t ",
+    "x = 2.\r\n\r\nTherefore x = 2.",
+    "Answer without a box."
+  ],
+  "scores": [
+    {
+      "input_ids": [
+        151644,
+        8948,
+        198,
+        5501,
+        2874,
+        3019,
+        553,
+        3019,
+        11,
+        323,
+        2182,
+        697,
+        1590,
+        4226,
+        2878,
+        1124,
+        79075,
+        46391,
+        151645,
+        198,
+        151644,
+        872,
+        198,
+        50,
+        3948,
+        856,
+        10,
+        16,
+        28,
+        18,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151651,
+        151645,
+        151643
+      ],
+      "positions": [
+        36
+      ],
+      "steps": [
+        ""
+      ],
+      "spans": [
+        {
+          "raw_start": 0,
+          "raw_end": 0,
+          "canonical_start": 0,
+          "canonical_end": 0
+        }
+      ],
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "crlf_replacements": 0,
+      "empty_terminal_step": true,
+      "input_sha256": "08269b208f31d333ea07b56753d7794eb9b6f99122ce2db93a8fa662ad17d67b",
+      "step_scores": [
+        0.99991774559021
+      ],
+      "prm_input_tokens": 39
+    },
+    {
+      "input_ids": [
+        151644,
+        8948,
+        198,
+        5501,
+        2874,
+        3019,
+        553,
+        3019,
+        11,
+        323,
+        2182,
+        697,
+        1590,
+        4226,
+        2878,
+        1124,
+        79075,
+        46391,
+        151645,
+        198,
+        151644,
+        872,
+        198,
+        50,
+        3948,
+        856,
+        10,
+        16,
+        28,
+        18,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        151651,
+        151645,
+        151643
+      ],
+      "positions": [
+        36
+      ],
+      "steps": [
+        ""
+      ],
+      "spans": [
+        {
+          "raw_start": 0,
+          "raw_end": 5,
+          "canonical_start": 0,
+          "canonical_end": 4
+        }
+      ],
+      "raw_sha256": "e735970f938a5045770123997c2d309cc74c50826e0a94277457203e121a0fb7",
+      "crlf_replacements": 1,
+      "empty_terminal_step": true,
+      "input_sha256": "08269b208f31d333ea07b56753d7794eb9b6f99122ce2db93a8fa662ad17d67b",
+      "step_scores": [
+        0.99991774559021
+      ],
+      "prm_input_tokens": 39
+    },
+    {
+      "input_ids": [
+        151644,
+        8948,
+        198,
+        5501,
+        2874,
+        3019,
+        553,
+        3019,
+        11,
+        323,
+        2182,
+        697,
+        1590,
+        4226,
+        2878,
+        1124,
+        79075,
+        46391,
+        151645,
+        198,
+        151644,
+        872,
+        198,
+        50,
+        3948,
+        856,
+        10,
+        16,
+        28,
+        18,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        87,
+        284,
+        220,
+        17,
+        13,
+        151651,
+        54815,
+        856,
+        284,
+        220,
+        17,
+        13,
+        151651,
+        151645,
+        151643
+      ],
+      "positions": [
+        41,
+        48
+      ],
+      "steps": [
+        "x = 2.",
+        "Therefore x = 2."
+      ],
+      "spans": [
+        {
+          "canonical_start": 0,
+          "canonical_end": 6,
+          "raw_start": 0,
+          "raw_end": 6
+        },
+        {
+          "canonical_start": 8,
+          "canonical_end": 24,
+          "raw_start": 10,
+          "raw_end": 26
+        }
+      ],
+      "raw_sha256": "3bd2b98d997bbff2ed918c1662b4747a6d66840d16f65419c9f72f130ab504b1",
+      "crlf_replacements": 2,
+      "empty_terminal_step": false,
+      "input_sha256": "831fce92f93a806a6da315288a68b7a56e653ab34d9eb3600385045b9bdae00f",
+      "step_scores": [
+        0.9594592452049255,
+        0.9921841025352478
+      ],
+      "prm_input_tokens": 51
+    },
+    {
+      "input_ids": [
+        151644,
+        8948,
+        198,
+        5501,
+        2874,
+        3019,
+        553,
+        3019,
+        11,
+        323,
+        2182,
+        697,
+        1590,
+        4226,
+        2878,
+        1124,
+        79075,
+        46391,
+        151645,
+        198,
+        151644,
+        872,
+        198,
+        50,
+        3948,
+        856,
+        10,
+        16,
+        28,
+        18,
+        13,
+        151645,
+        198,
+        151644,
+        77091,
+        198,
+        16141,
+        2041,
+        264,
+        3745,
+        13,
+        151651,
+        151645,
+        151643
+      ],
+      "positions": [
+        41
+      ],
+      "steps": [
+        "Answer without a box."
+      ],
+      "spans": [
+        {
+          "canonical_start": 0,
+          "canonical_end": 21,
+          "raw_start": 0,
+          "raw_end": 21
+        }
+      ],
+      "raw_sha256": "0912302c27453c90ca0adf1c1c266013cd77968e851c700d4ed5ef18372e548f",
+      "crlf_replacements": 0,
+      "empty_terminal_step": false,
+      "input_sha256": "b8c63987bfb3fa8831e90bc1c20823e44e4b92f5fbfcbe866fe48d24d0f2e48f",
+      "step_scores": [
+        0.7256486415863037
+      ],
+      "prm_input_tokens": 44
+    }
+  ],
+  "cost": {
+    "seconds": 0.12804352631792426,
+    "scored_responses": 4,
+    "prm_input_tokens": 173,
+    "prm_padded_tokens": 180
+  }
+}

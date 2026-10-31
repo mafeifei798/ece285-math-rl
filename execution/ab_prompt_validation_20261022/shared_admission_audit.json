@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "only_changed_pinned_input": [
+    "experiments/ab_prompt_validation_20261022/evaluate.py"
+  ],
+  "only_source_change": "memory admission threshold40000 to30000MiB",
+  "other24_pinned_input_hashes_unchanged": true,
+  "all_five_local_frozen_sources_match_shared_release": true,
+  "training_launched": false
+}

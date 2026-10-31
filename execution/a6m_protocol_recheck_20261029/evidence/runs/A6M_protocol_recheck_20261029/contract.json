@@ -1,0 +1,106 @@
+{
+  "release_sha256": "d367ded2061e6efb3205baf303177ef0dbcb710b293f0763237a403f4ce5df8b",
+  "protocol": {
+    "seed": 285,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "max_tokens": 2048,
+    "max_model_len": 4096,
+    "dtype": "bfloat16",
+    "gpu": 1,
+    "gpu_memory_utilization": 0.15,
+    "batch_size": 64,
+    "max_num_seqs": 64,
+    "max_num_batched_tokens": 4096,
+    "enable_lora": true,
+    "max_loras": 1,
+    "max_cpu_loras": 3,
+    "max_lora_rank": 16,
+    "enforce_eager": true,
+    "skip_special_tokens": true,
+    "include_stop_str_in_output": false,
+    "prompt": "exact existing prepared dataset prompt",
+    "verifier": "reward-repair-v3-20261021",
+    "prm_inference": false,
+    "training": false,
+    "checkpoint_selection": false,
+    "ordering": "fixed dataset and 64-question blocks; only historical A_6M adapter in matched slot 1"
+  },
+  "model_id": "Qwen/Qwen2.5-Math-1.5B",
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "model_path": "/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "states": {
+    "A_6M": {
+      "adapter": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+      "adapter_sha256": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+      "adapter_config_sha256": "ba647e824edff976ae8bf664ac421ce2146c955f9d8135a59480f13cff0744fc",
+      "adapter_id": 1,
+      "training_updates": 284,
+      "training_generated_tokens": 6022435
+    }
+  },
+  "datasets": {
+    "math500": {
+      "n": 500,
+      "sha256": "578a5e2586488a9800bfa823fdaf4ee16dfb8bba12ad1ef99f3be523c81fade1",
+      "max_prompt_tokens": 811
+    },
+    "gsm8k": {
+      "n": 1319,
+      "sha256": "babb3c674b069f021cab4ad72d6be0b8249f070ac11f8984e6dea3f96547ee04",
+      "max_prompt_tokens": 208
+    }
+  },
+  "verifier_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+  "units_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "versions": {
+    "torch": "2.8.0",
+    "vllm": "0.10.2",
+    "transformers": "4.56.2",
+    "peft": "0.17.1",
+    "trl": "0.23.1",
+    "math-verify": "0.8.0"
+  },
+  "reference_contract_sha256": "ad415230ce35f3ab134cb388a29fde38fee78f5ae2aed35d0052c084c6e9a7ee",
+  "reference_comparison_sha256": "e9a31267c9302608d26759b06290592fde55554a00e2513d87d2f921d569e293",
+  "matched_protocol_keys": [
+    "seed",
+    "temperature",
+    "top_p",
+    "top_k",
+    "max_tokens",
+    "max_model_len",
+    "dtype",
+    "gpu",
+    "gpu_memory_utilization",
+    "batch_size",
+    "max_num_seqs",
+    "max_num_batched_tokens",
+    "enable_lora",
+    "max_loras",
+    "max_cpu_loras",
+    "max_lora_rank",
+    "enforce_eager",
+    "skip_special_tokens",
+    "include_stop_str_in_output",
+    "prompt",
+    "verifier",
+    "prm_inference",
+    "training",
+    "checkpoint_selection"
+  ],
+  "scheduling_difference": "Only historical A_6M is generated, so four-model rotation is not applicable. All inference/LoRA/batch/verifier settings are retained.",
+  "historical_summary_sha256": "f20426af8860bc6582a7d4057a1e101776e9c42db63f7a33f2e80724b5471c06",
+  "historical_training_vllm_memory_utilization": 0.3,
+  "current_training_vllm_memory_utilization": 0.15,
+  "known_overlap": {
+    "train": 6993,
+    "validation": 500,
+    "math500": 0,
+    "gsm8k": 0,
+    "processbench_unique_questions": 847
+  },
+  "new_training": false,
+  "new_PRM_inference": false
+}

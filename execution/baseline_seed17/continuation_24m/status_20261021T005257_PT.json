@@ -1,0 +1,120 @@
+{
+  "checked_at_LA": "2026-10-21T00:52:57.745958-07:00",
+  "remote_root": "/srv/research/ece285_math_rl_project",
+  "scope": "read-only status check; no process, source or configuration modified",
+  "progress": {
+    "generated_completion_tokens": 15115269,
+    "generated_completions": 21856,
+    "generated_groups": 2732,
+    "mixed_reward_groups": 2121,
+    "correct_completions": 9752,
+    "truncated_completions": 1394,
+    "reward_status_counts": {
+      "symbolic": 9732,
+      "truncated": 1394,
+      "exact": 8828,
+      "missing_or_invalid_box": 1676,
+      "unparseable": 226
+    },
+    "last_batch": {
+      "generated_completion_tokens": 18577,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 3,
+      "correct_completions": 15,
+      "truncated_completions": 1
+    },
+    "global_step": 683,
+    "elapsed_seconds": 11195.173509887885,
+    "target_completion_tokens": 24000000,
+    "effective_completion_tokens_per_second": 812.413134282104,
+    "torch_peak_allocated_GiB": 31.560503482818604,
+    "torch_peak_reserved_GiB": 32.41796875,
+    "resumed_from_global_step": 280,
+    "source_completion_tokens": 6020163,
+    "continuation_generated_completion_tokens": 9095106
+  },
+  "progress_age_seconds": 13.448567390441895,
+  "recent_rates_completion_tokens_per_second": {
+    "20_updates": 792.688679245282,
+    "50_updates": 826.6788016685628,
+    "100_updates": 815.4497865231112
+  },
+  "remaining_train_hours_by_recent_rate": {
+    "20_updates": 3.113430149757021,
+    "50_updates": 2.985416861242816,
+    "100_updates": 3.0265270457133004
+  },
+  "remaining_train_hours_by_resume_average": 3.037839652253021,
+  "health_last_100_updates": {
+    "loss": {
+      "n": 100,
+      "finite": true,
+      "min": 0,
+      "max": 0.0244
+    },
+    "grad_norm": {
+      "n": 100,
+      "finite": true,
+      "min": 0.014622870832681656,
+      "max": 0.5173158049583435
+    },
+    "kl": {
+      "n": 100,
+      "finite": true,
+      "min": 0.0011522285540195298,
+      "max": 0.6090094322353252
+    },
+    "entropy": {
+      "n": 100,
+      "finite": true,
+      "min": 0.17820117250084877,
+      "max": 0.5341901574283838
+    }
+  },
+  "metrics_parse_errors": 0,
+  "fatal_log_matches": [],
+  "milestones": {
+    "6000000": {
+      "status": "completed_preserved",
+      "actual_completion_tokens": 6020163,
+      "global_step": 280,
+      "checkpoint": "/srv/research/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
+      "evaluation_dir": "/srv/research/ece285_math_rl_project/runs/A_seed17/evaluation",
+      "checkpoint_files_present": true,
+      "saved_global_step": 280,
+      "evaluation_summary_exists": true,
+      "evaluation_elapsed_seconds": 2412.7114057540894,
+      "evaluation": {
+        "math500": {
+          "count": 500,
+          "correct": 281,
+          "accuracy": 0.562,
+          "truncated": 36
+        },
+        "gsm8k": {
+          "count": 1319,
+          "correct": 925,
+          "accuracy": 0.7012888551933283,
+          "truncated": 25
+        }
+      }
+    },
+    "12000000": {
+      "status": "saved_pending_evaluation",
+      "actual_completion_tokens": 12022345,
+      "global_step": 545,
+      "checkpoint": "/srv/research/ece285_math_rl_project/runs/A_seed17_24M/milestones/12000000/checkpoint-545",
+      "evaluation_dir": "/srv/research/ece285_math_rl_project/runs/A_seed17_24M/milestones/12000000/evaluation",
+      "checkpoint_files_present": true,
+      "saved_global_step": 545,
+      "adapter_hash_verified": true,
+      "evaluation_summary_exists": false
+    },
+    "24000000": {
+      "status": "planned"
+    }
+  },
+  "latest_checkpoint_exists": false,
+  "evaluation_schedule": "Controller evaluates saved 12M then 24M after the 24M training endpoint; waits for an idle GPU if needed."
+}

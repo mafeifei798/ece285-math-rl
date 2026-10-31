@@ -1,0 +1,12 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>三组小试实时验收</title><style>body{background:#f4f6f8;color:#17232e;font:16px/1.8 system-ui;margin:0}main{max-width:1050px;margin:40px auto;background:white;padding:36px;border-radius:16px}h1{font-size:28px}table{border-collapse:collapse;width:100%}td,th{padding:10px;text-align:left;border-bottom:1px solid #ddd}pre{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7fa;padding:16px}a{color:#235fb0}</style><main><h1>三组小试 · complete</h1><p>授权范围：A / C-mix / C-bounded，各约100万生成token，seed17，GPU1共享。先2次真实更新/保存，再从checkpoint恢复续跑。D、额外seed、600万均不启动。</p><p>controller存活：False；当前子进程存活：False。时间：2026-10-29T22:32:38.973380+00:00</p><table><tr><th>组别</th><th>状态</th><th>更新数</th><th>生成token</th><th>错答正优势累计</th><th>显存reserved GiB</th></tr><tr><td>A</td><td>complete</td><td>48</td><td>1005003</td><td>0</td><td>20.63671875</td></tr><tr><td>C_mix</td><td>complete</td><td>48</td><td>1001853</td><td>82</td><td>34.0546875</td></tr><tr><td>C_bounded</td><td>complete</td><td>48</td><td>1009017</td><td>0</td><td>34.052734375</td></tr></table><p>C-mix中可能有错答正优势，这是原奖励归一化机制的被测现象；A和C-bounded要求该项为0。</p><p>CPU536例复算通过；验证集500题与策略训练/C适配数据无题目重叠。无更新验收不能代替实际训练/恢复验收，当前仅按真实receipt报告。</p><p><a href="latest_snapshot.json">完整状态和验收证据</a> · <a href="preflight.json">CPU准入</a></p><h2>当前日志末尾</h2><pre>Three-arm C bounded pilot: COMPLETE
+Validation only; no 6M or D adaptation started.
+
+initial: 261.0/500 = 52.2%; empty 0, short wrong 5, truncated 56
+A: 252.0/500 = 50.4%; empty 0, short wrong 6, truncated 46
+C_mix: 259.0/500 = 51.8%; empty 0, short wrong 3, truncated 56
+C_bounded: 265.0/500 = 53.0%; empty 0, short wrong 3, truncated 47
+C_bounded minus C_mix: +1.2%; paired 95% [-0.014, 0.038]; wins/losses 25/19
+C_bounded minus A: +2.6%; paired 95% [-0.002, 0.052]; wins/losses 29/16
+C_mix minus A: +1.4%; paired 95% [-0.012, 0.038]; wins/losses 23/16
+A minus initial: -1.8%; paired 95% [-0.044, 0.01]; wins/losses 19/28
+</pre></main></html>

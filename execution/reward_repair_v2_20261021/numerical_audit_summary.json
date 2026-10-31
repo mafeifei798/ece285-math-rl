@@ -1,0 +1,8 @@
+{
+  "batches": 1710,
+  "same_device_failures": 0,
+  "old_cross_device_fail_batches": 0,
+  "max_old_cross_device_error": 2.2292137145996094e-05,
+  "max_float64_difference": 1.0065140617632196e-05,
+  "actual_advantages_mutated": false
+}

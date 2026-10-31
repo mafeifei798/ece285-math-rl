@@ -1,0 +1,145 @@
+{
+  "selection": "Purposely short same-question gains/losses, preferring parseable complete answers, from the currently common completed GSM8K prefix; no prevalence estimate.",
+  "common_completed_questions": 832,
+  "new_model_calls": 0,
+  "cases": [
+    {
+      "dataset": "gsm8k",
+      "mode": "bounded_gain",
+      "problem_id": "gsm8k/test/321",
+      "problem": "A magazine costs half as much as a book. The book costs $4. A pen costs $1 less than a magazine. How much is the pen?",
+      "gold": "1",
+      "outputs": {
+        "initial": {
+          "arm": "initial",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/321",
+          "question_sha256": "621522ba69787f37a78a2159f7d1619c77ab3aea391c8ae53b3547153af5fa4e",
+          "gold": "1",
+          "completion": " \\boxed{2}\n\nStep-by-step explanation:\n1. The book costs $4.\n2. A magazine costs half as much as a book, so a magazine costs $4 / 2 = $2.\n3. A pen costs $1 less than a magazine, so a pen costs $2 - $1 = $1.\n\nTherefore, the pen costs $1.",
+          "generated_tokens": 77,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": null,
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "2"
+        },
+        "A": {
+          "arm": "A",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/321",
+          "question_sha256": "621522ba69787f37a78a2159f7d1619c77ab3aea391c8ae53b3547153af5fa4e",
+          "gold": "1",
+          "completion": " \\boxed{2}\n\nStep-by-step explanation:\n1. The book costs $4.\n2. A magazine costs half as much as a book, so a magazine costs $4 / 2 = $2.\n3. A pen costs $1 less than a magazine, so a pen costs $2 - $1 = $1.\n\nTherefore, the pen costs $1.",
+          "generated_tokens": 77,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "2"
+        },
+        "C_mix": {
+          "arm": "C_mix",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/321",
+          "question_sha256": "621522ba69787f37a78a2159f7d1619c77ab3aea391c8ae53b3547153af5fa4e",
+          "gold": "1",
+          "completion": " \\boxed{2}\n\nStep 1: The book costs $4.\nStep 2: The magazine costs half as much as the book, so the magazine costs $4 / 2 = $2.\nStep 3: The pen costs $1 less than the magazine, so the pen costs $2 - $1 = $1.\nTherefore, the pen costs $1.",
+          "generated_tokens": 78,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "2"
+        },
+        "C_bounded": {
+          "arm": "C_bounded",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/321",
+          "question_sha256": "621522ba69787f37a78a2159f7d1619c77ab3aea391c8ae53b3547153af5fa4e",
+          "gold": "1",
+          "completion": " \\boxed{2}\n\nStep 1: The book costs $4.\nStep 2: The magazine costs half as much as the book, so the magazine costs $4 / 2 = $2.\nStep 3: The pen costs $1 less than the magazine, so the pen costs $2 - $1 = $1.\nStep 4: Therefore, the pen costs $1, which is within the answer box as \\boxed{1}.",
+          "generated_tokens": 94,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+          "reward": 1.0,
+          "status": "exact",
+          "answer": "1"
+        }
+      }
+    },
+    {
+      "dataset": "gsm8k",
+      "mode": "bounded_loss",
+      "problem_id": "gsm8k/test/717",
+      "problem": "A pencil cost $0.50, and an eraser cost $0.25. If you bought 6 pencils and 8 erasers and paid $10, how much change would you get?",
+      "gold": "5",
+      "outputs": {
+        "initial": {
+          "arm": "initial",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/717",
+          "question_sha256": "81364eedc986bcbb82dcfa964dcabcec494b780dadadc0e62e336285df0d0a31",
+          "gold": "5",
+          "completion": " \\boxed{} To find the change, we first need to calculate the total cost of the pencils and erasers.\n\nThe cost of 6 pencils is 6 * $0.50 = $3.\nThe cost of 8 erasers is 8 * $0.25 = $2.\n\nThe total cost of the pencils and erasers is $3 + $2 = $5.\n\nSince you paid $10, the change you would get is $10 - $5 = $5.\n\nTherefore, the answer is \\boxed{$5}.",
+          "generated_tokens": 115,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": null,
+          "reward": 1.0,
+          "status": "symbolic",
+          "answer": "$5"
+        },
+        "A": {
+          "arm": "A",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/717",
+          "question_sha256": "81364eedc986bcbb82dcfa964dcabcec494b780dadadc0e62e336285df0d0a31",
+          "gold": "5",
+          "completion": " \\boxed{} To find the change, we first need to calculate the total cost of the pencils and erasers.\n\nThe total cost of the pencils is 6 pencils * $0.50/pencil = $3.\nThe total cost of the erasers is 8 erasers * $0.25/eraser = $2.\n\nThe total cost of the pencils and erasers is $3 + $2 = $5.\n\nSince you paid $10, the change you would get is $10 - $5 = $5.\n\nTherefore, the answer is \\boxed{$5}.",
+          "generated_tokens": 123,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+          "reward": 1.0,
+          "status": "symbolic",
+          "answer": "$5"
+        },
+        "C_mix": {
+          "arm": "C_mix",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/717",
+          "question_sha256": "81364eedc986bcbb82dcfa964dcabcec494b780dadadc0e62e336285df0d0a31",
+          "gold": "5",
+          "completion": " \\boxed{} To find the change, we first need to calculate the total cost of the pencils and erasers.\n\nThe cost of 6 pencils is 6 * $0.50 = $3.\nThe cost of 8 erasers is 8 * $0.25 = $2.\n\nThe total cost of the pencils and erasers is $3 + $2 = $5.\n\nSince you paid $10, the change you would get is $10 - $5 = $5.\n\nTherefore, the answer is \\boxed{$5}.",
+          "generated_tokens": 115,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+          "reward": 1.0,
+          "status": "symbolic",
+          "answer": "$5"
+        },
+        "C_bounded": {
+          "arm": "C_bounded",
+          "dataset": "gsm8k",
+          "problem_id": "gsm8k/test/717",
+          "question_sha256": "81364eedc986bcbb82dcfa964dcabcec494b780dadadc0e62e336285df0d0a31",
+          "gold": "5",
+          "completion": " \\boxed{1.00}\n\nStep-by-step explanation:\n1. Calculate the total cost of the pencils: 6 pencils * $0.50/pencil = $3.00\n2. Calculate the total cost of the erasers: 8 erasers * $0.25/eraser = $2.00\n3. Add the total cost of pencils and erasers: $3.00 + $2.00 = $5.00\n4. Subtract the total cost from the amount paid: $10.00 - $5.00 = $5.00\n5. The change you would get is $5.00, which is not listed in the options provided. It seems there might be a mistake in the options or the question.",
+          "generated_tokens": 170,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "1.00"
+        }
+      }
+    }
+  ]
+}

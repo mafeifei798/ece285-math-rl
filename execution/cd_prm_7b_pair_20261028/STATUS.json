@@ -1,0 +1,236 @@
+{
+  "status": "COMPLETE_PRM_ADAPTATION_AND_OFFLINE_ANALYSIS_NO_POLICY_RL",
+  "finished_local": "2026-10-28 23:56:36 PDT",
+  "controller_history": "original controller failed at strict BF16 coordinate test; independent reference validated; separate read-only postprocessing completed",
+  "summary": {
+    "passed": true,
+    "score_rows_per_arm": 728,
+    "full_groups_verified": 192,
+    "reference_FP32_passed": true,
+    "historical_BF16_check_preserved_failed": true,
+    "originals_unchanged": {
+      "files_checked": 89,
+      "unchanged": true,
+      "manifest_sha256": "e120f2641344df3aacf12fd953a9851a91b080321b6ae239ffad5a6350ea2890"
+    },
+    "groups": {
+      "B": {
+        "mixed": {
+          "groups": 32,
+          "mean_min_score": 0.31230820917903657,
+          "mean_min_score_std": 0.3352230868762076,
+          "mean_abs_advantage": 0.8327840626709704,
+          "mean_abs_advantage_deviation_from_A": 0.05606258474346513,
+          "wrong_positive": 0,
+          "wrong_count": 140,
+          "groups_with_reward_std_below_epsilon": 0,
+          "mean_group_correctness_AUROC": 0.8719494047619047
+        },
+        "all_wrong": {
+          "groups": 16,
+          "mean_min_score": 0.08284584795455885,
+          "mean_min_score_std": 0.09098177935478685,
+          "mean_abs_advantage": 0.7460669436744362,
+          "mean_abs_advantage_deviation_from_A": 0.7460669436744362,
+          "wrong_positive": 46,
+          "wrong_count": 128,
+          "groups_with_reward_std_below_epsilon": 0,
+          "mean_group_correctness_AUROC": null
+        },
+        "all_correct": {
+          "groups": 16,
+          "mean_min_score": 0.6354280627492699,
+          "mean_min_score_std": 0.29024004748069865,
+          "mean_abs_advantage": 0.8148019763942411,
+          "mean_abs_advantage_deviation_from_A": 0.8148019763942411,
+          "wrong_positive": 0,
+          "wrong_count": 0,
+          "groups_with_reward_std_below_epsilon": 0,
+          "mean_group_correctness_AUROC": null
+        }
+      },
+      "C": {
+        "mixed": {
+          "groups": 32,
+          "mean_min_score": 0.3359542157161286,
+          "mean_min_score_std": 0.34588326979114137,
+          "mean_abs_advantage": 0.8331206544875741,
+          "mean_abs_advantage_deviation_from_A": 0.05025671515899198,
+          "wrong_positive": 0,
+          "wrong_count": 140,
+          "groups_with_reward_std_below_epsilon": 0,
+          "mean_group_correctness_AUROC": 0.8872209821428572
+        },
+        "all_wrong": {
+          "groups": 16,
+          "mean_min_score": 0.04354417461513549,
+          "mean_min_score_std": 0.07654248514417475,
+          "mean_abs_advantage": 0.6896773155419591,
+          "mean_abs_advantage_deviation_from_A": 0.6896773155419591,
+          "wrong_positive": 34,
+          "wrong_count": 128,
+          "groups_with_reward_std_below_epsilon": 0,
+          "mean_group_correctness_AUROC": null
+        },
+        "all_correct": {
+          "groups": 16,
+          "mean_min_score": 0.7211943355796393,
+          "mean_min_score_std": 0.24281587717219782,
+          "mean_abs_advantage": 0.7814194278017501,
+          "mean_abs_advantage_deviation_from_A": 0.7814194278017501,
+          "wrong_positive": 0,
+          "wrong_count": 0,
+          "groups_with_reward_std_below_epsilon": 0,
+          "mean_group_correctness_AUROC": null
+        }
+      },
+      "D": {
+        "mixed": {
+          "groups": 32,
+          "mean_min_score": 0.007151647299266983,
+          "mean_min_score_std": 0.019722996802928126,
+          "mean_abs_advantage": 0.8358309776451393,
+          "mean_abs_advantage_deviation_from_A": 0.004909145564532981,
+          "wrong_positive": 0,
+          "wrong_count": 140,
+          "groups_with_reward_std_below_epsilon": 0,
+          "mean_group_correctness_AUROC": 0.8454799107142857
+        },
+        "all_wrong": {
+          "groups": 16,
+          "mean_min_score": 0.00010919970063127948,
+          "mean_min_score_std": 0.00014388035792027684,
+          "mean_abs_advantage": 0.12026794281704022,
+          "mean_abs_advantage_deviation_from_A": 0.12026794281704022,
+          "wrong_positive": 50,
+          "wrong_count": 128,
+          "groups_with_reward_std_below_epsilon": 14,
+          "mean_group_correctness_AUROC": null
+        },
+        "all_correct": {
+          "groups": 16,
+          "mean_min_score": 0.004636307166094866,
+          "mean_min_score_std": 0.012291441344267648,
+          "mean_abs_advantage": 0.30758642008928644,
+          "mean_abs_advantage_deviation_from_A": 0.30758642008928644,
+          "wrong_positive": 0,
+          "wrong_count": 0,
+          "groups_with_reward_std_below_epsilon": 9,
+          "mean_group_correctness_AUROC": null
+        }
+      }
+    },
+    "processbench": {
+      "B": {
+        "n": 192,
+        "valid_acceptance": 0.90625,
+        "first_error_accuracy": 0.6796875,
+        "harmonic_mean": 0.7767857142857143,
+        "answer_correct_AUROC": 0.9427490234375
+      },
+      "C": {
+        "n": 192,
+        "valid_acceptance": 0.875,
+        "first_error_accuracy": 0.734375,
+        "harmonic_mean": 0.7985436893203883,
+        "answer_correct_AUROC": 0.95068359375
+      },
+      "D": {
+        "n": 192,
+        "valid_acceptance": 0.140625,
+        "first_error_accuracy": 0.3515625,
+        "harmonic_mean": 0.20089285714285715,
+        "answer_correct_AUROC": 0.869873046875
+      }
+    },
+    "known_cases": [
+      {
+        "example_id": "old-case-78",
+        "source_row": 78,
+        "outcome": 0,
+        "scores": {
+          "B": {
+            "min_score": 0.05749327689409256,
+            "rank": 1.0,
+            "advantage": 1.2686131239991012
+          },
+          "C": {
+            "min_score": 0.2393493503332138,
+            "rank": 1.0,
+            "advantage": 2.265817363597492
+          },
+          "D": {
+            "min_score": 0.00010889690747717395,
+            "rank": 4.0,
+            "advantage": -0.04490173220046995
+          }
+        }
+      },
+      {
+        "example_id": "old-case-2095",
+        "source_row": 2095,
+        "outcome": 0,
+        "scores": {
+          "B": {
+            "min_score": 0.015072628855705261,
+            "rank": 4.0,
+            "advantage": -0.2985282477989946
+          },
+          "C": {
+            "min_score": 0.03210070729255676,
+            "rank": 1.0,
+            "advantage": 1.5018697666135217
+          },
+          "D": {
+            "min_score": 7.254361844388768e-05,
+            "rank": 4.0,
+            "advantage": -0.04424451890187506
+          }
+        }
+      },
+      {
+        "example_id": "old-case-4975",
+        "source_row": 4975,
+        "outcome": 0,
+        "scores": {
+          "B": {
+            "min_score": 0.02843603491783142,
+            "rank": 4.0,
+            "advantage": -0.162185020359367
+          },
+          "C": {
+            "min_score": 0.05877656117081642,
+            "rank": 1.0,
+            "advantage": 2.3552262488491693
+          },
+          "D": {
+            "min_score": 7.722191367065534e-05,
+            "rank": 2.0,
+            "advantage": 0.04982065265003759
+          }
+        }
+      }
+    ],
+    "paired_question_cluster_bootstrap": {
+      "clusters": 191,
+      "replicates": 2000,
+      "D_minus_C_AUROC_CI95": [
+        -0.13736111111111116,
+        -0.03404032469232787
+      ],
+      "C_minus_B_AUROC_CI95_exploratory": [
+        -0.005427408412483015,
+        0.023099850968703484
+      ]
+    },
+    "interpretation_rules": [
+      "Verifier wrong is not a proof that all derivation steps are invalid.",
+      "All-wrong groups generally retain positive relative advantages; fewer positives alone is not proof of better ranking.",
+      "Very small reward spread can suppress advantages through epsilon/FP32 quantization without improving PRM ranking.",
+      "No policy RL or downstream mathematics accuracy was measured."
+    ]
+  },
+  "source_summary_sha256": "eda2d3082c9fba2b56fccd45b3e62a77f85567f96a11ec164104dc7386db749f",
+  "policy_optimizer_updates": 0,
+  "decision": "Do not proceed directly to full C/D RL: C small/inconclusive aggregate gain and persistent wrong-short-answer incentives; D broad degradation"
+}

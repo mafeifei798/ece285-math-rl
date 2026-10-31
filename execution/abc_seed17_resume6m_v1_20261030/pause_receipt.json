@@ -1,0 +1,69 @@
+{
+  "paused_by_user": true,
+  "automatic_resume": false,
+  "GPU_released": true,
+  "unix": 1793349870.2059212,
+  "arms": {
+    "A": {
+      "resume_checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/paused_checkpoints/A/checkpoint-115",
+      "checkpoint_step": 115,
+      "checkpoint_generated_tokens": 2390451,
+      "last_observed_completed_step": 115,
+      "completed_updates_beyond_checkpoint": 0,
+      "rollout_rows_beyond_checkpoint": 0,
+      "tail_steps_before_update": [],
+      "unparsed_rollout_lines": [],
+      "incomplete_checkpoint_directories": [],
+      "checkpoint_contract_sha256": "97589d35e5738f03a28f609f25cbad536d93b3209e09ed26148b1c3a490d0508",
+      "files_sha256": {
+        "adapter_model.safetensors": "cab983241b9c895ceb7473b30984240cb1a5bfb6ef5101d7bebf0849c9e4affd",
+        "optimizer.pt": "e80f524fef30d5bd4a6b645a27fa3f92a88e013c1920588de99c9ac800222b91",
+        "scheduler.pt": "486b3c8b91c580b352c699480ac534eed3f4f317ce5d4fed1c4ccb63a3f4ca78",
+        "rng_state.pth": "d5e011538152abacc38dbfd114f7c4e6cafd3533878cc19bd5fa59b073375f36",
+        "trainer_state.json": "95dacc3869b5f45a622a23e283cbae57ce4f3ba138ed5e1c34f4b39fac3a0fd2"
+      }
+    },
+    "C_mix": {
+      "resume_checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
+      "checkpoint_step": 50,
+      "checkpoint_generated_tokens": 1034873,
+      "last_observed_completed_step": 50,
+      "completed_updates_beyond_checkpoint": 0,
+      "rollout_rows_beyond_checkpoint": 0,
+      "tail_steps_before_update": [],
+      "unparsed_rollout_lines": [],
+      "incomplete_checkpoint_directories": [],
+      "checkpoint_contract_sha256": "9485e28de46d30be25729c7f73f7518b749492f6f9a787cc01d41b14d6a3beff",
+      "files_sha256": {
+        "adapter_model.safetensors": "e2167ff479aa1a49a6f14533a2f9e7a66728f83bd626e09f58ee9d429da35dfb",
+        "optimizer.pt": "f507b019330b7e4e9e600cae5e0ce136bd470d68e86ae02377fa3d441949de08",
+        "scheduler.pt": "2444a93de03c6f0fed64353c8ef4f630bbc0d90d584fa2f3c25f1c72c2c2adcc",
+        "rng_state.pth": "d7e10e8df74d996b01b443440396d985329dd883e9e3ee0c4618d65761a03301",
+        "trainer_state.json": "8eed8b073590b24324b8035595db149d553f9e624e32b7813aaa4f8e7940c0d7"
+      }
+    },
+    "C_bounded": {
+      "resume_checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
+      "checkpoint_step": 50,
+      "checkpoint_generated_tokens": 1038895,
+      "last_observed_completed_step": 50,
+      "completed_updates_beyond_checkpoint": 0,
+      "rollout_rows_beyond_checkpoint": 0,
+      "tail_steps_before_update": [],
+      "unparsed_rollout_lines": [],
+      "incomplete_checkpoint_directories": [],
+      "checkpoint_contract_sha256": "9ca411bf1ee819bb7a2cda64dd0fdcf93eb864a675cee696872c18048755f74e",
+      "files_sha256": {
+        "adapter_model.safetensors": "4426fad6b3e832906708f7bf593a8a5a489e91e0436e0041e9e427a28c55fc98",
+        "optimizer.pt": "f10b296dca918e81c5ebc4dd8f15d0479b39f59edd9c9ef98a230088cc83255b",
+        "scheduler.pt": "2444a93de03c6f0fed64353c8ef4f630bbc0d90d584fa2f3c25f1c72c2c2adcc",
+        "rng_state.pth": "893a47775464118661ab76954ffba96bfa21f89fa7fc4c25653f9016e99f1374",
+        "trainer_state.json": "c7bcd5f050acd953a45721b0c9178d44974648aad0a8b101d9e8b757537d0ccd"
+      }
+    }
+  },
+  "new_training_updates": 0,
+  "new_model_calls": 0,
+  "GPU_apps_after_CPU_audit": "2576143, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 7986\n2591599, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 17986\n2872634, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 628\n2937288, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 670\n3206308, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 17986\n888111, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1998\n2576146, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 16524\n3206309, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 17986\n",
+  "resume_rule": "No automatic restart. Any records beyond the selected durable checkpoint remain untouched; reconcile/replay or explicitly quarantine them before any later authorized resume. Never silently resample or skip them."
+}

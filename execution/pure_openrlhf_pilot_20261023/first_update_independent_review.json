@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-23T09:19:57.600859+00:00",
+  "scope": "Independent read-only acceptance of P_VR batch1 only, no training launch or remote edits",
+  "passed": true,
+  "source_file": "runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/batches/0001.json",
+  "source_sha256": "f1b94f3c38466aac3846fb501bb3ae2e701b806ff29a8e527b8cfa95c964d5f7",
+  "local_evidence_file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/first_update_readonly_evidence.json",
+  "local_evidence_sha256": "4988bd922fd8e2e337d0e087e02c9c1e04cf2d725f3c19393fd3bb6454bd2e77",
+  "checks": {
+    "pvr_uses_no_prm": true,
+    "first_update_one_optimizer_step": true,
+    "tokens_consistent": true,
+    "alignment_all_32_passed": true,
+    "source_norm_exactly_once": true,
+    "loss_zero_additional_normalizations": true,
+    "all_32_loss_microbatches_share_sealed_batch": true,
+    "micro_loss_divided_by_32": true,
+    "all_ratios_one_and_no_ratio_guard": true,
+    "boundary_advantages_zero_all_losses": true,
+    "independent_float64_vr_meanadv_oracle": true,
+    "gradient_norm_finite_positive": true,
+    "adapter_actually_changed_and_saved": true,
+    "common_zero_lora_initial_hash": true,
+    "initial_old_reference_logps_equal": true,
+    "safe_sync_passed_no_live_merge": true,
+    "checkpoint_receipt_matches_latest_snapshot": true,
+    "all_checkpoint_files_independently_hashed": true,
+    "frozen_local_release_matches_checkpoint": true,
+    "seed_schedule_first_batch_17_through_48": true
+  },
+  "independent_math": {
+    "method": "Float64 scalar outcome-minus-one response LOO, mask official boundaries, official nonzero-denominator mean/variance with initially-zero variance slots, restore initial zeros; compare every response mean to actual loss trace at ratio1",
+    "old_ref_logps_equal_so_kl_zero": true,
+    "nonzero_count": 12537,
+    "mean": -0.09894141911370917,
+    "variance": 0.23823142194501135,
+    "max_abs_row_meanadv_error": 2.720745106987721e-07,
+    "reference_counts_match": true
+  },
+  "update": {
+    "gradient_norm_before_clip": 0.05414614453911781,
+    "optimizer_steps_this_batch": 1,
+    "adapter_before": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7",
+    "adapter_after": "72a93d194fc7dd2d2dd1eb68cf8b0ebb773f4f7f0058ee0f35e2bbc8d8266612",
+    "normalization_calls": 1,
+    "loss_normalization_calls": 0
+  },
+  "safe_sync": {
+    "passed": true,
+    "live_actor_merge_calls": 0,
+    "adapter_unchanged": true,
+    "frozen_versions_unchanged": true,
+    "sent_parameters": 338,
+    "qkv_and_gate_readback_exact": true,
+    "seconds": 16.334426142275333,
+    "method": "FP32 CPU merged copies, cast to base dtype, no mutation of actor; reset prefix cache",
+    "adapter_sha256": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7"
+  },
+  "checkpoint": {
+    "batch_step": 1,
+    "optimizer_steps": 1,
+    "tokens": 23885,
+    "initial_samples_sha256": "3e2da481981a747cb28493850b5306e1bd16c1095dce39022ccc55b1390fdf4e",
+    "initial_base_sha256": "bfa4bdea5c1c8cc4da1af5a1e9c5a317f676915aa8fc911972cc1587627f69ec",
+    "adapter_sha256": "72a93d194fc7dd2d2dd1eb68cf8b0ebb773f4f7f0058ee0f35e2bbc8d8266612",
+    "release_sha256": "4c1a34c885dfe108bf6e155025a7a853a74bcb32336937e043196b287b0c01f4",
+    "files": {
+      "state.pt": "89af81516e1e5cfe0c74faebefc4229f92496842b479728afb13247c9ef8b243",
+      "adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+      "adapter/README.md": "78126f95e986f22f2cc5ea59277057787d878ef5e59f7d920b443f05b43176f7",
+      "adapter/chat_template.jinja": "c564d12c9977b8942423753b0c409a11f50142508ced170e9fe1c2f5b803cf70",
+      "adapter/tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+      "adapter/adapter_config.json": "d42a5c6d494cb8da6f8c57361e53045806b809a4df702484b33a20b4bdeab6d0",
+      "adapter/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+      "adapter/adapter_model.safetensors": "cc624eb68d6371058c2fa7e17a803db57081caeb575d8acdb74f995f96099063",
+      "adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+    }
+  },
+  "checkpoint_file_verification": {
+    "files": 11,
+    "all_actual_hashes_match": true,
+    "checked_at_utc": "2026-10-23T09:18:24.243946+00:00",
+    "evidence_file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/first_update_checkpoint_hash_checks.json"
+  },
+  "batch_observations": {
+    "responses": 32,
+    "questions": 4,
+    "generated_tokens": 23885,
+    "correct": 10,
+    "accuracy": 0.3125,
+    "empty": 0,
+    "short_content_le32": 0,
+    "truncated": 2,
+    "no_box": 3,
+    "step_count_mean": 10.9375,
+    "step_count_min": 2.0,
+    "step_count_max": 34.0,
+    "groups": {
+      "all_correct": 0,
+      "all_wrong": 1,
+      "mixed": 3,
+      "unknown": 0
+    },
+    "positive_advantage_tokens": 3367,
+    "positive_boundary_tokens": 0,
+    "empty_positive_mass": 0.0,
+    "short_positive_mass": 0.0
+  },
+  "frozen_base_boundary": "First-update commit implies the frozen-code verify_base gradient/version assertions after optimizer step passed. Full post-stage frozen-base byte hash is not yet present in this batch receipt; initial base hash alone does not certify final equality.",
+  "limitations": [
+    "P_PRM stage2 and paired initial-sample equality not yet inspected; this is not the common two-arm gate.",
+    "No empty or <=32-token samples occurred in this batch, so zero positive mass in those categories is absence of examples, not proof of robust handling or no future collapse.",
+    "One training batch outcome accuracy is not held-out performance and cannot compare PRM effectiveness.",
+    "Safe-sync probes verify selected vLLM weights exactly, not full log-probability equivalence between merged vLLM and unmerged actor implementations.",
+    "No optimizer state was deserialized into a model; existing checkpoint bytes were independently hashed."
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "passed": true,
+  "output": "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/eval_verification_20261022T1418Z/verified.json",
+  "arms": {
+    "A": {
+      "checkpoint": "runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+      "adapter_sha256": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+      "exported_adapter_sha256": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+      "final_adapter_check": {
+        "logical_tensors_match": true,
+        "tensor_count": 392,
+        "stdlib_helper_sha256": "1ffb2ccc15d55e3c18a19fb44371f3bb6f5af2a426465d4dc209816faf14bd97",
+        "comparison": "tensor name, dtype, shape, byte length, and payload SHA256; ignores header metadata serialization"
+      },
+      "actor_completion_tokens": 6022435,
+      "optimizer_steps": 284,
+      "datasets": {
+        "math500": {
+          "count": 500,
+          "correct": 270,
+          "accuracy": 0.54,
+          "generated_tokens": 364715,
+          "truncated": 45,
+          "status_counts": {
+            "exact": 240,
+            "missing_or_invalid_box": 14,
+            "symbolic": 195,
+            "truncated": 45,
+            "unit_exact": 1,
+            "unparseable": 5
+          },
+          "failure_types": {
+            "correct": 270,
+            "complete_incorrect": 166,
+            "unparsable": 19,
+            "truncated": 45
+          },
+          "length": {
+            "count": 500,
+            "sum": 364715,
+            "mean": 729.43,
+            "median": 562.5,
+            "p90": 1567.200000000001,
+            "max": 2048
+          },
+          "length_by_failure_type": {
+            "correct": {
+              "count": 270,
+              "sum": 143269,
+              "mean": 530.6259259259259,
+              "median": 461.0,
+              "p90": 904.0999999999999,
+              "max": 2012
+            },
+            "complete_incorrect": {
+              "count": 166,
+              "sum": 124095,
+              "mean": 747.5602409638554,
+              "median": 682.5,
+              "p90": 1291.0,
+              "max": 1833
+            },
+            "unparsable": {
+              "count": 19,
+              "sum": 5191,
+              "mean": 273.2105263157895,
+              "median": 220.0,
+              "p90": 366.5999999999999,
+              "max": 971
+            },
+            "truncated": {
+              "count": 45,
+              "sum": 92160,
+              "mean": 2048.0,
+              "median": 2048.0,
+              "p90": 2048.0,
+              "max": 2048
+            }
+          },
+          "all_recomputed_verdicts_match": true,
+          "predictions_sha256": "febc9a0bb4ec58f499e6dc9bf0e9ab9dc5dd01690a1d8193eec772416fd21670"
+        },
+        "gsm8k": {
+          "count": 1319,
+          "correct": 884,
+          "accuracy": 0.6702047005307051,
+          "generated_tokens": 511819,
+          "truncated": 32,
+          "status_counts": {
+            "exact": 821,
+            "missing_or_invalid_box": 79,
+            "symbolic": 357,
+            "truncated": 32,
+            "unit_exact": 14,
+            "unit_symbolic": 6,
+            "unparseable": 10
+          },
+          "failure_types": {
+            "correct": 884,
+            "complete_incorrect": 314,
+            "unparsable": 89,
+            "truncated": 32
+          },
+          "length": {
+            "count": 1319,
+            "sum": 511819,
+            "mean": 388.03563305534493,
+            "median": 321.0,
+            "p90": 570.6000000000001,
+            "max": 2048
+          },
+          "length_by_failure_type": {
+            "correct": {
+              "count": 884,
+              "sum": 294329,
+              "mean": 332.95135746606337,
+              "median": 313.0,
+              "p90": 496.70000000000005,
+              "max": 1404
+            },
+            "complete_incorrect": {
+              "count": 314,
+              "sum": 135358,
+              "mean": 431.07643312101914,
+              "median": 387.0,
+              "p90": 685.5999999999998,
+              "max": 1555
+            },
+            "unparsable": {
+              "count": 89,
+              "sum": 16596,
+              "mean": 186.47191011235955,
+              "median": 178.0,
+              "p90": 261.40000000000003,
+              "max": 287
+            },
+            "truncated": {
+              "count": 32,
+              "sum": 65536,
+              "mean": 2048.0,
+              "median": 2048.0,
+              "p90": 2048.0,
+              "max": 2048
+            }
+          },
+          "all_recomputed_verdicts_match": true,
+          "predictions_sha256": "021a9ec789d5844b6768a74eed7f56f8b4b88302a48a47605d62de9215b88354"
+        }
+      }
+    },
+    "B": {
+      "checkpoint": "runs/B_corrected_seed17_6M_20261022/checkpoint-280",
+      "adapter_sha256": "c98d03b3a4d67223cf36552cbd1c11bbcf17148b15843fbd1b26b373abfa957f",
+      "exported_adapter_sha256": "c98d03b3a4d67223cf36552cbd1c11bbcf17148b15843fbd1b26b373abfa957f",
+      "final_adapter_check": {
+        "logical_tensors_match": true,
+        "tensor_count": 392,
+        "stdlib_helper_sha256": "1ffb2ccc15d55e3c18a19fb44371f3bb6f5af2a426465d4dc209816faf14bd97",
+        "comparison": "tensor name, dtype, shape, byte length, and payload SHA256; ignores header metadata serialization"
+      },
+      "actor_completion_tokens": 6008457,
+      "optimizer_steps": 280,
+      "datasets": {
+        "math500": {
+          "count": 500,
+          "correct": 269,
+          "accuracy": 0.538,
+          "generated_tokens": 375298,
+          "truncated": 48,
+          "status_counts": {
+            "exact": 239,
+            "missing_or_invalid_box": 8,
+            "symbolic": 200,
+            "truncated": 48,
+            "unit_exact": 1,
+            "unparseable": 4
+          },
+          "failure_types": {
+            "correct": 269,
+            "complete_incorrect": 171,
+            "unparsable": 12,
+            "truncated": 48
+          },
+          "length": {
+            "count": 500,
+            "sum": 375298,
+            "mean": 750.596,
+            "median": 570.0,
+            "p90": 1888.800000000003,
+            "max": 2048
+          },
+          "length_by_failure_type": {
+            "correct": {
+              "count": 269,
+              "sum": 141535,
+              "mean": 526.1524163568773,
+              "median": 450.0,
+              "p90": 900.0000000000003,
+              "max": 2004
+            },
+            "complete_incorrect": {
+              "count": 171,
+              "sum": 130896,
+              "mean": 765.4736842105264,
+              "median": 733.0,
+              "p90": 1282.0,
+              "max": 2042
+            },
+            "unparsable": {
+              "count": 12,
+              "sum": 4563,
+              "mean": 380.25,
+              "median": 293.5,
+              "p90": 462.5,
+              "max": 1517
+            },
+            "truncated": {
+              "count": 48,
+              "sum": 98304,
+              "mean": 2048.0,
+              "median": 2048.0,
+              "p90": 2048.0,
+              "max": 2048
+            }
+          },
+          "all_recomputed_verdicts_match": true,
+          "predictions_sha256": "8707a8d3244e31319425d88e254da3ae51003e507c4e1cfb04f32524b0840835"
+        },
+        "gsm8k": {
+          "count": 1319,
+          "correct": 857,
+          "accuracy": 0.6497346474601972,
+          "generated_tokens": 530592,
+          "truncated": 41,
+          "status_counts": {
+            "exact": 795,
+            "missing_or_invalid_box": 47,
+            "symbolic": 410,
+            "truncated": 41,
+            "unit_exact": 12,
+            "unit_symbolic": 8,
+            "unparseable": 6
+          },
+          "failure_types": {
+            "correct": 857,
+            "complete_incorrect": 368,
+            "unparsable": 53,
+            "truncated": 41
+          },
+          "length": {
+            "count": 1319,
+            "sum": 530592,
+            "mean": 402.26838514025775,
+            "median": 324.0,
+            "p90": 598.6000000000001,
+            "max": 2048
+          },
+          "length_by_failure_type": {
+            "correct": {
+              "count": 857,
+              "sum": 282403,
+              "mean": 329.5250875145858,
+              "median": 314.0,
+              "p90": 497.4,
+              "max": 916
+            },
+            "complete_incorrect": {
+              "count": 368,
+              "sum": 155107,
+              "mean": 421.48641304347825,
+              "median": 356.5,
+              "p90": 715.9000000000001,
+              "max": 1947
+            },
+            "unparsable": {
+              "count": 53,
+              "sum": 9114,
+              "mean": 171.96226415094338,
+              "median": 168.0,
+              "p90": 229.20000000000002,
+              "max": 281
+            },
+            "truncated": {
+              "count": 41,
+              "sum": 83968,
+              "mean": 2048.0,
+              "median": 2048.0,
+              "p90": 2048.0,
+              "max": 2048
+            }
+          },
+          "all_recomputed_verdicts_match": true,
+          "predictions_sha256": "4a6e1aaad49a608d35d18a3c294d8c93f490b7617cdfd82c2da2574e06bd9c87"
+        }
+      }
+    }
+  },
+  "paired_B_minus_A": {
+    "math500": {
+      "n": 500,
+      "difference_pp": -0.2,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.0,
+        3.5999999999999996
+      ],
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 285,
+      "bootstrap_unit": "same question, both arms",
+      "bootstrap_order": "A prediction-file order; B joined by problem_id",
+      "B_only_correct": 46,
+      "A_only_correct": 47,
+      "both_correct": 223,
+      "both_wrong": 184,
+      "failure_type_transitions_A_to_B": {
+        "complete_incorrect -> complete_incorrect": 118,
+        "complete_incorrect -> correct": 25,
+        "complete_incorrect -> truncated": 21,
+        "complete_incorrect -> unparsable": 2,
+        "correct -> complete_incorrect": 34,
+        "correct -> correct": 223,
+        "correct -> truncated": 10,
+        "correct -> unparsable": 3,
+        "truncated -> complete_incorrect": 17,
+        "truncated -> correct": 12,
+        "truncated -> truncated": 16,
+        "unparsable -> complete_incorrect": 2,
+        "unparsable -> correct": 9,
+        "unparsable -> truncated": 1,
+        "unparsable -> unparsable": 7
+      },
+      "limitation": "One training seed. The interval covers sampled questions, not training-seed variability; descriptive failure categories do not establish mathematical causality."
+    },
+    "gsm8k": {
+      "n": 1319,
+      "difference_pp": -2.047005307050796,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.245640636846096,
+        0.0758150113722517
+      ],
+      "bootstrap_draws": 10000,
+      "bootstrap_seed": 285,
+      "bootstrap_unit": "same question, both arms",
+      "bootstrap_order": "A prediction-file order; B joined by problem_id",
+      "B_only_correct": 93,
+      "A_only_correct": 120,
+      "both_correct": 764,
+      "both_wrong": 342,
+      "failure_type_transitions_A_to_B": {
+        "complete_incorrect -> complete_incorrect": 251,
+        "complete_incorrect -> correct": 50,
+        "complete_incorrect -> truncated": 10,
+        "complete_incorrect -> unparsable": 3,
+        "correct -> complete_incorrect": 89,
+        "correct -> correct": 764,
+        "correct -> truncated": 16,
+        "correct -> unparsable": 15,
+        "truncated -> complete_incorrect": 15,
+        "truncated -> correct": 5,
+        "truncated -> truncated": 12,
+        "unparsable -> complete_incorrect": 13,
+        "unparsable -> correct": 38,
+        "unparsable -> truncated": 3,
+        "unparsable -> unparsable": 35
+      },
+      "limitation": "One training seed. The interval covers sampled questions, not training-seed variability; descriptive failure categories do not establish mathematical causality."
+    }
+  }
+}

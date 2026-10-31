@@ -1,0 +1,122 @@
+{
+  "status": "analysis_and_proposal_only_no_execution",
+  "training_launched": false,
+  "new_model_calls": 0,
+  "arms": {
+    "A": {
+      "optimizer_updates": 48,
+      "unique_training_questions": 192,
+      "training_question_fraction": 0.027456027456027456,
+      "response_rows": 1536,
+      "group_counts": {
+        "mixed": 152,
+        "all_wrong": 33,
+        "all_correct": 7
+      },
+      "process_nonzero_rows": 0,
+      "wrong_positive_advantage_rows": 0,
+      "KL_first16_mean": 0.0002647156438655429,
+      "KL_last16_mean": 0.00027515421894008796,
+      "KL_max": 0.00047717832239868585,
+      "grad_norm_median": 0.04146547429263592,
+      "clip_region_max": 0.0
+    },
+    "C_mix": {
+      "optimizer_updates": 48,
+      "unique_training_questions": 192,
+      "training_question_fraction": 0.027456027456027456,
+      "response_rows": 1536,
+      "group_counts": {
+        "mixed": 158,
+        "all_wrong": 31,
+        "all_correct": 3
+      },
+      "process_nonzero_rows": 1536,
+      "wrong_positive_advantage_rows": 82,
+      "KL_first16_mean": 0.00025126599236280356,
+      "KL_last16_mean": 0.0002900990041325713,
+      "KL_max": 0.0004251292568824283,
+      "grad_norm_median": 0.05512956343591213,
+      "clip_region_max": 0.0,
+      "valid_scored_only_mixed_groups": 144,
+      "mean_within_group_outcome_rank_AUROC": 0.8649305555555555,
+      "pair_weighted_outcome_rank_AUROC": 0.86084142394822,
+      "outcome_ranking_caution": "Association with final-answer correctness; not evidence that it ranks process validity among answer-correct solutions."
+    },
+    "C_bounded": {
+      "optimizer_updates": 48,
+      "unique_training_questions": 192,
+      "training_question_fraction": 0.027456027456027456,
+      "response_rows": 1536,
+      "group_counts": {
+        "mixed": 153,
+        "all_wrong": 36,
+        "all_correct": 3
+      },
+      "process_nonzero_rows": 614,
+      "wrong_positive_advantage_rows": 0,
+      "KL_first16_mean": 0.0002385367684567541,
+      "KL_last16_mean": 0.00026772630122096075,
+      "KL_max": 0.00033974358575505903,
+      "grad_norm_median": 0.048718659207224846,
+      "clip_region_max": 0.0,
+      "absolute_process_coefficient_mass": 25.888538728561798,
+      "absolute_outcome_coefficient_mass": 1007.1336589157581,
+      "absolute_process_to_outcome_mass_ratio": 0.02570516683598125,
+      "correct_absolute_process_q50_q90_q99_max": [
+        0.03323906660079956,
+        0.09583296775817873,
+        0.14439950227737405,
+        0.16758163273334503
+      ],
+      "coefficient_caution": "Coefficient mass is not parameter gradient magnitude, causal contribution, or guaranteed probability change.",
+      "valid_scored_only_mixed_groups": 133,
+      "mean_within_group_outcome_rank_AUROC": 0.8668009308986753,
+      "pair_weighted_outcome_rank_AUROC": 0.8582028029678483,
+      "outcome_ranking_caution": "Association with final-answer correctness; not evidence that it ranks process validity among answer-correct solutions."
+    }
+  },
+  "historical_6M_A": {
+    "scores_under_its_recorded_protocol": {
+      "math500": 0.54,
+      "gsm8k": 0.6702047005307051
+    },
+    "vllm_memory_utilization": 0.3,
+    "current_training_vllm_memory_utilization": 0.15,
+    "same_protocol_reevaluation_required_before_learning_curve_claim": true,
+    "not_a_matched_final_control_for_current_C_arms": true
+  },
+  "proposed_followup": {
+    "proposed_only": true,
+    "main_arms": [
+      "A",
+      "C_mix",
+      "C_bounded"
+    ],
+    "training_seeds": [
+      17,
+      42
+    ],
+    "existing_seed17_updates": 48,
+    "common_intermediate_updates": 144,
+    "common_final_updates": 288,
+    "questions_per_update": 4,
+    "final_question_presentations_per_arm": 1152,
+    "estimated_tokens_total_six_runs": 36190476,
+    "estimated_additional_tokens": 33174603,
+    "linear_additional_training_hours_at_observed_rates": 28.95168221188916,
+    "scheduled_accounting": "Equal updates and prompt schedule are primary. 3M/6M are approximate token equivalents, not exact identical token totals.",
+    "cost_caution": "Shared-GPU rates vary. Extrapolation is not a throughput benchmark or completion guarantee."
+  },
+  "inputs_sha256": {
+    "execution/final_four_eval_20261029/comparison.json": "e9a31267c9302608d26759b06290592fde55554a00e2513d87d2f921d569e293",
+    "execution/final_four_eval_20261029/evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/rollouts.jsonl": "15a3bcb8135b2b5357cdb063911d2fb28305fe8c0fa10241c3646a68430bb7d9",
+    "execution/final_four_eval_20261029/evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/metrics.jsonl": "e2c340b716c38366fe30941bc935718639401a614c20a470de250b3d7d2bd0bc",
+    "execution/final_four_eval_20261029/evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/rollouts.jsonl": "4a5eb52b34686bc4819956ca01df90a1e5caccd4fd89df14bdb1f8f172403aa6",
+    "execution/final_four_eval_20261029/evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/metrics.jsonl": "8521e2c95eee22d2e334e85414160049ec13f35c814a41c36b145450fff68ea4",
+    "execution/final_four_eval_20261029/evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/rollouts.jsonl": "44e2ae63131bbfd162bb3fb6bf06b1ddc727f439a50de76a4529dd516e07610e",
+    "execution/final_four_eval_20261029/evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/metrics.jsonl": "024df72ea8b7481190619cb78c50e225c0eddc93de58e4653b434994346d2b30",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/A_corrected_seed17_6M_20261022/evaluation/evaluation_summary.json": "f20426af8860bc6582a7d4057a1e101776e9c42db63f7a33f2e80724b5471c06",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/A_corrected_seed17_6M_20261022/run_config.json": "f9708fe8a7fec69d6afacb6476bd9c7acf657e837c5ac1dbb3c59d736b0afd6f"
+  }
+}

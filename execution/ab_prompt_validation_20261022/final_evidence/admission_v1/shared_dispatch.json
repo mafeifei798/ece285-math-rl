@@ -1,0 +1,19 @@
+{
+  "status": "waiting_for_free_memory",
+  "pid": 214186,
+  "child_pid": null,
+  "started_unix": 1792699800.3931787,
+  "heartbeat_unix": 1792699950.9750047,
+  "training": false,
+  "script_sha256": "f0d942cfcf8a00a2a68fd0bef7fc9de4526eb788f13b94fe7e6af1079c17aded",
+  "release_sha256": "1a5f57dcf2823f6fc91b2e37baf66bef96851ab809e09253fcb2d69fc1df3c84",
+  "minimum_free_MiB": 40000,
+  "poll_seconds": 30,
+  "maximum_wait_seconds": 43200,
+  "gpu_check": {
+    "free_MiB": 37955,
+    "used_MiB": 43198,
+    "utilization_percent": 100,
+    "admitted": false
+  }
+}

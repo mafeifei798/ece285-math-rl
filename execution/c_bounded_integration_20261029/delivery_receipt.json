@@ -1,0 +1,12 @@
+{
+  "delivered_unix": 1793262450.0237343,
+  "report": "/srv/research/ece285_math_rl_project/audits/C_bounded_integration_20261029_report/review.html",
+  "formal_RL": false,
+  "D_adaptation": false,
+  "optimizer_steps": 0,
+  "source_CD_files_verified_unchanged": 10,
+  "original_CD_release_sha256": "b35e38b2addc45b36703812b47bc1595b9a36a34a68801baa2d318c82893cc8e",
+  "live_signal_sha256": "995cd1531597ec4b49ca078758426496af2976ec5bfd0e0b7d43c27bf1c6159c",
+  "report_sha256": "a53801985f3300ec22b6003ec9819c9c60a5e1bcff5c30e0112cd946d3bd8c74",
+  "precision_cause": "Inherited TrainingArguments tf32=True; fixed only within frozen C scoring context"
+}

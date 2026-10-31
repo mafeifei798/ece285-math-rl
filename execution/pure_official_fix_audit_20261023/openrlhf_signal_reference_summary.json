@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+  "scope": "Fixed canonical-input OpenRLHF reward/baseline/advantage CPU reference; not end-to-end reproduction",
+  "model_forwards": 0,
+  "new_generations": 0,
+  "optimizer_steps": 0,
+  "gpu_access": false,
+  "selected_saved_responses": 288,
+  "usable_responses": 256,
+  "batches": 8,
+  "empty_responses": 8,
+  "skipped_batches": [
+    "B:210"
+  ],
+  "raw_token_ids_reconstructed": true,
+  "kl_coefficient": 0.0,
+  "source_functions": [
+    {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf_extra/openrlhf/utils/utils.py",
+      "sha256": "c5de92d748498b20ecf673bab91c92c71e26dcc3c0dce180ce7c503f983b2924",
+      "function": "right_padding",
+      "class_name": null,
+      "start_line": 129,
+      "end_line": 146
+    },
+    {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf_extra/openrlhf/utils/utils.py",
+      "sha256": "c5de92d748498b20ecf673bab91c92c71e26dcc3c0dce180ce7c503f983b2924",
+      "function": "turn_process_reward_logits_to_reward",
+      "class_name": null,
+      "start_line": 149,
+      "end_line": 183
+    },
+    {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+      "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
+      "function": "process_experiences",
+      "class_name": "NaiveExperienceMaker",
+      "start_line": 608,
+      "end_line": 736
+    }
+  ],
+  "input_provenance": {
+    "inputs": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
+      "sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d"
+    },
+    "aligned": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/qwen_single/scored.jsonl",
+      "sha256": "3681d0cdf0d017d877339eaeb6481421bf4faa23b4b09570afba49f99d811d72"
+    },
+    "scored": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/scoring_single/scored.jsonl",
+      "sha256": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5"
+    }
+  },
+  "script_sha256": "84b21e004a234b9d5495574cd86a3838d54c8ed6e497765dd155d2aa8385c616",
+  "tests_passed": true,
+  "aggregate": {
+    "OPENRLHF_VR": {
+      "raw_empty_positive": 0,
+      "raw_empty_range": [
+        -0.8571428656578064,
+        0.0
+      ],
+      "normalized_empty_positive": 0,
+      "normalized_empty_zero": 8,
+      "normal_terminal_boundaries_zero": 256,
+      "all_boundary_tokens_zero": true,
+      "max_raw_oracle_error": 3.405979698278827e-08,
+      "max_norm_oracle_error": 2.3965225270927704e-07
+    },
+    "OPENRLHF_PURE_NATIVE": {
+      "raw_empty_positive": 8,
+      "raw_empty_range": [
+        0.7680785655975342,
+        0.9974712133407593
+      ],
+      "normalized_empty_positive": 0,
+      "normalized_empty_zero": 8,
+      "normal_terminal_boundaries_zero": 256,
+      "all_boundary_tokens_zero": true,
+      "max_raw_oracle_error": 3.6887589216494376e-07,
+      "max_norm_oracle_error": 4.876725117064495e-07
+    },
+    "OPENRLHF_PURE_RL_PROMPT": {
+      "raw_empty_positive": 8,
+      "raw_empty_range": [
+        0.9022843837738037,
+        0.9790217280387878
+      ],
+      "normalized_empty_positive": 0,
+      "normalized_empty_zero": 8,
+      "normal_terminal_boundaries_zero": 256,
+      "all_boundary_tokens_zero": true,
+      "max_raw_oracle_error": 3.1812705228451144e-07,
+      "max_norm_oracle_error": 3.316617736004446e-07
+    }
+  },
+  "limitations": [
+    "Selected existing A/B rollouts are not representative new PURE rollouts and cannot establish learning or accuracy gains.",
+    "Canonical steps, fixed input formatting and reconstructed positions are reused; official native token splitting and PRM forward are not rerun.",
+    "All original verifier outcomes remain fixed; VR uses all available answers, PRM-only uses none; this is not the published PRMVR-10% training recipe.",
+    "Actual-other-response-length baseline and coefficient one follow this OpenRLHF branch, differing from the pinned veRL branch.",
+    "Normal EOS and all supplied boundaries also receive zero direct advantage; empty scores still enter peers baseline.",
+    "Nonempty unhelpful responses and shared-parameter changes in EOS probability are not prevented.",
+    "No old A/B reward computation or accuracy result is explained causally by this counterfactual."
+  ]
+}

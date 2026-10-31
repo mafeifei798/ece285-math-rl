@@ -1,0 +1,101 @@
+{
+  "failure": {
+    "error": "Tensor-likes are not close!\n\nMismatched elements: 3 / 32 (9.4%)\nGreatest absolute difference: 2.9474496841430664e-05 at index (6,) (up to 2e-05 allowed)\nGreatest relative difference: 0.0004821676993742585 at index (1,) (up to 2e-05 allowed)",
+    "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/training_b/train_b.py\", line 264, in main\n    result = trainer.train(resume_from_checkpoint=str(source) if source else None)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/transformers/trainer.py\", line 2328, in train\n    return inner_training_loop(\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/transformers/trainer.py\", line 2672, in _inner_training_loop\n    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/transformers/trainer.py\", line 4003, in training_step\n    inputs = self._prepare_inputs(inputs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/extras/profiling.py\", line 98, in wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/trainer/grpo_trainer.py\", line 992, in _prepare_inputs\n    generation_batch = self._generate_and_score_completions(generation_batch)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/operations/continue_baseline.py\", line 119, in _generate_and_score_completions\n    output = super()._generate_and_score_completions(inputs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/training_b/train_b.py\", line 66, in _generate_and_score_completions\n    torch.testing.assert_close(output[\"advantages\"], expected.to(output[\"advantages\"].device), atol=2e-5, rtol=2e-5)\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/testing/_comparison.py\", line 1587, in assert_close\n    raise error_metas[0].to_error(msg)\nAssertionError: Tensor-likes are not close!\n\nMismatched elements: 3 / 32 (9.4%)\nGreatest absolute difference: 2.9474496841430664e-05 at index (6,) (up to 2e-05 allowed)\nGreatest relative difference: 0.0004821676993742585 at index (1,) (up to 2e-05 allowed)\n",
+    "time": 1792606826.7967696
+  },
+  "controller": {
+    "status": "failed",
+    "pid": 1898321,
+    "started_unix": 1792577694.9436934,
+    "scope": "Only B seed 17, pilot, 24M training and the three fixed milestone evaluations. No C/D or additional seeds.",
+    "target_completion_tokens": 24000000,
+    "A_sources_unchanged": true,
+    "replication_gate_executed": false,
+    "heartbeat_unix": 1792606831.5001082,
+    "child_pid": null,
+    "gpu": 0,
+    "last_child_exit_code": 1,
+    "error": "training_24M exited 1; pipeline stopped, checkpoint/logs retained",
+    "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/training_b/run_b.py\", line 171, in main\n    execute(\"training_24M\", [\"training_b/train_b.py\", \"--run-dir\", str(run), \"--target\", \"24000000\",\n  File \"/srv/research/ece285_math_rl_project/training_b/run_b.py\", line 117, in execute\n    assert code == 0, f\"{label} exited {code}; pipeline stopped, checkpoint/logs retained\"\n           ^^^^^^^^^\nAssertionError: training_24M exited 1; pipeline stopped, checkpoint/logs retained\n",
+    "finished_unix": 1792606831.500107
+  },
+  "last_progress": {
+    "generated_completion_tokens": 14236970,
+    "generated_completions": 21728,
+    "generated_groups": 2716,
+    "mixed_reward_groups": 2712,
+    "correct_completions": 9269,
+    "truncated_completions": 1284,
+    "prm_input_tokens": 12279008,
+    "prm_padded_tokens": 18256556,
+    "prm_scored_completions": 18510,
+    "native_steps": 194680,
+    "single_step_completions": 1336,
+    "no_double_newline_completions": 1732,
+    "prm_forward_seconds": 630.6203639442101,
+    "reward_status_counts": {
+      "symbolic": 10145,
+      "truncated": 1284,
+      "exact": 8365,
+      "missing_or_invalid_box": 1670,
+      "unparseable": 264
+    },
+    "outcome_group_counts": {
+      "mixed": 2118,
+      "mixed_has_invalid": 1392,
+      "mixed_all_valid": 726,
+      "all_wrong": 481,
+      "all_wrong_has_invalid": 391,
+      "all_wrong_all_valid": 90,
+      "all_correct": 117,
+      "all_correct_all_valid": 117
+    },
+    "last_batch": {
+      "generated_completion_tokens": 27524,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 4,
+      "correct_completions": 3,
+      "truncated_completions": 4,
+      "native_steps": 337,
+      "single_step_completions": 4,
+      "no_double_newline_completions": 4,
+      "prm_forward_seconds": 1.3148273257538676,
+      "prm_input_tokens": 21703,
+      "prm_padded_tokens": 38632,
+      "prm_scored_completions": 28
+    },
+    "global_step": 679,
+    "elapsed_seconds": 11229.59102723701,
+    "target_completion_tokens": 24000000,
+    "effective_completion_tokens_per_second": 732.3864226267889,
+    "torch_peak_allocated_GiB": 34.45738935470581,
+    "torch_peak_reserved_GiB": 35.48046875,
+    "resumed_from_global_step": 285,
+    "source_completion_tokens": 6012570,
+    "continuation_generated_completion_tokens": 8224400
+  },
+  "checkpoints": [
+    {
+      "path": "/srv/research/ece285_math_rl_project/runs/B_seed17_24M/checkpoint-620",
+      "step": 620,
+      "tokens": 13089590,
+      "required_files_present": true
+    },
+    {
+      "path": "/srv/research/ece285_math_rl_project/runs/B_seed17_24M/checkpoint-640",
+      "step": 640,
+      "tokens": 13452312,
+      "required_files_present": true
+    },
+    {
+      "path": "/srv/research/ece285_math_rl_project/runs/B_seed17_24M/checkpoint-660",
+      "step": 660,
+      "tokens": 13853973,
+      "required_files_present": true
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "action": "Read-only capture; no B stop/restart/source change"
+}

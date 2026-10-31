@@ -1,0 +1,74 @@
+{
+  "qwen": {
+    "repo": "Qwen/Qwen2.5-Math-PRM-7B",
+    "revision": "0610740060112df12585d00a1c5f4624d2f59051",
+    "config": {
+      "architectures": [
+        "Qwen2ForProcessRewardModel"
+      ],
+      "attention_dropout": 0.0,
+      "auto_map": {
+        "AutoConfig": "configuration_qwen2_rm.Qwen2RMConfig",
+        "AutoModel": "modeling_qwen2_rm.Qwen2ForProcessRewardModel"
+      },
+      "bos_token_id": 151643,
+      "eos_token_id": 151645,
+      "hidden_act": "silu",
+      "hidden_size": 3584,
+      "initializer_range": 0.02,
+      "intermediate_size": 18944,
+      "max_position_embeddings": 4096,
+      "max_window_layers": 28,
+      "model_type": "qwen2",
+      "num_attention_heads": 28,
+      "num_hidden_layers": 28,
+      "num_key_value_heads": 4,
+      "rms_norm_eps": 1e-05,
+      "rope_theta": 10000.0,
+      "sliding_window": 131072,
+      "tie_word_embeddings": false,
+      "torch_dtype": "bfloat16",
+      "transformers_version": "4.37.0",
+      "use_cache": true,
+      "use_mrope": false,
+      "use_sliding_window": false,
+      "vocab_size": 152064
+    },
+    "sha256": "70d5ef2f21af53e6c95252d8838f4898fbac6c83708a67c9c7c3f83f75318bbe"
+  },
+  "pure": {
+    "repo": "jinachris/PURE-PRM-7B",
+    "revision": "b0cce6763f2317762c9cb46720c8fe7b07f44a88",
+    "config": {
+      "_name_or_path": "/mnt/petrelfs/chengjie/ceph2/qwen25-math-7b-PRM800k-bs128-fixllm-lr1e-4-epoch-3-stage1/",
+      "architectures": [
+        "Qwen2ForTokenClassification"
+      ],
+      "attention_dropout": 0.0,
+      "bos_token_id": 151643,
+      "eos_token_id": 151643,
+      "hidden_act": "silu",
+      "hidden_size": 3584,
+      "initializer_range": 0.02,
+      "intermediate_size": 18944,
+      "max_position_embeddings": 4096,
+      "max_window_layers": 28,
+      "model_type": "qwen2",
+      "num_attention_heads": 28,
+      "num_hidden_layers": 28,
+      "num_key_value_heads": 4,
+      "rms_norm_eps": 1e-06,
+      "rope_scaling": null,
+      "rope_theta": 10000,
+      "sliding_window": null,
+      "tie_word_embeddings": false,
+      "torch_dtype": "bfloat16",
+      "transformers_version": "4.48.0",
+      "use_cache": false,
+      "use_mrope": false,
+      "use_sliding_window": false,
+      "vocab_size": 152064
+    },
+    "sha256": "e0cf3f76180e964b23c3751acca10ff49bfcdca33e075b867ba3d8962cb4978c"
+  }
+}

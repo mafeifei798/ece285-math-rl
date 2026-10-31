@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "tests_passed": 17,
+  "offline_rows": 9120,
+  "paired_scored_rows": 3713,
+  "new_training": false,
+  "new_rollouts": 0,
+  "model_updates": 0,
+  "B_resumed": false,
+  "originals_unchanged": true,
+  "independent_QA_passed": true
+}

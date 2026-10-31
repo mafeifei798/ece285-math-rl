@@ -1,0 +1,25 @@
+{
+  "actor_adapter_sha256": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7",
+  "prm_load_preserved_actor_adapter": true,
+  "python_numpy_torch_rng_restored": true,
+  "actor_prm_parameters_disjoint": true,
+  "numeric_audit": {
+    "original_method_ast_sha256": "21f28f2b94e8364642bc016b80d0ade1fb8994c3f7b5d0d0807166bf9f106d78",
+    "replaced_statement_index": 5,
+    "changes_reward_or_loss": false,
+    "remaining_method_statements_identical": true,
+    "starts_training": false
+  },
+  "PRM_frozen": true,
+  "single_gpu": true,
+  "argument_changes": {
+    "output_dir": [
+      "/srv/research/ece285_math_rl_project/runs/A_seed17",
+      "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M"
+    ],
+    "logging_dir": [
+      "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+      "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/tensorboard"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "status": "CPU_ACCEPTED_NO_NEW_TRAINING",
+  "files": {
+    "signals.py": "b3b31532537d134ff8fc7a042f4c775e14e67a9d6cb4b6da7d6276c8dd4b6f55",
+    "papo_reference.py": "ec9e4e3af792647edebaee108339ced0a1d5a4125f9bf746aa912ae1f77002e2",
+    "LICENSE": "48d0bd1eba2f0d580017f4afc79732d3c6bc9acc4fe1fb5788670c7b1fa52148",
+    "diagnostics.py": "0a6ffcbe6447da8ae139c528e9f0b8ba88d5bab5258d4fd5e74e841d3d823538",
+    "replay_rollouts.py": "e795f0531dbd042cd7be4a687e78b56e7c0d9f10354e977b3d20eed2ca735dd1",
+    "validate.py": "1204833498c29f77d2e3f93b3892f7120ea0dbf1175f936319f25e9dc56aead9",
+    "NOTICE.txt": "e595e93b55c3531b9a9f585b5cdb5c862028e70b0c8438bf1458607830fba754",
+    "trainer_adapter.py": "99943536ffddcbad6f28dd6b157e4060ad5c15d10430b244e692f15ceab41a1b",
+    "protocol.json": "d9f8a714a0c379d9383228aa3386f163331b9b04ede316768d1a875ea2cfe52d",
+    "README.txt": "8071a93fdae88a82d01805134ecd096bf16aaf97073c85029637ab625c043f98"
+  },
+  "CPU_runtime": {
+    "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "torch": "2.8.0",
+    "numpy": "2.3.0"
+  },
+  "official_PAPO_commit": "7d260f0a7a6e23d289e32bbc96f80408dddfa1d5",
+  "current_active_code_read_only": "experiments/c_bounded_pilot_20261029_v2",
+  "preservation": {
+    "train_arm.py": "05ab39464b3fb9ad0e707f6df39f841e4c6168f2e58b45961ac1b410f9b079d5",
+    "controller.py": "8202ab23edf897c466abcfcd9e30ee5e1d0e4038bbfec31a26ee6ccd450f4e70",
+    "advantages.py": "b8a1d92f34b6295c25ff6b1db96888fb38fa7fe58aff8768271011a9b555c982",
+    "runtime.py": "b941c3a694d664df67a9122c32047934ae6920c298953c90ccd0c6734da2d90e",
+    "release.json": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+    "protocol.json": "f8137b55c60b95613ef09bf36e749a871b305dad674013c38896a4801fed72c4",
+    "README.txt": "187e32b2ff6dbeb0904bea62c91c59116251e89d159d1f8e4c002961412e8dac",
+    "evaluate.py": "1a1eeedb5a016f6ed221684010a3a45d1ea89d7ee35bc2fddb4f6c1200e9cc95",
+    "pilot_common.py": "dadf1d2d7bd22c090bd7c9a27d8bd34649984b81fbafeb3f593efa815dda779c",
+    "analyze.py": "f7e3a22a66585c4404aad32c1765c8154582a650eae0dc0521b9ac5f9cfdf2e7",
+    "preflight.py": "723e4b52e9b3c819bc74697eee170cb67ee7b5da1ef0ac7d49c8d1d23e718fdd"
+  },
+  "receipt_sha256": "de4cbb3bcf02a16dfb3fd0a604e4b69d432747c5158483910068b085c2a7ae71",
+  "new_training_tokens_allocated": 0
+}

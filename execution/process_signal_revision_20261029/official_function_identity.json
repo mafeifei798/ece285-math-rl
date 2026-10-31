@@ -1,0 +1,7 @@
+{
+  "official_function_AST_identical": true,
+  "commit": "7d260f0a7a6e23d289e32bbc96f80408dddfa1d5",
+  "file": "verl/verl/trainer/ppo/core_algos.py:333-481",
+  "upstream_blob": "a217ada4182dd918b3d0db1b4d45a093445e0868",
+  "modifications": "isolated imports and identity registry only; no function-body change"
+}

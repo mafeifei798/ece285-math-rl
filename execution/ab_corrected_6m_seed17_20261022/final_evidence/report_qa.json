@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-22T14:49:16.823670+00:00",
+  "numerical_sources": "eval_audit/verified.json, signal_audit/analysis.json, training_audit/A.json/B.json, case_review/*",
+  "html_tags_balanced": true,
+  "local_link_and_image_count": 19,
+  "all_local_references_exist": true,
+  "plot_visually_inspected": true,
+  "full_html_browser_render": "not inspected; file:// acquisition blocked by browser URL security policy; no workaround attempted",
+  "official_evaluation_unchanged": true,
+  "reviewer_count_for_44_7_counts": 2,
+  "limits": "Strict semantic classification is assistant review, not independent human gold labels."
+}

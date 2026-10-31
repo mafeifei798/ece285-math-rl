@@ -1,0 +1,6 @@
+{
+  "upstream_v0231_blob": "7c4e5d265bec323f7e8e1eb1657ae450fb4f5e4b",
+  "local_vendor_blob": "7c4e5d265bec323f7e8e1eb1657ae450fb4f5e4b",
+  "byte_identical": true,
+  "local_sha256": "f217183c84be9b38b23454920eb1b914726aa3c4b9dd4c076d455bdaa67bf1b8"
+}

@@ -1,0 +1,309 @@
+{
+  "pinned_commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "paper_revision": "2504.15275v3",
+  "findings": [
+    {
+      "id": "empty_terminal_step_is_official",
+      "claim": "Pinned PURE always creates a final reward position, including EOS-only responses. It replaces that EOS with newline for PRM scoring; there is no content-nonempty check.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/fsdp_workers.py",
+          "lines": [
+            1357,
+            1397
+          ],
+          "sha256": "f9f7ab7d96ad7aec4910f821e7295753fcee7dcfcdca732bfe3ad2073ca0774f"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/fsdp_workers.py",
+          "lines": [
+            1420,
+            1441
+          ],
+          "sha256": "f9f7ab7d96ad7aec4910f821e7295753fcee7dcfcdca732bfe3ad2073ca0774f"
+        }
+      ]
+    },
+    {
+      "id": "eos_is_a_valid_action",
+      "claim": "EOS mask includes the first EOS. The actor uses that response mask unchanged in clipped PPO loss; no empty/short-answer or EOS-only loss exclusion was found in these paths.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/utils/torch_functional.py",
+          "lines": [
+            150,
+            167
+          ],
+          "sha256": "cf9ecbfa6afed9981e3c14cea740509cc398da18250f7f2f990a2f56107beaae"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+          "lines": [
+            201,
+            235
+          ],
+          "sha256": "0526302a68d34d8c50687032136ac8b958a17efaf76d7e116efbc1d1ed94098b"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/actor/dp_actor.py",
+          "lines": [
+            233,
+            277
+          ],
+          "sha256": "c56303913c3d2a41200b2a91fd12ac45c253e6206b6a07980fbce91656fa5130"
+        }
+      ]
+    },
+    {
+      "id": "no_native_empty_reward_override",
+      "claim": "Blank reward manager adds zero VR. Prime reward manager adds terminal answer-correctness reward; optional repeat punishment is not a short-output gate and defaults false.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/reward_manager/blank.py",
+          "lines": [
+            68,
+            74
+          ],
+          "sha256": "de67db879eaf67a59dbce76fc97d032c33d6582ce67ca7e46693b3e9e98ca27a"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/reward_manager/prime.py",
+          "lines": [
+            103,
+            161
+          ],
+          "sha256": "f96270b7a204fb7cf7a2ec75b1263a2f32b71da6093937243f3c6a6177617693"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/config/ppo_trainer.yaml",
+          "lines": [
+            148,
+            152
+          ],
+          "sha256": "ad15e67b4a474dcc2804cfed8f13019e575f7481d913cb069e555506e3639874"
+        }
+      ]
+    },
+    {
+      "id": "singleton_minform",
+      "claim": "At the sole step of an EOS-only response, softmin weight is exactly one. The positive signed PRM score survives the official transform; at coefficient0.5 the task reward is0.5r.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/fsdp_workers.py",
+          "lines": [
+            1526,
+            1539
+          ],
+          "sha256": "f9f7ab7d96ad7aec4910f821e7295753fcee7dcfcdca732bfe3ad2073ca0774f"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/ppo/ray_trainer.py",
+          "lines": [
+            1194,
+            1204
+          ],
+          "sha256": "e03a99a04e0c88e8275464adbc269750c920ec36b001e0b12ef2ba1465f7b1ad"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/config/ppo_trainer.yaml",
+          "lines": [
+            148,
+            150
+          ],
+          "sha256": "ad15e67b4a474dcc2804cfed8f13019e575f7481d913cb069e555506e3639874"
+        }
+      ]
+    },
+    {
+      "id": "one_whitening",
+      "claim": "RLOO baseline uses total peer token returns divided by (G-1)*padded response width. Advantages are whitened once if enabled; PPO loss consumes them without another normalization.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/ppo/core_algos.py",
+          "lines": [
+            205,
+            229
+          ],
+          "sha256": "1d28d55bb213594a987762a1871557cf12353d6e51c07a9f35257050986b0913"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/ppo/core_algos.py",
+          "lines": [
+            318,
+            328
+          ],
+          "sha256": "1d28d55bb213594a987762a1871557cf12353d6e51c07a9f35257050986b0913"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/actor/dp_actor.py",
+          "lines": [
+            238,
+            254
+          ],
+          "sha256": "c56303913c3d2a41200b2a91fd12ac45c253e6206b6a07980fbce91656fa5130"
+        }
+      ]
+    },
+    {
+      "id": "no_minimum_generation_in_recipe",
+      "claim": "Sampling kwargs include max_tokens and config fields but the pinned recipe contains no min_tokens. ignore_eos is false. This does not enforce a nonempty answer.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+          "lines": [
+            120,
+            136
+          ],
+          "sha256": "0526302a68d34d8c50687032136ac8b958a17efaf76d7e116efbc1d1ed94098b"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/config/ppo_trainer.yaml",
+          "lines": [
+            58,
+            85
+          ],
+          "sha256": "ad15e67b4a474dcc2804cfed8f13019e575f7481d913cb069e555506e3639874"
+        }
+      ]
+    },
+    {
+      "id": "curriculum_is_not_short_filter",
+      "claim": "remove_extreme retains entire prompt groups whose VR mean lies strictly between0 and1. It is disabled when reward_manager=blank (PURE-PRM). It does not detect individual empty or short answers inside mixed groups.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_code_review/verl/workers/curriculum_learning/base.py",
+          "lines": [
+            14,
+            38
+          ],
+          "sha256": "49380ddf2d4c75943970f0a1432b63dfc3f95c0b64c206b6bf29e2f9f9aada5d"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_code_review/verl/workers/curriculum_learning/remove_extreme.py",
+          "lines": [
+            6,
+            13
+          ],
+          "sha256": "dd0bed788be5f6092e4100385fb644a3a2a7a943680f22c790ca537453f41688"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/ppo/ray_trainer.py",
+          "lines": [
+            1133,
+            1146
+          ],
+          "sha256": "e03a99a04e0c88e8275464adbc269750c920ec36b001e0b12ef2ba1465f7b1ad"
+        }
+      ]
+    },
+    {
+      "id": "code_vs_paper_generation_length",
+      "claim": "Pinned verl YAML response width is7168 plus prompt1024, model context8192. Paper v3 section4.2 reports maximum generation8192. Existing2048 is a resource adaptation, not the literal paper or pinned recipe.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/config/ppo_trainer.yaml",
+          "lines": [
+            7,
+            8
+          ],
+          "sha256": "ad15e67b4a474dcc2804cfed8f13019e575f7481d913cb069e555506e3639874"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/config/ppo_trainer.yaml",
+          "lines": [
+            64,
+            76
+          ],
+          "sha256": "ad15e67b4a474dcc2804cfed8f13019e575f7481d913cb069e555506e3639874"
+        }
+      ],
+      "paper": "https://arxiv.org/html/2504.15275v3#S4.SS2"
+    },
+    {
+      "id": "code_vs_paper_vr_baseline",
+      "claim": "Paper Eq7 applies ordinary response-level leave-one-out baseline to VR and token-level baseline to PRM. Pinned verl combines task reward tensors before calling one token-level RLOO function, so VR also uses the token-width baseline. Existing integration follows the pinned function; switching to Eq7 is an explicit paper-aligned variant, not evidence of an adapter bug.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/ppo/ray_trainer.py",
+          "lines": [
+            1194,
+            1225
+          ],
+          "sha256": "e03a99a04e0c88e8275464adbc269750c920ec36b001e0b12ef2ba1465f7b1ad"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/trainer/ppo/core_algos.py",
+          "lines": [
+            205,
+            229
+          ],
+          "sha256": "1d28d55bb213594a987762a1871557cf12353d6e51c07a9f35257050986b0913"
+        }
+      ],
+      "paper": "https://arxiv.org/html/2504.15275v3#S3.SS4"
+    },
+    {
+      "id": "gt10_not_gate",
+      "claim": "The pinned PrimeRewardManager itself scores every supplied ground-truth answer; it contains no10percent selection. Paper10percent availability needs separate data/eligibility wiring. Adding answer-correctness assistance changes P-PRM to an official mixed reward variant, not a reward-neutral bug fix.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/verl/workers/reward_manager/prime.py",
+          "lines": [
+            118,
+            137
+          ],
+          "sha256": "f96270b7a204fb7cf7a2ec75b1263a2f32b71da6093937243f3c6a6177617693"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/README.md",
+          "lines": [
+            79,
+            90
+          ],
+          "sha256": "f6c3edc397eab5d14dc13ecbaec41002f89dc93fd3d41041c5e8efedd1a50c1b"
+        }
+      ],
+      "paper": "https://arxiv.org/html/2504.15275v3#S4.SS2"
+    },
+    {
+      "id": "shorter_than_10_claim_unverified",
+      "claim": "No >10-token condition was found in the inspected pinned verl training paths, PRM/eval/bon.py, PRM/eval/process_bench.py, eval scripts, or curriculum files. Do not claim such a filter exists in PURE RL without naming a separate exact source/revision.",
+      "sources": [
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/PRM/eval/bon.py",
+          "lines": [
+            52,
+            101
+          ],
+          "sha256": "d9453dec5c1007e640e61463790626e26a89c77e9cbc4a18bb394e313cad95de"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_baseline_audit_20261022/official_source/PRM/eval/process_bench.py",
+          "lines": [
+            15,
+            43
+          ],
+          "sha256": "f7000cf52b553873e57e2c7f26eed0d297b971fe26fd75dc8a1b060657179228"
+        },
+        {
+          "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_code_review/eval/math_eval.py",
+          "lines": [
+            263,
+            293
+          ],
+          "sha256": "fac387436a25b538bf87463d7f861d22ba6f7802de32f4c8ddeb2408c024ff4e"
+        }
+      ],
+      "scope": "Absence claim bounded to enumerated inspected files, not every historical branch."
+    }
+  ],
+  "additional_sources_manifest": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_code_review/manifest.json",
+  "width_counterfactual": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_code_review/width_sensitivity.json",
+  "width_result": "For N=2048,7168,8192, all three PRM configurations still give positive raw and whitened advantages to8/8 replayable empty responses. P-VR gives0/8. Rewards, groups and validtoken masks were fixed; no long output generated.",
+  "conclusion": "No verified missing official guard or normalization/alignment correction removes the observed empty positive signal without changing the reward, filtering valid actions, or the objective/recipe. The semantic vulnerability survives the verified native PRM interface, official prompt, single forward, and official denominator sensitivity.",
+  "boundaries": [
+    "No official end-to-end reproduction claim for single-card LoRA adaptation.",
+    "Do not infer old B accuracy loss: historical empty responses had PRM skipped and zero reward.",
+    "No new generations, GPU jobs, training, reward installation or old-file edits."
+  ]
+}

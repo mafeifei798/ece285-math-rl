@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-23T07:28:08.130321+00:00",
+  "reason": "Initial PURE batch2 run stopped at predefined empty single/batch tolerance .005. No complete batch2 score file was accepted.",
+  "preserved_failed_attempt": "remote audits/PURE_official_prm_offline_20261022/scoring and scoring.log",
+  "decision": "Use literal model-card single-example primary scoring for all 288 responses and both PURE variants. Re-score Qwen same288 single-example to match batching. Retain original Qwen batch2 and record PURE empty batch2 sensitivity.",
+  "primary_microbatch": 1,
+  "empty_repeat_required_error": 0,
+  "canonical_steps_unchanged": true,
+  "reward_loss_unchanged": true,
+  "advantage_algorithm_unchanged": true,
+  "scoring_all_rows_no_selection": true,
+  "known_advantage_exclusion": "B:210 entire32-rowbatch, predefined old reconstructed token overflow; raw scores retained",
+  "new_generations": 0,
+  "optimizer_steps": 0
+}

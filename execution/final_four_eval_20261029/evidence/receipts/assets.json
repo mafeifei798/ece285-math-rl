@@ -1,0 +1,67 @@
+{
+  "model_id": "Qwen/Qwen2.5-Math-1.5B",
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "model_path": "/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "download_endpoint": "https://hf-mirror.com",
+  "started_unix": 1792536369.4881895,
+  "files": {
+    "config.json": {
+      "sha256": "81d1dc3c9d4797466a24bfc140776894d15ac4ccce58a0220462b2106f2f4831",
+      "lfs_sha256": null,
+      "bytes": 676
+    },
+    "generation_config.json": {
+      "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+      "lfs_sha256": null,
+      "bytes": 138
+    },
+    "merges.txt": {
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "lfs_sha256": null,
+      "bytes": 1671839
+    },
+    "model.safetensors": {
+      "sha256": "f7aa8d665ab44d3b461bed742fe93cdcedc15d2e31e50dc372c126e6f720857b",
+      "lfs_sha256": "f7aa8d665ab44d3b461bed742fe93cdcedc15d2e31e50dc372c126e6f720857b",
+      "bytes": 3087467144
+    },
+    "tokenizer.json": {
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "lfs_sha256": null,
+      "bytes": 7031645
+    },
+    "tokenizer_config.json": {
+      "sha256": "a668be4b083078aca7c38853dd929184e81534d72525a9c1ddb84ea6fd1de6f8",
+      "lfs_sha256": null,
+      "bytes": 7318
+    },
+    "vocab.json": {
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "lfs_sha256": null,
+      "bytes": 2776833
+    }
+  },
+  "datasets": {
+    "math": {
+      "id": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3"
+    },
+    "math500": {
+      "id": "HuggingFaceH4/MATH-500",
+      "revision": "6e4ed1a2a79af7d8630a6b768ec859cb5af4d3be"
+    },
+    "gsm8k": {
+      "id": "openai/gsm8k",
+      "revision": "740312add88f781978c0658806c59bc2815b9866"
+    }
+  },
+  "prm800k_audit": {
+    "commit": "7ecc794703b2877f63226f2477a49b34f9b25163",
+    "path": "/srv/research/ece285_math_rl_project/data/raw/prm800k_train_questions.jsonl",
+    "sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076",
+    "lfs_sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076",
+    "question_count": 12000
+  },
+  "status": "completed",
+  "finished_unix": 1792536929.2788463
+}

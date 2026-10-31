@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "summary": {
+    "A_6M": {
+      "math500": {
+        "n": 500,
+        "correct": 275.0,
+        "accuracy": 0.55,
+        "generated_tokens": 354876,
+        "inference_seconds": 725.5859513282776,
+        "grading_seconds": 1.7651009559631348,
+        "predictions_sha256": "4a898067c69b1d4ff0aa7475a439f0a9789fa2c3f8147103401f130ffbdbbe2b"
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 906.0,
+        "accuracy": 0.6868840030326004,
+        "generated_tokens": 506258,
+        "inference_seconds": 1669.5562012195587,
+        "grading_seconds": 0.42750048637390137,
+        "predictions_sha256": "c9970dda2f1a9f13f3d50acc42e20685e7b1020b7da9ff5d8e482a8bb8f3e0e0"
+      }
+    }
+  },
+  "startup_seconds": 28.957879304885864,
+  "elapsed_seconds": 2427.1412737369537,
+  "generated_new_this_invocation": 1819,
+  "generations_total": 1819,
+  "optimizer_steps": 0,
+  "PRM_calls": 0,
+  "contract_sha256": "3cffcbdd0506f488b992b480a8a61759c1eb13d2c01ad2ac063b12116faba996",
+  "finished_unix": 1793341248.6354887
+}

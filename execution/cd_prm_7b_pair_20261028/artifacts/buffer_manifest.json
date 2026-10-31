@@ -1,0 +1,19 @@
+{
+  "sha256": "30b52163a1e0c9317778be1b848be69ae4c75d1f903c019ec22f6149165128b6",
+  "rows": 2048,
+  "questions": 512,
+  "samples_per_question": 4,
+  "completion_tokens": 1319118,
+  "statuses": {
+    "symbolic": 928,
+    "missing_or_invalid_box": 264,
+    "exact": 698,
+    "truncated": 120,
+    "unit_exact": 13,
+    "unit_symbolic": 5,
+    "unparseable": 20
+  },
+  "policy_optimizer_updates": 0,
+  "actor_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "generation": "initial frozen actor; original prepared prompt; temperature1; cap2048; independently seeded saved chunks"
+}

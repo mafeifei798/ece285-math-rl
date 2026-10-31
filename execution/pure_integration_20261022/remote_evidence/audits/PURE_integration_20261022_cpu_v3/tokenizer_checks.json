@@ -1,0 +1,243 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": 0,
+      "raw": "First.\n\nSecond.",
+      "actor_positions": [
+        1,
+        4
+      ],
+      "native_steps": 2,
+      "actor_tokens": 5,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        36,
+        39
+      ],
+      "empty": false
+    },
+    {
+      "case": 1,
+      "raw": "First.\r\n\r\nSecond.",
+      "actor_positions": [
+        1,
+        4
+      ],
+      "native_steps": 2,
+      "actor_tokens": 5,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 2,
+      "native_positions": [
+        36,
+        39
+      ],
+      "empty": false
+    },
+    {
+      "case": 2,
+      "raw": " x = 2. \n\n  y = 4. \n",
+      "actor_positions": [
+        5,
+        13
+      ],
+      "native_steps": 2,
+      "actor_tokens": 14,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        39,
+        45
+      ],
+      "empty": false
+    },
+    {
+      "case": 3,
+      "raw": "a\n\n\n\nb\n\n\n\n",
+      "actor_positions": [
+        1,
+        4
+      ],
+      "native_steps": 2,
+      "actor_tokens": 5,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        35,
+        37
+      ],
+      "empty": false
+    },
+    {
+      "case": 4,
+      "raw": "中文 α² = 4.\n\n答案是 2。",
+      "actor_positions": [
+        6,
+        12
+      ],
+      "native_steps": 2,
+      "actor_tokens": 13,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        41,
+        47
+      ],
+      "empty": false
+    },
+    {
+      "case": 5,
+      "raw": "😀 + 1 = 2\r\n\r\nDone.",
+      "actor_positions": [
+        7,
+        10
+      ],
+      "native_steps": 2,
+      "actor_tokens": 11,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 2,
+      "native_positions": [
+        41,
+        44
+      ],
+      "empty": false
+    },
+    {
+      "case": 6,
+      "raw": "No box and no separator",
+      "actor_positions": [
+        5
+      ],
+      "native_steps": 1,
+      "actor_tokens": 6,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        39
+      ],
+      "empty": false
+    },
+    {
+      "case": 7,
+      "raw": "\n\n\n\n",
+      "actor_positions": [
+        1
+      ],
+      "native_steps": 1,
+      "actor_tokens": 2,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        34
+      ],
+      "empty": true
+    },
+    {
+      "case": 8,
+      "raw": "",
+      "actor_positions": [
+        0
+      ],
+      "native_steps": 1,
+      "actor_tokens": 1,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        34
+      ],
+      "empty": true
+    },
+    {
+      "case": 9,
+      "raw": " \r\n\t ",
+      "actor_positions": [
+        2
+      ],
+      "native_steps": 1,
+      "actor_tokens": 3,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 1,
+      "native_positions": [
+        34
+      ],
+      "empty": true
+    },
+    {
+      "case": 10,
+      "raw": "x=2\n\n\\boxed{2}",
+      "actor_positions": [
+        3,
+        9
+      ],
+      "native_steps": 2,
+      "actor_tokens": 10,
+      "terminated": true,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        37,
+        43
+      ],
+      "empty": false
+    },
+    {
+      "case": 11,
+      "raw": "First\n\nSecond without EOS",
+      "actor_positions": [
+        1,
+        4
+      ],
+      "native_steps": 2,
+      "actor_tokens": 5,
+      "terminated": false,
+      "exact_original_token_mapping": true,
+      "byte_roundtrip": true,
+      "placement": "nonfinal step-separator token; final EOS or actual last token",
+      "crlf": 0,
+      "native_positions": [
+        35,
+        39
+      ],
+      "empty": false
+    }
+  ],
+  "fail_closed": {
+    "text_mismatch": true,
+    "after_eos": true,
+    "context_overflow": true,
+    "marker_injection": true
+  }
+}

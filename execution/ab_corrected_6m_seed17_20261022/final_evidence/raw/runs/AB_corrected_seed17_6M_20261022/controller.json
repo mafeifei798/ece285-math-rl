@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "pid": 3039862,
+  "started_unix": 1792654335.564592,
+  "scope": "Real-model two-step engineering pilots, then corrected-only A/B seed17 from common base, 6M generated completion tokens each, fixed greedy MATH500/GSM8K evaluation. Preserve old code/results. No bounded advantages, C/D, new rewards/loss, seed changes or budget extensions.",
+  "gpu": 1,
+  "release_sha256": "9eac99ad38cf0ebb389f295655024eff1a09ff530ca05462bd2d9bcfcdbe6907",
+  "completed_stages": [
+    "pilot_A",
+    "pilot_B",
+    "lora_preflight",
+    "train_A",
+    "train_B",
+    "eval_A",
+    "eval_B"
+  ],
+  "heartbeat_unix": 1792678106.319189,
+  "child_pid": null,
+  "log": "/srv/research/ece285_math_rl_project/logs/ab_corrected_6m_seed17_20261022_eval_B.log",
+  "stage_started_unix": 1792675298.4031496,
+  "last_child_exit_code": 0,
+  "pilot_gate_passed": true,
+  "next_stage": "train_B",
+  "finished_unix": 1792678103.7779217,
+  "all_evaluations_completed": true,
+  "preservation": {
+    "passed": true,
+    "files": 777,
+    "hashed": 638
+  },
+  "no_new_reward_or_loss": true
+}

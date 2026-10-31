@@ -1,0 +1,159 @@
+{
+  "snapshot": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/snapshots/20261022T141700664265Z.json",
+  "observed_unix": 1792678620.204678,
+  "A_training_completed": true,
+  "A_tokens": 6022435,
+  "B_training_started": true,
+  "B_tokens": 6008457,
+  "B_live_audit": {
+    "passed": true,
+    "global_step": 280,
+    "loss_calls": 8960,
+    "loss_rows": 8960,
+    "generation_batches": 280,
+    "original_TRL_advantages_retained": true,
+    "loss_input_values_preserved": true,
+    "PRM_frozen": true
+  },
+  "next_action": "Bounded authorization ended at09:00PT. No further automated project operations; any subsequent experiment requires new user authorization.",
+  "health": "All authorized training/evaluation and substantive CPU verification completed. No experiment process remains in last live completion snapshot.",
+  "B_training_completed": true,
+  "controller_stage": "completed",
+  "A_evaluation_progress": {
+    "dataset": "gsm8k",
+    "done": 1319,
+    "total": 1319,
+    "elapsed_seconds": 2670.584403038025
+  },
+  "A_evaluation_completed": true,
+  "A_evaluation_summary": {
+    "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "adapter": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+    "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+    "greedy": true,
+    "verifier_version": "reward-repair-v3-20261021",
+    "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+    "started_unix": 1792672615.1941636,
+    "datasets": {
+      "math500": {
+        "count": 500,
+        "correct": 270.0,
+        "accuracy": 0.54,
+        "generated_tokens": 364715,
+        "truncated": 45,
+        "predictions_sha256": "febc9a0bb4ec58f499e6dc9bf0e9ab9dc5dd01690a1d8193eec772416fd21670"
+      },
+      "gsm8k": {
+        "count": 1319,
+        "correct": 884.0,
+        "accuracy": 0.6702047005307051,
+        "generated_tokens": 511819,
+        "truncated": 32,
+        "predictions_sha256": "021a9ec789d5844b6768a74eed7f56f8b4b88302a48a47605d62de9215b88354"
+      }
+    },
+    "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+    "prm800k_known_question_overlap": {
+      "train": 6993,
+      "validation": 500,
+      "math500": 0,
+      "gsm8k": 0,
+      "processbench_unique_questions": 847
+    },
+    "finished_unix": 1792675285.782391,
+    "elapsed_seconds": 2670.588227748871
+  },
+  "B_evaluation_progress": {
+    "dataset": "gsm8k",
+    "done": 1319,
+    "total": 1319,
+    "elapsed_seconds": 2794.867297887802
+  },
+  "B_evaluation_completed": true,
+  "B_evaluation_summary": {
+    "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "adapter": "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
+    "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+    "greedy": true,
+    "verifier_version": "reward-repair-v3-20261021",
+    "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+    "started_unix": 1792675303.9061644,
+    "datasets": {
+      "math500": {
+        "count": 500,
+        "correct": 269.0,
+        "accuracy": 0.538,
+        "generated_tokens": 375298,
+        "truncated": 48,
+        "predictions_sha256": "8707a8d3244e31319425d88e254da3ae51003e507c4e1cfb04f32524b0840835"
+      },
+      "gsm8k": {
+        "count": 1319,
+        "correct": 857.0,
+        "accuracy": 0.6497346474601972,
+        "generated_tokens": 530592,
+        "truncated": 41,
+        "predictions_sha256": "4a6e1aaad49a608d35d18a3c294d8c93f490b7617cdfd82c2da2574e06bd9c87"
+      }
+    },
+    "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+    "prm800k_known_question_overlap": {
+      "train": 6993,
+      "validation": 500,
+      "math500": 0,
+      "gsm8k": 0,
+      "processbench_unique_questions": 847
+    },
+    "finished_unix": 1792678098.7773342,
+    "elapsed_seconds": 2794.8711700439453
+  },
+  "raw_comparison": {
+    "math500": {
+      "n": 500,
+      "difference_pp": -0.2,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.0,
+        3.5999999999999996
+      ],
+      "B_only_correct": 46,
+      "A_only_correct": 47
+    },
+    "gsm8k": {
+      "n": 1319,
+      "difference_pp": -2.047005307050796,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.245640636846096,
+        0.0758150113722517
+      ],
+      "B_only_correct": 93,
+      "A_only_correct": 120
+    }
+  },
+  "postprocessing_completed": true,
+  "postprocessing_completed_utc": "2026-10-22T14:49:40.067991+00:00",
+  "independent_audits": {
+    "training_A": "passed",
+    "training_B": "passed",
+    "evaluation": "passed",
+    "signals": "passed"
+  },
+  "final_report": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/review.html",
+  "results_summary": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json",
+  "posthoc_semantic_reviews": {
+    "B_loss_stratum": {
+      "body_correct_stale_box": 31,
+      "body_math_error": 8,
+      "ambiguous": 5
+    },
+    "A_loss_stratum": {
+      "body_correct_stale_box": 6,
+      "ambiguous": 1
+    }
+  },
+  "official_evaluation_unchanged": true,
+  "report_source_link_plot_QA_completed": true,
+  "deadline_summary_sent": true,
+  "bounded_follow_through_closed": true,
+  "closed_utc": "2026-10-22T16:02:36.444366+00:00",
+  "deadline_summary_delivery": "Final response of the2026-10-22T16:01:35Z heartbeat turn."
+}

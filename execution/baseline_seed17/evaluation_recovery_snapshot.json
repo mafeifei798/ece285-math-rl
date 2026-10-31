@@ -1,0 +1,114 @@
+{
+  "checked_utc": "2026-10-21T02:21:51.100686+00:00",
+  "remote_root": "/srv/research/ece285_math_rl_project",
+  "training": {
+    "status": "completed",
+    "pid": 1145046,
+    "started_unix": 1792539779.753937,
+    "pilot": false,
+    "finished_unix": 1792547579.1606805,
+    "global_step": 280,
+    "stop_reason": "token_budget_reached",
+    "accounting": {
+      "generated_completion_tokens": 6020163,
+      "generated_completions": 8960,
+      "generated_groups": 1120,
+      "mixed_reward_groups": 875,
+      "correct_completions": 3725,
+      "truncated_completions": 541,
+      "reward_status_counts": {
+        "symbolic": 4043,
+        "truncated": 541,
+        "exact": 3358,
+        "missing_or_invalid_box": 924,
+        "unparseable": 94
+      },
+      "last_batch": {
+        "generated_completion_tokens": 20463,
+        "generated_completions": 32,
+        "generated_groups": 4,
+        "mixed_reward_groups": 3,
+        "correct_completions": 9,
+        "truncated_completions": 2
+      }
+    },
+    "budget": 6000000,
+    "budget_overshoot": 20163,
+    "lora_B_abs_sum": 1137.6102554500103,
+    "metrics": {
+      "train_runtime": 7775.77,
+      "train_samples_per_second": 82.307,
+      "train_steps_per_second": 2.572,
+      "total_flos": 0.0,
+      "train_loss": 9.237129571114825e-05
+    }
+  },
+  "recovery": {
+    "status": "evaluating",
+    "pid": 1290279,
+    "started_unix": 1792549107.4278772,
+    "gpu": 0,
+    "training_restarted": false,
+    "adapter_sha256": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b",
+    "evaluation_code_sha256": "fd3eaf0a0d47c64907f73fb528d0dc21ab2534c16d82a7b170a3eabd6ce4b256",
+    "header_receipt_sha256": "27a323af35cb1581643f32adbf311fa3faf1125cf760e013b0a4be843bbd4317",
+    "child_pid": 1290324
+  },
+  "headers": {
+    "status": "matching_runtime_headers_prepared",
+    "runtime_python": "3.11.11",
+    "header_version": "3.11.11",
+    "source": "https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz",
+    "source_sha256": "2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3",
+    "include_paths": [
+      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
+      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
+    ],
+    "configure_only_no_make_or_install": true,
+    "runtime_and_python_packages_changed": false,
+    "created_unix": 1792548973.5872772,
+    "configure_log": "/srv/research/ece285_math_rl_project/logs/python_headers_configure.log",
+    "prior_apt_download": "404; no package installed"
+  },
+  "initial_evaluation": {
+    "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "adapter": null,
+    "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+    "greedy": true,
+    "started_unix": 1792539666.9902353,
+    "datasets": {
+      "math500": {
+        "count": 500,
+        "correct": 246.0,
+        "accuracy": 0.492,
+        "generated_tokens": 380764,
+        "truncated": 55,
+        "predictions_sha256": "be5f212e8cb611d9d5012eab6fa93ddc696143c39a6193ed27a7bf3e70c9bb30"
+      },
+      "gsm8k": {
+        "count": 1319,
+        "correct": 725.0,
+        "accuracy": 0.5496588324488249,
+        "generated_tokens": 549448,
+        "truncated": 63,
+        "predictions_sha256": "a2de833c781b18e5328bbf4805f1585493463d2349eb33805a2c6f18570800f0"
+      }
+    },
+    "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+    "prm800k_known_question_overlap": {
+      "train": 6993,
+      "validation": 500,
+      "math500": 0,
+      "gsm8k": 0,
+      "processbench_unique_questions": 847
+    },
+    "finished_unix": 1792540581.9794939,
+    "elapsed_seconds": 914.9892587661743
+  },
+  "final_progress": {
+    "dataset": "math500",
+    "done": 64,
+    "total": 500,
+    "elapsed_seconds": 122.42314720153809
+  }
+}

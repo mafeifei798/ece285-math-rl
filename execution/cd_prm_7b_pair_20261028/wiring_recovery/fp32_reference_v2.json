@@ -1,0 +1,74 @@
+{
+  "complete": true,
+  "strict_identity_check_passed": true,
+  "reference_precision": "FP32, math SDPA, deterministic algorithms; diagnostic only",
+  "optimizer_updates": 0,
+  "initialization_verified": true,
+  "all_parameters_unchanged": true,
+  "model_release_sha256": "b35e38b2addc45b36703812b47bc1595b9a36a34a68801baa2d318c82893cc8e",
+  "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+  "passes": {
+    "C0": {
+      "losses": {
+        "fail": 0.28847020491957664,
+        "success": 0.1345974737778306,
+        "anchor_positive": 0.006867664749734104,
+        "anchor_negative": 0.5443410277366638
+      },
+      "elapsed_seconds": 34.47065806388855
+    },
+    "D0": {
+      "losses": {
+        "fail": 0.28847020491957664,
+        "success": 0.1345974737778306,
+        "anchor_positive": 0.006867664749734104,
+        "anchor_negative": 0.5443410277366638
+      },
+      "elapsed_seconds": 64.20083832740784
+    }
+  },
+  "comparisons": {
+    "historical_identity": {
+      "norm_a": 0.5652661711752592,
+      "norm_b": 0.565122427757115,
+      "error_norm": 0.009368924615374752,
+      "relative_to_b": 0.016578575110810217,
+      "max_abs_error": 0.0006128824315965176,
+      "cosine": 0.9998626427101339
+    },
+    "replay_C_vs_saved": {
+      "norm_a": 1.3997720223398,
+      "norm_b": 1.395028836106507,
+      "error_norm": 0.15497026961409835,
+      "relative_to_b": 0.11108750271185559,
+      "max_abs_error": 0.009799759835004807,
+      "cosine": 0.993856452036769
+    },
+    "replay_D_vs_saved": {
+      "norm_a": 1.3548969722388102,
+      "norm_b": 1.3513886844177938,
+      "error_norm": 0.15107021847946867,
+      "relative_to_b": 0.11178887334294414,
+      "max_abs_error": 0.009756549261510372,
+      "cosine": 0.9937711641048053
+    },
+    "replay_success_vs_saved": {
+      "norm_a": 0.5704030907150821,
+      "norm_b": 0.565122427757115,
+      "error_norm": 0.03353004679024568,
+      "relative_to_b": 0.05933235904885485,
+      "max_abs_error": 0.002257151296362281,
+      "cosine": 0.9982993844120418
+    },
+    "replay_identity": {
+      "norm_a": 0.5704030912820747,
+      "norm_b": 0.5704030907150821,
+      "error_norm": 8.277528928883018e-08,
+      "relative_to_b": 1.4511718228079633e-07,
+      "max_abs_error": 5.587935447692871e-09,
+      "cosine": 0.999999999999609
+    }
+  },
+  "peak_allocated_GiB": 27.932384490966797,
+  "elapsed_seconds": 65.62255716323853
+}

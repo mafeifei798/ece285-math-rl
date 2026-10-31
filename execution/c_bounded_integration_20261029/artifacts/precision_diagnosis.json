@@ -1,0 +1,492 @@
+{
+  "False": {
+    "max_step_error": 0.0,
+    "rows": [
+      {
+        "id": "B-corrected-8080",
+        "max_step_error": 0.0,
+        "min_score": 0.9709092378616333,
+        "cached_min": 0.9709092378616333
+      },
+      {
+        "id": "B-corrected-8081",
+        "max_step_error": 0.0,
+        "min_score": 0.9039745330810547,
+        "cached_min": 0.9039745330810547
+      },
+      {
+        "id": "B-corrected-8082",
+        "max_step_error": 0.0,
+        "min_score": 0.9674102663993835,
+        "cached_min": 0.9674102663993835
+      },
+      {
+        "id": "B-corrected-8083",
+        "max_step_error": 0.0,
+        "min_score": 0.9385759830474854,
+        "cached_min": 0.9385759830474854
+      },
+      {
+        "id": "B-corrected-8084",
+        "max_step_error": 0.0,
+        "min_score": 0.9871788024902344,
+        "cached_min": 0.9871788024902344
+      },
+      {
+        "id": "B-corrected-8085",
+        "max_step_error": 0.0,
+        "min_score": 0.9744347929954529,
+        "cached_min": 0.9744347929954529
+      },
+      {
+        "id": "B-corrected-8086",
+        "max_step_error": 0.0,
+        "min_score": 0.5853381752967834,
+        "cached_min": 0.5853381752967834
+      },
+      {
+        "id": "B-corrected-8087",
+        "max_step_error": 0.0,
+        "min_score": 0.9504110217094421,
+        "cached_min": 0.9504110217094421
+      },
+      {
+        "id": "B-corrected-8072",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "B-corrected-8073",
+        "max_step_error": 0.0,
+        "min_score": 0.9702399373054504,
+        "cached_min": 0.9702399373054504
+      },
+      {
+        "id": "B-corrected-8074",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "B-corrected-8075",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "B-corrected-8076",
+        "max_step_error": 0.0,
+        "min_score": 0.8749346137046814,
+        "cached_min": 0.8749346137046814
+      },
+      {
+        "id": "B-corrected-8077",
+        "max_step_error": 0.0,
+        "min_score": 0.9848109483718872,
+        "cached_min": 0.9848109483718872
+      },
+      {
+        "id": "B-corrected-8078",
+        "max_step_error": 0.0,
+        "min_score": 0.5996023416519165,
+        "cached_min": 0.5996023416519165
+      },
+      {
+        "id": "B-corrected-8079",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-72",
+        "max_step_error": 0.0,
+        "min_score": 0.09773432463407516,
+        "cached_min": 0.09773432463407516
+      },
+      {
+        "id": "old-case-73",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-74",
+        "max_step_error": 0.0,
+        "min_score": 0.0038844766095280647,
+        "cached_min": 0.0038844766095280647
+      },
+      {
+        "id": "old-case-75",
+        "max_step_error": 0.0,
+        "min_score": 0.005220125894993544,
+        "cached_min": 0.005220125894993544
+      },
+      {
+        "id": "old-case-76",
+        "max_step_error": 0.0,
+        "min_score": 0.030675798654556274,
+        "cached_min": 0.030675798654556274
+      },
+      {
+        "id": "old-case-77",
+        "max_step_error": 0.0,
+        "min_score": 0.0034296035300940275,
+        "cached_min": 0.0034296035300940275
+      },
+      {
+        "id": "old-case-78",
+        "max_step_error": 0.0,
+        "min_score": 0.2393493503332138,
+        "cached_min": 0.2393493503332138
+      },
+      {
+        "id": "old-case-79",
+        "max_step_error": 0.0,
+        "min_score": 0.007815889082849026,
+        "cached_min": 0.007815889082849026
+      },
+      {
+        "id": "old-case-2088",
+        "max_step_error": 0.0,
+        "min_score": 0.006192990578711033,
+        "cached_min": 0.006192990578711033
+      },
+      {
+        "id": "old-case-2089",
+        "max_step_error": 0.0,
+        "min_score": 0.02843603491783142,
+        "cached_min": 0.02843603491783142
+      },
+      {
+        "id": "old-case-2090",
+        "max_step_error": 0.0,
+        "min_score": 0.019271135330200195,
+        "cached_min": 0.019271135330200195
+      },
+      {
+        "id": "old-case-2091",
+        "max_step_error": 0.0,
+        "min_score": 0.004829722456634045,
+        "cached_min": 0.004829722456634045
+      },
+      {
+        "id": "old-case-2092",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-2093",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-2094",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-2095",
+        "max_step_error": 0.0,
+        "min_score": 0.03210070729255676,
+        "cached_min": 0.03210070729255676
+      },
+      {
+        "id": "old-case-4968",
+        "max_step_error": 0.0,
+        "min_score": 0.0007208380266092718,
+        "cached_min": 0.0007208380266092718
+      },
+      {
+        "id": "old-case-4969",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-4970",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-4971",
+        "max_step_error": 0.0,
+        "min_score": 0.0037072531413286924,
+        "cached_min": 0.0037072531413286924
+      },
+      {
+        "id": "old-case-4972",
+        "max_step_error": 0.0,
+        "min_score": 0.005139611195772886,
+        "cached_min": 0.005139611195772886
+      },
+      {
+        "id": "old-case-4973",
+        "max_step_error": 0.0,
+        "min_score": 0.01098694372922182,
+        "cached_min": 0.01098694372922182
+      },
+      {
+        "id": "old-case-4974",
+        "max_step_error": 0.0,
+        "min_score": 0.01016965787857771,
+        "cached_min": 0.01016965787857771
+      },
+      {
+        "id": "old-case-4975",
+        "max_step_error": 0.0,
+        "min_score": 0.05877656117081642,
+        "cached_min": 0.05877656117081642
+      }
+    ]
+  },
+  "True": {
+    "max_step_error": 0.020781725645065308,
+    "rows": [
+      {
+        "id": "B-corrected-8080",
+        "max_step_error": 0.0008697509765625,
+        "min_score": 0.9717789888381958,
+        "cached_min": 0.9709092378616333
+      },
+      {
+        "id": "B-corrected-8081",
+        "max_step_error": 0.0014625787734985352,
+        "min_score": 0.9026095867156982,
+        "cached_min": 0.9039745330810547
+      },
+      {
+        "id": "B-corrected-8082",
+        "max_step_error": 0.0009709596633911133,
+        "min_score": 0.9683812260627747,
+        "cached_min": 0.9674102663993835
+      },
+      {
+        "id": "B-corrected-8083",
+        "max_step_error": 0.0018265247344970703,
+        "min_score": 0.9367494583129883,
+        "cached_min": 0.9385759830474854
+      },
+      {
+        "id": "B-corrected-8084",
+        "max_step_error": 0.00027811527252197266,
+        "min_score": 0.9869794845581055,
+        "cached_min": 0.9871788024902344
+      },
+      {
+        "id": "B-corrected-8085",
+        "max_step_error": 0.0009552240371704102,
+        "min_score": 0.9753900170326233,
+        "cached_min": 0.9744347929954529
+      },
+      {
+        "id": "B-corrected-8086",
+        "max_step_error": 0.00047409534454345703,
+        "min_score": 0.58486407995224,
+        "cached_min": 0.5853381752967834
+      },
+      {
+        "id": "B-corrected-8087",
+        "max_step_error": 0.0010930299758911133,
+        "min_score": 0.9515040516853333,
+        "cached_min": 0.9504110217094421
+      },
+      {
+        "id": "B-corrected-8072",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "B-corrected-8073",
+        "max_step_error": 0.0015390515327453613,
+        "min_score": 0.9717789888381958,
+        "cached_min": 0.9702399373054504
+      },
+      {
+        "id": "B-corrected-8074",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "B-corrected-8075",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "B-corrected-8076",
+        "max_step_error": 0.0030228495597839355,
+        "min_score": 0.8719117641448975,
+        "cached_min": 0.8749346137046814
+      },
+      {
+        "id": "B-corrected-8077",
+        "max_step_error": 0.0006855130195617676,
+        "min_score": 0.985496461391449,
+        "cached_min": 0.9848109483718872
+      },
+      {
+        "id": "B-corrected-8078",
+        "max_step_error": 0.006196737289428711,
+        "min_score": 0.6057990789413452,
+        "cached_min": 0.5996023416519165
+      },
+      {
+        "id": "B-corrected-8079",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-72",
+        "max_step_error": 0.004881739616394043,
+        "min_score": 0.09773432463407516,
+        "cached_min": 0.09773432463407516
+      },
+      {
+        "id": "old-case-73",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-74",
+        "max_step_error": 0.017425954341888428,
+        "min_score": 0.003945406526327133,
+        "cached_min": 0.0038844766095280647
+      },
+      {
+        "id": "old-case-75",
+        "max_step_error": 0.014105916023254395,
+        "min_score": 0.005220125894993544,
+        "cached_min": 0.005220125894993544
+      },
+      {
+        "id": "old-case-76",
+        "max_step_error": 0.006780087947845459,
+        "min_score": 0.030675798654556274,
+        "cached_min": 0.030675798654556274
+      },
+      {
+        "id": "old-case-77",
+        "max_step_error": 0.0069296956062316895,
+        "min_score": 0.0034296035300940275,
+        "cached_min": 0.0034296035300940275
+      },
+      {
+        "id": "old-case-78",
+        "max_step_error": 0.020679965615272522,
+        "min_score": 0.21866938471794128,
+        "cached_min": 0.2393493503332138
+      },
+      {
+        "id": "old-case-79",
+        "max_step_error": 0.020781725645065308,
+        "min_score": 0.007695647422224283,
+        "cached_min": 0.007815889082849026
+      },
+      {
+        "id": "old-case-2088",
+        "max_step_error": 0.0037596821784973145,
+        "min_score": 0.006289901677519083,
+        "cached_min": 0.006192990578711033
+      },
+      {
+        "id": "old-case-2089",
+        "max_step_error": 0.008021652698516846,
+        "min_score": 0.028652669861912727,
+        "cached_min": 0.02843603491783142
+      },
+      {
+        "id": "old-case-2090",
+        "max_step_error": 0.0,
+        "min_score": 0.019271135330200195,
+        "cached_min": 0.019271135330200195
+      },
+      {
+        "id": "old-case-2091",
+        "max_step_error": 0.009275436401367188,
+        "min_score": 0.004829722456634045,
+        "cached_min": 0.004829722456634045
+      },
+      {
+        "id": "old-case-2092",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-2093",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-2094",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-2095",
+        "max_step_error": 0.0007362477481365204,
+        "min_score": 0.03283695504069328,
+        "cached_min": 0.03210070729255676
+      },
+      {
+        "id": "old-case-4968",
+        "max_step_error": 0.006278872489929199,
+        "min_score": 0.000755405577365309,
+        "cached_min": 0.0007208380266092718
+      },
+      {
+        "id": "old-case-4969",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-4970",
+        "max_step_error": 0,
+        "min_score": 0.0,
+        "cached_min": 0.0
+      },
+      {
+        "id": "old-case-4971",
+        "max_step_error": 0.01610410213470459,
+        "min_score": 0.0037072531413286924,
+        "cached_min": 0.0037072531413286924
+      },
+      {
+        "id": "old-case-4972",
+        "max_step_error": 0.009092926979064941,
+        "min_score": 0.004982269834727049,
+        "cached_min": 0.005139611195772886
+      },
+      {
+        "id": "old-case-4973",
+        "max_step_error": 0.005253240466117859,
+        "min_score": 0.011331754736602306,
+        "cached_min": 0.01098694372922182
+      },
+      {
+        "id": "old-case-4974",
+        "max_step_error": 0.0024223923683166504,
+        "min_score": 0.010013571009039879,
+        "cached_min": 0.01016965787857771
+      },
+      {
+        "id": "old-case-4975",
+        "max_step_error": 0.008771955966949463,
+        "min_score": 0.06052938848733902,
+        "cached_min": 0.05877656117081642
+      }
+    ]
+  }
+}

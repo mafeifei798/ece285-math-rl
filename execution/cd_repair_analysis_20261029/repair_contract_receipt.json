@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "existing_group_replays": 402,
+  "wrong_cannot_get_positive_advantage": true,
+  "process_contribution_bounded_by_coefficient": true,
+  "tiny_spread_not_renormalized": true,
+  "permutation_equivariance": true,
+  "constant_process_reduces_to_outcome_only": true,
+  "KL_logit_derivative_finite_difference_checked": true,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "actual_PRM_ranking_fixed": false,
+  "policy_accuracy_measured": false,
+  "trainer_integration": false
+}

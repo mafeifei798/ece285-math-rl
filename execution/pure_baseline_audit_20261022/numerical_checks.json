@@ -1,0 +1,264 @@
+{
+  "passed": true,
+  "device": "cpu",
+  "torch": "2.8.0",
+  "official_commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "random_batch_cases": [
+    {
+      "case": 0,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 1,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 2,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 3,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 4,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 5,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 6,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 7,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 8,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 9,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 10,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 11,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 12,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 13,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 14,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 15,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 16,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 17,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 18,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 19,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 20,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 21,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 22,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 23,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 24,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 25,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 26,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 27,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 28,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 29,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 30,
+      "width": 23,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    },
+    {
+      "case": 31,
+      "width": 2048,
+      "groups": 2,
+      "responses": 16,
+      "passed": true
+    }
+  ],
+  "rloo_normalization_modes_checked": [
+    false,
+    true
+  ],
+  "max_advantage_absolute_error": 2.980232238769531e-07,
+  "additional_checks": {
+    "ppo_clipping": true,
+    "all_zero_reward_whitening": true,
+    "low_variance_kl": true,
+    "vr_padding_example": true
+  },
+  "vr_padding_example": {
+    "N": 6,
+    "lengths": [
+      2,
+      4
+    ],
+    "outcomes": [
+      1,
+      0
+    ],
+    "official_wrong_response_advantage_before_whitening": -0.3333333432674408,
+    "usual_sequence_rloo_advantage": -1.0
+  },
+  "limits": [
+    "synthetic CPU tensors only",
+    "no model loaded",
+    "no optimizer or training",
+    "no actual actor/PRM token alignment tested",
+    "no CUDA peak or throughput measured",
+    "CPU FP32 arithmetic agreement is not a BF16 model-logit equivalence claim"
+  ]
+}

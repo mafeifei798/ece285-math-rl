@@ -1,0 +1,21 @@
+{
+  "pid": 2723445,
+  "unix": 1793315774.3910975,
+  "source": "/srv/research/ece285_math_rl_project/experiments/final_four_eval_20261029",
+  "run": "/srv/research/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029",
+  "command": [
+    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/srv/research/ece285_math_rl_project/experiments/final_four_eval_20261029/controller.py"
+  ],
+  "GPU": 1,
+  "GPU_free_MiB_before": 30710,
+  "source_release_sha256": "eef55b0d401e3098f97e7dcaee634c444f333c089c89ac18321275c5c23d7e0c",
+  "contract_sha256": "ad415230ce35f3ab134cb388a29fde38fee78f5ae2aed35d0052c084c6e9a7ee",
+  "generations": 7276,
+  "new_training": false,
+  "new_PRM_inference": false,
+  "environment_only_project_cache": "/srv/research/ece285_math_rl_project/cache/final_four_eval_20261029",
+  "no_automatic_retry": true
+}

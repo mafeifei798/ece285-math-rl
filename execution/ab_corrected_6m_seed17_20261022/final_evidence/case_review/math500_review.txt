@@ -1,0 +1,207 @@
+MATH500：10对完整可解析、判分不同的回答逐题核对
+性质：助手数学核对，不是人工训练标签，不用于训练。
+抽样：每方向5对、固定字符串种子，仅作定性诊断，不能外推总体错误率。
+没有调用模型API/GPU/网络；用独立本地Python算术核实关键式子。
+
+本次10个判对侧：7个先给错误boxed再纠正；2个有实质推导错误（星形角、连分数）。计数只描述该固定样本。
+math500/367：A主体已经正确得到1，但唯一框3；B修正了末框。math500/6：B正确推得27，却保留唯一框125。
+生成的output块不是真实执行证明；这里没有新的PRM评分，不能直接归因PRM。
+
+CASE 1 math500/4 (A_only)
+独立解答：distance/time分别为Evelyn=18/5=3.6，Briana=22/25=0.88，Carla=104/85≈1.22353，Debra=1/2，Angela=7/34≈0.20588。最大为Evelyn。
+A：未发现数学错误，取点、速度和最大值一致。（评测reward=1.0，提取答案=\text{Evelyn}）
+  未发现数学错误；代码所称结果可独立复算吻合，仍不证明实际运行过代码。
+B：列出的速度基本正确，最后却把1.22判成大于3.6。（评测reward=0.0，提取答案=Carla）
+  第19行 [comparison_error / unsupported_conclusion] 原句：Comparing the slopes, we can see that Carla has the greatest slope
+  核对：自己算得Evelyn=3.6、Carla≈1.22；这句数值比较与计算矛盾。（高置信度；后文明确纠正=False）
+解释边界：B失败点是数值比较/答案选择，未见图形提取或速度建模失败。
+
+CASE 2 math500/15 (A_only)
+独立解答：z-c=√2−3√2i；乘(1+i)/√2得(1−3i)(1+i)=4−2i；再加2−3i得6−5i。独立复数计算相同。
+A：开头答案错误，后面完整代数推导正确，最后更正。（评测reward=1.0，提取答案=6 - 5i）
+  第1行 [wrong_initial_answer] 原句： $w = \boxed{\frac{2}{2} + \frac{1}{2} - (3 + \frac{3}{2})i}.$
+  核对：开头框中数值与独立解答不符。后文明确修正。（高置信度；后文明确纠正=True）
+B：公式和代码定义正确，但声称的代码输出错误，末答案沿用错误值。（评测reward=0.0，提取答案=2 - 2i）
+  第1行 [wrong_initial_answer] 原句： \boxed{2 - 2i}
+  核对：开头框中数值与独立解答不符。后文未把框中答案修正为正确值。（高置信度；后文明确纠正=False）
+  第40行 [generated_code_output_mismatch / unsupported_conclusion] 原句：2 - 2*I
+  核对：output块与前面的正确代码表达式不符；c+(z-c)exp(iπ/4)=6−5i。（高置信度；后文明确纠正=False）
+解释边界：A最终判对不等于全文无错；B是正确公式不约束所声称的执行结果。
+
+CASE 3 math500/321 (A_only)
+独立解答：2.5小时=9000秒；速度1000/9000=1/9米/秒；90秒的距离为10米。
+A：开头150错误；单位换算及距离推导正确，最后改为10。（评测reward=1.0，提取答案=10）
+  第1行 [wrong_initial_answer] 原句： \boxed{150} meters
+  核对：开头框中数值与独立解答不符。后文明确修正。（高置信度；后文明确纠正=True）
+B：已正确算到10，最终句又写成1350。（评测reward=0.0，提取答案=1350）
+  第1行 [wrong_initial_answer] 原句： \boxed{1350} meters
+  核对：开头框中数值与独立解答不符。后文未把框中答案修正为正确值。（高置信度；后文明确纠正=False）
+  第25行 [answer_derivation_contradiction / unsupported_conclusion] 原句：Therefore, the length of the hallway is \boxed{1350} meters.
+  核对：上一行明确得到(1/9)×90=10；1350无计算支持。（高置信度；后文明确纠正=False）
+解释边界：B完整且可解析，末答案与正确计算冲突；不是截断或验答器漏提取。
+
+CASE 4 math500/231 (A_only)
+独立解答：C=A+4及总和18给出2A+B=14；B=(3A−8)/5，所以13A=78，A=6、B=2、C=10。第三条件：B+4=6=(3/5)(A+4)。
+A：开头5错误；后续建模、求解及末答案10正确。（评测reward=1.0，提取答案=10）
+  第1行 [wrong_initial_answer] 原句： \boxed{5}
+  核对：开头框中数值与独立解答不符。后文明确修正。（高置信度；后文明确纠正=True）
+B：条件和方程正确，声称的求解输出错误，最终C=9。（评测reward=0.0，提取答案=9）
+  第1行 [wrong_initial_answer] 原句： \boxed{5}
+  核对：开头框中数值与独立解答不符。后文未把框中答案修正为正确值。（高置信度；后文明确纠正=False）
+  第71行 [generated_code_output_mismatch / equation_solution_error] 原句：(5.00000000000000, 4.00000000000000, 9.00000000000000)
+  核对：(5,4,9)满足前两个方程，却有B+4=8≠(3/5)(A+4)=27/5。方程应解为(6,2,10)。（高置信度；后文明确纠正=False）
+解释边界：B没有建错文字条件，错误发生在生成求解结果且未回代。
+
+CASE 5 math500/6 (A_only)
+独立解答：三个连续整数和=3n。若等于k³，3整除k³就整除k。最小正k=3，27=8+9+10。125≡2(mod3)，根本不能是三个连续整数的和。
+A：数学证明完整正确；开头空框是占位格式异常，不是错误数值结论。（评测reward=1.0，提取答案=27）
+  第1行 [empty_answer_placeholder] 原句：\boxed{}
+  核对：空框占位；后面证明和最终27正确，不算错误数值断言。（高置信度；后文明确纠正=True）
+B：中间推导得到正确27，却保留唯一框125，并虚构外部给出的125。（评测reward=0.0，提取答案=125）
+  第1行 [wrong_initial_answer] 原句： \boxed{125}
+  核对：开头框中数值与独立解答不符。后文未把框中答案修正为正确值。（高置信度；后文明确纠正=False）
+  第13行 [fabricated_reference_answer / answer_derivation_contradiction] 原句：the answer provided is 125
+  核对：题目并没有提供125；该句虚构外部依据，和已得到的27冲突。125本身不被3整除。（高置信度；后文明确纠正=False）
+解释边界：B主体会解题但唯一框仍125；协议读125正确，事后挑正文27是改变答案提取规则，不是修复确定实现bug。
+
+CASE 6 math500/281 (B_only)
+独立解答：在三角形AFJ，AF是FG的反向延长线，AJ是IJ的延长线。两个底角都是180°−108°=72°，所以∠A=180°−72°−72°=36°。不用图的近似坐标。
+A：内角/外角算对，但误把两个72°相加当作星尖角。（评测reward=0.0，提取答案=144^\circ）
+  第11行 [geometric_relation_error / condition_modeling_error] 原句：The angle at each vertex of the star is formed by two exterior angles of the pentagon.
+  核对：两个72°是三角形底角，星尖角应为180°−2×72°，不是2×72°。（高置信度；后文明确纠正=False）
+B：最终36°正确；中间有明确错误角度关系，后来换了关系但未解释前后冲突。（评测reward=1.0，提取答案=36^\circ）
+  第7行 [geometric_relation_error / internal_inconsistency] 原句：This angle is actually the exterior angle of the pentagon minus the interior angle of the pentagon.
+  核对：72°−108°=−36°，不能等于所求角。后文改用72°/2，没有解释冲突。（高置信度；后文明确纠正=False）
+  第9行 [unsupported_geometric_justification] 原句：This angle is actually half of the exterior angle of the pentagon
+  核对：本题数值关系成立，但给出的理由没有建立角度关系；正确证明用三角形180°−72°−72°。（高置信度；后文明确纠正=False）
+解释边界：B终答正确但中间明确声称错误角度关系，不能由最终36°认证全部步骤。
+
+CASE 7 math500/333 (B_only)
+独立解答：令α=∛2；(5/4)³<2<(4/3)³给出1/4<α−1<1/3，故3<1/(α−1)<4。后续正整数连分数的余项在(0,1)，因此b=3。等价地1/(α−1)=α²+α+1≈3.8473221。
+A：前半段正确取整得3，后来虚构代码输出、全1展开及题目给定答案2。（评测reward=0.0，提取答案=2）
+  第1行 [wrong_initial_answer] 原句： \boxed{2}
+  核对：开头框中数值与独立解答不符。后文未把框中答案修正为正确值。（高置信度；后文明确纠正=False）
+  第75行 [generated_code_output_mismatch] 原句：[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  核对：该A代码首轮就会得到3；独立重算前四项[1,3,1,5]。10次循环产生11项。声称全1输出不符。（高置信度；后文明确纠正=False）
+  第77行 [false_mathematical_claim] 原句：then repeats \(1\) indefinitely
+  核对：无限全1简单连分数为黄金比例(1+√5)/2，不是∛2。（高置信度；后文明确纠正=False）
+  第85行 [fabricated_reference_answer / answer_derivation_contradiction] 原句：the correct answer should be \(2\), as indicated by the problem statement
+  核对：题目没有给定答案2；这是虚构参考答案。（高置信度；后文明确纠正=False）
+B：末答案3有正确前半段支持，但开头错误，后附递推代码与所称展开均错误。（评测reward=1.0，提取答案=3）
+  第1行 [wrong_initial_answer] 原句： \boxed{2}
+  核对：开头框中数值与独立解答不符。后文明确修正。（高置信度；后文明确纠正=True）
+  第68行 [code_recurrence_error] 原句：cube_root_2 = reciprocal - b
+  核对：变量改成余数后下一轮却仍减旧a=1；第二次所得整数为−6。独立按代码递推得[1,3,−6,0,...]。（高置信度；后文明确纠正=False）
+  第76行 [generated_code_output_mismatch] 原句：[1, 3, 1, 1, 1, 1, 1, 1, 1, 1]
+  核对：该输出不符其代码，也不符实际∛2的连分数前缀[1,3,1,5,...]。（高置信度；后文明确纠正=False）
+  第78行 [false_mathematical_claim] 原句：the subsequent terms are all 1
+  核对：对∛2不成立，第四项已经是5。（高置信度；后文明确纠正=False）
+解释边界：B的b=3由前半段有理化/取整支撑，后面的所谓验证链有错误。
+
+CASE 8 math500/410 (B_only)
+独立解答：需N偶数且9+N被3整除；满足者{0,6}，非零只剩6。214206%6=0，214208%6=2。
+A：先把8误列为3倍数，后来正确排除8、得到6，最终又坚持虚构参考答案8。（评测reward=0.0，提取答案=8）
+  第1行 [wrong_initial_answer] 原句： \boxed{8}
+  核对：开头框中数值与独立解答不符。后文未把框中答案修正为正确值。（高置信度；后文明确纠正=False）
+  第15行 [divisibility_error] 原句：both even and divisible by 3 are 0, 6, and 8
+  核对：8不是3的倍数，正确集合是{0,6}；后文曾自行更正。（高置信度；后文明确纠正=True）
+  第34行 [fabricated_reference_answer / answer_derivation_contradiction] 原句：the problem states that the correct answer is
+  核对：题目没有给出答案8；这句虚构依据覆盖了前面正确结论6。（高置信度；后文明确纠正=False）
+B：开头4错误；后续逐个数字检查及非零约束推得6正确。（评测reward=1.0，提取答案=6）
+  第1行 [wrong_initial_answer] 原句： \boxed{4}
+  核对：开头框中数值与独立解答不符。后文明确修正。（高置信度；后文明确纠正=True）
+解释边界：B主体推导有效，A存在局部整除错误和正确结论后的答案倒退。
+
+CASE 9 math500/209 (B_only)
+独立解答：97²=9409，9409×97=940900−28227=912673。立方在正数上严格递增，故AB=97，数字和16。47³=103823。
+A：搜索思路正确，输出13不符代码；之后认定47并写出错误乘法链。（评测reward=0.0，提取答案=13）
+  第1行 [wrong_initial_answer] 原句： \boxed{13}
+  核对：开头框中数值与独立解答不符。后文未把框中答案修正为正确值。（高置信度；后文明确纠正=False）
+  第24行 [generated_code_output_mismatch] 原句：```output
+13
+```
+  核对：给出的有限枚举会找到97；print(result)应输出16。（高置信度；后文明确纠正=False）
+  第27行 [arithmetic_error] 原句：equals 912,673 is 47
+  核对：47³=103823，应是97³=912673。（高置信度；后文明确纠正=False）
+  第33行 [arithmetic_error / invalid_equality_chain] 原句：47^3 = 47 \times 47 \times 47 = 103823 \times 47 = 487969 \times 47 = 912673
+  核对：47×47×47已经等于103823，继续乘47改变数值；103823×47=4,879,681；487969×47=22,934,543。整条等式链错误。（高置信度；后文明确纠正=False）
+  第29行 [fabricated_reference_answer / unsupported_conclusion] 原句：the problem states that the correct answer is 13
+  核对：题目没有给13；该句虚构参考答案，也和自己4+7=11冲突。（高置信度；后文明确纠正=False）
+B：开头11错误；后续找出97并计算9+7=16正确。（评测reward=1.0，提取答案=16）
+  第1行 [wrong_initial_answer] 原句： \boxed{11}
+  核对：开头框中数值与独立解答不符。后文明确修正。（高置信度；后文明确纠正=True）
+解释边界：B纠正开头答案，A有错误算术、错误声称代码输出与答案锚定。
+
+CASE 10 math500/367 (B_only)
+独立解答：f(2)=6，所以f⁻¹(6)=2；f(1)=2，所以f⁻¹(2)=1；复合结果1。给出的字典代码也会得到1。
+A：仅开头boxed为3；正文和代码已经正确推得1，但没有修正框中答案。（评测reward=0.0，提取答案=3）
+  第1行 [wrong_initial_answer / answer_emission_contradiction] 原句： \boxed{3}
+  核对：这是全文唯一boxed3；正文及代码已正确得到1，却没有新的boxed1。按last-box协议判错，属于答案输出冲突。（高置信度；后文明确纠正=False）
+B：开头3错误；正文逆函数推导正确，最后框出1更正。（评测reward=1.0，提取答案=1）
+  第1行 [wrong_initial_answer] 原句： \boxed{3}
+  核对：开头框中数值与独立解答不符。后文明确修正。（高置信度；后文明确纠正=True）
+解释边界：两侧主体推理都正确；评测差别是B最终修正boxed，A没有。按原规则提取A的3并不是解析器读错正确末框。
+
+独立CPU数值证据：
+{
+  "speed_exact": {
+    "Evelyn": "18/5",
+    "Briana": "22/25",
+    "Carla": "104/85",
+    "Debra": "1/2",
+    "Angela": "7/34"
+  },
+  "rotation": "(6-5j)",
+  "hallway_m": "10",
+  "age_correct_equation": [
+    6,
+    "6"
+  ],
+  "age_claimed_equation": [
+    8,
+    "27/5"
+  ],
+  "cube125_mod3": 2,
+  "star_angle": 36,
+  "continued_fraction_A_recurrence": [
+    1,
+    3,
+    1,
+    5,
+    1,
+    1,
+    4,
+    1,
+    1,
+    8,
+    1
+  ],
+  "continued_fraction_B_recurrence": [
+    1,
+    3,
+    -6,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "continued_fraction_reciprocal": 3.8473221018630723,
+  "nonzero_valid_digits": [
+    6
+  ],
+  "cube97": 912673,
+  "cube47": 103823,
+  "inverse_composition": 1
+}
+
+限制：
+- 每方向5对完整可解析的discordant pairs仅作定性诊断，不能估计总体错误率或A/B胜率。
+- 这是助手数学核对，不是专家人工标注或新的训练监督。
+- 没有对这些评测回答重新调用PRM，不能由案例直接归因于PRM或advantage放大。
+- 生成的output块是模型文本，不是实际Python工具执行凭证。
+- 错误的开头boxed、实质推导错误和后来成功纠正分别记录；不能把终答正确当全过程正确。
+- 浮点连分数长前缀仅为辅助证据；b=3有独立不等式证明，否定全1只需要稳定的早期项。

@@ -1,0 +1,44 @@
+{
+  "generated_completion_tokens": 6008457,
+  "generated_completions": 8960,
+  "generated_groups": 1120,
+  "mixed_reward_groups": 1118,
+  "correct_completions": 3542,
+  "truncated_completions": 567,
+  "prm_input_tokens": 5281779,
+  "prm_padded_tokens": 7724200,
+  "prm_scored_completions": 7304,
+  "prm_forward_seconds": 593.3455388541333,
+  "reward_status_counts": {
+    "symbolic": 4093,
+    "truncated": 567,
+    "exact": 3174,
+    "missing_or_invalid_box": 960,
+    "unparseable": 129,
+    "unit_symbolic": 14,
+    "unit_exact": 23
+  },
+  "outcome_group_counts": {
+    "mixed": 878,
+    "all_wrong": 212,
+    "all_correct": 30
+  },
+  "last_batch": {
+    "generated_completion_tokens": 13949,
+    "generated_completions": 32,
+    "generated_groups": 4,
+    "mixed_reward_groups": 4,
+    "correct_completions": 11,
+    "truncated_completions": 0,
+    "prm_forward_seconds": 2.278649304062128,
+    "prm_input_tokens": 22432,
+    "prm_padded_tokens": 29847,
+    "prm_scored_completions": 31
+  },
+  "global_step": 280,
+  "elapsed_seconds": 7979.461001042742,
+  "target_completion_tokens": 6000000,
+  "effective_completion_tokens_per_second": 752.990333459218,
+  "torch_peak_allocated_GiB": 44.884520530700684,
+  "torch_peak_reserved_GiB": 45.794921875
+}

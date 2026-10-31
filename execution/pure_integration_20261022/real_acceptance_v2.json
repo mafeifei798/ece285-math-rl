@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "standalone_P_VR_without_PRM_verified": true,
+  "real_rows": 32,
+  "real_tokens": 26557,
+  "real_steps": 446,
+  "terminated": 27,
+  "truncated": 5,
+  "original_parameter_hashes_unchanged": true,
+  "optimizer_steps": 0,
+  "checks": {
+    "P_VR": {
+      "max_advantage_error": 1.1920928955078125e-07,
+      "mean": -7.559602721585179e-08,
+      "unbiased_std": 0.9999999403953552,
+      "task_reward_sum": 15.0,
+      "gradient_norm": 0.04785016473130229,
+      "whitening_calls": 1,
+      "loss_rows": 32
+    },
+    "P_PRM": {
+      "max_advantage_error": 4.76837158203125e-07,
+      "mean": -3.303763040918284e-09,
+      "unbiased_std": 0.9999999403953552,
+      "task_reward_sum": -4.066582679748535,
+      "gradient_norm": 0.055861252844535476,
+      "whitening_calls": 1,
+      "loss_rows": 32
+    }
+  },
+  "measured_peak_own_process_GiB": 46.978515625,
+  "measured_peak_torch_allocated_GiB": 43.49512195587158,
+  "measured_peak_device_total_GiB": 53.53076171875,
+  "empty_response_positive_probability": [
+    0.99991774559021
+  ],
+  "edge_forward_probabilities": [
+    [
+      0.99991774559021
+    ],
+    [
+      0.99991774559021
+    ],
+    [
+      0.9594592452049255,
+      0.9921841025352478
+    ],
+    [
+      0.7256486415863037
+    ]
+  ],
+  "run_result_sha256": "d5579269094dd27a6411058ce2290f7b7460a3cb4a151cd58ef5ad9aa264f08c",
+  "real_signal_file_sha256": "df8911047ce646d4cd019621a8eb36076c6e1a9ed2134ea848dff0eb708e7d01"
+}

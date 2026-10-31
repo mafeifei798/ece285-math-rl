@@ -1,0 +1,30 @@
+{
+  "prepared": true,
+  "created_utc": "2026-10-22T19:04:21.133839+00:00",
+  "questions_sha256": "76bd71b5617eb7d87c552596fdc7a784d480ca0876eeba28892b632be524024f",
+  "protocol_sha256": "86c6fc1176b24e1baf01cd6fc8ff248be3dba69b39a922f3d0cdbf6f9aa2ffaf",
+  "source_validation_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+  "source_gsm_train_arrow_sha256": "6146bca074f4c6c5e07de7e96cc968adab3833dbdafeda21830f27558eea3d9b",
+  "gsm_revision": "740312add88f781978c0658806c59bc2815b9866",
+  "gsm_original_split": "train",
+  "gsm_eligible_count": 7473,
+  "gsm_excluded_duplicate_or_overlap_indices": [],
+  "gsm_shuffle_seed": 285,
+  "excluded_prior_smoke_ids": [
+    "math/train/prealgebra/423",
+    "math/train/algebra/1641"
+  ],
+  "actual_A_B_training_id_overlap": {
+    "A": [],
+    "B": []
+  },
+  "train_and_test_normalized_question_overlap": 0,
+  "unique_questions": 998,
+  "unit_candidates": 77,
+  "protected_files": 210,
+  "prompt_max_tokens": {
+    "original": 860,
+    "final_only": 895
+  },
+  "old_unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e"
+}

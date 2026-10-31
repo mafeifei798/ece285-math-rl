@@ -1,0 +1,19 @@
+{
+  "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+  "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+  "batch_manifest_sha256": "fe7e9ff0851f2ae1120c4d1d2118cd9802cf61bdce9d9c679f11dbcce417f65e",
+  "steps": 512,
+  "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+  "classification_head_frozen": true,
+  "trainable_parameters": 20185088,
+  "success_coefficient": 1.0,
+  "complete": true,
+  "arm": "C",
+  "steps_completed": 512,
+  "final_adapter_hash": "ae61765b05cbf4e894d237a4f0b3a577f4691c556618f60ded7826d531cd943e",
+  "adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "frozen_parameters_unchanged": true,
+  "elapsed_seconds_this_invocation": 3715.438150405884,
+  "peak_allocated_GiB": 15.231752872467041,
+  "policy_optimizer_updates": 0
+}

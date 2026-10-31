@@ -25,3 +25,9 @@ id_ed25519*
 *.zip
 *.jsonl
 .pytest_cache/
+# Raw generation and polling records are represented by compact summaries.
+**/batches/
+**/paired_batches/
+**/raw_generation/
+**/snapshots/
+**/plot_cache/

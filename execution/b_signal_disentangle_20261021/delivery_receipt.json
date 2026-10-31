@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "no_training": true,
+  "new_PRM_loaded": false,
+  "PRM_inference_calls": 0,
+  "source_sha256": {
+    "render.py": "e05c90053b7947964ce64a59a7d9c8757af43723663be06aad7816d7fa97927c",
+    "bounded_signal.py": "40092d88de5e5ecf580a5d5150f65f9dd82cda26bd5ab55a9903a981975c3af9",
+    "verify.py": "c9c3a1bb5b7c97f381cebda37824bade46c5c138dce2d05e291555763496f907",
+    "analyze.py": "286e0bbd0c91c13058055f7c44177c3e57dbb6a246c7bb3bf953d4b74742433d"
+  },
+  "artifact_sha256": {
+    "REPORT.txt": "3a18c9c02d90a90668bc01e86b715365da25464eebd80df90af0c65c61f9d65f",
+    "review.html": "517f9bf9ede3e2076453bd0e349b40afcf8316656fb4ccc0e9a3e2f3b58b1207",
+    "summary.json": "77941a00099a2c715aa9e94d52851111fa6f0fe99741c6b9d89bd03f7889bc80",
+    "per_response.csv": "32d25c1ce2cd7415a17448d8183973ca22f60c575d8c8c6fd42cd5c37b9f855b",
+    "reviewed_groups.json": "e26c8684831c397a43371a9dfceadbaa97cc6d9ea4c77053a3dc86f32a026092",
+    "group_details.json": "51083618ae335f1816a50c35cab237e3a87c6a26ea61c71ed555d8a5271d801f",
+    "independent_QA.json": "394a28649b7766493cf857d338d83fa3910bb9afa941d9dc172904d377a10e3f",
+    "candidate_prm.json": "61b63ec40bb94cd1807d807983632502aae0f32347565be96922acc286c59289",
+    "input_manifest.json": "c25dc931b894548b5b8996e6a3c979e59c8fcd2c11b2e1d5a5a1285ae65909c0"
+  }
+}

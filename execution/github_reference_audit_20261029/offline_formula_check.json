@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "scope": "Formula-only FP64 transcription on fixed scores; not official code execution, training, or accuracy comparison",
+  "source": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/cd_prm_7b_pair_20261028/artifacts/group_advantages.jsonl",
+  "source_sha256": "5717dc66f578d4d5fb28cd9bbea83229ca294ed5509524458d04b7e228ea3383",
+  "group_count": 67,
+  "response_count": 536,
+  "native_PAPO_epsilon": 1e-06,
+  "our_epsilon": 0.0001,
+  "shared_lambda_comparison": 0.2,
+  "variants": {
+    "ours_lambda0.2": {
+      "groups": 67,
+      "rows": 536,
+      "wrong_positive": 0,
+      "correct_negative_in_mixed_groups": 0,
+      "process_active_groups": 46,
+      "process_abs_mean": 0.0183157616905621,
+      "process_abs_max": 0.14654777854681017,
+      "total_abs_mean": 0.4087678499095154
+    },
+    "PAPO_std_lambda0.2": {
+      "groups": 67,
+      "rows": 536,
+      "wrong_positive": 0,
+      "correct_negative_in_mixed_groups": 2,
+      "process_active_groups": 46,
+      "process_abs_mean": 0.06917333234473959,
+      "process_abs_max": 0.4855651028627142,
+      "total_abs_mean": 0.4376963089948063
+    },
+    "PAPO_std_lambda1_native_default": {
+      "groups": 67,
+      "rows": 536,
+      "wrong_positive": 0,
+      "correct_negative_in_mixed_groups": 22,
+      "process_active_groups": 46,
+      "process_abs_mean": 0.34586666172369795,
+      "process_abs_max": 2.4278255143135707,
+      "total_abs_mean": 0.6414652707097176
+    },
+    "PAPO_no_std_both_lambda0.2": {
+      "groups": 67,
+      "rows": 536,
+      "wrong_positive": 0,
+      "correct_negative_in_mixed_groups": 0,
+      "process_active_groups": 46,
+      "process_abs_mean": 0.0183157616905621,
+      "process_abs_max": 0.14654777854681017,
+      "total_abs_mean": 0.20342877126588146
+    }
+  },
+  "limitations": [
+    "PAPO uses a rubric-based generative grader in its published recipe; these are our frozen discriminative C scores.",
+    "Same lambda means an explicit numerical control, not equal gradient norm or equal paper configurations.",
+    "Larger or smaller process magnitude does not prove better mathematical reasoning.",
+    "PAPO no-std flag changes BOTH outcome and process components; it is not identical to our hybrid scaling."
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "PB": {
+    "B": {
+      "min": {
+        "answer_correct_validity_AUROC": 0.9427490234375,
+        "valid_acceptance": 0.90625,
+        "invalid_answer_correct_acceptance": 0.171875,
+        "mean_valid_sequence_score": 0.8793408150959294,
+        "mean_invalid_answer_correct_sequence_score": 0.20601789111242397
+      },
+      "sws_training_pool": {
+        "answer_correct_validity_AUROC": 0.94189453125,
+        "valid_acceptance": 0.9375,
+        "invalid_answer_correct_acceptance": 0.1875,
+        "mean_valid_sequence_score": 0.9141914604640645,
+        "mean_invalid_answer_correct_sequence_score": 0.29499439811631717
+      },
+      "mean_diagnostic_only": {
+        "answer_correct_validity_AUROC": 0.943603515625,
+        "valid_acceptance": 1.0,
+        "invalid_answer_correct_acceptance": 0.78125,
+        "mean_valid_sequence_score": 0.9663019049515419,
+        "mean_invalid_answer_correct_sequence_score": 0.6874014508754086
+      },
+      "step_distribution": {
+        "valid_mean_step_score": 0.9696097388084087,
+        "valid_mean_sequence_min": 0.8793408150959294,
+        "valid_fraction_steps_below_half": 0.019021739130434784,
+        "valid_step_count": 368,
+        "valid_steps_below_half": 7,
+        "first_error_mean_score": 0.2654716036286118
+      },
+      "retention_term_logit_directions": {
+        "known_valid_steps_teacher_KL_gradient": 0.0,
+        "answer_correct_first_error_actual_SWS_success_gradient": -0.20693170000139954,
+        "answer_correct_first_error_teacher_KL_gradient": 0.0,
+        "answer_correct_first_error_teacher_KL_trajectory_averaged_gradient": 0.0,
+        "reference": "SWS success derivative=-w_t*p_t*(1-p_t)/sum(w*p), detached w. KL derivative=(p_current-p_B)/T. Raw KL derivative also shown before step averaging.",
+        "parameter_gradient_or_training_result": false
+      }
+    },
+    "C": {
+      "min": {
+        "answer_correct_validity_AUROC": 0.95068359375,
+        "valid_acceptance": 0.875,
+        "invalid_answer_correct_acceptance": 0.09375,
+        "mean_valid_sequence_score": 0.8416045486555959,
+        "mean_invalid_answer_correct_sequence_score": 0.13930883051943965
+      },
+      "sws_training_pool": {
+        "answer_correct_validity_AUROC": 0.950439453125,
+        "valid_acceptance": 0.90625,
+        "invalid_answer_correct_acceptance": 0.109375,
+        "mean_valid_sequence_score": 0.8809951057464882,
+        "mean_invalid_answer_correct_sequence_score": 0.21522766391074813
+      },
+      "mean_diagnostic_only": {
+        "answer_correct_validity_AUROC": 0.954345703125,
+        "valid_acceptance": 1.0,
+        "invalid_answer_correct_acceptance": 0.5625,
+        "mean_valid_sequence_score": 0.9496027031798671,
+        "mean_invalid_answer_correct_sequence_score": 0.5589146744901271
+      },
+      "step_distribution": {
+        "valid_mean_step_score": 0.952339160403505,
+        "valid_mean_sequence_min": 0.8416045486555959,
+        "valid_fraction_steps_below_half": 0.035326086956521736,
+        "valid_step_count": 368,
+        "valid_steps_below_half": 13,
+        "first_error_mean_score": 0.18628444057412707
+      },
+      "logit_drift_vs_B": {
+        "valid_steps_mean": -0.8496235106666912,
+        "first_error_mean": -0.793463172250934
+      },
+      "retention_term_logit_directions": {
+        "known_valid_steps_teacher_KL_gradient": -0.017270578404903696,
+        "answer_correct_first_error_actual_SWS_success_gradient": -0.18658967665358855,
+        "answer_correct_first_error_teacher_KL_gradient": -0.08549007028341293,
+        "answer_correct_first_error_teacher_KL_trajectory_averaged_gradient": -0.01361600613557249,
+        "reference": "SWS success derivative=-w_t*p_t*(1-p_t)/sum(w*p), detached w. KL derivative=(p_current-p_B)/T. Raw KL derivative also shown before step averaging.",
+        "parameter_gradient_or_training_result": false
+      }
+    },
+    "D": {
+      "min": {
+        "answer_correct_validity_AUROC": 0.869873046875,
+        "valid_acceptance": 0.140625,
+        "invalid_answer_correct_acceptance": 0.0,
+        "mean_valid_sequence_score": 0.1551502100010964,
+        "mean_invalid_answer_correct_sequence_score": 0.00798058796098644
+      },
+      "sws_training_pool": {
+        "answer_correct_validity_AUROC": 0.7646484375,
+        "valid_acceptance": 0.15625,
+        "invalid_answer_correct_acceptance": 0.0,
+        "mean_valid_sequence_score": 0.19243207415971308,
+        "mean_invalid_answer_correct_sequence_score": 0.020876636265160797
+      },
+      "mean_diagnostic_only": {
+        "answer_correct_validity_AUROC": 0.712646484375,
+        "valid_acceptance": 0.3125,
+        "invalid_answer_correct_acceptance": 0.0625,
+        "mean_valid_sequence_score": 0.3858773746506821,
+        "mean_invalid_answer_correct_sequence_score": 0.1463194959762433
+      },
+      "step_distribution": {
+        "valid_mean_step_score": 0.35930129252635057,
+        "valid_mean_sequence_min": 0.1551502100010964,
+        "valid_fraction_steps_below_half": 0.6521739130434783,
+        "valid_step_count": 368,
+        "valid_steps_below_half": 240,
+        "first_error_mean_score": 0.008057941009539604
+      },
+      "logit_drift_vs_B": {
+        "valid_steps_mean": -8.615440724132357,
+        "first_error_mean": -5.638244147264883
+      },
+      "retention_term_logit_directions": {
+        "known_valid_steps_teacher_KL_gradient": -0.6103084462820582,
+        "answer_correct_first_error_actual_SWS_success_gradient": -0.0998207423558875,
+        "answer_correct_first_error_teacher_KL_gradient": -0.28592754904238404,
+        "answer_correct_first_error_teacher_KL_trajectory_averaged_gradient": -0.04920431776035744,
+        "reference": "SWS success derivative=-w_t*p_t*(1-p_t)/sum(w*p), detached w. KL derivative=(p_current-p_B)/T. Raw KL derivative also shown before step averaging.",
+        "parameter_gradient_or_training_result": false
+      }
+    }
+  },
+  "length_pairs": {
+    "B": {
+      "mixed": {
+        "pairs": 336,
+        "shorter_wins_fraction": 0.49702380952380953
+      },
+      "all_wrong": {
+        "pairs": 266,
+        "shorter_wins_fraction": 0.5714285714285714
+      },
+      "all_correct": {
+        "pairs": 405,
+        "shorter_wins_fraction": 0.5135802469135803
+      }
+    },
+    "C": {
+      "mixed": {
+        "pairs": 336,
+        "shorter_wins_fraction": 0.5610119047619048
+      },
+      "all_wrong": {
+        "pairs": 266,
+        "shorter_wins_fraction": 0.6466165413533834
+      },
+      "all_correct": {
+        "pairs": 405,
+        "shorter_wins_fraction": 0.5679012345679012
+      }
+    },
+    "D": {
+      "mixed": {
+        "pairs": 336,
+        "shorter_wins_fraction": 0.6294642857142857
+      },
+      "all_wrong": {
+        "pairs": 266,
+        "shorter_wins_fraction": 0.5601503759398496
+      },
+      "all_correct": {
+        "pairs": 405,
+        "shorter_wins_fraction": 0.6518518518518519
+      }
+    }
+  },
+  "weak_loss_shift_stress": {
+    "B": {
+      "-2.302585092994046": {
+        "failure_only_mean": 0.1231364411133626,
+        "success_mean": 1.1327133888901213,
+        "success_plus_failure_mean": 1.255849830003484,
+        "anchors_not_included": true
+      },
+      "0.0": {
+        "failure_only_mean": 0.3309919830992088,
+        "success_mean": 0.5333284107375295,
+        "success_plus_failure_mean": 0.8643203938367383,
+        "anchors_not_included": true
+      },
+      "2.302585092994046": {
+        "failure_only_mean": 1.0790810721712996,
+        "success_mean": 0.17016597728108226,
+        "success_plus_failure_mean": 1.2492470494523817,
+        "anchors_not_included": true
+      }
+    },
+    "C": {
+      "-2.302585092994046": {
+        "failure_only_mean": 0.09402648569232841,
+        "success_mean": 0.9158478308914058,
+        "success_plus_failure_mean": 1.0098743165837343,
+        "anchors_not_included": true
+      },
+      "0.0": {
+        "failure_only_mean": 0.24433049728450798,
+        "success_mean": 0.443337887120892,
+        "success_plus_failure_mean": 0.6876683844054,
+        "anchors_not_included": true
+      },
+      "2.302585092994046": {
+        "failure_only_mean": 0.7030837526765492,
+        "success_mean": 0.16156306525209316,
+        "success_plus_failure_mean": 0.8646468179286424,
+        "anchors_not_included": true
+      }
+    },
+    "D": {
+      "-2.302585092994046": {
+        "failure_only_mean": 0.0004779287420808236,
+        "success_mean": 8.155589565791809,
+        "success_plus_failure_mean": 8.15606749453389,
+        "anchors_not_included": true
+      },
+      "0.0": {
+        "failure_only_mean": 0.0017227490585210996,
+        "success_mean": 6.177972772718828,
+        "success_plus_failure_mean": 6.179695521777349,
+        "anchors_not_included": true
+      },
+      "2.302585092994046": {
+        "failure_only_mean": 0.007818856759750784,
+        "success_mean": 4.335037838196788,
+        "success_plus_failure_mean": 4.342856694956539,
+        "anchors_not_included": true
+      }
+    }
+  }
+}

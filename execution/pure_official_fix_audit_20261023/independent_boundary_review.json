@@ -1,0 +1,46 @@
+{
+  "reviewer": "pure_paper_empty_audit",
+  "reviewed_at_utc": "2026-10-23T07:59:37.650157+00:00",
+  "scope": "Independent source and CPU signal review; no model forward, generation, optimizer, or training launch.",
+  "verdict": "PASS as bounded offline mechanism demonstration; NOT a neutral bugfix or complete OpenRLHF baseline.",
+  "reviewed_sha256": {
+    "experiments/pure_official_fix_audit_20261023/replay_boundary.py": "2cb08a8c5d08388b13825ae982af1b5c75868e54b099bd92afc0638d04a56205",
+    "experiments/pure_official_fix_audit_20261023/boundary_adapter.py": "1092ab1628b3dd0434e738f5c47cb1637eb1e715d49c7e3ddf82a826f6dc15ee",
+    "execution/pure_official_fix_audit_20261023/boundary_replay.json": "899f5a9e5d56f68fe223e8a399d135f5f041d6dd6d5cd1c1c206544d2411a733",
+    "execution/pure_official_fix_audit_20261023/boundary_normalization_receipts.json": "30c6bb1ab0a02159d3ebccae100729e9c1bb6976ef841eb50bfcb42934d121c6",
+    "execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d"
+  },
+  "independent_recomputation": {
+    "batches": 8,
+    "P_VR_content_tokens": 143705,
+    "old_positive_to_new_positive": 49350,
+    "old_negative_to_new_negative": 43951,
+    "old_negative_to_new_zero": 50404,
+    "true_positive_negative_reversals": 0,
+    "sign_changed_at_nonzero_raw_advantage": 0,
+    "new_optimizer_steps": 0,
+    "new_generations": 0
+  },
+  "validated_claims": [
+    "Both branches start from the identical raw pre-whitening veRL advantage; original normalized tensors are never passed into the adapter.",
+    "A single AST-extracted pinned OpenRLHF normalization executes after boundary suppression; float64 oracle includes its unusual treatment of original zero slots in variance.",
+    "All 2627 supplied boundary positions are suppressed in all four arms; rewards, reward ranking, raw baseline, sample groups and known B:210 exclusion remain unchanged.",
+    "All eight EOS-only responses have zero local derivative with respect to their synthetic log-prob after the adapter. This is not a model-weight backward or a trained-model accuracy result.",
+    "The 50404 P_VR content sign changes are specifically negative-to-zero, caused by restoring naturally zero raw advantages. None is positive-to-negative. Natural zero raw values had become negative under the existing batch whitening.",
+    "The adapter also removes P_VR negative EOS gradients that previously discouraged empty responses, not only P_PRM positive EOS gradients.",
+    "PRM scores and their influence on peer raw baselines are untouched; empty score quality remains unresolved."
+  ],
+  "necessary_reporting_limits": [
+    "Same adapter for both arms is a fair within-new-protocol comparison, but not evidence the transplant is semantically neutral relative to existing P-VR/P-PRM.",
+    "Canonical reconstructed boundaries are reused and are not literal original generation-time OpenRLHF token boundaries.",
+    "OpenRLHF also changes return/baseline construction and normalization relative to veRL. Mask-only transplantation must not be labelled a complete official reproduction.",
+    "The selected empty-containing batches, KL=0, missing historical generated IDs, and synthetic ratio=1 loss derivative do not establish training stability or causal accuracy gains.",
+    "Independent read confirms adapter raises on all-zero surviving advantages before the official normalizer would divide by zero. This is a declared fail-closed runtime guard, not an official reward change."
+  ],
+  "recommendation": {
+    "retain_as": "explicitly labelled boundary-and-normalization transplant diagnostic",
+    "do_not_promote_as": "bug-fixed veRL PURE or a drop-in neutral training baseline",
+    "more_defensible_next_offline_control": "Implement complete pinned OpenRLHF signal path for both P-VR and P-PRM with source-checked score scale, baseline, boundary mask and normalization; compare with its independent AST reference before any separately authorized training.",
+    "do_not_claim": "Complete OpenRLHF guarantees no empty or nonempty meaningless-output hacking."
+  }
+}

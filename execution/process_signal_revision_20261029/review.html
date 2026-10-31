@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>数学GRPO · 项目调整V3</title><style>body{background:#f3f5f8;color:#192b38;font:16px/1.85 system-ui;margin:0}main{max-width:1040px;margin:36px auto;background:white;padding:36px;border-radius:16px}h1{font-size:28px}h2{font-size:21px;margin-top:32px}table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #dde4eb}a{color:#225f9e}.note{background:#edf6ff;padding:18px;border-radius:12px}.warn{background:#fff6df;padding:18px;border-radius:12px}pre{font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f9;padding:20px}</style><main><h1>参考官方仓库后的项目调整 · V3</h1><p>2026-10-29 · 同一C评分器，比较过程信号如何进入GRPO</p><div class="note">原三组1M训练继续，源码和结果保留。独立V3已在本地与服务器通过CPU验收，新增PAPO没有开训、没有分配token；D和6M不启动。</div><h2>调整重点：把最接近的方法补成明确对照</h2><p>原C-bounded对C-mix同时涉及门控与缩放，解释力有限。PAPO已经提出正确子集门控，因此后续应在同一C评分器上，只比较过程项是否按正确子集std缩放。</p><table><tr><th>组别</th><th>学习信号</th><th>作用与状态</th></tr><tr><td>A</td><td>原生结果奖励GRPO</td><td>数学准确率参照</td></tr><tr><td>C-mix</td><td>原生 y+0.2m 后按组标准化</td><td>简单混合基线</td></tr><tr><td>C-PAPO-controlled</td><td>结果优势 + 正确子集标准化过程项</td><td>最接近的方法对照；尚未训练</td></tr><tr><td>C-bounded</td><td>结果优势 + 正确子集原始分差×0.2</td><td>现有候选小改动</td></tr></table><p>四组共同固定模型、C评分器、min聚合、验答、prompt、长度上限和GRPO loss。PAPO移植采用共同epsilon和lambda0.2，明确标记为机制对照，不是其多卡生成式grader论文配方复现。</p><h2>已经改好的代码</h2><ul><li><a href="../../experiments/process_signal_v3_20261029/signals.py">signals.py</a></li><li><a href="../../experiments/process_signal_v3_20261029/trainer_adapter.py">trainer_adapter.py</a></li><li><a href="../../experiments/process_signal_v3_20261029/diagnostics.py">diagnostics.py</a></li><li><a href="../../experiments/process_signal_v3_20261029/protocol.json">protocol.json</a></li><li><a href="../../experiments/process_signal_v3_20261029/validate.py">validate.py</a></li><li><a href="../../experiments/process_signal_v3_20261029/replay_rollouts.py">replay_rollouts.py</a></li><li><a href="../../experiments/process_signal_v3_20261029/README.txt">README.txt</a></li></ul><p>奖励、评分器、优势构造和诊断分离。A/C-mix保留真实原生优势；PAPO/有界项在buffer前构造并在loss入口验证。新候选的训练入口保持锁定，CPU通过不冒充GPU联调通过。</p><h2>验证证据</h2><p><strong>67组 / 536条真实C分数和回答元数据，6432次固定TRL loss回放，36类边界组合、10类非法输入与20类破坏检查通过。</strong>官方PAPO函数体AST一致；服务器数值最大差约5.96e-7；原有界优势逐位一致。CUDA初始化、模型调用与优化器更新均为0。</p><p><a href="remote_acceptance.json">服务器验收</a> · <a href="remote_delivery.json">源文件保护</a> · <a href="official_function_identity.json">官方函数一致性</a></p><h2>同一批64条真实回答的信号回放</h2><table><tr><th>规则</th><th>错答正优势</th><th>过程项非零回答</th><th>过程项最大绝对值</th></tr><tr><td>outcome</td><td>0</td><td>0</td><td>0.0</td></tr><tr><td>mixed</td><td>3</td><td>None</td><td>None</td></tr><tr><td>papo</td><td>0</td><td>31</td><td>0.4533149302005768</td></tr><tr><td>bounded</td><td>0</td><td>31</td><td>0.16758163273334503</td></tr></table><p><a href="real64_signal_comparison.json">完整回放</a>。这是相同回答的反事实学习信号，不是四个训练模型的准确率；C-mix的可分离过程项标为不可用。</p><h2>贡献和混淆需要写准</h2><div class="warn">门控与优势解耦属于PAPO已有设计。固定group8下，标准化过程项也有有限界；当前研究的是原始分差幅度与标准化的作用，不是证明PAPO数学发散，也不预设细小分差都是噪声。</div><p>在冻结训练回答上，仅把PAPO全局lambda调到约0.05296，即可匹配有界项平均绝对值。因此将来即使有界优于固定lambda0.2的PAPO，也还需要区分“整体减弱过程项”与“保留组间分差”。此处只做了<a href="amplitude_sanity.json">离线强度检查</a>，没有调验证/测试集，也没有新增训练。</p><h2>执行安排</h2><p>当前三组按原授权跑完1M并统一评测。之后根据结果决定是否给PAPO组做真实模型无更新验收及分配预算。原A/B/C/D与提交proposal不覆盖；所有新服务器文件位于/srv/research/ece285_math_rl_project。</p><details><summary>展开完整方案与结论边界</summary><pre>参考官方仓库后的项目调整（2026-10-29）
+
+明确决定
+主线保持为“小模型数学GRPO中，过程奖励如何形成有效学习信号”。当前A / C-mix / C-bounded各1M、seed17的管线完整保留，不中途更换奖励或loss。独立V3补齐同一个C评分器下的PAPO式优势对照，以及统一的诊断和数据接口。新PAPO组没有启动训练，没有分配额外token；D、额外seed和6M均不启动。
+
+为什么这样改
+当前C-bounded对C-mix同时改变了正确子集门控和缩放方式；即使获益，也不能说明是哪一个产生作用。PAPO已经提出正确子集门控，因此后续最有解释力的比较是：用同一个冻结C评分器、相同的结果优势、相同lambda和数据，只改变过程项是否除正确子集标准差。这能把问题落到具体、可归因的学习信号，而不是把已有方法重新命名。
+
+四组后续设计
+A：原结果奖励GRPO，直接保留TRL生成的真实优势张量。
+C-mix：原y+0.2m混合奖励GRPO，直接保留TRL生成的真实优势张量。
+C-PAPO-controlled：Aout + 0.2*y*(m-mean_correct)/(std_correct+1e-6)，至少两个答对且std&gt;1e-6时启用过程项。
+C-bounded：Aout + 0.2*y*(m-mean_correct)，合成后不再标准化。
+共同Aout=(y-mean(y))/(sample_std(y)+1e-4)。评分器、min聚合、验答、prompt、长度上限、LoRA、KL和clipping不变。
+
+主比较与解释范围
+C-bounded vs C-PAPO-controlled：隔离过程项标准化方式。
+C-bounded vs A：过程项能否带来数学准确率或有效性收益。
+C-PAPO-controlled vs C-mix：分开构造并正确门控的优势是否比直接混合有用。
+当前三组继续作为第一阶段pilot；PAPO新增组只完成离线实现，不能把四组设计写成四组结果。
+
+已有方法与我们的小改动
+PAPO的正确子集门控、优势解耦必须归属于已有工作。我们的候选改动是结果优势继续标准化，过程项保留原始分差幅度。官方PAPO也有不除std的分支，但会同时改变结果和过程两项，不能只靠“不除std”宣称首创。
+固定group=8时，PAPO标准化后的过程项也有有限界。这里不是证明PAPO数学上发散，而是研究是否应将很小的原始分差映射到固定量级。细小分差可能是噪声，也可能包含有用排序；原始概率也未必校准，因此不预设有界方案更好。
+PAPO论文使用额外生成式grader和不同多卡配方；此处是相同C评分器上的机制对照，不声称完整复现其论文设置。
+
+防止只是把PRM权重调小
+对536条冻结训练回答做了额外强度检查：lambda0.2下，有界过程项平均绝对值约0.01832，PAPO式约0.06917。仅把PAPO全局lambda改成约0.05296，也能匹配平均幅度。因此，即使以后有界优于固定lambda0.2的PAPO，也不能立即断言“保留题间分差”优于“单纯降低全局权重”。若要提出更强机制结论，需要预先控制这项混淆；目前只有离线诊断，没有额外训练或调参。
+
+已经落实的代码改动
+1. signals.py：四个明确估计器，奖励/验答/PRM与优势计算分开；保留原生A和C-mix优势对象。
+2. trainer_adapter.py：在shuffle/buffer前接优势，loss入口核对tag、token/mask指纹和优势逐位一致；固定TRL0.23.1、原ratio/KL/clipping。该候选的正式训练/optimizer入口仍锁住，等待将来的真实模型验收。
+3. diagnostics.py：按混合、全对、全错分组记录正优势、答对样本负优势、过程项强度、活跃比例、短错答、空答、拒答关键词候选、截断与步数。C-mix只报告与纯结果信号的整体差异，不虚构可分离的过程项；结果项为零时强度比值记为不可用。
+4. protocol.json：同一C评分器、同一数据、共同epsilon、固定lambda与新训练预算0写成机器可读配置。
+5. replay_rollouts.py：复用已保存且有C评分器来源的回答做四种信号对照；拒绝把A未评分回答当作C分数为0。
+6. papo_reference.py：保留并实际执行官方固定提交的完整优势函数，保留版权/许可和引用；函数AST与官方一致。
+
+已完成验证
+本地和服务器CPU均通过67组/536条冻结C数据检查、36类边界组合、10类非法输入检查和20类优势/对齐破坏检查。每个环境执行6432次实际固定TRL buffer/loss代数回放。
+服务器与官方PAPO函数的最大差约5.96e-7；原有界优势逐位一致；A和C-mix保留原生优势对象。原运行源文件hash未变化。没有模型调用、CUDA初始化、optimizer更新或新训练dispatch。
+限制：actor token/mask/logits是CPU代数fixture；这不等于V3新增PAPO路径已通过真实模型或checkpoint恢复验收。
+
+真实64条回答的回放
+取当前C-bounded已保存的64条回答，使用同一组文本、验答标签和C分数做反事实信号比较。C-mix规则使3条错答得到正优势，PAPO式与有界规则均为0。两种门控过程项均有31条非零，最大绝对值分别约0.4533和0.1676。
+这是“同一批回答换信号规则”的离线结果，不是四个训练模型的准确率，也不能把答对样本的负优势自动称为错罚正确推导。
+
+评测与结论边界
+主要结果仍是固定独立验证集的数学准确率、配对差异和区间，单seed只是pilot。过程有效性不能由训练PRM自己证明；答对不等于推导正确，公共ProcessBench主要诊断PRM，不代替策略输出的独立数学审查。
+所有生成token（含错误/截断）、PRM输入及padding、优化器更新数和共享GPU墙钟时间均分别报告。相同token预算下更新步数可能不同，不能把纯结果奖励与有PRM的墙钟时间直接当作同等计算成本。
+先完成当前三组，再根据结果决定是否值得给PAPO组进行真实模型无更新验收及分配新的训练预算。不会为补对照自动扩预算。
+</pre></details></main></html>

@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "pid": 224797,
+  "started_unix": 1792699965.4439242,
+  "heartbeat_unix": 1792727266.8470938,
+  "training": false,
+  "scope": "Existing corrected A/B checkpoints, fixed2x2 prompt comparison;998 held-out questions; no training or PRM scoring.",
+  "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+  "completed_stages": [
+    "evaluate",
+    "analyze"
+  ],
+  "master_port": "52667",
+  "child_pid": null,
+  "log": "/srv/research/ece285_math_rl_project/runs/AB_prompt_validation_20261022/analyze.log",
+  "last_exit_code": 0,
+  "finished_unix": 1792727266.8470924,
+  "all_predictions_reverified": true,
+  "old_results_preserved": true,
+  "new_training": false
+}

@@ -1,0 +1,9 @@
+{
+  "reason": "Official release includes unused lm_head.weight alongside the required PRM score MLP; official PRM class does not use generation head",
+  "initial_strict_check_stopped_before_inference": true,
+  "only_allowlisted_unused_key": "lm_head.weight",
+  "stronger_check": "Every required scoring model tensor must exactly equal its official safetensors checkpoint tensor",
+  "model_weights_changed": false,
+  "reward_or_input_changed": false,
+  "training": false
+}

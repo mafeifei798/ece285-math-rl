@@ -1,0 +1,7954 @@
+[
+  {
+    "source_row": 39,
+    "problem_id": "math/train/intermediate_algebra/939",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 59,
+    "problem_id": "math/train/geometry/487",
+    "legacy_scored": false,
+    "old_steps": 48,
+    "new_steps": 52,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 66,
+    "problem_id": "math/train/prealgebra/1110",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 98,
+    "problem_id": "math/train/number_theory/179",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 125,
+    "problem_id": "math/train/intermediate_algebra/609",
+    "legacy_scored": true,
+    "old_steps": 27,
+    "new_steps": 28,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 126,
+    "problem_id": "math/train/intermediate_algebra/609",
+    "legacy_scored": false,
+    "old_steps": 11,
+    "new_steps": 17,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 137,
+    "problem_id": "math/train/intermediate_algebra/1240",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 23,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 167,
+    "problem_id": "math/train/intermediate_algebra/890",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 24,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 170,
+    "problem_id": "math/train/prealgebra/317",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 171,
+    "problem_id": "math/train/prealgebra/317",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 174,
+    "problem_id": "math/train/prealgebra/317",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 211,
+    "problem_id": "math/train/counting_and_probability/42",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 214,
+    "problem_id": "math/train/counting_and_probability/42",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 21,
+    "crlf_count": 42
+  },
+  {
+    "source_row": 217,
+    "problem_id": "math/train/intermediate_algebra/102",
+    "legacy_scored": false,
+    "old_steps": 43,
+    "new_steps": 51,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 226,
+    "problem_id": "math/train/algebra/1389",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 15,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 229,
+    "problem_id": "math/train/algebra/1389",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 235,
+    "problem_id": "math/train/intermediate_algebra/1237",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 243,
+    "problem_id": "math/train/prealgebra/756",
+    "legacy_scored": false,
+    "old_steps": 30,
+    "new_steps": 34,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 252,
+    "problem_id": "math/train/geometry/326",
+    "legacy_scored": true,
+    "old_steps": 1,
+    "new_steps": 7,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 263,
+    "problem_id": "math/train/geometry/266",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 267,
+    "problem_id": "math/train/geometry/139",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 273,
+    "problem_id": "math/train/geometry/95",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 276,
+    "problem_id": "math/train/geometry/95",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 20,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 288,
+    "problem_id": "math/train/intermediate_algebra/119",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 326,
+    "problem_id": "math/train/algebra/996",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 17,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 338,
+    "problem_id": "math/train/intermediate_algebra/1217",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 10,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 437,
+    "problem_id": "math/train/prealgebra/1031",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 18,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 439,
+    "problem_id": "math/train/prealgebra/1031",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 450,
+    "problem_id": "math/train/intermediate_algebra/1269",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 453,
+    "problem_id": "math/train/intermediate_algebra/1269",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 481,
+    "problem_id": "math/train/number_theory/254",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 484,
+    "problem_id": "math/train/number_theory/254",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 16,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 491,
+    "problem_id": "math/train/prealgebra/208",
+    "legacy_scored": false,
+    "old_steps": 28,
+    "new_steps": 38,
+    "crlf_count": 46
+  },
+  {
+    "source_row": 536,
+    "problem_id": "math/train/number_theory/11",
+    "legacy_scored": false,
+    "old_steps": 30,
+    "new_steps": 34,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 540,
+    "problem_id": "math/train/number_theory/11",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 15,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 541,
+    "problem_id": "math/train/number_theory/11",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 15,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 542,
+    "problem_id": "math/train/number_theory/11",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 15,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 549,
+    "problem_id": "math/train/geometry/771",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 11,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 553,
+    "problem_id": "math/train/number_theory/562",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 561,
+    "problem_id": "math/train/number_theory/165",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 10,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 580,
+    "problem_id": "math/train/algebra/1078",
+    "legacy_scored": false,
+    "old_steps": 46,
+    "new_steps": 48,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 585,
+    "problem_id": "math/train/algebra/56",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 587,
+    "problem_id": "math/train/algebra/56",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 612,
+    "problem_id": "math/train/geometry/634",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 20,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 632,
+    "problem_id": "math/train/algebra/434",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 634,
+    "problem_id": "math/train/algebra/434",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 19,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 642,
+    "problem_id": "math/train/algebra/674",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 6,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 652,
+    "problem_id": "math/train/number_theory/822",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 13,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 653,
+    "problem_id": "math/train/number_theory/822",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 664,
+    "problem_id": "math/train/counting_and_probability/399",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 18,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 669,
+    "problem_id": "math/train/counting_and_probability/399",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 27,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 676,
+    "problem_id": "math/train/number_theory/810",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 685,
+    "problem_id": "math/train/precalculus/634",
+    "legacy_scored": false,
+    "old_steps": 40,
+    "new_steps": 45,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 706,
+    "problem_id": "math/train/prealgebra/647",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 708,
+    "problem_id": "math/train/prealgebra/647",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 16,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 727,
+    "problem_id": "math/train/number_theory/369",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 728,
+    "problem_id": "math/train/intermediate_algebra/895",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 7,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 736,
+    "problem_id": "math/train/intermediate_algebra/372",
+    "legacy_scored": true,
+    "old_steps": 29,
+    "new_steps": 31,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 737,
+    "problem_id": "math/train/intermediate_algebra/372",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 738,
+    "problem_id": "math/train/intermediate_algebra/372",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 26,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 739,
+    "problem_id": "math/train/intermediate_algebra/372",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 743,
+    "problem_id": "math/train/intermediate_algebra/372",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 19,
+    "crlf_count": 58
+  },
+  {
+    "source_row": 745,
+    "problem_id": "math/train/intermediate_algebra/384",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 21,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 749,
+    "problem_id": "math/train/intermediate_algebra/384",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 11,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 750,
+    "problem_id": "math/train/intermediate_algebra/384",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 751,
+    "problem_id": "math/train/intermediate_algebra/384",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 19,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 759,
+    "problem_id": "math/train/counting_and_probability/162",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 763,
+    "problem_id": "math/train/prealgebra/42",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 8,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 797,
+    "problem_id": "math/train/precalculus/473",
+    "legacy_scored": true,
+    "old_steps": 26,
+    "new_steps": 32,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 828,
+    "problem_id": "math/train/algebra/1703",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 829,
+    "problem_id": "math/train/algebra/1703",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 16,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 835,
+    "problem_id": "math/train/intermediate_algebra/614",
+    "legacy_scored": true,
+    "old_steps": 39,
+    "new_steps": 40,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 849,
+    "problem_id": "math/train/number_theory/839",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 12,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 854,
+    "problem_id": "math/train/number_theory/839",
+    "legacy_scored": false,
+    "old_steps": 25,
+    "new_steps": 29,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 863,
+    "problem_id": "math/train/geometry/766",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 44
+  },
+  {
+    "source_row": 868,
+    "problem_id": "math/train/intermediate_algebra/663",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 22,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 880,
+    "problem_id": "math/train/algebra/133",
+    "legacy_scored": true,
+    "old_steps": 30,
+    "new_steps": 34,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 883,
+    "problem_id": "math/train/algebra/133",
+    "legacy_scored": false,
+    "old_steps": 20,
+    "new_steps": 22,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 890,
+    "problem_id": "math/train/prealgebra/971",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 891,
+    "problem_id": "math/train/prealgebra/971",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 15,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 896,
+    "problem_id": "math/train/counting_and_probability/594",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 6,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 900,
+    "problem_id": "math/train/counting_and_probability/594",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 20,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 902,
+    "problem_id": "math/train/counting_and_probability/594",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 10,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 905,
+    "problem_id": "math/train/intermediate_algebra/139",
+    "legacy_scored": true,
+    "old_steps": 31,
+    "new_steps": 36,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 906,
+    "problem_id": "math/train/intermediate_algebra/139",
+    "legacy_scored": true,
+    "old_steps": 26,
+    "new_steps": 29,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 910,
+    "problem_id": "math/train/intermediate_algebra/139",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 19,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 937,
+    "problem_id": "math/train/prealgebra/747",
+    "legacy_scored": false,
+    "old_steps": 6,
+    "new_steps": 6,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 941,
+    "problem_id": "math/train/prealgebra/747",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 942,
+    "problem_id": "math/train/prealgebra/747",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 7,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 966,
+    "problem_id": "math/train/prealgebra/622",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 18,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 979,
+    "problem_id": "math/train/number_theory/575",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 17,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 981,
+    "problem_id": "math/train/number_theory/575",
+    "legacy_scored": false,
+    "old_steps": 29,
+    "new_steps": 34,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 984,
+    "problem_id": "math/train/geometry/6",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 10,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 991,
+    "problem_id": "math/train/geometry/6",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 999,
+    "problem_id": "math/train/algebra/1614",
+    "legacy_scored": true,
+    "old_steps": 1,
+    "new_steps": 7,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 1003,
+    "problem_id": "math/train/intermediate_algebra/440",
+    "legacy_scored": true,
+    "old_steps": 26,
+    "new_steps": 32,
+    "crlf_count": 33
+  },
+  {
+    "source_row": 1007,
+    "problem_id": "math/train/intermediate_algebra/440",
+    "legacy_scored": false,
+    "old_steps": 24,
+    "new_steps": 29,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 1029,
+    "problem_id": "math/train/algebra/1084",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 1037,
+    "problem_id": "math/train/prealgebra/721",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 1049,
+    "problem_id": "math/train/intermediate_algebra/203",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 18,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 1050,
+    "problem_id": "math/train/intermediate_algebra/203",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 13,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1057,
+    "problem_id": "math/train/precalculus/101",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 19,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 1058,
+    "problem_id": "math/train/precalculus/101",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 12,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 1059,
+    "problem_id": "math/train/precalculus/101",
+    "legacy_scored": false,
+    "old_steps": 8,
+    "new_steps": 23,
+    "crlf_count": 48
+  },
+  {
+    "source_row": 1099,
+    "problem_id": "math/train/number_theory/350",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 12,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 1100,
+    "problem_id": "math/train/number_theory/350",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 5,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 1111,
+    "problem_id": "math/train/intermediate_algebra/893",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 17,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 1123,
+    "problem_id": "math/train/number_theory/606",
+    "legacy_scored": false,
+    "old_steps": 32,
+    "new_steps": 37,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 1125,
+    "problem_id": "math/train/number_theory/606",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 16,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1130,
+    "problem_id": "math/train/precalculus/490",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 23,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 1144,
+    "problem_id": "math/train/number_theory/263",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 21,
+    "crlf_count": 34
+  },
+  {
+    "source_row": 1152,
+    "problem_id": "math/train/number_theory/863",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 5,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 1157,
+    "problem_id": "math/train/number_theory/863",
+    "legacy_scored": false,
+    "old_steps": 24,
+    "new_steps": 27,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 1159,
+    "problem_id": "math/train/number_theory/863",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 1176,
+    "problem_id": "math/train/number_theory/819",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 1234,
+    "problem_id": "math/train/algebra/1046",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 1246,
+    "problem_id": "math/train/intermediate_algebra/713",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 1250,
+    "problem_id": "math/train/precalculus/133",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 20,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 1252,
+    "problem_id": "math/train/precalculus/133",
+    "legacy_scored": false,
+    "old_steps": 30,
+    "new_steps": 38,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 1264,
+    "problem_id": "math/train/intermediate_algebra/69",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 23,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 1281,
+    "problem_id": "math/train/algebra/394",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 22,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 1287,
+    "problem_id": "math/train/algebra/394",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 1301,
+    "problem_id": "math/train/prealgebra/201",
+    "legacy_scored": true,
+    "old_steps": 24,
+    "new_steps": 27,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 1302,
+    "problem_id": "math/train/prealgebra/201",
+    "legacy_scored": false,
+    "old_steps": 33,
+    "new_steps": 37,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 1323,
+    "problem_id": "math/train/algebra/79",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 1336,
+    "problem_id": "math/train/number_theory/759",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 6,
+    "crlf_count": 3
+  },
+  {
+    "source_row": 1349,
+    "problem_id": "math/train/precalculus/637",
+    "legacy_scored": false,
+    "old_steps": 32,
+    "new_steps": 34,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 1357,
+    "problem_id": "math/train/number_theory/132",
+    "legacy_scored": false,
+    "old_steps": 37,
+    "new_steps": 40,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1363,
+    "problem_id": "math/train/intermediate_algebra/877",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 1364,
+    "problem_id": "math/train/intermediate_algebra/877",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 17,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 1366,
+    "problem_id": "math/train/intermediate_algebra/877",
+    "legacy_scored": true,
+    "old_steps": 44,
+    "new_steps": 51,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 1374,
+    "problem_id": "math/train/algebra/555",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 1391,
+    "problem_id": "math/train/precalculus/541",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 14,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 1506,
+    "problem_id": "math/train/precalculus/277",
+    "legacy_scored": true,
+    "old_steps": 25,
+    "new_steps": 31,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 1512,
+    "problem_id": "math/train/algebra/11",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1514,
+    "problem_id": "math/train/algebra/11",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 22,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 1515,
+    "problem_id": "math/train/algebra/11",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1517,
+    "problem_id": "math/train/algebra/11",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 21,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 1521,
+    "problem_id": "math/train/counting_and_probability/5",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 1523,
+    "problem_id": "math/train/counting_and_probability/5",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 1527,
+    "problem_id": "math/train/counting_and_probability/5",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 6,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 1531,
+    "problem_id": "math/train/algebra/492",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 22,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 1538,
+    "problem_id": "math/train/prealgebra/1098",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 1561,
+    "problem_id": "math/train/geometry/364",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 1564,
+    "problem_id": "math/train/geometry/364",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 12,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 1588,
+    "problem_id": "math/train/precalculus/300",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 1628,
+    "problem_id": "math/train/geometry/522",
+    "legacy_scored": false,
+    "old_steps": 18,
+    "new_steps": 22,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 1638,
+    "problem_id": "math/train/precalculus/677",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 18,
+    "crlf_count": 29
+  },
+  {
+    "source_row": 1639,
+    "problem_id": "math/train/precalculus/677",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 1645,
+    "problem_id": "math/train/algebra/250",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 8,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1655,
+    "problem_id": "math/train/geometry/98",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 1657,
+    "problem_id": "math/train/intermediate_algebra/72",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 5,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 1661,
+    "problem_id": "math/train/intermediate_algebra/72",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 1663,
+    "problem_id": "math/train/intermediate_algebra/72",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 8,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1669,
+    "problem_id": "math/train/intermediate_algebra/495",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 29,
+    "crlf_count": 35
+  },
+  {
+    "source_row": 1694,
+    "problem_id": "math/train/intermediate_algebra/88",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 19,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 1705,
+    "problem_id": "math/train/geometry/827",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 19,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 1715,
+    "problem_id": "math/train/number_theory/852",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 22,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 1717,
+    "problem_id": "math/train/number_theory/852",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 15,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 1724,
+    "problem_id": "math/train/algebra/88",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 1733,
+    "problem_id": "math/train/counting_and_probability/132",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 10,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 1768,
+    "problem_id": "math/train/number_theory/587",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 21,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 1769,
+    "problem_id": "math/train/number_theory/587",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 1770,
+    "problem_id": "math/train/number_theory/587",
+    "legacy_scored": false,
+    "old_steps": 18,
+    "new_steps": 24,
+    "crlf_count": 54
+  },
+  {
+    "source_row": 1776,
+    "problem_id": "math/train/algebra/918",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 20,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 1779,
+    "problem_id": "math/train/algebra/918",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 1780,
+    "problem_id": "math/train/algebra/918",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 1797,
+    "problem_id": "math/train/prealgebra/514",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 17,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 1825,
+    "problem_id": "math/train/intermediate_algebra/10",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 1839,
+    "problem_id": "math/train/algebra/75",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 1866,
+    "problem_id": "math/train/intermediate_algebra/914",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 20,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 1875,
+    "problem_id": "math/train/precalculus/685",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 1878,
+    "problem_id": "math/train/precalculus/685",
+    "legacy_scored": false,
+    "old_steps": 19,
+    "new_steps": 30,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 1907,
+    "problem_id": "math/train/geometry/822",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 20,
+    "crlf_count": 34
+  },
+  {
+    "source_row": 1925,
+    "problem_id": "math/train/algebra/1326",
+    "legacy_scored": false,
+    "old_steps": 37,
+    "new_steps": 40,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 1932,
+    "problem_id": "math/train/algebra/177",
+    "legacy_scored": false,
+    "old_steps": 38,
+    "new_steps": 40,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 1933,
+    "problem_id": "math/train/algebra/177",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 1953,
+    "problem_id": "math/train/algebra/121",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 1957,
+    "problem_id": "math/train/algebra/121",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 1958,
+    "problem_id": "math/train/algebra/121",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 14,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 1964,
+    "problem_id": "math/train/counting_and_probability/299",
+    "legacy_scored": false,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 1968,
+    "problem_id": "math/train/number_theory/534",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 17,
+    "crlf_count": 30
+  },
+  {
+    "source_row": 1969,
+    "problem_id": "math/train/number_theory/534",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 22,
+    "crlf_count": 35
+  },
+  {
+    "source_row": 1973,
+    "problem_id": "math/train/number_theory/534",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 20,
+    "crlf_count": 40
+  },
+  {
+    "source_row": 1989,
+    "problem_id": "math/train/algebra/637",
+    "legacy_scored": true,
+    "old_steps": 26,
+    "new_steps": 32,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 1993,
+    "problem_id": "math/train/counting_and_probability/371",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 25,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 2020,
+    "problem_id": "math/train/intermediate_algebra/562",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 2032,
+    "problem_id": "math/train/intermediate_algebra/1129",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 24,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 2033,
+    "problem_id": "math/train/intermediate_algebra/1129",
+    "legacy_scored": true,
+    "old_steps": 31,
+    "new_steps": 35,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 2034,
+    "problem_id": "math/train/intermediate_algebra/1129",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 11,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 2037,
+    "problem_id": "math/train/intermediate_algebra/1129",
+    "legacy_scored": false,
+    "old_steps": 23,
+    "new_steps": 37,
+    "crlf_count": 42
+  },
+  {
+    "source_row": 2038,
+    "problem_id": "math/train/intermediate_algebra/1129",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 2045,
+    "problem_id": "math/train/counting_and_probability/541",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 2065,
+    "problem_id": "math/train/intermediate_algebra/782",
+    "legacy_scored": true,
+    "old_steps": 31,
+    "new_steps": 33,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 2072,
+    "problem_id": "math/train/intermediate_algebra/128",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 22,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2079,
+    "problem_id": "math/train/intermediate_algebra/128",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 2091,
+    "problem_id": "math/train/intermediate_algebra/207",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 33,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 2107,
+    "problem_id": "math/train/algebra/1043",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 19,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 2114,
+    "problem_id": "math/train/geometry/571",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 32,
+    "crlf_count": 36
+  },
+  {
+    "source_row": 2117,
+    "problem_id": "math/train/geometry/571",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 21,
+    "crlf_count": 33
+  },
+  {
+    "source_row": 2118,
+    "problem_id": "math/train/geometry/571",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 22,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 2119,
+    "problem_id": "math/train/geometry/571",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 18,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 2125,
+    "problem_id": "math/train/algebra/1517",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 14,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 2139,
+    "problem_id": "math/train/intermediate_algebra/476",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 21,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 2156,
+    "problem_id": "math/train/counting_and_probability/177",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 43
+  },
+  {
+    "source_row": 2176,
+    "problem_id": "math/train/geometry/504",
+    "legacy_scored": false,
+    "old_steps": 16,
+    "new_steps": 28,
+    "crlf_count": 64
+  },
+  {
+    "source_row": 2183,
+    "problem_id": "math/train/geometry/504",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2209,
+    "problem_id": "math/train/prealgebra/902",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 2227,
+    "problem_id": "math/train/intermediate_algebra/335",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 13,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 2235,
+    "problem_id": "math/train/counting_and_probability/80",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 2237,
+    "problem_id": "math/train/counting_and_probability/80",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 2241,
+    "problem_id": "math/train/algebra/358",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 14,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2244,
+    "problem_id": "math/train/algebra/358",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 12,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2269,
+    "problem_id": "math/train/prealgebra/11",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 2271,
+    "problem_id": "math/train/prealgebra/11",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 2292,
+    "problem_id": "math/train/prealgebra/1121",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 2295,
+    "problem_id": "math/train/prealgebra/1121",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 5,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 2304,
+    "problem_id": "math/train/number_theory/704",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 7,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 2307,
+    "problem_id": "math/train/number_theory/704",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 2310,
+    "problem_id": "math/train/number_theory/704",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 5,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 2334,
+    "problem_id": "math/train/geometry/839",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 2350,
+    "problem_id": "math/train/intermediate_algebra/33",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 12,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 2366,
+    "problem_id": "math/train/algebra/980",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 13,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 2371,
+    "problem_id": "math/train/counting_and_probability/368",
+    "legacy_scored": false,
+    "old_steps": 37,
+    "new_steps": 40,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 2373,
+    "problem_id": "math/train/counting_and_probability/368",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 23,
+    "crlf_count": 38
+  },
+  {
+    "source_row": 2375,
+    "problem_id": "math/train/counting_and_probability/368",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 29,
+    "crlf_count": 30
+  },
+  {
+    "source_row": 2441,
+    "problem_id": "math/train/counting_and_probability/2",
+    "legacy_scored": false,
+    "old_steps": 26,
+    "new_steps": 30,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 2442,
+    "problem_id": "math/train/counting_and_probability/2",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 21,
+    "crlf_count": 38
+  },
+  {
+    "source_row": 2444,
+    "problem_id": "math/train/counting_and_probability/2",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 25,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 2445,
+    "problem_id": "math/train/counting_and_probability/2",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 10,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 2462,
+    "problem_id": "math/train/prealgebra/678",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 24,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 2471,
+    "problem_id": "math/train/counting_and_probability/676",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 22,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 2490,
+    "problem_id": "math/train/intermediate_algebra/1058",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2562,
+    "problem_id": "math/train/intermediate_algebra/700",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 2567,
+    "problem_id": "math/train/intermediate_algebra/700",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 13,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2572,
+    "problem_id": "math/train/geometry/564",
+    "legacy_scored": false,
+    "old_steps": 8,
+    "new_steps": 15,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 2574,
+    "problem_id": "math/train/geometry/564",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2575,
+    "problem_id": "math/train/geometry/564",
+    "legacy_scored": false,
+    "old_steps": 27,
+    "new_steps": 37,
+    "crlf_count": 35
+  },
+  {
+    "source_row": 2583,
+    "problem_id": "math/train/geometry/735",
+    "legacy_scored": false,
+    "old_steps": 35,
+    "new_steps": 39,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2584,
+    "problem_id": "math/train/intermediate_algebra/20",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 13,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2633,
+    "problem_id": "math/train/algebra/1047",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 2636,
+    "problem_id": "math/train/algebra/1047",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 11,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 2638,
+    "problem_id": "math/train/algebra/1047",
+    "legacy_scored": false,
+    "old_steps": 33,
+    "new_steps": 39,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 2649,
+    "problem_id": "math/train/geometry/244",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 9,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 2652,
+    "problem_id": "math/train/geometry/244",
+    "legacy_scored": false,
+    "old_steps": 11,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 2686,
+    "problem_id": "math/train/algebra/112",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2687,
+    "problem_id": "math/train/algebra/112",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2701,
+    "problem_id": "math/train/geometry/850",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 12,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 2718,
+    "problem_id": "math/train/counting_and_probability/556",
+    "legacy_scored": false,
+    "old_steps": 19,
+    "new_steps": 19,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 2734,
+    "problem_id": "math/train/algebra/220",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 2745,
+    "problem_id": "math/train/intermediate_algebra/293",
+    "legacy_scored": true,
+    "old_steps": 38,
+    "new_steps": 41,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 2762,
+    "problem_id": "math/train/counting_and_probability/331",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 15,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 2764,
+    "problem_id": "math/train/counting_and_probability/331",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 17,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 2792,
+    "problem_id": "math/train/prealgebra/284",
+    "legacy_scored": true,
+    "old_steps": 35,
+    "new_steps": 36,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 2796,
+    "problem_id": "math/train/prealgebra/284",
+    "legacy_scored": false,
+    "old_steps": 29,
+    "new_steps": 32,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 2802,
+    "problem_id": "math/train/number_theory/100",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 5,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 2803,
+    "problem_id": "math/train/number_theory/100",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 2,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 2804,
+    "problem_id": "math/train/number_theory/100",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 17,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 2816,
+    "problem_id": "math/train/algebra/501",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 24,
+    "crlf_count": 40
+  },
+  {
+    "source_row": 2820,
+    "problem_id": "math/train/algebra/501",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 2856,
+    "problem_id": "math/train/intermediate_algebra/1133",
+    "legacy_scored": false,
+    "old_steps": 30,
+    "new_steps": 34,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2864,
+    "problem_id": "math/train/geometry/181",
+    "legacy_scored": false,
+    "old_steps": 21,
+    "new_steps": 28,
+    "crlf_count": 48
+  },
+  {
+    "source_row": 2868,
+    "problem_id": "math/train/geometry/181",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 2883,
+    "problem_id": "math/train/counting_and_probability/517",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 8,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 2885,
+    "problem_id": "math/train/counting_and_probability/517",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 2887,
+    "problem_id": "math/train/counting_and_probability/517",
+    "legacy_scored": false,
+    "old_steps": 33,
+    "new_steps": 33,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 2891,
+    "problem_id": "math/train/algebra/45",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2904,
+    "problem_id": "math/train/geometry/450",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 2909,
+    "problem_id": "math/train/geometry/450",
+    "legacy_scored": false,
+    "old_steps": 23,
+    "new_steps": 28,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 2911,
+    "problem_id": "math/train/geometry/450",
+    "legacy_scored": true,
+    "old_steps": 29,
+    "new_steps": 32,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2919,
+    "problem_id": "math/train/precalculus/686",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 15,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 2921,
+    "problem_id": "math/train/intermediate_algebra/409",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 13,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 2923,
+    "problem_id": "math/train/intermediate_algebra/409",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2925,
+    "problem_id": "math/train/intermediate_algebra/409",
+    "legacy_scored": false,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 2926,
+    "problem_id": "math/train/intermediate_algebra/409",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 22,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 2927,
+    "problem_id": "math/train/intermediate_algebra/409",
+    "legacy_scored": false,
+    "old_steps": 9,
+    "new_steps": 14,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 2931,
+    "problem_id": "math/train/algebra/542",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 3,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 2942,
+    "problem_id": "math/train/geometry/744",
+    "legacy_scored": false,
+    "old_steps": 9,
+    "new_steps": 9,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 2943,
+    "problem_id": "math/train/geometry/744",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 24,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 2947,
+    "problem_id": "math/train/intermediate_algebra/398",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 5,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2949,
+    "problem_id": "math/train/intermediate_algebra/398",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 2955,
+    "problem_id": "math/train/prealgebra/644",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 2959,
+    "problem_id": "math/train/prealgebra/644",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 2969,
+    "problem_id": "math/train/counting_and_probability/336",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 13,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 2971,
+    "problem_id": "math/train/counting_and_probability/336",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 2973,
+    "problem_id": "math/train/counting_and_probability/336",
+    "legacy_scored": false,
+    "old_steps": 20,
+    "new_steps": 22,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 2974,
+    "problem_id": "math/train/counting_and_probability/336",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 2981,
+    "problem_id": "math/train/precalculus/578",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 3,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 2992,
+    "problem_id": "math/train/number_theory/577",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 2994,
+    "problem_id": "math/train/number_theory/577",
+    "legacy_scored": true,
+    "old_steps": 25,
+    "new_steps": 27,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 2996,
+    "problem_id": "math/train/number_theory/577",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 8,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 3016,
+    "problem_id": "math/train/algebra/1531",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 3019,
+    "problem_id": "math/train/algebra/1531",
+    "legacy_scored": false,
+    "old_steps": 22,
+    "new_steps": 28,
+    "crlf_count": 38
+  },
+  {
+    "source_row": 3061,
+    "problem_id": "math/train/geometry/719",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 19,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 3064,
+    "problem_id": "math/train/intermediate_algebra/673",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 21,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 3066,
+    "problem_id": "math/train/intermediate_algebra/673",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 23,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 3067,
+    "problem_id": "math/train/intermediate_algebra/673",
+    "legacy_scored": true,
+    "old_steps": 33,
+    "new_steps": 38,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 3074,
+    "problem_id": "math/train/geometry/845",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 24,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 3075,
+    "problem_id": "math/train/geometry/845",
+    "legacy_scored": true,
+    "old_steps": 36,
+    "new_steps": 44,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 3083,
+    "problem_id": "math/train/geometry/523",
+    "legacy_scored": false,
+    "old_steps": 26,
+    "new_steps": 34,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 3089,
+    "problem_id": "math/train/number_theory/421",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 3090,
+    "problem_id": "math/train/number_theory/421",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 3095,
+    "problem_id": "math/train/number_theory/421",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 20,
+    "crlf_count": 33
+  },
+  {
+    "source_row": 3098,
+    "problem_id": "math/train/number_theory/331",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 15,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 3101,
+    "problem_id": "math/train/number_theory/331",
+    "legacy_scored": false,
+    "old_steps": 26,
+    "new_steps": 30,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 3108,
+    "problem_id": "math/train/intermediate_algebra/220",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 3111,
+    "problem_id": "math/train/intermediate_algebra/220",
+    "legacy_scored": true,
+    "old_steps": 65,
+    "new_steps": 72,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 3123,
+    "problem_id": "math/train/algebra/20",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 3126,
+    "problem_id": "math/train/algebra/20",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 13,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 3144,
+    "problem_id": "math/train/algebra/257",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 3153,
+    "problem_id": "math/train/prealgebra/31",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 3155,
+    "problem_id": "math/train/prealgebra/31",
+    "legacy_scored": false,
+    "old_steps": 31,
+    "new_steps": 33,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 3156,
+    "problem_id": "math/train/prealgebra/31",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 3169,
+    "problem_id": "math/train/intermediate_algebra/1081",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 9,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 3170,
+    "problem_id": "math/train/intermediate_algebra/1081",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 19,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 3174,
+    "problem_id": "math/train/intermediate_algebra/1081",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 3176,
+    "problem_id": "math/train/geometry/52",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 20,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 3178,
+    "problem_id": "math/train/geometry/52",
+    "legacy_scored": true,
+    "old_steps": 24,
+    "new_steps": 27,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 3180,
+    "problem_id": "math/train/geometry/52",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3183,
+    "problem_id": "math/train/geometry/52",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3197,
+    "problem_id": "math/train/algebra/602",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 14,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 3208,
+    "problem_id": "math/train/intermediate_algebra/956",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 9,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 3209,
+    "problem_id": "math/train/intermediate_algebra/956",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3211,
+    "problem_id": "math/train/intermediate_algebra/956",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 4,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 3212,
+    "problem_id": "math/train/intermediate_algebra/956",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 3216,
+    "problem_id": "math/train/counting_and_probability/768",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 8,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 3257,
+    "problem_id": "math/train/geometry/242",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 8,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 3266,
+    "problem_id": "math/train/intermediate_algebra/745",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 7,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 3267,
+    "problem_id": "math/train/intermediate_algebra/745",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 8,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 3269,
+    "problem_id": "math/train/intermediate_algebra/745",
+    "legacy_scored": false,
+    "old_steps": 17,
+    "new_steps": 35,
+    "crlf_count": 60
+  },
+  {
+    "source_row": 3312,
+    "problem_id": "math/train/precalculus/10",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 25,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 3314,
+    "problem_id": "math/train/precalculus/10",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 3317,
+    "problem_id": "math/train/precalculus/10",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 17,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 3318,
+    "problem_id": "math/train/precalculus/10",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 20,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 3319,
+    "problem_id": "math/train/precalculus/10",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 16,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 3335,
+    "problem_id": "math/train/precalculus/125",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 14,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 3363,
+    "problem_id": "math/train/geometry/87",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 3366,
+    "problem_id": "math/train/geometry/87",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 9,
+    "crlf_count": 3
+  },
+  {
+    "source_row": 3376,
+    "problem_id": "math/train/intermediate_algebra/168",
+    "legacy_scored": false,
+    "old_steps": 17,
+    "new_steps": 24,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 3382,
+    "problem_id": "math/train/intermediate_algebra/168",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 25,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 3479,
+    "problem_id": "math/train/counting_and_probability/273",
+    "legacy_scored": false,
+    "old_steps": 35,
+    "new_steps": 38,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 3482,
+    "problem_id": "math/train/intermediate_algebra/754",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 19,
+    "crlf_count": 40
+  },
+  {
+    "source_row": 3507,
+    "problem_id": "math/train/intermediate_algebra/1284",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 18,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 3508,
+    "problem_id": "math/train/intermediate_algebra/1284",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 23,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 3509,
+    "problem_id": "math/train/intermediate_algebra/1284",
+    "legacy_scored": false,
+    "old_steps": 12,
+    "new_steps": 21,
+    "crlf_count": 52
+  },
+  {
+    "source_row": 3527,
+    "problem_id": "math/train/intermediate_algebra/925",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 18,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 3528,
+    "problem_id": "math/train/intermediate_algebra/885",
+    "legacy_scored": false,
+    "old_steps": 31,
+    "new_steps": 34,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3540,
+    "problem_id": "math/train/intermediate_algebra/1052",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 3561,
+    "problem_id": "math/train/counting_and_probability/531",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 12,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 3563,
+    "problem_id": "math/train/counting_and_probability/531",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 3567,
+    "problem_id": "math/train/counting_and_probability/531",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 5,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3579,
+    "problem_id": "math/train/algebra/1588",
+    "legacy_scored": false,
+    "old_steps": 34,
+    "new_steps": 39,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 3581,
+    "problem_id": "math/train/algebra/1588",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 13,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 3603,
+    "problem_id": "math/train/algebra/432",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 22,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 3647,
+    "problem_id": "math/train/counting_and_probability/471",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 12,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 3659,
+    "problem_id": "math/train/intermediate_algebra/1282",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 25,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3686,
+    "problem_id": "math/train/intermediate_algebra/580",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 3700,
+    "problem_id": "math/train/algebra/361",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 3708,
+    "problem_id": "math/train/geometry/606",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 14,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 3741,
+    "problem_id": "math/train/algebra/1681",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3748,
+    "problem_id": "math/train/algebra/1221",
+    "legacy_scored": false,
+    "old_steps": 35,
+    "new_steps": 35,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 3755,
+    "problem_id": "math/train/geometry/360",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 13,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 3766,
+    "problem_id": "math/train/geometry/198",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 20,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 3837,
+    "problem_id": "math/train/algebra/924",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 3839,
+    "problem_id": "math/train/algebra/924",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 19,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 3840,
+    "problem_id": "math/train/intermediate_algebra/1114",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 15,
+    "crlf_count": 32
+  },
+  {
+    "source_row": 3841,
+    "problem_id": "math/train/intermediate_algebra/1114",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 3842,
+    "problem_id": "math/train/intermediate_algebra/1114",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 23,
+    "crlf_count": 60
+  },
+  {
+    "source_row": 3858,
+    "problem_id": "math/train/geometry/729",
+    "legacy_scored": false,
+    "old_steps": 27,
+    "new_steps": 35,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 3863,
+    "problem_id": "math/train/geometry/729",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 19,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 3864,
+    "problem_id": "math/train/intermediate_algebra/63",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 14,
+    "crlf_count": 32
+  },
+  {
+    "source_row": 3865,
+    "problem_id": "math/train/intermediate_algebra/63",
+    "legacy_scored": false,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 3869,
+    "problem_id": "math/train/intermediate_algebra/63",
+    "legacy_scored": false,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 3870,
+    "problem_id": "math/train/intermediate_algebra/63",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 31,
+    "crlf_count": 38
+  },
+  {
+    "source_row": 3879,
+    "problem_id": "math/train/intermediate_algebra/76",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 3929,
+    "problem_id": "math/train/number_theory/166",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 7,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 3936,
+    "problem_id": "math/train/intermediate_algebra/649",
+    "legacy_scored": false,
+    "old_steps": 11,
+    "new_steps": 28,
+    "crlf_count": 63
+  },
+  {
+    "source_row": 3958,
+    "problem_id": "math/train/prealgebra/836",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 12,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 3967,
+    "problem_id": "math/train/geometry/803",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 19,
+    "crlf_count": 51
+  },
+  {
+    "source_row": 3988,
+    "problem_id": "math/train/intermediate_algebra/1005",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 16,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 4004,
+    "problem_id": "math/train/prealgebra/515",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4014,
+    "problem_id": "math/train/counting_and_probability/737",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 30
+  },
+  {
+    "source_row": 4021,
+    "problem_id": "math/train/counting_and_probability/129",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4033,
+    "problem_id": "math/train/intermediate_algebra/248",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 15,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 4041,
+    "problem_id": "math/train/counting_and_probability/500",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4044,
+    "problem_id": "math/train/counting_and_probability/500",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4064,
+    "problem_id": "math/train/counting_and_probability/238",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4098,
+    "problem_id": "math/train/algebra/108",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 4100,
+    "problem_id": "math/train/algebra/108",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4114,
+    "problem_id": "math/train/geometry/228",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4120,
+    "problem_id": "math/train/intermediate_algebra/1100",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 4121,
+    "problem_id": "math/train/intermediate_algebra/1100",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 25,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4122,
+    "problem_id": "math/train/intermediate_algebra/1100",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4125,
+    "problem_id": "math/train/intermediate_algebra/1100",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4133,
+    "problem_id": "math/train/algebra/1711",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 9,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 4137,
+    "problem_id": "math/train/prealgebra/430",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 5,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 4151,
+    "problem_id": "math/train/geometry/794",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 24,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 4167,
+    "problem_id": "math/train/intermediate_algebra/416",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 22,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 4168,
+    "problem_id": "math/train/number_theory/824",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 8,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4185,
+    "problem_id": "math/train/number_theory/392",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 8,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 4192,
+    "problem_id": "math/train/geometry/337",
+    "legacy_scored": false,
+    "old_steps": 29,
+    "new_steps": 32,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4203,
+    "problem_id": "math/train/algebra/709",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4223,
+    "problem_id": "math/train/number_theory/740",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 6,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 4243,
+    "problem_id": "math/train/prealgebra/247",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 39
+  },
+  {
+    "source_row": 4248,
+    "problem_id": "math/train/intermediate_algebra/1220",
+    "legacy_scored": false,
+    "old_steps": 11,
+    "new_steps": 20,
+    "crlf_count": 44
+  },
+  {
+    "source_row": 4249,
+    "problem_id": "math/train/intermediate_algebra/1220",
+    "legacy_scored": false,
+    "old_steps": 22,
+    "new_steps": 24,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4253,
+    "problem_id": "math/train/intermediate_algebra/1220",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 4254,
+    "problem_id": "math/train/intermediate_algebra/1220",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 14,
+    "crlf_count": 29
+  },
+  {
+    "source_row": 4289,
+    "problem_id": "math/train/precalculus/70",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 13,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4291,
+    "problem_id": "math/train/precalculus/70",
+    "legacy_scored": false,
+    "old_steps": 4,
+    "new_steps": 10,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 4292,
+    "problem_id": "math/train/precalculus/70",
+    "legacy_scored": false,
+    "old_steps": 13,
+    "new_steps": 18,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 4298,
+    "problem_id": "math/train/counting_and_probability/87",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 4303,
+    "problem_id": "math/train/counting_and_probability/87",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 7,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4312,
+    "problem_id": "math/train/prealgebra/51",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 28,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 4316,
+    "problem_id": "math/train/prealgebra/51",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 13,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 4318,
+    "problem_id": "math/train/prealgebra/51",
+    "legacy_scored": false,
+    "old_steps": 35,
+    "new_steps": 42,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 4319,
+    "problem_id": "math/train/prealgebra/51",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 4321,
+    "problem_id": "math/train/intermediate_algebra/757",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4328,
+    "problem_id": "math/train/algebra/1462",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 4330,
+    "problem_id": "math/train/algebra/1462",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 4337,
+    "problem_id": "math/train/intermediate_algebra/1223",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 4340,
+    "problem_id": "math/train/intermediate_algebra/1223",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 4352,
+    "problem_id": "math/train/precalculus/18",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 17,
+    "crlf_count": 34
+  },
+  {
+    "source_row": 4357,
+    "problem_id": "math/train/precalculus/18",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 4410,
+    "problem_id": "math/train/intermediate_algebra/71",
+    "legacy_scored": true,
+    "old_steps": 32,
+    "new_steps": 36,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 4416,
+    "problem_id": "math/train/algebra/396",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 12,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 4419,
+    "problem_id": "math/train/algebra/396",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4420,
+    "problem_id": "math/train/algebra/396",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4422,
+    "problem_id": "math/train/algebra/396",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 24,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 4433,
+    "problem_id": "math/train/prealgebra/127",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 4449,
+    "problem_id": "math/train/algebra/333",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 23,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 4466,
+    "problem_id": "math/train/intermediate_algebra/312",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 12,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4471,
+    "problem_id": "math/train/intermediate_algebra/312",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 7,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4472,
+    "problem_id": "math/train/geometry/79",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 12,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4477,
+    "problem_id": "math/train/geometry/79",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 17,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 4500,
+    "problem_id": "math/train/intermediate_algebra/317",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 15,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 4508,
+    "problem_id": "math/train/counting_and_probability/421",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 4520,
+    "problem_id": "math/train/geometry/267",
+    "legacy_scored": false,
+    "old_steps": 11,
+    "new_steps": 18,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 4522,
+    "problem_id": "math/train/geometry/267",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 4528,
+    "problem_id": "math/train/prealgebra/1064",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4536,
+    "problem_id": "math/train/geometry/359",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4562,
+    "problem_id": "math/train/prealgebra/729",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 4590,
+    "problem_id": "math/train/number_theory/161",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 9,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 4608,
+    "problem_id": "math/train/algebra/809",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 21,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 4610,
+    "problem_id": "math/train/algebra/809",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 18,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 4611,
+    "problem_id": "math/train/algebra/809",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 29,
+    "crlf_count": 30
+  },
+  {
+    "source_row": 4612,
+    "problem_id": "math/train/algebra/809",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 21,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 4613,
+    "problem_id": "math/train/algebra/809",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 27,
+    "crlf_count": 35
+  },
+  {
+    "source_row": 4614,
+    "problem_id": "math/train/algebra/809",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 20,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 4615,
+    "problem_id": "math/train/algebra/809",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 24,
+    "crlf_count": 43
+  },
+  {
+    "source_row": 4642,
+    "problem_id": "math/train/geometry/430",
+    "legacy_scored": false,
+    "old_steps": 2,
+    "new_steps": 2,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 4666,
+    "problem_id": "math/train/number_theory/37",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 9,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 4680,
+    "problem_id": "math/train/number_theory/707",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 4681,
+    "problem_id": "math/train/number_theory/707",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 4685,
+    "problem_id": "math/train/number_theory/707",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4697,
+    "problem_id": "math/train/intermediate_algebra/938",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 15,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 4712,
+    "problem_id": "math/train/intermediate_algebra/160",
+    "legacy_scored": false,
+    "old_steps": 31,
+    "new_steps": 33,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4717,
+    "problem_id": "math/train/intermediate_algebra/160",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4719,
+    "problem_id": "math/train/intermediate_algebra/160",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 20,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4721,
+    "problem_id": "math/train/intermediate_algebra/85",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 20,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4729,
+    "problem_id": "math/train/prealgebra/353",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 19,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 4731,
+    "problem_id": "math/train/prealgebra/353",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 16,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 4743,
+    "problem_id": "math/train/algebra/1302",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 4747,
+    "problem_id": "math/train/number_theory/332",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 6,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4748,
+    "problem_id": "math/train/number_theory/332",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 4784,
+    "problem_id": "math/train/counting_and_probability/181",
+    "legacy_scored": false,
+    "old_steps": 33,
+    "new_steps": 41,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 4789,
+    "problem_id": "math/train/counting_and_probability/181",
+    "legacy_scored": true,
+    "old_steps": 27,
+    "new_steps": 35,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 4790,
+    "problem_id": "math/train/counting_and_probability/181",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 21,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 4796,
+    "problem_id": "math/train/prealgebra/1094",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 7,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 4797,
+    "problem_id": "math/train/prealgebra/1094",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 4,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 4798,
+    "problem_id": "math/train/prealgebra/1094",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 10,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 4804,
+    "problem_id": "math/train/number_theory/25",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 10,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 4806,
+    "problem_id": "math/train/number_theory/25",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 17,
+    "crlf_count": 29
+  },
+  {
+    "source_row": 4809,
+    "problem_id": "math/train/prealgebra/40",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 21,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4813,
+    "problem_id": "math/train/prealgebra/40",
+    "legacy_scored": false,
+    "old_steps": 22,
+    "new_steps": 22,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 4820,
+    "problem_id": "math/train/algebra/1503",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 4,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 4822,
+    "problem_id": "math/train/algebra/1503",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4829,
+    "problem_id": "math/train/intermediate_algebra/254",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 15,
+    "crlf_count": 35
+  },
+  {
+    "source_row": 4830,
+    "problem_id": "math/train/intermediate_algebra/254",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 55
+  },
+  {
+    "source_row": 4846,
+    "problem_id": "math/train/intermediate_algebra/1277",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 4852,
+    "problem_id": "math/train/intermediate_algebra/106",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 21,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4877,
+    "problem_id": "math/train/intermediate_algebra/996",
+    "legacy_scored": true,
+    "old_steps": 41,
+    "new_steps": 43,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4882,
+    "problem_id": "math/train/number_theory/674",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 16,
+    "crlf_count": 51
+  },
+  {
+    "source_row": 4885,
+    "problem_id": "math/train/number_theory/674",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 30,
+    "crlf_count": 51
+  },
+  {
+    "source_row": 4898,
+    "problem_id": "math/train/geometry/384",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 15,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4908,
+    "problem_id": "math/train/intermediate_algebra/97",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 22,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4920,
+    "problem_id": "math/train/algebra/1409",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 15,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 4923,
+    "problem_id": "math/train/algebra/1409",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 14,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 4930,
+    "problem_id": "math/train/counting_and_probability/475",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 15,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 4935,
+    "problem_id": "math/train/counting_and_probability/475",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 4943,
+    "problem_id": "math/train/algebra/1548",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 4946,
+    "problem_id": "math/train/intermediate_algebra/159",
+    "legacy_scored": false,
+    "old_steps": 35,
+    "new_steps": 38,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 4957,
+    "problem_id": "math/train/geometry/842",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 4961,
+    "problem_id": "math/train/geometry/470",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 4978,
+    "problem_id": "math/train/geometry/711",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 17,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 4981,
+    "problem_id": "math/train/geometry/711",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 4982,
+    "problem_id": "math/train/geometry/711",
+    "legacy_scored": true,
+    "old_steps": 27,
+    "new_steps": 31,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 4990,
+    "problem_id": "math/train/prealgebra/90",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 4991,
+    "problem_id": "math/train/prealgebra/90",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 4,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 5040,
+    "problem_id": "math/train/geometry/527",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 5056,
+    "problem_id": "math/train/number_theory/529",
+    "legacy_scored": false,
+    "old_steps": 34,
+    "new_steps": 35,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5059,
+    "problem_id": "math/train/number_theory/529",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 5063,
+    "problem_id": "math/train/number_theory/529",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 5071,
+    "problem_id": "math/train/algebra/308",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 5073,
+    "problem_id": "math/train/precalculus/529",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5076,
+    "problem_id": "math/train/precalculus/529",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5079,
+    "problem_id": "math/train/precalculus/529",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 6,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 5088,
+    "problem_id": "math/train/algebra/1125",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 5091,
+    "problem_id": "math/train/algebra/1125",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 5099,
+    "problem_id": "math/train/geometry/333",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 10,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 5102,
+    "problem_id": "math/train/geometry/333",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 5117,
+    "problem_id": "math/train/number_theory/457",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 5129,
+    "problem_id": "math/train/geometry/610",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 5134,
+    "problem_id": "math/train/geometry/610",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 19,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5137,
+    "problem_id": "math/train/algebra/398",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 5181,
+    "problem_id": "math/train/intermediate_algebra/660",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 22,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 5193,
+    "problem_id": "math/train/precalculus/530",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 20,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 5194,
+    "problem_id": "math/train/precalculus/530",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 10,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 5200,
+    "problem_id": "math/train/algebra/265",
+    "legacy_scored": false,
+    "old_steps": 44,
+    "new_steps": 50,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 5202,
+    "problem_id": "math/train/algebra/265",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 10,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 5214,
+    "problem_id": "math/train/precalculus/135",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 5217,
+    "problem_id": "math/train/algebra/1676",
+    "legacy_scored": false,
+    "old_steps": 19,
+    "new_steps": 19,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 5220,
+    "problem_id": "math/train/algebra/1676",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 13,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 5233,
+    "problem_id": "math/train/algebra/626",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5237,
+    "problem_id": "math/train/algebra/626",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 5239,
+    "problem_id": "math/train/algebra/626",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5256,
+    "problem_id": "math/train/number_theory/539",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 5257,
+    "problem_id": "math/train/number_theory/539",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 14,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 5262,
+    "problem_id": "math/train/number_theory/539",
+    "legacy_scored": false,
+    "old_steps": 40,
+    "new_steps": 42,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 5287,
+    "problem_id": "math/train/number_theory/59",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 20,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 5290,
+    "problem_id": "math/train/intermediate_algebra/136",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 19,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 5295,
+    "problem_id": "math/train/intermediate_algebra/136",
+    "legacy_scored": true,
+    "old_steps": 47,
+    "new_steps": 54,
+    "crlf_count": 29
+  },
+  {
+    "source_row": 5312,
+    "problem_id": "math/train/intermediate_algebra/306",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 10,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 5318,
+    "problem_id": "math/train/intermediate_algebra/306",
+    "legacy_scored": true,
+    "old_steps": 26,
+    "new_steps": 30,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 5320,
+    "problem_id": "math/train/intermediate_algebra/647",
+    "legacy_scored": false,
+    "old_steps": 29,
+    "new_steps": 31,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 5321,
+    "problem_id": "math/train/intermediate_algebra/647",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 19,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 5323,
+    "problem_id": "math/train/intermediate_algebra/647",
+    "legacy_scored": false,
+    "old_steps": 36,
+    "new_steps": 38,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 5344,
+    "problem_id": "math/train/intermediate_algebra/753",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 28,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 5346,
+    "problem_id": "math/train/intermediate_algebra/753",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 23,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 5347,
+    "problem_id": "math/train/intermediate_algebra/753",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5352,
+    "problem_id": "math/train/intermediate_algebra/876",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5365,
+    "problem_id": "math/train/geometry/336",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 18,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 5369,
+    "problem_id": "math/train/geometry/419",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 17,
+    "crlf_count": 39
+  },
+  {
+    "source_row": 5370,
+    "problem_id": "math/train/geometry/419",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 14,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 5373,
+    "problem_id": "math/train/geometry/419",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 5401,
+    "problem_id": "math/train/counting_and_probability/433",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 13,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 5403,
+    "problem_id": "math/train/counting_and_probability/433",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 10,
+    "crlf_count": 32
+  },
+  {
+    "source_row": 5410,
+    "problem_id": "math/train/counting_and_probability/620",
+    "legacy_scored": false,
+    "old_steps": 37,
+    "new_steps": 43,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 5412,
+    "problem_id": "math/train/counting_and_probability/620",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 21,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 5413,
+    "problem_id": "math/train/counting_and_probability/620",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 25,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 5429,
+    "problem_id": "math/train/counting_and_probability/15",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 5438,
+    "problem_id": "math/train/geometry/332",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 18,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 5465,
+    "problem_id": "math/train/geometry/629",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 30,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 5470,
+    "problem_id": "math/train/geometry/629",
+    "legacy_scored": false,
+    "old_steps": 2,
+    "new_steps": 2,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 5485,
+    "problem_id": "math/train/intermediate_algebra/1280",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 21,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5495,
+    "problem_id": "math/train/number_theory/419",
+    "legacy_scored": false,
+    "old_steps": 43,
+    "new_steps": 46,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 5496,
+    "problem_id": "math/train/algebra/1110",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 5497,
+    "problem_id": "math/train/algebra/1110",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 7,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5498,
+    "problem_id": "math/train/algebra/1110",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 5501,
+    "problem_id": "math/train/algebra/1110",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 18,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 5502,
+    "problem_id": "math/train/algebra/1110",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 5514,
+    "problem_id": "math/train/precalculus/79",
+    "legacy_scored": true,
+    "old_steps": 31,
+    "new_steps": 36,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 5515,
+    "problem_id": "math/train/precalculus/79",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 31,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 5518,
+    "problem_id": "math/train/precalculus/79",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 5548,
+    "problem_id": "math/train/intermediate_algebra/1000",
+    "legacy_scored": false,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 5571,
+    "problem_id": "math/train/precalculus/462",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 5572,
+    "problem_id": "math/train/precalculus/462",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 20,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 5573,
+    "problem_id": "math/train/precalculus/462",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 27,
+    "crlf_count": 35
+  },
+  {
+    "source_row": 5574,
+    "problem_id": "math/train/precalculus/462",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 22,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 5579,
+    "problem_id": "math/train/number_theory/370",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 6,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 5619,
+    "problem_id": "math/train/algebra/1628",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 5632,
+    "problem_id": "math/train/algebra/649",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 24,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 5636,
+    "problem_id": "math/train/algebra/649",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5638,
+    "problem_id": "math/train/algebra/649",
+    "legacy_scored": false,
+    "old_steps": 36,
+    "new_steps": 40,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 5639,
+    "problem_id": "math/train/algebra/649",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 14,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5648,
+    "problem_id": "math/train/geometry/574",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 20,
+    "crlf_count": 46
+  },
+  {
+    "source_row": 5650,
+    "problem_id": "math/train/geometry/574",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 29,
+    "crlf_count": 70
+  },
+  {
+    "source_row": 5651,
+    "problem_id": "math/train/geometry/574",
+    "legacy_scored": false,
+    "old_steps": 24,
+    "new_steps": 29,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 5657,
+    "problem_id": "math/train/algebra/30",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 52,
+    "crlf_count": 152
+  },
+  {
+    "source_row": 5673,
+    "problem_id": "math/train/intermediate_algebra/247",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 24,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 5674,
+    "problem_id": "math/train/intermediate_algebra/247",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 6,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5676,
+    "problem_id": "math/train/intermediate_algebra/247",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5677,
+    "problem_id": "math/train/intermediate_algebra/247",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 19,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 5680,
+    "problem_id": "math/train/prealgebra/494",
+    "legacy_scored": false,
+    "old_steps": 34,
+    "new_steps": 38,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 5684,
+    "problem_id": "math/train/prealgebra/494",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 5700,
+    "problem_id": "math/train/intermediate_algebra/950",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 5705,
+    "problem_id": "math/train/counting_and_probability/384",
+    "legacy_scored": false,
+    "old_steps": 13,
+    "new_steps": 13,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 5712,
+    "problem_id": "math/train/prealgebra/79",
+    "legacy_scored": false,
+    "old_steps": 37,
+    "new_steps": 40,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5722,
+    "problem_id": "math/train/algebra/563",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 22,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 5725,
+    "problem_id": "math/train/algebra/563",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 10,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 5745,
+    "problem_id": "math/train/algebra/1213",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 7,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 5762,
+    "problem_id": "math/train/number_theory/395",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 25,
+    "crlf_count": 36
+  },
+  {
+    "source_row": 5777,
+    "problem_id": "math/train/prealgebra/1172",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 5784,
+    "problem_id": "math/train/intermediate_algebra/665",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 24,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5796,
+    "problem_id": "math/train/algebra/1256",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 5800,
+    "problem_id": "math/train/precalculus/716",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 5802,
+    "problem_id": "math/train/precalculus/716",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 5803,
+    "problem_id": "math/train/precalculus/716",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 5820,
+    "problem_id": "math/train/intermediate_algebra/715",
+    "legacy_scored": true,
+    "old_steps": 41,
+    "new_steps": 44,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 5835,
+    "problem_id": "math/train/geometry/367",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 5837,
+    "problem_id": "math/train/geometry/367",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 13,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 5866,
+    "problem_id": "math/train/precalculus/696",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 27,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 5875,
+    "problem_id": "math/train/precalculus/63",
+    "legacy_scored": false,
+    "old_steps": 8,
+    "new_steps": 15,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 5882,
+    "problem_id": "math/train/geometry/191",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 7,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5887,
+    "problem_id": "math/train/geometry/191",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 5905,
+    "problem_id": "math/train/geometry/406",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5909,
+    "problem_id": "math/train/geometry/406",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5923,
+    "problem_id": "math/train/intermediate_algebra/250",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 17,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 5960,
+    "problem_id": "math/train/precalculus/572",
+    "legacy_scored": true,
+    "old_steps": 28,
+    "new_steps": 32,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 5963,
+    "problem_id": "math/train/precalculus/572",
+    "legacy_scored": true,
+    "old_steps": 30,
+    "new_steps": 32,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 5965,
+    "problem_id": "math/train/precalculus/572",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 25,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 5967,
+    "problem_id": "math/train/precalculus/572",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 5972,
+    "problem_id": "math/train/geometry/377",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 5983,
+    "problem_id": "math/train/geometry/787",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 18,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 5996,
+    "problem_id": "math/train/algebra/444",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 5997,
+    "problem_id": "math/train/algebra/444",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6002,
+    "problem_id": "math/train/algebra/17",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 6005,
+    "problem_id": "math/train/algebra/17",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 6031,
+    "problem_id": "math/train/algebra/189",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 13,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 6055,
+    "problem_id": "math/train/prealgebra/206",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 6062,
+    "problem_id": "math/train/number_theory/541",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 6077,
+    "problem_id": "math/train/intermediate_algebra/94",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6079,
+    "problem_id": "math/train/intermediate_algebra/94",
+    "legacy_scored": false,
+    "old_steps": 32,
+    "new_steps": 35,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6121,
+    "problem_id": "math/train/intermediate_algebra/1190",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 6140,
+    "problem_id": "math/train/number_theory/389",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 6163,
+    "problem_id": "math/train/geometry/352",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 20,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 6167,
+    "problem_id": "math/train/geometry/352",
+    "legacy_scored": false,
+    "old_steps": 15,
+    "new_steps": 20,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 6187,
+    "problem_id": "math/train/geometry/146",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 27,
+    "crlf_count": 49
+  },
+  {
+    "source_row": 6189,
+    "problem_id": "math/train/geometry/146",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 6190,
+    "problem_id": "math/train/geometry/146",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 6202,
+    "problem_id": "math/train/intermediate_algebra/286",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 18,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 6206,
+    "problem_id": "math/train/intermediate_algebra/286",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 6207,
+    "problem_id": "math/train/intermediate_algebra/286",
+    "legacy_scored": false,
+    "old_steps": 18,
+    "new_steps": 23,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 6229,
+    "problem_id": "math/train/intermediate_algebra/790",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 6243,
+    "problem_id": "math/train/algebra/766",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6244,
+    "problem_id": "math/train/algebra/766",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 6245,
+    "problem_id": "math/train/algebra/766",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 6247,
+    "problem_id": "math/train/algebra/766",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6277,
+    "problem_id": "math/train/algebra/0",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 6280,
+    "problem_id": "math/train/algebra/198",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 6,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 6290,
+    "problem_id": "math/train/number_theory/270",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 6292,
+    "problem_id": "math/train/number_theory/270",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 6325,
+    "problem_id": "math/train/algebra/1085",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 20,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 6331,
+    "problem_id": "math/train/intermediate_algebra/448",
+    "legacy_scored": true,
+    "old_steps": 1,
+    "new_steps": 5,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 6333,
+    "problem_id": "math/train/intermediate_algebra/448",
+    "legacy_scored": true,
+    "old_steps": 31,
+    "new_steps": 34,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 6336,
+    "problem_id": "math/train/algebra/672",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 6345,
+    "problem_id": "math/train/number_theory/664",
+    "legacy_scored": false,
+    "old_steps": 24,
+    "new_steps": 25,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 6346,
+    "problem_id": "math/train/number_theory/664",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 16,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 6348,
+    "problem_id": "math/train/number_theory/664",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 6358,
+    "problem_id": "math/train/algebra/695",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 6370,
+    "problem_id": "math/train/counting_and_probability/236",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 15,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 6373,
+    "problem_id": "math/train/counting_and_probability/236",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 6375,
+    "problem_id": "math/train/counting_and_probability/236",
+    "legacy_scored": false,
+    "old_steps": 29,
+    "new_steps": 32,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 6384,
+    "problem_id": "math/train/number_theory/699",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 4,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 6385,
+    "problem_id": "math/train/number_theory/699",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6389,
+    "problem_id": "math/train/number_theory/699",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 3,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 6402,
+    "problem_id": "math/train/algebra/170",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 22,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 6429,
+    "problem_id": "math/train/prealgebra/169",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 22,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 6459,
+    "problem_id": "math/train/counting_and_probability/447",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 18,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 6461,
+    "problem_id": "math/train/counting_and_probability/447",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6472,
+    "problem_id": "math/train/algebra/1260",
+    "legacy_scored": false,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 6489,
+    "problem_id": "math/train/number_theory/299",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 4,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 6495,
+    "problem_id": "math/train/number_theory/299",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 6513,
+    "problem_id": "math/train/intermediate_algebra/32",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 14,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 6529,
+    "problem_id": "math/train/number_theory/731",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 6530,
+    "problem_id": "math/train/number_theory/731",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 6533,
+    "problem_id": "math/train/number_theory/731",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 7,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 6534,
+    "problem_id": "math/train/number_theory/731",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 27,
+    "crlf_count": 57
+  },
+  {
+    "source_row": 6539,
+    "problem_id": "math/train/counting_and_probability/265",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6540,
+    "problem_id": "math/train/counting_and_probability/265",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 6545,
+    "problem_id": "math/train/algebra/573",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6546,
+    "problem_id": "math/train/algebra/573",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6550,
+    "problem_id": "math/train/algebra/573",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 19,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6560,
+    "problem_id": "math/train/algebra/746",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 6568,
+    "problem_id": "math/train/precalculus/723",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 6571,
+    "problem_id": "math/train/precalculus/723",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 21,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 6572,
+    "problem_id": "math/train/precalculus/723",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 25,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 6577,
+    "problem_id": "math/train/algebra/457",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 13,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 6580,
+    "problem_id": "math/train/algebra/457",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 14,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 6584,
+    "problem_id": "math/train/intermediate_algebra/922",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 25,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 6586,
+    "problem_id": "math/train/intermediate_algebra/922",
+    "legacy_scored": false,
+    "old_steps": 41,
+    "new_steps": 49,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 6589,
+    "problem_id": "math/train/intermediate_algebra/922",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 34,
+    "crlf_count": 47
+  },
+  {
+    "source_row": 6590,
+    "problem_id": "math/train/intermediate_algebra/922",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 6592,
+    "problem_id": "math/train/number_theory/63",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 16,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 6595,
+    "problem_id": "math/train/number_theory/63",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 9,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 6602,
+    "problem_id": "math/train/precalculus/386",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 6607,
+    "problem_id": "math/train/precalculus/386",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 6609,
+    "problem_id": "math/train/intermediate_algebra/93",
+    "legacy_scored": true,
+    "old_steps": 29,
+    "new_steps": 32,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 6612,
+    "problem_id": "math/train/intermediate_algebra/93",
+    "legacy_scored": false,
+    "old_steps": 50,
+    "new_steps": 56,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 6619,
+    "problem_id": "math/train/intermediate_algebra/249",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 27,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 6620,
+    "problem_id": "math/train/intermediate_algebra/249",
+    "legacy_scored": true,
+    "old_steps": 24,
+    "new_steps": 28,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 6622,
+    "problem_id": "math/train/intermediate_algebra/249",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 6628,
+    "problem_id": "math/train/algebra/440",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 14,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 6649,
+    "problem_id": "math/train/prealgebra/639",
+    "legacy_scored": false,
+    "old_steps": 22,
+    "new_steps": 29,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 6660,
+    "problem_id": "math/train/number_theory/613",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 6669,
+    "problem_id": "math/train/intermediate_algebra/897",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 15,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 6687,
+    "problem_id": "math/train/intermediate_algebra/766",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 19,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 6721,
+    "problem_id": "math/train/geometry/128",
+    "legacy_scored": false,
+    "old_steps": 38,
+    "new_steps": 43,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 6730,
+    "problem_id": "math/train/precalculus/183",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 12,
+    "crlf_count": 3
+  },
+  {
+    "source_row": 6731,
+    "problem_id": "math/train/precalculus/183",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 6741,
+    "problem_id": "math/train/counting_and_probability/351",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 16,
+    "crlf_count": 33
+  },
+  {
+    "source_row": 6743,
+    "problem_id": "math/train/counting_and_probability/351",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 21,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 6752,
+    "problem_id": "math/train/intermediate_algebra/1062",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 22,
+    "crlf_count": 36
+  },
+  {
+    "source_row": 6755,
+    "problem_id": "math/train/intermediate_algebra/1062",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 6757,
+    "problem_id": "math/train/intermediate_algebra/1062",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 20,
+    "crlf_count": 29
+  },
+  {
+    "source_row": 6776,
+    "problem_id": "math/train/counting_and_probability/439",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 6790,
+    "problem_id": "math/train/precalculus/81",
+    "legacy_scored": false,
+    "old_steps": 11,
+    "new_steps": 21,
+    "crlf_count": 41
+  },
+  {
+    "source_row": 6791,
+    "problem_id": "math/train/precalculus/81",
+    "legacy_scored": true,
+    "old_steps": 25,
+    "new_steps": 30,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 6796,
+    "problem_id": "math/train/algebra/452",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 5,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 6806,
+    "problem_id": "math/train/counting_and_probability/327",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 11,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 6819,
+    "problem_id": "math/train/geometry/624",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 6833,
+    "problem_id": "math/train/algebra/337",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 6834,
+    "problem_id": "math/train/algebra/337",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 30
+  },
+  {
+    "source_row": 6836,
+    "problem_id": "math/train/algebra/337",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 6841,
+    "problem_id": "math/train/prealgebra/357",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 6851,
+    "problem_id": "math/train/prealgebra/348",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 6852,
+    "problem_id": "math/train/prealgebra/348",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 6,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 6855,
+    "problem_id": "math/train/prealgebra/348",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 6856,
+    "problem_id": "math/train/algebra/1036",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 6858,
+    "problem_id": "math/train/algebra/1036",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 6871,
+    "problem_id": "math/train/geometry/521",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 26,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 6874,
+    "problem_id": "math/train/intermediate_algebra/90",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 6877,
+    "problem_id": "math/train/intermediate_algebra/90",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 14,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 6879,
+    "problem_id": "math/train/intermediate_algebra/90",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 6893,
+    "problem_id": "math/train/intermediate_algebra/540",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 6895,
+    "problem_id": "math/train/intermediate_algebra/540",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 6911,
+    "problem_id": "math/train/geometry/767",
+    "legacy_scored": false,
+    "old_steps": 54,
+    "new_steps": 55,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 6914,
+    "problem_id": "math/train/algebra/1392",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6915,
+    "problem_id": "math/train/algebra/1392",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 6933,
+    "problem_id": "math/train/prealgebra/668",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 6957,
+    "problem_id": "math/train/number_theory/41",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 6958,
+    "problem_id": "math/train/number_theory/41",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 10,
+    "crlf_count": 5
+  },
+  {
+    "source_row": 6964,
+    "problem_id": "math/train/algebra/439",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 6979,
+    "problem_id": "math/train/intermediate_algebra/474",
+    "legacy_scored": false,
+    "old_steps": 33,
+    "new_steps": 35,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 6980,
+    "problem_id": "math/train/intermediate_algebra/474",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 7041,
+    "problem_id": "math/train/algebra/530",
+    "legacy_scored": true,
+    "old_steps": 24,
+    "new_steps": 26,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 7042,
+    "problem_id": "math/train/algebra/530",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 14,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 7047,
+    "problem_id": "math/train/algebra/530",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 22,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 7053,
+    "problem_id": "math/train/algebra/386",
+    "legacy_scored": false,
+    "old_steps": 26,
+    "new_steps": 32,
+    "crlf_count": 36
+  },
+  {
+    "source_row": 7079,
+    "problem_id": "math/train/algebra/884",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7082,
+    "problem_id": "math/train/precalculus/209",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 19,
+    "crlf_count": 45
+  },
+  {
+    "source_row": 7084,
+    "problem_id": "math/train/precalculus/209",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 7088,
+    "problem_id": "math/train/number_theory/675",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 16,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 7089,
+    "problem_id": "math/train/number_theory/675",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 26,
+    "crlf_count": 64
+  },
+  {
+    "source_row": 7098,
+    "problem_id": "math/train/geometry/747",
+    "legacy_scored": true,
+    "old_steps": 27,
+    "new_steps": 31,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 7101,
+    "problem_id": "math/train/geometry/747",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 7102,
+    "problem_id": "math/train/geometry/747",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 15,
+    "crlf_count": 34
+  },
+  {
+    "source_row": 7104,
+    "problem_id": "math/train/number_theory/657",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 17,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 7113,
+    "problem_id": "math/train/intermediate_algebra/337",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 7115,
+    "problem_id": "math/train/intermediate_algebra/337",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 27,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 7138,
+    "problem_id": "math/train/intermediate_algebra/404",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 12,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 7146,
+    "problem_id": "math/train/number_theory/410",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 7149,
+    "problem_id": "math/train/number_theory/410",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 10,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7150,
+    "problem_id": "math/train/number_theory/410",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 7193,
+    "problem_id": "math/train/precalculus/216",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 7196,
+    "problem_id": "math/train/precalculus/216",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 18,
+    "crlf_count": 32
+  },
+  {
+    "source_row": 7230,
+    "problem_id": "math/train/geometry/600",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 11,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 7275,
+    "problem_id": "math/train/precalculus/419",
+    "legacy_scored": true,
+    "old_steps": 41,
+    "new_steps": 47,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 7309,
+    "problem_id": "math/train/number_theory/184",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 6,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 7338,
+    "problem_id": "math/train/algebra/951",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 16,
+    "crlf_count": 32
+  },
+  {
+    "source_row": 7339,
+    "problem_id": "math/train/algebra/951",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 7358,
+    "problem_id": "math/train/intermediate_algebra/1210",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 7374,
+    "problem_id": "math/train/intermediate_algebra/929",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7377,
+    "problem_id": "math/train/intermediate_algebra/1137",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 9,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 7380,
+    "problem_id": "math/train/intermediate_algebra/1137",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 23,
+    "crlf_count": 41
+  },
+  {
+    "source_row": 7397,
+    "problem_id": "math/train/intermediate_algebra/1143",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 7400,
+    "problem_id": "math/train/prealgebra/1023",
+    "legacy_scored": false,
+    "old_steps": 26,
+    "new_steps": 28,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 7441,
+    "problem_id": "math/train/number_theory/451",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 21,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 7449,
+    "problem_id": "math/train/precalculus/470",
+    "legacy_scored": false,
+    "old_steps": 24,
+    "new_steps": 26,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 7450,
+    "problem_id": "math/train/precalculus/470",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 13,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 7451,
+    "problem_id": "math/train/precalculus/470",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 14,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 7474,
+    "problem_id": "math/train/intermediate_algebra/919",
+    "legacy_scored": false,
+    "old_steps": 14,
+    "new_steps": 24,
+    "crlf_count": 45
+  },
+  {
+    "source_row": 7475,
+    "problem_id": "math/train/intermediate_algebra/919",
+    "legacy_scored": false,
+    "old_steps": 30,
+    "new_steps": 34,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 7479,
+    "problem_id": "math/train/intermediate_algebra/919",
+    "legacy_scored": true,
+    "old_steps": 24,
+    "new_steps": 29,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 7496,
+    "problem_id": "math/train/geometry/283",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 11,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 7512,
+    "problem_id": "math/train/prealgebra/1037",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 7516,
+    "problem_id": "math/train/prealgebra/1037",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 7540,
+    "problem_id": "math/train/geometry/167",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 19,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 7543,
+    "problem_id": "math/train/geometry/167",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7544,
+    "problem_id": "math/train/precalculus/417",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7547,
+    "problem_id": "math/train/precalculus/417",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 7,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 7552,
+    "problem_id": "math/train/prealgebra/818",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 16,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 7553,
+    "problem_id": "math/train/prealgebra/818",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 22,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 7554,
+    "problem_id": "math/train/prealgebra/818",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 11,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 7569,
+    "problem_id": "math/train/number_theory/357",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 11,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7584,
+    "problem_id": "math/train/intermediate_algebra/563",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 33,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 7585,
+    "problem_id": "math/train/intermediate_algebra/563",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 21,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 7587,
+    "problem_id": "math/train/intermediate_algebra/563",
+    "legacy_scored": false,
+    "old_steps": 44,
+    "new_steps": 51,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 7592,
+    "problem_id": "math/train/number_theory/644",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 7593,
+    "problem_id": "math/train/number_theory/644",
+    "legacy_scored": true,
+    "old_steps": 30,
+    "new_steps": 31,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 7595,
+    "problem_id": "math/train/number_theory/644",
+    "legacy_scored": true,
+    "old_steps": 28,
+    "new_steps": 30,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 7596,
+    "problem_id": "math/train/number_theory/644",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7600,
+    "problem_id": "math/train/precalculus/28",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 10,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 7607,
+    "problem_id": "math/train/precalculus/28",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 23,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 7619,
+    "problem_id": "math/train/number_theory/375",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 8,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 7631,
+    "problem_id": "math/train/number_theory/269",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 5,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 7636,
+    "problem_id": "math/train/counting_and_probability/599",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 6,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7644,
+    "problem_id": "math/train/algebra/1112",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 20,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 7646,
+    "problem_id": "math/train/algebra/1112",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 7648,
+    "problem_id": "math/train/counting_and_probability/404",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 7655,
+    "problem_id": "math/train/counting_and_probability/404",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 19,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 7706,
+    "problem_id": "math/train/number_theory/324",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 7712,
+    "problem_id": "math/train/prealgebra/942",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 10,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 7717,
+    "problem_id": "math/train/prealgebra/942",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 10,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 7728,
+    "problem_id": "math/train/intermediate_algebra/505",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 17,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 7731,
+    "problem_id": "math/train/intermediate_algebra/505",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 16,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 7737,
+    "problem_id": "math/train/precalculus/74",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 7738,
+    "problem_id": "math/train/precalculus/74",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 26,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 7740,
+    "problem_id": "math/train/precalculus/74",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 18,
+    "crlf_count": 33
+  },
+  {
+    "source_row": 7743,
+    "problem_id": "math/train/precalculus/74",
+    "legacy_scored": false,
+    "old_steps": 22,
+    "new_steps": 27,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 7780,
+    "problem_id": "math/train/prealgebra/593",
+    "legacy_scored": true,
+    "old_steps": 36,
+    "new_steps": 37,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 7798,
+    "problem_id": "math/train/number_theory/160",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 7803,
+    "problem_id": "math/train/number_theory/838",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 7804,
+    "problem_id": "math/train/number_theory/838",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 7807,
+    "problem_id": "math/train/number_theory/838",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 7814,
+    "problem_id": "math/train/precalculus/19",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 14,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 7815,
+    "problem_id": "math/train/precalculus/19",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 7816,
+    "problem_id": "math/train/geometry/473",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 17,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 7822,
+    "problem_id": "math/train/geometry/473",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 16,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 7834,
+    "problem_id": "math/train/intermediate_algebra/1045",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 7839,
+    "problem_id": "math/train/intermediate_algebra/1045",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 25,
+    "crlf_count": 48
+  },
+  {
+    "source_row": 7851,
+    "problem_id": "math/train/counting_and_probability/739",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 30
+  },
+  {
+    "source_row": 7857,
+    "problem_id": "math/train/algebra/127",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 7,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 7869,
+    "problem_id": "math/train/precalculus/3",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 7872,
+    "problem_id": "math/train/counting_and_probability/424",
+    "legacy_scored": false,
+    "old_steps": 23,
+    "new_steps": 23,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 7874,
+    "problem_id": "math/train/counting_and_probability/424",
+    "legacy_scored": false,
+    "old_steps": 22,
+    "new_steps": 23,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 7877,
+    "problem_id": "math/train/counting_and_probability/424",
+    "legacy_scored": false,
+    "old_steps": 13,
+    "new_steps": 14,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 7883,
+    "problem_id": "math/train/geometry/291",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 13,
+    "crlf_count": 15
+  },
+  {
+    "source_row": 7888,
+    "problem_id": "math/train/number_theory/517",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7889,
+    "problem_id": "math/train/number_theory/517",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 18,
+    "crlf_count": 55
+  },
+  {
+    "source_row": 7894,
+    "problem_id": "math/train/number_theory/517",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 34
+  },
+  {
+    "source_row": 7928,
+    "problem_id": "math/train/precalculus/226",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7938,
+    "problem_id": "math/train/precalculus/722",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 32,
+    "crlf_count": 55
+  },
+  {
+    "source_row": 7942,
+    "problem_id": "math/train/precalculus/722",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7948,
+    "problem_id": "math/train/intermediate_algebra/777",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 22,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7952,
+    "problem_id": "math/train/intermediate_algebra/1135",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 22,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7953,
+    "problem_id": "math/train/intermediate_algebra/1135",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 18,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 7957,
+    "problem_id": "math/train/intermediate_algebra/1135",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 10,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 7958,
+    "problem_id": "math/train/intermediate_algebra/1135",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 17,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 7961,
+    "problem_id": "math/train/precalculus/475",
+    "legacy_scored": false,
+    "old_steps": 23,
+    "new_steps": 26,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7963,
+    "problem_id": "math/train/precalculus/475",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 24,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 7965,
+    "problem_id": "math/train/precalculus/475",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 22,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 7966,
+    "problem_id": "math/train/precalculus/475",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 24,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7969,
+    "problem_id": "math/train/prealgebra/842",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 7975,
+    "problem_id": "math/train/prealgebra/842",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 7978,
+    "problem_id": "math/train/algebra/825",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 7979,
+    "problem_id": "math/train/algebra/825",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 8003,
+    "problem_id": "math/train/intermediate_algebra/105",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8004,
+    "problem_id": "math/train/intermediate_algebra/105",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 26,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8007,
+    "problem_id": "math/train/intermediate_algebra/105",
+    "legacy_scored": true,
+    "old_steps": 31,
+    "new_steps": 34,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8042,
+    "problem_id": "math/train/algebra/892",
+    "legacy_scored": false,
+    "old_steps": 66,
+    "new_steps": 72,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 8045,
+    "problem_id": "math/train/algebra/892",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 25,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 8048,
+    "problem_id": "math/train/intermediate_algebra/242",
+    "legacy_scored": true,
+    "old_steps": 22,
+    "new_steps": 29,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 8053,
+    "problem_id": "math/train/intermediate_algebra/242",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 11,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 8054,
+    "problem_id": "math/train/intermediate_algebra/242",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 8068,
+    "problem_id": "math/train/intermediate_algebra/54",
+    "legacy_scored": false,
+    "old_steps": 40,
+    "new_steps": 43,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 8071,
+    "problem_id": "math/train/intermediate_algebra/54",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 13,
+    "crlf_count": 38
+  },
+  {
+    "source_row": 8092,
+    "problem_id": "math/train/number_theory/80",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8093,
+    "problem_id": "math/train/number_theory/80",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 34,
+    "crlf_count": 51
+  },
+  {
+    "source_row": 8098,
+    "problem_id": "math/train/precalculus/290",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 18,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 8123,
+    "problem_id": "math/train/prealgebra/1017",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8126,
+    "problem_id": "math/train/prealgebra/1017",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 6,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 8129,
+    "problem_id": "math/train/precalculus/365",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 8133,
+    "problem_id": "math/train/precalculus/365",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 17,
+    "crlf_count": 32
+  },
+  {
+    "source_row": 8141,
+    "problem_id": "math/train/algebra/8",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 26,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8142,
+    "problem_id": "math/train/algebra/8",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 8152,
+    "problem_id": "math/train/algebra/806",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 22,
+    "crlf_count": 27
+  },
+  {
+    "source_row": 8158,
+    "problem_id": "math/train/algebra/806",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 24,
+    "crlf_count": 53
+  },
+  {
+    "source_row": 8160,
+    "problem_id": "math/train/intermediate_algebra/1264",
+    "legacy_scored": true,
+    "old_steps": 1,
+    "new_steps": 3,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8163,
+    "problem_id": "math/train/intermediate_algebra/1264",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 16,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 8164,
+    "problem_id": "math/train/intermediate_algebra/1264",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 14,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 8166,
+    "problem_id": "math/train/intermediate_algebra/1264",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 22,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8167,
+    "problem_id": "math/train/intermediate_algebra/1264",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 8182,
+    "problem_id": "math/train/intermediate_algebra/894",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 11,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 8206,
+    "problem_id": "math/train/intermediate_algebra/301",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 27,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 8215,
+    "problem_id": "math/train/precalculus/407",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 8218,
+    "problem_id": "math/train/geometry/18",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 12,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 8223,
+    "problem_id": "math/train/geometry/18",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 8239,
+    "problem_id": "math/train/number_theory/770",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 15,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 8249,
+    "problem_id": "math/train/prealgebra/798",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 8269,
+    "problem_id": "math/train/intermediate_algebra/57",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 34,
+    "crlf_count": 59
+  },
+  {
+    "source_row": 8270,
+    "problem_id": "math/train/intermediate_algebra/57",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 22,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 8272,
+    "problem_id": "math/train/algebra/414",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 25,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8273,
+    "problem_id": "math/train/algebra/414",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 20,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 8275,
+    "problem_id": "math/train/algebra/414",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 24,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8276,
+    "problem_id": "math/train/algebra/414",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 22,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 8278,
+    "problem_id": "math/train/algebra/414",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 14,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8279,
+    "problem_id": "math/train/algebra/414",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 9,
+    "crlf_count": 3
+  },
+  {
+    "source_row": 8280,
+    "problem_id": "math/train/intermediate_algebra/739",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 26,
+    "crlf_count": 31
+  },
+  {
+    "source_row": 8281,
+    "problem_id": "math/train/intermediate_algebra/739",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 20,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 8287,
+    "problem_id": "math/train/intermediate_algebra/739",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 14,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 8322,
+    "problem_id": "math/train/precalculus/453",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8326,
+    "problem_id": "math/train/precalculus/453",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 18,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8330,
+    "problem_id": "math/train/prealgebra/1059",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 18,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 8334,
+    "problem_id": "math/train/prealgebra/1059",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 15,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 8339,
+    "problem_id": "math/train/algebra/464",
+    "legacy_scored": false,
+    "old_steps": 40,
+    "new_steps": 43,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8344,
+    "problem_id": "math/train/precalculus/731",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 20,
+    "crlf_count": 29
+  },
+  {
+    "source_row": 8347,
+    "problem_id": "math/train/precalculus/731",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 22,
+    "crlf_count": 18
+  },
+  {
+    "source_row": 8384,
+    "problem_id": "math/train/geometry/708",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 18,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 8389,
+    "problem_id": "math/train/geometry/708",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8390,
+    "problem_id": "math/train/geometry/708",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 14,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 8409,
+    "problem_id": "math/train/algebra/365",
+    "legacy_scored": true,
+    "old_steps": 24,
+    "new_steps": 32,
+    "crlf_count": 28
+  },
+  {
+    "source_row": 8412,
+    "problem_id": "math/train/algebra/365",
+    "legacy_scored": true,
+    "old_steps": 27,
+    "new_steps": 30,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8415,
+    "problem_id": "math/train/algebra/365",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 15,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 8459,
+    "problem_id": "math/train/algebra/230",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8463,
+    "problem_id": "math/train/algebra/230",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 22,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8468,
+    "problem_id": "math/train/number_theory/713",
+    "legacy_scored": false,
+    "old_steps": 14,
+    "new_steps": 17,
+    "crlf_count": 33
+  },
+  {
+    "source_row": 8469,
+    "problem_id": "math/train/number_theory/713",
+    "legacy_scored": false,
+    "old_steps": 37,
+    "new_steps": 42,
+    "crlf_count": 26
+  },
+  {
+    "source_row": 8475,
+    "problem_id": "math/train/geometry/623",
+    "legacy_scored": true,
+    "old_steps": 1,
+    "new_steps": 15,
+    "crlf_count": 48
+  },
+  {
+    "source_row": 8495,
+    "problem_id": "math/train/counting_and_probability/381",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 21,
+    "crlf_count": 39
+  },
+  {
+    "source_row": 8499,
+    "problem_id": "math/train/number_theory/129",
+    "legacy_scored": true,
+    "old_steps": 2,
+    "new_steps": 5,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 8541,
+    "problem_id": "math/train/algebra/1650",
+    "legacy_scored": true,
+    "old_steps": 11,
+    "new_steps": 14,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8548,
+    "problem_id": "math/train/geometry/358",
+    "legacy_scored": false,
+    "old_steps": 22,
+    "new_steps": 22,
+    "crlf_count": 1
+  },
+  {
+    "source_row": 8576,
+    "problem_id": "math/train/intermediate_algebra/585",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 8580,
+    "problem_id": "math/train/intermediate_algebra/585",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 4,
+    "crlf_count": 3
+  },
+  {
+    "source_row": 8587,
+    "problem_id": "math/train/precalculus/631",
+    "legacy_scored": true,
+    "old_steps": 18,
+    "new_steps": 21,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8593,
+    "problem_id": "math/train/number_theory/148",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 15,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 8595,
+    "problem_id": "math/train/number_theory/148",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 8596,
+    "problem_id": "math/train/number_theory/148",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 8597,
+    "problem_id": "math/train/number_theory/148",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8599,
+    "problem_id": "math/train/number_theory/148",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 19,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 8600,
+    "problem_id": "math/train/number_theory/38",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 16,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 8605,
+    "problem_id": "math/train/number_theory/38",
+    "legacy_scored": false,
+    "old_steps": 30,
+    "new_steps": 33,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8607,
+    "problem_id": "math/train/number_theory/38",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 20,
+    "crlf_count": 32
+  },
+  {
+    "source_row": 8609,
+    "problem_id": "math/train/number_theory/379",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 8611,
+    "problem_id": "math/train/number_theory/379",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 5,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8612,
+    "problem_id": "math/train/number_theory/379",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 8613,
+    "problem_id": "math/train/number_theory/379",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 7,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 8616,
+    "problem_id": "math/train/number_theory/44",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8632,
+    "problem_id": "math/train/intermediate_algebra/1077",
+    "legacy_scored": true,
+    "old_steps": 26,
+    "new_steps": 32,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 8633,
+    "problem_id": "math/train/intermediate_algebra/1077",
+    "legacy_scored": true,
+    "old_steps": 21,
+    "new_steps": 25,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 8634,
+    "problem_id": "math/train/intermediate_algebra/1077",
+    "legacy_scored": true,
+    "old_steps": 23,
+    "new_steps": 44,
+    "crlf_count": 73
+  },
+  {
+    "source_row": 8636,
+    "problem_id": "math/train/intermediate_algebra/1077",
+    "legacy_scored": true,
+    "old_steps": 24,
+    "new_steps": 29,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 8640,
+    "problem_id": "math/train/prealgebra/267",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 15,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 8641,
+    "problem_id": "math/train/prealgebra/267",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 16,
+    "crlf_count": 29
+  },
+  {
+    "source_row": 8642,
+    "problem_id": "math/train/prealgebra/267",
+    "legacy_scored": false,
+    "old_steps": 20,
+    "new_steps": 32,
+    "crlf_count": 50
+  },
+  {
+    "source_row": 8645,
+    "problem_id": "math/train/prealgebra/267",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 16,
+    "crlf_count": 37
+  },
+  {
+    "source_row": 8647,
+    "problem_id": "math/train/prealgebra/267",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 19,
+    "crlf_count": 34
+  },
+  {
+    "source_row": 8661,
+    "problem_id": "math/train/intermediate_algebra/884",
+    "legacy_scored": false,
+    "old_steps": 17,
+    "new_steps": 21,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 8662,
+    "problem_id": "math/train/intermediate_algebra/884",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 20,
+    "crlf_count": 24
+  },
+  {
+    "source_row": 8663,
+    "problem_id": "math/train/intermediate_algebra/884",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 7,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8664,
+    "problem_id": "math/train/algebra/1070",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8666,
+    "problem_id": "math/train/algebra/1070",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 12,
+    "crlf_count": 22
+  },
+  {
+    "source_row": 8680,
+    "problem_id": "math/train/algebra/1238",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 10,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8682,
+    "problem_id": "math/train/algebra/1238",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8685,
+    "problem_id": "math/train/algebra/1238",
+    "legacy_scored": false,
+    "old_steps": 6,
+    "new_steps": 9,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8686,
+    "problem_id": "math/train/algebra/1238",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 16,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8688,
+    "problem_id": "math/train/algebra/487",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 8689,
+    "problem_id": "math/train/algebra/487",
+    "legacy_scored": false,
+    "old_steps": 44,
+    "new_steps": 44,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 8693,
+    "problem_id": "math/train/algebra/487",
+    "legacy_scored": true,
+    "old_steps": 26,
+    "new_steps": 32,
+    "crlf_count": 21
+  },
+  {
+    "source_row": 8694,
+    "problem_id": "math/train/algebra/487",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 8,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8696,
+    "problem_id": "math/train/algebra/1371",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 17,
+    "crlf_count": 17
+  },
+  {
+    "source_row": 8722,
+    "problem_id": "math/train/intermediate_algebra/195",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8729,
+    "problem_id": "math/train/prealgebra/397",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 13,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8731,
+    "problem_id": "math/train/prealgebra/397",
+    "legacy_scored": false,
+    "old_steps": 1,
+    "new_steps": 2,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 8734,
+    "problem_id": "math/train/prealgebra/397",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 18,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 8737,
+    "problem_id": "math/train/precalculus/595",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 19,
+    "crlf_count": 25
+  },
+  {
+    "source_row": 8741,
+    "problem_id": "math/train/precalculus/595",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 14,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 8746,
+    "problem_id": "math/train/counting_and_probability/578",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 7,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 8749,
+    "problem_id": "math/train/counting_and_probability/578",
+    "legacy_scored": true,
+    "old_steps": 20,
+    "new_steps": 23,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8750,
+    "problem_id": "math/train/counting_and_probability/578",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 10,
+    "crlf_count": 9
+  },
+  {
+    "source_row": 8756,
+    "problem_id": "math/train/number_theory/223",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 8,
+    "crlf_count": 3
+  },
+  {
+    "source_row": 8788,
+    "problem_id": "math/train/number_theory/576",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 13
+  },
+  {
+    "source_row": 8792,
+    "problem_id": "math/train/prealgebra/111",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8794,
+    "problem_id": "math/train/prealgebra/111",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 20,
+    "crlf_count": 34
+  },
+  {
+    "source_row": 8795,
+    "problem_id": "math/train/prealgebra/111",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 12,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8796,
+    "problem_id": "math/train/prealgebra/111",
+    "legacy_scored": true,
+    "old_steps": 17,
+    "new_steps": 21,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8797,
+    "problem_id": "math/train/prealgebra/111",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 16,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 8818,
+    "problem_id": "math/train/precalculus/411",
+    "legacy_scored": true,
+    "old_steps": 12,
+    "new_steps": 13,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8826,
+    "problem_id": "math/train/algebra/129",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 11,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 8836,
+    "problem_id": "math/train/prealgebra/170",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8853,
+    "problem_id": "math/train/prealgebra/949",
+    "legacy_scored": true,
+    "old_steps": 6,
+    "new_steps": 8,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8857,
+    "problem_id": "math/train/prealgebra/372",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 23,
+    "crlf_count": 23
+  },
+  {
+    "source_row": 8860,
+    "problem_id": "math/train/prealgebra/372",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 25,
+    "crlf_count": 43
+  },
+  {
+    "source_row": 8862,
+    "problem_id": "math/train/prealgebra/372",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 8,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 8865,
+    "problem_id": "math/train/intermediate_algebra/21",
+    "legacy_scored": false,
+    "old_steps": 29,
+    "new_steps": 32,
+    "crlf_count": 11
+  },
+  {
+    "source_row": 8896,
+    "problem_id": "math/train/prealgebra/78",
+    "legacy_scored": true,
+    "old_steps": 5,
+    "new_steps": 5,
+    "crlf_count": 4
+  },
+  {
+    "source_row": 8897,
+    "problem_id": "math/train/prealgebra/78",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 5,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 8945,
+    "problem_id": "math/train/intermediate_algebra/1247",
+    "legacy_scored": true,
+    "old_steps": 29,
+    "new_steps": 34,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 8969,
+    "problem_id": "math/train/geometry/211",
+    "legacy_scored": true,
+    "old_steps": 14,
+    "new_steps": 16,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8975,
+    "problem_id": "math/train/geometry/211",
+    "legacy_scored": true,
+    "old_steps": 7,
+    "new_steps": 9,
+    "crlf_count": 8
+  },
+  {
+    "source_row": 8979,
+    "problem_id": "math/train/algebra/593",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 4,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 8980,
+    "problem_id": "math/train/algebra/593",
+    "legacy_scored": true,
+    "old_steps": 3,
+    "new_steps": 5,
+    "crlf_count": 6
+  },
+  {
+    "source_row": 8983,
+    "problem_id": "math/train/algebra/593",
+    "legacy_scored": true,
+    "old_steps": 4,
+    "new_steps": 4,
+    "crlf_count": 2
+  },
+  {
+    "source_row": 8988,
+    "problem_id": "math/train/precalculus/593",
+    "legacy_scored": true,
+    "old_steps": 10,
+    "new_steps": 14,
+    "crlf_count": 19
+  },
+  {
+    "source_row": 8994,
+    "problem_id": "math/train/algebra/475",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 9,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 8997,
+    "problem_id": "math/train/algebra/475",
+    "legacy_scored": true,
+    "old_steps": 13,
+    "new_steps": 15,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 9013,
+    "problem_id": "math/train/geometry/339",
+    "legacy_scored": true,
+    "old_steps": 9,
+    "new_steps": 11,
+    "crlf_count": 7
+  },
+  {
+    "source_row": 9020,
+    "problem_id": "math/train/geometry/330",
+    "legacy_scored": true,
+    "old_steps": 8,
+    "new_steps": 12,
+    "crlf_count": 16
+  },
+  {
+    "source_row": 9022,
+    "problem_id": "math/train/geometry/330",
+    "legacy_scored": false,
+    "old_steps": 35,
+    "new_steps": 38,
+    "crlf_count": 14
+  },
+  {
+    "source_row": 9043,
+    "problem_id": "math/train/intermediate_algebra/27",
+    "legacy_scored": true,
+    "old_steps": 19,
+    "new_steps": 21,
+    "crlf_count": 10
+  },
+  {
+    "source_row": 9073,
+    "problem_id": "math/train/intermediate_algebra/174",
+    "legacy_scored": true,
+    "old_steps": 15,
+    "new_steps": 19,
+    "crlf_count": 12
+  },
+  {
+    "source_row": 9080,
+    "problem_id": "math/train/geometry/465",
+    "legacy_scored": true,
+    "old_steps": 16,
+    "new_steps": 21,
+    "crlf_count": 20
+  },
+  {
+    "source_row": 9097,
+    "problem_id": "math/train/algebra/148",
+    "legacy_scored": false,
+    "old_steps": 45,
+    "new_steps": 51,
+    "crlf_count": 26
+  }
+]

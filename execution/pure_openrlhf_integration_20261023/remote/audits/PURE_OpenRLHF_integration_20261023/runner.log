@@ -1,0 +1,59 @@
+STAGE actor_and_vllm_load
+INFO 10-23 16:32:18 [__init__.py:216] Automatically detected platform cuda.
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 10-23 16:32:28 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-23 16:32:28 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-23 16:32:28 [utils.py:328] non-default args: {'seed': 0, 'max_model_len': 4096, 'distributed_executor_backend': 'external_launcher', 'gpu_memory_utilization': 0.3, 'max_num_batched_tokens': 4096, 'max_num_seqs': 32, 'disable_log_stats': True, 'model_impl': 'vllm', 'model': '/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2'}
+INFO 10-23 16:32:34 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+INFO 10-23 16:32:34 [__init__.py:1815] Using max model len 4096
+INFO 10-23 16:32:35 [parallel.py:348] Disabling V1 multiprocessing for external launcher.
+INFO 10-23 16:32:35 [llm_engine.py:221] Initializing a V0 LLM engine (v0.10.2) with config: model='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', speculative_config=None, tokenizer='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 10-23 16:32:36 [cuda.py:456] Using Flash Attention backend.
+[W1023 16:32:37.762235687 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO 10-23 16:32:37 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 10-23 16:32:37 [model_runner.py:1051] Starting to load model /srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.16s/it]
+
+INFO 10-23 16:32:43 [default_loader.py:268] Loading weights took 2.31 seconds
+INFO 10-23 16:32:43 [model_runner.py:1083] Model loading took 2.8798 GiB and 5.415139 seconds
+INFO 10-23 16:32:46 [worker.py:290] Memory profiling takes 1.81 seconds
+INFO 10-23 16:32:46 [worker.py:290] the current vLLM instance can use total_gpu_memory (79.25GiB) x gpu_memory_utilization (0.30) = 23.77GiB
+INFO 10-23 16:32:46 [worker.py:290] model weights take 2.88GiB; non_torch_memory takes -0.09GiB; PyTorch activation peak memory takes 0.26GiB; the rest of the memory reserved for KV Cache is 20.73GiB.
+INFO 10-23 16:32:46 [executor_base.py:114] # cuda blocks: 48517, # CPU blocks: 9362
+INFO 10-23 16:32:46 [executor_base.py:119] Maximum concurrency for 4096 tokens per request: 189.52x
+INFO 10-23 16:32:48 [model_runner.py:1355] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:00<00:04,  1.45it/s]Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:01<00:03,  1.51it/s]Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:02<00:02,  1.50it/s]Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:02<00:01,  1.53it/s]Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:03<00:01,  1.56it/s]Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:03<00:00,  1.60it/s]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:04<00:00,  1.55it/s]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:04<00:00,  1.54it/s]
+INFO 10-23 16:32:53 [model_runner.py:1507] Graph capturing finished in 5 secs, took -0.12 GiB
+INFO 10-23 16:32:53 [worker.py:467] Free memory on device (61.72/79.25 GiB) on startup. Desired GPU memory utilization is (0.3, 23.77 GiB). Actual usage is 2.88 GiB for weight, 0.26 GiB for peak activation, -0.09 GiB for non-torch memory, and -0.12 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=22223971942` to fit into requested memory, or `--kv-cache-memory=62963613696` to fully utilize gpu memory. Current kv cache memory in use is 22257526374 bytes.
+INFO 10-23 16:32:53 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 9.69 seconds
+INFO 10-23 16:32:54 [llm.py:295] Supported_tasks: ['generate']
+INFO 10-23 16:32:54 [__init__.py:36] No IOProcessor plugins requested by the model
+STAGE tokenizer_checks
+STAGE prm_load
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 76.28it/s]
+STAGE parameter_hash_before
+STAGE generation
+STAGE official_prm_scoring
+STAGE official_edge_forwards
+STAGE old_and_reference_logps
+STAGE signals
+STAGE P_VR_backward
+P-VR: backward 8/32; no optimizer
+P-VR: backward 16/32; no optimizer
+P-VR: backward 24/32; no optimizer
+P-VR: backward 32/32; no optimizer
+STAGE P_PRM_backward
+P-PRM: backward 8/32; no optimizer
+P-PRM: backward 16/32; no optimizer
+P-PRM: backward 24/32; no optimizer
+P-PRM: backward 32/32; no optimizer
+STAGE parameter_hash_after
+[rank0]:[W1023 16:39:37.234102789 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

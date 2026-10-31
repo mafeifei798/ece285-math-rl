@@ -1,0 +1,60 @@
+{
+  "B_source_hashes_unchanged": true,
+  "source_manifest_sha256": "cbd5d00452d3b23632bef8ab431e06c08640cde9eaa0367802994b09bbdc69e1",
+  "B_progress": {
+    "generated_completion_tokens": 14236970,
+    "generated_completions": 21728,
+    "generated_groups": 2716,
+    "mixed_reward_groups": 2712,
+    "correct_completions": 9269,
+    "truncated_completions": 1284,
+    "prm_input_tokens": 12279008,
+    "prm_padded_tokens": 18256556,
+    "prm_scored_completions": 18510,
+    "native_steps": 194680,
+    "single_step_completions": 1336,
+    "no_double_newline_completions": 1732,
+    "prm_forward_seconds": 630.6203639442101,
+    "reward_status_counts": {
+      "symbolic": 10145,
+      "truncated": 1284,
+      "exact": 8365,
+      "missing_or_invalid_box": 1670,
+      "unparseable": 264
+    },
+    "outcome_group_counts": {
+      "mixed": 2118,
+      "mixed_has_invalid": 1392,
+      "mixed_all_valid": 726,
+      "all_wrong": 481,
+      "all_wrong_has_invalid": 391,
+      "all_wrong_all_valid": 90,
+      "all_correct": 117,
+      "all_correct_all_valid": 117
+    },
+    "last_batch": {
+      "generated_completion_tokens": 27524,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 4,
+      "correct_completions": 3,
+      "truncated_completions": 4,
+      "native_steps": 337,
+      "single_step_completions": 4,
+      "no_double_newline_completions": 4,
+      "prm_forward_seconds": 1.3148273257538676,
+      "prm_input_tokens": 21703,
+      "prm_padded_tokens": 38632,
+      "prm_scored_completions": 28
+    },
+    "global_step": 679,
+    "elapsed_seconds": 11229.59102723701,
+    "target_completion_tokens": 24000000,
+    "effective_completion_tokens_per_second": 732.3864226267889,
+    "torch_peak_allocated_GiB": 34.45738935470581,
+    "torch_peak_reserved_GiB": 35.48046875,
+    "resumed_from_global_step": 285,
+    "source_completion_tokens": 6012570,
+    "continuation_generated_completion_tokens": 8224400
+  }
+}

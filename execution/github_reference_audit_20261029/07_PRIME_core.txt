@@ -1,0 +1,49 @@
+https://github.com/PRIME-RL/PRIME/blob/18ad596f08d487bb546d80d738d99ec697bd2e75/training/verl/trainer/ppo/core_algos.py
+Upstream blob: c63b1979959628ce3cffd6f9b04e4fd904dd04f7
+EXCERPT ONLY
+108: def compute_rloo_returns(data:verl.DataProto, eos_mask:torch.Tensor,n_samples,config):
+109:     # calculate rloo reward on different reward sources, and sum again
+110:     with torch.no_grad():
+111:         # reward = torch.zeros_like(data.batch['responses'], dtype=torch.float32)
+112:         advantages = torch.zeros_like(data.batch['responses'],dtype=torch.float32)
+113:         discount_rewards=[]
+114:         for k,v in data.batch.items():
+115:             if k == 'rm_scores':
+116:                 gamma = config.algorithm.adv_params.reward_model_gamma
+117:                 reward_mask = eos_mask.bool()
+118:             elif k == 'gt_scores':
+119:                 gamma = config.algorithm.adv_params.verifier_gamma
+120:                 prompt_ids = data.batch['prompts']
+121:                 prompt_length = prompt_ids.shape[-1]
+122:                 valid_response_length = data.batch['attention_mask'][:, prompt_length:].sum(-1)
+123:                 reward_mask = torch.zeros_like(v, dtype=torch.bool)
+124:                 reward_mask[torch.arange(0, valid_response_length.shape[0], dtype=torch.long, device=valid_response_length.device), valid_response_length-1]=True
+125:             else: # not a reward tensor
+126:                 continue
+127:             reward_tensor = v.clone()
+128:             reward_tensor[~reward_mask]=0
+129:             for start_pos in range(0, reward_tensor.shape[0], n_samples):
+130:                 cur_rewards_mean = torch.cat(
+131:                     [ reward_tensor[pos:pos + 1][ reward_mask[pos:pos + 1] ].mean(dim=0, keepdim=True) for pos
+132:                      in range(start_pos, start_pos + n_samples) ], dim=0)
+133:                 cur_rewards_sum = cur_rewards_mean.sum()
+134:                 cur_reward_baseline = cur_rewards_sum / (n_samples - 1)
+135:                 reward_tensor[start_pos:start_pos + n_samples][
+136:                     reward_mask[start_pos:start_pos + n_samples]] = \
+137:                     reward_tensor[start_pos:start_pos + n_samples][
+138:                         reward_mask[start_pos:start_pos + n_samples]] * (
+139:                                 n_samples / (n_samples - 1)) - cur_reward_baseline
+140: 
+141:             discount_reward = torch.zeros_like(reward_tensor)
+142:             for step in reversed(range(reward_tensor.shape[1])):
+143:                 if step == reward_tensor.shape[1]-1:
+144:                     discount_reward[:,step] = reward_tensor[:, step]
+145:                 else:
+146:                     discount_reward[:,step] = reward_tensor[:, step] + gamma * discount_reward[:, step+1]
+147:             discount_rewards.append(discount_reward)
+148:         # return is the sum of discounted reward
+149:         returns = sum(discount_rewards)
+150:         # advantage is whitened return
+151:         advantages = returns.clone()
+152:         advantages = verl_F.masked_whiten(advantages, eos_mask)
+153:     return advantages, returns

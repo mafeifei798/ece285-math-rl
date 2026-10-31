@@ -1,0 +1,19 @@
+{
+  "scope": "offline training-rollout signal-magnitude sanity check, not gradient matching or training",
+  "source_sha256": "5717dc66f578d4d5fb28cd9bbea83229ca294ed5509524458d04b7e228ea3383",
+  "rows": 536,
+  "base_lambda": 0.2,
+  "matched_PAPO_lambda": 0.052956140041351324,
+  "bounded_mean_abs_process": 0.018315762281417847,
+  "PAPO_lambda02_mean_abs_process": 0.06917332857847214,
+  "matched_PAPO_mean_abs_process": 0.018315764144062996,
+  "equal_mean_magnitude_max_per_response_difference": 0.10750937461853027,
+  "validation_or_test_used": false,
+  "new_training_started": false,
+  "model_calls": 0,
+  "limits": [
+    "Calibration uses frozen training rollout scores only.",
+    "Equal mean advantage magnitude is not equal parameter-gradient norm.",
+    "A win over fixed-lambda PAPO could be caused by weakening the process term globally; no independent advantage of preserving per-group spread is established yet."
+  ]
+}

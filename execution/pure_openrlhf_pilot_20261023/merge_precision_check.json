@@ -1,0 +1,87 @@
+{
+  "mode": "CPU-only, two saved first-layer tensors; no model instantiation or GPU access",
+  "checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0001",
+  "checkpoint_receipt_sha256": "357b1987fa76356b8d6588acd1d5c6438ce04710eac446fa0e9808398fe3ef29",
+  "adapter_file_sha256": "cc624eb68d6371058c2fa7e17a803db57081caeb575d8acdb74f995f96099063",
+  "batch_step": 1,
+  "optimizer_steps": 1,
+  "arm": "P_VR",
+  "torch_threads": 1,
+  "scale": 2.0,
+  "formula": "BF16(FP32(base) + FP32(B) @ FP32(A) * scale)",
+  "layers": [
+    {
+      "name": "model.layers.0.self_attn.q_proj",
+      "shape": [
+        1536,
+        1536
+      ],
+      "base_dtype": "torch.bfloat16",
+      "base_tensor_sha256": "0ab4f1887da6cd7a2cb5b687bc2caf0a9b21175ddc28397c195272b3db1ca189",
+      "lora_A_shape": [
+        16,
+        1536
+      ],
+      "lora_B_shape": [
+        1536,
+        16
+      ],
+      "base_mean_abs": 0.03662960231304169,
+      "delta_mean_abs": 3.634862011381301e-08,
+      "delta_max_abs": 2.5880655130094965e-07,
+      "delta_rms": 4.923861496308746e-08,
+      "entries": 2359296,
+      "nonzero_delta_entries": 2359296,
+      "changed_bf16_entries": 677,
+      "changed_bf16_fraction": 0.00028695000542534725,
+      "changed_fraction_among_nonzero_delta": 0.00028695000542534725,
+      "merged_change_mean_abs": 2.2741166588735595e-11,
+      "merged_change_rms": 1.6180342621296973e-09,
+      "lora_A_mean_abs": 0.01282872911542654,
+      "lora_B_mean_abs": 3.760043227885035e-07
+    },
+    {
+      "name": "model.layers.0.mlp.gate_proj",
+      "shape": [
+        8960,
+        1536
+      ],
+      "base_dtype": "torch.bfloat16",
+      "base_tensor_sha256": "dc0758b56e5f848055cd3296776d11d75a927a85e2ca848dd1d203967ba23103",
+      "lora_A_shape": [
+        16,
+        1536
+      ],
+      "lora_B_shape": [
+        8960,
+        16
+      ],
+      "base_mean_abs": 0.031096169725060463,
+      "delta_mean_abs": 4.7040167316936277e-08,
+      "delta_max_abs": 2.8652266337303445e-07,
+      "delta_rms": 5.873847541693067e-08,
+      "entries": 13762560,
+      "nonzero_delta_entries": 13762560,
+      "changed_bf16_entries": 5067,
+      "changed_bf16_fraction": 0.00036817278180803573,
+      "changed_fraction_among_nonzero_delta": 0.00036817278180803573,
+      "merged_change_mean_abs": 3.341336235473946e-11,
+      "merged_change_rms": 2.040473567888057e-09,
+      "lora_A_mean_abs": 0.012764246203005314,
+      "lora_B_mean_abs": 4.945399609823653e-07
+    }
+  ],
+  "base_index_sha256": null,
+  "base_config_sha256": "81d1dc3c9d4797466a24bfc140776894d15ac4ccce58a0220462b2106f2f4831",
+  "parameters_modified": false,
+  "training_interrupted": false,
+  "started_unix": 1792747225.5667655,
+  "cuda_initialized": false,
+  "finished_unix": 1792747226.435092,
+  "limitations": [
+    "Only step1 P-VR first-layer q_proj and gate_proj; not all layers, later steps or P-PRM.",
+    "A zero BF16 weight difference does not prove unchanged model outputs or no learning in the unmerged actor.",
+    "Changed-weight fraction is a numerical diagnostic, not a reward-quality or accuracy metric.",
+    "No learning-rate, reward, loss or runtime change is made based on this diagnostic."
+  ]
+}

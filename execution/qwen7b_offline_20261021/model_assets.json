@@ -1,0 +1,111 @@
+{
+  "complete": true,
+  "repo": "Qwen/Qwen2.5-Math-PRM-7B",
+  "revision": "0610740060112df12585d00a1c5f4624d2f59051",
+  "files": [
+    {
+      "name": "LICENSE",
+      "sha256": "8aff84e2629edb092f195c1d91bc368d8bb40eeb5fcedce2df19e405ee2cc876",
+      "bytes": 6962,
+      "reused": true
+    },
+    {
+      "name": "README.md",
+      "sha256": "ae8f09edf1a928646bcf79086d2a5f5f83f719d18f47e1046f6863713ba1880b",
+      "bytes": 6063,
+      "reused": true
+    },
+    {
+      "name": "config.json",
+      "sha256": "70d5ef2f21af53e6c95252d8838f4898fbac6c83708a67c9c7c3f83f75318bbe",
+      "bytes": 835,
+      "reused": true
+    },
+    {
+      "name": "configuration.json",
+      "sha256": "a78221ae93dd8977b26fcd1d106fa5ad7e7f1fd3a7d93bfd9d6fba5ed00ec4d2",
+      "bytes": 48,
+      "reused": true
+    },
+    {
+      "name": "configuration_qwen2_rm.py",
+      "sha256": "c50ec249c0ab452765dd6acc9825448dd11a268ff62ddc9b2dbdeab25a1008e2",
+      "bytes": 6685,
+      "reused": true
+    },
+    {
+      "name": "generation_config.json",
+      "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+      "bytes": 243,
+      "reused": true
+    },
+    {
+      "name": "merges.txt",
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "bytes": 1671839,
+      "reused": true
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "sha256": "5b61f9273d8fe706ec119b3f960bfb07b07e28097646baeee4da64b64ba6fdc7",
+      "bytes": 27980,
+      "reused": true
+    },
+    {
+      "name": "modeling_qwen2_rm.py",
+      "sha256": "2cb5fa464fa15b3e5ebcb9dc5e9136f09354113f5095adb9dd8384ac64ef4eb0",
+      "bytes": 74658,
+      "reused": true
+    },
+    {
+      "name": "tokenizer.json",
+      "sha256": "b145a1b9700174ec9a0617ba1bd0edb819ba861ab0d939b0c2b1d77d93cd76ac",
+      "bytes": 7029106,
+      "reused": true
+    },
+    {
+      "name": "tokenizer_config.json",
+      "sha256": "f2c303ece66df80e620fe0127864885249d4100de824e3b50dc72ff98ce11442",
+      "bytes": 2439,
+      "reused": true
+    },
+    {
+      "name": "vocab.json",
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "bytes": 2776833,
+      "reused": true
+    },
+    {
+      "name": "model-00001-of-00004.safetensors",
+      "sha256": "6351eb3fdb31ff4d98b7c34080665e925dfa515d5f44fd5a972dbc2612839fcc",
+      "bytes": 3971153412,
+      "reused_prefix_bytes": 1593835520,
+      "transport": "ModelScope HTTP ranges, official pinned HF SHA256 verified"
+    },
+    {
+      "name": "model-00002-of-00004.safetensors",
+      "sha256": "9ce988e446c3666bfde723cf53fde432ebe2ec76a5f368fd1578cd46d8474242",
+      "bytes": 3864726352,
+      "reused_prefix_bytes": 1560281088,
+      "transport": "ModelScope HTTP ranges, official pinned HF SHA256 verified"
+    },
+    {
+      "name": "model-00003-of-00004.safetensors",
+      "sha256": "4d9eb85ee50decd0682b32e9d351c1e8b53c583903bdf225fc44c5fbe24b06d9",
+      "bytes": 3864726424,
+      "reused_prefix_bytes": 1623195648,
+      "transport": "ModelScope HTTP ranges, official pinned HF SHA256 verified"
+    },
+    {
+      "name": "model-00004-of-00004.safetensors",
+      "sha256": "97ba1ba0ea27ba56d4c3340601cba7d2a011bf0c957a0ac4a85eda46e0e3a183",
+      "bytes": 3556377672,
+      "reused_prefix_bytes": 1484783616,
+      "transport": "ModelScope HTTP ranges, official pinned HF SHA256 verified"
+    }
+  ],
+  "official_metadata_sha256": "31ac67e670ebad25af341fe443f34ba5d5dcf6af027f97eb58207474b2fc7703",
+  "elapsed_seconds": 397.329284385778,
+  "training": false,
+  "model_updates": 0
+}

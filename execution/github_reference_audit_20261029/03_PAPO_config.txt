@@ -1,0 +1,28 @@
+https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/scripts/run_grpo_qwen2.5_7b_base_megatron_8gpu_dual_lambda1.sh
+Upstream blob: 22af751db49200463edf316668d2d31294267c35
+EXCERPT ONLY
+20: 
+21: # =================== Megatron Environment Configuration ===================
+22: export CUDA_DEVICE_MAX_CONNECTIONS=1
+23: export HYDRA_FULL_ERROR=1
+24: export VLLM_USE_V1=1
+25: export RAY_EXPERIMENTAL_NOSET_CUDA_VISIBLE_DEVICES=1
+26: export WANDB_MODE=offline
+27: export HF_HUB_OFFLINE=1
+28: export TRANSFORMERS_OFFLINE=1
+29: # export TIKTOKEN_ENCODINGS_BASE=/path/to/tiktoken_encodings  # Optional: set if offline
+30: 
+31: # Disable Ray memory monitor to prevent false OOM kills
+32: export RAY_memory_monitor_refresh_ms=0
+33: 
+34: # PA_GRPO: Enable dual-objective scoring in reward routing
+35: export USE_DUAL_OBJECTIVE=true
+36: # ORM + LLM fallback for binary A_out signal
+37: export USE_LLM_VERIFIER=true
+38: 
+39: # LLM Grader (GPT-OSS-20B, for both LLM-fallback and PRM 3-tier scoring)
+40: export LLM_GRADER_API_BASE="${LLM_GRADER_API_BASE:-http://localhost:8000/v1}"
+41: export LLM_GRADER_API_KEY="${LLM_GRADER_API_KEY:-dummy}"
+42: export LLM_GRADER_MODEL="GPT-OSS-20B"
+43: 
+44: echo "=== PA_GRPO: Qwen2.5-7B-Base Dual-Objective 8GPU (ORM+LLM for A_out, PRM for A_proc) ==="

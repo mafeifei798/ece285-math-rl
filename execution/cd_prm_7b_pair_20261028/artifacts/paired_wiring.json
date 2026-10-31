@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "identical_initialization": true,
+  "identical_batches": true,
+  "first_unclipped_gradient_C_minus_D_equals_success_gradient": false,
+  "max_abs_error": 0.0006128824315965176,
+  "tolerance": {
+    "atol": 2e-06,
+    "rtol": 0.005
+  }
+}

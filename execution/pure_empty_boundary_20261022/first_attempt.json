@@ -1,0 +1,8 @@
+{
+  "status": "failed_before_model_import",
+  "reason": "input transfer was incomplete; 288-row assertion failed",
+  "model_loaded": false,
+  "optimizer_steps": 0,
+  "retry_policy": "wait for scp exit, verify SHA256, preserve failed directory, use new output directory",
+  "completed_input_sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d"
+}

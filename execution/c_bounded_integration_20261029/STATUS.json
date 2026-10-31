@@ -1,0 +1,176 @@
+{
+  "status": "COMPLETE_REAL_MODEL_NO_UPDATE_ACCEPTED",
+  "source_version": "c_bounded_integration_20261029_v2",
+  "real_result": {
+    "passed": true,
+    "status": "complete_no_update",
+    "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+    "live_generated_rows": 32,
+    "new_generation_calls_this_attempt": 0,
+    "generation_reused_from": "runs/C_bounded_no_update_20261029",
+    "live_generated_completion_tokens": 26557,
+    "exact_token_ID_rows_verified": 32,
+    "saved_real_text_rows": 40,
+    "saved_groups": [
+      {
+        "dataset": "probe",
+        "kind": "all_correct",
+        "group": "1010"
+      },
+      {
+        "dataset": "probe",
+        "kind": "mixed",
+        "group": "1009"
+      },
+      {
+        "dataset": "illustrations",
+        "kind": "all_wrong",
+        "group": "old-9"
+      },
+      {
+        "dataset": "illustrations",
+        "kind": "all_wrong",
+        "group": "old-261"
+      },
+      {
+        "dataset": "illustrations",
+        "kind": "all_wrong",
+        "group": "old-621"
+      }
+    ],
+    "native_C_score_max_error_vs_saved": 0.0,
+    "live_loss": {
+      "rows": 32,
+      "max_actual_loss_vs_ratio1_formula_error": 3.725290298461914e-09,
+      "finite_actor_LoRA_gradients": true,
+      "actor_gradient_abs_sum": 76.99444544501603,
+      "wrong_positive": 0
+    },
+    "saved_loss": {
+      "rows": 40,
+      "max_actual_loss_vs_ratio1_formula_error": 3.725290298461914e-09,
+      "finite_actor_LoRA_gradients": true,
+      "actor_gradient_abs_sum": 41.908307978883386,
+      "wrong_positive": 0
+    },
+    "actual_loss_rows": 72,
+    "wrong_positive_at_actual_loss": 0,
+    "loss_input_bitwise_preserved": true,
+    "actual_outcome_normalizations": 1,
+    "post_combination_normalizations": 0,
+    "legacy_mixed_advantages_discarded": true,
+    "negative_tests_rejected": [
+      "second_group_normalization",
+      "rescale_after_builder",
+      "shuffle_advantage_without_tokens",
+      "missing_provenance",
+      "token_tag_mismatch",
+      "injected_wrong_positive",
+      "formal_RL_entry",
+      "optimizer_creation"
+    ],
+    "optimizer_constructed": false,
+    "optimizer_steps": 0,
+    "formal_RL": false,
+    "D_adaptation": false,
+    "actor_and_C_parameters_unchanged": true,
+    "original_ABCD_preserved": true,
+    "stages": {
+      "build_actor_vllm_and_frozen_C": {
+        "seconds": 38.61744451522827,
+        "peak_allocated_GiB": 27.936872005462646,
+        "peak_reserved_GiB": 28.3984375
+      },
+      "parameter_hashes_before": {
+        "seconds": 34.447715759277344,
+        "peak_allocated_GiB": 27.861676692962646,
+        "peak_reserved_GiB": 28.3984375
+      },
+      "reuse_exact_live_tokens_rescore_and_TRL_buffer": {
+        "seconds": 14.12189531326294,
+        "peak_allocated_GiB": 29.02998447418213,
+        "peak_reserved_GiB": 30.6328125
+      },
+      "live_real_actor_forward_backward_no_update": {
+        "seconds": 36.57921862602234,
+        "peak_allocated_GiB": 29.869574546813965,
+        "peak_reserved_GiB": 31.21484375
+      },
+      "saved_text_real_C_native_score_parity": {
+        "seconds": 9.85929799079895,
+        "peak_allocated_GiB": 28.409491539001465,
+        "peak_reserved_GiB": 31.21484375
+      },
+      "saved_text_actual_reference_logps": {
+        "seconds": 6.812684059143066,
+        "peak_allocated_GiB": 29.040382385253906,
+        "peak_reserved_GiB": 31.21484375
+      },
+      "saved_text_real_actor_forward_backward_no_update": {
+        "seconds": 45.16649913787842,
+        "peak_allocated_GiB": 29.871076107025146,
+        "peak_reserved_GiB": 31.216796875
+      },
+      "corrupted_signal_guard_tests": {
+        "seconds": 0.05607724189758301,
+        "peak_allocated_GiB": 27.87296438217163,
+        "peak_reserved_GiB": 31.216796875
+      },
+      "parameter_hashes_and_preservation_after": {
+        "seconds": 30.253647327423096,
+        "peak_allocated_GiB": 27.872962474822998,
+        "peak_reserved_GiB": 31.216796875
+      }
+    },
+    "total_seconds": 217.9328854084015,
+    "limitations": [
+      "Exact tokens reused from first actual live generation after a scorer-only TF32 precision correction; no resampling. Not convergence or policy accuracy.",
+      "Saved actor tokens were retokenized explicitly; only live rows claim exact emitted tokens.",
+      "No optimizer states allocated; measured memory is no-update footprint, not full training peak.",
+      "Shared GPU and audit-only vLLM cache reduction; timings do not establish dedicated-card throughput.",
+      "The new signal does not itself fix C raw PRM ranking."
+    ]
+  },
+  "independent_acceptance": {
+    "passed": true,
+    "exact_live_generated_tokens_reused": 32,
+    "actual_loss_rows_independently_recomputed": 72,
+    "live_and_saved_token_mask_fingerprints_verified": 72,
+    "max_FP64_advantage_error": 9.058772976189289e-08,
+    "max_abs_process_component": 0.12458205223083496,
+    "wrong_positive_at_loss": 0,
+    "post_combination_normalizations": 0,
+    "C_score_parity_max_error": 0.0,
+    "actor_and_C_parameter_hashes_unchanged": true,
+    "original_AB_files_unchanged": 89,
+    "CD_and_scoring_files_unchanged": 17,
+    "optimizer_steps": 0,
+    "formal_RL": false,
+    "D_adaptation": false,
+    "precision_finding": {
+      "shared_training_tf32": true,
+      "TF32_off_max_error": 0.0,
+      "TF32_on_max_error": 0.020781725645065308,
+      "precise_cause": "Inherited TrainingArguments tf32=True shared global state; do not attribute exclusively to vLLM"
+    }
+  },
+  "local_acceptance": {
+    "passed": true,
+    "real_loss_rows": 72,
+    "wrong_answers": 47,
+    "wrong_positive": 0,
+    "max_independent_FP64_error": 9.058772976189289e-08,
+    "known_old_cases": {
+      "old-case-78": 0.0,
+      "old-case-2095": 0.0,
+      "old-case-4975": 0.0
+    },
+    "original_parameters_unchanged": true,
+    "optimizer_steps": 0,
+    "new_formal_RL": false,
+    "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+    "live_signal_file_sha256": "995cd1531597ec4b49ca078758426496af2976ec5bfd0e0b7d43c27bf1c6159c"
+  },
+  "formal_RL_started": false,
+  "D_retention_started": false
+}

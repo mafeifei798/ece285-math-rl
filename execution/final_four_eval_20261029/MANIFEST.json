@@ -1,0 +1,32 @@
+{
+  "sha256": {
+    "training_diagnostics.png": "059422c3a64e9b17c465f99d4bf0b2aec1f037c5a3e470931fc8ba0208f1a30e",
+    "training_reward_diagnostics.json": "fc36c98d518aecad53b63583904717738444387cdfedfda6c94d536600d3caae",
+    "latest_snapshot.json": "e9c2968c34f48d14880315992fd3483f493004529cbda38fdb8c90c25d906573",
+    "review.html": "e9a78de7beb0b607b5a5e9a90bcb7b214878d2d9e7416ceed5a0ce31102f76e4",
+    "qualitative_review.json": "4486432a40145213af086dbbbcf4a51d0089ba6d1ed3827b189b9a3415da1af7",
+    "dispatch.py": "3434f32538a7ec4021d4dcfb6c1b828cbaa751387367193ca82fa532173bb829",
+    "accuracy.png": "6929b919107dd0328ef851ff05d90cc5c334d76ea7603fbefda956da39afd6a7",
+    "CONTINUATION.txt": "f6e52326e53d10ebf980adcc15dfc5fa2cfb68ace2bf50f4085faf417f5d1f62",
+    "dispatch.json": "2acdc741a7f6c416dc5b2112d7b38e15d8da6c5138a2877d592130a87e9e9324",
+    "build_report.py": "4499bf1e3909adc3f4c3697b79a3be49211e26bc6c71907b9b07807cb2db1d67",
+    "comparison.json": "e9a31267c9302608d26759b06290592fde55554a00e2513d87d2f921d569e293",
+    "gsm_case_candidates.json": "f2b747e4804354feb5beaf4da37e153b8fb0f9ea2778990c0bd0490c3b2e336f",
+    "paired_differences.png": "5cc539523b06c4b59972674bbddbc9fba221617b852ad7c838d93d42a793d572",
+    "error_category_decomposition.json": "6ff29d033444a58563cc37f555be7b273fe64aae0966e021c605e0d417c9e66b",
+    "accuracy.csv": "cc21c8e97fb1cb4ee08409491f7c21ece21aefa66f0281280074655e5139f5d5",
+    "REPORT.txt": "310c70ec08a139ee59a0e398360f6bc1e99492aedf34ec417cac4281e8556c88",
+    "retrieval_acceptance.json": "6bdd0c51c568396db59842642aff3b52cc392ebb56bf4eea378c07d7fe732dcb",
+    "README.txt": "7d06ed15a365173dbc6d780851cfa0de9960dc1169ccea3053a3827fc9c2d12d",
+    "DELIVERY_ACCEPTANCE.json": "fcc20f87fad9bca985a73c62435a0448d5eee911f95fc5795289a311435accd5",
+    "math_case_candidates.json": "91d6a79c4b71a22fa48cb85401085c5c538dab68af55b9a4cae4e9205ed4fc62",
+    "inspect_remote.py": "7f0fd615ee6b49af4a1b524f2651016fe86f628745d9ad87b4d24c7b8690b555",
+    "completed_evidence.tar.gz": "7734fe653a3198d4557a5c68076438c9be1910b68f302923731fcf80485c8c47",
+    "signal_case_analysis.json": "4e87dbbb6dcb98c0cd816e0b810a697779f1b2a1040bde2dc6878aec1395755e",
+    "retrieve_results.py": "154a01dac37d4d368fbb74555cbfbf46acf92da03398360c2b4b5ddd5321ebb8",
+    "admission.json": "a81a45c0824e50a21bdf57d19ecb2d40b514bea17ea7dec6bb3c3c2730ae16bd",
+    "prepare_remote.py": "e46f64546603d9153b0d2a41a8673115dd69b6af96560aeddbb1cf4823d455ea"
+  },
+  "complete": true,
+  "training_started": false
+}

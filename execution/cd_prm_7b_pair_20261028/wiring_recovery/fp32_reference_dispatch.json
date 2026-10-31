@@ -1,0 +1,9 @@
+{
+  "pid": 1106690,
+  "started_unix": 1793256226.8614795,
+  "GPU": 1,
+  "free_memory_MiB": 49859,
+  "optimizer_updates": 0,
+  "script_sha256": "6fae2c882648ed44e2e7fead7e63959708b99b08cec90415939f6bc630a9fe29",
+  "scope": "FP32 deterministic reference to check wiring, two first-batch backward passes only; no optimizer or checkpoint updates"
+}

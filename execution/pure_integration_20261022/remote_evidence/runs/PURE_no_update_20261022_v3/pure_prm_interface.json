@@ -1,0 +1,10 @@
+{
+  "native_checkpoint": "/srv/research/ece285_math_rl_project/models/qwen25_math_prm_7b",
+  "scoring_all_responses": true,
+  "normalize_crlf": true,
+  "empty_terminal_step": true,
+  "max_length": 4096,
+  "microbatch": 2,
+  "no_outcome_gate": true,
+  "overflow": "raise before update"
+}

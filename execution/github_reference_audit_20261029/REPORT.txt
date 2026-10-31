@@ -1,0 +1,117 @@
+GitHub 参考项目审查（2026-10-29）
+共11个项目、12个固定分支/标签快照；9个项目核对了相关代码路径，PROF和DAPO限于文档/文件树及可访问性核查。未运行第三方训练，也未改动当前三组训练、奖励、loss、提示词或验答。
+
+核心判断：保持当前 A / C-mix / C-bounded 三组小试，补清已有工作和贡献边界。PAPO是最接近的算法对照；PURE是信用分配和步骤/EOS接线参考；EasyR1适合参考资源受限工程组织；LCA对应已经进行的PRM适配来源。
+
+与PAPO的实质关系：
+1. 答对子集门控、结果与过程优势分开，已经是PAPO的明确设计，不能作为我们的原创。
+2. PAPO默认过程项会除以正确子集std；我们的过程项是0.2*y*(m-mean_correct)，不再除std，且结果项继续使用原GRPO标准化。
+3. 官方代码还有norm_adv_by_std_in_grpo=False分支，但该开关同时让结果项和过程项都只减均值。因此该分支与我们的混合缩放不同，但也说明“不除std”本身不是未被考虑的新想法。
+4. 官方核心函数实际使用固定lambda；启动脚本头部仍有adaptive clipping字样。应以执行函数和所选commit为准，不能只抄注释。
+5. PAPO公开配方使用生成式rubric评分、额外grader和多卡；我们的C是冻结判别式7B PRM。若后续加入同C评分器的PAPO式优势，只能称受控机制对照，不是完整PAPO论文复现。
+6. 现有三组能回答有界方案是否优于纯结果奖励/简单混合，不能单独证明优于PAPO，也不能证明C适配优于原始未适配PRM。
+
+证据与假设：
+已核实：我们固定的TRL 0.23.1底层trainer与GitHub v0.23.1逐字节相同。reward加权后由trainer构造优势；loss读取inputs['advantages']，奖励回调返回的数不是梯度。
+已核实：PAPO、PRIME、PURE具有不同的baseline、归一化和token/step处理路径；把min过程分加进GRPO不能称完整PURE。
+待验证：保留判别式PRM原分差并限制幅度，是否比正确子集std缩放更适合小模型、有限预算的正常数学CoT。缩小幅度也可能削弱有用信号，不能预设更优。
+待验证：正确答案内部的PRM排序是否可靠。最终答案正确不等于步骤正确；最终答案错误也不自动意味着每一步都错。
+
+只做离线公式比较：
+在已冻结C分数的67组/536条历史回答上，用标准库按核实公式重写PAPO过程项与当前方案比较，未调用模型或官方训练脚本。lambda统一为0.2并额外列PAPO默认1.0。所有正确子集门控版本错答正优势都为0，这不是本方法独有的成果。数值大小与答对样本优势符号的差异不代表数学能力优劣，详见offline_formula_check.json。不要把这张表当作PAPO论文复现或新模型评测。
+
+建议落实顺序：
+A. 当前训练设置冻结，按已经授权的1M三组小试完成；本轮不新增训练臂、模型或seed。
+B. 论文/报告把PAPO列为最接近方法，给出公式和源码位置；把贡献限定为所研究设置下的信号保幅与受控实证，暂不称新算法。
+C. 如果后续结果值得扩大，最有解释力的新增对照是同一C评分器、同样lambda、只把正确子集过程项改为PAPO式标准化；是否加入训练需另行决定，当前未排队。
+D. 借鉴PURE的监控指标、SimpleRL的解答对比、EasyR1的环境锁定和恢复组织；这些属于可复现工程，不混进当前奖励/loss。
+
+1. PAPO
+https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/verl/trainer/ppo/core_algos.py#L333
+核查范围：核心优势函数、启动脚本及评分器代码已读
+用途：最接近的方法对照
+已核实：结果优势按整组归一化；过程优势仅在正确子集中计算并另行标准化。代码还允许两项一起不除标准差。
+可借鉴：精确对照正确子集门控、过程项缩放、活跃组比例；当前三臂不会改动。
+限制：默认配方需多GPU及额外生成式grader；不能直接照搬到单A100，也不能把我们的门控说成原创。
+
+2. PURE
+https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L664
+核查范围：OpenRLHF与verl两分支的信用分配及baseline代码已读
+用途：过程奖励机制和诊断参考
+已核实：官方OpenRLHF分支使用RLOO、步骤/原token/EOS与分步baseline；不是把整条回答的min分混进GRPO就等于PURE。
+可借鉴：保留step/token baseline、EOS、重复/截断等诊断；分支和提交号必须固定。
+限制：verl的compute_return(min)仍有作者TODO注释；仅凭注释不能断言整条路径有bug，使用前要逐例回放验证。
+
+3. PRIME
+https://github.com/PRIME-RL/PRIME/blob/18ad596f08d487bb546d80d738d99ec697bd2e75/training/README.md#L88
+核查范围：训练文档与RLOO奖励合成源码已读
+用途：隐式PRM相关工作
+已核实：隐式过程奖励通过结果监督更新，与结果奖励分别做leave-one-out后合成，包含在线PRM更新及prompt过滤。
+可借鉴：借鉴多奖励源分开记录和成本核算；引用时区分隐式PRM与显式判别式PRM。
+限制：引入完整在线PRM更新会改变当前固定C实验，不作为本轮迁移目标。
+
+4. PRPO
+https://github.com/SchumiDing/srpocode/blob/662bbc6c2815900ca96e39106f31e8988f2d961a/verl2/verl/trainer/ppo/ray_trainer.py#L1145
+核查范围：熵分段、多个reward manager、actor优势赋值路径已读；论文配置映射未完全确认
+用途：细粒度token信用分配参考
+已核实：仓库有多种naive/pure/rflux实现；naive4对分段分数归一化并加序列beta，再直接赋给token advantages。
+可借鉴：学习分段到token映射与中间张量检查；优先核对具体manager入口后再复现。
+限制：根README缺失；一些基线分支使用±1及长度惩罚，不能把原仓库结果当作与我们的0/1协议同条件。
+
+5. PROF
+https://github.com/Chenluye99/PROF/tree/df96644abb877c295336833ea1ce223330842f74
+核查范围：README及完整文件树已核对；没有可核实训练实现
+用途：限制PRM影响的相关工作
+已核实：按最终答对/答错分别过滤PRM不一致样本；README明确训练代码待发布，当前树没有训练Python文件。
+可借鉴：借鉴Blend可能低于GRPO的对照思路及过程质量评估。
+限制：不能作为即插即用实现；报告主要是temperature1的average@16，不能直接和我们的greedy数值比。
+
+6. LCA
+https://github.com/JiaTianyu20031016/MIL/blob/d8dc4593a95f8ed142d5c9166140e8843cb208fc/MILmodel/mil_model_for_prm.py#L415
+核查范围：camera-ready README、MIL模型池化和loss源码已读
+用途：既有C/D适配的源方法
+已核实：SoftMinPoolMILModelforPRM使用stop-gradient softmax权重进行SWS池化，训练document级分类loss。
+可借鉴：核对pooling、detach、ProcessBench和BoN的评分定义。
+限制：它是奖励模型训练框架；完整LCA训练或其理论保证不等于我们的少量LoRA适配，更不等于策略数学能力提升。
+
+7. SimpleRL
+https://github.com/hkust-nlp/simpleRL-reason/blob/cf1c7858bfc145a27aa733e75d930d34f0d318a6/train_grpo_math_tune_ray.sh#L20
+核查范围：v1 README、训练脚本和数学规则评分工具已读
+用途：结果奖励的研究基线参考
+已核实：GSM8K/MATH、规则奖励及多种小模型公开配方；同模型不同提示模板会改变评测。
+可借鉴：借鉴纯结果奖励基线、checkpoint对比和多基准解答审阅工具。
+限制：README所列部分base与RL模型解码设置不同；发布分数不能直接与当前统一greedy实验横比。
+
+8. Dr.GRPO / Understanding R1-Zero
+https://github.com/sail-sg/understand-r1-zero/blob/dfca49dd460ee7cc8e4a5a162c876a7fd6993b87/examples/qwen2.5-math-1.5b.sh#L12
+核查范围：README、1.5B启动脚本和规则oracle实现已读
+用途：小模型和提示模板的控制参考
+已核实：直接提供Qwen2.5-Math-1.5B在R1/Qwen-Math模板下的实验脚本，并分析GRPO的长度/难度偏差。
+可借鉴：固定模板、初始化、KL、长度上限和评测协议，把模板因素与算法因素分开。
+限制：此轮不更换成Dr.GRPO，否则改变A以及全部实验的训练目标。
+
+9. EasyR1
+https://github.com/hiyouga/EasyR1/blob/602a12820f69cf45ea98de08a63b3509313a7d02/examples/reward_function/math.py#L21
+核查范围：README、core_algos、数学reward和单GPU LoRA脚本已读
+用途：资源受限工程参考
+已核实：有单GPU Qwen3-4B LoRA配方和checkpoint恢复支持；数学reward默认混入0.1格式分。
+可借鉴：借鉴配置组织、LoRA部署和恢复工具；把accuracy/format/overall分开记录。
+限制：现有A不允许加格式奖励；估算显存不包含我们额外的7B PRM，不能用表格替代实测。
+
+10. DAPO
+https://github.com/BytedTsinghua-SIA/DAPO/blob/33fe3176f0bb212588e84fc8ccf50dd554975144/README.md
+核查范围：官方README和文件树已核对；README指向的旧verl训练配方本次不可读取
+用途：大规模RL的运行指标和实验组织参考
+已核实：原仓库展示Qwen2.5-32B训练、公开数据/评测及外部verl配方入口。
+可借鉴：关注有效组比例、截断、token预算和各消融组件的成本。
+限制：当前单A100项目不移植其完整大规模recipe；没有读取到的配方不冒称已逐行核对。
+
+11. TRL
+https://github.com/huggingface/trl/blob/4529a1c8b1813480a85b02c9c8e7f75a29085d65/trl/trainer/grpo_trainer.py#L1436
+核查范围：实际使用的v0.23.1 GRPOTrainer与GRPOConfig源码已读
+用途：当前代码的直接工程依据
+已核实：reward加权后计算组均值和std；scale_rewards控制缩放；_compute_loss直接消费inputs['advantages']。
+可借鉴：在buffer/shuffle之前构造并标记优势，在loss入口核验；固定版本，防止多次归一化。
+限制：不把最新main分支当作当前0.23.1实现，也不在运行中升级库。
+
+原始证据：sources.json记录官方URL、commit、blob及逐行摘录；摘录不是完整仓库。PAPO论文 https://arxiv.org/abs/2603.26535v4 ；LCA论文 https://arxiv.org/abs/2606.27739v2 ；PRPO论文 https://arxiv.org/abs/2601.07182v3 。

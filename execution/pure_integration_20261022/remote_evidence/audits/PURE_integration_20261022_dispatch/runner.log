@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/srv/research/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py", line 186, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/srv/research/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py", line 74, in main
+    monitor=MemoryMonitor(run);stages={};started=time.time()
+            ^^^^^^^^^^^^^^^^^^
+  File "/srv/research/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py", line 21, in __init__
+    import pynvml
+ModuleNotFoundError: No module named 'pynvml'

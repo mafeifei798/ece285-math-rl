@@ -1,0 +1,138 @@
+{
+  "document": "ECE285 mathematical RL proposal",
+  "status": "optimized_compiled_and_visually_checked",
+  "review_date": "2026-10-20",
+  "authors": [
+    "Hongyi Ding",
+    "Jasmine Jiang",
+    "Yang Zeng"
+  ],
+  "pdf_pages": 3,
+  "proposal_body_pages": 2,
+  "reference_pages": 1,
+  "template": "NeurIPS 2025 official, unmodified, preprint mode",
+  "official_template_url": "https://media.neurips.cc/Conferences/NeurIPS2025/Styles.zip",
+  "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+  "source_sha256": "d388ef608d841d2388f0d153ea4d3040ec956c840b0849403e59480abd74cdbc",
+  "pdf_sha256": "5add773c1924f9198813fe5ebdaaa748b5654ba430712718127ac8bedb64f22a",
+  "compiler": "bundled Tectonic and successful Codex editor compilation",
+  "reference_count": 11,
+  "citation_review_scope": "8 original papers + official H4 model card, TRL documentation, PRM800K repository",
+  "course_requirements_source": "ECE285 proposal announcement pasted by user in this conversation",
+  "course_coverage": {
+    "research_problem": "section 1",
+    "importance": "section 1",
+    "related_work_and_limitations": "section 2",
+    "proposed_solution": "section 3",
+    "novelty_and_significance": "sections 1-2 and evaluation criterion in section 4",
+    "timeline_and_team": "section 5"
+  },
+  "checks": [
+    "2 body pages + 1 references-only page",
+    "all 11 references cited and resolved",
+    "author order preserved",
+    "all four arms and their pairwise comparisons explicit",
+    "D/C coefficient change and shared controls defined",
+    "sequence reward and detached GRPO advantages defined",
+    "algebra and detached gradient finite differences passed",
+    "official style byte identity",
+    "all 3 current pages visually inspected",
+    "reference hyperlinks retained",
+    "no layout overrides, unresolved citations, overflow or TeX warnings in final build",
+    "new diagnostic uses existing labels and the same score outputs; no extra training arm"
+  ],
+  "important_correction": "MATH500 primary after checkpoint-corpus overlap audit; full MATH supplementary because PRM800K extended training into 4,500 original test questions",
+  "page_text_bounds": [
+    {
+      "page": 1,
+      "text_bbox_pt": [
+        107.64,
+        99.36,
+        505.75,
+        741.82
+      ]
+    },
+    {
+      "page": 2,
+      "text_bbox_pt": [
+        107.64,
+        74.04,
+        505.74,
+        752.05
+      ]
+    },
+    {
+      "page": 3,
+      "text_bbox_pt": [
+        108.0,
+        72.46,
+        505.65,
+        752.05
+      ]
+    }
+  ],
+  "math_checks": {
+    "status": "passed",
+    "gradient_coordinates_checked": 1450,
+    "max_absolute_gradient_error": 9.504734777010526e-10,
+    "example_errors": [
+      0.1,
+      0.9
+    ],
+    "example_weights": [
+      0.017986209962091555,
+      0.9820137900379085
+    ],
+    "example_pooled_error": 0.8856110320303269,
+    "example_failure_loss": 0.12147744053981725,
+    "example_success_loss": 2.168150638518009,
+    "tests": [
+      "convex pooling bounds",
+      "detached-weight loss gradient signs and finite differences",
+      "C-minus-D equals success loss at shared parameters",
+      "temperature limits",
+      "outcome-order preservation",
+      "zero-variance group advantage",
+      "centered advantages",
+      "provisional token-budget arithmetic"
+    ],
+    "not_tested": [
+      "training implementation",
+      "GPU feasibility",
+      "model accuracy",
+      "dataset overlap"
+    ]
+  },
+  "pending_before_training": [
+    "dataset and checkpoint-corpus overlap audit",
+    "hardware memory/throughput pilot",
+    "final configuration and resource budget lock"
+  ],
+  "not_performed": [
+    "model training",
+    "empirical accuracy evaluation",
+    "course submission"
+  ],
+  "protocol_version": "2.2-offline-simple-proposal-optimization",
+  "current_source_compile": "success in bundled Tectonic and Codex LaTeX editor",
+  "current_visual_review": "all three optimized pages rendered and visually inspected after final source changes",
+  "current_reference_recheck": [
+    "LCA arXiv:2606.27739v2",
+    "ProcessBench arXiv:2412.06559v4",
+    "official H4 PRM model card"
+  ],
+  "reference_review_history": "Full 11-reference review on 2026-10-19; focused source recheck on 2026-10-20. No references added or removed.",
+  "math_check_provenance": "Existing independent algebra checks retained; mathematical objectives unchanged in this optimization.",
+  "optimization_changes": [
+    "Explicit hypothesis balances reduced false certification against loss of useful positive supervision",
+    "Initial-policy evaluation added; no fifth training arm",
+    "Policy-only greedy evaluation without PRM reranking or voting",
+    "D-C MATH500 accuracy declared primary contrast; paired-seed and 95% question-bootstrap reporting",
+    "C-B described as full adaptation package, including step-label anchors",
+    "Fixed ProcessBench MATH answer-correct-subset valid-chain AUROC supplements threshold diagnostics",
+    "Matched end-to-end seeds and uniform resource fallback before formal training",
+    "Preserved official template, two body pages and all named roles"
+  ],
+  "source_archive_contents_count": 8,
+  "new_diagnostic_data_status": "Existing local ProcessBench MATH schema and class counts checked; corpus-overlap filtering and all PRM/policy evaluations remain pending"
+}

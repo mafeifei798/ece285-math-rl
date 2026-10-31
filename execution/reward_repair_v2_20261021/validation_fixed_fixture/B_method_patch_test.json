@@ -1,0 +1,7 @@
+{
+  "original_method_ast_sha256": "21f28f2b94e8364642bc016b80d0ade1fb8994c3f7b5d0d0807166bf9f106d78",
+  "replaced_statement_index": 5,
+  "changes_reward_or_loss": false,
+  "remaining_method_statements_identical": true,
+  "starts_training": false
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-23T10:25:29.466568+00:00",
+  "automation_id": "ece285-a-b-10",
+  "name": "ECE285 PURE 小规模对照跟进",
+  "status": "deleted",
+  "confirmed_by": "Codex automation_update deleteStatus=deleted",
+  "user_request": "安排任务给我取消，然后你把现在的情况告诉我",
+  "remote_jobs_stopped": false
+}

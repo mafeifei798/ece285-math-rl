@@ -1,0 +1,364 @@
+{
+  "checked_pt": "2026-10-21T10:16:39.286708-07:00",
+  "evaluation_verification": {
+    "A_6000000": {
+      "math500": {
+        "count": 500,
+        "correct": 281,
+        "accuracy": 0.562,
+        "truncated": 36,
+        "generated_tokens": 357104
+      },
+      "gsm8k": {
+        "count": 1319,
+        "correct": 925,
+        "accuracy": 0.7012888551933283,
+        "truncated": 25,
+        "generated_tokens": 497906
+      }
+    },
+    "A_12000000": {
+      "math500": {
+        "count": 500,
+        "correct": 283,
+        "accuracy": 0.566,
+        "truncated": 43,
+        "generated_tokens": 365505
+      },
+      "gsm8k": {
+        "count": 1319,
+        "correct": 960,
+        "accuracy": 0.7278241091736164,
+        "truncated": 22,
+        "generated_tokens": 517438
+      }
+    },
+    "A_24000000": {
+      "math500": {
+        "count": 500,
+        "correct": 331,
+        "accuracy": 0.662,
+        "truncated": 16,
+        "generated_tokens": 319429
+      },
+      "gsm8k": {
+        "count": 1319,
+        "correct": 1042,
+        "accuracy": 0.7899924184988628,
+        "truncated": 5,
+        "generated_tokens": 471840
+      }
+    },
+    "B_6000000": {
+      "math500": {
+        "count": 500,
+        "correct": 255,
+        "accuracy": 0.51,
+        "truncated": 40,
+        "generated_tokens": 362158
+      },
+      "gsm8k": {
+        "count": 1319,
+        "correct": 820,
+        "accuracy": 0.621683093252464,
+        "truncated": 52,
+        "generated_tokens": 540951
+      }
+    }
+  },
+  "initial_policy": {
+    "math500": {
+      "count": 500,
+      "correct": 246,
+      "accuracy": 0.492,
+      "truncated": 55
+    },
+    "gsm8k": {
+      "count": 1319,
+      "correct": 725,
+      "accuracy": 0.5496588324488249,
+      "truncated": 63
+    }
+  },
+  "B_6M_evaluation_seconds": 2732.9765074253082,
+  "B_saved_milestones": {
+    "run": "B_seed17",
+    "cumulative_completion_tokens": true,
+    "milestones": {}
+  },
+  "A_source_hashes_match": true,
+  "B_source_hashes_match": true,
+  "B_metrics": {
+    "runs/B_seed17_6M": {
+      "rows": 286,
+      "recent_step_range": [
+        186,
+        285
+      ],
+      "nonfinite": [],
+      "last": {
+        "step": 285,
+        "loss": 0.0001,
+        "grad_norm": 0.04811513423919678,
+        "learning_rate": 0.000005,
+        "num_tokens": 6880298,
+        "completions/mean_length": 583.6875,
+        "completions/min_length": 140,
+        "completions/max_length": 2048,
+        "completions/clipped_ratio": 0.0625,
+        "completions/mean_terminated_length": 486.0666809082031,
+        "completions/min_terminated_length": 140,
+        "completions/max_terminated_length": 989,
+        "rewards/outcome_and_process/mean": 0.5952460765838623,
+        "rewards/outcome_and_process/std": 0.5156309604644775,
+        "reward": 0.5952460765838623,
+        "reward_std": 0.4872683584690094,
+        "frac_reward_zero_std": 0,
+        "project/generated_completion_tokens": 6012570,
+        "project/outcome_accuracy": 0.5625,
+        "project/prm_seconds": 0.6184169868938625,
+        "kl": 0.0022337149957820657,
+        "entropy": 0.3477888105553575,
+        "clip_ratio/low_mean": 0,
+        "clip_ratio/low_min": 0,
+        "clip_ratio/high_mean": 0,
+        "clip_ratio/high_max": 0,
+        "clip_ratio/region_mean": 0,
+        "epoch": 0.16304347826086957
+      },
+      "loss": {
+        "min": 0,
+        "max": 0.0082,
+        "mean": 0.000172
+      },
+      "grad_norm": {
+        "min": 0.019224436953663826,
+        "max": 2.033217191696167,
+        "mean": 0.13144051864743234
+      },
+      "kl": {
+        "min": 0.00037251906383062305,
+        "max": 0.20593642645144428,
+        "mean": 0.004493283449453429
+      },
+      "entropy": {
+        "min": 0.19682310428470373,
+        "max": 0.6754568074829876,
+        "mean": 0.4112263859971426
+      }
+    },
+    "runs/B_seed17_24M": {
+      "rows": 269,
+      "recent_step_range": [
+        455,
+        554
+      ],
+      "nonfinite": [],
+      "last": {
+        "step": 554,
+        "loss": 0.0017,
+        "grad_norm": 0.0516706183552742,
+        "learning_rate": 0.000005,
+        "num_tokens": 13504027,
+        "completions/mean_length": 1035.46875,
+        "completions/min_length": 7,
+        "completions/max_length": 2048,
+        "completions/clipped_ratio": 0.0625,
+        "completions/mean_terminated_length": 967.9667358398438,
+        "completions/min_terminated_length": 7,
+        "completions/max_terminated_length": 1842,
+        "rewards/outcome_and_process/mean": 0.191811203956604,
+        "rewards/outcome_and_process/std": 0.3628092408180237,
+        "reward": 0.191811203956604,
+        "reward_std": 0.3141089379787445,
+        "frac_reward_zero_std": 0,
+        "project/generated_completion_tokens": 11779051,
+        "project/outcome_accuracy": 0.15625,
+        "project/prm_seconds": 1.7176206251606345,
+        "kl": 0.04176595586068288,
+        "entropy": 0.3703298419713974,
+        "clip_ratio/low_mean": 0,
+        "clip_ratio/low_min": 0,
+        "clip_ratio/high_mean": 0,
+        "clip_ratio/high_max": 0,
+        "clip_ratio/region_mean": 0,
+        "epoch": 0.3169336384439359
+      },
+      "loss": {
+        "min": 0.0001,
+        "max": 0.0248,
+        "mean": 0.00088
+      },
+      "grad_norm": {
+        "min": 0.034628916531801224,
+        "max": 1.00480318069458,
+        "mean": 0.18844483129680156
+      },
+      "kl": {
+        "min": 0.0016609105723546236,
+        "max": 0.6207771959252568,
+        "mean": 0.021960079724917706
+      },
+      "entropy": {
+        "min": 0.21996124112047255,
+        "max": 0.6964620014186949,
+        "mean": 0.40831735177140216
+      }
+    }
+  },
+  "B_group_diagnostics": {
+    "recent_groups": 100,
+    "types": {
+      "mixed": 79,
+      "all_wrong": 18,
+      "all_correct": 3
+    },
+    "zero_reward_variance": 0
+  },
+  "B_recent_rollouts": {
+    "n": 512,
+    "valid": 452,
+    "correct_fraction": 0.419921875,
+    "truncated_fraction": 0.056640625,
+    "mean_completion_tokens": 665.974609375,
+    "no_double_newline_fraction": 0.087890625,
+    "valid_mean_steps": 10.570796460176991,
+    "valid_mean_min_PRM_score": 0.19424732995582167
+  },
+  "log_errors": {
+    "B_seed17_training_24M.log": [],
+    "B_seed17_training_6M.log": [],
+    "B_seed17_controller.log": [],
+    "B_seed17_native_prm_check.log": [],
+    "A_seed17_24M_training.log": []
+  },
+  "B_progress": {
+    "generated_completion_tokens": 11779051,
+    "generated_completions": 17728,
+    "generated_groups": 2216,
+    "mixed_reward_groups": 2214,
+    "correct_completions": 7424,
+    "truncated_completions": 1091,
+    "prm_input_tokens": 10050095,
+    "prm_padded_tokens": 14897148,
+    "prm_scored_completions": 14894,
+    "native_steps": 159055,
+    "single_step_completions": 956,
+    "no_double_newline_completions": 1309,
+    "prm_forward_seconds": 503.53514997381717,
+    "reward_status_counts": {
+      "symbolic": 8218,
+      "truncated": 1091,
+      "exact": 6676,
+      "missing_or_invalid_box": 1529,
+      "unparseable": 214
+    },
+    "outcome_group_counts": {
+      "mixed": 1738,
+      "mixed_has_invalid": 1197,
+      "mixed_all_valid": 541,
+      "all_wrong": 394,
+      "all_wrong_has_invalid": 332,
+      "all_wrong_all_valid": 62,
+      "all_correct": 84,
+      "all_correct_all_valid": 84
+    },
+    "last_batch": {
+      "generated_completion_tokens": 33135,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 4,
+      "correct_completions": 5,
+      "truncated_completions": 2,
+      "native_steps": 384,
+      "single_step_completions": 4,
+      "no_double_newline_completions": 4,
+      "prm_forward_seconds": 1.7176206251606345,
+      "prm_input_tokens": 33059,
+      "prm_padded_tokens": 49864,
+      "prm_scored_completions": 30
+    },
+    "global_step": 554,
+    "elapsed_seconds": 7399.0572123969905,
+    "target_completion_tokens": 24000000,
+    "effective_completion_tokens_per_second": 779.3534817298564,
+    "torch_peak_allocated_GiB": 34.45738935470581,
+    "torch_peak_reserved_GiB": 35.48046875,
+    "resumed_from_global_step": 285,
+    "source_completion_tokens": 6012570,
+    "continuation_generated_completion_tokens": 5766481
+  },
+  "B_recent_rates": {
+    "20": 801.9428995179821,
+    "50": 766.0406203840473,
+    "100": 769.7268725645836
+  },
+  "processes": "    PID    PPID STAT     ELAPSED %CPU %MEM COMMAND\n1898321       1 Ss      07:01:46  0.0  0.0 python\n2220917 1898321 Sl      02:04:12  101  0.4 python\n",
+  "disk_free_GiB": 1264.3744316101074,
+  "B_stages": [
+    {
+      "stage": "unit_tests",
+      "started_unix": 1792584867.6577437,
+      "finished_unix": 1792584887.6599603,
+      "elapsed_seconds": 20.002216815948486,
+      "assigned_gpu": null,
+      "exit_code": 0,
+      "cost_semantics": "exclusive stage wall time including startup; queue waiting excluded"
+    },
+    {
+      "stage": "native_prm_check",
+      "started_unix": 1792584887.8135283,
+      "finished_unix": 1792584907.8158004,
+      "elapsed_seconds": 20.002272367477417,
+      "assigned_gpu": 0,
+      "exit_code": 0,
+      "cost_semantics": "exclusive stage wall time including startup; queue waiting excluded"
+    },
+    {
+      "stage": "pilot",
+      "started_unix": 1792584907.9705818,
+      "finished_unix": 1792585007.9774454,
+      "elapsed_seconds": 100.00686383247375,
+      "assigned_gpu": 0,
+      "exit_code": 0,
+      "cost_semantics": "exclusive stage wall time including startup; queue waiting excluded"
+    },
+    {
+      "stage": "pilot_resume",
+      "started_unix": 1792585008.0909235,
+      "finished_unix": 1792585088.0961325,
+      "elapsed_seconds": 80.00520920753479,
+      "assigned_gpu": 0,
+      "exit_code": 0,
+      "cost_semantics": "exclusive stage wall time including startup; queue waiting excluded"
+    },
+    {
+      "stage": "lora_preflight",
+      "started_unix": 1792585088.2177498,
+      "finished_unix": 1792585128.2216082,
+      "elapsed_seconds": 40.00385856628418,
+      "assigned_gpu": 0,
+      "exit_code": 0,
+      "cost_semantics": "exclusive stage wall time including startup; queue waiting excluded"
+    },
+    {
+      "stage": "training_6M",
+      "started_unix": 1792585128.3236136,
+      "finished_unix": 1792592788.7503965,
+      "elapsed_seconds": 7660.426783084869,
+      "assigned_gpu": 0,
+      "exit_code": 0,
+      "cost_semantics": "exclusive stage wall time including startup; queue waiting excluded"
+    },
+    {
+      "stage": "evaluation_6000000",
+      "started_unix": 1792592789.0960767,
+      "finished_unix": 1792595549.2443428,
+      "elapsed_seconds": 2760.14826631546,
+      "assigned_gpu": 0,
+      "exit_code": 0,
+      "cost_semantics": "exclusive stage wall time including startup; queue waiting excluded"
+    }
+  ],
+  "check_scope": "Read-only server status, prediction/hash verification, recent training health and throughput; no job or training setting changed."
+}

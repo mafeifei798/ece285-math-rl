@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "local_prediction_records_recounted": 7276,
+  "prediction_sha256": {
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/initial/math500.jsonl": "96d0ec60933002a14fe66115323068ecbe7926d84cac41069c181bd3769a7b54",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/initial/gsm8k.jsonl": "7d6977fe8566f54c79854c63b54977e843d4cc0365e83c801520a31fe29a903e",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/A/math500.jsonl": "e20da3649223e7ef9989ed554cacd05d8a10e9e804b6e8e64e26060d1a9613d2",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/A/gsm8k.jsonl": "57ca03b101f2c26a1da265e8892dfa28e7b7bf5051e3d99d64b6ae8b1324096f",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/C_mix/math500.jsonl": "383c34f404f606bb7f058e8c8089510967252b4ff2023e342bb416e1d23d849c",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/C_mix/gsm8k.jsonl": "9d55d0d4bf9c5de5e31dd9fc90398b5320834cef85994fbbd0c17160d1949626",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/C_bounded/math500.jsonl": "7f31980820f99da6f1935d30b5b56526463c44c744be18e4f0ae3b7becdfdb77",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/C_bounded/gsm8k.jsonl": "1fca0e26e0fee749d0235f1703c7e8d6a3a7d4ff8d87961a6536192343b66c90"
+  },
+  "archive_sha256": "7734fe653a3198d4557a5c68076438c9be1910b68f302923731fcf80485c8c47",
+  "remote_verifier_regrade": 7276,
+  "scope": "Local recount/hash/token verification; mathematical regrading happened independently in remote CPU audit.",
+  "new_training": false,
+  "new_generation": false,
+  "mathematical_review_case_texts_match_final_predictions": true,
+  "GSM_review_case_texts_match_final_predictions": true,
+  "local_adapter_sha256": {
+    "evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter/adapter_model.safetensors": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+    "evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter/adapter_config.json": "e103ac4798b22646b22d7be2218e89dccfb583dd6548114c5a139b7c596361c3",
+    "evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter/adapter_model.safetensors": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+    "evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter/adapter_config.json": "77abfbecd1fb0f254621e49c4a7012717938be4c76d9eb0b6420961ea89b9638",
+    "evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter/adapter_model.safetensors": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+    "evidence/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter/adapter_config.json": "ce4d7933e9b47a110e22d1e37b3f7ecf920198686895113b1d9ff51c89f530f9"
+  },
+  "prepared_data_hashes_verified": true
+}

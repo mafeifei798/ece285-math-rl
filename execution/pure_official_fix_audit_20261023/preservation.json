@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "manifests": [
+    {
+      "manifest": "execution/pure_official_fix_audit_20261023/protected_before.json",
+      "count": 163,
+      "missing": [],
+      "changed": [],
+      "passed": true
+    },
+    {
+      "manifest": "execution/pure_integration_20261022/originals_before.json",
+      "count": 7,
+      "missing": [],
+      "changed": [],
+      "passed": true
+    }
+  ],
+  "remote_commands_this_audit": 0,
+  "model_forwards_this_audit": 0,
+  "new_generations": 0,
+  "optimizer_steps": 0
+}

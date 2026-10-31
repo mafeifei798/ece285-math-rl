@@ -1,0 +1,294 @@
+{
+  "scope": "counterfactual signal-only replay of the SAME stored responses, not four trained policies",
+  "input": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/process_signal_revision_20261029/saved_C_bounded_smoke/rollouts.jsonl",
+  "input_sha256": "f1c1f5c0f59ddf12e7e7f6a55670e22e14c13c57f63662ca66b6817e2fbc973a",
+  "scorer_C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "rows": 64,
+  "metrics": {
+    "outcome": {
+      "mode": "outcome",
+      "rows": 64,
+      "group_types": {
+        "mixed": 7,
+        "all_wrong": 1
+      },
+      "by_group_type": {
+        "mixed": {
+          "groups": 7,
+          "rows": 56,
+          "wrong_rows": 24,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": 0.0,
+          "outcome_abs_mean": 0.7773661613464355,
+          "deviation_from_outcome_abs_mean": 0.0,
+          "process_to_outcome_L1": 0.0,
+          "process_active_groups": 0
+        },
+        "all_correct": {
+          "groups": 0,
+          "rows": 0,
+          "wrong_rows": 0,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": null,
+          "outcome_abs_mean": null,
+          "deviation_from_outcome_abs_mean": null,
+          "process_to_outcome_L1": null,
+          "process_active_groups": 0
+        },
+        "all_wrong": {
+          "groups": 1,
+          "rows": 8,
+          "wrong_rows": 8,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": 0.0,
+          "outcome_abs_mean": 0.0,
+          "deviation_from_outcome_abs_mean": 0.0,
+          "process_to_outcome_L1": null,
+          "process_active_groups": 0
+        }
+      },
+      "process_component_is_separable": true,
+      "wrong_positive": 0,
+      "correct_subset_std_median": 0.0,
+      "process_abs_max": 0.0,
+      "process_active_rows": 0,
+      "process_scored_rows": 0,
+      "post_combination_normalizations": 0,
+      "empty_outputs": 0,
+      "short_wrong_outputs": 0,
+      "short_wrong_positive": 0,
+      "refusal_keyword_candidates": 0,
+      "refusal_candidate_positive": 0,
+      "no_extractable_answer": 14,
+      "no_answer_positive": 0,
+      "one_segment_outputs": 4,
+      "raw_no_double_newline": 8,
+      "truncated_outputs": 6,
+      "mean_completion_tokens": 770.421875,
+      "caveats": [
+        "Refusal keyword candidates are screening flags, not judged refusals.",
+        "Short wrong outputs can be genuine attempts; these metrics do not by themselves establish reward hacking.",
+        "Correct final answers are not step-validity labels.",
+        "C-mix deviation from outcome is a change in the whole normalized signal, not an isolated process advantage."
+      ]
+    },
+    "mixed": {
+      "mode": "mixed",
+      "rows": 64,
+      "group_types": {
+        "mixed": 7,
+        "all_wrong": 1
+      },
+      "by_group_type": {
+        "mixed": {
+          "groups": 7,
+          "rows": 56,
+          "wrong_rows": 24,
+          "wrong_positive": 0,
+          "answer_correct_negative": 1,
+          "process_abs_mean": null,
+          "outcome_abs_mean": 0.7773661613464355,
+          "deviation_from_outcome_abs_mean": 0.047624312341213226,
+          "process_to_outcome_L1": null,
+          "process_active_groups": null
+        },
+        "all_correct": {
+          "groups": 0,
+          "rows": 0,
+          "wrong_rows": 0,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": null,
+          "outcome_abs_mean": null,
+          "deviation_from_outcome_abs_mean": null,
+          "process_to_outcome_L1": null,
+          "process_active_groups": null
+        },
+        "all_wrong": {
+          "groups": 1,
+          "rows": 8,
+          "wrong_rows": 8,
+          "wrong_positive": 3,
+          "answer_correct_negative": 0,
+          "process_abs_mean": null,
+          "outcome_abs_mean": 0.0,
+          "deviation_from_outcome_abs_mean": 0.7593126893043518,
+          "process_to_outcome_L1": null,
+          "process_active_groups": null
+        }
+      },
+      "process_component_is_separable": false,
+      "wrong_positive": 3,
+      "correct_subset_std_median": 0.046728942543268204,
+      "process_abs_max": null,
+      "process_active_rows": null,
+      "process_scored_rows": 49,
+      "post_combination_normalizations": 0,
+      "empty_outputs": 0,
+      "short_wrong_outputs": 0,
+      "short_wrong_positive": 0,
+      "refusal_keyword_candidates": 0,
+      "refusal_candidate_positive": 0,
+      "no_extractable_answer": 14,
+      "no_answer_positive": 0,
+      "one_segment_outputs": 4,
+      "raw_no_double_newline": 8,
+      "truncated_outputs": 6,
+      "mean_completion_tokens": 770.421875,
+      "caveats": [
+        "Refusal keyword candidates are screening flags, not judged refusals.",
+        "Short wrong outputs can be genuine attempts; these metrics do not by themselves establish reward hacking.",
+        "Correct final answers are not step-validity labels.",
+        "C-mix deviation from outcome is a change in the whole normalized signal, not an isolated process advantage."
+      ]
+    },
+    "papo": {
+      "mode": "papo",
+      "rows": 64,
+      "group_types": {
+        "mixed": 7,
+        "all_wrong": 1
+      },
+      "by_group_type": {
+        "mixed": {
+          "groups": 7,
+          "rows": 56,
+          "wrong_rows": 24,
+          "wrong_positive": 0,
+          "answer_correct_negative": 1,
+          "process_abs_mean": 0.08612680435180664,
+          "outcome_abs_mean": 0.7773661613464355,
+          "deviation_from_outcome_abs_mean": 0.08612680435180664,
+          "process_to_outcome_L1": 0.11079309678547221,
+          "process_active_groups": 6
+        },
+        "all_correct": {
+          "groups": 0,
+          "rows": 0,
+          "wrong_rows": 0,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": null,
+          "outcome_abs_mean": null,
+          "deviation_from_outcome_abs_mean": null,
+          "process_to_outcome_L1": null,
+          "process_active_groups": 0
+        },
+        "all_wrong": {
+          "groups": 1,
+          "rows": 8,
+          "wrong_rows": 8,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": 0.0,
+          "outcome_abs_mean": 0.0,
+          "deviation_from_outcome_abs_mean": 0.0,
+          "process_to_outcome_L1": null,
+          "process_active_groups": 0
+        }
+      },
+      "process_component_is_separable": true,
+      "wrong_positive": 0,
+      "correct_subset_std_median": 0.046728942543268204,
+      "process_abs_max": 0.4533149302005768,
+      "process_active_rows": 31,
+      "process_scored_rows": 49,
+      "post_combination_normalizations": 0,
+      "empty_outputs": 0,
+      "short_wrong_outputs": 0,
+      "short_wrong_positive": 0,
+      "refusal_keyword_candidates": 0,
+      "refusal_candidate_positive": 0,
+      "no_extractable_answer": 14,
+      "no_answer_positive": 0,
+      "one_segment_outputs": 4,
+      "raw_no_double_newline": 8,
+      "truncated_outputs": 6,
+      "mean_completion_tokens": 770.421875,
+      "caveats": [
+        "Refusal keyword candidates are screening flags, not judged refusals.",
+        "Short wrong outputs can be genuine attempts; these metrics do not by themselves establish reward hacking.",
+        "Correct final answers are not step-validity labels.",
+        "C-mix deviation from outcome is a change in the whole normalized signal, not an isolated process advantage."
+      ]
+    },
+    "bounded": {
+      "mode": "bounded",
+      "rows": 64,
+      "group_types": {
+        "mixed": 7,
+        "all_wrong": 1
+      },
+      "by_group_type": {
+        "mixed": {
+          "groups": 7,
+          "rows": 56,
+          "wrong_rows": 24,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": 0.022936789318919182,
+          "outcome_abs_mean": 0.7773661613464355,
+          "deviation_from_outcome_abs_mean": 0.02293679304420948,
+          "process_to_outcome_L1": 0.029505772431744903,
+          "process_active_groups": 6
+        },
+        "all_correct": {
+          "groups": 0,
+          "rows": 0,
+          "wrong_rows": 0,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": null,
+          "outcome_abs_mean": null,
+          "deviation_from_outcome_abs_mean": null,
+          "process_to_outcome_L1": null,
+          "process_active_groups": 0
+        },
+        "all_wrong": {
+          "groups": 1,
+          "rows": 8,
+          "wrong_rows": 8,
+          "wrong_positive": 0,
+          "answer_correct_negative": 0,
+          "process_abs_mean": 0.0,
+          "outcome_abs_mean": 0.0,
+          "deviation_from_outcome_abs_mean": 0.0,
+          "process_to_outcome_L1": null,
+          "process_active_groups": 0
+        }
+      },
+      "process_component_is_separable": true,
+      "wrong_positive": 0,
+      "correct_subset_std_median": 0.046728942543268204,
+      "process_abs_max": 0.16758163273334503,
+      "process_active_rows": 31,
+      "process_scored_rows": 49,
+      "post_combination_normalizations": 0,
+      "empty_outputs": 0,
+      "short_wrong_outputs": 0,
+      "short_wrong_positive": 0,
+      "refusal_keyword_candidates": 0,
+      "refusal_candidate_positive": 0,
+      "no_extractable_answer": 14,
+      "no_answer_positive": 0,
+      "one_segment_outputs": 4,
+      "raw_no_double_newline": 8,
+      "truncated_outputs": 6,
+      "mean_completion_tokens": 770.421875,
+      "caveats": [
+        "Refusal keyword candidates are screening flags, not judged refusals.",
+        "Short wrong outputs can be genuine attempts; these metrics do not by themselves establish reward hacking.",
+        "Correct final answers are not step-validity labels.",
+        "C-mix deviation from outcome is a change in the whole normalized signal, not an isolated process advantage."
+      ]
+    }
+  },
+  "counted_completion_tokens": 49307,
+  "stored_PRM_input_tokens": 37482,
+  "model_calls": 0,
+  "optimizer_steps": 0,
+  "source_unmodified": true
+}

@@ -29,7 +29,7 @@ result['gpu']=subprocess.run(['nvidia-smi','--query-gpu=index,memory.total,memor
 result['gpu_processes']=subprocess.run(['nvidia-smi','--query-compute-apps=pid,used_gpu_memory','--format=csv,noheader'],capture_output=True,text=True).stdout
 print(json.dumps(result,ensure_ascii=False))
 '''
-command=['ssh','-p','11032','-i','/home/researcher/.ssh/fym_125_76_110_84_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -']
+command=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -']
 data=json.loads(subprocess.check_output(command,input=REMOTE,text=True,timeout=60))
 stamp=data['utc'].replace(':','').replace('-','')
 destination=HERE/'snapshots'/f'{stamp}.json';destination.parent.mkdir(exist_ok=True)

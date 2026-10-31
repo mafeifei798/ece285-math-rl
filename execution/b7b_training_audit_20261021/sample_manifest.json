@@ -1,0 +1,36 @@
+{
+  "population": "All 9056 new Bprime training completions, including invalid/truncated outputs",
+  "population_n": 9056,
+  "sampling": "uniform without replacement, Python random.Random(285)",
+  "seed": 285,
+  "source_sha256": "a4f44bc233940c93532ab9c8df4529b95c8bea42b391a9b17409b074725d39bf",
+  "rows": [
+    42,
+    806,
+    1531,
+    2017,
+    2347,
+    3049,
+    4133,
+    4472,
+    4623,
+    5353,
+    5682,
+    5946,
+    6006,
+    6350,
+    6460,
+    6626,
+    7446,
+    7512,
+    7829,
+    8745
+  ],
+  "reviewer": "Codex mathematical review; not independent human ground truth",
+  "blind_fields": [
+    "PRM scores",
+    "logged outcome label",
+    "group rank",
+    "advantage"
+  ]
+}

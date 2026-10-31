@@ -1,0 +1,16 @@
+{
+  "files": {
+    "controller.py": "caeafd04747a4a24e0660bbbb3a94479ac46be27b74cf66aea41806cb1630ff9",
+    "generate.py": "1c5384953636f28cc9bbc70ea36ef574f2a0e4b409be2a97ce28ba3d6371d79b",
+    "config.json": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+    "common.py": "e7428bca173866a49c495e71f28fa1f4f1638ce26b8312cc2375ccbf8dea0f34",
+    "cpu_checks.py": "76700f515d4e0922b9d2357b47546a8557916758ada8f77fd9f0b4a61ddcd4a0",
+    "adapt.py": "7400b9a42b5235d7211b5a5fa813074b3cc027ac512a376844abf5b0b075983e",
+    "README.txt": "b8485b78f91d2e23a97ff952b50321a8d59f06faad889b3b735655e392dd67fb",
+    "prepare.py": "bd98eff623e41e606638141053fe75af2d49b74411118ba766679fe3d7557e13",
+    "score.py": "b3e72bf13b04f5f4afc3d1057897a3ec34d3289c20b3134346406c83029b7173",
+    "analyze.py": "1aaa7df11774e3f90def345c1355b992d8ea4385a9fe7d8970160f7a195f0073"
+  },
+  "scope": "PRM adaptation only, no policy RL",
+  "gpu1_sharing_authorized": true
+}

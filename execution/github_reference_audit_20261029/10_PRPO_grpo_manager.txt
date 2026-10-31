@@ -1,0 +1,33 @@
+https://github.com/SchumiDing/srpocode/blob/662bbc6c2815900ca96e39106f31e8988f2d961a/verl2/verl/workers/reward_manager/grpo.py
+Upstream blob: 8e35ef9df3c79e0cfdb27919bd9747c632546687
+EXCERPT ONLY
+61:     @staticmethod
+62:     def _default_rollout_comp(ground_truth: str, sequence: str, outLength: int) -> float:
+63:         pattern = r'\\boxed\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}'
+64:         matches = re.findall(pattern, sequence)
+65:         maxLength = 8192
+66:         if len(matches) == 0:
+67:             # if len(sequence) > 4000:
+68:             #     return -1.0 - len(sequence)/1000
+69:             rw = -1.0
+70:             if outLength > maxLength/2:
+71:                 rw -= (outLength)/maxLength
+72:             return rw
+73:         predicted_answer = matches[-1]
+74:         
+75:         if compare_latex_expressions(predicted_answer, ground_truth):
+76:             # print(f"Right answer: \"{predicted_answer}\" == \"{ground_truth}\"", flush=True)
+77:             rw = 1.0
+78:             if outLength > maxLength/2:
+79:                 rw -= (outLength)/maxLength
+80:             return rw
+81:         else:
+82:             # print(f"Wrong answer: \"{predicted_answer}\" != \"{ground_truth}\"", flush=True)
+83:             # print(sequence[-100:], flush=True)
+84:             # if len(sequence) > 4000:
+85:             #     return -1.0 - len(sequence)/1000
+86:             rw = -1.0
+87:             if outLength > maxLength/2:
+88:                 rw -= (outLength)/maxLength
+89:             return rw
+90: 

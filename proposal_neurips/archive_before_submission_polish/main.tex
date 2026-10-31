@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2025}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,booktabs,tabularx}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\title{Asymmetric Process-Reward Adaptation\\for Small-Model Mathematical RL}
+\author{
+Hongyi Ding \\
+\And
+Jasmine Jiang \\
+\And
+Yang Zeng \\
+}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\sg}{\operatorname{sg}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\begin{document}
+\maketitle
+\begin{abstract}
+Final-answer correctness can provide noisy supervision for process reward models (PRMs). We test one loss change: omit positive outcome supervision during offline PRM adaptation while retaining public step labels. Four matched GRPO experiments measure policy-only mathematical accuracy and reward quality under a small-model budget.
+\end{abstract}
+
+\section{Research problem and importance}
+Some answer-correct solutions contain reasoning errors \citep{zheng2025}. Their positive outcome labels can teach a PRM to reward faulty reasoning. We ask: \textbf{does omitting this supervision improve the policy's mathematical accuracy?} We hypothesize that reducing false certification can outweigh losing useful positive supervision; downstream experiments must establish whether this trade-off is favorable.
+
+\section{Related work, limitations, and contribution}
+PRM800K supplies step labels \citep{lightman2023}; PRIME updates implicit rewards online \citep{cui2025}; PURE addresses reward hacking through min-form credit assignment \citep{cheng2025}. LCA learns PRMs from outcomes with softmax-weighted pooling and already studies one-sided label noise \citep{jia2026}. We use its pooling but test a narrower question: \textbf{whether omitting positive outcome supervision, while retaining real step labels, improves downstream GRPO}. The symmetric control is LCA-inspired, not a full reproduction. Our contribution is this controlled supervision change and its policy-level evaluation.
+
+\section{Proposed method}
+\textbf{Adapt once.} Generate four solutions per problem on 512 training problems using the initial policy. Retain complete, unambiguously verified solutions. For step-boundary correctness scores $p_{\phi,t}$, set $e_{\phi,t}=1-p_{\phi,t}$. Following LCA,
+\begin{equation}
+ w_t=\frac{\exp(e_{\phi,t}/T)}{\sum_j\exp(e_{\phi,j}/T)},\qquad
+ E_\phi(\tau)=\sum_t\sg(w_t)e_{\phi,t},\qquad T=0.2 .
+\end{equation}
+Here $\sg$ stops gradients through weights. Let $L_{\rm fail}=\E_{\tau^-}[-\log E_\phi(\tau^-)]$ and $L_{\rm success}=\E_{\tau^+}[-\log(1-E_\phi(\tau^+))]$, using separate means over failures/successes. A shared set of 2,048 public positive/negative step labels supplies mean binary cross-entropy $L_{\rm step}$:
+\begin{equation}
+ L_c=L_{\rm fail}+cL_{\rm success}+L_{\rm step},\qquad
+ c_C=1,\quad \boxed{c_D=0\ \text{(ours)}} .
+\end{equation}
+Failures provide weak evidence of an error, without its location. Real step labels discourage blanket rejection; they do not guarantee accurate scores or downstream gains.
+
+\newpage
+\noindent\textbf{Policy training (continued).} For B--D, use the frozen PRM to compute
+\begin{equation}
+ R_i=y_i+0.2\min_t p_{\phi,t}(\tau_i),\qquad
+ \hat A_i=\frac{R_i-\bar R}{\sigma_R+10^{-4}} .
+\end{equation}
+Here $y_i\in\{0,1\}$ is answer correctness; $\bar R,\sigma_R$ are the group mean/std. A uses $R_i=y_i$. The detached sequence advantage applies to all completion tokens in clipped GRPO \citep{shao2024}. Correct policy rollouts remain in training.
+
+\section{Four-group experimental design}
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{@{}l L L@{}}
+\toprule
+\textbf{Group} & \textbf{Reward / PRM preparation} & \textbf{Controlled comparison} \\
+\midrule
+A & Outcome only; no PRM & Outcome-only GRPO baseline \\
+B & Mixed reward; original PRM frozen & B vs.\ A: existing process reward \\
+C & Mixed reward; adapt with c = 1, then freeze & C vs.\ B: full adaptation package \\
+\textbf{D (ours)} & Mixed reward; adapt with c = 0, then freeze & \textbf{D vs.\ C: proposed supervision rule} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\textbf{Implementation.} Use Qwen2.5-Math-1.5B as policy and H4 Qwen2.5-Math-1.5B-Instruct-PRM-0.2 as PRM \citep{h4prm}; LoRA ranks are 16/8. Preserve native step formatting and freeze PRMs throughout RL. TRL/PEFT uses \texttt{loss\_type="grpo"} and sums rewards before group normalization \citep{trl}. Truncated/unparseable outputs receive zero reward. Pin all configurations before formal runs.
+
+\textbf{Data.} Reserve 500 MATH training problems for validation; use the remainder for RL/buffer generation \citep{hendrycks2021}. Deduplicate new training data/anchors against validation, tests, and ProcessBench. PRM800K includes 4,500 original MATH test problems in training \citep{prmdata}; filtering new data cannot undo inherited PRM exposure. Use \textbf{MATH500 as primary test after checkpoint-corpus overlap audit}, GSM8K for transfer \citep{cobbe2021}, and full MATH only as exposure-aware supplementary evaluation. Unknown pretraining exposure remains a limitation.
+
+\textbf{Controls and budget.} C/D share initialization, batches, optimizer, and updates; only $c$ changes, without re-averaging losses. All arms share policy initialization, prompt order, decoding, and tuning effort. Start with eight rollouts/question, temperature 1.0, and a 2,048-token cap. A one-/two-RTX-5090 pilot fixes a common budget: provisionally 6M generated tokens/run, four groups, three paired seeds (72M tokens). Report actual updates, prompt counts, length, truncation, and total GPU hours including all data generation, adaptation, scoring, training, and evaluation.
+
+\textbf{Policy evaluation.} Evaluate the initial policy and final fixed-budget checkpoints with identical greedy decoding, without PRM reranking or voting. \textbf{D--C MATH500 accuracy is the primary comparison}; report per-seed differences, mean/std, and 95\% paired question-bootstrap intervals. D vs.\ A/B tests practical value; small or inconsistent gains remain inconclusive.
+
+\textbf{Reward diagnostic.} On fixed ProcessBench MATH solutions, report first-error accuracy, correct-chain acceptance, and their harmonic mean at threshold 0.5. Within answer-correct solutions, valid-chain AUROC tests discrimination beyond a global score shift. Report overlaps and class counts; no diagnostic is used for tuning. Reward hacking and policy distribution shift remain risks.
+
+\section{Three-person plan and tentative timeline}
+Hongyi Ding leads GRPO and GPU profiling; Jasmine Jiang leads PRM data and adaptation; Yang Zeng leads split audits, evaluation, and statistics. All three write the report.
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}l L@{}}
+\toprule
+\textbf{Period} & \textbf{Deliverable and responsibility} \\
+\midrule
+Week 1 & Hongyi: 48-hour resource/loss pilot; Jasmine: buffer and PRMs; Yang: split audit. Proposal due Oct.\ 21, 11:59\,pm PT. \\
+Week 2 & Hongyi/Jasmine: first-seed A--D runs; Yang: verify rewards, accuracy, and cost logs. \\
+Week 3 & Hongyi/Jasmine: remaining seeds; Yang: paired comparisons and error analysis. \\
+Week 4 & All: final evaluation, reproducible code, figures, and report. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\clearpage
+\begin{thebibliography}{11}
+\bibitem[Shao et al.(2024)]{shao2024}
+Zhihong Shao et al. DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models. 2024.
+\url{https://arxiv.org/abs/2402.03300v3}.
+
+\bibitem[Zheng et al.(2025)]{zheng2025}
+Chujie Zheng et al. ProcessBench: Identifying Process Errors in Mathematical Reasoning. ACL, 2025.
+\url{https://arxiv.org/abs/2412.06559v4}.
+
+\bibitem[Lightman et al.(2023)]{lightman2023}
+Hunter Lightman et al. Let's Verify Step by Step. 2023.
+\url{https://arxiv.org/abs/2305.20050}.
+
+\bibitem[Cui et al.(2025)]{cui2025}
+Ganqu Cui et al. Process Reinforcement through Implicit Rewards. 2025.
+\url{https://arxiv.org/abs/2502.01456v2}.
+
+\bibitem[Cheng et al.(2025)]{cheng2025}
+Jie Cheng et al. Stop Summation: Min-Form Credit Assignment Is All Process Reward Model Needs for Reasoning. NeurIPS, 2025.
+\url{https://arxiv.org/abs/2504.15275v3}.
+
+\bibitem[Jia et al.(2026)]{jia2026}
+Tianyu Jia et al. The Weakest Link Tells It All: Outcome-Supervised Process Reward Modeling via Learnable Credit Assignment. EMNLP, 2026. Camera-ready version.
+\url{https://arxiv.org/abs/2606.27739v2}.
+
+\bibitem[Hendrycks et al.(2021)]{hendrycks2021}
+Dan Hendrycks et al. Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS, 2021.
+\url{https://arxiv.org/abs/2103.03874v2}.
+
+\bibitem[Cobbe et al.(2021)]{cobbe2021}
+Karl Cobbe et al. Training Verifiers to Solve Math Word Problems. 2021.
+\url{https://arxiv.org/abs/2110.14168v2}.
+
+\bibitem[Hugging Face H4(2025)]{h4prm}
+Hugging Face H4. Qwen2.5-Math-1.5B-Instruct-PRM-0.2. 2025.
+\href{https://huggingface.co/HuggingFaceH4/Qwen2.5-Math-1.5B-Instruct-PRM-0.2}{Official model card and scoring interface}. Accessed Oct.\ 19, 2026.
+
+\bibitem[Hugging Face(2026)]{trl}
+Hugging Face. TRL: \href{https://huggingface.co/docs/trl/grpo_trainer}{GRPO Trainer documentation}. Accessed Oct.\ 19, 2026.
+
+\bibitem[OpenAI(2023)]{prmdata}
+OpenAI. PRM800K dataset repository: MATH splits and answer grading. 2023. Accessed Oct.\ 19, 2026.
+\url{https://github.com/openai/prm800k}.
+\end{thebibliography}
+\end{document}

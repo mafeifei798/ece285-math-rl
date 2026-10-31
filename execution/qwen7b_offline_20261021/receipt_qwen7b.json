@@ -1,0 +1,98 @@
+{
+  "model": "qwen7b",
+  "complete": true,
+  "completed_views": 8339,
+  "total_views": 8339,
+  "forward_seconds": 441.9993606964126,
+  "wall_seconds": 450.9315984621644,
+  "input_tokens": 6154647,
+  "padded_tokens": 6165132,
+  "forward_calls": 1043,
+  "allocated_peak_GiB": 16.189059257507324,
+  "reserved_peak_GiB": 78.69921875,
+  "load_and_verify_seconds": 16.73642464214936,
+  "warmup_seconds": 0.6064543100073934,
+  "model_memory_allocated_GiB": 13.298140048980713,
+  "GPU_total_GiB": 79.249755859375,
+  "GPU_initial_free_GiB": 78.83477783203125,
+  "GPU_name": "NVIDIA A100-SXM4-80GB",
+  "driver_used_memory_at_timed_start_GiB": 14.50677490234375,
+  "driver_used_memory_max_observed_GiB": 79.01458740234375,
+  "parameter_count": 7083474946,
+  "dtype": "bfloat16",
+  "softmax_dtype": "float32",
+  "microbatch": 8,
+  "production_views_per_second": 18.86654312544955,
+  "unpadded_input_tokens_per_second": 13924.560864302519,
+  "padded_input_tokens_per_second": 13948.282618070398,
+  "wall_seconds_including_controls": 451.8730722628534,
+  "repeat_max_difference": 0.0,
+  "prefix_checks": [
+    {
+      "source_row": 3932,
+      "step": 1,
+      "full": 0.9222025275230408,
+      "prefix": 0.9222025275230408,
+      "difference": 0.0
+    },
+    {
+      "source_row": 3932,
+      "step": 10,
+      "full": 0.9012274742126465,
+      "prefix": 0.9089417457580566,
+      "difference": 0.007714271545410156
+    },
+    {
+      "source_row": 5521,
+      "step": 1,
+      "full": 0.034100428223609924,
+      "prefix": 0.03514484688639641,
+      "difference": 0.0010444186627864838
+    },
+    {
+      "source_row": 5521,
+      "step": 12,
+      "full": 0.9998028874397278,
+      "prefix": 0.9997901320457458,
+      "difference": 1.2755393981933594e-05
+    },
+    {
+      "source_row": 1812,
+      "step": 1,
+      "full": 0.023509450256824493,
+      "prefix": 0.023153411224484444,
+      "difference": 0.00035603903234004974
+    },
+    {
+      "source_row": 2295,
+      "step": 1,
+      "full": 0.9693241715431213,
+      "prefix": 0.9683812260627747,
+      "difference": 0.0009429454803466797
+    },
+    {
+      "source_row": 2295,
+      "step": 3,
+      "full": 0.9999974966049194,
+      "prefix": 0.9999973773956299,
+      "difference": 1.1920928955078125e-07
+    },
+    {
+      "source_row": 2095,
+      "step": 1,
+      "full": 0.015072628855705261,
+      "prefix": 0.015072628855705261,
+      "difference": 0.0
+    }
+  ],
+  "model_frozen_verified": true,
+  "model_weight_updates": 0,
+  "new_rollouts": 0,
+  "new_training": false,
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.56.2",
+    "trl": "0.23.1"
+  },
+  "benchmark_scope": "single scorer only; excludes actor, optimizer, generation and model download; length-bucketed batches"
+}

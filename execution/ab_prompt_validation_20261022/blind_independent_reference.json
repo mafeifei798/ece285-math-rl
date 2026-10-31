@@ -1,0 +1,70 @@
+{
+  "created_utc": "2026-10-22T20:14:45.079742+00:00",
+  "method": "Assistant independent solutions from question text only, recorded before viewing policy outputs or blinded key. Not human annotation and not a replacement grader.",
+  "reference_solutions": [
+    {
+      "review_question": "Q01",
+      "independent_answer": "4",
+      "reasoning": "x must be nonzero. (2/x)/(4/x)=1/2; hence 1/x=3/4-1/2=1/4, so x=4."
+    },
+    {
+      "review_question": "Q02",
+      "independent_answer": "120 degrees",
+      "reasoning": "Interpreting the supplied Asymptote geometry: angles 2 and 3 lie between the outer and inner sides at the base vertices. Outer triangle base angles sum to 180-76=104. Inner triangle base angles sum to 104-27-17=60; angle4=180-60=120."
+    },
+    {
+      "review_question": "Q03",
+      "independent_answer": "26",
+      "reasoning": "2a^2+29a+65=(a+13)(2a+3)+26, so gcd=gcd(a+13,26). Because 1183=7*13^2 and a is an odd multiple, a+13 is divisible by both2 and13, hence by26."
+    },
+    {
+      "review_question": "Q04",
+      "independent_answer": "8",
+      "reasoning": "With n=2004, the expression is ((n+1)^4-(n-1)^4)/(n(n^2-1))=8+16/(n^2-1). The final fraction is strictly between0 and1; floor8."
+    },
+    {
+      "review_question": "Q05",
+      "independent_answer": "274",
+      "reasoning": "If Kylie=x, then x+(4x+10)=340, x=66; Kayla=4*66+10=274."
+    },
+    {
+      "review_question": "Q06",
+      "independent_answer": "10",
+      "reasoning": "Black cats=16*0.25=4; grey=16-2-4=10."
+    },
+    {
+      "review_question": "Q07",
+      "independent_answer": "36000",
+      "reasoning": "Aliyah=40+10=50 phones; combined90 phones, each400; total36000."
+    },
+    {
+      "review_question": "Q08",
+      "independent_answer": "632",
+      "reasoning": "Red=3*156+8=476; combined=156+476=632cm."
+    },
+    {
+      "review_question": "Q09",
+      "independent_answer": "16800",
+      "reasoning": "Ernie now=4/5*6000=4800; Jack now=2*6000=12000; combined16800."
+    },
+    {
+      "review_question": "Q10",
+      "independent_answer": "82",
+      "reasoning": "Downloading=10+3*10=40; glitch time=2*4+6=14; non-glitch talking=2*14=28; total=40+14+28=82minutes."
+    },
+    {
+      "review_question": "Q11",
+      "independent_answer": "114",
+      "reasoning": "Snakes15, monkeys30, lions25, pandas33, dogs11; total15+30+25+33+11=114."
+    },
+    {
+      "review_question": "Q12",
+      "independent_answer": "730",
+      "reasoning": "No leap years:4*365=1460days. One comic every other day gives1460/2=730."
+    }
+  ],
+  "exact_arithmetic_check_Q04": {
+    "numerator": 32128136,
+    "denominator": 4016015
+  }
+}

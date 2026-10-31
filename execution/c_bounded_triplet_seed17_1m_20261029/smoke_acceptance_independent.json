@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "unix": 1793266407.5811803,
+  "arms": {
+    "A": {
+      "passed": true,
+      "updates": 2,
+      "rows": 64,
+      "generated_tokens": 48192,
+      "wrong_positive": 0,
+      "max_FP64_advantage_error": 9.058772976189289e-08,
+      "checkpoint_files_verified": 5,
+      "PRM_frozen_verified": true,
+      "originals_preserved": true,
+      "peak_reserved_GiB": 20.353515625
+    },
+    "C_mix": {
+      "passed": true,
+      "updates": 2,
+      "rows": 64,
+      "generated_tokens": 50416,
+      "wrong_positive": 2,
+      "max_FP64_advantage_error": 2.2123632548165517e-07,
+      "checkpoint_files_verified": 5,
+      "PRM_frozen_verified": true,
+      "originals_preserved": true,
+      "peak_reserved_GiB": 34.0390625
+    },
+    "C_bounded": {
+      "passed": true,
+      "updates": 2,
+      "rows": 64,
+      "generated_tokens": 49307,
+      "wrong_positive": 0,
+      "max_FP64_advantage_error": 9.058772976189289e-08,
+      "checkpoint_files_verified": 5,
+      "PRM_frozen_verified": true,
+      "originals_preserved": true,
+      "peak_reserved_GiB": 34.0390625
+    }
+  },
+  "matched_initial_actor_and_args": true,
+  "matched_initial_raw_tokens": true,
+  "scope": "two-update/save acceptance only; actual checkpoint continuation acceptance is still checked by later resume stage",
+  "D_adaptation": false
+}

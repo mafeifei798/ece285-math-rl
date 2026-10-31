@@ -1,0 +1,48 @@
+https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/ppo/core_algos.py
+Upstream blob: 478e9f32eb1013c75bdb6cba2d963c5457153594
+EXCERPT ONLY
+139: def compute_grpo_outcome_advantage(token_level_rewards: torch.Tensor,
+140:                                    eos_mask: torch.Tensor,
+141:                                    index: torch.Tensor,
+142:                                    epsilon: float = 1e-6,
+143:                                    adv_norm: bool = False,
+144:                                    return_aggregate_method: str = 'sum'):
+145:     """
+146:     Compute advantage for GRPO, operating only on Outcome reward 
+147:     (with only one scalar reward for each response).
+148:     Args:
+149:         token_level_rewards: `(torch.Tensor)`
+150:             shape: (bs, response_length)
+151:         eos_mask: `(torch.Tensor)`
+152:             shape: (bs, response_length)
+153:     
+154:     Returns:
+155:         advantages: `(torch.Tensor)`
+156:             shape: (bs, response_length)
+157:         Returns: `(torch.Tensor)`
+158:             shape: (bs, response_length)
+159:     """
+160:     returns = compute_return(token_level_rewards, eos_mask, return_aggregate_method)
+161:     advantages = torch.zeros_like(returns)
+162:     
+163:     id2return = defaultdict(list)
+164:     id2mean = {}
+165:     id2std = {}
+166: 
+167:     with torch.no_grad():
+168:         bsz = returns.shape[0]
+169:         for i in range(bsz):
+170:             id2return[index[i]].append(returns[i])
+171:         for idx in id2return:
+172:             if len(id2return[idx]) > 0:
+173:                 id2mean[idx] = torch.mean(torch.stack(id2return[idx]))
+174:                 id2std[idx] = torch.std(torch.stack(id2return[idx]))
+175:             else:
+176:                 raise ValueError(f"no score in prompt index: {idx}")
+177:         for i in range(bsz):
+178:             advantages[i] = (returns[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)
+179:         
+180:         if adv_norm:
+181:             advantages = verl_F.masked_whiten(advantages, eos_mask)
+182:             advantages *= eos_mask
+183:     return advantages, returns

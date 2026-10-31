@@ -1,0 +1,42 @@
+{
+  "status": "completed",
+  "pid": 1145046,
+  "started_unix": 1792539779.753937,
+  "pilot": false,
+  "finished_unix": 1792547579.1606805,
+  "global_step": 280,
+  "stop_reason": "token_budget_reached",
+  "accounting": {
+    "generated_completion_tokens": 6020163,
+    "generated_completions": 8960,
+    "generated_groups": 1120,
+    "mixed_reward_groups": 875,
+    "correct_completions": 3725,
+    "truncated_completions": 541,
+    "reward_status_counts": {
+      "symbolic": 4043,
+      "truncated": 541,
+      "exact": 3358,
+      "missing_or_invalid_box": 924,
+      "unparseable": 94
+    },
+    "last_batch": {
+      "generated_completion_tokens": 20463,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 3,
+      "correct_completions": 9,
+      "truncated_completions": 2
+    }
+  },
+  "budget": 6000000,
+  "budget_overshoot": 20163,
+  "lora_B_abs_sum": 1137.6102554500103,
+  "metrics": {
+    "train_runtime": 7775.77,
+    "train_samples_per_second": 82.307,
+    "train_steps_per_second": 2.572,
+    "total_flos": 0.0,
+    "train_loss": 9.237129571114825e-05
+  }
+}

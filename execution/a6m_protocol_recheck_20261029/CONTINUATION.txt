@@ -1,0 +1,15 @@
+用户授权：仅重评旧6M A（checkpoint-284），统一MATH500/GSM8K，与原54.0%/67.02%及当前1M A比较。禁止新训练、PRM调用、提示/验答改变、额外seed、自动跟进任务。
+远端项目/srv/research/ece285_math_rl_project；source experiments/a6m_protocol_recheck_20261029；run runs/A6M_protocol_recheck_20261029；audit audits/A6M_protocol_recheck_20261029。
+已派发唯一controller PID3173527；dispatch.json保存receipt，禁止再运行dispatch.py或prepare_remote.py。inspect_remote.py只读；工具会话53639为只读等待，不是GPU进程。健康运行不干扰。
+1819条新生成，GPU1共享（先前授权仍适用），推理设置和本轮四模型对照全部一致，adapter ID1；只有单模型不执行四模型轮换。保护797旧文件，checkpoint权重3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862。源release d367ded2061e6efb3205baf303177ef0dbcb710b293f0763237a403f4ce5df8b。
+有限controller先生成，退出GPU进程后CPU重算新旧7276条验答、校验hash/旧结果/同题统计，输出comparison.json。失败不自动重试，有已提交批次不得重算；先诊断证据。
+完成后retrieve_results.py一次性取回证据，重复取回会拒绝覆盖；build_report.py生成HTML/TXT/CSV和图。图需view_image目视核对，静态链接需验存在。浏览器file协议此前已被策略禁止，不尝试绕过；不声称已作整页截图验收。
+阅读case_review_pack.json选2–4条数学/格式案例，审读不是人工金标准、不改分数。报告旧新正文/正确性一致率、A6M重评对A1M的配对区间及采样显存/时间。
+旧A6M与当前A1M不同训练轨迹（旧训练vLLM内存参数.3 vs当前.15、restart历史不同），即使base/数据/初始化相同，也不把差异全归因token规模；没有6M过程奖励臂，不据此断言PRM有效/无效。最终报告链接并明确无训练，不停在进度。
+
+FINAL COMPLETE — 2026-10-30T06:27:17.325439+00:00
+全部1819新回答完成，CPU对新旧7276条冻结验答重算一致，797受保护旧文件不变；本地取回与原始token/adapter/hash/早期审读样例核验通过。
+新统一V1重评：MATH500275/500=55.0%，GSM8K906/1319=68.6884%；历史V0为270/500=54.0%、884/1319=67.0205%，未精确复现。
+当前A1M为247/500=49.4%、752/1319=57.0129%；新6M−1M为+5.6pp[2.0,9.2]、+11.6755pp[9.0978,14.3290]。
+日志已核实旧V0与当前V1，以及缓存/分块prefill/异步输出/显存设置差异；相同文本评分/status差异0。未做单因素再生成，不把差异归因某一项。新1M和6M统一V1，训练轨迹仍不同，不做token的纯因果结论。
+报告review.html、REPORT.txt、accuracy.csv、runtime_audit.json及日志摘录；图已目视核对，14个链接存在，HTML未整页截图。controller已自然退出，无训练/PRM/自动任务；不再等待，不派发后续33M训练或额外V0评测。

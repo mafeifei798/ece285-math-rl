@@ -1,0 +1,116 @@
+https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/verl/trainer/ppo/core_algos.py
+Upstream blob: a217ada4182dd918b3d0db1b4d45a093445e0868
+EXCERPT ONLY
+333: @register_adv_est("grpo_dual")
+334: def compute_grpo_dual_objective_advantage(
+335:     token_level_rewards: torch.Tensor,
+336:     response_mask: torch.Tensor,
+337:     index: np.ndarray,
+338:     reward_prm: np.ndarray,
+339:     lambda_process: float = 1.0,
+340:     epsilon: float = 1e-6,
+341:     norm_adv_by_std_in_grpo: bool = True,
+342:     acc: np.ndarray = None,
+343:     **kwargs,
+344: ) -> tuple[torch.Tensor, torch.Tensor, dict]:
+345:     """
+346:     PA_GRPO (Process-Aware GRPO): Dual-objective advantage computation.
+347: 
+348:     Decomposes advantage into two independently normalized components:
+349:         A_total = A_out + lambda_process * A_proc
+350: 
+351:     - A_out: standard GRPO advantage from binary rule-based rewards
+352:     - A_proc: process advantage from PRM scores, normalized ONLY among correct responses
+353:     - lambda_process: fixed weight for process advantage (default 1.0 = equal weight)
+354: 
+355:     Args:
+356:         token_level_rewards: (bs, response_length) binary rule-based rewards
+357:         response_mask: (bs, response_length) mask for valid tokens
+358:         index: (bs,) group IDs for each response
+359:         reward_prm: (bs,) PRM scores (0, 0.5, 1) from non_tensor_batch
+360:         lambda_process: weight for process advantage (default 1.0)
+361:         epsilon: small value to avoid division by zero
+362:         norm_adv_by_std_in_grpo: whether to normalize by std (True=GRPO, False=Dr.GRPO)
+363:         acc: (bs,) binary accuracy from non_tensor_batch, used for correct_mask
+364:              when reward shaping (e.g. DAPO overlong penalty) makes scores_rule non-binary.
+365:              If None, falls back to scores_rule == 1.0.
+366: 
+367:     Returns:
+368:         advantages: (bs, response_length) token-level advantages
+369:         returns: (bs, response_length) same as advantages (outcome-only)
+370:         metrics: dict of logging metrics
+371:     """
+372:     scores_rule = token_level_rewards.sum(dim=-1)  # (bs,)
+373:     scores_prm = torch.tensor(reward_prm, dtype=scores_rule.dtype, device=scores_rule.device)
+374: 
+375:     # Build global binary correctness mask (unaffected by reward shaping)
+376:     if acc is not None:
+377:         binary_acc = torch.tensor(acc, dtype=torch.bool, device=scores_rule.device)
+378:     else:
+379:         binary_acc = None
+380: 
+381:     # Group responses by prompt uid
+382:     id2indices = defaultdict(list)
+383:     bsz = scores_rule.shape[0]
+384:     for i in range(bsz):
+385:         id2indices[index[i]].append(i)
+386: 
+387:     A_out = torch.zeros_like(scores_rule)
+388:     A_proc = torch.zeros_like(scores_rule)
+389:     A_total = torch.zeros_like(scores_rule)
+390: 
+391:     # Metrics accumulators
+392:     process_active_count = 0
+393:     total_group_count = 0
+394: 
+395:     with torch.no_grad():
+396:         for uid, indices in id2indices.items():
+397:             total_group_count += 1
+398:             G = len(indices)
+399:             idx_t = torch.tensor(indices, dtype=torch.long, device=scores_rule.device)
+400:             group_rule = scores_rule[idx_t]
+401:             group_prm = scores_prm[idx_t]
+402: 
+403:             # ─── Step 1: A_out (standard GRPO normalization) ───
+404:             group_A_out = torch.zeros(G, dtype=scores_rule.dtype, device=scores_rule.device)
+405:             if G > 1:
+406:                 mu_rule = group_rule.mean()
+407:                 std_rule = group_rule.std()
+408:                 if std_rule > epsilon:
+409:                     if norm_adv_by_std_in_grpo:
+410:                         group_A_out = (group_rule - mu_rule) / (std_rule + epsilon)
+411:                     else:
+412:                         group_A_out = group_rule - mu_rule
+413: 
+414:             # ─── Step 2: A_proc (process advantage among correct subset) ───
+415:             group_A_proc = torch.zeros(G, dtype=scores_rule.dtype, device=scores_rule.device)
+416:             if binary_acc is not None:
+417:                 correct_mask = binary_acc[idx_t]
+418:             else:
+419:                 correct_mask = (group_rule == 1.0)
+420:             num_correct = correct_mask.sum().item()
+421:             process_active = False
+422: 
+423:             if num_correct >= 2:
+424:                 prm_correct = group_prm[correct_mask]
+425:                 mu_prm = prm_correct.mean()
+426:                 std_prm = prm_correct.std()
+427: 
+428:                 if std_prm > epsilon:
+429:                     process_active = True
+430:                     process_active_count += 1
+431:                     if norm_adv_by_std_in_grpo:
+432:                         group_A_proc[correct_mask] = (group_prm[correct_mask] - mu_prm) / (std_prm + epsilon)
+433:                     else:
+434:                         group_A_proc[correct_mask] = group_prm[correct_mask] - mu_prm
+435: 
+436:             # ─── Step 3: Combine (fixed lambda, no adaptive clipping) ───
+437:             group_A_total = group_A_out + lambda_process * group_A_proc
+438: 
+439:             # Write back to global tensors
+440:             for j, idx in enumerate(indices):
+441:                 A_out[idx] = group_A_out[j]
+442:                 A_proc[idx] = group_A_proc[j]
+443:                 A_total[idx] = group_A_total[j]
+444: 
+445:         # Broadcast scalar advantages to token dimension

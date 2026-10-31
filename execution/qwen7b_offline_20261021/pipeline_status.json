@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "stage": "offline_scoring_replay_and_QA_complete",
+  "old_A_B_preserved": true,
+  "new_training": false,
+  "new_rollouts": 0,
+  "model_updates": 0
+}

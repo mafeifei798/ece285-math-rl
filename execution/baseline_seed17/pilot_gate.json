@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "checks": {
+    "completed_requested_pilot": true,
+    "nonzero_parameter_update": true,
+    "at_least_one_informative_group": true,
+    "generated_tokens_accounted": true,
+    "finite_gradient_logged": true,
+    "no_verifier_exceptions": true,
+    "adapter_saved": true,
+    "resumable_checkpoint_saved": true
+  },
+  "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+  "critical_code_sha256": {
+    "train_baseline.py": "407505f628f0731adb8c668f47f0ef691b761362d670e456823c7ec998be3cd5",
+    "reward.py": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+    "common.py": "d7b19e2cfff0db5097b5dc6d2df6b85d391e1718657dcb85bf042e4351a95174"
+  },
+  "pilot_run": "runs/pilot_A_seed17",
+  "accounting": {
+    "generated_completion_tokens": 63775,
+    "generated_completions": 96,
+    "generated_groups": 12,
+    "mixed_reward_groups": 11,
+    "correct_completions": 46,
+    "truncated_completions": 9,
+    "reward_status_counts": {
+      "symbolic": 33,
+      "truncated": 9,
+      "exact": 44,
+      "missing_or_invalid_box": 9,
+      "unparseable": 1
+    },
+    "last_batch": {
+      "generated_completion_tokens": 23591,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 4,
+      "correct_completions": 18,
+      "truncated_completions": 4
+    }
+  },
+  "scope": "plumbing, finite updates, saving, accounting; not efficacy"
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "Post-hoc structural sensitivity check only, no new accuracy or semantic labels",
+  "thresholds": {
+    "math500_0.1": {
+      "A_only_complete_wrong_early": 5,
+      "B_only_complete_wrong_early": 3
+    },
+    "math500_0.25": {
+      "A_only_complete_wrong_early": 5,
+      "B_only_complete_wrong_early": 3
+    },
+    "math500_0.5": {
+      "A_only_complete_wrong_early": 5,
+      "B_only_complete_wrong_early": 3
+    },
+    "gsm8k_0.1": {
+      "A_only_complete_wrong_early": 44,
+      "B_only_complete_wrong_early": 7
+    },
+    "gsm8k_0.25": {
+      "A_only_complete_wrong_early": 44,
+      "B_only_complete_wrong_early": 7
+    },
+    "gsm8k_0.5": {
+      "A_only_complete_wrong_early": 44,
+      "B_only_complete_wrong_early": 7
+    }
+  }
+}

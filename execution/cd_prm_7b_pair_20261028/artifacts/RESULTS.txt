@@ -1,0 +1,142 @@
+7B C/D 配对 PRM 适配与离线检查完成
+只训练了评分器 LoRA；没有策略 RL。
+初始策略采样：512题×4＝2048条。共享锚点：2048条。
+适配更新：C/D 各512步，输入和初始adapter相同，只有成功项系数不同。
+
+ProcessBench 固定分层子集（不是官方完整成绩）：
+B {"n": 192, "valid_count": 64, "error_count": 128, "valid_acceptance": 0.90625, "first_error_accuracy": 0.6796875, "harmonic_mean": 0.7767857142857143, "answer_correct_valid_vs_invalid_AUROC": 0.9427490234375, "mean_valid_min_score": 0.8793408150959294, "mean_invalid_answer_correct_min_score": 0.20601789111242397}
+C {"n": 192, "valid_count": 64, "error_count": 128, "valid_acceptance": 0.875, "first_error_accuracy": 0.734375, "harmonic_mean": 0.7985436893203883, "answer_correct_valid_vs_invalid_AUROC": 0.95068359375, "mean_valid_min_score": 0.8416045486555959, "mean_invalid_answer_correct_min_score": 0.13930883051943965}
+D {"n": 192, "valid_count": 64, "error_count": 128, "valid_acceptance": 0.140625, "first_error_accuracy": 0.3515625, "harmonic_mean": 0.20089285714285715, "answer_correct_valid_vs_invalid_AUROC": 0.869873046875, "mean_valid_min_score": 0.1551502100010964, "mean_invalid_answer_correct_min_score": 0.00798058796098644}
+
+分层组内信号：
+{
+  "B": {
+    "probe/mixed": {
+      "groups": 32,
+      "wrong_positive": 0,
+      "wrong_count": 140,
+      "wrong_positive_fraction": 0.0,
+      "mean_absolute_advantage": 0.8327840626709704,
+      "mean_group_outcome_AUROC": 0.8719494047619047
+    },
+    "probe/all_wrong": {
+      "groups": 16,
+      "wrong_positive": 46,
+      "wrong_count": 128,
+      "wrong_positive_fraction": 0.359375,
+      "mean_absolute_advantage": 0.7460669436744362,
+      "mean_group_outcome_AUROC": null
+    },
+    "probe/all_correct": {
+      "groups": 16,
+      "wrong_positive": 0,
+      "wrong_count": 0,
+      "wrong_positive_fraction": null,
+      "mean_absolute_advantage": 0.8148019763942411,
+      "mean_group_outcome_AUROC": null
+    },
+    "illustrations/all_wrong": {
+      "groups": 3,
+      "wrong_positive": 8,
+      "wrong_count": 24,
+      "wrong_positive_fraction": 0.3333333333333333,
+      "mean_absolute_advantage": 0.7421196622101194,
+      "mean_group_outcome_AUROC": null
+    }
+  },
+  "C": {
+    "probe/mixed": {
+      "groups": 32,
+      "wrong_positive": 0,
+      "wrong_count": 140,
+      "wrong_positive_fraction": 0.0,
+      "mean_absolute_advantage": 0.8331206544875741,
+      "mean_group_outcome_AUROC": 0.8872209821428572
+    },
+    "probe/all_wrong": {
+      "groups": 16,
+      "wrong_positive": 34,
+      "wrong_count": 128,
+      "wrong_positive_fraction": 0.265625,
+      "mean_absolute_advantage": 0.6896773155419591,
+      "mean_group_outcome_AUROC": null
+    },
+    "probe/all_correct": {
+      "groups": 16,
+      "wrong_positive": 0,
+      "wrong_count": 0,
+      "wrong_positive_fraction": null,
+      "mean_absolute_advantage": 0.7814194278017501,
+      "mean_group_outcome_AUROC": null
+    },
+    "illustrations/all_wrong": {
+      "groups": 3,
+      "wrong_positive": 6,
+      "wrong_count": 24,
+      "wrong_positive_fraction": 0.25,
+      "mean_absolute_advantage": 0.7097529474066756,
+      "mean_group_outcome_AUROC": null
+    }
+  },
+  "D": {
+    "probe/mixed": {
+      "groups": 32,
+      "wrong_positive": 0,
+      "wrong_count": 140,
+      "wrong_positive_fraction": 0.0,
+      "mean_absolute_advantage": 0.8358309776451393,
+      "mean_group_outcome_AUROC": 0.8454799107142857
+    },
+    "probe/all_wrong": {
+      "groups": 16,
+      "wrong_positive": 50,
+      "wrong_count": 128,
+      "wrong_positive_fraction": 0.390625,
+      "mean_absolute_advantage": 0.12026794281704022,
+      "mean_group_outcome_AUROC": null
+    },
+    "probe/all_correct": {
+      "groups": 16,
+      "wrong_positive": 0,
+      "wrong_count": 0,
+      "wrong_positive_fraction": null,
+      "mean_absolute_advantage": 0.30758642008928644,
+      "mean_group_outcome_AUROC": null
+    },
+    "illustrations/all_wrong": {
+      "groups": 3,
+      "wrong_positive": 10,
+      "wrong_count": 24,
+      "wrong_positive_fraction": 0.4166666666666667,
+      "mean_absolute_advantage": 0.12567127589501897,
+      "mean_group_outcome_AUROC": null
+    }
+  }
+}
+
+分数与advantage变化：
+{
+  "C": {
+    "score_pearson_vs_B": 0.9270951015794436,
+    "mean_min_score_delta": 0.026907727372952144,
+    "positive_advantage_sign_flip_fraction": 0.091796875
+  },
+  "D": {
+    "score_pearson_vs_B": 0.13336072920097428,
+    "mean_min_score_delta": -0.3799365819111438,
+    "positive_advantage_sign_flip_fraction": 0.181640625
+  }
+}
+
+D-C答对内部AUROC差区间：[-0.13736111111111116, -0.03404032469232787]
+
+限制：
+Single PRM-adaptation seed; no C/D policy was trained or evaluated.
+Verifier-incorrect is not necessarily mathematically invalid reasoning.
+Primary probe is outcome-stratified, so aggregate rates are not prevalence estimates.
+ProcessBench subset is fixed and overlap-aware; inherited exposure is not removed.
+Absolute score reductions or positive-advantage changes do not prove improved mathematical ability.
+Floating-point scoring backend is shared B/C/D; original stored B scores are not silently overwritten.
+
+
+Gradient verification recovery: original BF16 coordinate-wise test FAILED and remains preserved. Same-input BF16 repeated backward showed numerical variation. Deterministic FP32 no-update reference PASSED the original tolerance. No optimization or loss change was performed during recovery. See wiring_recovery/reassessment.json.

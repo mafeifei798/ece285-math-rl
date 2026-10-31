@@ -1,0 +1,29 @@
+{
+  "generated_completion_tokens": 6020163,
+  "generated_completions": 8960,
+  "generated_groups": 1120,
+  "mixed_reward_groups": 875,
+  "correct_completions": 3725,
+  "truncated_completions": 541,
+  "reward_status_counts": {
+    "symbolic": 4043,
+    "truncated": 541,
+    "exact": 3358,
+    "missing_or_invalid_box": 924,
+    "unparseable": 94
+  },
+  "last_batch": {
+    "generated_completion_tokens": 20463,
+    "generated_completions": 32,
+    "generated_groups": 4,
+    "mixed_reward_groups": 3,
+    "correct_completions": 9,
+    "truncated_completions": 2
+  },
+  "global_step": 280,
+  "elapsed_seconds": 7797.67692423705,
+  "target_completion_tokens": 6000000,
+  "effective_completion_tokens_per_second": 772.045707778414,
+  "torch_peak_allocated_GiB": 31.59526252746582,
+  "torch_peak_reserved_GiB": 32.43359375
+}

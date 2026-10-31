@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "pid": 2608261,
+  "started_unix": 1792625572.5675504,
+  "target_completion_tokens": 6000000,
+  "scope": "Only one seed17 Bprime pilot and 6M training plus fixed evaluation. No C/D, no extension to24M, no old-run resume. Preserve all original A/B code and results.",
+  "preflight_receipt_sha256": "20fa0207fe6b2036efcf1c8bb38321c9321f2a29b87a7f99bebbee2f090728d3",
+  "heartbeat_unix": 1792637093.577337,
+  "child_pid": null,
+  "gpu": 0,
+  "log": "/srv/research/ece285_math_rl_project/logs/B_Qwen7B_seed17_6M_evaluation_6M.log",
+  "last_child_exit_code": 0,
+  "finished_unix": 1792637093.5773356,
+  "preservation": {
+    "passed": true,
+    "hashed_original_files": 358,
+    "inventoried_original_files": 513
+  },
+  "all_evaluations_completed": true,
+  "no_C_D_launched": true
+}

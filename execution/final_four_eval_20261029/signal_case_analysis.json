@@ -1,0 +1,69 @@
+{
+  "actual_mixed_group": {
+    "problem_id": "math/train/number_theory/542",
+    "step_before_update": 14,
+    "rewards": [
+      0.007521726936101914,
+      0.0,
+      0.006228766590356827,
+      0.0005181958433240653,
+      0.16989448070526125,
+      0.012375196814537049,
+      1.1253162503242493,
+      0.004257470369338989
+    ],
+    "mean": 0.16576401094789617,
+    "sample_std": 0.3919996452622447,
+    "wrong_row_index": 4,
+    "wrong_row_reward": 0.16989448070526125,
+    "recomputed_FP64_advantage": 0.010534234874409382,
+    "actual_FP32_advantage": 0.010534267872571945
+  },
+  "illustrative_counterexample_not_experiment": {
+    "group_size": 8,
+    "outcomes": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "process_scores": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "lambda": 0.2,
+    "rewards": [
+      1,
+      0.2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "wrong_positive_condition": "lambda > 1/(G-1), i.e. >1/7 for G=8",
+    "wrong_advantage": 0.14260866447262735
+  },
+  "geometry_checks": {
+    "unscaled_polygon_area": 25.0,
+    "side_scale": 2,
+    "area": 100.0,
+    "triangle_AD_squared": 1548,
+    "triangle_AD": "6*sqrt(43)",
+    "floor_m_plus_sqrt_n": 12,
+    "fabricated_assumption_floor": 23
+  },
+  "new_model_calls": 0,
+  "training_changed": false
+}

@@ -1,0 +1,27 @@
+{
+  "pid": 464098,
+  "controller": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023",
+  "command": [
+    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/controller.py",
+    "--authorized-pilot"
+  ],
+  "log": "/srv/research/ece285_math_rl_project/audits/PURE_OpenRLHF_pilot_20261023/controller.log",
+  "launched_unix": 1792746389.4718363,
+  "release_sha256": "4c1a34c885dfe108bf6e155025a7a853a74bcb32336937e043196b287b0c01f4",
+  "pilot_preflight_sha256": "00301c23060cd228b876649617c53d2f5472bca8fd03a12f39baa16fb48aaf8b",
+  "no_update_preflight_sha256": "2f5cfc81b694eb5f9438af558a6c4cf68aa106db686ccc8c33001768d5b150db",
+  "stages": [
+    2,
+    10,
+    20,
+    40
+  ],
+  "max_updates_per_arm": 40,
+  "max_generated_completion_tokens_per_arm": 2621440,
+  "formal_6M_authorized": false,
+  "shared_gpu_authorized": true,
+  "next_action": "controller waits for sufficient free memory before each worker"
+}

@@ -1,0 +1,59 @@
+ECE285: authorized follow-through until 2026-10-22 09:00 America/Los_Angeles
+Deadline UTC: 2026-10-22 16:00Z. Client clock is authoritative.
+
+AUTHORIZATION AND SCOPE
+User authorized the existing corrected-only A/B experiment, seed17, 6M generated completion tokens each, then common greedy MATH500/GSM8K evaluation, and continued project work until the deadline. Engineering fixes only: percentage-unit verification, CRLF canonicalization in the PRM view, valid unit verification statuses. Original rewards, group-normalized GRPO, model, data, and loss remain fixed. No C/D, new PRM, bounded advantages, extra seeds, tuning, or budget extension. Preserve all historical code and results. Do not interrupt healthy jobs or change source-pinned code. Fix operational failures only after diagnosis; resume complete checkpoints rather than duplicate dispatch or start over. SSH disconnect is not a failed run.
+
+PATHS AND ACCESS
+Local project: /home/researcher/Desktop/python/ece285_math_rl_project
+Remote project: /srv/research/ece285_math_rl_project
+SSH: ssh -p 11032 -i /home/researcher/.ssh/research_server_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 researcher@server.example.invalid
+Remote Python: /srv/research/ece285_math_rl_project/.venv/bin/python
+Independent pinned code: experiments/ab_corrected_6m_seed17_20261022
+Release SHA256: 9eac99ad38cf0ebb389f295655024eff1a09ff530ca05462bd2d9bcfcdbe6907
+Controller: runs/AB_corrected_seed17_6M_20261022/controller.json
+Original controller PID: 3039862 (check live identity, do not rely solely on PID)
+A: runs/A_corrected_seed17_6M_20261022
+B: runs/B_corrected_seed17_6M_20261022
+Physical GPU1 only. Other jobs use GPU0; do not alter them.
+Logs: logs/ab_corrected_6m_seed17_20261022_<stage>.log
+
+CURRENT VERIFIED SNAPSHOT (about 02:45 PT, NOT LIVE)
+Controller train_A, child3045344, heartbeat fresh, GPU1 100% utilization. A step259, 5,486,164/6,000,000 completion tokens, 715.26 tokens/sec, no observed failures. Real A/B two-update pilots and real LoRA inference gate passed. Formal B not yet started. Controller automatically runs train_A, train_B, eval_A, eval_B, compare; do not start another controller. Pilot tokens A42485/B40728 are separate; formal runs reset to common initialization.
+
+FOLLOW-THROUGH
+Latest user clarification, about03:15PT: wait for the existing A/B training and unified evaluation to finish, then automatically continue substantive work based on those results. Do not invent more intermediate diagnoses/scripts just to fill each wake. During healthy running stages, only ensure the existing pipeline advances and handle actual operational failures. Once final results are ready, use the already prepared CPU audits and move directly to comparison, mathematical/error diagnosis, justified offline validation and a concrete next recommendation. No new user nudge is needed. Deadline remains09:00PT.
+At each scheduled run inspect current time, controller heartbeat/PID, stage status/progress, recent logs and GPU. Take a bounded fresh snapshot, not a stale local HTML. Healthy active jobs need no intervention. Identify actual failures from receipts/logs/processes before recovery. Keep unchanged/non-actionable checks quiet; report stage completions, meaningful new findings, failures, blockers, and the deadline summary.
+
+Result-driven decision sequence:
+- After A finishes, verify that the existing controller proceeds to B; defer substantive combined analysis until final evaluations are available. Preserve the completion receipt.
+- Once both evaluations complete, audit both completed training ledgers and compare reward/advantage decomposition, outcome group distributions, PRM step alignment and scoring costs. Distinguish mathematical ranking errors from normalization amplification; homogeneous-group zero outcome signal is a deliberate property of the frozen baseline, not an implementation bug to silently patch.
+- Once evaluations finish, independently verify predictions and pair changed questions. If B is lower, inspect whether the gap comes from truncation/parse failures versus complete incorrect solutions, then review the actual mathematical derivations in selected same-question cases. If B is higher, check the same possible confounders and uncertainty; do not proclaim PRM generally effective. If the difference is unresolved, state its confidence interval and avoid picking the winner by the point estimate.
+- If a concrete engineering defect is found, reproduce it on saved outputs in an independent patch/replay, establish scope and whether both arms are affected, and decide recovery preserving fairness and all evidence. Do not alter an active run's rewards/objective. Candidate algorithmic changes remain separately labeled offline hypotheses and cannot be smuggled into this corrected-only baseline.
+- Finish a plain-Chinese explanation of what we learned, what remains uncertain, and the single next justified experiment/protocol, not a list of unrelated new project directions. Within the current constraints implement available offline validation, not just propose it.
+
+Completion is only confirmed when controller status=completed, both evaluations have exact expected data counts and receipts, and comparison.json is verified. Download required predictions, logs, config/status/audit receipts into a new evidence subdirectory here, not into historical outputs. Avoid unrelated base-model downloads. Local reports may be refreshed with clear snapshot times. Keep original launch_snapshot.json intact.
+
+Independent postprocessing priorities (read-only inputs, CPU only, no model generation):
+1. Recompute full training token/answer/group counts from rollouts, compare final status/progress/checkpoint accounting; verify each optimizer step has32 completions and prompt group8; recompute original rewards/advantages. Report bounded whole-update budget overshoot.
+2. Compare formal A/B shared args, initial adapter, base revision, release, data/unit metadata; compare prompt order over common update prefix. At equal output-token budget they may legitimately have different update counts and seen-question counts; report them.
+3. Verify final checkpoint index, trainer_state/accounting, source/adapter hashes and final_adapter correspondence. Use fixed final checkpoint, never select by test accuracy.
+4. Independently rerun frozen v3 answer verification on saved evaluation predictions (500 MATH500,1319 GSM8K each), with identical unit metadata. Check unique IDs, question hashes, gold, finish_reason, reward/status, prediction hashes and no verifier_error. Recount accuracy and same-question B-A paired confidence intervals; do not call one training seed a multi-seed result.
+5. Summarize correct / complete-but-wrong / unparsable / truncated outputs, lengths, PRM steps, all-correct/all-wrong/mixed groups and advantage magnitudes. Separate observed behavior from causal hypotheses. PRM scoring cost is extra beyond the equal6M actor output budget.
+
+Reporting nuances: prm_forward_seconds includes tokenization/padding/copies/scoring extraction, so call it PRM scoring elapsed time, not pure GPU forward. torch_peak_allocated_GiB is PyTorch allocator peak, not total GPU process peak. Report exact counts/denominators, paired changes, question CI and single-seed limitation. New corrected B versus corrected A isolates adding this fixed PRM configuration; comparing to old runs cannot prove all old gaps were caused by bugs.
+
+Historical uniformly rescored results (keep separate from new pair): A6020163tokens/280updates, MATH281/50056.2%, GSM935/131970.89%; old7BB6014788tokens/283updates, MATH276/50055.2%, GSM904/131968.54%. Sources execution/b_qwen7b_6m_20261021/comparison_verified.json and execution/reward_repair_v3_20261021/. Confirm sources before publishing historical comparisons.
+
+DEADLINE
+If complete early, finish verification, analysis and report before the deadline. At or after09:00PT, provide a concise self-contained Chinese summary with actual results/status, known limitations, remaining work and links. End this bounded follow-through; do not start new repairs/experiments after the deadline and do not kill already-running jobs just because time is up. Do not claim completion if evaluation is pending. Scheduled recurrence is bounded to16:00UTC.
+
+READY POSTPROCESSING (do not rebuild/retest without a reason)
+Local scripts: execution/ab_corrected_6m_seed17_20261022/postprocessing/
+Remote scripts: audits/ab_corrected_postprocessing_20261022/
+1. audit_completed_training.py --root <project> --arm A/B --output <new JSON>:8 synthetic tests passed. SHA1ffb2ccc15d55e3c18a19fb44371f3bb6f5af2a426465d4dc209816faf14bd97.
+2. analyze_pair_signals.py --root <project> --output <new JSON>:10 tests passed. SHA46a53a909a65d86d29d7a850956d8e54fc8369a2bb1fb40a409272a819911340.
+3. verify_completed_evaluations.py --root <project> --output <new JSON>:23 tests passed. SHA194fdcaf1beaa0d42e50fa3f46dd0a5816bc53b9f3dde167ada001f2f0dfaefc. Requires audit_completed_training.py in same directory for logical safetensors equality; checkpoint hash remains strict.
+Run all with remote .venv/bin/python -B, CPU-only, against final completed inputs. These are not training commands. Preserve stdout/failure evidence, distinguish verifier code/schema issue from experiment bug. Fetch reports and necessary raw predictions for follow-on analysis. Tests are synthetic; actual full audits remain pending until final results.
+Current actual partial evidence: A_unit_prefix_check.json records35 unit_* rows reverified from completed update277 prefix;14 old false negatives fixed across5groups; no original positive labels removed. This is not an accuracy result. No need to repeat this partial audit.
+collect_snapshot.py locally captures bounded fresh remote snapshots using SSH. Original launch HTML preserved as review_launch.html.

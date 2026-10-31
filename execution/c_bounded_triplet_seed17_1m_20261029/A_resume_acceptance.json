@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "adapter_exact": true,
+  "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+  "source_step": 2,
+  "optimizer_exact": true,
+  "scheduler_exact": true,
+  "torch_cpu_rng_exact": true,
+  "torch_cuda_rng_exact": true,
+  "continued_optimizer_step": 3,
+  "prompt_order_checked": true,
+  "loss_input_preserved": true,
+  "actor_updated_since_smoke": true,
+  "vllm_RNG_limitation": "optimizer/adapter/scheduler/RNG/dataset skip verified; pinned colocated vLLM sampling RNG is recreated on process restart, so no claim of bitwise equivalence to an uninterrupted run"
+}

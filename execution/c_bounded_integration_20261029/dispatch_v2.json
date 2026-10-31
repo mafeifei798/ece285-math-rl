@@ -1,0 +1,12 @@
+{
+  "pid": 1279637,
+  "launched_unix": 1793261494.8945293,
+  "run": "/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029_v2",
+  "log": "/srv/research/ece285_math_rl_project/audits/C_bounded_integration_20261029_dispatch_v2/runner.log",
+  "gpu": 1,
+  "sharing_authorized": true,
+  "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+  "reuse_original_generation": true,
+  "source_generation_run": "/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029",
+  "scope": "No-update recovery with C-only TF32 precision context; exact original token reuse, no sampling/optimizer/RL/D adaptation"
+}

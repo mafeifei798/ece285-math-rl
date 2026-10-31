@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checked_unix": 1793175912.208912,
+  "checkpoint_step": 32,
+  "checkpoint_sha256": "a265ff64bdb5570389c9a3083eda2d17da75d7986b0816876876e83125dfe941",
+  "adapter_dtypes": {
+    "torch.float32": 392
+  },
+  "optimizer_groups": [
+    {
+      "lr": 2e-05,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "weight_decay": 0.0
+    }
+  ],
+  "finite_adapters": true,
+  "only_LoRA": true,
+  "metrics_contiguous": 46,
+  "release_pin_verified": true,
+  "CPU_only": true
+}

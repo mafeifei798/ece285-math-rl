@@ -1,0 +1,32 @@
+[
+  {
+    "source_row": 78,
+    "problem_id": "math/train/algebra/109",
+    "h4_min": 0.9891397356987,
+    "h4_rank": 1.0,
+    "h4_advantage": 2.1150009632110596,
+    "qwen7b_min": 0.05623634159564972,
+    "qwen7b_rank": 1.0,
+    "qwen7b_advantage": 1.2400261163711548
+  },
+  {
+    "source_row": 2095,
+    "problem_id": "math/train/intermediate_algebra/207",
+    "h4_min": 0.978425920009613,
+    "h4_rank": 1.0,
+    "h4_advantage": 2.4400393962860107,
+    "qwen7b_min": 0.015072628855705261,
+    "qwen7b_rank": 5.0,
+    "qwen7b_advantage": -0.3056027293205261
+  },
+  {
+    "source_row": 4975,
+    "problem_id": "math/train/intermediate_algebra/784",
+    "h4_min": 0.9660279750823975,
+    "h4_rank": 1.0,
+    "h4_advantage": 2.401740074157715,
+    "qwen7b_min": 0.027585284784436226,
+    "qwen7b_rank": 4.0,
+    "qwen7b_advantage": -0.17546355724334717
+  }
+]

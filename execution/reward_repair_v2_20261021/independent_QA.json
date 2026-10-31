@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "independent_arithmetic": "Python math.fsum/sample variance on FP32-quantized rewards",
+  "checked_variant_groups": 6840,
+  "max_FP64_vs_GPU_FP32_advantage_difference": 1.4676913347777543e-05,
+  "worst_group": {
+    "variant": "legacy_replayed",
+    "group": 491,
+    "error": 1.4676913347777543e-05,
+    "allowance": 0.000643292313805785
+  },
+  "all_rewards_and_midranks_recomputed": true,
+  "original_sources_and_results_protected": true,
+  "new_training": false,
+  "new_rollouts": 0,
+  "model_updates": 0,
+  "independent_comparison_counts": {
+    "units_only": {
+      "outcome_label_changed_rows": 11,
+      "reward_changed_rows_gt_1e_minus_6": 11,
+      "advantage_sign_flip_rows": 13,
+      "advantage_changed_rows_gt_0p01": 40,
+      "reward_order_changed_groups": 5
+    },
+    "split_only": {
+      "outcome_label_changed_rows": 0,
+      "reward_changed_rows_gt_1e_minus_6": 369,
+      "advantage_sign_flip_rows": 4,
+      "advantage_changed_rows_gt_0p01": 201,
+      "reward_order_changed_groups": 24
+    },
+    "combined_matched": {
+      "outcome_label_changed_rows": 11,
+      "reward_changed_rows_gt_1e_minus_6": 380,
+      "advantage_sign_flip_rows": 17,
+      "advantage_changed_rows_gt_0p01": 241,
+      "reward_order_changed_groups": 29
+    }
+  },
+  "paired_rows": 3713,
+  "score_positions_and_raw_spans_checked": 91671
+}

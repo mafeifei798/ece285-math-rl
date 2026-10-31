@@ -1,0 +1,77 @@
+{
+  "source": "ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/evidence/P_PRM_batch_0002.json",
+  "source_sha256": "7f725c0a03aa2ca2c1c568ad3e91d33aecdb94a2fededec8645a0995cb9be70a",
+  "batch": 2,
+  "arm": "P_PRM",
+  "samples": [
+    {
+      "row": 2,
+      "problem_id": "math/train/counting_and_probability/328",
+      "question": "Let $S$ be the set of positive integer divisors of $20^9.$ Three numbers are chosen independently and at random with replacement from the set $S$ and labeled $a_1,a_2,$ and $a_3$ in the order they are chosen. The probability that both $a_1$ divides $a_2$ and $a_2$ divides $a_3$ is $\\tfrac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m.$\n",
+      "gold": "77",
+      "text": " $\\boxed{243}$\nGrammar: :::::",
+      "outcome": {
+        "reward": 0.0,
+        "status": "symbolic",
+        "answer": "243"
+      },
+      "content_tokens": 13,
+      "native_prm_score": [
+        0.73828125
+      ],
+      "native_signed_reward": [
+        0.4765625
+      ],
+      "avg_advantage": 1.0005089044570923,
+      "scaled_loss": -0.031265903264284134,
+      "normalization_calls_in_loss": 0
+    },
+    {
+      "row": 4,
+      "problem_id": "math/train/counting_and_probability/328",
+      "question": "Let $S$ be the set of positive integer divisors of $20^9.$ Three numbers are chosen independently and at random with replacement from the set $S$ and labeled $a_1,a_2,$ and $a_3$ in the order they are chosen. The probability that both $a_1$ divides $a_2$ and $a_2$ divides $a_3$ is $\\tfrac{m}{n},$ where $m$ and $n$ are relatively prime positive integers. Find $m.$\n",
+      "gold": "77",
+      "text": " The correct answer is \\boxed{9}",
+      "outcome": {
+        "reward": 0.0,
+        "status": "symbolic",
+        "answer": "9"
+      },
+      "content_tokens": 9,
+      "native_prm_score": [
+        0.89453125
+      ],
+      "native_signed_reward": [
+        0.7890625
+      ],
+      "avg_advantage": 1.5785071849822998,
+      "scaled_loss": -0.04932834953069687,
+      "normalization_calls_in_loss": 0
+    },
+    {
+      "row": 15,
+      "problem_id": "math/train/intermediate_algebra/1155",
+      "question": "Let $x$ and $y$ be real numbers such that\n\\[4x^2 + 8xy + 5y^2 = 1.\\]Let $m$ and $M$ be the minimum and maximum values of $2x^2 + 3xy + 2y^2,$ respectively.  Find the product $mM.$",
+      "gold": "\\frac{7}{16}",
+      "text": " I'm sorry, I cannot provide the answer without more context or a specific question related to the problem. Could you please provide the details of the problem?",
+      "outcome": {
+        "reward": 0.0,
+        "status": "missing_or_invalid_box",
+        "answer": null
+      },
+      "content_tokens": 31,
+      "native_prm_score": [
+        0.80859375
+      ],
+      "native_signed_reward": [
+        0.6171875
+      ],
+      "avg_advantage": 1.344118595123291,
+      "scaled_loss": -0.042003706097602844,
+      "normalization_calls_in_loss": 0
+    }
+  ],
+  "positive_response_mean_advantage_fraction": 0.2791075596532023,
+  "short_scaled_loss_sum": -0.12259795889258385,
+  "interpretation": "Actual positive reinforcement of two wrong direct answers and one unhelpful clarification. Not evidence yet of learned collapse or final accuracy decrease. Fraction is response-mean advantage, not actual gradient norm. Keep fixed pilot unchanged."
+}

@@ -1,0 +1,68 @@
+{
+  "reviewed_utc": "2026-10-23T09:06:34.292918+00:00",
+  "mode": "read-only static training-path review plus CPU-only collapse guard behavioral tests",
+  "source_sha256": {
+    "pilot_engine.py": "bae0acbc7d88e5f4fb27fc3b9fc6d3bccf8dba330cb2723c16792edf8f200c4a",
+    "train_arm.py": "cbfbcbd6677ce0fdc2d9946c7e3d1c3ae26329ce27108139df175f1168999bed",
+    "protocol.json": "dbc93ab1280d110d8b69be4d4b35f9e0ad2ab5da7727e5b8d63cea780330bb38",
+    "diagnostic.py": "3508b48276b551819971d22883c036ef85be3526e95d9049e018010853a26a4f",
+    "test_diagnostic.py": "11d54e274dd67aae93344d13cab0847c1e3b180eeef170dcc5d5fe928184277d",
+    "test_pilot_guards.py": "89414297dc5167b2f46631a91f520265a3d40294f20fabb1489a65438aad0f19"
+  },
+  "blocking_findings": [],
+  "checked": [
+    {
+      "item": "Official signal/loss path remains imported from immutable integration; PVR ignores PRM scores; native BF16 transform and shared CPU baseline/norm are explicit.",
+      "status": "static pass"
+    },
+    {
+      "item": "Safe sync copies frozen base to FP32 CPU, adds detached LoRA delta, casts copy to base dtype, loads vLLM; never merges live actor. Live adapter hash and frozen parameter versions checked before/after.",
+      "status": "static pass"
+    },
+    {
+      "item": "Default LoRA only, no DoRA/lora_bias/lora_variant; optimizer contains only requires_grad tensors. Frozen base gradients forbidden.",
+      "status": "static pass"
+    },
+    {
+      "item": "Exactly 32 official micro losses, each scaled 1/32; finite gradients then max-norm1 clipping and one AdamW step. Sealed signal assertions protect against altered advantages or repeated normalization.",
+      "status": "static pass"
+    },
+    {
+      "item": "Reference forward disables adapter, retaining unchanged base; current-policy old logps are freshly collected each batch.",
+      "status": "static pass"
+    },
+    {
+      "item": "Fresh model/PRM initialization occurs before loading resumed LoRA, avoiding inherited initial-adapter assertions. Checkpoint hashes, optimizer steps, token counts, RNG, base hash and release hash are checked on resume.",
+      "status": "static pass"
+    },
+    {
+      "item": "Checkpoint committed via partial directory rename, then latest receipt; failed/interrupted stage is not silently replayed. Prior completed batch files cause an explicit stop.",
+      "status": "static pass"
+    },
+    {
+      "item": "Stop guard operates at fixed common stages and requires same threshold to persist in both adjacent five-batch windows. Parsed short correct or incorrect answers do not count as unparsed.",
+      "status": "9 CPU behavior tests passed"
+    }
+  ],
+  "cpu_guard_test_cases": [
+    "all short correct outputs remain allowed",
+    "short parsed wrong outputs remain allowed",
+    "empty exactly25percent in both windows triggers",
+    "one window below25percent does not trigger",
+    "both windows below25percent do not trigger",
+    "nonempty short-unparsed exactly50percent in both windows triggers",
+    "different single-window failure types do not fake persistence",
+    "real EOS excluded from short length, truncation not excluded",
+    "only last ten adjacent batches read without mutation",
+    "before ten batches no stop or file access"
+  ],
+  "guard_test_count": 9,
+  "limits": [
+    "No remote task, model or GPU was started by this reviewer.",
+    "Static checks do not certify real checkpoint reload, optimizer behavior or vLLM weight sync until runtime receipts exist.",
+    "Readback confirms selected packed vLLM weights; it does not prove merged BF16 vLLM and unmerged LoRA log probabilities are bitwise identical.",
+    "Crash recovery from failed stages remains deliberately manual; atomic checkpoint metadata is not a guarantee against filesystem failure.",
+    "The guard checks only preregistered stage endpoints, not arbitrary intermediate batches.",
+    "Validation on64 fixed held-out policy questions is descriptive, with PRM800K overlap already disclosed; no accuracy claim follows from these tests."
+  ]
+}

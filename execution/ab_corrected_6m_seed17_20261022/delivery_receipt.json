@@ -1,0 +1,11 @@
+{
+  "status": "training_in_progress",
+  "pilot_gate_passed": true,
+  "hashes": {
+    "launch_snapshot.json": "013e45c229142b9661a2e9ce5a8c77aa93aede6b612f54402df831ff57688a42",
+    "review.html": "89232c73702164db3e20fb1b479fda055c1f704c2739a5c5ce86b4120ee2ce97",
+    "execution_plan.json": "693d0ca9135f029a3b48da4c274a7c4564f2df65e2684e0726f4b0cdc2b4c1d1",
+    "REPORT.txt": "2dee27f314a051826ca01405140e4ef2f721e415fb743fdda47be6691bcf0325",
+    "README.txt": "5e91bcb1d66a193f5095454dea18012c69cb8b53570c1bd074334fecae5a8d44"
+  }
+}

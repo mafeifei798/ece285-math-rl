@@ -1,0 +1,11 @@
+--- archived_evaluate.py
++++ shared_evaluate.py
+@@ -51,7 +51,7 @@
+     atomic_json(OUT/'state.json',state)
+     try:
+         gpu=subprocess.run(['nvidia-smi','-i','1','--query-gpu=memory.free,memory.total,utilization.gpu','--format=csv,noheader,nounits'],capture_output=True,text=True,check=True).stdout.strip()
+-        free,total,util=map(int,gpu.split(','));assert free>=40000,'Not enough free memory; wait without disturbing other jobs'
++        free,total,util=map(int,gpu.split(','));assert free>=30000,'Not enough free memory; wait without disturbing other jobs'
+         apps=subprocess.run(['nvidia-smi','--query-compute-apps=gpu_uuid,pid,used_memory','--format=csv,noheader'],capture_output=True,text=True).stdout
+         state.update(gpu_before=gpu,existing_gpu_processes=apps)
+         # Preserve the known matching Python development-header configuration used by the old evaluation.

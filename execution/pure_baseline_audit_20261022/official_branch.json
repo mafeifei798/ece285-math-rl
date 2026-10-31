@@ -1,0 +1,99 @@
+{
+  "name": "verl",
+  "commit": {
+    "sha": "b174e508a4469663543cfcb366be78cf199d20bf",
+    "node_id": "C_kwDON2sbp9oAKGIxNzRlNTA4YTQ0Njk2NjM1NDNjZmNiMzY2YmU3OGNmMTk5ZDIwYmY",
+    "commit": {
+      "author": {
+        "name": "CJReinforce",
+        "email": "chengjie2022@ia.ac.cn",
+        "date": "2025-10-23T03:05:07Z"
+      },
+      "committer": {
+        "name": "CJReinforce",
+        "email": "chengjie2022@ia.ac.cn",
+        "date": "2025-10-23T03:05:07Z"
+      },
+      "message": "chore: \ud83e\udd16 update readme",
+      "tree": {
+        "sha": "3c314a8289569554fa78f04884e53765d4a336fa",
+        "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/3c314a8289569554fa78f04884e53765d4a336fa"
+      },
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/commits/b174e508a4469663543cfcb366be78cf199d20bf",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/CJReinforce/PURE/commits/b174e508a4469663543cfcb366be78cf199d20bf",
+    "html_url": "https://github.com/CJReinforce/PURE/commit/b174e508a4469663543cfcb366be78cf199d20bf",
+    "comments_url": "https://api.github.com/repos/CJReinforce/PURE/commits/b174e508a4469663543cfcb366be78cf199d20bf/comments",
+    "author": {
+      "login": "CJReinforce",
+      "id": 51627740,
+      "node_id": "MDQ6VXNlcjUxNjI3NzQw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51627740?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CJReinforce",
+      "html_url": "https://github.com/CJReinforce",
+      "followers_url": "https://api.github.com/users/CJReinforce/followers",
+      "following_url": "https://api.github.com/users/CJReinforce/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CJReinforce/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CJReinforce/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CJReinforce/subscriptions",
+      "organizations_url": "https://api.github.com/users/CJReinforce/orgs",
+      "repos_url": "https://api.github.com/users/CJReinforce/repos",
+      "events_url": "https://api.github.com/users/CJReinforce/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CJReinforce/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CJReinforce",
+      "id": 51627740,
+      "node_id": "MDQ6VXNlcjUxNjI3NzQw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51627740?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CJReinforce",
+      "html_url": "https://github.com/CJReinforce",
+      "followers_url": "https://api.github.com/users/CJReinforce/followers",
+      "following_url": "https://api.github.com/users/CJReinforce/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CJReinforce/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CJReinforce/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CJReinforce/subscriptions",
+      "organizations_url": "https://api.github.com/users/CJReinforce/orgs",
+      "repos_url": "https://api.github.com/users/CJReinforce/repos",
+      "events_url": "https://api.github.com/users/CJReinforce/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CJReinforce/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0628af60c3fe80b824700f667843c20afdbcc108",
+        "url": "https://api.github.com/repos/CJReinforce/PURE/commits/0628af60c3fe80b824700f667843c20afdbcc108",
+        "html_url": "https://github.com/CJReinforce/PURE/commit/0628af60c3fe80b824700f667843c20afdbcc108"
+      }
+    ]
+  },
+  "_links": {
+    "self": "https://api.github.com/repos/CJReinforce/PURE/branches/verl",
+    "html": "https://github.com/CJReinforce/PURE/tree/verl"
+  },
+  "protected": false,
+  "protection": {
+    "enabled": false,
+    "required_status_checks": {
+      "enforcement_level": "off",
+      "contexts": [],
+      "checks": []
+    }
+  },
+  "protection_url": "https://api.github.com/repos/CJReinforce/PURE/branches/verl/protection"
+}

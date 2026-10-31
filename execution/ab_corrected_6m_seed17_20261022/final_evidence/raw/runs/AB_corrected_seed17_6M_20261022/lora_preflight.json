@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "passed": true,
+  "pid": 3044481,
+  "started_unix": 1792654553.0507472,
+  "adapter": "/srv/research/ece285_math_rl_project/runs/pilot_B_corrected_seed17_20261022/final_adapter",
+  "cuda_visible_devices": "1",
+  "purpose": "compiler and LoRA inference plumbing only; no accuracy selection",
+  "header_receipt_sha256": "27a323af35cb1581643f32adbf311fa3faf1125cf760e013b0a4be843bbd4317",
+  "fresh_header_compile_passed": true,
+  "include_paths": [
+    "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
+    "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
+  ],
+  "adapter_sha256": "112cbe8d0bbfc82a2e3fbce6cc2ced35a8d035067c7969fa9cd3f50eff6968a6",
+  "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "validation_question_ids": [
+    "math/train/prealgebra/423",
+    "math/train/algebra/1641"
+  ],
+  "max_new_tokens": 8,
+  "real_lora_generation_passed": true,
+  "generated_tokens": [
+    8,
+    8
+  ],
+  "finished_unix": 1792654579.5841494
+}

@@ -1,0 +1,6 @@
+{
+  "terminated_only_own_download_pid": 2561162,
+  "reason": "Repeated HF CDN timeouts; ModelScope range probe succeeded",
+  "official_revision_and_digest_unchanged": true,
+  "training_interrupted": false
+}

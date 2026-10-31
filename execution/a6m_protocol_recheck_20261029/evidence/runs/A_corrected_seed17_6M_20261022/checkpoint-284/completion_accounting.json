@@ -1,0 +1,38 @@
+{
+  "generated_completion_tokens": 6022435,
+  "generated_completions": 9088,
+  "generated_groups": 1136,
+  "mixed_reward_groups": 884,
+  "correct_completions": 3766,
+  "truncated_completions": 492,
+  "prm_input_tokens": 0,
+  "prm_padded_tokens": 0,
+  "prm_scored_completions": 0,
+  "prm_forward_seconds": 0.0,
+  "reward_status_counts": {
+    "symbolic": 4077,
+    "truncated": 492,
+    "exact": 3369,
+    "missing_or_invalid_box": 1002,
+    "unparseable": 113,
+    "unit_symbolic": 11,
+    "unit_exact": 24
+  },
+  "outcome_group_counts": {
+    "mixed": 884,
+    "all_correct": 29,
+    "all_wrong": 223
+  },
+  "last_batch": {
+    "generated_completion_tokens": 22757,
+    "generated_completions": 32,
+    "generated_groups": 4,
+    "mixed_reward_groups": 2,
+    "correct_completions": 5,
+    "truncated_completions": 1,
+    "prm_input_tokens": 0,
+    "prm_padded_tokens": 0,
+    "prm_scored_completions": 0,
+    "prm_forward_seconds": 0.0
+  }
+}

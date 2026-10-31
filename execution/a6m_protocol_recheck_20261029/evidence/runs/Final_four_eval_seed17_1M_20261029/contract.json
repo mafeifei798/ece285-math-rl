@@ -1,0 +1,97 @@
+{
+  "release_sha256": "eef55b0d401e3098f97e7dcaee634c444f333c089c89ac18321275c5c23d7e0c",
+  "protocol": {
+    "seed": 285,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "max_tokens": 2048,
+    "max_model_len": 4096,
+    "dtype": "bfloat16",
+    "gpu": 1,
+    "gpu_memory_utilization": 0.15,
+    "batch_size": 64,
+    "max_num_seqs": 64,
+    "max_num_batched_tokens": 4096,
+    "enable_lora": true,
+    "max_loras": 1,
+    "max_cpu_loras": 3,
+    "max_lora_rank": 16,
+    "enforce_eager": true,
+    "skip_special_tokens": true,
+    "include_stop_str_in_output": false,
+    "prompt": "exact existing prepared dataset prompt",
+    "verifier": "reward-repair-v3-20261021",
+    "prm_inference": false,
+    "training": false,
+    "checkpoint_selection": false,
+    "ordering": "fixed dataset, block-interleaved models with rotating first model"
+  },
+  "model_id": "Qwen/Qwen2.5-Math-1.5B",
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "model_path": "/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "states": {
+    "initial": {
+      "adapter": null,
+      "adapter_sha256": null,
+      "training_generated_tokens": 0
+    },
+    "A": {
+      "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+      "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+      "adapter_config_sha256": "e103ac4798b22646b22d7be2218e89dccfb583dd6548114c5a139b7c596361c3",
+      "training_generated_tokens": 1005003,
+      "training_updates": 48,
+      "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96"
+    },
+    "C_mix": {
+      "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+      "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+      "adapter_config_sha256": "77abfbecd1fb0f254621e49c4a7012717938be4c76d9eb0b6420961ea89b9638",
+      "training_generated_tokens": 1001853,
+      "training_updates": 48,
+      "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96"
+    },
+    "C_bounded": {
+      "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+      "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+      "adapter_config_sha256": "ce4d7933e9b47a110e22d1e37b3f7ecf920198686895113b1d9ff51c89f530f9",
+      "training_generated_tokens": 1009017,
+      "training_updates": 48,
+      "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96"
+    }
+  },
+  "datasets": {
+    "math500": {
+      "n": 500,
+      "sha256": "578a5e2586488a9800bfa823fdaf4ee16dfb8bba12ad1ef99f3be523c81fade1",
+      "max_prompt_tokens": 811
+    },
+    "gsm8k": {
+      "n": 1319,
+      "sha256": "babb3c674b069f021cab4ad72d6be0b8249f070ac11f8984e6dea3f96547ee04",
+      "max_prompt_tokens": 208
+    }
+  },
+  "verifier_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+  "units_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "versions": {
+    "torch": "2.8.0",
+    "vllm": "0.10.2",
+    "transformers": "4.56.2",
+    "peft": "0.17.1",
+    "trl": "0.23.1",
+    "math-verify": "0.8.0"
+  },
+  "known_overlap": {
+    "train": 6993,
+    "validation": 500,
+    "math500": 0,
+    "gsm8k": 0,
+    "processbench_unique_questions": 847
+  },
+  "contamination_limit": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+  "tests_have_historical_results": true,
+  "new_training": false,
+  "new_PRM_inference": false
+}

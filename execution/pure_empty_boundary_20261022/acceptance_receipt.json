@@ -1,0 +1,154 @@
+{
+  "status": "offline_audit_complete",
+  "formal_training_started": false,
+  "ready_for_formal_training": false,
+  "reason": "PRM task-completeness vulnerability reproduced; identical stop guard prevents empty-response updates but does not fix semantic scoring.",
+  "confirmed_native_PRM_behavior": {
+    "n": 9,
+    "positive_probability_range": [
+      0.9981897473335266,
+      0.9999724626541138
+    ],
+    "official_serialization_equal_all_rows": true,
+    "direct_forward_max_abs_error": 2.8371810913085938e-05
+  },
+  "installed_change": "Independent shared batch-stop guard only; no reward/loss modification, empty reward substitution, masking, row dropping or resampling.",
+  "corrected_claim": "The adapter or [empty string] fallback alone is not the cause: official Qwen join-plus-marker serialization produces the same input, and pinned PURE also scores the final EOS boundary.",
+  "empty_gradient_counterfactuals": {
+    "P_VR": {
+      "n": 8,
+      "positive_raw_advantage": 0,
+      "positive_whitened_advantage": 0,
+      "reward_rank_1": 2,
+      "min_whitened_advantage": -1.1994576454162598,
+      "max_whitened_advantage": -0.3167426586151123,
+      "length_matched_batch_subset": {
+        "n": 4,
+        "positive_whitened_advantage": 0
+      }
+    },
+    "P_PRM": {
+      "n": 8,
+      "positive_raw_advantage": 8,
+      "positive_whitened_advantage": 8,
+      "reward_rank_1": 8,
+      "min_whitened_advantage": 2.1562294960021973,
+      "max_whitened_advantage": 3.2180492877960205,
+      "length_matched_batch_subset": {
+        "n": 4,
+        "positive_whitened_advantage": 4
+      }
+    },
+    "ZERO_EMPTY_NOT_ADOPTED": {
+      "n": 8,
+      "positive_raw_advantage": 7,
+      "positive_whitened_advantage": 8,
+      "reward_rank_1": 0,
+      "min_whitened_advantage": 0.11387421935796738,
+      "max_whitened_advantage": 0.907813310623169,
+      "length_matched_batch_subset": {
+        "n": 4,
+        "positive_whitened_advantage": 4
+      }
+    },
+    "OFFICIAL_MIX_GT_AVAILABLE": {
+      "n": 8,
+      "positive_raw_advantage": 8,
+      "positive_whitened_advantage": 7,
+      "reward_rank_1": 2,
+      "min_whitened_advantage": -0.05818886309862137,
+      "max_whitened_advantage": 1.1298822164535522,
+      "length_matched_batch_subset": {
+        "n": 4,
+        "positive_whitened_advantage": 3
+      }
+    },
+    "OFFICIAL_MIX_FIXED_10PCT": {
+      "n": 8,
+      "positive_raw_advantage": 8,
+      "positive_whitened_advantage": 8,
+      "reward_rank_1": 8,
+      "min_whitened_advantage": 0.976701557636261,
+      "max_whitened_advantage": 3.2180492877960205,
+      "length_matched_batch_subset": {
+        "n": 4,
+        "positive_whitened_advantage": 4
+      }
+    }
+  },
+  "exact_token_guard_acceptance": {
+    "passed": true,
+    "checks": {
+      "P_VR": {
+        "nonempty_rows": 32,
+        "all_signal_tensors_bitwise_equal": true,
+        "token_positions_equal": true,
+        "whitening_calls": 1,
+        "logprob_gradient_max_difference": 0.0,
+        "empty_cases_stopped_before_rewards": [
+          "''",
+          "' \\r\\n\\t '",
+          "'\\n\\n'",
+          "'\\u2003'"
+        ]
+      },
+      "P_PRM": {
+        "nonempty_rows": 32,
+        "all_signal_tensors_bitwise_equal": true,
+        "token_positions_equal": true,
+        "whitening_calls": 1,
+        "logprob_gradient_max_difference": 0.0,
+        "empty_cases_stopped_before_rewards": [
+          "''",
+          "' \\r\\n\\t '",
+          "'\\n\\n'",
+          "'\\u2003'"
+        ]
+      }
+    },
+    "new_generations": 0,
+    "policy_model_loaded": false,
+    "optimizer_steps": 0,
+    "nonempty_nonanswers_are_not_filtered": true,
+    "boundary_rule": "same whole-batch stop in P_VR and P_PRM; no reward substitution or row dropping",
+    "formal_training_ready": false,
+    "PRM_semantic_vulnerability_fixed": false
+  },
+  "final_process_check": {
+    "status": {
+      "status": "completed",
+      "pid": 3173565,
+      "optimizer_steps": 0,
+      "new_generations": 0
+    },
+    "process_still_exists": false,
+    "original_release_hashes_unchanged": true,
+    "optimizer_steps": 0
+  },
+  "source_files": {
+    "experiments/pure_empty_boundary_20261022/verify_guard.py": "dc4615d69268253aa693162bac524aebd17dcd856711435f98444deb788aa144",
+    "experiments/pure_empty_boundary_20261022/score_existing.py": "6e798f7323895c6c994a8e71beb6eca928ad8d07dbc246ac5b413e3515642a0a",
+    "experiments/pure_empty_boundary_20261022/guard.py": "16bda90b401469570e749b059ea8c389f6ec08fd4d7f11095d9d33ed75af1261",
+    "experiments/pure_empty_boundary_20261022/analyze.py": "76919ca896945a0c5304b69c0901e2b19316ae67f2b6ee4c9ba21c02d5e49956"
+  },
+  "training_checkpoint_updated": false,
+  "original_artifacts_preserved": true,
+  "primary_sources": [
+    {
+      "title": "PURE v3 section 5.1 Case 3 and 4.2",
+      "url": "https://arxiv.org/html/2504.15275v3#S5.SS1"
+    },
+    {
+      "title": "Qwen native model card",
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Math-PRM-7B"
+    },
+    {
+      "title": "Pinned PURE final-step construction",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/workers/fsdp_workers.py#L1357-L1462"
+    },
+    {
+      "title": "Pinned PURE reward combination",
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/ppo/ray_trainer.py#L1194-L1204"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "checked_unix": 1792700765.7057014,
+  "shared_dispatch.json": {
+    "status": "superseded_by_direct_shared_launch",
+    "pid": 214186,
+    "child_pid": null,
+    "started_unix": 1792699800.3931787,
+    "heartbeat_unix": 1792699950.9750047,
+    "training": false,
+    "script_sha256": "f0d942cfcf8a00a2a68fd0bef7fc9de4526eb788f13b94fe7e6af1079c17aded",
+    "release_sha256": "1a5f57dcf2823f6fc91b2e37baf66bef96851ab809e09253fcb2d69fc1df3c84",
+    "minimum_free_MiB": 40000,
+    "poll_seconds": 30,
+    "maximum_wait_seconds": 43200,
+    "gpu_check": {
+      "free_MiB": 37955,
+      "used_MiB": 43198,
+      "utilization_percent": 100,
+      "admitted": false
+    },
+    "superseded_unix": 1792699965.2779958,
+    "old_receipt": "admission_v1/shared_dispatch.json"
+  },
+  "shared_admission_change.json": {
+    "new_release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+    "previous_release_sha256": "1a5f57dcf2823f6fc91b2e37baf66bef96851ab809e09253fcb2d69fc1df3c84",
+    "evaluation_source_sha256": "8c1f09ad11e3cae3024315abd73baab194f7b914fad6c93ff405c37fcd8696fb",
+    "free_MiB_before_launch": 37955,
+    "minimum_free_MiB": 30000,
+    "protocol_sha256": "86c6fc1176b24e1baf01cd6fc8ff248be3dba69b39a922f3d0cdbf6f9aa2ffaf",
+    "only_change": "one operational memory-admission assertion",
+    "new_training": false,
+    "recorded_unix": 1792699965.2786791,
+    "controller_pid_at_launch": 224797
+  },
+  "controller.json": {
+    "status": "evaluate",
+    "pid": 224797,
+    "started_unix": 1792699965.4439242,
+    "heartbeat_unix": 1792700760.4896076,
+    "training": false,
+    "scope": "Existing corrected A/B checkpoints, fixed2x2 prompt comparison;998 held-out questions; no training or PRM scoring.",
+    "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+    "completed_stages": [],
+    "master_port": "52667",
+    "child_pid": 224804,
+    "log": "/srv/research/ece285_math_rl_project/runs/AB_prompt_validation_20261022/evaluate.log"
+  },
+  "state.json": {
+    "status": "generating",
+    "pid": 224804,
+    "started_unix": 1792699967.7541943,
+    "heartbeat_unix": 1792700562.5476105,
+    "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+    "training": false,
+    "completed_predictions": 48,
+    "target_predictions": 3992,
+    "gpu": 1,
+    "protection_before": {
+      "passed": true,
+      "files": 210
+    },
+    "gpu_before": "37955, 81920, 100",
+    "existing_gpu_processes": "GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3397300, 14458 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3398229, 13878 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3399155, 17920 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3609705, 1814 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 26328, 942 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 76625, 1152 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 150899, 1018 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 150905, 1018 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 3618365, 1762 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 4101640, 32942 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 24619, 1076 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 24929, 942 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 26183, 942 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 26859, 1076 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 29107, 940 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 63658, 1152 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 70089, 1152 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 70889, 1152 MiB\n",
+    "cell": "B_final_only",
+    "question_offset": 0,
+    "last_batch_seconds": 204.73688316345215,
+    "generated_completion_tokens": 32369,
+    "elapsed_seconds": 594.7929036617279
+  },
+  "evaluation_summary.json": null,
+  "shared_launch.log": "",
+  "evaluate.log": "ot be used\nINFO 10-23 04:13:00 [__init__.py:3400] Cudagraph is disabled under eager mode\nINFO 10-23 04:13:00 [llm_engine.py:221] Initializing a V0 LLM engine (v0.10.2) with config: model='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', speculative_config=None, tokenizer='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=285, served_model_name=/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=False, pooler_config=None, compilation_config={\"level\":0,\"debug_dump_path\":\"\",\"cache_dir\":\"\",\"backend\":\"\",\"custom_ops\":[],\"splitting_ops\":null,\"use_inductor\":true,\"compile_sizes\":[],\"inductor_compile_config\":{\"enable_auto_functionalized_v2\":false},\"inductor_passes\":{},\"cudagraph_mode\":0,\"use_cudagraph\":true,\"cudagraph_num_of_warmups\":0,\"cudagraph_capture_sizes\":[],\"cudagraph_copy_inputs\":false,\"full_cuda_graph\":false,\"pass_config\":{},\"max_capture_size\":0,\"local_cache_dir\":null}, use_cached_outputs=False, \nINFO 10-23 04:13:02 [cuda.py:456] Using Flash Attention backend.\n[W1023 04:13:08.332026026 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n[W1023 04:13:08.398398410 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3\n[W1023 04:13:08.399039066 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())\n[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0\n[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0\n[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0\n[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0\n[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0\n[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0\nINFO 10-23 04:13:08 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0\nINFO 10-23 04:13:08 [model_runner.py:1051] Starting to load model /srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2...\n\nLoading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]\n\nLoading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.98s/it]\n\nLoading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.98s/it]\n\nINFO 10-23 04:13:15 [default_loader.py:268] Loading weights took 3.18 seconds\nINFO 10-23 04:13:15 [punica_selector.py:19] Using PunicaWrapperGPU.\nINFO 10-23 04:13:16 [model_runner.py:1083] Model loading took 2.9488 GiB and 6.356441 seconds\nINFO 10-23 04:13:24 [worker.py:290] Memory profiling takes 7.68 seconds\nINFO 10-23 04:13:24 [worker.py:290] the current vLLM instance can use total_gpu_memory (79.25GiB) x gpu_memory_utilization (0.25) = 19.81GiB\nINFO 10-23 04:13:24 [worker.py:290] model weights take 2.95GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 0.26GiB; the rest of the memory reserved for KV Cache is 16.51GiB.\nINFO 10-23 04:13:24 [executor_base.py:114] # cuda blocks: 38646, # CPU blocks: 9362\nINFO 10-23 04:13:24 [executor_base.py:119] Maximum concurrency for 4096 tokens per request: 150.96x\nINFO 10-23 04:13:26 [worker.py:467] Free memory on device (36.65/79.25 GiB) on startup. Desired GPU memory utilization is (0.25, 19.81 GiB). Actual usage is 2.95 GiB for weight, 0.26 GiB for peak activation, 0.09 GiB for non-torch memory, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=17571823104` to fit into requested memory, or `--kv-cache-memory=35654647296` to fully utilize gpu memory. Current kv cache memory in use is 17729109504 bytes.\nINFO 10-23 04:13:26 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 10.61 seconds\nINFO 10-23 04:13:27 [llm.py:295] Supported_tasks: ['generate']\nINFO 10-23 04:13:27 [__init__.py:36] No IOProcessor plugins requested by the model\n{\"cell\": \"A_original\", \"completed_predictions\": 16, \"generated_completion_tokens\": 11897, \"last_batch_seconds\": 217.41195392608643, \"elapsed_seconds\": 256.8481516838074}\n{\"cell\": \"A_final_only\", \"completed_predictions\": 32, \"generated_completion_tokens\": 21185, \"last_batch_seconds\": 133.20640516281128, \"elapsed_seconds\": 390.0552086830139}\n{\"cell\": \"B_original\", \"completed_predictions\": 48, \"generated_completion_tokens\": 32369, \"last_batch_seconds\": 204.73688316345215, \"elapsed_seconds\": 594.7929036617279}\n",
+  "analyze.log": null,
+  "gpu": "17112, 64041, 100",
+  "prediction_file_bytes": 120416
+}

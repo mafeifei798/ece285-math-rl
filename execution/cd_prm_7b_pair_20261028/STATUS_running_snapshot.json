@@ -1,0 +1,92 @@
+{
+  "checked_local_time": "2026-10-28 01:25:12 PDT",
+  "status": "RUNNING_PRM_ONLY",
+  "controller_pid": 3237174,
+  "C_steps_at_last_checkpoint_audit": 46,
+  "D_started_at_last_snapshot": false,
+  "steps_per_arm": 512,
+  "shared_GPU": 1,
+  "remaining_estimate_hours": [
+    2,
+    3
+  ],
+  "estimate_limitation": "Shared GPU compute varies; this is not a completion guarantee",
+  "no_policy_RL": true,
+  "independent_input_audit": {
+    "passed": true,
+    "questions": 512,
+    "anchors": 2048,
+    "anchor_labels": {
+      "0": 1024,
+      "1": 1024
+    },
+    "primary_probe_groups": 64,
+    "independent_official_format_anchor_encodings_checked": 2048,
+    "no_new_GPU_work": true,
+    "no_policy_update": true,
+    "source_hashes": {
+      "buffer_questions.jsonl": "d76580a0651197574ad5122fde4eb68cf42d6329b7fd0b7fb2d072c44b2962a7",
+      "anchors.jsonl": "d0ce3590b256a3f30d951c9ee87acbf1dd46faca51a39f72f10b3245c7be898d",
+      "probe.jsonl": "0d2f72fc0d38eeff944d495e8e8b299b3a7195bbf255578f799e46c9f4f8685d",
+      "processbench.jsonl": "4e1e98c715b85dede4d136bf84685971c619d9083467f7c2390a866e1b02e8f2"
+    },
+    "complete_buffer_verified": true,
+    "buffer_sha256": "30b52163a1e0c9317778be1b848be69ae4c75d1f903c019ec22f6149165128b6",
+    "independent_weak_native_encodings_checked": 1644,
+    "all_shared_samples_covered": true,
+    "paired_batches": 512,
+    "shared_counts": {
+      "fail": 827,
+      "success": 817,
+      "anchor_positive": 1024,
+      "anchor_negative": 1024
+    },
+    "input_tokens_per_arm": 2038677,
+    "shared_manifest_sha256": "fe7e9ff0851f2ae1120c4d1d2118cd9802cf61bdce9d9c679f11dbcce417f65e"
+  },
+  "first_checkpoint_audit": {
+    "passed": true,
+    "checked_unix": 1793175912.208912,
+    "checkpoint_step": 32,
+    "checkpoint_sha256": "a265ff64bdb5570389c9a3083eda2d17da75d7986b0816876876e83125dfe941",
+    "adapter_dtypes": {
+      "torch.float32": 392
+    },
+    "optimizer_groups": [
+      {
+        "lr": 2e-05,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "weight_decay": 0.0
+      }
+    ],
+    "finite_adapters": true,
+    "only_LoRA": true,
+    "metrics_contiguous": 46,
+    "release_pin_verified": true,
+    "CPU_only": true
+  },
+  "originals_preserved": {
+    "files_checked": 89,
+    "unchanged": true,
+    "manifest_sha256": "e120f2641344df3aacf12fd953a9851a91b080321b6ae239ffad5a6350ea2890",
+    "checked_unix": 1793175751.289105
+  },
+  "data_admission_migration": {
+    "accepted": true,
+    "unix": 1793175163.996788,
+    "old_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
+    "new_release_sha256": "b35e38b2addc45b36703812b47bc1595b9a36a34a68801baa2d318c82893cc8e",
+    "anchors_sha256": "d0ce3590b256a3f30d951c9ee87acbf1dd46faca51a39f72f10b3245c7be898d",
+    "source_changed": [
+      "prepare.py"
+    ],
+    "unchanged_config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+    "retained_unique_native_inputs": 2035,
+    "new_or_replaced_native_inputs": 13,
+    "PRM_updates_before_admission": 0,
+    "actor_updates": 0
+  }
+}

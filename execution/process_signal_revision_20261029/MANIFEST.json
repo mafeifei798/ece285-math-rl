@@ -1,0 +1,16 @@
+{
+  "official_function_identity.json": "e6a08a6936693884dc0fd3605baf41026cbcad6bdd6daaf939bd7ae9ca298f73",
+  "remote_acceptance.json": "853ba30bbc60703116370756818e3cd196b0bbd9b57ae6c182fa5b00c853703a",
+  "review.html": "a8f3b020940dc374e9617f16f966de8644fb04b31e6642ddb4416d2fedefa643",
+  "real64_signal_comparison.json": "b121e2746603f8901f7d3b692d3af025fe898d17e27a3556481f2a8305a44fa1",
+  "amplitude_sanity.json": "3dd4c33c080a608e8f0769022df95170acf9b18fb97a995c72036a0ead4ac444",
+  "PLAN.txt": "7043a93cb5300de85f8eb85c8241c3d451c251030e93ad01b90ed6ba6fe014c8",
+  "remote_delivery.json": "ca62707164ecfcaa9ca0471f0c8de51d90d080bbaf0cade8f17310a9c8342d3b",
+  "STATUS.json": "ef0a4f761d2ce7f688ca8454bcc85f8f11982afa55153b54c8239ccc1d60a762",
+  "acceptance/receipt.json": "3ee05e053a7031cc7532dd5ff449d9f5d07586a0df6c615bfed9b5b520b53d55",
+  "acceptance_portable/receipt.json": "de4cbb3bcf02a16dfb3fd0a604e4b69d432747c5158483910068b085c2a7ae71",
+  "saved_C_bounded_smoke/rollouts.jsonl": "f1c1f5c0f59ddf12e7e7f6a55670e22e14c13c57f63662ca66b6817e2fbc973a",
+  "saved_C_bounded_smoke/run_config.json": "75141a342ef2867e48f5313f150acb41fd0e9c5920411564d98bc284b71b7860",
+  "saved_C_bounded_smoke/retrieval_receipt.json": "7a6729575cd7aec6b958557e1dc638815d26414fd6c712e2a199a725c403e157",
+  "acceptance_final/receipt.json": "8f68240f99979a94ff28cf1a9e0fd39d7e6e204d18ed7f5ab0512c38b71fc075"
+}

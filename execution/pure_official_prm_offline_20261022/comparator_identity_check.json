@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "synthetic_identity_test_only": true,
+  "description": "Both comparison inputs deliberately reused identical saved Qwen scores; zero ranking/advantage differences required. Not a PURE model result.",
+  "independent_oracle_checks": 32,
+  "replayed_batches": 8,
+  "zero_sign_changes": true
+}

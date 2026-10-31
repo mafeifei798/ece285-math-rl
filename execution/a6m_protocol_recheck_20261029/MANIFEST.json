@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "new_training": false,
+  "sha256": {
+    "accuracy_comparison.png": "e15f011b1845208c89939f56788d462333a8bee2de4d228679f65579e29d6a2d",
+    "latest_snapshot.json": "775f92e32b50ff706b69524d76e6b56c0f6e4c369df7d661963e15ee59aa0967",
+    "review.html": "11966623ccc5c2947a3b79fb63c627e4ac6e9796cf818dda2f624bb2e3e0111b",
+    "qualitative_review.json": "d7a4e58d5f6ea221b1498fb7487e3c460c170db9dff9fec89008717f7d76130d",
+    "dispatch.py": "de68004d8e81ffa4bb667804e9fedb448b59338adcbcc1c4fb05ba662cc85a7e",
+    "CONTINUATION.txt": "027b2a806c37cb731981bc1ad596c5e8a43474f1d1c5d6e461f8e37d571d9b28",
+    "dispatch.json": "c8d329a398f8cdc67d1a0405553b32ae60c52e8e9528f3b7df307aca7ed6641e",
+    "build_report.py": "98eb9b6d192d958821a2119f514e8bf8d09f2dabfa432edb730c48a4fb3945c9",
+    "comparison.json": "162e0d795f402ca5a1996563c0060c200ac93c728349e897ebbd3eeac33a8ae2",
+    "wait_for_completion.py": "68efffc4654fe6490b7b24b5de9b12f6188075f60c7340167f1e97eb20ae90c5",
+    "accuracy.csv": "a0a9896e36c70e6790c41fd848227961908e81052bf9679b8d19d6a7f30fab5b",
+    "REPORT.txt": "3c267b7f14d982b8dae9b073fddb38f5c28e271afcb7dd6e1f512e00a7a92b2e",
+    "retrieval_acceptance.json": "2406d32a1f8bf1228b8f542c60c75ff676bc1c572a2a33b95565c2a08c1bf8dd",
+    "README.txt": "e7458fabb0324a156810cb5934069e57e8d3ac134174ed4b5a0bf2bc53e462d2",
+    "runtime_audit.json": "1452fe27956933bcc722f937e297e64c3ed6354df68ec81f3770daa974945c99",
+    "DELIVERY_ACCEPTANCE.json": "a01fc60847c108d362d08dee8e290752905da62bd26de2bdfd5bfee1f65e6ac0",
+    "math_case_candidates.json": "063089e4d95cf07239dd487879107cb5558df4497afbe1e78cbc07dda4d56a80",
+    "inspect_remote.py": "74b2391e62906be558eb19ad7a63d891f7cbadf66444bdad168ebcb6f7672bbb",
+    "completed_evidence.tar.gz": "64791c74043f9434a4bbb315ca0c9e3f54aa1bcc9584d51870a24f4184eb3366",
+    "retrieve_results.py": "99b3e10f7ea74d3393d02e5ed82370a2f375e6efaddc2718768dd7487c66413e",
+    "admission.json": "b4d1b4de57e7440d5a217540580226993474ab70670cd64e15654b512a943143",
+    "prepare_remote.py": "e0aa11dc859b3201d474ae84f62a2a0f896fb6d00e0bf3c3dbff6a008d6c60b0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model": "h4",
+  "complete": false,
+  "completed_views": 8339,
+  "total_views": 8339,
+  "forward_seconds": 118.86754023190588,
+  "wall_seconds": 122.94741163495928,
+  "input_tokens": 5829471,
+  "padded_tokens": 5840008,
+  "forward_calls": 1043,
+  "allocated_peak_GiB": 4.209047317504883,
+  "reserved_peak_GiB": 64.4921875
+}

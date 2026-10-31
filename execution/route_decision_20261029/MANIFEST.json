@@ -1,0 +1,15 @@
+{
+  "sha256": {
+    "PLAN.txt": "3f625cb99428e7da3e7084109d66e46386d9b75d14ffa3df5e3c6e0f7da49080",
+    "sources.json": "8c02a1270ddd5198abf65ee2fa66de36bdac2944901044c88032ecb5b8c5ac17",
+    "decision.json": "8b089c605e110b4ef62fe531b12df7ffa6609ad8f3c5134a5d15cf7e321c5aad",
+    "completed_pilot_independent_check.json": "acc232b70e066cfc5311de6ee57a6f776a2882f4c4fd72053203a87be5b62efc",
+    "paired_exact_and_cost_check.json": "483c85375f72961a5a21721753e7a008f92b806994fcae6980bc33e74f86a279",
+    "verify_completed_pilot.py": "802f5d96dbc521b6013d6b4d6ce4cbdd1e01be625bb98ec555acc1bc6d137f54",
+    "build_review.py": "b0bc8bae34a8edeca667e81a72399be0c6a729fd0a3934c4415350446b4c61df",
+    "review.html": "a50a8387293a4e09fe0e396411861a7953c50b05207ccbc463518c9a6e946337",
+    "legacy_pure_status.json": "e4a593ae8724b0846d35281fb92d8da53bd3d9ba7f3285ec7996f825eae22061"
+  },
+  "new_training_started": false,
+  "new_model_calls": 0
+}

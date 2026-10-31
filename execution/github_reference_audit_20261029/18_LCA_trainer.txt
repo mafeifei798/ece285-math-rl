@@ -1,0 +1,17 @@
+https://github.com/JiaTianyu20031016/MIL/blob/d8dc4593a95f8ed142d5c9166140e8843cb208fc/trl/trainer/mil_trainer.py
+Upstream blob: 671c864de7bb051cf72ea0e9858600c25f29d87f
+EXCERPT ONLY
+452:     def document_loss(outputs: MILModelOutput, document_target_prob: torch.Tensor) -> torch.Tensor:
+453:         '''
+454:         binary classification loss for document-level prediction.
+455:         '''
+456:         document_pred_probs = outputs.document_probs
+457:         if document_target_prob is None or document_pred_probs.size(0) == 0:
+458:             return None
+459:         
+460:         target = document_target_prob.to(document_pred_probs.device, dtype=document_pred_probs.dtype)
+461:         target = target.clamp(0.0, 1.0)
+462:         target_matrix = torch.stack([1.0 - target, target], dim=-1)
+463:         log_probs = torch.log(document_pred_probs.clamp_min(1e-8))
+464:         loss = -(target_matrix * log_probs).sum(dim=-1).mean()
+465:         return loss

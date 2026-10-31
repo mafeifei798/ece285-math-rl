@@ -1,0 +1,37 @@
+{
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "adapter": "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
+  "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+  "greedy": true,
+  "verifier_version": "reward-repair-v3-20261021",
+  "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "started_unix": 1792675303.9061644,
+  "datasets": {
+    "math500": {
+      "count": 500,
+      "correct": 269.0,
+      "accuracy": 0.538,
+      "generated_tokens": 375298,
+      "truncated": 48,
+      "predictions_sha256": "8707a8d3244e31319425d88e254da3ae51003e507c4e1cfb04f32524b0840835"
+    },
+    "gsm8k": {
+      "count": 1319,
+      "correct": 857.0,
+      "accuracy": 0.6497346474601972,
+      "generated_tokens": 530592,
+      "truncated": 41,
+      "predictions_sha256": "4a6e1aaad49a608d35d18a3c294d8c93f490b7617cdfd82c2da2574e06bd9c87"
+    }
+  },
+  "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+  "prm800k_known_question_overlap": {
+    "train": 6993,
+    "validation": 500,
+    "math500": 0,
+    "gsm8k": 0,
+    "processbench_unique_questions": 847
+  },
+  "finished_unix": 1792678098.7773342,
+  "elapsed_seconds": 2794.8711700439453
+}

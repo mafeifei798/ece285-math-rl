@@ -1,0 +1,40 @@
+{
+  "authorization": "User authorized seed17 only: resume existing three checkpoints to approximately6M, common prompt order and update counts, V1, unchanged reward/loss; 3M validation then final MATH500/GSM8K",
+  "arms": [
+    "A",
+    "C_mix",
+    "C_bounded"
+  ],
+  "seed": 17,
+  "origin_updates": 48,
+  "resume_acceptance_updates": 50,
+  "validation_updates": 144,
+  "final_updates": 288,
+  "group_size": 8,
+  "questions_per_update": 4,
+  "generated_rows_per_update": 32,
+  "approx_tokens_validation": 3000000,
+  "approx_tokens_final": 6000000,
+  "budget_rule": "Common update counts and prompt schedule are primary. 3M/6M are approximate labels; actual emitted tokens reported separately. No additional seed or adaptive extension.",
+  "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "VLLM_USE_V1": "1",
+  "VLLM_ENABLE_V1_MULTIPROCESSING": "1",
+  "learning_rate": 5e-06,
+  "beta": 0.04,
+  "temperature": 1.0,
+  "max_completion_length": 2048,
+  "coefficient": 0.2,
+  "gpu": 1,
+  "sharing_authorized": true,
+  "restart_boundaries": [
+    48,
+    50,
+    144,
+    288
+  ],
+  "resume_limitation": "optimizer/adapter/scheduler/RNG/dataset skip verified; pinned colocated vLLM sampling RNG is recreated on process restart, so no claim of bitwise equivalence to an uninterrupted run",
+  "reward_loss_changed": false,
+  "new_PRM_adaptation": false,
+  "extra_seeds": false,
+  "maximum_pipeline_hours": 48
+}

@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "frozen_input_files": 331,
+  "input_hashes_verified": true,
+  "new_training": false,
+  "new_actor_rollouts": 0,
+  "PRM_weight_updates": 0,
+  "frozen_inference_replayed_rows": 512,
+  "reviewed_records": 20,
+  "native_scored_rows_checked": 7476,
+  "native_steps_checked": 81182,
+  "actual_advantage_audits": 283,
+  "originals_preserved": true,
+  "source_sha256": {
+    "native_check.py": "bda01769b39294c1b664aa658cfd440b0a739bb74d823bdbfcbafffd038b2347",
+    "render.py": "84091453b47d89d93e0171c5b511c9a6d9ab9ff4b78a3c7c51c4594afb90325a",
+    "unit_replay.py": "17257f5926a9a354d5418b7f8153455bd80f3f14e9f65a9e652546282bccf7e7",
+    "review.py": "e0771dd4b6d614ed9cdf979bf8d7150e558fe2203432c5a6e36e1be134832074",
+    "prepare.py": "d53744fcf2445aabf5257caab00c8e188cdfbf410b493f385ea626212f99d450",
+    "analyze.py": "0921698e7494242152cc606c67d71dd937ee771edc3656987c3c3c871082d2cc"
+  },
+  "report_sha256": {
+    "REPORT.txt": "16dfaf129331d89923a4812a1d392860bd143f3d470dcc3a8bb1683369afa009",
+    "review.html": "b9265db4210b5c230a2a10f8cdd35ea5a29a5ee90bb826d250ef775e4c063cc6",
+    "statistics.json": "23b3aad3dcde610389f1224c842711c4c773cd52ca39be5eaf985bf84ee7a41c",
+    "native_replay.json": "11361f25cfa4bd6fe1227a1fe03fafdf66eecbcb50c4645e40a9eb47a465f4b6",
+    "unit_replay.json": "97802e72fed47159582852d1cfafb2cf62550a9c093f4a7e73e8b8a199f12776",
+    "mathematical_annotations.json": "db246b15d4ff1728c388491e2cf597ec60d1949dbabe390e8958a4ace9af8b3b",
+    "review_summary.json": "8080633191b3c8080af587e5157b91c79d8a376d3835df5cde8dbf5c8c75ccfe",
+    "unit_corrected_flip_attribution.json": "3f0f1bd40e5d9cdeeb722763fa1e2f6a61b125249661dc84d9c7b860ef1908f0",
+    "reviewed_cases.json": "77ca5ffbaf417d4cd4469af7c7ca3841052467eb61a83ed0aea0137f857ecaf8",
+    "training_trends.png": "7c20a85a78fc4ff5129dc66b95ed714c3e2970bc8e92c5a5bd51812a7e411578",
+    "sample_manifest.json": "1c146ecb7cf438ad4f63684d202ca9f59ca35feb87aea05ccb2f3ef6cfd493b6",
+    "base_separator_check.json": "81a90146e478019d26a27b16d91d1fc2454e9449313716839ee52d5f013ea16f"
+  }
+}

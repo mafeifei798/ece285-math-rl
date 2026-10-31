@@ -1,0 +1,35 @@
+{
+  "experiment": "ab_corrected_6m_seed17_20261022",
+  "controller": "runs/AB_corrected_seed17_6M_20261022",
+  "runs": {
+    "A": "runs/A_corrected_seed17_6M_20261022",
+    "B": "runs/B_corrected_seed17_6M_20261022"
+  },
+  "pilots": {
+    "A": "runs/pilot_A_corrected_seed17_20261022",
+    "B": "runs/pilot_B_corrected_seed17_20261022"
+  },
+  "seed": 17,
+  "gpu": 1,
+  "pilot_optimizer_steps": 2,
+  "completion_token_budget_per_arm": 6000000,
+  "process_coefficient": 0.2,
+  "group_size": 8,
+  "prm_id": "Qwen/Qwen2.5-Math-PRM-7B",
+  "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+  "prm_path": "models/qwen25_math_prm_7b",
+  "training_authorized": true,
+  "scope": "Real-model two-step engineering pilots, then corrected-only A/B seed17 from common base, 6M generated completion tokens each, fixed greedy MATH500/GSM8K evaluation. Preserve old code/results. No bounded advantages, C/D, new rewards/loss, seed changes or budget extensions.",
+  "evaluation": "final fixed-budget checkpoint; corrected verifier, greedy, no PRM reranking",
+  "stage_order": [
+    "pilot_A",
+    "pilot_B",
+    "gate",
+    "train_A",
+    "train_B",
+    "eval_A",
+    "eval_B",
+    "compare"
+  ],
+  "pilot_budget": "extra, separately reported; formal runs reset to common initialization"
+}

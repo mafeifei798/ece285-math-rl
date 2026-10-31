@@ -1,0 +1,14 @@
+{
+  "complete": false,
+  "completed_rows": 3713,
+  "total_rows": 3713,
+  "elapsed_seconds_current_invocation": 329.50801355438307,
+  "costs": {
+    "forward_calls": 1888,
+    "unpadded_input_tokens": 5919594,
+    "padded_input_tokens": 8693985,
+    "repeated_forward_calls": 30
+  },
+  "repeat_max_difference": 0.0,
+  "unchanged_input_max_difference": 0.0
+}

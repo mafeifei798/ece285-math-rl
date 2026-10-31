@@ -1,0 +1,6 @@
+{
+  "source_path": "/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/trainer/grpo_trainer.py",
+  "source_sha256": "f217183c84be9b38b23454920eb1b914726aa3c4b9dd4c076d455bdaa67bf1b8",
+  "extracted_tensor_algebra": "rewards = (rewards_per_func * self.reward_weights.to(device).unsqueeze(0)).nansum(dim=1)\nmean_grouped_rewards = rewards.view(-1, self.num_generations).mean(dim=1)\nmean_grouped_rewards = mean_grouped_rewards.repeat_interleave(self.num_generations, dim=0)\nadvantages = rewards - mean_grouped_rewards\nif self.scale_rewards in ['group', 'none']:\n    std_rewards = rewards.view(-1, self.num_generations).std(dim=1)\n    std_rewards = std_rewards.repeat_interleave(self.num_generations, dim=0)\nelif self.scale_rewards == 'batch':\n    std_rewards = rewards.std().expand_as(rewards)\nelse:\n    raise ValueError(f\"Invalid value for scale_rewards: {self.scale_rewards}. Must be one of 'batch', 'group', or 'none'.\")\nis_std_zero = torch.isclose(std_rewards, torch.zeros_like(std_rewards))\nif self.scale_rewards != 'none':\n    advantages = advantages / (std_rewards + 0.0001)",
+  "executes_generation_or_training": false
+}

@@ -1,0 +1,18 @@
+{
+  "A": {
+    "n": 32,
+    "optimizer_steps_before_update": [
+      0
+    ],
+    "with_internal_double_LF": 32,
+    "mean_raw_steps": 13.9375
+  },
+  "B7": {
+    "n": 32,
+    "optimizer_steps_before_update": [
+      0
+    ],
+    "with_internal_double_LF": 32,
+    "mean_raw_steps": 13.9375
+  }
+}

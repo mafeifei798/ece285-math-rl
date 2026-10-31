@@ -1,0 +1,119 @@
+INFO 10-22 15:32:36 [__init__.py:216] Automatically detected platform cuda.
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 10-22 15:32:40 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-22 15:32:40 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-22 15:32:40 [utils.py:328] non-default args: {'seed': 0, 'max_model_len': 4096, 'distributed_executor_backend': 'external_launcher', 'gpu_memory_utilization': 0.3, 'max_num_batched_tokens': 4096, 'max_num_seqs': 32, 'disable_log_stats': True, 'model_impl': 'vllm', 'model': '/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2'}
+INFO 10-22 15:32:47 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+INFO 10-22 15:32:47 [__init__.py:1815] Using max model len 4096
+INFO 10-22 15:32:47 [parallel.py:348] Disabling V1 multiprocessing for external launcher.
+INFO 10-22 15:32:47 [llm_engine.py:221] Initializing a V0 LLM engine (v0.10.2) with config: model='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', speculative_config=None, tokenizer='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":32,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 10-22 15:32:48 [cuda.py:456] Using Flash Attention backend.
+[W1022 15:32:49.766356569 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO 10-22 15:32:49 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 10-22 15:32:49 [model_runner.py:1051] Starting to load model /srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.09it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.09it/s]
+
+INFO 10-22 15:32:50 [default_loader.py:268] Loading weights took 0.61 seconds
+INFO 10-22 15:32:50 [model_runner.py:1083] Model loading took 2.8798 GiB and 0.730376 seconds
+INFO 10-22 15:32:51 [worker.py:290] Memory profiling takes 0.56 seconds
+INFO 10-22 15:32:51 [worker.py:290] the current vLLM instance can use total_gpu_memory (79.25GiB) x gpu_memory_utilization (0.30) = 23.77GiB
+INFO 10-22 15:32:51 [worker.py:290] model weights take 2.88GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 0.26GiB; the rest of the memory reserved for KV Cache is 20.54GiB.
+INFO 10-22 15:32:51 [executor_base.py:114] # cuda blocks: 48083, # CPU blocks: 9362
+INFO 10-22 15:32:51 [executor_base.py:119] Maximum concurrency for 4096 tokens per request: 187.82x
+INFO 10-22 15:32:54 [model_runner.py:1355] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+Capturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]Capturing CUDA graph shapes:  14%|█▍        | 1/7 [00:00<00:03,  1.71it/s]Capturing CUDA graph shapes:  29%|██▊       | 2/7 [00:01<00:02,  1.79it/s]Capturing CUDA graph shapes:  43%|████▎     | 3/7 [00:01<00:02,  1.82it/s]Capturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:02<00:01,  1.84it/s]Capturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:02<00:01,  1.85it/s]Capturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:03<00:00,  1.86it/s]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:03<00:00,  1.86it/s]Capturing CUDA graph shapes: 100%|██████████| 7/7 [00:03<00:00,  1.84it/s]
+INFO 10-22 15:32:57 [model_runner.py:1507] Graph capturing finished in 4 secs, took 0.09 GiB
+INFO 10-22 15:32:57 [worker.py:467] Free memory on device (75.72/79.25 GiB) on startup. Desired GPU memory utilization is (0.3, 23.77 GiB). Actual usage is 2.88 GiB for weight, 0.26 GiB for peak activation, 0.09 GiB for non-torch memory, and 0.09 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=21804541542` to fit into requested memory, or `--kv-cache-memory=77575454720` to fully utilize gpu memory. Current kv cache memory in use is 22058296934 bytes.
+INFO 10-22 15:32:57 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 7.06 seconds
+INFO 10-22 15:32:58 [llm.py:295] Supported_tasks: ['generate']
+INFO 10-22 15:32:58 [__init__.py:36] No IOProcessor plugins requested by the model
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.
+/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/model_executor/layers/sampler.py:876: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:306.)
+  selected_logprobs = logprobs[[
+{"event": "optimizer_step", "step": 1, "completion_tokens": 26557, "elapsed_seconds": 28.9, "stop_reason": null}
+{'loss': 0.0, 'grad_norm': 0.04050296172499657, 'learning_rate': 5e-06, 'num_tokens': 29053.0, 'completions/mean_length': 829.90625, 'completions/min_length': 121.0, 'completions/max_length': 2048.0, 'completions/clipped_ratio': 0.15625, 'completions/mean_terminated_length': 604.3333129882812, 'completions/min_terminated_length': 121.0, 'completions/max_terminated_length': 1960.0, 'rewards/rewards/mean': 0.46875, 'rewards/rewards/std': 0.507007360458374, 'reward': 0.46875, 'reward_std': 0.4628904461860657, 'frac_reward_zero_std': 0.0, 'kl': 0.0, 'entropy': 0.3721405239775777, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.0005720823798627002}
+{"event": "optimizer_step", "step": 2, "completion_tokens": 42485, "elapsed_seconds": 55.6, "stop_reason": null}
+{'loss': 0.0, 'grad_norm': 0.03562542051076889, 'learning_rate': 5e-06, 'num_tokens': 47733.0, 'completions/mean_length': 497.75, 'completions/min_length': 89.0, 'completions/max_length': 2048.0, 'completions/clipped_ratio': 0.03125, 'completions/mean_terminated_length': 447.7419128417969, 'completions/min_terminated_length': 89.0, 'completions/max_terminated_length': 1610.0, 'rewards/rewards/mean': 0.5, 'rewards/rewards/std': 0.5080004930496216, 'reward': 0.5, 'reward_std': 0.26726123690605164, 'frac_reward_zero_std': 0.5, 'kl': 0.000335906106784023, 'entropy': 0.6470840234542266, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.0011441647597254005}
+{'train_runtime': 55.7643, 'train_samples_per_second': 1.148, 'train_steps_per_second': 0.036, 'train_loss': 6.722286343574524e-06, 'epoch': 0.0011441647597254005}
+{
+  "status": "pilot_completed",
+  "arm": "A",
+  "pilot": true,
+  "global_step": 2,
+  "accounting": {
+    "generated_completion_tokens": 42485,
+    "generated_completions": 64,
+    "generated_groups": 8,
+    "mixed_reward_groups": 6,
+    "correct_completions": 31,
+    "truncated_completions": 6,
+    "prm_input_tokens": 0,
+    "prm_padded_tokens": 0,
+    "prm_scored_completions": 0,
+    "prm_forward_seconds": 0.0,
+    "reward_status_counts": {
+      "symbolic": 21,
+      "truncated": 6,
+      "exact": 28,
+      "missing_or_invalid_box": 9
+    },
+    "outcome_group_counts": {
+      "mixed": 6,
+      "all_correct": 1,
+      "all_wrong": 1
+    },
+    "last_batch": {
+      "generated_completion_tokens": 15928,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 2,
+      "correct_completions": 16,
+      "truncated_completions": 1,
+      "prm_input_tokens": 0,
+      "prm_padded_tokens": 0,
+      "prm_scored_completions": 0,
+      "prm_forward_seconds": 0.0
+    }
+  },
+  "budget": 6000000,
+  "stop_reason": "pilot_max_steps",
+  "actor_adapter_changed": true,
+  "lora_B_abs_sum": 74.24713164381683,
+  "prm_frozen_verified": false,
+  "metrics": {
+    "train_runtime": 55.7643,
+    "train_samples_per_second": 1.148,
+    "train_steps_per_second": 0.036,
+    "total_flos": 0.0,
+    "train_loss": 6.722286343574524e-06
+  },
+  "finished_unix": 1792654435.3677685,
+  "checkpoint": "/srv/research/ece285_math_rl_project/runs/pilot_A_corrected_seed17_20261022/checkpoint-2",
+  "checkpoint_sha256": {
+    "completion_accounting.json": "957040bf9ca6e1895bc4bb5738ef907756a0e3d429910ae788e9f7df2fd2a295",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "README.md": "78126f95e986f22f2cc5ea59277057787d878ef5e59f7d920b443f05b43176f7",
+    "chat_template.jinja": "c564d12c9977b8942423753b0c409a11f50142508ced170e9fe1c2f5b803cf70",
+    "rng_state.pth": "03e3d4ddaafb95138d0ef6488a4e7c3f4fd998503c2a777acbdf93124df4f4af",
+    "tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "scheduler.pt": "2a0954e7341906753dddf464e5a9d1775d632fe8995037dee27ca0307a6c1fcf",
+    "optimizer.pt": "efe4f2efe68db1383459dcbe16aaf24fef256620cb35d5384fce65c373eebc53",
+    "training_args.bin": "b7df02f5e50cb5ba13e527c5a905561fc9694fc9ca03012c2ead4421e4c49eb8",
+    "trainer_state.json": "87fedb3852b90419fd22903153c3c7a095e8f8f66d1db9934abd090e784ae206",
+    "adapter_config.json": "24752c3fe34bb1f3e6ecea2ae1d844e07dbbe8a0a6f8a083d90594dc31c1acc1",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "adapter_model.safetensors": "262435bfa195b9459356c327c758005883a45c7c340baf94cedc5c888bdbeffb",
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+  }
+}
+[rank0]:[W1022 15:33:56.061692046 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

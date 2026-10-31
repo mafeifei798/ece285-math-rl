@@ -1,0 +1,18 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 78.65it/s]
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+native_raw 32/288 saved responses, no updates
+native_raw 64/288 saved responses, no updates
+native_raw 96/288 saved responses, no updates
+native_raw 128/288 saved responses, no updates
+native_raw 160/288 saved responses, no updates
+native_raw 192/288 saved responses, no updates
+native_raw 224/288 saved responses, no updates
+Traceback (most recent call last):
+  File "/srv/research/ece285_math_rl_project/experiments/pure_official_prm_offline_20261022/score_existing.py", line 133, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/srv/research/ece285_math_rl_project/experiments/pure_official_prm_offline_20261022/score_existing.py", line 109, in main
+    assert error<.005, 'Single/batched disagreement requires inspection'
+           ^^^^^^^^^^
+AssertionError: Single/batched disagreement requires inspection

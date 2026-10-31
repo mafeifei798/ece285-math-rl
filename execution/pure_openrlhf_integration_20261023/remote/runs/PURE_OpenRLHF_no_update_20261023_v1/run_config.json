@@ -1,0 +1,81 @@
+{
+  "mode": "OpenRLHF_real_forward_backward_no_update",
+  "release_sha256": "59cd4d6a43c96ae76498f2e7a6d888d3bb2bb5d97d39efe38760184ff201bcbd",
+  "protocol": {
+    "scope": "one real-model forward/backward integration batch, no optimizer construction or updates",
+    "formal_training": false,
+    "official_branch": "openrlhf",
+    "official_commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+    "actor": "Qwen/Qwen2.5-Math-1.5B",
+    "actor_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "prm": "jinachris/PURE-PRM-7B",
+    "prm_revision": "b0cce6763f2317762c9cb46720c8fe7b07f44a88",
+    "seed": 17,
+    "vllm_engine_seed": 0,
+    "initialization": "original zero LoRA initialization shared with archived corrected A/B, no continuation from trained A/B",
+    "lora": {
+      "rank": 16,
+      "alpha": 32,
+      "dropout": 0
+    },
+    "generation": {
+      "fixed_questions": "first four questions of previously completed corrected B first batch; IDs frozen before generation",
+      "groups": 4,
+      "responses_per_group": 8,
+      "batch_responses": 32,
+      "max_new_tokens": 2048,
+      "min_new_tokens": 1,
+      "max_prompt_tokens": 2048,
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": -1,
+      "skip_special_tokens": false,
+      "include_stop_str_in_output": true,
+      "prompt": "frozen existing prepared prompt, identical for both arms"
+    },
+    "signal": {
+      "P_VR": "unchanged verifier outcome with official sequence leave-one-out, no PRM dependence",
+      "P_PRM": "official frozen two-class logits, signed score, softmin temperature .1, coefficient 1, actual-peer-length token baseline",
+      "kl": "official k1 old_logp - reference_logp, action masked; subtract before cumulative return",
+      "kl_coefficient": 0.001,
+      "kl_coefficient_source": "official examples/scripts/train_pure.sh:32; explicit override of CLI default .01",
+      "boundaries": "official token-based separator detection and processed final action, shared by both arms",
+      "normalization": "exact official replay-buffer normalize once, preserve zero advantages, no GRPO normalization",
+      "loss": "pinned official PolicyLoss, clip .2, one response per microbatch, accumulate 1/32",
+      "all_zero_batch": "explicit validation failure; no replacement reward or automatic resampling"
+    },
+    "official_eos_handling": "retain raw emitted IDs and exact official process_sequences output separately; score/logprob/loss use processed IDs",
+    "verifier_adaptation": "retain archived repaired verifier on raw emitted text and original termination; inserted EOS never certifies truncated completion",
+    "resource_adaptations": [
+      "one shared A100 80GB, current validated TRL backend only for model/LoRA/vLLM initialization",
+      "all TRL reward, advantage, compute_loss, train and optimizer creation paths blocked",
+      "single-card LoRA, 32 responses and 2048-token cap instead of paper distributed settings",
+      "single-example unpadded PRM forward; native BF16 GPU logits-to-softmin transform followed by FP32 task matrix and CPU signal reductions",
+      "original data, prompt and verifier retained, so not an end-to-end paper accuracy reproduction"
+    ],
+    "acceptance": [
+      "exact emitted IDs and official processed IDs saved",
+      "each step reward maps once to a valid actor boundary, terminal EOS distinguished from inserted EOS",
+      "one normalization before microbatch loss and sealed advantages unchanged",
+      "PRM-only signals independent of outcomes, VR responds to outcomes",
+      "finite real model gradients in both arms, no optimizer instantiated or stepped",
+      "complete actor and PRM parameter hashes unchanged",
+      "old A/B and veRL source/result hashes and inventories unchanged",
+      "record stage-specific CUDA and process/device NVML memory plus generation/PRM/backward timing"
+    ]
+  },
+  "physical_gpu": "1",
+  "questions": [
+    "math/train/precalculus/9",
+    "math/train/algebra/1532",
+    "math/train/counting_and_probability/203",
+    "math/train/algebra/490"
+  ],
+  "groups": 4,
+  "responses": 32,
+  "completion_cap": 2048,
+  "seed": 17,
+  "optimizer_constructed": false,
+  "original_verifier_retained": true,
+  "formal_training": false
+}

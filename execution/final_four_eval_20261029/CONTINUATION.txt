@@ -1,0 +1,20 @@
+用户授权：初始Qwen2.5-Math-1.5B与已完成1M seed17的A/C-mix/C-bounded统一greedy评测MATH500500题、GSM8K1319题，共7276条。保留旧结果，禁止新训练/新PRM/新seed/改提示验答/选checkpoint/自动跟进任务。
+远端全部位于/srv/research/ece285_math_rl_project。独立source experiments/final_four_eval_20261029；run runs/Final_four_eval_seed17_1M_20261029；audit audits/Final_four_eval_seed17_1M_20261029。
+本地dispatch.json保存唯一派发PID，严禁重复运行dispatch.py或prepare_remote.py。先运行inspect_remote.py只读核查PID/锁/批次/receipt，不能打断健康进程或其他作业。
+共享GPU1（已有授权），显存利用率参数.15、batch64、max_num_seqs64、max_model_len4096、cap2048、seed285、bf16、greedy/top_p1/top_k-1。一个vLLM引擎加载三个LoRA，按64题块交错四模型，固定轮换先后次序。初始模型请求无LoRA，三个arm分别adapterID1/2/3。不加载PRM。
+CPU预检已通过，保护609个旧文件和模型/数据/验证器hash；三个final_adapter均与checkpoint-48匹配。headers只沿用先前已验证的项目局部CPATH，缓存用独立cache/final_four_eval_20261029。
+每个批次原子JSON提交在arm/dataset/batches/目录，含原始token/文本与评分。故障不自动重试；有已提交批次不得重算。需要恢复时先验源版本/contract/批次hash/锁/检查失败，只允许显式恢复同一协议，不静默改batch/prompt/verifier。
+有限controller先generate.py，再退出GPU子进程后CPU运行analyze.py；CPU重跑冻结验答器7276条，核对hash、模型状态、同题统计、资源与609文件保护。完整结果在comparison.json，辅助acceptance.json、training_curves.json、case_review_pack.json。
+结果齐全后下载证据与8份预测，独立验收原始标签/题目/adapter/token/hash。阅读选定真实失败案例，区分数学错误、框/正文问题、解析失败和截断，不能只凭短文本称投机。统计区间只覆盖题目，不涵盖训练seed；实际训练约1M，不和历史6M及验证集混表。
+最后交付完整中文报告（准确率、同题胜负与区间、训练/PRM/评测token和时间/显存、训练曲线、主要问题、代码配置/哈希/复现命令和限制）。不夸大提升；不自动扩训练或推送GitHub。
+
+当前派发确认：controller PID2723445，generation child PID2723446，source release eef55b0d401e3098f97e7dcaee634c444f333c089c89ac18321275c5c23d7e0c，contract ad415230ce35f3ab134cb388a29fde38fee78f5ae2aed35d0052c084c6e9a7ee。已有唯一dispatch，禁止重派。当前工具会话53996是只读SSH等待进度（不是训练），可write_stdin每次等待<=55秒；丢失该会话时用inspect_remote.py核实即可，不重启GPU作业。
+2026-10-29约17:28PT阶段：MATH500四模型2000条已完成，GSM8K进行中；工具最近done3344/7276，运行约72分钟，没有故障。按当前速度全程约2–3小时。不要因等待而制造新训练/改模型/改配置。
+本地交付脚本已备：retrieve_results.py仅在controller complete且acceptance passed后取回完整证据、数据清单/验答源码、8份预测、三个adapter与旧训练日志；本地重数/hash验收。随后build_report.py从真实comparison生成HTML/TXT/CSV与三张标准matplotlib图；已安装matplotlib3.10.3/numpy2.3.0，MPLCONFIGDIR位于本目录plot_cache。没有comparison时该脚本仅生成明确标注的运行进度页。
+训练离线诊断已完成：training_reward_diagnostics.json、signal_case_analysis.json；C-mix82条错答正优势=80全错+2混合。已独立推导两条训练几何错误；四个MATH测试样例源自math_case_candidates.json，qualitative_review.json现有6条助手审读（非人工金标准、定向短题样例、不估总体比例、未改分数）。例如math500/472双方数学正确但A没框；math500/253双方正文正确但C-bounded最后框为?；math500/198C-bounded把正确7!*2=10080改成1440；math500/107C-bounded纠正14为9。取回脚本会核对这些文本与最终预测一致。
+完成后的剩余动作：取回证据；用真实数据运行build_report.py；如有必要读GSM胜负样例补1–2条定性审阅；检查PNG/HTML实际图表与所有文件hash；必要时修本地报告脚本而不动评测源或分数；保存简洁明确的最终结论和链接。本次唯一授权新增工作是评测及报告，无训练、无自动任务。
+
+FINAL COMPLETE — 2026-10-30T01:52:34.404537+00:00
+统一4×2评测7276条全部完成；CPU冻结验答重算全一致；609受保护旧文件不变；本地预测/adapter/data hash验收通过。证据包227003802字节，retrieval_acceptance.json通过。
+初始49.0%/56.8613%，A49.4%/57.0129%，C-mix50.0%/57.9227%，C-bounded50.2%/57.1645%（MATH500/GSM8K）。C-bounded−A为+0.8pp[-1.8,+3.4]、+0.1516pp[-1.4405,+1.7437]；单训练seed未建立稳定准确率收益。
+完整报告review.html、REPORT.txt、accuracy.csv、comparison.json，三图已目视核对；19个相对链接存在。HTML整页截图因浏览器file协议限制未完成，未绕过。训练和生成控制器均已自然完成，不再等待，不重派、不启动训练或自动任务。

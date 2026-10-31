@@ -1,0 +1,44 @@
+{
+  "status": "read_only_runtime_audit",
+  "same_weight_and_data_verified": true,
+  "same_text_grading_mismatches": {
+    "math500": 0,
+    "gsm8k": 0
+  },
+  "runs": {
+    "historical_6M": {
+      "engine": "V0",
+      "source_log_sha256": "2f908bf44a4b98db296620d7031cadce2a058a4a900c2d93a2a41d6aad99d914",
+      "excerpt_sha256": "70165e07114bc75f9ae5c1370ac307dc39730213df55b55b67ebc8e4ae2699c1",
+      "excerpt": "runtime_log_excerpts/historical_6M.txt",
+      "gpu_memory_utilization": 0.6,
+      "prefix_cache": "unspecified/None",
+      "chunked_prefill": false,
+      "async_output_processing": false
+    },
+    "current_1M": {
+      "engine": "V1",
+      "source_log_sha256": "a5eb3c6955a779036f62db06791d74bd4b304fa7ff8398e29b90ce95cff94e11",
+      "excerpt_sha256": "8a5ab988ebc0dfe998729e5819a609fe08208cd6c65bf3a72cdd785d0303d7a9",
+      "excerpt": "runtime_log_excerpts/current_1M.txt",
+      "gpu_memory_utilization": 0.15,
+      "prefix_cache": "True",
+      "chunked_prefill": true,
+      "async_output_processing": true
+    },
+    "current_6M": {
+      "engine": "V1",
+      "source_log_sha256": "3fdfcdf7b600bcf4c91d2bd6f4902123848607d6000e27407a70736a8d78c3c3",
+      "excerpt_sha256": "90e4cb0c78e1ff83aa24d4c729438c99288e61ebe91aa0ef7e47a76b7cecaca6",
+      "excerpt": "runtime_log_excerpts/current_6M.txt",
+      "gpu_memory_utilization": 0.15,
+      "prefix_cache": "True",
+      "chunked_prefill": true,
+      "async_output_processing": true
+    }
+  },
+  "causal_limit": "Engine generation, cache/prefill defaults, memory allocation and scheduling differ jointly. No single-factor re-generation was run, so their individual causal contributions are not isolated.",
+  "official_reproducibility_reference": "https://docs.vllm.ai/en/v0.10.2/usage/reproducibility.html",
+  "new_training": false,
+  "new_model_calls": 0
+}

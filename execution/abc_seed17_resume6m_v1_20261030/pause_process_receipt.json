@@ -1,0 +1,58 @@
+{
+  "request": "User explicitly requested pausing GPU usage; no automatic resume",
+  "unix": 1793349778.2994897,
+  "controller_before": {
+    "stage": "A_to144",
+    "pid": 3319102,
+    "unix": 1793344944.0529747,
+    "child_pid": 3334407,
+    "log": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/logs/A_to144.log",
+    "started_unix": 1793344944.0523853,
+    "deadline_unix": 1793517108.8133893
+  },
+  "own_processes": {
+    "3319102": {
+      "pid": 3319102,
+      "created": 1793344308.29,
+      "cmdline": [
+        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/controller.py"
+      ]
+    },
+    "3334407": {
+      "pid": 3334407,
+      "created": 1793344943.57,
+      "cmdline": [
+        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/train_arm.py",
+        "--arm",
+        "A",
+        "--target",
+        "144"
+      ]
+    }
+  },
+  "GPU_apps_before": "2576143, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 7986\n2591599, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 17986\n2872634, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 628\n2937288, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 670\n3206308, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 17986\n888111, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1998\n2576146, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 16524\n3206309, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 17986\n3334407, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 21808\n",
+  "signals": [
+    {
+      "pid": 3319102,
+      "signal": "SIGTERM",
+      "unix": 1793349778.3007646
+    },
+    {
+      "pid": 3334407,
+      "signal": "SIGINT",
+      "unix": 1793349778.3010793
+    }
+  ],
+  "paused": true,
+  "remaining_owned_processes": [],
+  "remaining_owned_GPU_PIDs": [],
+  "GPU_apps_after": "2576143, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 7986\n2591599, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 17986\n2872634, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 628\n2937288, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 670\n3206308, GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 17986\n888111, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1998\n2576146, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 16524\n3206309, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 17986\n",
+  "finished_unix": 1793349781.1579802,
+  "automatic_resume": false
+}

@@ -1,0 +1,61 @@
+{
+  "reviewer": "pure_paper_empty_audit",
+  "reviewed_at_utc": "2026-10-23T08:05:04.326586+00:00",
+  "verdict": "PASS for fixed-canonical-trajectory OpenRLHF reward/baseline/advantage CPU reference; no blocking reporting defect found within declared scope.",
+  "reviewed_sha256": {
+    "experiments/pure_official_fix_audit_20261023/openrlhf_signal_reference.py": "84b21e004a234b9d5495574cd86a3838d54c8ed6e497765dd155d2aa8385c616",
+    "execution/pure_official_fix_audit_20261023/openrlhf_signal_reference_summary.json": "0203c348193522080586eb7215fb1162bdb5de30a6273a1ea3eecf7744b68275",
+    "execution/pure_official_fix_audit_20261023/openrlhf_signal_reference_rows.jsonl": "3d0e8d598374d80348d9b2e29ef9b85c5d0f4cc362c9bb41464f22297b09b67a",
+    "execution/pure_official_fix_audit_20261023/openrlhf_signal_reference_receipts.json": "ecfcc6ae41fcb4c4f6f2c61930b0e2e3d0c9e0ad722024bac27f319ad27d8158",
+    "execution/pure_official_fix_audit_20261023/openrlhf_signal_reference_tests.json": "673539f79a758a42f104269a0c179f1a9d8bd7c6356936a033b89843133d3ee3"
+  },
+  "new_training_started": false,
+  "model_forwards_in_review": 0,
+  "full_experiment_rerun": false,
+  "independent_static_and_scalar_checks": {
+    "official_source_hashes_match": true,
+    "script_hash_matches_saved_summary": true,
+    "rows": 256,
+    "question_groups": 32,
+    "group_size": 8,
+    "step_length_formula": "end - previous_end - 1, previous_end=-1 initially; separator/EOS excluded",
+    "step_length_formula_matches_saved_rows": true,
+    "baseline": "sum of other responses process rewards divided by sum of other responses valid action lengths, including EOS; subtract baseline times current-step content length at each boundary",
+    "VR_constant_shift": "(outcome - 1) - mean_peer(outcome - 1) equals outcome - mean_peer(outcome)",
+    "VR_constant_shift_max_abs_error": 1.1102230246251565e-16,
+    "VR_raw_terminal_max_abs_error": 3.405979698278827e-08,
+    "empty_zero_final_advantages_per_arm": {
+      "OPENRLHF_VR": 8,
+      "OPENRLHF_PURE_NATIVE": 8,
+      "OPENRLHF_PURE_RL_PROMPT": 8
+    },
+    "empty_single_step_content_length_zero": true,
+    "all_saved_boundary_advantages_zero": true,
+    "empty_PRM_raw_reward_remains_positive_and_equals_single_step_reward": true
+  },
+  "fairness_assessment": [
+    "P-VR and P-PRM share the same selected trajectories, fixed outcome labels, reconstructed canonical boundaries, group layout, one official normalizer and boundary treatment.",
+    "PRM signed-logit softmin scale one and token baseline follow the pinned OpenRLHF branch; the reference does not silently keep the veRL 0.5 scale or future-return/fixed-width baseline.",
+    "P-VR uses all existing ground-truth outcomes and P-PRM uses none, matching the pure-arm comparison rather than the PRM+VR ten-percent recipe.",
+    "Complete signal-path reference is more defensible than calling a veRL plus mask splice an official bugfix, while still not constituting an end-to-end OpenRLHF training reproduction."
+  ],
+  "nonblocking_reporting_caveats": [
+    "Use canonical-input OpenRLHF signal reference, not complete official experiment reproduction: official generation, native token splitter, model forward and KL are not replayed.",
+    "Boundary zeroing prevents the direct scalar log-prob gradient of the EOS-only action here; it neither corrects PRM scores nor removes peer-baseline influence or guarantees stable learning.",
+    "The earlier 50404 P-VR content sign-category changes are all old negative to zero, not positive/negative reversals. This figure belongs to the mask/normalizer transplant diagnostic, not to the full-reference experiment.",
+    "Per-row task_reward_sum stores the transformed process reward sum and therefore is zero in OPENRLHF_VR. Do not describe that field as the total VR task reward.",
+    "No training launch, learned quality improvement, or explanation of the old A/B accuracy gap follows from this CPU reference."
+  ],
+  "report_review": {
+    "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/review.html",
+    "sha256": "cced36b2bd31b36df9e6ef9f7fdc5ec4e9c7b952de266a413458227a6fbbc8bc",
+    "blocking_findings": [],
+    "verified_wording": [
+      "Paper v3 experiments use veRL; the alternate OpenRLHF branch is not claimed as exact v3 table reproduction.",
+      "CPU reference versus runtime/training acceptance is separated.",
+      "The 50404 content changes are explicitly negative-to-zero with no positive-negative reversals.",
+      "Boundary sites include truncated last valid tokens, not only genuine EOS.",
+      "No additional rewards, no hidden GT in P-PRM, no causal claim for old B, and no newly launched training are stated."
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "proposal_only",
+  "new_training": false,
+  "new_inference": false,
+  "sha256": {
+    "analyze_existing.py": "037d9699e12a9d3bad0eb5ff5290d89e5c29eb54b9f96db5195875278f8f60e7",
+    "PLAN.txt": "ac0b38d573b7d4643e38373b3b8e7d4e882caa9282287a6706c51d46633f698c",
+    "analysis.json": "dd8eb7d02cef41f8f514fa9103ab50c1dd3fe21c67b8c92768014524a5ca82da"
+  }
+}

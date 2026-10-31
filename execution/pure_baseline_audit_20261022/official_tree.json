@@ -1,0 +1,4741 @@
+{
+  "sha": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/b174e508a4469663543cfcb366be78cf199d20bf",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5bb55a7be9a1be2241080262fb8e17838b514534",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/5bb55a7be9a1be2241080262fb8e17838b514534"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "edaecc553675b545f49347eafd447cd7c2549770",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/edaecc553675b545f49347eafd447cd7c2549770"
+    },
+    {
+      "path": ".github/workflows/dataset.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f2d4302f73b066be100e6d63f2eaaff3257e480",
+      "size": 1053,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2f2d4302f73b066be100e6d63f2eaaff3257e480"
+    },
+    {
+      "path": ".github/workflows/e2e_digit_completion.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc65ad87ec43d5f0484a0b30ad0b2c897fe10868",
+      "size": 1306,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bc65ad87ec43d5f0484a0b30ad0b2c897fe10868"
+    },
+    {
+      "path": ".github/workflows/e2e_digit_completion_fire.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f22e8b5b3c90dced2b5ac79b059dc6dcf7b1741",
+      "size": 1268,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7f22e8b5b3c90dced2b5ac79b059dc6dcf7b1741"
+    },
+    {
+      "path": ".github/workflows/e2e_gsm8k.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "210638882f70710400a045a403db76c5e3272e02",
+      "size": 2940,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/210638882f70710400a045a403db76c5e3272e02"
+    },
+    {
+      "path": ".github/workflows/e2e_gsm8k_megatron.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd191ac3c66f45a1e799185f2fc6c8938f72a8f6",
+      "size": 1840,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dd191ac3c66f45a1e799185f2fc6c8938f72a8f6"
+    },
+    {
+      "path": ".github/workflows/e2e_lora.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb99dc7449dd3fb230ba97d8a892c8482d91c623",
+      "size": 1391,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/cb99dc7449dd3fb230ba97d8a892c8482d91c623"
+    },
+    {
+      "path": ".github/workflows/e2e_sft.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a819f74c5f2901a0679642e53ef000705d13574",
+      "size": 1973,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3a819f74c5f2901a0679642e53ef000705d13574"
+    },
+    {
+      "path": ".github/workflows/model.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a4987fa277675b61c1e136b2a227d5764aed230",
+      "size": 2760,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4a4987fa277675b61c1e136b2a227d5764aed230"
+    },
+    {
+      "path": ".github/workflows/ray_test.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92ca37df90f62819c36328e214da913b773bac56",
+      "size": 1243,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/92ca37df90f62819c36328e214da913b773bac56"
+    },
+    {
+      "path": ".github/workflows/sandbox.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f07e679eb40f3638bb1bdba9e67d0c0e4678addc",
+      "size": 1193,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f07e679eb40f3638bb1bdba9e67d0c0e4678addc"
+    },
+    {
+      "path": ".github/workflows/sanity.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e1de9f04ad8a753b31bb3ddefc68f9e25d5e26b",
+      "size": 1317,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6e1de9f04ad8a753b31bb3ddefc68f9e25d5e26b"
+    },
+    {
+      "path": ".github/workflows/scorecard.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71bba6ce7598c778e83535ae4d7563ce63da3e54",
+      "size": 2744,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/71bba6ce7598c778e83535ae4d7563ce63da3e54"
+    },
+    {
+      "path": ".github/workflows/secrets_scan.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "880c32bf7b519f03e7799a1cc17ef44d20464e72",
+      "size": 425,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/880c32bf7b519f03e7799a1cc17ef44d20464e72"
+    },
+    {
+      "path": ".github/workflows/vllm.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70b9a95deaebf2e56f8ba1da5bf228be478b3f09",
+      "size": 1725,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/70b9a95deaebf2e56f8ba1da5bf228be478b3f09"
+    },
+    {
+      "path": ".github/workflows/yapf_format.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7583d7f761dc341bd2c4cace3c2a713d3189e8fb",
+      "size": 1374,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7583d7f761dc341bd2c4cace3c2a713d3189e8fb"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5032b62f356b039eb820c7078e1ac6f7dd2a6cc5",
+      "size": 1338,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5032b62f356b039eb820c7078e1ac6f7dd2a6cc5"
+    },
+    {
+      "path": ".readthedocs.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0016868541a2a0667ef40ae6a9d861bcd26b9316",
+      "size": 333,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0016868541a2a0667ef40ae6a9d861bcd26b9316"
+    },
+    {
+      "path": ".style.yapf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a09a27c312b93a261b060fbe9fb217a22358bb0d",
+      "size": 111,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a09a27c312b93a261b060fbe9fb217a22358bb0d"
+    },
+    {
+      "path": "PRM",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "10d69fef41b975bb272c7acc3da019041c16b9ff",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/10d69fef41b975bb272c7acc3da019041c16b9ff"
+    },
+    {
+      "path": "PRM/ds_config_zero2.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4be2c0b59190c4747033ea95b8a9716c7caee5ba",
+      "size": 1227,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4be2c0b59190c4747033ea95b8a9716c7caee5ba"
+    },
+    {
+      "path": "PRM/eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "38dbfd3efea14da8375e1f77925217e6d8738dba",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/38dbfd3efea14da8375e1f77925217e6d8738dba"
+    },
+    {
+      "path": "PRM/eval/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4bc14838443e9adea4bc8c0170d35dd55d62a410",
+      "size": 776,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4bc14838443e9adea4bc8c0170d35dd55d62a410"
+    },
+    {
+      "path": "PRM/eval/bon.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e02835611a77a96177f4ef2d38a46db2d766fa5",
+      "size": 3354,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1e02835611a77a96177f4ef2d38a46db2d766fa5"
+    },
+    {
+      "path": "PRM/eval/process_bench.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "653224bec11103a359ab48b87b92c8eeaadcacef",
+      "size": 6453,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/653224bec11103a359ab48b87b92c8eeaadcacef"
+    },
+    {
+      "path": "PRM/finetune.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8b55684b4fdce0e1e6b4dfcdcd0dabd39439641",
+      "size": 2901,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f8b55684b4fdce0e1e6b4dfcdcd0dabd39439641"
+    },
+    {
+      "path": "PRM/train_stage_1.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc678df5d6b52a911d676d0cb05e39e1c9371fff",
+      "size": 983,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dc678df5d6b52a911d676d0cb05e39e1c9371fff"
+    },
+    {
+      "path": "PRM/train_stage_2.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b83c95160757fd581bfe7216c02ba9142890cde6",
+      "size": 984,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b83c95160757fd581bfe7216c02ba9142890cde6"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc3c3d74e10494d4f08262db4989aef0456a3217",
+      "size": 8358,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bc3c3d74e10494d4f08262db4989aef0456a3217"
+    },
+    {
+      "path": "aime2024.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3983c613f7026c98469bcceed7eff24c0953fe16",
+      "size": 11718,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3983c613f7026c98469bcceed7eff24c0953fe16"
+    },
+    {
+      "path": "eval",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b1788e30019c945668683816ce4a690b8da8c34",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/9b1788e30019c945668683816ce4a690b8da8c34"
+    },
+    {
+      "path": "eval/LICENSE",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ed8fdb91ef08b2408e173808d5e373ef8bf2c5b0",
+      "size": 1067,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ed8fdb91ef08b2408e173808d5e373ef8bf2c5b0"
+    },
+    {
+      "path": "eval/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f8b6bcf79e95b14d20efe1a378e78aad1f0832f",
+      "size": 496,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6f8b6bcf79e95b14d20efe1a378e78aad1f0832f"
+    },
+    {
+      "path": "eval/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "736a5e34a285b2aca15e23dfc941350ff0579b40",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/736a5e34a285b2aca15e23dfc941350ff0579b40"
+    },
+    {
+      "path": "eval/data/aime24",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d3c8d06c9679100774ad2e82a782a0f744ddfbb",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/0d3c8d06c9679100774ad2e82a782a0f744ddfbb"
+    },
+    {
+      "path": "eval/data/aime24/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb72e176e8d30c09cd67037e17cfc41e6ff48f70",
+      "size": 156944,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bb72e176e8d30c09cd67037e17cfc41e6ff48f70"
+    },
+    {
+      "path": "eval/data/amc23",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7d4efa464e92125458c67e093a437879b2b831b",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/a7d4efa464e92125458c67e093a437879b2b831b"
+    },
+    {
+      "path": "eval/data/amc23/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6894ad7c49a0b3a64210af32954f4d049d934ea0",
+      "size": 27631,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6894ad7c49a0b3a64210af32954f4d049d934ea0"
+    },
+    {
+      "path": "eval/data/aqua",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2551052e66a37df1a2762241357f47dac1bbaa49",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/2551052e66a37df1a2762241357f47dac1bbaa49"
+    },
+    {
+      "path": "eval/data/aqua/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a62ef3e8bc0446de096c8384a0bf5c99867043b2",
+      "size": 130192,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a62ef3e8bc0446de096c8384a0bf5c99867043b2"
+    },
+    {
+      "path": "eval/data/asdiv",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "53b586ee5b3c05c837eb0cf3588e600078aa21c2",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/53b586ee5b3c05c837eb0cf3588e600078aa21c2"
+    },
+    {
+      "path": "eval/data/asdiv/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8ab1df3b44f76a9a793b81b664ffc62954fd1d4c",
+      "size": 613636,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8ab1df3b44f76a9a793b81b664ffc62954fd1d4c"
+    },
+    {
+      "path": "eval/data/carp_en",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55f247bf5ea3be7da7d50ed81986178373633200",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/55f247bf5ea3be7da7d50ed81986178373633200"
+    },
+    {
+      "path": "eval/data/carp_en/demo.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "69a43f4e5f2e2983c3fac48cc24786e235eac613",
+      "size": 11864,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/69a43f4e5f2e2983c3fac48cc24786e235eac613"
+    },
+    {
+      "path": "eval/data/carp_en/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "75b922230ed41618b7d47f817200dfb42f1c3ea1",
+      "size": 1278970,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/75b922230ed41618b7d47f817200dfb42f1c3ea1"
+    },
+    {
+      "path": "eval/data/cmath",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4c0d8733008a0ecbf02d3d70c568d67cdbb86cc",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/f4c0d8733008a0ecbf02d3d70c568d67cdbb86cc"
+    },
+    {
+      "path": "eval/data/cmath/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52503955aaac4b77bacd07c132a9c1b3770dcf20",
+      "size": 119574,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/52503955aaac4b77bacd07c132a9c1b3770dcf20"
+    },
+    {
+      "path": "eval/data/cn_middle_school",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ad932b3db0b66ae4606d6ca40f87035fc4c6600f",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/ad932b3db0b66ae4606d6ca40f87035fc4c6600f"
+    },
+    {
+      "path": "eval/data/cn_middle_school/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a6792c2c06131ebc1b049513711948d9750ec9",
+      "size": 27321,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e0a6792c2c06131ebc1b049513711948d9750ec9"
+    },
+    {
+      "path": "eval/data/college_math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62f0b6c061a8565e3414e697ec429a9207394198",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/62f0b6c061a8565e3414e697ec429a9207394198"
+    },
+    {
+      "path": "eval/data/college_math/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1f884189628100309616fdcf9cad9422dc480878",
+      "size": 1188309,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1f884189628100309616fdcf9cad9422dc480878"
+    },
+    {
+      "path": "eval/data/eval_rm_maj_example",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "63176bf5b6e8cb9de25e8ae6142f73ee9f6c2be2",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/63176bf5b6e8cb9de25e8ae6142f73ee9f6c2be2"
+    },
+    {
+      "path": "eval/data/eval_rm_maj_example/math_cot_100.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f20a69f66d6e97a1238613274295082fb92942c8",
+      "size": 2164566,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f20a69f66d6e97a1238613274295082fb92942c8"
+    },
+    {
+      "path": "eval/data/gaokao2023en",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ac73e2da24d843bfc7a05eb9481378d9c3f6a96",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/3ac73e2da24d843bfc7a05eb9481378d9c3f6a96"
+    },
+    {
+      "path": "eval/data/gaokao2023en/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "79b4d05f743d478dcc46f3968fde417f3b6224f1",
+      "size": 139740,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/79b4d05f743d478dcc46f3968fde417f3b6224f1"
+    },
+    {
+      "path": "eval/data/gaokao2024_I",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3db4ac2cd4dcf5a7d07964745a34888e58620b2a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/3db4ac2cd4dcf5a7d07964745a34888e58620b2a"
+    },
+    {
+      "path": "eval/data/gaokao2024_I/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e9e8bb0c6b94bc9691992406144e3cbb9ee5465",
+      "size": 5539,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4e9e8bb0c6b94bc9691992406144e3cbb9ee5465"
+    },
+    {
+      "path": "eval/data/gaokao2024_II",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eda07f9ed333c25b4f37555394d14ba51a06f59e",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/eda07f9ed333c25b4f37555394d14ba51a06f59e"
+    },
+    {
+      "path": "eval/data/gaokao2024_II/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e2d1aecb2659dc6389a8ed939b82397a03470ce",
+      "size": 6078,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4e2d1aecb2659dc6389a8ed939b82397a03470ce"
+    },
+    {
+      "path": "eval/data/gaokao2024_mix",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bee1699d6763ec7e657fb1a0501b23b5b56aca1f",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/bee1699d6763ec7e657fb1a0501b23b5b56aca1f"
+    },
+    {
+      "path": "eval/data/gaokao2024_mix/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "596ba09931c970f842ff36b4dbad56efadb0b75c",
+      "size": 26662,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/596ba09931c970f842ff36b4dbad56efadb0b75c"
+    },
+    {
+      "path": "eval/data/gaokao_math_cloze",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f002c9467471d3ffad627532a03b6e4853be4af6",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/f002c9467471d3ffad627532a03b6e4853be4af6"
+    },
+    {
+      "path": "eval/data/gaokao_math_cloze/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ebe8379c59af7e18188be603e61ad31b66b085c",
+      "size": 38690,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2ebe8379c59af7e18188be603e61ad31b66b085c"
+    },
+    {
+      "path": "eval/data/gaokao_math_qa",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e2fcae6903b1689f6e235c1307fd180c0d5d5fa0",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/e2fcae6903b1689f6e235c1307fd180c0d5d5fa0"
+    },
+    {
+      "path": "eval/data/gaokao_math_qa/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa1d9df06b94c76fa4c173c8a291a1deda057969",
+      "size": 137661,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/aa1d9df06b94c76fa4c173c8a291a1deda057969"
+    },
+    {
+      "path": "eval/data/gsm8k",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cca1e02ef5a1c3ba586715d39d1ebc86fb9b49a6",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/cca1e02ef5a1c3ba586715d39d1ebc86fb9b49a6"
+    },
+    {
+      "path": "eval/data/gsm8k/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3e6e62b831b5fcbf0585d0dce75ccc5e4ccb691c",
+      "size": 761421,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3e6e62b831b5fcbf0585d0dce75ccc5e4ccb691c"
+    },
+    {
+      "path": "eval/data/gsm8k/train.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3c084d99a1f7a6613e4170411d4b02b6cdbdd35f",
+      "size": 4237986,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3c084d99a1f7a6613e4170411d4b02b6cdbdd35f"
+    },
+    {
+      "path": "eval/data/math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60744bcda4148fd358390703342aced3a6c06a98",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/60744bcda4148fd358390703342aced3a6c06a98"
+    },
+    {
+      "path": "eval/data/math/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9ef3334841057f53caac5522332e38391d3fb33b",
+      "size": 4416980,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9ef3334841057f53caac5522332e38391d3fb33b"
+    },
+    {
+      "path": "eval/data/math/train.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47bc5462da8374bdcf53a7339bd48a7e28567676",
+      "size": 7020123,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/47bc5462da8374bdcf53a7339bd48a7e28567676"
+    },
+    {
+      "path": "eval/data/math500",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9caddddc2763ea01b2e160a46b0da68f493ee96",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/c9caddddc2763ea01b2e160a46b0da68f493ee96"
+    },
+    {
+      "path": "eval/data/math500/test.jsonl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2376b9a194b46c0790e197c91b7249e5f88ac09b",
+      "size": 446564,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2376b9a194b46c0790e197c91b7249e5f88ac09b"
+    },
+    {
+      "path": "eval/data/mawps",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14685a3db4c00a872e2cf27cf6157d1cb39055fc",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/14685a3db4c00a872e2cf27cf6157d1cb39055fc"
+    },
+    {
+      "path": "eval/data/mawps/addsub.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d7b404817442a99a95877a5284d13b51ee246f09",
+      "size": 70911,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d7b404817442a99a95877a5284d13b51ee246f09"
+    },
+    {
+      "path": "eval/data/mawps/multiarith.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7f67c4fe224bddcefd7a5da6ad10bf70bb91830b",
+      "size": 109522,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7f67c4fe224bddcefd7a5da6ad10bf70bb91830b"
+    },
+    {
+      "path": "eval/data/mawps/singleeq.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "500289d28c1ad00e3fa42f3129b4da976ef6d492",
+      "size": 86536,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/500289d28c1ad00e3fa42f3129b4da976ef6d492"
+    },
+    {
+      "path": "eval/data/mawps/singleop.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ea7c4effef68f3de475191be4e46f2948e38a006",
+      "size": 75278,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ea7c4effef68f3de475191be4e46f2948e38a006"
+    },
+    {
+      "path": "eval/data/mawps/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c8993aec190a715ade7d66e6c78063b5823d4866",
+      "size": 402636,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c8993aec190a715ade7d66e6c78063b5823d4866"
+    },
+    {
+      "path": "eval/data/minerva_math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9032314ee19370274d477f659c6fa8c5605dfda",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/b9032314ee19370274d477f659c6fa8c5605dfda"
+    },
+    {
+      "path": "eval/data/minerva_math/README.md",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "19b534f5c5ce718d020cebcefea8e7fb90a59655",
+      "size": 132,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/19b534f5c5ce718d020cebcefea8e7fb90a59655"
+    },
+    {
+      "path": "eval/data/minerva_math/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "123c5cd351cac2b8ead5413bc084629d7ff651de",
+      "size": 247267,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/123c5cd351cac2b8ead5413bc084629d7ff651de"
+    },
+    {
+      "path": "eval/data/mmlu_stem",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1df6fbbb12a3659f4f834de860d3ec2ed00ac01d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/1df6fbbb12a3659f4f834de860d3ec2ed00ac01d"
+    },
+    {
+      "path": "eval/data/mmlu_stem/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "855b0a4be48552631f5da8dfd15f19bdd6dd8d9b",
+      "size": 1024981,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/855b0a4be48552631f5da8dfd15f19bdd6dd8d9b"
+    },
+    {
+      "path": "eval/data/olympiadbench",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f355717f332210570ecd15e6c4209daaff8d566d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/f355717f332210570ecd15e6c4209daaff8d566d"
+    },
+    {
+      "path": "eval/data/olympiadbench/test.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3ee4dfeaca0c01cb7bd874086ea643c49fdf78b5",
+      "size": 1587049,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3ee4dfeaca0c01cb7bd874086ea643c49fdf78b5"
+    },
+    {
+      "path": "eval/data/olympiadbench/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ec36280b1de8f5bbee92da696c2ae84f5f6e6beb",
+      "size": 1493870,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ec36280b1de8f5bbee92da696c2ae84f5f6e6beb"
+    },
+    {
+      "path": "eval/data/sat_math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "57ecd10bf5d29d0f553215f1f97d9c3e8c2b8457",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/57ecd10bf5d29d0f553215f1f97d9c3e8c2b8457"
+    },
+    {
+      "path": "eval/data/sat_math/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "085cada59f097d1b62ae6c20765fd7af9c846402",
+      "size": 14128,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/085cada59f097d1b62ae6c20765fd7af9c846402"
+    },
+    {
+      "path": "eval/data/svamp",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c6cefafded74c547db984e92e491838f02f56e3",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/0c6cefafded74c547db984e92e491838f02f56e3"
+    },
+    {
+      "path": "eval/data/svamp/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4bf27bca0eaa5c641c288c9f08da822bf330e37b",
+      "size": 280029,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4bf27bca0eaa5c641c288c9f08da822bf330e37b"
+    },
+    {
+      "path": "eval/data/tabmwp",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32a96e5b00f176d8f9ea0174485f0679bbc0460e",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/32a96e5b00f176d8f9ea0174485f0679bbc0460e"
+    },
+    {
+      "path": "eval/data/tabmwp/test.jsonl",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c686337440fecd60c23d3413d0a3acdb436f6180",
+      "size": 18219454,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c686337440fecd60c23d3413d0a3acdb436f6180"
+    },
+    {
+      "path": "eval/data_loader.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a7c3f1cf305d64f4c92df43432b49296f425da7f",
+      "size": 3347,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a7c3f1cf305d64f4c92df43432b49296f425da7f"
+    },
+    {
+      "path": "eval/evaluate.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "cee60453c184809201f1949c111f52d05b32e18b",
+      "size": 3975,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/cee60453c184809201f1949c111f52d05b32e18b"
+    },
+    {
+      "path": "eval/examples.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6ed25659346f0eb319a812ab01dd4757b984395b",
+      "size": 51401,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6ed25659346f0eb319a812ab01dd4757b984395b"
+    },
+    {
+      "path": "eval/grader.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1e18b37302c19a4b5230e0b8ec4e0ffe3f87d9e3",
+      "size": 11912,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1e18b37302c19a4b5230e0b8ec4e0ffe3f87d9e3"
+    },
+    {
+      "path": "eval/latex2sympy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29d16c91874e8adb82276d9ac16480a1022b0e4b",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/29d16c91874e8adb82276d9ac16480a1022b0e4b"
+    },
+    {
+      "path": "eval/latex2sympy/.coveragerc",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3aeb83f23022e378596d412727b4a4c5f5556468",
+      "size": 641,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3aeb83f23022e378596d412727b4a4c5f5556468"
+    },
+    {
+      "path": "eval/latex2sympy/.gitignore",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e49e83411da49c1c4ce3c5ef842903daf9bd49f8",
+      "size": 1821,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e49e83411da49c1c4ce3c5ef842903daf9bd49f8"
+    },
+    {
+      "path": "eval/latex2sympy/LICENSE.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6bbfda911b2afada41a568218e31a6502dc68f44",
+      "size": 1075,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6bbfda911b2afada41a568218e31a6502dc68f44"
+    },
+    {
+      "path": "eval/latex2sympy/PS.g4",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "51834a2e1e2f946032d4f5dc2c79432c325ff2b5",
+      "size": 16073,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/51834a2e1e2f946032d4f5dc2c79432c325ff2b5"
+    },
+    {
+      "path": "eval/latex2sympy/README.md",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2e8b92c8be199ec7013403601bc7cb155e0c6eea",
+      "size": 5309,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2e8b92c8be199ec7013403601bc7cb155e0c6eea"
+    },
+    {
+      "path": "eval/latex2sympy/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "28a11cfcbba00848e2d0e354b03de12848c1f1cc",
+      "size": 18,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/28a11cfcbba00848e2d0e354b03de12848c1f1cc"
+    },
+    {
+      "path": "eval/latex2sympy/antlr-4.11.1-complete.jar",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bb96df9510910763d68cc3a7aa6f44ab88e1cc0e",
+      "size": 3547867,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bb96df9510910763d68cc3a7aa6f44ab88e1cc0e"
+    },
+    {
+      "path": "eval/latex2sympy/asciimath_printer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dd1b676e632b8d5052f711769abae97a2f2738b1",
+      "size": 1698,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dd1b676e632b8d5052f711769abae97a2f2738b1"
+    },
+    {
+      "path": "eval/latex2sympy/description.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0064c1fc40ca353f03b55759cc8c4b6dddca3441",
+      "size": 4381,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0064c1fc40ca353f03b55759cc8c4b6dddca3441"
+    },
+    {
+      "path": "eval/latex2sympy/dev-requirements.in",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "80a487711e1796c2cb1802a8b3a22ac6a146b951",
+      "size": 88,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/80a487711e1796c2cb1802a8b3a22ac6a146b951"
+    },
+    {
+      "path": "eval/latex2sympy/dev-requirements.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4e2c43c6b7408d69a682bc0a81ea9430c38790ed",
+      "size": 1124,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4e2c43c6b7408d69a682bc0a81ea9430c38790ed"
+    },
+    {
+      "path": "eval/latex2sympy/gen",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b5d5114a45bd9ea131d5754fb7e679e48eb96e84",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/b5d5114a45bd9ea131d5754fb7e679e48eb96e84"
+    },
+    {
+      "path": "eval/latex2sympy/gen/PS.interp",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "82d050cee388443290fee4e89cb2db8c526f65e2",
+      "size": 39889,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/82d050cee388443290fee4e89cb2db8c526f65e2"
+    },
+    {
+      "path": "eval/latex2sympy/gen/PS.tokens",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d71163f4a5f47213410753e37fbe882dd3d82a73",
+      "size": 4638,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d71163f4a5f47213410753e37fbe882dd3d82a73"
+    },
+    {
+      "path": "eval/latex2sympy/gen/PSLexer.interp",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "675645c41b00aa546081545a08e397d276751028",
+      "size": 101389,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/675645c41b00aa546081545a08e397d276751028"
+    },
+    {
+      "path": "eval/latex2sympy/gen/PSLexer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a6f9882ec96cd50a52e4f1c896659e980d76dec3",
+      "size": 118575,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a6f9882ec96cd50a52e4f1c896659e980d76dec3"
+    },
+    {
+      "path": "eval/latex2sympy/gen/PSLexer.tokens",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d71163f4a5f47213410753e37fbe882dd3d82a73",
+      "size": 4638,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d71163f4a5f47213410753e37fbe882dd3d82a73"
+    },
+    {
+      "path": "eval/latex2sympy/gen/PSListener.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0f7632c80c2148d5ee0fc4ca1e1c6d32c7fe55d5",
+      "size": 14144,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0f7632c80c2148d5ee0fc4ca1e1c6d32c7fe55d5"
+    },
+    {
+      "path": "eval/latex2sympy/gen/PSParser.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b651b5071455e344acf8d2f181bc68ba0eb84838",
+      "size": 249713,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b651b5071455e344acf8d2f181bc68ba0eb84838"
+    },
+    {
+      "path": "eval/latex2sympy/gen/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "eval/latex2sympy/icon.png",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a569624f931d2eb21b1ee859015db92415ada81f",
+      "size": 11786,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a569624f931d2eb21b1ee859015db92415ada81f"
+    },
+    {
+      "path": "eval/latex2sympy/latex2sympy2.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "859a8c7041b7fadd1444e53e835c49271ce973ce",
+      "size": 40465,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/859a8c7041b7fadd1444e53e835c49271ce973ce"
+    },
+    {
+      "path": "eval/latex2sympy/requirements.in",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "49c5490feaffec36df5c5224952c58d98506fbf3",
+      "size": 29,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/49c5490feaffec36df5c5224952c58d98506fbf3"
+    },
+    {
+      "path": "eval/latex2sympy/requirements.txt",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d940f0ba21adaab0c76cd442b580c42384ce5443",
+      "size": 259,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d940f0ba21adaab0c76cd442b580c42384ce5443"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "affc6174a2c2fc22f87eef467bcdd8636ef5606a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/affc6174a2c2fc22f87eef467bcdd8636ef5606a"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/linalg_equations.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fa65ba73d1c0a9bd3e8b2f500e31ee6cc2803fbc",
+      "size": 410,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/fa65ba73d1c0a9bd3e8b2f500e31ee6cc2803fbc"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/linalg_span.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2839139089d489d732e1ed61229b47109148a9d4",
+      "size": 730,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2839139089d489d732e1ed61229b47109148a9d4"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/matrix.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9aed3c2b13a6f6c879e49f3311c70b3d0674080f",
+      "size": 1557,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9aed3c2b13a6f6c879e49f3311c70b3d0674080f"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/matrix_placeholders.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "79cb672681a67063011b0d7a1f1ab1d431246ea8",
+      "size": 2202,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/79cb672681a67063011b0d7a1f1ab1d431246ea8"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/sandbox.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2c411001e271f3e935b38c0e8cec5ac0f2f097e9",
+      "size": 853,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2c411001e271f3e935b38c0e8cec5ac0f2f097e9"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/sandbox_equality.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5e3f444c77dd5fd1b948a6973ba66a27f10b1fbd",
+      "size": 2369,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5e3f444c77dd5fd1b948a6973ba66a27f10b1fbd"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/sectan.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0e0c7aab99365d341ad997b9c444fc7cd0b729bd",
+      "size": 1660,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0e0c7aab99365d341ad997b9c444fc7cd0b729bd"
+    },
+    {
+      "path": "eval/latex2sympy/sandbox/vector.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5b48aee56e4d34c5895be6fa5a254cbc85fb572e",
+      "size": 1560,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5b48aee56e4d34c5895be6fa5a254cbc85fb572e"
+    },
+    {
+      "path": "eval/latex2sympy/scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5a78b745c514c5d6b481a9593dc45fb029047fc",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/a5a78b745c514c5d6b481a9593dc45fb029047fc"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/compile.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "566d911dc0511e69e79d65916d65f1e148b75b6c",
+      "size": 231,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/566d911dc0511e69e79d65916d65f1e148b75b6c"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/coverage-ci.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "335d4c39176e174e127b0aff47af084738bbceb8",
+      "size": 135,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/335d4c39176e174e127b0aff47af084738bbceb8"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/coverage.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a704a2148d4a7809bbade96df989d65243a5f004",
+      "size": 641,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a704a2148d4a7809bbade96df989d65243a5f004"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/pre-commit",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a5ae67c3fc35258f0405801352f9d6dc15c79a51",
+      "size": 861,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a5ae67c3fc35258f0405801352f9d6dc15c79a51"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/pre-push",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "123ce64f70fa5b8e7d4bd83d9b54b20acb5dbd13",
+      "size": 586,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/123ce64f70fa5b8e7d4bd83d9b54b20acb5dbd13"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/publish.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "dc12a0371da0d1522abfbe51d54fe86ed8b7a273",
+      "size": 61,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dc12a0371da0d1522abfbe51d54fe86ed8b7a273"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/setup-hooks.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "760dfd59627541125535b017627036417addea86",
+      "size": 75,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/760dfd59627541125535b017627036417addea86"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/setup.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b7e71c937937a40d48f549475bb2a1bdaafe4b77",
+      "size": 877,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b7e71c937937a40d48f549475bb2a1bdaafe4b77"
+    },
+    {
+      "path": "eval/latex2sympy/scripts/test.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "20d6b0191406e77b312156bd2d538cde1e533172",
+      "size": 645,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/20d6b0191406e77b312156bd2d538cde1e533172"
+    },
+    {
+      "path": "eval/latex2sympy/setup.cfg",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "80fb81ba21b4547c76069f95d5d9e57e79bf7cbc",
+      "size": 50,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/80fb81ba21b4547c76069f95d5d9e57e79bf7cbc"
+    },
+    {
+      "path": "eval/latex2sympy/setup.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2df9dd2c5c49a54af50d34991d1f782f35ba20ae",
+      "size": 1682,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2df9dd2c5c49a54af50d34991d1f782f35ba20ae"
+    },
+    {
+      "path": "eval/latex2sympy/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1227fbc0f0cb88824aa21cff7c0f60ef60657c9",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/c1227fbc0f0cb88824aa21cff7c0f60ef60657c9"
+    },
+    {
+      "path": "eval/latex2sympy/tests/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "eval/latex2sympy/tests/abs_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "37d130c64909798b87587b7cd62c6b5dd0b2b244",
+      "size": 773,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/37d130c64909798b87587b7cd62c6b5dd0b2b244"
+    },
+    {
+      "path": "eval/latex2sympy/tests/all_bad_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b136313d347bfbb694d0117b7e3694fd685c79e8",
+      "size": 1767,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b136313d347bfbb694d0117b7e3694fd685c79e8"
+    },
+    {
+      "path": "eval/latex2sympy/tests/all_good_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6d8aa1dbd2dfe2f2b12eef8f36adda1566d04e60",
+      "size": 13138,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6d8aa1dbd2dfe2f2b12eef8f36adda1566d04e60"
+    },
+    {
+      "path": "eval/latex2sympy/tests/atom_expr_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "23b69b4763d508c37bbb7d6d6270ac77897c0fe0",
+      "size": 2245,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/23b69b4763d508c37bbb7d6d6270ac77897c0fe0"
+    },
+    {
+      "path": "eval/latex2sympy/tests/binomial_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2fec0107bad80ecf723d204b3bc37bd97b5f60f8",
+      "size": 902,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2fec0107bad80ecf723d204b3bc37bd97b5f60f8"
+    },
+    {
+      "path": "eval/latex2sympy/tests/ceil_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f4c419ce400568bc5a357c88064c094c086353aa",
+      "size": 1474,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f4c419ce400568bc5a357c88064c094c086353aa"
+    },
+    {
+      "path": "eval/latex2sympy/tests/complex_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "21971418455010b422826501ac1bcb1d4197748e",
+      "size": 447,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/21971418455010b422826501ac1bcb1d4197748e"
+    },
+    {
+      "path": "eval/latex2sympy/tests/context.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f48cfd37b209f2c9d31bc0198d638007700bd2d5",
+      "size": 3133,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f48cfd37b209f2c9d31bc0198d638007700bd2d5"
+    },
+    {
+      "path": "eval/latex2sympy/tests/exp_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1ef20c616def04d76372ae4b816973344a22f228",
+      "size": 1203,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ef20c616def04d76372ae4b816973344a22f228"
+    },
+    {
+      "path": "eval/latex2sympy/tests/floor_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "39617822f28382bd44cd35e20600159092a28626",
+      "size": 1482,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/39617822f28382bd44cd35e20600159092a28626"
+    },
+    {
+      "path": "eval/latex2sympy/tests/gcd_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a45a21589babe29e2e4fbea5ba501f7cdc7cb2c5",
+      "size": 10004,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a45a21589babe29e2e4fbea5ba501f7cdc7cb2c5"
+    },
+    {
+      "path": "eval/latex2sympy/tests/greek_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1e23a0d18bdd97e52a8f84fb4584825e4e179601",
+      "size": 445,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1e23a0d18bdd97e52a8f84fb4584825e4e179601"
+    },
+    {
+      "path": "eval/latex2sympy/tests/grouping_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "139f3f122edf8f3ee4e8c1d592de5a75736b2072",
+      "size": 2248,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/139f3f122edf8f3ee4e8c1d592de5a75736b2072"
+    },
+    {
+      "path": "eval/latex2sympy/tests/lcm_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1e10ce5b56dc634c814cca5a8699fc1dd649716c",
+      "size": 9873,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1e10ce5b56dc634c814cca5a8699fc1dd649716c"
+    },
+    {
+      "path": "eval/latex2sympy/tests/left_right_cdot_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "5533b59fa0f0d2d39929b488f2680ac875bd75b1",
+      "size": 198,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5533b59fa0f0d2d39929b488f2680ac875bd75b1"
+    },
+    {
+      "path": "eval/latex2sympy/tests/linalg_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d6dea565c3494de236ac4bb9e78d1c88f4c21d97",
+      "size": 728,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d6dea565c3494de236ac4bb9e78d1c88f4c21d97"
+    },
+    {
+      "path": "eval/latex2sympy/tests/max_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d359c69bd0c58e213e6f7899f130f411ebb8ac15",
+      "size": 3756,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d359c69bd0c58e213e6f7899f130f411ebb8ac15"
+    },
+    {
+      "path": "eval/latex2sympy/tests/min_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f60a5cdd80e66523cbc832a62f3239d256c08d45",
+      "size": 3756,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f60a5cdd80e66523cbc832a62f3239d256c08d45"
+    },
+    {
+      "path": "eval/latex2sympy/tests/mod_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "972fe7abdcdb6e6615241026de010d05d2c14de0",
+      "size": 3261,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/972fe7abdcdb6e6615241026de010d05d2c14de0"
+    },
+    {
+      "path": "eval/latex2sympy/tests/overline_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a75103e8b9370f7c107904f757ea96a1c1f58538",
+      "size": 221,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a75103e8b9370f7c107904f757ea96a1c1f58538"
+    },
+    {
+      "path": "eval/latex2sympy/tests/pi_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "050190de4a38ead6f187923d6e2e2b8d6c672c87",
+      "size": 404,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/050190de4a38ead6f187923d6e2e2b8d6c672c87"
+    },
+    {
+      "path": "eval/latex2sympy/tests/trig_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4689ea5d7e87334bdb6fb21ebb43615483a02df5",
+      "size": 526,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4689ea5d7e87334bdb6fb21ebb43615483a02df5"
+    },
+    {
+      "path": "eval/latex2sympy/tests/variable_test.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9fc13c7e74d6db668bfd318e7dbb298d765352ed",
+      "size": 4274,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9fc13c7e74d6db668bfd318e7dbb298d765352ed"
+    },
+    {
+      "path": "eval/math_eval.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ab69870c0313b019be0049aab3f01afa84bfa0ae",
+      "size": 15398,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ab69870c0313b019be0049aab3f01afa84bfa0ae"
+    },
+    {
+      "path": "eval/math_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f30ed940bb787d44d75409edd63e5f616e9fafc6",
+      "size": 10768,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f30ed940bb787d44d75409edd63e5f616e9fafc6"
+    },
+    {
+      "path": "eval/model_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1097d75214e2f436df25aa60020015e1205807e7",
+      "size": 10934,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1097d75214e2f436df25aa60020015e1205807e7"
+    },
+    {
+      "path": "eval/output",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67b1f68ed127d1f38d39479f2671afbe2395a7f4",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/67b1f68ed127d1f38d39479f2671afbe2395a7f4"
+    },
+    {
+      "path": "eval/output/aime24",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "617b30f0120951ae2ce54032c4e807f5491bffda",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/617b30f0120951ae2ce54032c4e807f5491bffda"
+    },
+    {
+      "path": "eval/output/aime24/test_qwen25-math-cot-ft_-1_seed42_t0.0_s0_e-1_metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a447b7722d3a7c0b2154b7dd047f171bd5a441cc",
+      "size": 193,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a447b7722d3a7c0b2154b7dd047f171bd5a441cc"
+    },
+    {
+      "path": "eval/output/amc23",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c0d373d2cfb500c12709fe459053f66cf547611",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/2c0d373d2cfb500c12709fe459053f66cf547611"
+    },
+    {
+      "path": "eval/output/amc23/test_qwen25-math-cot-ft_-1_seed42_t0.0_s0_e-1_metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f99cfb5556703554ec6ddf5a3c0403543bd07e8",
+      "size": 194,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3f99cfb5556703554ec6ddf5a3c0403543bd07e8"
+    },
+    {
+      "path": "eval/output/math500",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c58fdd122bb28115e6b3f1b0acca218c311d4f9f",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/c58fdd122bb28115e6b3f1b0acca218c311d4f9f"
+    },
+    {
+      "path": "eval/output/math500/test_qwen25-math-cot-ft_-1_seed42_t0.0_s0_e-1_metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91535daac8e8d87374dc86ec896854cf155e90e0",
+      "size": 196,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/91535daac8e8d87374dc86ec896854cf155e90e0"
+    },
+    {
+      "path": "eval/output/minerva_math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9d4fa35b767f0ddf9dc1bc4cf3514568b61535f",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/e9d4fa35b767f0ddf9dc1bc4cf3514568b61535f"
+    },
+    {
+      "path": "eval/output/minerva_math/test_qwen25-math-cot-ft_-1_seed42_t0.0_s0_e-1_metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3935861b2bd795dcec29d5c03eaf44a86acd6a1b",
+      "size": 745,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3935861b2bd795dcec29d5c03eaf44a86acd6a1b"
+    },
+    {
+      "path": "eval/output/olympiadbench",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99d7f4666413431c5fb03022f83bacd9f451dafe",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/99d7f4666413431c5fb03022f83bacd9f451dafe"
+    },
+    {
+      "path": "eval/output/olympiadbench/test_qwen25-math-cot-ft_-1_seed42_t0.0_s0_e-1_metrics.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6d57b9ebda796ecf8b42757b7b1794e324e8d4d",
+      "size": 195,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a6d57b9ebda796ecf8b42757b7b1794e324e8d4d"
+    },
+    {
+      "path": "eval/parser.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "2730625fe034ae54f83d2132688cb8c43f300e7e",
+      "size": 22790,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2730625fe034ae54f83d2132688cb8c43f300e7e"
+    },
+    {
+      "path": "eval/process.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4f37b7c35af4213c9ff01ae9b9e34e25a83d34e",
+      "size": 1239,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d4f37b7c35af4213c9ff01ae9b9e34e25a83d34e"
+    },
+    {
+      "path": "eval/python_executor.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4e8f600868c533bcfefe3d0ed34db3d287bf8199",
+      "size": 7668,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4e8f600868c533bcfefe3d0ed34db3d287bf8199"
+    },
+    {
+      "path": "eval/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3641938348dcfeebbefa059d0a07ffae891fdf3",
+      "size": 219,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c3641938348dcfeebbefa059d0a07ffae891fdf3"
+    },
+    {
+      "path": "eval/rm_maj_eval.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b41d5a809999f8980e24aa17191cc14a0a436aea",
+      "size": 3139,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b41d5a809999f8980e24aa17191cc14a0a436aea"
+    },
+    {
+      "path": "eval/sh",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4aec5fbc526c01c8f60aec6ff7343c959c96292d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/4aec5fbc526c01c8f60aec6ff7343c959c96292d"
+    },
+    {
+      "path": "eval/sh/collect_results.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70d66c74577b659aa07d053ee9d6679b78c736a4",
+      "size": 19371,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/70d66c74577b659aa07d053ee9d6679b78c736a4"
+    },
+    {
+      "path": "eval/sh/convert_and_evaluate_gpu.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3eb8d07f325789742f3d705f4794c0cb56284140",
+      "size": 4719,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3eb8d07f325789742f3d705f4794c0cb56284140"
+    },
+    {
+      "path": "eval/sh/eval.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "203143899c1a81fc8b056c6c9015a8b6929b488a",
+      "size": 1012,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/203143899c1a81fc8b056c6c9015a8b6929b488a"
+    },
+    {
+      "path": "eval/sh/eval_single_node.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69d9e341ec8fa48ba6302fbcef5d128d38a005a2",
+      "size": 1596,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/69d9e341ec8fa48ba6302fbcef5d128d38a005a2"
+    },
+    {
+      "path": "eval/sh/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dd76f73e6f855fcc000dc9c71e90af43cd60b5e",
+      "size": 252,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3dd76f73e6f855fcc000dc9c71e90af43cd60b5e"
+    },
+    {
+      "path": "eval/trajectory.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "7dc38629ca516f758a1826d57eea906c8ce7d062",
+      "size": 6706,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7dc38629ca516f758a1826d57eea906c8ce7d062"
+    },
+    {
+      "path": "eval/utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1f9b5b7ce0013479e84416c3d0e8e5ded764892c",
+      "size": 9138,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1f9b5b7ce0013479e84416c3d0e8e5ded764892c"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "048e0c8e3add73649f56f3c04916e05c4b1b53c1",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/048e0c8e3add73649f56f3c04916e05c4b1b53c1"
+    },
+    {
+      "path": "examples/data_preprocess",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a97a6c8cdad7d42f2f40a5baf88b2f2465b2a40a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/a97a6c8cdad7d42f2f40a5baf88b2f2465b2a40a"
+    },
+    {
+      "path": "examples/data_preprocess/full_hh_rlhf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07e0884cb916cc5327d39955fcbbb76a596d60c3",
+      "size": 4962,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/07e0884cb916cc5327d39955fcbbb76a596d60c3"
+    },
+    {
+      "path": "examples/data_preprocess/gsm8k.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b82d7d71ad588d6b1f4ca01b6ea12fadcc2c3e3f",
+      "size": 2965,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b82d7d71ad588d6b1f4ca01b6ea12fadcc2c3e3f"
+    },
+    {
+      "path": "examples/data_preprocess/hellaswag.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c8e8f55916ffcaa4c8fbedb98c3c710a504cb2",
+      "size": 3358,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/39c8e8f55916ffcaa4c8fbedb98c3c710a504cb2"
+    },
+    {
+      "path": "examples/data_preprocess/math_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc70d994ce60748af966217fc49058cf7a861b33",
+      "size": 2995,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dc70d994ce60748af966217fc49058cf7a861b33"
+    },
+    {
+      "path": "examples/generation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1ce50da86d5ec365c91b04b742d02185d4b6c70c",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/1ce50da86d5ec365c91b04b742d02185d4b6c70c"
+    },
+    {
+      "path": "examples/generation/run_deepseek_v2_lite_math.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "216b33d4ce9ad8f168bd5c2c0c03598b52acd359",
+      "size": 583,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/216b33d4ce9ad8f168bd5c2c0c03598b52acd359"
+    },
+    {
+      "path": "examples/grpo_trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fdcc4bca556d7e4562a1485c582a6312d5068013",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/fdcc4bca556d7e4562a1485c582a6312d5068013"
+    },
+    {
+      "path": "examples/grpo_trainer/run_deepseek7b_llm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21562caa2f767715777ee2924ba054f44b67894e",
+      "size": 1655,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/21562caa2f767715777ee2924ba054f44b67894e"
+    },
+    {
+      "path": "examples/grpo_trainer/run_deepseek7b_llm_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2f83c52b91f264a7617bcc91341dd44e6f4c31b",
+      "size": 1589,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e2f83c52b91f264a7617bcc91341dd44e6f4c31b"
+    },
+    {
+      "path": "examples/grpo_trainer/run_qwen2-7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6028b223da1b6d47e0871785a0503ee71f739dfd",
+      "size": 1686,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6028b223da1b6d47e0871785a0503ee71f739dfd"
+    },
+    {
+      "path": "examples/grpo_trainer/run_qwen2-7b_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae18603dd62bc072c91123712cddc9a280318a68",
+      "size": 1646,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ae18603dd62bc072c91123712cddc9a280318a68"
+    },
+    {
+      "path": "examples/ppo_trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5aac6cf3313a771b9ca4f071c89d12be6bf8e6f1",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/5aac6cf3313a771b9ca4f071c89d12be6bf8e6f1"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek7b_llm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d3a6fb37b35086010a89408dfce8b0e01475b6f",
+      "size": 1767,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0d3a6fb37b35086010a89408dfce8b0e01475b6f"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek7b_llm_sp2.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6863b66c908df9a1af19369b754f8b44d3718844",
+      "size": 1880,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6863b66c908df9a1af19369b754f8b44d3718844"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek_full_hh_rlhf.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82df706bb9e8b7e3454f9c45fc6864bf7051618d",
+      "size": 1749,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/82df706bb9e8b7e3454f9c45fc6864bf7051618d"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek_math_gsm8k_megatron.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "82459115ba1eddb065acc6cad7eecc4467bce97f",
+      "size": 1664,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/82459115ba1eddb065acc6cad7eecc4467bce97f"
+    },
+    {
+      "path": "examples/ppo_trainer/run_deepseek_megatron.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb915d23aeb790c275d5ba68df7c9b3c733afbf2",
+      "size": 1944,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bb915d23aeb790c275d5ba68df7c9b3c733afbf2"
+    },
+    {
+      "path": "examples/ppo_trainer/run_gemma.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1863e22b06230380bdf124d99bf41692dcd6e7d1",
+      "size": 1664,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1863e22b06230380bdf124d99bf41692dcd6e7d1"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a7ab9f1869c593f90c72c8ceb59e0c00df8277c",
+      "size": 2008,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3a7ab9f1869c593f90c72c8ceb59e0c00df8277c"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b_math_gsm8k_megatron.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d162c6b6c71936b317fdd86ce36fab03a888da6",
+      "size": 1661,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9d162c6b6c71936b317fdd86ce36fab03a888da6"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b_rm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "988741f620afe09ef0f617e8ee75b9f4119980a1",
+      "size": 3085,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/988741f620afe09ef0f617e8ee75b9f4119980a1"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b_rm_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fca90a2eba113179d0db96b4da0914491ec47045",
+      "size": 2522,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/fca90a2eba113179d0db96b4da0914491ec47045"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2-7b_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d76c9305c415471b11aa62361143c0989919f77",
+      "size": 2120,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6d76c9305c415471b11aa62361143c0989919f77"
+    },
+    {
+      "path": "examples/ppo_trainer/run_qwen2.5-32b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd7c42da8ffbf7aba0ebce7c612d32a355c46e7e",
+      "size": 2084,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bd7c42da8ffbf7aba0ebce7c612d32a355c46e7e"
+    },
+    {
+      "path": "examples/ppo_trainer/verl_getting_started.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9401132919b19400476a7580930a20cbbd0f218",
+      "size": 254153,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d9401132919b19400476a7580930a20cbbd0f218"
+    },
+    {
+      "path": "examples/ray",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a59a05e6728753fdc5b6dae17744e8ff082bd053",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/a59a05e6728753fdc5b6dae17744e8ff082bd053"
+    },
+    {
+      "path": "examples/ray/tutorial.ipynb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37784f6f9528be290cfbb9a685c78e4ea5a6d294",
+      "size": 31455,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/37784f6f9528be290cfbb9a685c78e4ea5a6d294"
+    },
+    {
+      "path": "examples/remax_trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efe9bbdcc3dd335d85cbf92851dd98cc6bc9ac37",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/efe9bbdcc3dd335d85cbf92851dd98cc6bc9ac37"
+    },
+    {
+      "path": "examples/remax_trainer/run_qwen2.5-3b_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc5b75b7750363c5ac893434d12a10358679f63d",
+      "size": 1711,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dc5b75b7750363c5ac893434d12a10358679f63d"
+    },
+    {
+      "path": "examples/remax_trainer/run_qwen2.5-7b_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "377a60c796c718c9cc45804724c7ed6cb8fa1d9a",
+      "size": 1713,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/377a60c796c718c9cc45804724c7ed6cb8fa1d9a"
+    },
+    {
+      "path": "examples/rloo_trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da4a92d555e506d1636615d8bac5defad88e20f8",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/da4a92d555e506d1636615d8bac5defad88e20f8"
+    },
+    {
+      "path": "examples/rloo_trainer/run_qwen2-7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c0a4a6de1bea1a057d38067df13f474d29ecd9a",
+      "size": 1747,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0c0a4a6de1bea1a057d38067df13f474d29ecd9a"
+    },
+    {
+      "path": "examples/sft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4387e9db0d528092bb055d1bc3f700bf96303f69",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/4387e9db0d528092bb055d1bc3f700bf96303f69"
+    },
+    {
+      "path": "examples/sft/gsm8k",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a860de57e3eb91b4a7b391546fdc4bb0c1fee25",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/3a860de57e3eb91b4a7b391546fdc4bb0c1fee25"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_deepseek_6b7.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f11965a69892ff89defe8feb2af100da4dfa4c71",
+      "size": 949,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f11965a69892ff89defe8feb2af100da4dfa4c71"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_gemma_2b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d7917d9e867fbb45379d49f4ba1bf01275fc8df",
+      "size": 932,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6d7917d9e867fbb45379d49f4ba1bf01275fc8df"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_gemma_7b.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdf4435bb29e27715b0a8f3d9912ff513e927b99",
+      "size": 822,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/fdf4435bb29e27715b0a8f3d9912ff513e927b99"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_qwen_05_peft.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3ba61c3a6e0107e4bfc7144590c627d533a330a9",
+      "size": 1128,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3ba61c3a6e0107e4bfc7144590c627d533a330a9"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_qwen_05_sp2.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "a27cef1d48dd78f0a0baa1e74d2e0dadeee4fecb",
+      "size": 1014,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a27cef1d48dd78f0a0baa1e74d2e0dadeee4fecb"
+    },
+    {
+      "path": "examples/sft/gsm8k/run_qwen_05_sp2_liger.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6ef528fdcce7e638f20c8794c444897474e7e456",
+      "size": 1010,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6ef528fdcce7e638f20c8794c444897474e7e456"
+    },
+    {
+      "path": "examples/slurm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0562cf182790c43a6d0aac259c6236cd3dfc9a3",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/c0562cf182790c43a6d0aac259c6236cd3dfc9a3"
+    },
+    {
+      "path": "examples/slurm/ray_on_slurm.slurm",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd5889654d4b1e14883ec0f1a2cd4588c15355dc",
+      "size": 3452,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bd5889654d4b1e14883ec0f1a2cd4588c15355dc"
+    },
+    {
+      "path": "examples/split_placement",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62c30a911c4a19d29a6e45276396df8ef5369088",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/62c30a911c4a19d29a6e45276396df8ef5369088"
+    },
+    {
+      "path": "examples/split_placement/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a552972594f9ddd142d6889cdee1a5def55c2939",
+      "size": 2717,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a552972594f9ddd142d6889cdee1a5def55c2939"
+    },
+    {
+      "path": "examples/split_placement/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ee922ecea5d9ca69cd1d3e1de048cce37475291",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/7ee922ecea5d9ca69cd1d3e1de048cce37475291"
+    },
+    {
+      "path": "examples/split_placement/config/ppo_trainer_split.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6fd08d3eb55143ab9d4854511f94f4060adef38",
+      "size": 6269,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d6fd08d3eb55143ab9d4854511f94f4060adef38"
+    },
+    {
+      "path": "examples/split_placement/main_ppo_split.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1727001b8ffe11f32e131bdbae6e16f481144ca3",
+      "size": 7751,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1727001b8ffe11f32e131bdbae6e16f481144ca3"
+    },
+    {
+      "path": "examples/split_placement/run_deepseek7b_llm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a47260f4a2799f8a0a5d8dda8f929d09558eaa",
+      "size": 1569,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e0a47260f4a2799f8a0a5d8dda8f929d09558eaa"
+    },
+    {
+      "path": "examples/split_placement/split_monkey_patch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfcbc5c2e03f36ada623cb8597a0f653e3d2c4d4",
+      "size": 9544,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dfcbc5c2e03f36ada623cb8597a0f653e3d2c4d4"
+    },
+    {
+      "path": "math500.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0de31491229226e156ceea3dbc52bb14760f117",
+      "size": 63799,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b0de31491229226e156ceea3dbc52bb14760f117"
+    },
+    {
+      "path": "nccl.conf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9fead2ca95faede1af5b0585f158b789a54f7335",
+      "size": 287,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9fead2ca95faede1af5b0585f158b789a54f7335"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "659b05942c099d9b63501c33f570e4452775ebe9",
+      "size": 2389,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/659b05942c099d9b63501c33f570e4452775ebe9"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "430c38cee1611d860503872b3a1a686e5696ffb5",
+      "size": 281,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/430c38cee1611d860503872b3a1a686e5696ffb5"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "15c9a018607a8915033013048dd01f758d15b1dd",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/15c9a018607a8915033013048dd01f758d15b1dd"
+    },
+    {
+      "path": "scripts/format.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed49d6f116b0fe5152cbe6c2ab5c36c4688f79b1",
+      "size": 124,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ed49d6f116b0fe5152cbe6c2ab5c36c4688f79b1"
+    },
+    {
+      "path": "scripts/model_merger.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa32740a9472134dd59ce108cc6ce72b831a133c",
+      "size": 6326,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/aa32740a9472134dd59ce108cc6ce72b831a133c"
+    },
+    {
+      "path": "setup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e687d9571bff0ee702b96f385bd4029cf4e9f6ba",
+      "size": 2196,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e687d9571bff0ee702b96f385bd4029cf4e9f6ba"
+    },
+    {
+      "path": "tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e849b70bf4c97232b949a3e73ce0d45918219fe5",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/e849b70bf4c97232b949a3e73ce0d45918219fe5"
+    },
+    {
+      "path": "tests/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a7aadbc9d946451bd151abc3e306357eda8140a",
+      "size": 599,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7a7aadbc9d946451bd151abc3e306357eda8140a"
+    },
+    {
+      "path": "tests/checkpoint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca0c138be54a073d7e2ad6522a6cd08c664095ff",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/ca0c138be54a073d7e2ad6522a6cd08c664095ff"
+    },
+    {
+      "path": "tests/checkpoint/test_fsdp_ckpt.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8e0bcc18a89e751c1207d92e36b8ef238e8979e",
+      "size": 4868,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c8e0bcc18a89e751c1207d92e36b8ef238e8979e"
+    },
+    {
+      "path": "tests/distro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f009142647e3a457a2d8837c371a80b3ffa784fc",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/f009142647e3a457a2d8837c371a80b3ffa784fc"
+    },
+    {
+      "path": "tests/distro/requirements.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f22a39beee66a1642c186f960806fceac35b525",
+      "size": 3550,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8f22a39beee66a1642c186f960806fceac35b525"
+    },
+    {
+      "path": "tests/e2e",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09ac23931144df9e373b8cc19561196b99ca6365",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/09ac23931144df9e373b8cc19561196b99ca6365"
+    },
+    {
+      "path": "tests/e2e/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b9bdc83a932d428d7f3aec3af41c47a729f7c8c7",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/b9bdc83a932d428d7f3aec3af41c47a729f7c8c7"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1ae4caf6bab21ee76fb3ec57bc2e6a24650fd07",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/d1ae4caf6bab21ee76fb3ec57bc2e6a24650fd07"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data/create_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e023a29175b1e7a4f0cb09e54da63fc1263b8e77",
+      "size": 1774,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e023a29175b1e7a4f0cb09e54da63fc1263b8e77"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data/test.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0729dc3d6ea7662a837d0da2b92cac3731a1b69",
+      "size": 3150,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d0729dc3d6ea7662a837d0da2b92cac3731a1b69"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/data/train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a03a61a8142263c6e43e0fbf843dce40c5a3a68",
+      "size": 6225,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0a03a61a8142263c6e43e0fbf843dce40c5a3a68"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51d883a5afb3b25528a49428e9020b88fadbe52f",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/51d883a5afb3b25528a49428e9020b88fadbe52f"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87944c51fc10669f6486b5e0ca235a460857a095",
+      "size": 674,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/87944c51fc10669f6486b5e0ca235a460857a095"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/create_model_tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a3135f0c5fb2cf24aed917d82eab1c2bdbd0864",
+      "size": 2608,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9a3135f0c5fb2cf24aed917d82eab1c2bdbd0864"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/generation_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "578d3750579ed4d19b57fd54c1297897f36d9e4d",
+      "size": 111,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/578d3750579ed4d19b57fd54c1297897f36d9e4d"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/model.safetensors",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "509e6e97c5040755b5ce0af0dbe4981ee6fefb0a",
+      "size": 1595672,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/509e6e97c5040755b5ce0af0dbe4981ee6fefb0a"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/model/tokenizer_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d01bf75f1db77250240841c306ddabece3dce3ec",
+      "size": 645,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d01bf75f1db77250240841c306ddabece3dce3ec"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ccb17c40b3027ad7fe82afb54f4726258d60c7eb",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/ccb17c40b3027ad7fe82afb54f4726258d60c7eb"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9b3f9e2e3c5bfc5cfd6984fe5a102cbd74eefcf",
+      "size": 1299,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a9b3f9e2e3c5bfc5cfd6984fe5a102cbd74eefcf"
+    },
+    {
+      "path": "tests/e2e/arithmetic_sequence/rl/main_trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "687cddd181b0f9036fdf9f1807dc9348e60c42eb",
+      "size": 5450,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/687cddd181b0f9036fdf9f1807dc9348e60c42eb"
+    },
+    {
+      "path": "tests/e2e/check_results.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c12e2493e1ddb0976d968f0b9300ee90d4794c1d",
+      "size": 1651,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c12e2493e1ddb0976d968f0b9300ee90d4794c1d"
+    },
+    {
+      "path": "tests/e2e/envs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e75d57051b23f0bbe5f32fe7c3b0aa215741d06",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/0e75d57051b23f0bbe5f32fe7c3b0aa215741d06"
+    },
+    {
+      "path": "tests/e2e/envs/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d39147942f250ca04a95cb0a9b971f271762f20",
+      "size": 677,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7d39147942f250ca04a95cb0a9b971f271762f20"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4a067a225015582853248b722b1fa4471b4dfbe",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/d4a067a225015582853248b722b1fa4471b4dfbe"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e3aa76da5b8d6cc870a366c5444d0c2e4e3f3ba",
+      "size": 905,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3e3aa76da5b8d6cc870a366c5444d0c2e4e3f3ba"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion/task.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7322027c78b2f083490f4571687147437ed32dec",
+      "size": 6354,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7322027c78b2f083490f4571687147437ed32dec"
+    },
+    {
+      "path": "tests/e2e/envs/digit_completion/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b8d94ee3461d7350e0a471f09b77d907bcfe543",
+      "size": 5702,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1b8d94ee3461d7350e0a471f09b77d907bcfe543"
+    },
+    {
+      "path": "tests/e2e/run_deepseek_megatron.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f86c96b308e68f214c06b3a2dd0b115092544bed",
+      "size": 1766,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f86c96b308e68f214c06b3a2dd0b115092544bed"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_function_rm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37f041c644e7791cb03bc35d6fe0cc12f449672c",
+      "size": 1723,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/37f041c644e7791cb03bc35d6fe0cc12f449672c"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_function_rm_grpo.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9eb4aca8b08037fde65d0a945cd4b36cf182c5c",
+      "size": 1398,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f9eb4aca8b08037fde65d0a945cd4b36cf182c5c"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_function_rm_no_rmpad.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbe4fcec1d7c7ce392c5f6fa72465e87d9a2200c",
+      "size": 1720,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/cbe4fcec1d7c7ce392c5f6fa72465e87d9a2200c"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_function_rm_remax.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eb5f775242655d10deb933a21fcdba5c92aabc1",
+      "size": 1399,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1eb5f775242655d10deb933a21fcdba5c92aabc1"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e908d7a4e58c80ce6274d56c664f93ec58e6747",
+      "size": 2084,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3e908d7a4e58c80ce6274d56c664f93ec58e6747"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm_liger_kernel.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca6a5d108180c62321e36006647ba6012172a758",
+      "size": 2094,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ca6a5d108180c62321e36006647ba6012172a758"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm_no_rmpad.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97f270c52d9a9d329aa16ac49f56826cc4e243f5",
+      "size": 2087,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/97f270c52d9a9d329aa16ac49f56826cc4e243f5"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm_seq_balance.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efe279fb5b129499f3fb84767bf947f399852bc2",
+      "size": 2231,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/efe279fb5b129499f3fb84767bf947f399852bc2"
+    },
+    {
+      "path": "tests/e2e/run_qwen_gsm8k_model_rm_ulysses.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "626f6349749a903079bcd349bf00bba13cfac702",
+      "size": 2395,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/626f6349749a903079bcd349bf00bba13cfac702"
+    },
+    {
+      "path": "tests/e2e/run_qwen_megatron.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1da46ed14bc2c25d7cbb6e48a9258923509ba08f",
+      "size": 1732,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1da46ed14bc2c25d7cbb6e48a9258923509ba08f"
+    },
+    {
+      "path": "tests/e2e/run_ray_trainer.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5688d8490f103b10bd919d3804d11ea3686114cb",
+      "size": 1471,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5688d8490f103b10bd919d3804d11ea3686114cb"
+    },
+    {
+      "path": "tests/e2e/run_ray_trainer_fire_sampling.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c3cb5a546adaf730a98cf71942a6d082d55e644",
+      "size": 1556,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8c3cb5a546adaf730a98cf71942a6d082d55e644"
+    },
+    {
+      "path": "tests/e2e/run_ray_trainer_rmpad.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00272a9dee3167dbf670bccc3779ccb43bb9d68a",
+      "size": 598,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/00272a9dee3167dbf670bccc3779ccb43bb9d68a"
+    },
+    {
+      "path": "tests/generation",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "40a5b76861fb2a3aa4f438e0d95a1bb2a0fd90d9",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/40a5b76861fb2a3aa4f438e0d95a1bb2a0fd90d9"
+    },
+    {
+      "path": "tests/generation/run_gen_qwen05.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d660559e593561e95fcaeb8ddd5a931c5a1e1b4d",
+      "size": 794,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d660559e593561e95fcaeb8ddd5a931c5a1e1b4d"
+    },
+    {
+      "path": "tests/gpu_utility",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06ed31e741a64d0af25f1a24d5d057f2871dc31b",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/06ed31e741a64d0af25f1a24d5d057f2871dc31b"
+    },
+    {
+      "path": "tests/gpu_utility/test_memory_buffers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0116c8be023274ab9bf1e3376b97b4a3163a6920",
+      "size": 2641,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0116c8be023274ab9bf1e3376b97b4a3163a6920"
+    },
+    {
+      "path": "tests/gpu_utility/test_ops.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7663cfd2e9fd828650fcb339c695739ba6c9de8",
+      "size": 1765,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b7663cfd2e9fd828650fcb339c695739ba6c9de8"
+    },
+    {
+      "path": "tests/gpu_utility/test_torch_functional.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dfa2e8679d476bde94e445bd3641941eb81c5a1",
+      "size": 4497,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6dfa2e8679d476bde94e445bd3641941eb81c5a1"
+    },
+    {
+      "path": "tests/kill_github_tests.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c76d7658d5373f4a5d73c9aa9c84a7d14b08402",
+      "size": 1174,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5c76d7658d5373f4a5d73c9aa9c84a7d14b08402"
+    },
+    {
+      "path": "tests/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "681f64542986820f27ef95a5c4e38c62a4457605",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/681f64542986820f27ef95a5c4e38c62a4457605"
+    },
+    {
+      "path": "tests/model/test_transformer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dd7fcff14b825b1afa776466a37757bc884d787",
+      "size": 7485,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1dd7fcff14b825b1afa776466a37757bc884d787"
+    },
+    {
+      "path": "tests/model/test_transformers_ulysses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b6f1907c83384b7ddeae8bb1542fab931647f8f",
+      "size": 10275,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2b6f1907c83384b7ddeae8bb1542fab931647f8f"
+    },
+    {
+      "path": "tests/ray",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1585f58e12ce8c31a1abbe5ad3d67dd6bc45e6cb",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/1585f58e12ce8c31a1abbe5ad3d67dd6bc45e6cb"
+    },
+    {
+      "path": "tests/ray/check_worker_alive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4bfba172f72975f66c817ec46be7bf06d5c5f225",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/4bfba172f72975f66c817ec46be7bf06d5c5f225"
+    },
+    {
+      "path": "tests/ray/check_worker_alive/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcebbfe20b850a4f10c6c123dd05f0f676235332",
+      "size": 1852,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/fcebbfe20b850a4f10c6c123dd05f0f676235332"
+    },
+    {
+      "path": "tests/ray/detached_worker",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "55d28b9134cb87870e2fe3a508fdc98a22c8beb1",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/55d28b9134cb87870e2fe3a508fdc98a22c8beb1"
+    },
+    {
+      "path": "tests/ray/detached_worker/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06c4c6143e01d071458f7416033872d41d71031",
+      "size": 242,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b06c4c6143e01d071458f7416033872d41d71031"
+    },
+    {
+      "path": "tests/ray/detached_worker/client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1773fffe702d447ebc39c073c5744516da3ca12d",
+      "size": 2077,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1773fffe702d447ebc39c073c5744516da3ca12d"
+    },
+    {
+      "path": "tests/ray/detached_worker/run.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c6387933262694bf3534066b4310fda0a9fea3",
+      "size": 93,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a3c6387933262694bf3534066b4310fda0a9fea3"
+    },
+    {
+      "path": "tests/ray/detached_worker/server.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2108f1ebd5d8946fe5f30f44567f6e8e847403a4",
+      "size": 6590,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2108f1ebd5d8946fe5f30f44567f6e8e847403a4"
+    },
+    {
+      "path": "tests/ray/test_check_worker_alive.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53b7f2aabcc4cae40f997b18371a3f888a9e1882",
+      "size": 1550,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/53b7f2aabcc4cae40f997b18371a3f888a9e1882"
+    },
+    {
+      "path": "tests/ray/test_colocated_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96b859b4b2ea596111976bcbb1e7be4c29d7cfe1",
+      "size": 2750,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/96b859b4b2ea596111976bcbb1e7be4c29d7cfe1"
+    },
+    {
+      "path": "tests/ray/test_data_transfer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a17affd3092acbf17b113b9c593902053a84208a",
+      "size": 3365,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a17affd3092acbf17b113b9c593902053a84208a"
+    },
+    {
+      "path": "tests/ray/test_driverfunc_to_worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea253fd362b7d6b62d25ef7e05249f542d25433d",
+      "size": 2433,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ea253fd362b7d6b62d25ef7e05249f542d25433d"
+    },
+    {
+      "path": "tests/ray/test_high_level_scheduling_api.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d83206e5e7c90ab6f299827333b759198a79dd2",
+      "size": 3724,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2d83206e5e7c90ab6f299827333b759198a79dd2"
+    },
+    {
+      "path": "tests/ray/test_ray_local_envs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63102d0c673ab0af63471163df14fe4eda14ba20",
+      "size": 1819,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/63102d0c673ab0af63471163df14fe4eda14ba20"
+    },
+    {
+      "path": "tests/ray/test_rvdz.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9eec1d72c47a864efbd3409aefc9be3a687153d6",
+      "size": 1576,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9eec1d72c47a864efbd3409aefc9be3a687153d6"
+    },
+    {
+      "path": "tests/ray/test_worker_group_basics.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4b633969ffa7eb994911ad50e66cfd151c460e7",
+      "size": 4051,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b4b633969ffa7eb994911ad50e66cfd151c460e7"
+    },
+    {
+      "path": "tests/ray/test_worker_group_torch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13508ed309204a2c808082253dc65fd6957a6979",
+      "size": 3697,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/13508ed309204a2c808082253dc65fd6957a6979"
+    },
+    {
+      "path": "tests/rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f231bd2070c0bcbfd1a56c26e72f39a543967dd",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/7f231bd2070c0bcbfd1a56c26e72f39a543967dd"
+    },
+    {
+      "path": "tests/rollout/run_fsdp_vllm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93ebff295f3e6a732da8e42cae7d7dbe34f0919b",
+      "size": 6451,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/93ebff295f3e6a732da8e42cae7d7dbe34f0919b"
+    },
+    {
+      "path": "tests/rollout/test_vllm_hf_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4466627bceed11c3569d56f25cc5e4f576abf598",
+      "size": 6054,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4466627bceed11c3569d56f25cc5e4f576abf598"
+    },
+    {
+      "path": "tests/rollout/test_vllm_spmd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e972859a554345c30d55719c363d7913f081e11",
+      "size": 5625,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5e972859a554345c30d55719c363d7913f081e11"
+    },
+    {
+      "path": "tests/sandbox",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93537a6e0a9d77728e64e187fa0e12d805d5939e",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/93537a6e0a9d77728e64e187fa0e12d805d5939e"
+    },
+    {
+      "path": "tests/sandbox/test_sandbox.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d60474e4a069e7126940ba7fed93c1e7679bce20",
+      "size": 7695,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d60474e4a069e7126940ba7fed93c1e7679bce20"
+    },
+    {
+      "path": "tests/sanity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "242c625683004606c7a69a8be587e7167e737726",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/242c625683004606c7a69a8be587e7167e737726"
+    },
+    {
+      "path": "tests/sanity/check_license.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "076ca03f748c2d42c62c2b15128b2a0702da399a",
+      "size": 1764,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/076ca03f748c2d42c62c2b15128b2a0702da399a"
+    },
+    {
+      "path": "tests/sanity/test_import.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2adf63a15ef60f0220399008dde6a9a33aeacaa8",
+      "size": 784,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2adf63a15ef60f0220399008dde6a9a33aeacaa8"
+    },
+    {
+      "path": "tests/sft",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e499eecae1b2e477243a124188a256acc5710436",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/e499eecae1b2e477243a124188a256acc5710436"
+    },
+    {
+      "path": "tests/sft/run_sft.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "891328324bc1f464f1dbb22bbcaa18c2a4061a57",
+      "size": 743,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/891328324bc1f464f1dbb22bbcaa18c2a4061a57"
+    },
+    {
+      "path": "tests/sft/run_sft_qwen05_peft.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb7c69263085b1134d9bc6bf89a37de841a37542",
+      "size": 1139,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bb7c69263085b1134d9bc6bf89a37de841a37542"
+    },
+    {
+      "path": "tests/sft/run_sft_qwen05_sp2_liger.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "933b86f80e09cfa147385a7b831c83f6bf382b30",
+      "size": 1055,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/933b86f80e09cfa147385a7b831c83f6bf382b30"
+    },
+    {
+      "path": "tests/sft/run_sft_sp_loss_match.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a63328ecbcb0a7275148b7094a803eaf6e024b94",
+      "size": 803,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a63328ecbcb0a7275148b7094a803eaf6e024b94"
+    },
+    {
+      "path": "tests/sft/test_sp_loss_match.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69223d3d3849a961d868186124935d602aa30a26",
+      "size": 5346,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/69223d3d3849a961d868186124935d602aa30a26"
+    },
+    {
+      "path": "tests/utility",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cd9de1161b644341586db87d90f1af80ab01fcb",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/8cd9de1161b644341586db87d90f1af80ab01fcb"
+    },
+    {
+      "path": "tests/utility/test_tensor_dict_utilities.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfd033c0039927b10a168ede7450bbcb7e2973b9",
+      "size": 12435,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/dfd033c0039927b10a168ede7450bbcb7e2973b9"
+    },
+    {
+      "path": "tests/verl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6c508506f8676012d0774aa61120e95e146b20d0",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/6c508506f8676012d0774aa61120e95e146b20d0"
+    },
+    {
+      "path": "tests/verl/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41541077c2998bcde239addb35d2c4e5c14d8d00",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/41541077c2998bcde239addb35d2c4e5c14d8d00"
+    },
+    {
+      "path": "tests/verl/utils/dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc5a3f8422c0921c4f5cb8ba929cee36c76d827a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/fc5a3f8422c0921c4f5cb8ba929cee36c76d827a"
+    },
+    {
+      "path": "tests/verl/utils/dataset/test_rl_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d3bba599f0533973fa958cd397a918939836042",
+      "size": 1999,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9d3bba599f0533973fa958cd397a918939836042"
+    },
+    {
+      "path": "tests/verl/utils/dataset/test_rm_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f40d4ac0619c3debfec73aeeda7c95c869cc3753",
+      "size": 1420,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f40d4ac0619c3debfec73aeeda7c95c869cc3753"
+    },
+    {
+      "path": "tests/verl/utils/dataset/test_sft_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "883422528358c29b0ef3f542f84974652714be50",
+      "size": 2287,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/883422528358c29b0ef3f542f84974652714be50"
+    },
+    {
+      "path": "train.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abfe58092c8a2ac88264cf29d34152c6c499e777",
+      "size": 7527786,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/abfe58092c8a2ac88264cf29d34152c6c499e777"
+    },
+    {
+      "path": "val.parquet",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "081ebd3f2e3cb2d64832c70731be6d2167242192",
+      "size": 72417,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/081ebd3f2e3cb2d64832c70731be6d2167242192"
+    },
+    {
+      "path": "verl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "96bde3f32e7237c2c5ac0a4b543b60161c2d2116",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/96bde3f32e7237c2c5ac0a4b543b60161c2d2116"
+    },
+    {
+      "path": "verl/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b1281436697a0e5f5341f954285b5e2168986f2",
+      "size": 999,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4b1281436697a0e5f5341f954285b5e2168986f2"
+    },
+    {
+      "path": "verl/models",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa69b9048bc37c49f1a756029042b2f53d1c47be",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/aa69b9048bc37c49f1a756029042b2f53d1c47be"
+    },
+    {
+      "path": "verl/models/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "677b92f3871aa2f76a7f5bd8c07d1050bab14564",
+      "size": 1744,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/677b92f3871aa2f76a7f5bd8c07d1050bab14564"
+    },
+    {
+      "path": "verl/models/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/llama",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00a17653a04ea94856bdc99eb2cab16456ac3025",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/00a17653a04ea94856bdc99eb2cab16456ac3025"
+    },
+    {
+      "path": "verl/models/llama/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/llama/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0826a7e2562d66e67453f88da7893691dffdd971",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/0826a7e2562d66e67453f88da7893691dffdd971"
+    },
+    {
+      "path": "verl/models/llama/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b188b3ee62cdfb978fc482984b423ce12e40a962",
+      "size": 944,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b188b3ee62cdfb978fc482984b423ce12e40a962"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c77b13e846a8619d4bb1ef140cba77d772b523f2",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/c77b13e846a8619d4bb1ef140cba77d772b523f2"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/llama_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c6f5de95424aef58ed2076f73aa9eb909cea834",
+      "size": 19729,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9c6f5de95424aef58ed2076f73aa9eb909cea834"
+    },
+    {
+      "path": "verl/models/llama/megatron/checkpoint_utils/llama_saver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fca372df1b59c365cf1f88f94fe18e7afdb8a016",
+      "size": 18294,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/fca372df1b59c365cf1f88f94fe18e7afdb8a016"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "826fc42479545cbbbe2d2ccbf893b23deb98bf5d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/826fc42479545cbbbe2d2ccbf893b23deb98bf5d"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3761bae7db33c29c66534b9ae4f1d8ec8f63b829",
+      "size": 838,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3761bae7db33c29c66534b9ae4f1d8ec8f63b829"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f14653fca4ade888f5ee08e32aa57711c1cf5e73",
+      "size": 20129,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f14653fca4ade888f5ee08e32aa57711c1cf5e73"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_decoder.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93050a37fefb35d8377a1593f0ea3a4e23938a27",
+      "size": 6036,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/93050a37fefb35d8377a1593f0ea3a4e23938a27"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_linear.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe5cf4e65e4bdd02ebc64ed8f85943b2f6f3a5f",
+      "size": 2787,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bfe5cf4e65e4bdd02ebc64ed8f85943b2f6f3a5f"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_mlp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21ad9b16a642655dd593ce4d1e5fafb31d81c435",
+      "size": 3394,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/21ad9b16a642655dd593ce4d1e5fafb31d81c435"
+    },
+    {
+      "path": "verl/models/llama/megatron/layers/parallel_rmsnorm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7027036bf48d47a7f983226e9308336f85ad0461",
+      "size": 1860,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7027036bf48d47a7f983226e9308336f85ad0461"
+    },
+    {
+      "path": "verl/models/llama/megatron/modeling_llama_megatron.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a951660a949cac6278e15a06cd4c7832f3de2d47",
+      "size": 29698,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a951660a949cac6278e15a06cd4c7832f3de2d47"
+    },
+    {
+      "path": "verl/models/qwen2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d203dc1c24f530ea9960828122038fb4838875b5",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/d203dc1c24f530ea9960828122038fb4838875b5"
+    },
+    {
+      "path": "verl/models/qwen2/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/qwen2/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fbe8389e7f3347101db447500ac26565de8114c5",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/fbe8389e7f3347101db447500ac26565de8114c5"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26ff01378538b75fcc798755559b65590ce58e6f",
+      "size": 944,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/26ff01378538b75fcc798755559b65590ce58e6f"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "41d224abea10da5174038972e54e221110c1eb2b",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/41d224abea10da5174038972e54e221110c1eb2b"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1ef204decfc7dd6ba3533f7cd5183fd78684b3b",
+      "size": 20686,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f1ef204decfc7dd6ba3533f7cd5183fd78684b3b"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/checkpoint_utils/qwen2_saver.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0f1c4f8daf0b7ed88644e00d962f078ff716ba1",
+      "size": 18238,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d0f1c4f8daf0b7ed88644e00d962f078ff716ba1"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2079095631f4fae5f1008b7249c735c14a3850ed",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/2079095631f4fae5f1008b7249c735c14a3850ed"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d19bef2164aa6039276d7716e92adf30045bec5",
+      "size": 838,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2d19bef2164aa6039276d7716e92adf30045bec5"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_attention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4f65e892a0f6114ff7c73d4ca7ccdf9f0d156d1",
+      "size": 18750,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a4f65e892a0f6114ff7c73d4ca7ccdf9f0d156d1"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_decoder.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68cefc84716e9163281cc8d1d3a6a21e4351bb90",
+      "size": 6036,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/68cefc84716e9163281cc8d1d3a6a21e4351bb90"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_linear.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfe5cf4e65e4bdd02ebc64ed8f85943b2f6f3a5f",
+      "size": 2787,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bfe5cf4e65e4bdd02ebc64ed8f85943b2f6f3a5f"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_mlp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48b97711920d991273e9e0e18484ec224f77bd84",
+      "size": 3394,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/48b97711920d991273e9e0e18484ec224f77bd84"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/layers/parallel_rmsnorm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "726eb7f893a0ee0f12779c0f20647f3e8120c873",
+      "size": 1860,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/726eb7f893a0ee0f12779c0f20647f3e8120c873"
+    },
+    {
+      "path": "verl/models/qwen2/megatron/modeling_qwen2_megatron.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fefa653591b0cb13afe6978cf53cd59be5b5e922",
+      "size": 32421,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/fefa653591b0cb13afe6978cf53cd59be5b5e922"
+    },
+    {
+      "path": "verl/models/registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a363cc8b54b0d9f45aab25479c8474a0b4c1ce18",
+      "size": 2680,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a363cc8b54b0d9f45aab25479c8474a0b4c1ce18"
+    },
+    {
+      "path": "verl/models/transformers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e171fedb41d194eb02b575c8d83a6c1de86ff54",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/4e171fedb41d194eb02b575c8d83a6c1de86ff54"
+    },
+    {
+      "path": "verl/models/transformers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/models/transformers/llama.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4295b94c3a8da87156c06c54a9c4f8ef14a8417f",
+      "size": 10213,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4295b94c3a8da87156c06c54a9c4f8ef14a8417f"
+    },
+    {
+      "path": "verl/models/transformers/monkey_patch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea3a12ff5fc0c06491aa8b2c6038d8e5413391c2",
+      "size": 3494,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ea3a12ff5fc0c06491aa8b2c6038d8e5413391c2"
+    },
+    {
+      "path": "verl/models/transformers/qwen2.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26bf6a0d83ef3b1948d7cb25712f9d9859e34b68",
+      "size": 10104,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/26bf6a0d83ef3b1948d7cb25712f9d9859e34b68"
+    },
+    {
+      "path": "verl/models/weight_loader_registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e412877f9a67263b322884d53e6aaa0fe20e23e9",
+      "size": 1322,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e412877f9a67263b322884d53e6aaa0fe20e23e9"
+    },
+    {
+      "path": "verl/protocol.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8edcbef8245a065c8c491333ad19057032825c2",
+      "size": 25644,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d8edcbef8245a065c8c491333ad19057032825c2"
+    },
+    {
+      "path": "verl/single_controller",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "178c3b767bb290e6a57b043076de75240cdbc77a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/178c3b767bb290e6a57b043076de75240cdbc77a"
+    },
+    {
+      "path": "verl/single_controller/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb11fa55598bf8540be3661e80a8b5b590614b8d",
+      "size": 939,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/cb11fa55598bf8540be3661e80a8b5b590614b8d"
+    },
+    {
+      "path": "verl/single_controller/base",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b163e8b84c2655e70c93a9ecb00173ae8ad138e5",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/b163e8b84c2655e70c93a9ecb00173ae8ad138e5"
+    },
+    {
+      "path": "verl/single_controller/base/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d91f827dfdbcb4bd5e6645d28d578da1a7eaa67d",
+      "size": 772,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d91f827dfdbcb4bd5e6645d28d578da1a7eaa67d"
+    },
+    {
+      "path": "verl/single_controller/base/decorator.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fdacb6d97bc5897be837863236f6f057a024739",
+      "size": 15531,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6fdacb6d97bc5897be837863236f6f057a024739"
+    },
+    {
+      "path": "verl/single_controller/base/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c458b228a14a7ae9ee277192849f463980262577",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/c458b228a14a7ae9ee277192849f463980262577"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "452d46448189067c413874ea0db050ff57d00aad",
+      "size": 1551,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/452d46448189067c413874ea0db050ff57d00aad"
+    },
+    {
+      "path": "verl/single_controller/base/megatron/worker_group.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67c21d309b75f1fc7e76b87c9436efc103570f50",
+      "size": 2080,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/67c21d309b75f1fc7e76b87c9436efc103570f50"
+    },
+    {
+      "path": "verl/single_controller/base/register_center",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8999e8c40f4885d3717d539a1da13efc83dff49d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/8999e8c40f4885d3717d539a1da13efc83dff49d"
+    },
+    {
+      "path": "verl/single_controller/base/register_center/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/single_controller/base/register_center/ray.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "430290cf2683d882d35a83256aa363d959265a05",
+      "size": 939,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/430290cf2683d882d35a83256aa363d959265a05"
+    },
+    {
+      "path": "verl/single_controller/base/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92496fbfd2a63b4d02de84b80f4525f15733a7e0",
+      "size": 6318,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/92496fbfd2a63b4d02de84b80f4525f15733a7e0"
+    },
+    {
+      "path": "verl/single_controller/base/worker_group.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a17d5a50fa3fde7ca68769602c35e784b74eeda0",
+      "size": 7559,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a17d5a50fa3fde7ca68769602c35e784b74eeda0"
+    },
+    {
+      "path": "verl/single_controller/ray",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "295c40f4c5880eacc7506a1011378f4d27b117a4",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/295c40f4c5880eacc7506a1011378f4d27b117a4"
+    },
+    {
+      "path": "verl/single_controller/ray/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b567d0cfae9839e345ce1ab026674859c5cd6c4",
+      "size": 701,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2b567d0cfae9839e345ce1ab026674859c5cd6c4"
+    },
+    {
+      "path": "verl/single_controller/ray/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ca4e174513b1f78f2ac95ac2ad16e9d6ca2ae18",
+      "size": 19215,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5ca4e174513b1f78f2ac95ac2ad16e9d6ca2ae18"
+    },
+    {
+      "path": "verl/single_controller/ray/megatron.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ccb23a1559f8fd039b3791a6fa0da808729f6cb",
+      "size": 3036,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3ccb23a1559f8fd039b3791a6fa0da808729f6cb"
+    },
+    {
+      "path": "verl/third_party",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19ee3a9c7a4abd09fb7c1efb4921fe4bb2a807d0",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/19ee3a9c7a4abd09fb7c1efb4921fe4bb2a807d0"
+    },
+    {
+      "path": "verl/third_party/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7462cc11dcd4e8effa6e5efe6cdbd63870141e8a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/7462cc11dcd4e8effa6e5efe6cdbd63870141e8a"
+    },
+    {
+      "path": "verl/third_party/vllm/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab925c1a901b6354edb36c94fec641053bb1a244",
+      "size": 2144,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ab925c1a901b6354edb36c94fec641053bb1a244"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_spmd",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b80a00a12ca8b41042a54c1214a17fab7320937",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/5b80a00a12ca8b41042a54c1214a17fab7320937"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_spmd/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_spmd/dtensor_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3042cabcc4112472b4bbf70a540471eae9e4073",
+      "size": 17356,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a3042cabcc4112472b4bbf70a540471eae9e4073"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f07da68d9cc5be19291a15e1f3fc7532218106a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/7f07da68d9cc5be19291a15e1f3fc7532218106a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ae8f3b8f62fb62a909f4dfe66ede389b64e61b9",
+      "size": 11957,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ae8f3b8f62fb62a909f4dfe66ede389b64e61b9"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e1fead86283e1c9594b7556555158a6dc72e6f0",
+      "size": 25666,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1e1fead86283e1c9594b7556555158a6dc72e6f0"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d2475998ca2658b14d4a572e10cbfc96cfc3d35",
+      "size": 13604,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8d2475998ca2658b14d4a572e10cbfc96cfc3d35"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e264a8585bc2bb8c5b64efe339af7c9d02475614",
+      "size": 35525,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e264a8585bc2bb8c5b64efe339af7c9d02475614"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "450e2f4b49c22b86b5ce424a303c535fb1596a99",
+      "size": 12265,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/450e2f4b49c22b86b5ce424a303c535fb1596a99"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4acf3422d43c16091977f598111926d636cc3e29",
+      "size": 13381,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4acf3422d43c16091977f598111926d636cc3e29"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3b7a45c8d6b8a62efd5100f27a00c399ec4e9e6",
+      "size": 6075,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c3b7a45c8d6b8a62efd5100f27a00c399ec4e9e6"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8de24afb834af4e5c8d60b006e0696206519315",
+      "size": 3047,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b8de24afb834af4e5c8d60b006e0696206519315"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72aa26d06013f5bf29e67bedfcb77fc0af80e1c7",
+      "size": 4215,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/72aa26d06013f5bf29e67bedfcb77fc0af80e1c7"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_3_1/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50eebd70b86c1160896ded81deeb7e6eedd6d605",
+      "size": 13214,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/50eebd70b86c1160896ded81deeb7e6eedd6d605"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18ed43418b7655a8e2c3a8a68eea63338609d074",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/18ed43418b7655a8e2c3a8a68eea63338609d074"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "089bbd748b202ccceb524f91271e7bf91dc9bdfe",
+      "size": 16002,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/089bbd748b202ccceb524f91271e7bf91dc9bdfe"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6af04417b43a2d3672298fcf887b71fc230bb8ae",
+      "size": 9527,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6af04417b43a2d3672298fcf887b71fc230bb8ae"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/dtensor_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6668b7509161e7d19d4b37f13318a80d59147448",
+      "size": 12378,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6668b7509161e7d19d4b37f13318a80d59147448"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/hf_weight_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d562e596b8b75ac0a3e81ae651c77cfdc58f3a1",
+      "size": 4032,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0d562e596b8b75ac0a3e81ae651c77cfdc58f3a1"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94623a41423e841ae8e388a1d508da5b624a559a",
+      "size": 15147,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/94623a41423e841ae8e388a1d508da5b624a559a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75bf11ab319a623daf9d6d57668e17c46c2cc4ec",
+      "size": 12403,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/75bf11ab319a623daf9d6d57668e17c46c2cc4ec"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a7c2e2cfe57f1bd3a4b49b61d1085a76b0a9b0a",
+      "size": 15726,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1a7c2e2cfe57f1bd3a4b49b61d1085a76b0a9b0a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f4013451ff7e4e4612719251f48d5849fdc15d5",
+      "size": 13600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5f4013451ff7e4e4612719251f48d5849fdc15d5"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1604b03630456a8adc44b31cec767f69f709899e",
+      "size": 12581,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1604b03630456a8adc44b31cec767f69f709899e"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9336089ed3dc3fcfb788314a3e9cd0f8161c6084",
+      "size": 12798,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9336089ed3dc3fcfb788314a3e9cd0f8161c6084"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/spmd_gpu_executor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b97bb600ac318cc4b769805a5dcedc24b296f4b3",
+      "size": 8647,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b97bb600ac318cc4b769805a5dcedc24b296f4b3"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa625a0338686d61816e838ef802cde327fc95c4",
+      "size": 3310,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/aa625a0338686d61816e838ef802cde327fc95c4"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_4_2/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1fab3e41fe87ea599f251f5da2ebb67b54f84b81",
+      "size": 13310,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1fab3e41fe87ea599f251f5da2ebb67b54f84b81"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "76bd46ca3d8ec657885703f6e0b71bdfc9d06976",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/76bd46ca3d8ec657885703f6e0b71bdfc9d06976"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c577277b8621421cb5e1c3dbb713dcb34519215",
+      "size": 23746,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6c577277b8621421cb5e1c3dbb713dcb34519215"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc61e6fe60661d7b5c4bfc77b5c1d3843997e46",
+      "size": 11948,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5fc61e6fe60661d7b5c4bfc77b5c1d3843997e46"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/dtensor_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "732b543db6347d2f22db22745a3a7c037636737e",
+      "size": 15827,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/732b543db6347d2f22db22745a3a7c037636737e"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/hf_weight_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7af4953f35e7107c9e7e6cd4f597b4a2715d441d",
+      "size": 1895,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7af4953f35e7107c9e7e6cd4f597b4a2715d441d"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f56f1e07af01e646e3a096e8a3b931a43dc3747",
+      "size": 12271,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5f56f1e07af01e646e3a096e8a3b931a43dc3747"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d161e747066ece4b19984dac4aecfa32cecf6e5",
+      "size": 14689,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8d161e747066ece4b19984dac4aecfa32cecf6e5"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/megatron_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f2b19a904e77a9c2d10e259d061f797da67ddd8",
+      "size": 13939,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4f2b19a904e77a9c2d10e259d061f797da67ddd8"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b675bb79df378b187d856136905104f7aca1146",
+      "size": 14974,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1b675bb79df378b187d856136905104f7aca1146"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6ab232558a4bcdce568cae6e24f658c28628a4e",
+      "size": 6857,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d6ab232558a4bcdce568cae6e24f658c28628a4e"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d853ba75af9b80e285e47770f8798f5d9789aac",
+      "size": 13091,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4d853ba75af9b80e285e47770f8798f5d9789aac"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/spmd_gpu_executor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9040d52b57558ced35cc37dcbb96014255ccf95",
+      "size": 10184,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e9040d52b57558ced35cc37dcbb96014255ccf95"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa625a0338686d61816e838ef802cde327fc95c4",
+      "size": 3310,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/aa625a0338686d61816e838ef802cde327fc95c4"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_5_4/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5deb675a1180fc9a575ca0898be27f21c173151",
+      "size": 15305,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a5deb675a1180fc9a575ca0898be27f21c173151"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d69dec07130fcce86154fcd500bf3fde738ead25",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/d69dec07130fcce86154fcd500bf3fde738ead25"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/arg_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc4685c5f7968e827491f2bc02fdbd59bfac220c",
+      "size": 3142,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/bc4685c5f7968e827491f2bc02fdbd59bfac220c"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7cee451416eb1d7d6c9b4b83fc53dc25a336ccf",
+      "size": 4167,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d7cee451416eb1d7d6c9b4b83fc53dc25a336ccf"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/dtensor_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3042cabcc4112472b4bbf70a540471eae9e4073",
+      "size": 17356,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a3042cabcc4112472b4bbf70a540471eae9e4073"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/hf_weight_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3e5b22b2fed3b17f22f66c7acef8094c1c7871a",
+      "size": 1773,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a3e5b22b2fed3b17f22f66c7acef8094c1c7871a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/llm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd3d646db46e0b6085a94a49da695d5a6feb1403",
+      "size": 10236,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/cd3d646db46e0b6085a94a49da695d5a6feb1403"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/llm_engine_sp.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10b112b2595d83514698589bba472efb07dea562",
+      "size": 17823,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/10b112b2595d83514698589bba472efb07dea562"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/megatron_weight_loaders.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a8a5933ba352c2440b2a2e06b0c63698a6cfaee",
+      "size": 14484,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4a8a5933ba352c2440b2a2e06b0c63698a6cfaee"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/model_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f146a0eae22563650ec87bc7e5ad3ce2c19e9398",
+      "size": 14439,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f146a0eae22563650ec87bc7e5ad3ce2c19e9398"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/model_runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0cceffb52fd29ae02466b3eec51faaf0bda2bfb",
+      "size": 7587,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b0cceffb52fd29ae02466b3eec51faaf0bda2bfb"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0150c1c678e43dc5a6cb3f4426b5854ab45d8e4a",
+      "size": 12915,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0150c1c678e43dc5a6cb3f4426b5854ab45d8e4a"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/spmd_gpu_executor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "229a424c840226e2f6c148418d7c69a97807afa1",
+      "size": 10115,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/229a424c840226e2f6c148418d7c69a97807afa1"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0b4d0e27c84fc0358411d7bf29e0702aac929b9",
+      "size": 1649,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b0b4d0e27c84fc0358411d7bf29e0702aac929b9"
+    },
+    {
+      "path": "verl/third_party/vllm/vllm_v_0_6_3/worker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb1a7ab80c7526177cc0e53963f0e2e85d683334",
+      "size": 15138,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/cb1a7ab80c7526177cc0e53963f0e2e85d683334"
+    },
+    {
+      "path": "verl/trainer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cbf92075c4e0af1510dd7cd78900404c0c727d8c",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/cbf92075c4e0af1510dd7cd78900404c0c727d8c"
+    },
+    {
+      "path": "verl/trainer/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/trainer/config",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "376e514c68288631f0ba1258b9b4a9f6d386f70d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/376e514c68288631f0ba1258b9b4a9f6d386f70d"
+    },
+    {
+      "path": "verl/trainer/config/evaluation.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d8ccff888f65e831ec702291b904a4a8a6f8a22",
+      "size": 160,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0d8ccff888f65e831ec702291b904a4a8a6f8a22"
+    },
+    {
+      "path": "verl/trainer/config/generation.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b0f1045ba62a52916ea980a9709a0f070f25236",
+      "size": 2031,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3b0f1045ba62a52916ea980a9709a0f070f25236"
+    },
+    {
+      "path": "verl/trainer/config/ppo_megatron_trainer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3565b48907b83126ff6bda32411fbabd1b4668b",
+      "size": 5490,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e3565b48907b83126ff6bda32411fbabd1b4668b"
+    },
+    {
+      "path": "verl/trainer/config/ppo_trainer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d783704d57ef1031ca35f90fb18bdce08cd4a57",
+      "size": 6773,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3d783704d57ef1031ca35f90fb18bdce08cd4a57"
+    },
+    {
+      "path": "verl/trainer/config/sft_trainer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0b10055d2a6c2c66b385d8fa4eae3826a72bcc4",
+      "size": 1269,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b0b10055d2a6c2c66b385d8fa4eae3826a72bcc4"
+    },
+    {
+      "path": "verl/trainer/fsdp_sft_trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a79c42039a9f97a4d5352f9c9a72adae0e51a66",
+      "size": 26426,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2a79c42039a9f97a4d5352f9c9a72adae0e51a66"
+    },
+    {
+      "path": "verl/trainer/main_eval.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1637a77b9805a9e16ad37095ebd895b24c33aeb5",
+      "size": 2180,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1637a77b9805a9e16ad37095ebd895b24c33aeb5"
+    },
+    {
+      "path": "verl/trainer/main_generation.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f51b39c76b272c2716787116533e4cea7f08efe0",
+      "size": 5742,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f51b39c76b272c2716787116533e4cea7f08efe0"
+    },
+    {
+      "path": "verl/trainer/main_ppo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a96d4f477d01a33ddbc4717315a175683ac0e6",
+      "size": 7915,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d9a96d4f477d01a33ddbc4717315a175683ac0e6"
+    },
+    {
+      "path": "verl/trainer/ppo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ccf5ef358573cbdd9788e30dbb8ff0c61928b1d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/2ccf5ef358573cbdd9788e30dbb8ff0c61928b1d"
+    },
+    {
+      "path": "verl/trainer/ppo/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/trainer/ppo/core_algos.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "478e9f32eb1013c75bdb6cba2d963c5457153594",
+      "size": 15064,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/478e9f32eb1013c75bdb6cba2d963c5457153594"
+    },
+    {
+      "path": "verl/trainer/ppo/ray_trainer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70007f71f2bd5fbfc291356b81a42bde2f106983",
+      "size": 60574,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/70007f71f2bd5fbfc291356b81a42bde2f106983"
+    },
+    {
+      "path": "verl/trainer/runtime_env.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87bd05a9aabbc5db602626895518bb19add408d1",
+      "size": 122,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/87bd05a9aabbc5db602626895518bb19add408d1"
+    },
+    {
+      "path": "verl/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "793aab866f968c90c920e05d3d34d0d15bb6e8e2",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/793aab866f968c90c920e05d3d34d0d15bb6e8e2"
+    },
+    {
+      "path": "verl/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e453070a16370cd7006e0a7700c8550a56f19051",
+      "size": 678,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e453070a16370cd7006e0a7700c8550a56f19051"
+    },
+    {
+      "path": "verl/utils/checkpoint",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25121014ca575866c33376666dd4fabc9c391289",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/25121014ca575866c33376666dd4fabc9c391289"
+    },
+    {
+      "path": "verl/utils/checkpoint/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a7aadbc9d946451bd151abc3e306357eda8140a",
+      "size": 599,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7a7aadbc9d946451bd151abc3e306357eda8140a"
+    },
+    {
+      "path": "verl/utils/checkpoint/checkpoint_manager.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11a8f55fe6fdc209952123fb6669165901db5084",
+      "size": 4501,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/11a8f55fe6fdc209952123fb6669165901db5084"
+    },
+    {
+      "path": "verl/utils/checkpoint/fsdp_checkpoint_manager.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6748eeb7f898137019d3baf62b528c6ce578e8a4",
+      "size": 6794,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6748eeb7f898137019d3baf62b528c6ce578e8a4"
+    },
+    {
+      "path": "verl/utils/config.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c9298c42adf89467d047a3d0fdf8919bf772a5a",
+      "size": 839,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5c9298c42adf89467d047a3d0fdf8919bf772a5a"
+    },
+    {
+      "path": "verl/utils/dataset",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f64a1d4c2305e7a3304717aa8083f5271d18a522",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/f64a1d4c2305e7a3304717aa8083f5271d18a522"
+    },
+    {
+      "path": "verl/utils/dataset/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f886a70aabf443fb167453d667529b62f3311765",
+      "size": 797,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/f886a70aabf443fb167453d667529b62f3311765"
+    },
+    {
+      "path": "verl/utils/dataset/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b833e441e7733bfa1b1f956d22ff17dc872faaf1",
+      "size": 707,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b833e441e7733bfa1b1f956d22ff17dc872faaf1"
+    },
+    {
+      "path": "verl/utils/dataset/rl_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04fbdfa30ede661ca6994e51f271fb741f9ceebe",
+      "size": 11646,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/04fbdfa30ede661ca6994e51f271fb741f9ceebe"
+    },
+    {
+      "path": "verl/utils/dataset/rm_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be137895b420f08e5ac4f19b80de0de1813059f5",
+      "size": 5492,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/be137895b420f08e5ac4f19b80de0de1813059f5"
+    },
+    {
+      "path": "verl/utils/dataset/sft_dataset.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b8cec3057de863dc6559178b6e1794ad703224d",
+      "size": 6893,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1b8cec3057de863dc6559178b6e1794ad703224d"
+    },
+    {
+      "path": "verl/utils/debug",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "307b15a7fbb9768ecb313fe08dcbcb97219b7c79",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/307b15a7fbb9768ecb313fe08dcbcb97219b7c79"
+    },
+    {
+      "path": "verl/utils/debug/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d0b3432eb4d6200ed84da0f735afa46735ef58e",
+      "size": 646,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0d0b3432eb4d6200ed84da0f735afa46735ef58e"
+    },
+    {
+      "path": "verl/utils/debug/performance.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "615475a66a5e45853540df2efd09c25991b43e12",
+      "size": 1214,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/615475a66a5e45853540df2efd09c25991b43e12"
+    },
+    {
+      "path": "verl/utils/debug/trajectory_tracker.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33b254685221a86b03f120b57659cd55b29ea0a2",
+      "size": 3174,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/33b254685221a86b03f120b57659cd55b29ea0a2"
+    },
+    {
+      "path": "verl/utils/distributed.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fea5a29cd943ef91c8f27f44db2a69e40702cf7",
+      "size": 1124,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/6fea5a29cd943ef91c8f27f44db2a69e40702cf7"
+    },
+    {
+      "path": "verl/utils/flops_counter.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c5ac1a91160fc3265589fb6e93e93c8c1efb53e",
+      "size": 4887,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3c5ac1a91160fc3265589fb6e93e93c8c1efb53e"
+    },
+    {
+      "path": "verl/utils/fs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "769b7e48e0f1f4792814e5262fb8d3426d41ca53",
+      "size": 3140,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/769b7e48e0f1f4792814e5262fb8d3426d41ca53"
+    },
+    {
+      "path": "verl/utils/fsdp_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26b7dbd521a113e8448badb47f8f1bdeb965cade",
+      "size": 13578,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/26b7dbd521a113e8448badb47f8f1bdeb965cade"
+    },
+    {
+      "path": "verl/utils/hdfs_io.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08c4ecb9a5956865ce35651d6eaaf6844ba87f41",
+      "size": 4562,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/08c4ecb9a5956865ce35651d6eaaf6844ba87f41"
+    },
+    {
+      "path": "verl/utils/import_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5690512d144a30d2a1f0bd128a40eb8876936b7",
+      "size": 1351,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e5690512d144a30d2a1f0bd128a40eb8876936b7"
+    },
+    {
+      "path": "verl/utils/logger",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aaad382484095a835c9a41a3f7f6316dfc07287a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/aaad382484095a835c9a41a3f7f6316dfc07287a"
+    },
+    {
+      "path": "verl/utils/logger/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/utils/logger/aggregate_logger.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac57cf58e3de2862b5443189ccec276a7d2fc283",
+      "size": 1400,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/ac57cf58e3de2862b5443189ccec276a7d2fc283"
+    },
+    {
+      "path": "verl/utils/logger/wandb_ws.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e22740da893dc8979452a1b8362182aa66e052a",
+      "size": 10111,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1e22740da893dc8979452a1b8362182aa66e052a"
+    },
+    {
+      "path": "verl/utils/logging_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bf6e1f0fa70784edb6a7e6efecdba07f0c399b3",
+      "size": 843,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1bf6e1f0fa70784edb6a7e6efecdba07f0c399b3"
+    },
+    {
+      "path": "verl/utils/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8ba840917fa94044f130942c270842e960d9055",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/e8ba840917fa94044f130942c270842e960d9055"
+    },
+    {
+      "path": "verl/utils/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/utils/megatron/memory.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e8570ed495d83e74a1d0c7b1d17181271ce92a6",
+      "size": 1534,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/5e8570ed495d83e74a1d0c7b1d17181271ce92a6"
+    },
+    {
+      "path": "verl/utils/megatron/optimizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d936d9ed5e4404673a1c715121ef0e49f7a614d",
+      "size": 1569,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1d936d9ed5e4404673a1c715121ef0e49f7a614d"
+    },
+    {
+      "path": "verl/utils/megatron/pipeline_parallel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a3790bb1a0fe0340390b7c9083f94d9d56b9383",
+      "size": 2119,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3a3790bb1a0fe0340390b7c9083f94d9d56b9383"
+    },
+    {
+      "path": "verl/utils/megatron/sequence_parallel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b76cb295ef681e30b22d45404d4d5c26493f051",
+      "size": 1810,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4b76cb295ef681e30b22d45404d4d5c26493f051"
+    },
+    {
+      "path": "verl/utils/megatron/tensor_parallel.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25a8ce422c42498a5e5cbdddc74d6c9f3ae8d06b",
+      "size": 7257,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/25a8ce422c42498a5e5cbdddc74d6c9f3ae8d06b"
+    },
+    {
+      "path": "verl/utils/megatron_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6c2b90a8932f52c0a67d2e9dd3514abee8e21fc",
+      "size": 11725,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a6c2b90a8932f52c0a67d2e9dd3514abee8e21fc"
+    },
+    {
+      "path": "verl/utils/memory_buffer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07d9f23f38e5610ea7bea4712d7da3a25c7723f1",
+      "size": 8093,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/07d9f23f38e5610ea7bea4712d7da3a25c7723f1"
+    },
+    {
+      "path": "verl/utils/model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02ffab25f8559103a61540cd0620d54b7b172207",
+      "size": 13759,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/02ffab25f8559103a61540cd0620d54b7b172207"
+    },
+    {
+      "path": "verl/utils/monitored_metric",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2710e7be2b19a49d01036012bbb1b22d5e080d2a",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/2710e7be2b19a49d01036012bbb1b22d5e080d2a"
+    },
+    {
+      "path": "verl/utils/monitored_metric/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c656b532816860bdd56e189714a8a359126869d2",
+      "size": 4275,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c656b532816860bdd56e189714a8a359126869d2"
+    },
+    {
+      "path": "verl/utils/py_functional.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f5a0e176779cc19d3035a3af77a1bdf1f39349a",
+      "size": 1656,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8f5a0e176779cc19d3035a3af77a1bdf1f39349a"
+    },
+    {
+      "path": "verl/utils/ray_utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a75df6c37bc5a295aaa192b2a56cca2423e94b9",
+      "size": 1401,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9a75df6c37bc5a295aaa192b2a56cca2423e94b9"
+    },
+    {
+      "path": "verl/utils/rendezvous",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bd86df75ba52e1b93d84fee9cff881b6c8e36547",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/bd86df75ba52e1b93d84fee9cff881b6c8e36547"
+    },
+    {
+      "path": "verl/utils/rendezvous/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/utils/rendezvous/ray_backend.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0d2bd906fe14584896627143dea2d3ec032d912",
+      "size": 2720,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c0d2bd906fe14584896627143dea2d3ec032d912"
+    },
+    {
+      "path": "verl/utils/reward_score",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "23fb097928ed5aa6b15976cfdb1aa7a7637cd453",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/23fb097928ed5aa6b15976cfdb1aa7a7637cd453"
+    },
+    {
+      "path": "verl/utils/reward_score/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d14c6fc7b41bf406419ca669f29d99dd9016c925",
+      "size": 1663,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d14c6fc7b41bf406419ca669f29d99dd9016c925"
+    },
+    {
+      "path": "verl/utils/reward_score/gsm8k.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7091037643bc656f93c5c1a6acefb643d58421fe",
+      "size": 2385,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7091037643bc656f93c5c1a6acefb643d58421fe"
+    },
+    {
+      "path": "verl/utils/reward_score/math.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50792aa6edd082091a786f4d4fa29d0a601702cf",
+      "size": 6717,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/50792aa6edd082091a786f4d4fa29d0a601702cf"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_code",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79a32c6ece70744328e18814ec874b8059c70645",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/79a32c6ece70744328e18814ec874b8059c70645"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_code/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49b0d30f57c3a33be08d63af8642575f23661dfe",
+      "size": 3151,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/49b0d30f57c3a33be08d63af8642575f23661dfe"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_code/testing_util.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34845d07efa9f6e27540614f86a780ba09baedfa",
+      "size": 28052,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/34845d07efa9f6e27540614f86a780ba09baedfa"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_code/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07f3db88e0caae09ab06e7f74654fb788cd86f24",
+      "size": 2252,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/07f3db88e0caae09ab06e7f74654fb788cd86f24"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_math",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4d73098a2902a5f8949c5a360da0e5420fee4c91",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/4d73098a2902a5f8949c5a360da0e5420fee4c91"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_math/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39b2c831a246f35007c581de4de808ad2ceeddde",
+      "size": 12188,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/39b2c831a246f35007c581de4de808ad2ceeddde"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_math/grader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3e1686f156a5c8148874e77405b249d975e8c5b",
+      "size": 14508,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e3e1686f156a5c8148874e77405b249d975e8c5b"
+    },
+    {
+      "path": "verl/utils/reward_score/prime_math/math_normalize.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9921a5ad2e0742d06f27e1fe1ca1e845e1fc65b",
+      "size": 6271,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e9921a5ad2e0742d06f27e1fe1ca1e845e1fc65b"
+    },
+    {
+      "path": "verl/utils/seqlen_balancing.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "372f7070ee8e76d5eb931ba639650c1c97e4fc65",
+      "size": 10420,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/372f7070ee8e76d5eb931ba639650c1c97e4fc65"
+    },
+    {
+      "path": "verl/utils/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "578a8d53669c5c6d4cb8d92f8f416134c8d85fef",
+      "size": 2372,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/578a8d53669c5c6d4cb8d92f8f416134c8d85fef"
+    },
+    {
+      "path": "verl/utils/torch_dtypes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "242c8fb37dacc3ec7fe41c76b3e81c50c2b1d966",
+      "size": 2263,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/242c8fb37dacc3ec7fe41c76b3e81c50c2b1d966"
+    },
+    {
+      "path": "verl/utils/torch_functional.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32bfda2278f7b686a8c0791f88a5bafeb0f811cb",
+      "size": 19857,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/32bfda2278f7b686a8c0791f88a5bafeb0f811cb"
+    },
+    {
+      "path": "verl/utils/tracking.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d0499ac926f64577c0ff23ca9cb080b19486265",
+      "size": 6115,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3d0499ac926f64577c0ff23ca9cb080b19486265"
+    },
+    {
+      "path": "verl/utils/ulysses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c085becc591d29a9517966cdee601843bdf24371",
+      "size": 10619,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c085becc591d29a9517966cdee601843bdf24371"
+    },
+    {
+      "path": "verl/version",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "06f75b3d7f37d424baed20be73eb408195b4efd1",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/06f75b3d7f37d424baed20be73eb408195b4efd1"
+    },
+    {
+      "path": "verl/version/version",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f91ec141a0cdc5b5d74c6ef4295359d6302f46c",
+      "size": 10,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8f91ec141a0cdc5b5d74c6ef4295359d6302f46c"
+    },
+    {
+      "path": "verl/workers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18f52a1766a5e19e06204213c2d93742d09c2b57",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/18f52a1766a5e19e06204213c2d93742d09c2b57"
+    },
+    {
+      "path": "verl/workers/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce90c5eb352d85c59105c0dc85b5f1dd576f095",
+      "size": 600,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1ce90c5eb352d85c59105c0dc85b5f1dd576f095"
+    },
+    {
+      "path": "verl/workers/actor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7aee474e0c3eadf2eb7ce7479bc13a1dba2c192d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/7aee474e0c3eadf2eb7ce7479bc13a1dba2c192d"
+    },
+    {
+      "path": "verl/workers/actor/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a1404e17695436516c55794f9094c094dba61ce",
+      "size": 727,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/7a1404e17695436516c55794f9094c094dba61ce"
+    },
+    {
+      "path": "verl/workers/actor/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "144f0b90ef1efa77e5f1d4d26a07291ea89990cf",
+      "size": 2071,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/144f0b90ef1efa77e5f1d4d26a07291ea89990cf"
+    },
+    {
+      "path": "verl/workers/actor/dp_actor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eee1c55ccd8b26026133854bb35a5c7b569e27c",
+      "size": 14523,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/0eee1c55ccd8b26026133854bb35a5c7b569e27c"
+    },
+    {
+      "path": "verl/workers/actor/megatron_actor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3825f464b1ca80778831929bb704a62726307680",
+      "size": 18965,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/3825f464b1ca80778831929bb704a62726307680"
+    },
+    {
+      "path": "verl/workers/critic",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a0f3ca806830f1ceaf7e4687cadfef94d54f130",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/2a0f3ca806830f1ceaf7e4687cadfef94d54f130"
+    },
+    {
+      "path": "verl/workers/critic/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80808f10634b74ee3be94e3dc19e86855f884cc8",
+      "size": 732,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/80808f10634b74ee3be94e3dc19e86855f884cc8"
+    },
+    {
+      "path": "verl/workers/critic/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d1055df4e04d80624d2ca28afcf6f6df3642b91",
+      "size": 1094,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9d1055df4e04d80624d2ca28afcf6f6df3642b91"
+    },
+    {
+      "path": "verl/workers/critic/dp_critic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11ad02dcac8cbb1bbafce22af2f6822bda037d2d",
+      "size": 10149,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/11ad02dcac8cbb1bbafce22af2f6822bda037d2d"
+    },
+    {
+      "path": "verl/workers/critic/megatron_critic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ff530be484a8391d287325099f3c087b825f71a",
+      "size": 10542,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8ff530be484a8391d287325099f3c087b825f71a"
+    },
+    {
+      "path": "verl/workers/curriculum_learning",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "704ddc10896f05492dbab79a44cb9cc79c3d7e66",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/704ddc10896f05492dbab79a44cb9cc79c3d7e66"
+    },
+    {
+      "path": "verl/workers/curriculum_learning/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8a9e88018c847ffcb41c73c012a5bdad66399ee",
+      "size": 761,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c8a9e88018c847ffcb41c73c012a5bdad66399ee"
+    },
+    {
+      "path": "verl/workers/curriculum_learning/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df471d4122086d57ba7d96333cb7ab60da5c67a3",
+      "size": 1692,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/df471d4122086d57ba7d96333cb7ab60da5c67a3"
+    },
+    {
+      "path": "verl/workers/curriculum_learning/interquartile.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9d8ae2290797b29d8434fb92bd57b3129f52f96",
+      "size": 1134,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a9d8ae2290797b29d8434fb92bd57b3129f52f96"
+    },
+    {
+      "path": "verl/workers/curriculum_learning/remove_extreme.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9be1b0b8d817f9f7da1b5e2b8b6b18955b6003f1",
+      "size": 495,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9be1b0b8d817f9f7da1b5e2b8b6b18955b6003f1"
+    },
+    {
+      "path": "verl/workers/fsdp_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e1d5fdf6770cb354be300fb9a044d6916b3c459",
+      "size": 77234,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9e1d5fdf6770cb354be300fb9a044d6916b3c459"
+    },
+    {
+      "path": "verl/workers/megatron_workers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e7ca8bd896f365a5810589319ef1457d1784410",
+      "size": 37897,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1e7ca8bd896f365a5810589319ef1457d1784410"
+    },
+    {
+      "path": "verl/workers/reward_manager",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "366960891d7953ede3879f31d513cff83d130220",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/366960891d7953ede3879f31d513cff83d130220"
+    },
+    {
+      "path": "verl/workers/reward_manager/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9672d4904bce216ff2c7e25df952c8bcbb9cd5a1",
+      "size": 710,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/9672d4904bce216ff2c7e25df952c8bcbb9cd5a1"
+    },
+    {
+      "path": "verl/workers/reward_manager/blank.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b991e8ae0832aec2729530187a5dad4969e25e5b",
+      "size": 3055,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b991e8ae0832aec2729530187a5dad4969e25e5b"
+    },
+    {
+      "path": "verl/workers/reward_manager/naive.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14d075f4a04fb84facd2ca86d1c71e3114f7244f",
+      "size": 3215,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/14d075f4a04fb84facd2ca86d1c71e3114f7244f"
+    },
+    {
+      "path": "verl/workers/reward_manager/prime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "793d13d5997ffe9a154b9e0fb9dc8aedd39f5df8",
+      "size": 8328,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/793d13d5997ffe9a154b9e0fb9dc8aedd39f5df8"
+    },
+    {
+      "path": "verl/workers/reward_model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b8ebdffd1440d079dc8685f8bdb797804ff762c",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/4b8ebdffd1440d079dc8685f8bdb797804ff762c"
+    },
+    {
+      "path": "verl/workers/reward_model/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0b48a750841888b1e220b72422659d8073c22a0",
+      "size": 638,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a0b48a750841888b1e220b72422659d8073c22a0"
+    },
+    {
+      "path": "verl/workers/reward_model/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c02487db3846d0fcec76c1c216fbbb52d15c64bd",
+      "size": 1710,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c02487db3846d0fcec76c1c216fbbb52d15c64bd"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "82caffcee177861147462f3aa9bd8e27efa1ef7f",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/82caffcee177861147462f3aa9bd8e27efa1ef7f"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0956b4cc53b81bf4c675c235968e1fc577a49f9",
+      "size": 647,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/b0956b4cc53b81bf4c675c235968e1fc577a49f9"
+    },
+    {
+      "path": "verl/workers/reward_model/megatron/reward_model.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a890f28843560f658218ec5467546e8e236a7715",
+      "size": 12739,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/a890f28843560f658218ec5467546e8e236a7715"
+    },
+    {
+      "path": "verl/workers/rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47686f651368f092b01e3462fdc0cb9d24ae4778",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/47686f651368f092b01e3462fdc0cb9d24ae4778"
+    },
+    {
+      "path": "verl/workers/rollout/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "083848c77faafa61d2a449e23707431925fafb40",
+      "size": 753,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/083848c77faafa61d2a449e23707431925fafb40"
+    },
+    {
+      "path": "verl/workers/rollout/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c2733325bbf7ba4e8c3438a53c4e2b97d60ee83",
+      "size": 1141,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/8c2733325bbf7ba4e8c3438a53c4e2b97d60ee83"
+    },
+    {
+      "path": "verl/workers/rollout/hf_rollout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d929e5dd439a5c1a3b92b73bd6cb134cbb29f09",
+      "size": 5867,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/1d929e5dd439a5c1a3b92b73bd6cb134cbb29f09"
+    },
+    {
+      "path": "verl/workers/rollout/naive",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e5c743c7e9db45b8c65099937b50a2866afdf09d",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/e5c743c7e9db45b8c65099937b50a2866afdf09d"
+    },
+    {
+      "path": "verl/workers/rollout/naive/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df81c8603fc41731b2ec2cf007a06f5976e43c06",
+      "size": 641,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/df81c8603fc41731b2ec2cf007a06f5976e43c06"
+    },
+    {
+      "path": "verl/workers/rollout/naive/naive_rollout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c57bce107612b973b85f2090a4f73fd3371802f",
+      "size": 4937,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/2c57bce107612b973b85f2090a4f73fd3371802f"
+    },
+    {
+      "path": "verl/workers/rollout/tokenizer.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0dfa3a530329605d7af48a2186d304198774e09",
+      "size": 5747,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c0dfa3a530329605d7af48a2186d304198774e09"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9abc11b5bc821596f15dcdeb0382d356fde29b6c",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/9abc11b5bc821596f15dcdeb0382d356fde29b6c"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50eca90bacc4d4c97619e2d6f33cdf728c3981f9",
+      "size": 1074,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/50eca90bacc4d4c97619e2d6f33cdf728c3981f9"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/fire_vllm_rollout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10f7d7a3c238a65912890db531353e8ab828072a",
+      "size": 9780,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/10f7d7a3c238a65912890db531353e8ab828072a"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/vllm_rollout.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4af7eca12fc83b3b542207a8a897ad00d057628f",
+      "size": 10859,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/4af7eca12fc83b3b542207a8a897ad00d057628f"
+    },
+    {
+      "path": "verl/workers/rollout/vllm_rollout/vllm_rollout_spmd.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "371091e8fcc48811df6fdc7b3c9e22a778c36b74",
+      "size": 10446,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/371091e8fcc48811df6fdc7b3c9e22a778c36b74"
+    },
+    {
+      "path": "verl/workers/sharding_manager",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8e0f542bd4fb85ce43d88598d9897effd6a65458",
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/trees/8e0f542bd4fb85ce43d88598d9897effd6a65458"
+    },
+    {
+      "path": "verl/workers/sharding_manager/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e72fdf011c2455d920d0857eb3e6eadbaeebc332",
+      "size": 1169,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/e72fdf011c2455d920d0857eb3e6eadbaeebc332"
+    },
+    {
+      "path": "verl/workers/sharding_manager/base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8717890f2e2cf4d2c5e7683398e32fa8ebf3765",
+      "size": 982,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/d8717890f2e2cf4d2c5e7683398e32fa8ebf3765"
+    },
+    {
+      "path": "verl/workers/sharding_manager/fsdp_ulysses.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85328cc8d6b47e92ad9d3eff24aaf1390fc2bc7a",
+      "size": 3500,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/85328cc8d6b47e92ad9d3eff24aaf1390fc2bc7a"
+    },
+    {
+      "path": "verl/workers/sharding_manager/fsdp_vllm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c79d3031689966b4dcff7cbf3fc8645592484b9f",
+      "size": 7700,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/c79d3031689966b4dcff7cbf3fc8645592484b9f"
+    },
+    {
+      "path": "verl/workers/sharding_manager/megatron_vllm.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09ad8384a873d3a8c5c4fda0e41b77dc2746f940",
+      "size": 19375,
+      "url": "https://api.github.com/repos/CJReinforce/PURE/git/blobs/09ad8384a873d3a8c5c4fda0e41b77dc2746f940"
+    }
+  ],
+  "truncated": false
+}

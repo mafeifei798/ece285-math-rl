@@ -1,0 +1,7 @@
+{
+  "arm": "C_bounded",
+  "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+  "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "initial_adapter_digest": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7",
+  "seed": 17
+}

@@ -1,0 +1,18 @@
+{
+  "formal_RL": false,
+  "PRM_adaptation": false,
+  "optimizer_steps": 0,
+  "questions": [
+    "math/train/precalculus/9",
+    "math/train/algebra/1532",
+    "math/train/counting_and_probability/203",
+    "math/train/algebra/490"
+  ],
+  "question_selection": "same first4 as historical corrected A/B initialization, fixed before sampling",
+  "live_group_size": 8,
+  "live_rows": 32,
+  "exact_emitted_token_ids": true,
+  "actor_checkpoint": "shared original1.5B base, fresh matched LoRA",
+  "saved_phase": "Retokenized saved real response texts, not exact historical actor token IDs; integration-only",
+  "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc"
+}

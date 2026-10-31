@@ -1,0 +1,1350 @@
+{
+  "unix": 1793313158.9733796,
+  "dispatch": {
+    "pid": 1748802,
+    "unix": 1793266676.1781566,
+    "run": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2",
+    "source": "/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2",
+    "log": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/header_recovery_controller.log",
+    "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+    "authorized_arms": [
+      "A",
+      "C_mix",
+      "C_bounded"
+    ],
+    "per_arm_budget": 1000000,
+    "seed": 17,
+    "sharing_GPU1": true,
+    "D_adaptation": false,
+    "recovery_evidence": "/srv/research/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/recovery_evidence.json",
+    "previous_controller_pid": 1696326,
+    "recovery_source": "/srv/research/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/resume_after_header_repair.py",
+    "recovery_source_sha256": "dddd3cb07395d726c4159da7bac1789676ade287e731b46c597a5f5179aa4291",
+    "zero_updates_environment_recovery": false,
+    "resume_from_saved_checkpoint": true
+  },
+  "controller": {
+    "stage": "complete",
+    "pid": 1748802,
+    "unix": 1793280544.5933266,
+    "comparison": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/comparison.json",
+    "no_6M_started": true,
+    "D_adaptation": false
+  },
+  "child": {
+    "pid": 2283120,
+    "stage": "paired_analysis",
+    "log": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/logs/paired_analysis.log",
+    "unix": 1793280543.094178
+  },
+  "smoke_gate": {
+    "passed": true,
+    "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+    "all_three_real_updates": {
+      "A": {
+        "passed": true,
+        "arm": "A",
+        "phase": "smoke",
+        "global_step": 2,
+        "accounting": {
+          "generated_completion_tokens": 48192,
+          "generated_completions": 64,
+          "generated_groups": 8,
+          "correct_completions": 30,
+          "truncated_completions": 9,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 7,
+            "all_wrong": 1
+          },
+          "status_counts": {
+            "truncated": 9,
+            "symbolic": 15,
+            "exact": 30,
+            "missing_or_invalid_box": 9,
+            "unparseable": 1
+          },
+          "loss_rows": 64,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 42.529930114746094,
+          "positive_advantage_rows": 30,
+          "empty_rows": 0,
+          "short_wrong_rows": 0
+        },
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "adapter_changed": true,
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "peak_reserved_GiB": 20.353515625,
+        "peak_allocated_GiB": 19.443862438201904,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 242.65051102638245
+      },
+      "C_mix": {
+        "passed": true,
+        "arm": "C_mix",
+        "phase": "smoke",
+        "global_step": 2,
+        "accounting": {
+          "generated_completion_tokens": 50416,
+          "generated_completions": 64,
+          "generated_groups": 8,
+          "correct_completions": 31,
+          "truncated_completions": 10,
+          "prm_input_tokens": 30788,
+          "prm_padded_tokens": 30788,
+          "prm_scored_completions": 43,
+          "prm_forward_seconds": 12.215056355111301,
+          "outcome_group_counts": {
+            "mixed": 7,
+            "all_wrong": 1
+          },
+          "status_counts": {
+            "truncated": 10,
+            "symbolic": 12,
+            "exact": 31,
+            "missing_or_invalid_box": 10,
+            "unparseable": 1
+          },
+          "loss_rows": 64,
+          "loss_wrong_positive": 2,
+          "process_nonzero_rows": 64,
+          "process_abs_sum": 7.319896697998047,
+          "outcome_abs_sum": 44.06092071533203,
+          "positive_advantage_rows": 33,
+          "empty_rows": 0,
+          "short_wrong_rows": 0
+        },
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "adapter_changed": true,
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "peak_reserved_GiB": 34.0390625,
+        "peak_allocated_GiB": 33.02789115905762,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 273.6339521408081
+      },
+      "C_bounded": {
+        "passed": true,
+        "arm": "C_bounded",
+        "phase": "smoke",
+        "global_step": 2,
+        "accounting": {
+          "generated_completion_tokens": 49307,
+          "generated_completions": 64,
+          "generated_groups": 8,
+          "correct_completions": 32,
+          "truncated_completions": 6,
+          "prm_input_tokens": 37482,
+          "prm_padded_tokens": 37482,
+          "prm_scored_completions": 49,
+          "prm_forward_seconds": 15.261458496097475,
+          "outcome_group_counts": {
+            "mixed": 7,
+            "all_wrong": 1
+          },
+          "status_counts": {
+            "truncated": 6,
+            "symbolic": 17,
+            "exact": 32,
+            "missing_or_invalid_box": 8,
+            "unparseable": 1
+          },
+          "loss_rows": 64,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 31,
+          "process_abs_sum": 1.2844603657722473,
+          "outcome_abs_sum": 43.53250312805176,
+          "positive_advantage_rows": 32,
+          "empty_rows": 0,
+          "short_wrong_rows": 0
+        },
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "adapter_changed": true,
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "peak_reserved_GiB": 34.0390625,
+        "peak_allocated_GiB": 33.02789115905762,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 272.2013533115387
+      }
+    },
+    "matched_initial_adapter": true,
+    "matched_training_arguments": true,
+    "matched_initial_raw_generation": true
+  },
+  "failure": null,
+  "resource": {
+    "free_MiB": 77982.0,
+    "raw": "77982, 94",
+    "unix": 1793279191.746561
+  },
+  "comparison": {
+    "passed": true,
+    "validation": {
+      "initial": {
+        "passed": true,
+        "arm": "initial",
+        "count": 500,
+        "correct": 261.0,
+        "accuracy": 0.522,
+        "truncated": 56,
+        "empty": 0,
+        "short_wrong": 5,
+        "no_extractable_answer": 69,
+        "mean_generated_tokens": 733.954,
+        "status_counts": {
+          "exact": 238,
+          "missing_or_invalid_box": 13,
+          "symbolic": 188,
+          "truncated": 56,
+          "unparseable": 5
+        },
+        "predictions_sha256": "5140d13d584f79955e2daef318763423e3b7204be459eb8ead5e642050806343",
+        "contract_sha256": "b01a1e389150871d8c9b0a7ab317ebe15eecd39004cc7db570e003c9bfe14a29",
+        "seconds": 857.2846968173981
+      },
+      "A": {
+        "passed": true,
+        "arm": "A",
+        "count": 500,
+        "correct": 252.0,
+        "accuracy": 0.504,
+        "truncated": 46,
+        "empty": 0,
+        "short_wrong": 6,
+        "no_extractable_answer": 62,
+        "mean_generated_tokens": 703.902,
+        "status_counts": {
+          "exact": 231,
+          "missing_or_invalid_box": 16,
+          "symbolic": 202,
+          "truncated": 46,
+          "unparseable": 5
+        },
+        "predictions_sha256": "7da7dca097eef3a656526909555b0bd77300160aa6890a1db5decec879d29a42",
+        "contract_sha256": "ce61b0be076053526352e1ee1ce0496ee3b373826f76ea61b394cdc2e2e1276e",
+        "seconds": 1506.3331322669983
+      },
+      "C_mix": {
+        "passed": true,
+        "arm": "C_mix",
+        "count": 500,
+        "correct": 259.0,
+        "accuracy": 0.518,
+        "truncated": 56,
+        "empty": 0,
+        "short_wrong": 3,
+        "no_extractable_answer": 66,
+        "mean_generated_tokens": 734.226,
+        "status_counts": {
+          "exact": 238,
+          "missing_or_invalid_box": 10,
+          "symbolic": 191,
+          "truncated": 56,
+          "unparseable": 5
+        },
+        "predictions_sha256": "c2c7007f753bfb110cd55032a1e3351126b162f851b1438b2cbda87d8a3c4b8b",
+        "contract_sha256": "728374c1898a3786d64366156c13e08fb0d70172b728b3ab55090aa4175a9c1f",
+        "seconds": 1429.2213718891144
+      },
+      "C_bounded": {
+        "passed": true,
+        "arm": "C_bounded",
+        "count": 500,
+        "correct": 265.0,
+        "accuracy": 0.53,
+        "truncated": 47,
+        "empty": 0,
+        "short_wrong": 3,
+        "no_extractable_answer": 55,
+        "mean_generated_tokens": 713.238,
+        "status_counts": {
+          "exact": 245,
+          "missing_or_invalid_box": 8,
+          "symbolic": 193,
+          "truncated": 47,
+          "unparseable": 7
+        },
+        "predictions_sha256": "91a2dea1217bf24c5045520d4a12a4af34b41680cb5950a056f1aa769aa03a1d",
+        "contract_sha256": "8086bacb4dd99b5126ac8abadd1b2dfa2d3d24ef6e94ae42c4fab52ab46eac00",
+        "seconds": 1345.7844789028168
+      }
+    },
+    "paired": {
+      "C_bounded minus C_mix": {
+        "delta": 0.012,
+        "paired_bootstrap95": [
+          -0.014,
+          0.038
+        ],
+        "wins": 25,
+        "losses": 19,
+        "unchanged": 456,
+        "n": 500
+      },
+      "C_bounded minus A": {
+        "delta": 0.026,
+        "paired_bootstrap95": [
+          -0.002,
+          0.052
+        ],
+        "wins": 29,
+        "losses": 16,
+        "unchanged": 455,
+        "n": 500
+      },
+      "C_mix minus A": {
+        "delta": 0.014,
+        "paired_bootstrap95": [
+          -0.012,
+          0.038
+        ],
+        "wins": 23,
+        "losses": 16,
+        "unchanged": 461,
+        "n": 500
+      },
+      "A minus initial": {
+        "delta": -0.018,
+        "paired_bootstrap95": [
+          -0.044,
+          0.01
+        ],
+        "wins": 19,
+        "losses": 28,
+        "unchanged": 453,
+        "n": 500
+      }
+    },
+    "training": {
+      "A": {
+        "passed": true,
+        "arm": "A",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1005003,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 641,
+          "truncated_completions": 90,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 152,
+            "all_wrong": 33,
+            "all_correct": 7
+          },
+          "status_counts": {
+            "truncated": 90,
+            "symbolic": 643,
+            "exact": 593,
+            "missing_or_invalid_box": 191,
+            "unparseable": 19
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 1018.2059230804443,
+          "positive_advantage_rows": 585,
+          "empty_rows": 1,
+          "short_wrong_rows": 18
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 5003,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 4414.32337641716,
+        "metrics": {
+          "train_runtime": 4378.3608,
+          "train_samples_per_second": 146.173,
+          "train_steps_per_second": 4.568,
+          "total_flos": 0.0,
+          "train_loss": 1.030435274174124e-05
+        }
+      },
+      "C_mix": {
+        "passed": true,
+        "arm": "C_mix",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1001853,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 637,
+          "truncated_completions": 81,
+          "prm_input_tokens": 883527,
+          "prm_padded_tokens": 883527,
+          "prm_scored_completions": 1232,
+          "prm_forward_seconds": 184.16543034510687,
+          "outcome_group_counts": {
+            "mixed": 158,
+            "all_wrong": 31,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 81,
+            "symbolic": 652,
+            "exact": 580,
+            "missing_or_invalid_box": 206,
+            "unparseable": 17
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 82,
+          "process_nonzero_rows": 1536,
+          "process_abs_sum": 257.18624782562256,
+          "outcome_abs_sum": 1059.5601687431335,
+          "positive_advantage_rows": 711,
+          "empty_rows": 2,
+          "short_wrong_rows": 20
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 1853,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 1946.477795600891,
+        "metrics": {
+          "train_runtime": 1869.1152,
+          "train_samples_per_second": 342.408,
+          "train_steps_per_second": 10.7,
+          "total_flos": 0.0,
+          "train_loss": 1.0662081573779384e-05
+        }
+      },
+      "C_bounded": {
+        "passed": true,
+        "arm": "C_bounded",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1009017,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 633,
+          "truncated_completions": 99,
+          "prm_input_tokens": 880996,
+          "prm_padded_tokens": 880996,
+          "prm_scored_completions": 1252,
+          "prm_forward_seconds": 196.80329023580998,
+          "outcome_group_counts": {
+            "mixed": 153,
+            "all_wrong": 36,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 99,
+            "symbolic": 663,
+            "exact": 589,
+            "missing_or_invalid_box": 173,
+            "unparseable": 12
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 614,
+          "process_abs_sum": 25.888538628816605,
+          "outcome_abs_sum": 1007.1336522102356,
+          "positive_advantage_rows": 627,
+          "empty_rows": 0,
+          "short_wrong_rows": 19
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 9017,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 2325.8090081214905,
+        "metrics": {
+          "train_runtime": 2249.5209,
+          "train_samples_per_second": 284.505,
+          "train_steps_per_second": 8.891,
+          "total_flos": 0.0,
+          "train_loss": 9.940945915332122e-06
+        }
+      }
+    },
+    "original_ABCD_preserved": true,
+    "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+    "test_sets_used_for_selection": false,
+    "new_seed_or_6M_started": false,
+    "D_adaptation": false,
+    "interpretation": "Exploratory seed17 pilot. The zero wrong-positive rate of bounded/A is guaranteed by construction; accuracy and nonzero process contributions must be considered separately. Small paired intervals are not seed robustness or equivalence evidence."
+  },
+  "arms": {
+    "A": {
+      "status": {
+        "status": "complete",
+        "pid": 1748860,
+        "unix": 1793271094.078321,
+        "passed": true,
+        "arm": "A",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1005003,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 641,
+          "truncated_completions": 90,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 152,
+            "all_wrong": 33,
+            "all_correct": 7
+          },
+          "status_counts": {
+            "truncated": 90,
+            "symbolic": 643,
+            "exact": 593,
+            "missing_or_invalid_box": 191,
+            "unparseable": 19
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 1018.2059230804443,
+          "positive_advantage_rows": 585,
+          "empty_rows": 1,
+          "short_wrong_rows": 18
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 5003,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 4414.32337641716,
+        "metrics": {
+          "train_runtime": 4378.3608,
+          "train_samples_per_second": 146.173,
+          "train_steps_per_second": 4.568,
+          "total_flos": 0.0,
+          "train_loss": 1.030435274174124e-05
+        }
+      },
+      "progress": {
+        "arm": "A",
+        "phase": "continue",
+        "global_step": 48,
+        "generated_completion_tokens": 1005003,
+        "generated_completions": 1536,
+        "generated_groups": 192,
+        "correct_completions": 641,
+        "truncated_completions": 90,
+        "prm_input_tokens": 0,
+        "prm_padded_tokens": 0,
+        "prm_scored_completions": 0,
+        "prm_forward_seconds": 0.0,
+        "outcome_group_counts": {
+          "mixed": 152,
+          "all_wrong": 33,
+          "all_correct": 7
+        },
+        "status_counts": {
+          "truncated": 90,
+          "symbolic": 643,
+          "exact": 593,
+          "missing_or_invalid_box": 191,
+          "unparseable": 19
+        },
+        "loss_rows": 1536,
+        "loss_wrong_positive": 0,
+        "process_nonzero_rows": 0,
+        "process_abs_sum": 0.0,
+        "outcome_abs_sum": 1018.2059230804443,
+        "positive_advantage_rows": 585,
+        "empty_rows": 1,
+        "short_wrong_rows": 18,
+        "elapsed_seconds": 4380.469631891698,
+        "peak_allocated_GiB": 19.711589813232422,
+        "peak_reserved_GiB": 20.63671875,
+        "latest_generation": {
+          "step_before_update": 47,
+          "rows": 32,
+          "tokens": 33544,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.0,
+          "max_abs_process": 0.0,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/precalculus/277",
+            "math/train/algebra/11",
+            "math/train/counting_and_probability/5",
+            "math/train/algebra/492"
+          ]
+        },
+        "stop_reason": "token_budget_reached",
+        "unix": 1793271091.6280098,
+        "pid": 1748860
+      },
+      "smoke_result": {
+        "passed": true,
+        "arm": "A",
+        "phase": "smoke",
+        "global_step": 2,
+        "accounting": {
+          "generated_completion_tokens": 48192,
+          "generated_completions": 64,
+          "generated_groups": 8,
+          "correct_completions": 30,
+          "truncated_completions": 9,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 7,
+            "all_wrong": 1
+          },
+          "status_counts": {
+            "truncated": 9,
+            "symbolic": 15,
+            "exact": 30,
+            "missing_or_invalid_box": 9,
+            "unparseable": 1
+          },
+          "loss_rows": 64,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 42.529930114746094,
+          "positive_advantage_rows": 30,
+          "empty_rows": 0,
+          "short_wrong_rows": 0
+        },
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "adapter_changed": true,
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "peak_reserved_GiB": 20.353515625,
+        "peak_allocated_GiB": 19.443862438201904,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 242.65051102638245
+      },
+      "resume_loaded": {
+        "adapter_exact": true,
+        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "source_step": 2,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true
+      },
+      "resume_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "source_step": 2,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "continued_optimizer_step": 3,
+        "prompt_order_checked": true,
+        "loss_input_preserved": true,
+        "actor_updated_since_smoke": true,
+        "vllm_RNG_limitation": "optimizer/adapter/scheduler/RNG/dataset skip verified; pinned colocated vLLM sampling RNG is recreated on process restart, so no claim of bitwise equivalence to an uninterrupted run"
+      },
+      "final_result": {
+        "passed": true,
+        "arm": "A",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1005003,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 641,
+          "truncated_completions": 90,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 152,
+            "all_wrong": 33,
+            "all_correct": 7
+          },
+          "status_counts": {
+            "truncated": 90,
+            "symbolic": 643,
+            "exact": 593,
+            "missing_or_invalid_box": 191,
+            "unparseable": 19
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 1018.2059230804443,
+          "positive_advantage_rows": 585,
+          "empty_rows": 1,
+          "short_wrong_rows": 18
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 5003,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 4414.32337641716,
+        "metrics": {
+          "train_runtime": 4378.3608,
+          "train_samples_per_second": 146.173,
+          "train_steps_per_second": 4.568,
+          "total_flos": 0.0,
+          "train_loss": 1.030435274174124e-05
+        }
+      },
+      "failure": {
+        "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpa100qrcp/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpa100qrcp/cuda_utils.cpython-311-x86_64-linux-gnu.so', '-lcuda', '-L/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-L/lib/i386-linux-gnu', '-I/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpa100qrcp', '-I/usr/include/python3.11']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n",
+        "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/train_arm.py\", line 86, in main\n    t,tok=build(a.arm,run,accounting)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/runtime.py\", line 177, in build\n    trainer=trainer_class()(model=model,processing_class=tok,args=args,train_dataset=Dataset.from_list(rows(ROOT/'data/prepared/train.jsonl')),\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/runtime.py\", line 151, in __init__\n    super().__init__(*args,**kw);self.initialize_pilot(pilot_arm,pilot_ledger,pilot_run,pilot_accounting)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/trainer/grpo_trainer.py\", line 525, in __init__\n    self.llm = LLM(\n               ^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/entrypoints/llm.py\", line 282, in __init__\n    self.llm_engine = LLMEngine.from_engine_args(\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py\", line 493, in from_engine_args\n    return engine_cls.from_vllm_config(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py\", line 134, in from_vllm_config\n    return cls(vllm_config=vllm_config,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py\", line 111, in __init__\n    self.engine_core = EngineCoreClient.make_client(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core_client.py\", line 82, in make_client\n    return InprocClient(vllm_config, executor_class, log_stats)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core_client.py\", line 245, in __init__\n    self.engine_core = EngineCore(*args, **kwargs)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core.py\", line 91, in __init__\n    self._initialize_kv_caches(vllm_config)\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core.py\", line 183, in _initialize_kv_caches\n    self.model_executor.determine_available_memory())\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/executor/abstract.py\", line 121, in determine_available_memory\n    memory = super().determine_available_memory()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/executor/abstract.py\", line 84, in determine_available_memory\n    return self.collective_rpc(\"determine_available_memory\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py\", line 58, in collective_rpc\n    answer = run_method(self.driver_worker, method, args, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/utils/__init__.py\", line 3060, in run_method\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py\", line 263, in determine_available_memory\n    self.model_runner.profile_run()\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py\", line 3031, in profile_run\n    = self._dummy_run(self.max_num_tokens, is_profile=True)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py\", line 2809, in _dummy_run\n    outputs = self.model(\n              ^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1773, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1784, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py\", line 506, in forward\n    hidden_states = self.model(input_ids, positions, intermediate_tensors,\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/compilation/decorators.py\", line 305, in __call__\n    output = self.compiled_callable(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py\", line 749, in compile_wrapper\n    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 923, in _compile_fx_inner\n    raise InductorError(e, currentframe()).with_traceback(\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 907, in _compile_fx_inner\n    mb_compiled_graph = fx_codegen_and_compile(\n                        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 1578, in fx_codegen_and_compile\n    return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 1456, in codegen_and_compile\n    compiled_module = graph.compile_to_module()\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2293, in compile_to_module\n    return self._compile_to_module()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2299, in _compile_to_module\n    self.codegen_with_cpp_wrapper() if self.cpp_wrapper else self.codegen()\n                                                             ^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2238, in codegen\n    self.scheduler.codegen()\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/scheduler.py\", line 4598, in codegen\n    else self._codegen(self.nodes)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/scheduler.py\", line 4750, in _codegen\n    self.get_backend(device).codegen_node(node)\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/cuda_combined_scheduling.py\", line 107, in codegen_node\n    return self._triton_scheduling.codegen_node(node)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/simd.py\", line 1371, in codegen_node\n    return self.codegen_node_schedule(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/simd.py\", line 1424, in codegen_node_schedule\n    src_code = kernel.codegen_kernel()\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/triton.py\", line 3677, in codegen_kernel\n    **self.inductor_meta_common(),\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/triton.py\", line 3501, in inductor_meta_common\n    \"backend_hash\": torch.utils._triton.triton_hash_with_backend(),\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_triton.py\", line 165, in triton_hash_with_backend\n    backend = triton_backend()\n              ^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_triton.py\", line 157, in triton_backend\n    target = driver.active.get_current_target()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 30, in __getattr__\n    return getattr(self._initialize_obj(), name)\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 26, in _initialize_obj\n    self._obj = self._init_fn()\n                ^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 12, in _create_driver\n    return active_drivers[0]()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/driver.py\", line 715, in __init__\n    self.utils = CudaUtils()  # TODO: make static\n                 ^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/driver.py\", line 62, in __init__\n    mod = compile_module_from_src(\n          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/build.py\", line 88, in compile_module_from_src\n    so = _build(name, src_path, tmpdir, library_dirs or [], include_dirs or [], libraries or [])\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/build.py\", line 51, in _build\n    subprocess.check_call(cc_cmd, stdout=subprocess.DEVNULL)\n  File \"/usr/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\ntorch._inductor.exc.InductorError: CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpa100qrcp/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpa100qrcp/cuda_utils.cpython-311-x86_64-linux-gnu.so', '-lcuda', '-L/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-L/lib/i386-linux-gnu', '-I/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpa100qrcp', '-I/usr/include/python3.11']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n\n",
+        "unix": 1793265309.8502614,
+        "phase": "smoke"
+      },
+      "last_checkpoint": {
+        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "global_step": 48,
+        "checkpoint_contract_sha256": "f3560ddd1b366359f6001c8f659989410bd05b958dbbc51696e9880a7903841d"
+      }
+    },
+    "C_mix": {
+      "status": {
+        "status": "complete",
+        "pid": 1906577,
+        "unix": 1793275422.3649812,
+        "passed": true,
+        "arm": "C_mix",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1001853,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 637,
+          "truncated_completions": 81,
+          "prm_input_tokens": 883527,
+          "prm_padded_tokens": 883527,
+          "prm_scored_completions": 1232,
+          "prm_forward_seconds": 184.16543034510687,
+          "outcome_group_counts": {
+            "mixed": 158,
+            "all_wrong": 31,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 81,
+            "symbolic": 652,
+            "exact": 580,
+            "missing_or_invalid_box": 206,
+            "unparseable": 17
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 82,
+          "process_nonzero_rows": 1536,
+          "process_abs_sum": 257.18624782562256,
+          "outcome_abs_sum": 1059.5601687431335,
+          "positive_advantage_rows": 711,
+          "empty_rows": 2,
+          "short_wrong_rows": 20
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 1853,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 1946.477795600891,
+        "metrics": {
+          "train_runtime": 1869.1152,
+          "train_samples_per_second": 342.408,
+          "train_steps_per_second": 10.7,
+          "total_flos": 0.0,
+          "train_loss": 1.0662081573779384e-05
+        }
+      },
+      "progress": {
+        "arm": "C_mix",
+        "phase": "continue",
+        "global_step": 48,
+        "generated_completion_tokens": 1001853,
+        "generated_completions": 1536,
+        "generated_groups": 192,
+        "correct_completions": 637,
+        "truncated_completions": 81,
+        "prm_input_tokens": 883527,
+        "prm_padded_tokens": 883527,
+        "prm_scored_completions": 1232,
+        "prm_forward_seconds": 184.16543034510687,
+        "outcome_group_counts": {
+          "mixed": 158,
+          "all_wrong": 31,
+          "all_correct": 3
+        },
+        "status_counts": {
+          "truncated": 81,
+          "symbolic": 652,
+          "exact": 580,
+          "missing_or_invalid_box": 206,
+          "unparseable": 17
+        },
+        "loss_rows": 1536,
+        "loss_wrong_positive": 82,
+        "process_nonzero_rows": 1536,
+        "process_abs_sum": 257.18624782562256,
+        "outcome_abs_sum": 1059.5601687431335,
+        "positive_advantage_rows": 711,
+        "empty_rows": 2,
+        "short_wrong_rows": 20,
+        "elapsed_seconds": 1869.8137153876014,
+        "peak_allocated_GiB": 33.076990604400635,
+        "peak_reserved_GiB": 34.0546875,
+        "latest_generation": {
+          "step_before_update": 47,
+          "rows": 32,
+          "tokens": 27129,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.04656144976615906,
+          "max_abs_process": 0.22593587636947632,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/precalculus/277",
+            "math/train/algebra/11",
+            "math/train/counting_and_probability/5",
+            "math/train/algebra/492"
+          ]
+        },
+        "stop_reason": "token_budget_reached",
+        "unix": 1793275399.3769617,
+        "pid": 1906577
+      },
+      "smoke_result": {
+        "passed": true,
+        "arm": "C_mix",
+        "phase": "smoke",
+        "global_step": 2,
+        "accounting": {
+          "generated_completion_tokens": 50416,
+          "generated_completions": 64,
+          "generated_groups": 8,
+          "correct_completions": 31,
+          "truncated_completions": 10,
+          "prm_input_tokens": 30788,
+          "prm_padded_tokens": 30788,
+          "prm_scored_completions": 43,
+          "prm_forward_seconds": 12.215056355111301,
+          "outcome_group_counts": {
+            "mixed": 7,
+            "all_wrong": 1
+          },
+          "status_counts": {
+            "truncated": 10,
+            "symbolic": 12,
+            "exact": 31,
+            "missing_or_invalid_box": 10,
+            "unparseable": 1
+          },
+          "loss_rows": 64,
+          "loss_wrong_positive": 2,
+          "process_nonzero_rows": 64,
+          "process_abs_sum": 7.319896697998047,
+          "outcome_abs_sum": 44.06092071533203,
+          "positive_advantage_rows": 33,
+          "empty_rows": 0,
+          "short_wrong_rows": 0
+        },
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "adapter_changed": true,
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "peak_reserved_GiB": 34.0390625,
+        "peak_allocated_GiB": 33.02789115905762,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 273.6339521408081
+      },
+      "resume_loaded": {
+        "adapter_exact": true,
+        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "source_step": 2,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true
+      },
+      "resume_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "source_step": 2,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "continued_optimizer_step": 3,
+        "prompt_order_checked": true,
+        "loss_input_preserved": true,
+        "actor_updated_since_smoke": true,
+        "vllm_RNG_limitation": "optimizer/adapter/scheduler/RNG/dataset skip verified; pinned colocated vLLM sampling RNG is recreated on process restart, so no claim of bitwise equivalence to an uninterrupted run"
+      },
+      "final_result": {
+        "passed": true,
+        "arm": "C_mix",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1001853,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 637,
+          "truncated_completions": 81,
+          "prm_input_tokens": 883527,
+          "prm_padded_tokens": 883527,
+          "prm_scored_completions": 1232,
+          "prm_forward_seconds": 184.16543034510687,
+          "outcome_group_counts": {
+            "mixed": 158,
+            "all_wrong": 31,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 81,
+            "symbolic": 652,
+            "exact": 580,
+            "missing_or_invalid_box": 206,
+            "unparseable": 17
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 82,
+          "process_nonzero_rows": 1536,
+          "process_abs_sum": 257.18624782562256,
+          "outcome_abs_sum": 1059.5601687431335,
+          "positive_advantage_rows": 711,
+          "empty_rows": 2,
+          "short_wrong_rows": 20
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 1853,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 1946.477795600891,
+        "metrics": {
+          "train_runtime": 1869.1152,
+          "train_samples_per_second": 342.408,
+          "train_steps_per_second": 10.7,
+          "total_flos": 0.0,
+          "train_loss": 1.0662081573779384e-05
+        }
+      },
+      "failure": null,
+      "last_checkpoint": {
+        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "global_step": 48,
+        "checkpoint_contract_sha256": "ee9ca47c420e36ce441c51ccc0ece2aee2bc310997709032082e6ee469ef0178"
+      }
+    },
+    "C_bounded": {
+      "status": {
+        "status": "complete",
+        "pid": 1948881,
+        "unix": 1793279189.4368944,
+        "passed": true,
+        "arm": "C_bounded",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1009017,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 633,
+          "truncated_completions": 99,
+          "prm_input_tokens": 880996,
+          "prm_padded_tokens": 880996,
+          "prm_scored_completions": 1252,
+          "prm_forward_seconds": 196.80329023580998,
+          "outcome_group_counts": {
+            "mixed": 153,
+            "all_wrong": 36,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 99,
+            "symbolic": 663,
+            "exact": 589,
+            "missing_or_invalid_box": 173,
+            "unparseable": 12
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 614,
+          "process_abs_sum": 25.888538628816605,
+          "outcome_abs_sum": 1007.1336522102356,
+          "positive_advantage_rows": 627,
+          "empty_rows": 0,
+          "short_wrong_rows": 19
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 9017,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 2325.8090081214905,
+        "metrics": {
+          "train_runtime": 2249.5209,
+          "train_samples_per_second": 284.505,
+          "train_steps_per_second": 8.891,
+          "total_flos": 0.0,
+          "train_loss": 9.940945915332122e-06
+        }
+      },
+      "progress": {
+        "arm": "C_bounded",
+        "phase": "continue",
+        "global_step": 48,
+        "generated_completion_tokens": 1009017,
+        "generated_completions": 1536,
+        "generated_groups": 192,
+        "correct_completions": 633,
+        "truncated_completions": 99,
+        "prm_input_tokens": 880996,
+        "prm_padded_tokens": 880996,
+        "prm_scored_completions": 1252,
+        "prm_forward_seconds": 196.80329023580998,
+        "outcome_group_counts": {
+          "mixed": 153,
+          "all_wrong": 36,
+          "all_correct": 3
+        },
+        "status_counts": {
+          "truncated": 99,
+          "symbolic": 663,
+          "exact": 589,
+          "missing_or_invalid_box": 173,
+          "unparseable": 12
+        },
+        "loss_rows": 1536,
+        "loss_wrong_positive": 0,
+        "process_nonzero_rows": 614,
+        "process_abs_sum": 25.888538628816605,
+        "outcome_abs_sum": 1007.1336522102356,
+        "positive_advantage_rows": 627,
+        "empty_rows": 0,
+        "short_wrong_rows": 19,
+        "elapsed_seconds": 2250.3149101948366,
+        "peak_allocated_GiB": 33.076990604400635,
+        "peak_reserved_GiB": 34.052734375,
+        "latest_generation": {
+          "step_before_update": 47,
+          "rows": 32,
+          "tokens": 25742,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.017268599942326546,
+          "max_abs_process": 0.1488904356956482,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/precalculus/277",
+            "math/train/algebra/11",
+            "math/train/counting_and_probability/5",
+            "math/train/algebra/492"
+          ]
+        },
+        "stop_reason": "token_budget_reached",
+        "unix": 1793279167.1966133,
+        "pid": 1948881
+      },
+      "smoke_result": {
+        "passed": true,
+        "arm": "C_bounded",
+        "phase": "smoke",
+        "global_step": 2,
+        "accounting": {
+          "generated_completion_tokens": 49307,
+          "generated_completions": 64,
+          "generated_groups": 8,
+          "correct_completions": 32,
+          "truncated_completions": 6,
+          "prm_input_tokens": 37482,
+          "prm_padded_tokens": 37482,
+          "prm_scored_completions": 49,
+          "prm_forward_seconds": 15.261458496097475,
+          "outcome_group_counts": {
+            "mixed": 7,
+            "all_wrong": 1
+          },
+          "status_counts": {
+            "truncated": 6,
+            "symbolic": 17,
+            "exact": 32,
+            "missing_or_invalid_box": 8,
+            "unparseable": 1
+          },
+          "loss_rows": 64,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 31,
+          "process_abs_sum": 1.2844603657722473,
+          "outcome_abs_sum": 43.53250312805176,
+          "positive_advantage_rows": 32,
+          "empty_rows": 0,
+          "short_wrong_rows": 0
+        },
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "adapter_changed": true,
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "peak_reserved_GiB": 34.0390625,
+        "peak_allocated_GiB": 33.02789115905762,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 272.2013533115387
+      },
+      "resume_loaded": {
+        "adapter_exact": true,
+        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "source_step": 2,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true
+      },
+      "resume_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "source_step": 2,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "continued_optimizer_step": 3,
+        "prompt_order_checked": true,
+        "loss_input_preserved": true,
+        "actor_updated_since_smoke": true,
+        "vllm_RNG_limitation": "optimizer/adapter/scheduler/RNG/dataset skip verified; pinned colocated vLLM sampling RNG is recreated on process restart, so no claim of bitwise equivalence to an uninterrupted run"
+      },
+      "final_result": {
+        "passed": true,
+        "arm": "C_bounded",
+        "phase": "continue",
+        "global_step": 48,
+        "accounting": {
+          "generated_completion_tokens": 1009017,
+          "generated_completions": 1536,
+          "generated_groups": 192,
+          "correct_completions": 633,
+          "truncated_completions": 99,
+          "prm_input_tokens": 880996,
+          "prm_padded_tokens": 880996,
+          "prm_scored_completions": 1252,
+          "prm_forward_seconds": 196.80329023580998,
+          "outcome_group_counts": {
+            "mixed": 153,
+            "all_wrong": 36,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 99,
+            "symbolic": 663,
+            "exact": 589,
+            "missing_or_invalid_box": 173,
+            "unparseable": 12
+          },
+          "loss_rows": 1536,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 614,
+          "process_abs_sum": 25.888538628816605,
+          "outcome_abs_sum": 1007.1336522102356,
+          "positive_advantage_rows": 627,
+          "empty_rows": 0,
+          "short_wrong_rows": 19
+        },
+        "target_tokens": 1000000,
+        "budget_overshoot": 9017,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
+        "PRM_frozen": true,
+        "originals_preserved": true,
+        "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+        "seconds": 2325.8090081214905,
+        "metrics": {
+          "train_runtime": 2249.5209,
+          "train_samples_per_second": 284.505,
+          "train_steps_per_second": 8.891,
+          "total_flos": 0.0,
+          "train_loss": 9.940945915332122e-06
+        }
+      },
+      "failure": null,
+      "last_checkpoint": {
+        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "global_step": 48,
+        "checkpoint_contract_sha256": "a7503d6eed6a8a6ad74d971cb30bd3528c1eaa5a6ed311855d650af497302d65"
+      }
+    }
+  },
+  "validation": {
+    "initial": {
+      "progress": {
+        "done": 500,
+        "total": 500,
+        "seconds": 857.2816648483276,
+        "pid": 1855871,
+        "unix": 1793271958.527815
+      },
+      "summary": {
+        "passed": true,
+        "arm": "initial",
+        "count": 500,
+        "correct": 261.0,
+        "accuracy": 0.522,
+        "truncated": 56,
+        "empty": 0,
+        "short_wrong": 5,
+        "no_extractable_answer": 69,
+        "mean_generated_tokens": 733.954,
+        "status_counts": {
+          "exact": 238,
+          "missing_or_invalid_box": 13,
+          "symbolic": 188,
+          "truncated": 56,
+          "unparseable": 5
+        },
+        "predictions_sha256": "5140d13d584f79955e2daef318763423e3b7204be459eb8ead5e642050806343",
+        "contract_sha256": "b01a1e389150871d8c9b0a7ab317ebe15eecd39004cc7db570e003c9bfe14a29",
+        "seconds": 857.2846968173981
+      }
+    },
+    "A": {
+      "progress": {
+        "done": 500,
+        "total": 500,
+        "seconds": 1506.3304393291473,
+        "pid": 1880747,
+        "unix": 1793273471.284791
+      },
+      "summary": {
+        "passed": true,
+        "arm": "A",
+        "count": 500,
+        "correct": 252.0,
+        "accuracy": 0.504,
+        "truncated": 46,
+        "empty": 0,
+        "short_wrong": 6,
+        "no_extractable_answer": 62,
+        "mean_generated_tokens": 703.902,
+        "status_counts": {
+          "exact": 231,
+          "missing_or_invalid_box": 16,
+          "symbolic": 202,
+          "truncated": 46,
+          "unparseable": 5
+        },
+        "predictions_sha256": "7da7dca097eef3a656526909555b0bd77300160aa6890a1db5decec879d29a42",
+        "contract_sha256": "ce61b0be076053526352e1ee1ce0496ee3b373826f76ea61b394cdc2e2e1276e",
+        "seconds": 1506.3331322669983
+      }
+    },
+    "C_mix": {
+      "progress": {
+        "done": 500,
+        "total": 500,
+        "seconds": 1429.2188794612885,
+        "pid": 1933225,
+        "unix": 1793276859.2859278
+      },
+      "summary": {
+        "passed": true,
+        "arm": "C_mix",
+        "count": 500,
+        "correct": 259.0,
+        "accuracy": 0.518,
+        "truncated": 56,
+        "empty": 0,
+        "short_wrong": 3,
+        "no_extractable_answer": 66,
+        "mean_generated_tokens": 734.226,
+        "status_counts": {
+          "exact": 238,
+          "missing_or_invalid_box": 10,
+          "symbolic": 191,
+          "truncated": 56,
+          "unparseable": 5
+        },
+        "predictions_sha256": "c2c7007f753bfb110cd55032a1e3351126b162f851b1438b2cbda87d8a3c4b8b",
+        "contract_sha256": "728374c1898a3786d64366156c13e08fb0d70172b728b3ab55090aa4175a9c1f",
+        "seconds": 1429.2213718891144
+      }
+    },
+    "C_bounded": {
+      "progress": {
+        "done": 500,
+        "total": 500,
+        "seconds": 1345.7819125652313,
+        "pid": 2266620,
+        "unix": 1793280541.7599688
+      },
+      "summary": {
+        "passed": true,
+        "arm": "C_bounded",
+        "count": 500,
+        "correct": 265.0,
+        "accuracy": 0.53,
+        "truncated": 47,
+        "empty": 0,
+        "short_wrong": 3,
+        "no_extractable_answer": 55,
+        "mean_generated_tokens": 713.238,
+        "status_counts": {
+          "exact": 245,
+          "missing_or_invalid_box": 8,
+          "symbolic": 193,
+          "truncated": 47,
+          "unparseable": 7
+        },
+        "predictions_sha256": "91a2dea1217bf24c5045520d4a12a4af34b41680cb5950a056f1aa769aa03a1d",
+        "contract_sha256": "8086bacb4dd99b5126ac8abadd1b2dfa2d3d24ef6e94ae42c4fab52ab46eac00",
+        "seconds": 1345.7844789028168
+      }
+    }
+  },
+  "controller_alive": false,
+  "child_alive": false,
+  "active_log_tail": "Three-arm C bounded pilot: COMPLETE\nValidation only; no 6M or D adaptation started.\n\ninitial: 261.0/500 = 52.2%; empty 0, short wrong 5, truncated 56\nA: 252.0/500 = 50.4%; empty 0, short wrong 6, truncated 46\nC_mix: 259.0/500 = 51.8%; empty 0, short wrong 3, truncated 56\nC_bounded: 265.0/500 = 53.0%; empty 0, short wrong 3, truncated 47\nC_bounded minus C_mix: +1.2%; paired 95% [-0.014, 0.038]; wins/losses 25/19\nC_bounded minus A: +2.6%; paired 95% [-0.002, 0.052]; wins/losses 29/16\nC_mix minus A: +1.4%; paired 95% [-0.012, 0.038]; wins/losses 23/16\nA minus initial: -1.8%; paired 95% [-0.044, 0.01]; wins/losses 19/28\n",
+  "gpu": "0, 26747 MiB, 54406 MiB, 99 %\n1, 46375 MiB, 34778 MiB, 100 %\n"
+}

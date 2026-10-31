@@ -1,0 +1,32 @@
+{
+  "authorized_scope": "frozen public PURE PRM scoring on existing rollouts; compare old Qwen saved scores; no actor model, generation, optimizer or training",
+  "fixed_rows": 288,
+  "empty_rows": 9,
+  "source_input_sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d",
+  "primary_variant": "native model-card raw question + same canonical steps + appended newline marker",
+  "sensitivity_variant": "official PURE RL prompt + same canonical steps; not token-exact official splitter",
+  "variants_scored_on_all_288": true,
+  "unchanged_signal": {
+    "process_reward": "0.5 * softmax(-r / 0.1) * r; r = 2 p_positive - 1",
+    "algorithm": "pinned PURE RLOO; fixed token width2048; one masked batch whitening",
+    "KL": 0,
+    "groups": 8,
+    "batch_size": 32
+  },
+  "fixed_exclusion": "Old reconstructed-token alignment failure B:210; all288 scoresretained, same8fullbatches256rows foradvantage",
+  "primary_outputs": [
+    "9emptyrawscores",
+    "8emptyrawandwhitenedadvantages",
+    "grouprewardranks",
+    "correctpeersoutranked"
+  ],
+  "limits": [
+    "empty-enriched diagnostic sample, not overallPRMquality",
+    "historicalA/BoriginaltokenIDsnotavailable; reconstructedmapping",
+    "comparison is model + its native interface, not weights-only sameinput",
+    "not historical A/B advantage and not predicted newtrainingperformance"
+  ],
+  "no_new_reward_installed": true,
+  "qwen_remains_available": true,
+  "created_utc": "2026-10-23T06:33:45.844354+00:00"
+}

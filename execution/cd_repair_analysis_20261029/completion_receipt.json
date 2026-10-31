@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "checked_unix": 1793258809.2784932,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "training_dispatched": false,
+  "remote_analysis": "/srv/research/ece285_math_rl_project/audits/cd_repair_analysis_20261029",
+  "same_frozen_inputs_verified": true,
+  "CPU_group_replays": 402,
+  "protected_original_files_unchanged": 89,
+  "original_experiment_modified": false,
+  "files": {
+    "analyze_repairs.py": "dc8d5d0fe45ea343efc166b3c191ab9377b65695a9fcc9ed24db1c26ddddf155",
+    "signal_repair.py": "ff4026cd23a3446db15fb4f85db112b290f3ca6c7dbeecb77e969f536cb3d754",
+    "verify_repair_contract.py": "8172998973e8c5c1286b4619b861ec127bf374ad71e9d80070240ab2570576aa",
+    "REPORT.txt": "3c391b8fb433a41aac09580cf586e3415975b9b12b8a3f45fa04a6af53cafc5e",
+    "REPAIR_PLAN.json": "ddc06df9be51aae6aff2b25fcd94eab0c0a5f66e83081becfd5a13e84a055881",
+    "review.html": "5225959208eedfb0e0c1ff8f6ab2de68a75c2d1c962adc3748c812b16dd7a4ad",
+    "buffer_style_and_pair_coverage.json": "965fcf2939e46a021d06afdfaa814cacf5d447fb2f5aad2d83ad686b7af65b28"
+  }
+}

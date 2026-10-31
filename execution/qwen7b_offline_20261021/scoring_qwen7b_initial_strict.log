@@ -1,0 +1,12 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 106.90it/s]
+Some weights of the model checkpoint at /srv/research/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']
+- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "/srv/research/ece285_math_rl_project/experiments/qwen7b_offline_20261021/score.py", line 198, in <module>
+    main()
+  File "/srv/research/ece285_math_rl_project/experiments/qwen7b_offline_20261021/score.py", line 46, in main
+    assert not loading_info['missing_keys'] and not loading_info['unexpected_keys'] and not loading_info['mismatched_keys']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

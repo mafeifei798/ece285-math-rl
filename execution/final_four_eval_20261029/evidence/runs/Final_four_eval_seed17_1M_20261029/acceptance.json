@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "regraded": 7276,
+  "expected": 7276,
+  "contracts_and_hashes_checked": true,
+  "raw_token_count_checked": true,
+  "per_arm_adapter_hash_checked": true,
+  "protected_files_unchanged": 609,
+  "CUDA_initialized": false,
+  "optimizer_updates": 0,
+  "release_sha256": "eef55b0d401e3098f97e7dcaee634c444f333c089c89ac18321275c5c23d7e0c"
+}

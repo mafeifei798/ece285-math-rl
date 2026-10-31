@@ -1,0 +1,382 @@
+{
+  "checked_unix": 1793256944.758878,
+  "remote_run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "controller.json": {
+    "status": "failed",
+    "pid": 3237174,
+    "started_unix": 1793174084.3281112,
+    "release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
+    "gpu": 1,
+    "sharing_authorized": true,
+    "completed_stages": [
+      "prepare",
+      "generate",
+      "schedule",
+      "preflight",
+      "adapt_C",
+      "adapt_D"
+    ],
+    "active_child": {
+      "stage": "paired_wiring",
+      "pid": 3503363,
+      "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/paired_wiring.log"
+    },
+    "actor_optimizer_updates": 0,
+    "automatic_RL_launch": false,
+    "stage_started_unix": 1793181919.746665,
+    "failure": "paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log",
+    "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
+    "failed_unix": 1793181921.917148
+  },
+  "dispatch.json": {
+    "pid": 3237174,
+    "started_unix": 1793174084.2960937,
+    "cwd": "/srv/research/ece285_math_rl_project",
+    "source": "/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
+    "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+    "source_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
+    "gpu": 1,
+    "gpu_sharing_authorized": true,
+    "actor_optimizer_updates": 0,
+    "complete_RL_authorized": false
+  },
+  "progress.json": {
+    "stage": "scoring",
+    "pid": 1124489,
+    "unix": 1793256940.1644936,
+    "arm": "D",
+    "done": 544,
+    "total": 728,
+    "elapsed_seconds": 143.35373163223267
+  },
+  "cpu_checks.json": {
+    "passed": true,
+    "success_term_gradient_identity": true,
+    "score_translation_does_not_change_relative_advantage": true,
+    "qwen_native_markers": true,
+    "CRLF_normalization": true,
+    "anchor_original_boundaries_preserved": true,
+    "policy_updates": 0
+  },
+  "selection.json": {
+    "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+    "buffer_questions": 512,
+    "primary_probe_groups": 64,
+    "primary_probe_rows": 512,
+    "illustrative_rows": 24,
+    "selection": "hash-selected within outcome strata, never selected by PRM scores",
+    "files": {
+      "buffer_questions.jsonl": "d76580a0651197574ad5122fde4eb68cf42d6329b7fd0b7fb2d072c44b2962a7",
+      "probe.jsonl": "0d2f72fc0d38eeff944d495e8e8b299b3a7195bbf255578f799e46c9f4f8685d",
+      "illustrations.jsonl": "3c2fa25c6f2dea2dca4398e61a43fa3aea1a42cf3504cebc688c8e292b47fed4",
+      "processbench.jsonl": "4e1e98c715b85dede4d136bf84685971c619d9083467f7c2390a866e1b02e8f2",
+      "forbidden.json": "f90fc588b2f6e329586d570a4ac1a80ae036e066f6c7cb13e9537985473f7a86"
+    }
+  },
+  "anchor_manifest.json": {
+    "source_repository": "HuggingFaceH4/prm800k-trl-dedup",
+    "source_revision": "fd8cba17d8214bfbabf6e7e10f29da4e6614dd6c",
+    "source_sha256": "d9e39ca727f8000c158f3baf51c7fe0c175f86146ad9250c2965f48172006864",
+    "sha256": "d0ce3590b256a3f30d951c9ee87acbf1dd46faca51a39f72f10b3245c7be898d",
+    "count": 2048,
+    "labels": {
+      "0": 1024,
+      "1": 1024
+    },
+    "excluded": {},
+    "forbidden_question_overlap": 0,
+    "data_admission_version": 2,
+    "conflicting_source_prefixes": 1831,
+    "conflicting_source_records": 279951,
+    "selection": "Exclude both labels for conflicting native prefixes across entire eligible source; deterministic one prefix per question per class then hash-select 1024 per class",
+    "boundaries": "original annotated step list preserved; supervision only at final native marker of each prefix"
+  },
+  "buffer_manifest.json": {
+    "sha256": "30b52163a1e0c9317778be1b848be69ae4c75d1f903c019ec22f6149165128b6",
+    "rows": 2048,
+    "questions": 512,
+    "samples_per_question": 4,
+    "completion_tokens": 1319118,
+    "statuses": {
+      "symbolic": 928,
+      "missing_or_invalid_box": 264,
+      "exact": 698,
+      "truncated": 120,
+      "unit_exact": 13,
+      "unit_symbolic": 5,
+      "unparseable": 20
+    },
+    "policy_optimizer_updates": 0,
+    "actor_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "generation": "initial frozen actor; original prepared prompt; temperature1; cap2048; independently seeded saved chunks"
+  },
+  "model_preflight.json": {
+    "passed": true,
+    "prm_id": "Qwen/Qwen2.5-Math-PRM-7B",
+    "revision": "0610740060112df12585d00a1c5f4624d2f59051",
+    "native_marker_id": [
+      151651
+    ],
+    "classification_head_names": [
+      "base_model.model.score.0.weight",
+      "base_model.model.score.0.bias",
+      "base_model.model.score.2.weight",
+      "base_model.model.score.2.bias"
+    ],
+    "classification_head_frozen": true,
+    "trainable_parameters": 20185088,
+    "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+    "no_optimizer_update": true,
+    "peak_allocated_GiB": 13.865128993988037,
+    "loading_info": {
+      "missing_keys": [],
+      "unexpected_keys": [
+        "lm_head.weight"
+      ],
+      "mismatched_keys": [],
+      "error_msgs": []
+    }
+  },
+  "paired_wiring.json": {
+    "passed": false,
+    "identical_initialization": true,
+    "identical_batches": true,
+    "first_unclipped_gradient_C_minus_D_equals_success_gradient": false,
+    "max_abs_error": 0.0006128824315965176,
+    "tolerance": {
+      "atol": 2e-06,
+      "rtol": 0.005
+    }
+  },
+  "batch_manifest.json": {
+    "steps": 512,
+    "counts": {
+      "fail": 827,
+      "success": 817,
+      "anchor_positive": 1024,
+      "anchor_negative": 1024
+    },
+    "input_tokens": 2038677,
+    "anchors_distinct_used": 2048,
+    "excluded": {
+      "missing_or_invalid_box": 264,
+      "truncated": 120,
+      "unparseable": 20
+    }
+  },
+  "C": {
+    "initialization.json": {
+      "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+      "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+      "batch_manifest_sha256": "fe7e9ff0851f2ae1120c4d1d2118cd9802cf61bdce9d9c679f11dbcce417f65e",
+      "steps": 512,
+      "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+      "classification_head_frozen": true,
+      "trainable_parameters": 20185088,
+      "success_coefficient": 1.0
+    },
+    "latest_checkpoint.json": {
+      "file": "checkpoints/step_000512.pt",
+      "sha256": "89a8d08763852ab595858ec305bbd0856266c24220d59721bac3ac884deb9e21",
+      "step": 512
+    },
+    "completion.json": {
+      "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+      "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+      "batch_manifest_sha256": "fe7e9ff0851f2ae1120c4d1d2118cd9802cf61bdce9d9c679f11dbcce417f65e",
+      "steps": 512,
+      "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+      "classification_head_frozen": true,
+      "trainable_parameters": 20185088,
+      "success_coefficient": 1.0,
+      "complete": true,
+      "arm": "C",
+      "steps_completed": 512,
+      "final_adapter_hash": "ae61765b05cbf4e894d237a4f0b3a577f4691c556618f60ded7826d531cd943e",
+      "adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+      "frozen_parameters_unchanged": true,
+      "elapsed_seconds_this_invocation": 3715.438150405884,
+      "peak_allocated_GiB": 15.231752872467041,
+      "policy_optimizer_updates": 0
+    },
+    "last_metrics": [
+      {
+        "arm": "C",
+        "step": 510,
+        "losses": {
+          "fail": 0.14184413105249405,
+          "success": 0.02017517908825539,
+          "anchor_positive": 0.1571971628582105,
+          "anchor_negative": 0.10230861604213715
+        },
+        "total_loss": 0.29177219959092326,
+        "gradient_norm_before_clip": 1.9668692350387573,
+        "input_tokens": 4115,
+        "elapsed_seconds": 3705.1306734085083,
+        "peak_allocated_GiB": 15.231752872467041
+      },
+      {
+        "arm": "C",
+        "step": 511,
+        "losses": {
+          "fail": 0.05018660658970475,
+          "success": 0.005658883026626427,
+          "anchor_positive": 0.013044667895883322,
+          "anchor_negative": 0.13052033260464668
+        },
+        "total_loss": 0.12762798986659618,
+        "gradient_norm_before_clip": 0.8253453373908997,
+        "input_tokens": 3748,
+        "elapsed_seconds": 3709.903260707855,
+        "peak_allocated_GiB": 15.231752872467041
+      },
+      {
+        "arm": "C",
+        "step": 512,
+        "losses": {
+          "fail": 0.14282923191785812,
+          "success": 0.1285225711762905,
+          "anchor_positive": 0.24646366946399212,
+          "anchor_negative": 0.015733861946500838
+        },
+        "total_loss": 0.4024505687993951,
+        "gradient_norm_before_clip": 5.746124267578125,
+        "input_tokens": 3673,
+        "elapsed_seconds": 3714.3822021484375,
+        "peak_allocated_GiB": 15.231752872467041
+      }
+    ]
+  },
+  "D": {
+    "initialization.json": {
+      "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+      "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+      "batch_manifest_sha256": "fe7e9ff0851f2ae1120c4d1d2118cd9802cf61bdce9d9c679f11dbcce417f65e",
+      "steps": 512,
+      "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+      "classification_head_frozen": true,
+      "trainable_parameters": 20185088,
+      "success_coefficient": 0.0
+    },
+    "latest_checkpoint.json": {
+      "file": "checkpoints/step_000512.pt",
+      "sha256": "999c75df62c569408cd437840afb34a80ee48a4427ad1c0f28f0fcda45631928",
+      "step": 512
+    },
+    "completion.json": {
+      "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+      "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+      "batch_manifest_sha256": "fe7e9ff0851f2ae1120c4d1d2118cd9802cf61bdce9d9c679f11dbcce417f65e",
+      "steps": 512,
+      "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+      "classification_head_frozen": true,
+      "trainable_parameters": 20185088,
+      "success_coefficient": 0.0,
+      "complete": true,
+      "arm": "D",
+      "steps_completed": 512,
+      "final_adapter_hash": "042f8d06a6045b5292363bb9fa638e48836d5a9a773d8e6ddb5a13cad1e5aeb3",
+      "adapter_sha256": "ab3a1856c576779a9955854d697ecf754381032de933bfad39b47775d7a9a4ab",
+      "frozen_parameters_unchanged": true,
+      "elapsed_seconds_this_invocation": 2631.1940603256226,
+      "peak_allocated_GiB": 15.231752872467041,
+      "policy_optimizer_updates": 0
+    },
+    "last_metrics": [
+      {
+        "arm": "D",
+        "step": 510,
+        "losses": {
+          "fail": 0.011900694051291794,
+          "success": 6.744233846664429,
+          "anchor_positive": 0.114755781221902,
+          "anchor_negative": 0.1475296886637807
+        },
+        "total_loss": 0.14304342899413314,
+        "gradient_norm_before_clip": 2.502547264099121,
+        "input_tokens": 4115,
+        "elapsed_seconds": 2619.581892967224,
+        "peak_allocated_GiB": 15.231752872467041
+      },
+      {
+        "arm": "D",
+        "step": 511,
+        "losses": {
+          "fail": 0.0004499530477914959,
+          "success": 5.4634435176849365,
+          "anchor_positive": 0.00927813583984971,
+          "anchor_negative": 0.04118805844336748
+        },
+        "total_loss": 0.025683050189400092,
+        "gradient_norm_before_clip": 0.26905080676078796,
+        "input_tokens": 3748,
+        "elapsed_seconds": 2625.009038925171,
+        "peak_allocated_GiB": 15.231752872467041
+      },
+      {
+        "arm": "D",
+        "step": 512,
+        "losses": {
+          "fail": 0.0005511406052391976,
+          "success": 7.134252548217773,
+          "anchor_positive": 0.15208136849105358,
+          "anchor_negative": 0.00928454588574823
+        },
+        "total_loss": 0.0812340977936401,
+        "gradient_norm_before_clip": 2.703286647796631,
+        "input_tokens": 3673,
+        "elapsed_seconds": 2630.151380777359,
+        "peak_allocated_GiB": 15.231752872467041
+      }
+    ]
+  },
+  "postprocess": {
+    "status": "running",
+    "pid": 1113327,
+    "started_unix": 1793256431.9981468,
+    "source_release_sha256": "b35e38b2addc45b36703812b47bc1595b9a36a34a68801baa2d318c82893cc8e",
+    "completed_stages": [
+      "score_B",
+      "score_C"
+    ],
+    "active_child": {
+      "stage": "score_D",
+      "pid": 1124489
+    },
+    "policy_optimizer_updates": 0,
+    "PRM_optimizer_updates": 0,
+    "source_sha256": "7769106b5059a89eeb5b08e5a825ca2dfc2449434f11894b176c36529994d93d",
+    "original_controller_unchanged": true,
+    "stage_started_unix": 1793256784.8464286
+  },
+  "postprocess_child_alive": true,
+  "postprocess_log_tail": "7459564209}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256827.3342216, \"arm\": \"D\", \"done\": 128, \"total\": 728, \"elapsed_seconds\": 30.52345585823059}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256835.0907352, \"arm\": \"D\", \"done\": 160, \"total\": 728, \"elapsed_seconds\": 38.27996516227722}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256843.6267912, \"arm\": \"D\", \"done\": 192, \"total\": 728, \"elapsed_seconds\": 46.81601667404175}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256853.6200643, \"arm\": \"D\", \"done\": 224, \"total\": 728, \"elapsed_seconds\": 56.80929350852966}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256866.148206, \"arm\": \"D\", \"done\": 256, \"total\": 728, \"elapsed_seconds\": 69.33743691444397}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256874.3241696, \"arm\": \"D\", \"done\": 288, \"total\": 728, \"elapsed_seconds\": 77.51340770721436}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256881.186444, \"arm\": \"D\", \"done\": 320, \"total\": 728, \"elapsed_seconds\": 84.37568497657776}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256892.36827, \"arm\": \"D\", \"done\": 352, \"total\": 728, \"elapsed_seconds\": 95.55750346183777}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256900.5956697, \"arm\": \"D\", \"done\": 384, \"total\": 728, \"elapsed_seconds\": 103.78490924835205}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256908.38086, \"arm\": \"D\", \"done\": 416, \"total\": 728, \"elapsed_seconds\": 111.57010054588318}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256917.2344239, \"arm\": \"D\", \"done\": 448, \"total\": 728, \"elapsed_seconds\": 120.42365503311157}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256924.9868786, \"arm\": \"D\", \"done\": 480, \"total\": 728, \"elapsed_seconds\": 128.17611956596375}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256931.3184428, \"arm\": \"D\", \"done\": 512, \"total\": 728, \"elapsed_seconds\": 134.50768446922302}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256940.1644936, \"arm\": \"D\", \"done\": 544, \"total\": 728, \"elapsed_seconds\": 143.35373163223267}\n",
+  "child_alive": false,
+  "child_log_tail": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 128, in <module>\n    elif a.mode=='wiring':wiring()\n                          ^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 121, in wiring\n    assert ok,err\n           ^^\nAssertionError: 0.0006128824315965176\n",
+  "controller_log_tail": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 47, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
+  "scoring_B.json": {
+    "arm": "B",
+    "sha256": "639f61e50e73204dc490d7351d25016d4fc2e61332ebc6e559ccbe6d63042dfa",
+    "rows": 728,
+    "input_tokens_this_invocation": 462750,
+    "elapsed_seconds_this_invocation": 135.63740515708923,
+    "peak_allocated_GiB": 13.624773025512695,
+    "native_scoring": true,
+    "normalize_crlf": true,
+    "actor_updates": 0,
+    "adapter_sha256": null
+  },
+  "scoring_C.json": {
+    "arm": "C",
+    "sha256": "b75a7c173c0ea7f492dec832730973d6da7cda64be1d4c77245d3d7ca369c02e",
+    "rows": 728,
+    "input_tokens_this_invocation": 462750,
+    "elapsed_seconds_this_invocation": 193.60856890678406,
+    "peak_allocated_GiB": 13.993298530578613,
+    "native_scoring": true,
+    "normalize_crlf": true,
+    "actor_updates": 0,
+    "adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356"
+  },
+  "gpu": "0, 30506 MiB, 50647 MiB, 100 %\n1, 47019 MiB, 34133 MiB, 100 %\n"
+}

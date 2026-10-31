@@ -1,0 +1,715 @@
+[
+  {
+    "row_index": 78,
+    "question": "The equation $a^7xy-a^6y-a^5x=a^4(b^4-1)$ is equivalent to the equation $(a^mx-a^n)(a^py-a^2)=a^4b^4$ for some integers $m$, $n$, and $p$.  Find $mnp$.",
+    "row": {
+      "optimizer_step_before_update": 2,
+      "problem_id": "math/train/algebra/109",
+      "gold": "24",
+      "completion": " \\boxed{-70}",
+      "completion_tokens": 7,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "-70",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9889812469482422
+      ],
+      "min_score": 0.9889812469482422,
+      "step_count": 1,
+      "prm_input_tokens": 76,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.19779624938964846
+    },
+    "advantage_B": 2.115520976452788,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.09609573483467103,
+      0.0,
+      0.004630682244896889,
+      0.00785375088453293,
+      0.07008427977561951,
+      0.0035019114613533023,
+      0.19779624938964846,
+      0.002467220276594162
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 1908,
+    "question": "Quadrilateral $ABCD$ has right angles at $B$ and $D$, and $AC=3$. If $ABCD$ has two sides with distinct integer lengths, then what is the area of $ABCD$? Express your answer in simplest radical form.",
+    "row": {
+      "optimizer_step_before_update": 59,
+      "problem_id": "math/train/geometry/822",
+      "gold": "\\sqrt 2+\\sqrt 5",
+      "completion": " $\\boxed{\\frac{5\\sqrt{5}}{2}}$\n\nThe explanation is as follows: Let $a = CD$ since $|CD| = |BA|$. Let $h = 3 - b$. \n\\begin{align*}\na^2 + h^2 &= c^2 \\quad \\text{and} \\quad h^2 + b^2 = 9 \\\\\nc^2 - a^2 &= a^2 - b^2 + c^2 \\\\\n2b(c - a) &= a^2 - b^2 \\\\\nb(2c - 2a) &= (a - b)(a + b) \\\\\n2b(c - a) - (a - b)(a + b) &= 0 \\\\\n2b^2 + ac - 2ab - 2b^2 &= 0 \\\\\n2ab - 2ac &= 0 \\\\\nb - c &= 0 \\\\\nb &= c\n\\end{align*}\nSo, $b = c = 3$ and therefore $a = \\sqrt{5}$. Then the area is $3\\sqrt{5}/2$. Thank you so much!",
+      "completion_tokens": 246,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "\\frac{5\\sqrt{5}}{2}",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9459012746810913,
+        0.9658995866775513
+      ],
+      "min_score": 0.9459012746810913,
+      "step_count": 2,
+      "prm_input_tokens": 301,
+      "raw_no_double_newline": false,
+      "no_internal_separator": false,
+      "reward": 0.18918025493621826
+    },
+    "advantage_B": 2.4626902601133547,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.004440245777368546,
+      0.0,
+      0.0,
+      0.002534746937453747,
+      0.18918025493621826,
+      0.0,
+      0.002429434098303318,
+      0.016421325504779816
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 2095,
+    "question": "Let $f(x)$ and $g(x)$ be nonzero polynomials such that\n\\[f(g(x)) = f(x) g(x).\\]If $g(2) = 37,$ find $g(x).$",
+    "row": {
+      "optimizer_step_before_update": 65,
+      "problem_id": "math/train/intermediate_algebra/207",
+      "gold": "x^2 + 33x - 33",
+      "completion": " \\boxed{g(x) = 2x^2-3}",
+      "completion_tokens": 16,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "g(x) = 2x^2-3",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9791356921195984
+      ],
+      "min_score": 0.9791356921195984,
+      "step_count": 1,
+      "prm_input_tokens": 62,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.1958271384239197
+    },
+    "advantage_B": 2.440088787259933,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.009414836019277574,
+      0.01653946787118912,
+      0.03060843348503113,
+      0.012742999196052552,
+      0.0,
+      0.0,
+      0.0,
+      0.1958271384239197
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 3014,
+    "question": "The curve $y = \\sin x$ cuts the line whose equation is $y = \\sin 70^\\circ$ into segments having the successive ratios\n\\[\\dots p : q : p : q \\dots\\]with $p < q.$  Compute the ordered pair of relatively prime positive integers $(p,q).$",
+    "row": {
+      "optimizer_step_before_update": 94,
+      "problem_id": "math/train/precalculus/112",
+      "gold": "(1,8)",
+      "completion": " \\boxed{(1,4)} \\text{should be replaced by} \\boxed{(1,3)}",
+      "completion_tokens": 23,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "(1,3)",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.954647421836853
+      ],
+      "min_score": 0.954647421836853,
+      "step_count": 1,
+      "prm_input_tokens": 90,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.19092948436737062
+    },
+    "advantage_B": 0.1078790462560025,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.00474693775177002,
+      0.00720321387052536,
+      0.007298753410577775,
+      1.0034025251865386,
+      0.004613045230507851,
+      0.007409434765577316,
+      0.19092948436737062,
+      0.0
+    ],
+    "all_wrong": false
+  },
+  {
+    "row_index": 4015,
+    "question": "Henry's little brother has $8$ identical stickers and $4$ identical sheets of paper. How many ways are there for him to put all of the stickers on the sheets of paper, if only the number of stickers on each sheet matters?",
+    "row": {
+      "optimizer_step_before_update": 125,
+      "problem_id": "math/train/counting_and_probability/737",
+      "gold": "15",
+      "completion": " Your reasoning should be contained in $\\boxed{\\phantom{b}}$.\n\nSince the stickers are identical and the sheets of paper can be reused, we should use the stars and bars method. In this method, we consider the stickers as stars and the dividers between the sheets as bars. With $8$ stickers (or stars) and $3$ dividers (to create $4$ groups), we can calculate the number of ways as:\n\\begin{eqnarray*}\n{8+3 \\choose 3}\n& = {11 \\choose 3} \\\\\n& = \\frac{11\\cdot 10 \\cdot 9}{3!} \\\\\n& = 165\n\\end{eqnarray*}\nThe reasoning is contained in the boxed answer, and the final answer is $\\boxed{165}$.",
+      "completion_tokens": 178,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "165",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9864678382873535,
+        0.9403530955314636
+      ],
+      "min_score": 0.9403530955314636,
+      "step_count": 2,
+      "prm_input_tokens": 226,
+      "raw_no_double_newline": false,
+      "no_internal_separator": false,
+      "reward": 0.18807061910629275
+    },
+    "advantage_B": 2.2543211812649027,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.0,
+      0.008738211542367936,
+      0.05502594709396363,
+      0.02111576944589615,
+      0.07079725861549378,
+      0.006717900931835175,
+      0.0012976539321243763,
+      0.18807061910629275
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 4975,
+    "question": "The vertices of an equilateral triangle lie on the hyperbola $xy=1$, and a vertex of this hyperbola is the centroid of the triangle. What is the square of the area of the triangle?",
+    "row": {
+      "optimizer_step_before_update": 155,
+      "problem_id": "math/train/intermediate_algebra/784",
+      "gold": "108",
+      "completion": " \\boxed{ {3} \\times \\times \\times \\times \\times \\times \\times }\n\nI really dont understand it.\nThis is my first time posting in a math community. I hope am doing it because I really wanna understand it. \n\nWell, I have noticed you doing FTW problems. did you join AoPS a couple of times? if so, please use the search function.\nThe answer is $\\boxed{9\\sqrt{3}}$. (The link below gave me all the information I needed.)\n\nThanks. But I just dont know where to look it up. I already signed up for Alcumus AoPS\nThe search function is pretty standard. You can see it by searching. Just go to the header, and you see search results with the word written on top; clicking on it will bring you to the search results.\n\nOh ok, I understand now. Thank you so much!\nIt'd be $3\\sqrt{3}$ and there are many similar problems from the 2008 USAMO.",
+      "completion_tokens": 213,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "9\\sqrt{3}",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.966663122177124,
+        0.9822537302970886,
+        0.9813107252120972,
+        0.9866748452186584,
+        0.9815951585769653
+      ],
+      "min_score": 0.966663122177124,
+      "step_count": 5,
+      "prm_input_tokens": 255,
+      "raw_no_double_newline": false,
+      "no_internal_separator": false,
+      "reward": 0.19333262443542482
+    },
+    "advantage_B": 2.399595768681775,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.014927008748054506,
+      0.0,
+      0.0,
+      0.010254484415054322,
+      0.0042412240058183675,
+      0.012105877697467805,
+      0.04899893403053284,
+      0.19333262443542482
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 5215,
+    "question": "Find the value of \\[\\cot(\\cot^{-1}3+\\cot^{-1}7+\\cot^{-1}13+\\cot^{-1}21).\\]",
+    "row": {
+      "optimizer_step_before_update": 162,
+      "problem_id": "math/train/precalculus/135",
+      "gold": "\\frac{3}{2}",
+      "completion": " \\[\\boxed{-\\frac{36}{91}}\\] \nReason: \n\nTrigonometry plays a huge part of the AMC 12. Problems like these require not only your knowledge of basic trigonometry and practice, but you also have to develop a program for your proofs. This means putting your algebraic processes down on paper before beginning answers. This means  factoring and proving your results.",
+      "completion_tokens": 86,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "-\\frac{36}{91}",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9939024448394775,
+        0.9683213829994202
+      ],
+      "min_score": 0.9683213829994202,
+      "step_count": 2,
+      "prm_input_tokens": 119,
+      "raw_no_double_newline": false,
+      "no_internal_separator": false,
+      "reward": 0.19366427659988406
+    },
+    "advantage_B": 2.234405185905336,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.006661073863506318,
+      0.0697290301322937,
+      0.006705232709646226,
+      0.06691789031028748,
+      0.005752317979931832,
+      0.03671872615814209,
+      0.002991417422890663,
+      0.19366427659988406
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 5386,
+    "question": "Point $D$ lies on side $AC$ of equilateral triangle $ABC$ such that the measure of angle $DBC$ is $45$ degrees. What is the ratio of the area of triangle $ADB$ to the area of triangle $CDB$? Express your answer as a common fraction in simplest radical form.",
+    "row": {
+      "optimizer_step_before_update": 168,
+      "problem_id": "math/train/geometry/768",
+      "gold": "\\frac{\\sqrt{3}- 1}{2}",
+      "completion": " $\\boxed{\\frac{2\\sqrt{3} - 3}{6}}$.",
+      "completion_tokens": 19,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "\\frac{2\\sqrt{3} - 3}{6}",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9591543078422546
+      ],
+      "min_score": 0.9591543078422546,
+      "step_count": 1,
+      "prm_input_tokens": 86,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.19183086156845094
+    },
+    "advantage_B": 2.4332230077921975,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.004796974733471871,
+      0.03493833839893341,
+      0.19183086156845094,
+      0.0023681042715907098,
+      0.0031569123268127444,
+      0.0,
+      0.011001056432724,
+      0.0
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 5621,
+    "question": "On the Cartesian plane in which each unit is one foot, a dog is tied to a post on the point $(4,3)$ by a $10$ foot rope. What is the greatest distance the dog can be from the origin?",
+    "row": {
+      "optimizer_step_before_update": 175,
+      "problem_id": "math/train/algebra/1628",
+      "gold": "15",
+      "completion": " \\boxed{14}\\lefturgeries",
+      "completion_tokens": 10,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "14",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9830850958824158
+      ],
+      "min_score": 0.9830850958824158,
+      "step_count": 1,
+      "prm_input_tokens": 59,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.19661701917648317
+    },
+    "advantage_B": 0.10694524112870762,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.001287620421499014,
+      0.007868500798940659,
+      0.005418380722403526,
+      0.014370253682136536,
+      0.02713790833950043,
+      0.19661701917648317,
+      1.011330485343933,
+      0.008936174958944321
+    ],
+    "all_wrong": false
+  },
+  {
+    "row_index": 5789,
+    "question": "Let $a_1,$ $a_2,$ $\\dots,$ $a_{2018}$ be the roots of the polynomial\n\\[x^{2018} + x^{2017} + \\dots + x^2 + x - 1345 = 0.\\]Compute\n\\[\\sum_{n = 1}^{2018} \\frac{1}{1 - a_n}.\\]",
+    "row": {
+      "optimizer_step_before_update": 180,
+      "problem_id": "math/train/intermediate_algebra/665",
+      "gold": "3027",
+      "completion": " \\boxed{\\frac{2693}{1345}}",
+      "completion_tokens": 16,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "\\frac{2693}{1345}",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9887499809265137
+      ],
+      "min_score": 0.9887499809265137,
+      "step_count": 1,
+      "prm_input_tokens": 109,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.19774999618530276
+    },
+    "advantage_B": 2.1249293637161144,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.0014921287074685097,
+      0.10585267543792726,
+      0.006567391008138657,
+      0.0028674062341451645,
+      0.0467412680387497,
+      0.19774999618530276,
+      0.010720229148864746,
+      0.0
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 5952,
+    "question": "Compute\n\n$3(1+3(1+3(1+3(1+3(1+3(1+3(1+3(1+3(1+3)))))))))$",
+    "row": {
+      "optimizer_step_before_update": 186,
+      "problem_id": "math/train/algebra/330",
+      "gold": "88572",
+      "completion": " \\boxed{1107}",
+      "completion_tokens": 9,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "1107",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9771973490715027
+      ],
+      "min_score": 0.9771973490715027,
+      "step_count": 1,
+      "prm_input_tokens": 52,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.19543946981430055
+    },
+    "advantage_B": 1.9621809908989574,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.19543946981430055,
+      0.03887356519699097,
+      0.02287370413541794,
+      0.014632943272590638,
+      0.06937461495399476,
+      0.13238457441329957,
+      0.010216547548770905,
+      0.012375196814537049
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 6868,
+    "question": "Let $\\mathcal{R}$ be the region consisting of the set of points in the coordinate plane that satisfy both $|8 - x| + y \\le 10$ and $3y - x \\ge 15$. When $\\mathcal{R}$ is revolved around the line whose equation is $3y - x = 15$, the volume of the resulting solid is $\\frac {m\\pi}{n\\sqrt {p}}$, where $m$, $n$, and $p$ are positive integers, $m$ and $n$ are relatively prime, and $p$ is not divisible by the square of any prime. Find $m + n + p$.\n",
+    "row": {
+      "optimizer_step_before_update": 214,
+      "problem_id": "math/train/geometry/521",
+      "gold": "365",
+      "completion": " $$\\boxed{124}$$",
+      "completion_tokens": 10,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "124",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9713473320007324
+      ],
+      "min_score": 0.9713473320007324,
+      "step_count": 1,
+      "prm_input_tokens": 155,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.1942694664001465
+    },
+    "advantage_B": 1.6746394266315647,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.000605567079037428,
+      0.18429980278015137,
+      0.0036249440163373947,
+      0.0039062473922967913,
+      0.1942694664001465,
+      0.0,
+      0.0,
+      0.00252255629748106
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 7090,
+    "question": "Compute the remainder when\n${2007 \\choose 0} + {2007 \\choose 3} + \\cdots + {2007 \\choose 2007}$\nis divided by 1000.\n",
+    "row": {
+      "optimizer_step_before_update": 221,
+      "problem_id": "math/train/number_theory/675",
+      "gold": "42",
+      "completion": " {\\boxed{085}}\n\nIs there any rule for this? Your answer is correct. If there is any remainder, it must be less than 501. (What number is greater than or less than 1003 and less than 501?) If the remainder is less than 501, then it must be \\boxed{085}.",
+      "completion_tokens": 80,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "085",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9950467348098755,
+        0.9837225079536438
+      ],
+      "min_score": 0.9837225079536438,
+      "step_count": 2,
+      "prm_input_tokens": 134,
+      "raw_no_double_newline": false,
+      "no_internal_separator": false,
+      "reward": 0.19674450159072876
+    },
+    "advantage_B": 2.4043468464921784,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.0025195177644491197,
+      0.03421223759651184,
+      0.19674450159072876,
+      0.03522082567214966,
+      0.028067249059677127,
+      0.017388330399990083,
+      0.0,
+      0.03790421783924103
+    ],
+    "all_wrong": true
+  },
+  {
+    "row_index": 7774,
+    "question": "Parallelogram $ABCD$ with $A(2,5)$, $B(4,9)$, $C(6,5)$, and $D(4,1)$ is reflected across the $x$-axis to $A'B'C'D'$ and then $A'B'C'D'$ is reflected across the line $y=x+1$ to $A''B''C''D''$. This is done such that $D'$ is the image of $D$, and $D''$ is the image of $D'$. What is the ordered pair of $D''$ in the coordinate plane?",
+    "row": {
+      "optimizer_step_before_update": 242,
+      "problem_id": "math/train/geometry/656",
+      "gold": "(-2,5)",
+      "completion": " $\\boxed{(4,-4)}$\nHere is an easier way:\nAnswer: $\\boxed{\\left(\\frac{39}{5}, \\frac{1}{5}\\right)}$\nNext step: \nSplit the question into two smaller questions\n$Point $D\\rightarrow PointD' = PointB\\rightarrow PointC$\nMarkup\nSplit the question into two smaller questions\n$Point D\\rightarrow Point D' = Point B \\rightarrow Point C$\nIn Mitro K \"| x'' y'' | =\nThen | x' y' | =\nThen take the\n[x' y' | \nThe | x y |\nNow I must do the second translation I took all these answers but they are not in both quadrants right e^m\n4.6\n46\nI don't really understand the mathematical translation that Mitro K used\nIm just learning and and making strikethroughs!\nPlease..\nAnswer\nI once again asked mitro K why the answer was in the second quadrant?\nHow did she calculate it so cool!\nThe velocity can be $\\frac{2\\pi}{9}$ and why is it 9?\nFinally",
+      "completion_tokens": 235,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "\\left(\\frac{39}{5}, \\frac{1}{5}\\right)",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9811668992042542
+      ],
+      "min_score": 0.9811668992042542,
+      "step_count": 1,
+      "prm_input_tokens": 365,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.19623337984085085
+    },
+    "advantage_B": 0.11277848948597158,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.001941695436835289,
+      0.010131676495075227,
+      0.013807585835456848,
+      0.005181603878736497,
+      1.0146860107779503,
+      0.009206780046224595,
+      0.19623337984085085,
+      0.0
+    ],
+    "all_wrong": false
+  },
+  {
+    "row_index": 8692,
+    "question": "Chewbacca has 20 pieces of cherry gum and 30 pieces of grape gum.  Some of the pieces are in complete packs, while others are loose.  Each complete pack has exactly $x$ pieces of gum. If Chewbacca loses one pack of cherry gum, then the ratio of the number of pieces of cherry gum he has to the number of pieces of grape gum will be exactly the same as if he instead finds 5 packs of grape gum.  Find $x$.",
+    "row": {
+      "optimizer_step_before_update": 271,
+      "problem_id": "math/train/algebra/487",
+      "gold": "14",
+      "completion": " 15\nIf we let $a$ be the number of complete packs of cherry gum and $b$ be the number of complete packs of grape gum, after losing one pack of cherry gum, the number of pieces of cherry gum he would have left is $20 - x$. The ratio of this to the number of pieces of grape gum is \\[\\frac{20-x}{30}.\\]After finding 5 packs of grape gum, Cro-New York(or old and new, which is the same thing), we would have $b+5$ packs of grape gum, so the number of pieces of grape gum would be $30 + 5x$. The ratio of this to the number of pieces of cherry gum would be \\[\\frac{20}{30 + 5x}.\\]Since the two ratios are equal, we have \\[\\frac{20-x}{30} = \\frac{20}{30 + 5x}.\\]Cross-multiplying, we get \\[(20-x)(30 + 5x) = 20\\cdot 30.\\]Expanding, we get \\[600 + 100x - 30x + 5x^2 = 600.\\]Simplifying, we get \\[5x^2 + 70x = 0.\\]Factoring out $x$, we get \\[x(5x + 70) = 0.\\]Setting each factor to $0$, we find that the solutions are $x = 0$ and $x = -14$, but $x$ cannot be negative or $0$, so the answer is $\\boxed{15}$.",
+      "completion_tokens": 366,
+      "terminated": true,
+      "status": "symbolic",
+      "answer": "15",
+      "outcome_reward": 0.0,
+      "valid_for_process_reward": true,
+      "step_scores": [
+        0.9457011222839355
+      ],
+      "min_score": 0.9457011222839355,
+      "step_count": 1,
+      "prm_input_tokens": 468,
+      "raw_no_double_newline": true,
+      "no_internal_separator": true,
+      "reward": 0.18914022445678713
+    },
+    "advantage_B": 2.3584221121808127,
+    "group_outcomes": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "group_rewards": [
+      0.03163487017154694,
+      0.0,
+      0.057233852148056034,
+      0.004302462190389634,
+      0.18914022445678713,
+      0.007298753410577775,
+      0.02217111885547638,
+      0.006936834752559662
+    ],
+    "all_wrong": true
+  }
+]

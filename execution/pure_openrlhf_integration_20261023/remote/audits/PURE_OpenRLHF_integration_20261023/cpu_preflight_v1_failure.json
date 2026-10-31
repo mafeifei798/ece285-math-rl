@@ -1,0 +1,55 @@
+{
+  "status": "blocked_before_model_load",
+  "python": "3.11.11 (main, Dec  4 2024, 08:55:07) [GCC 11.4.0]",
+  "reason": "Cross-version AST dump fingerprint mismatch",
+  "differences": [
+    {
+      "name": "right_padding",
+      "expected": "d50d254671b7fd4a4ac399efda42acbf520dfe32f477e6b29694c4822566dd88",
+      "actual": "65e0c81d35d8a636d9a82d0680f7fc984b82643fdfcfb7f97c8c9cf30d50ec71"
+    },
+    {
+      "name": "turn_process_reward_logits_to_reward",
+      "expected": "c1d202a33faeb27eebd607cc8b8fbedf2ec8e6762d3499c15e55515676e93ee3",
+      "actual": "58bae886d577689a7b1a5a9f23da5094cd699613fba0764d60245e98b995de8a"
+    },
+    {
+      "name": "compute_approx_kl",
+      "expected": "7e7f1fe5d7169a61065c0b1f2c2276351025f70abc8bb0146c0c51d7abf8aa31",
+      "actual": "2e6a74e72b65c929acde49120340ed1a26487fda9c8dca3342a69588c8cd698c"
+    },
+    {
+      "name": "compute_reward",
+      "expected": "f18ec9e61253b233ca1ea1eb2f17ba8a8edb0afb15059f6bd090051f3f2a185d",
+      "actual": "472fa2a208b4bec3193a6f790cfedba05bb5126598c849553989fa6354a99201"
+    },
+    {
+      "name": "masked_mean",
+      "expected": "3bb4e3cdb0ead516d1a15f48ccfcf065f2f6c983fd4006232d363db2c541631c",
+      "actual": "db34b6bb9b525658d101049ebc0d5604ff359dffca0160ee501dd22f865c314c"
+    },
+    {
+      "name": "process_experiences",
+      "expected": "5dedc903a1f8fa87e9ccd15a05d25f1f9b54f8c78b0ea00cc30e0d826a2a5005",
+      "actual": "be9e57b2c228398be0acb40a1a5373ffae1c73f279522ef4e1d36a3e1f713eb1"
+    },
+    {
+      "name": "normalize",
+      "expected": "9da378ed9070e9de94f61ab4153088df64382d1a2a4b46f38f00595d4ac33cd4",
+      "actual": "24a3932b97bb8a9ff7c1209c179175575c54b2f87c3691b4ce254acdd7ef9c7e"
+    },
+    {
+      "name": "PolicyLoss",
+      "expected": "62640055662dcd636c1e8570c3a182c62c8c1eefd4344c29781dd7908bd0a829",
+      "actual": "13c96cd700c2461d7b47996120f51040897bbadaba94be3b68126ecdae3d5236"
+    },
+    {
+      "name": "log_probs_from_logits",
+      "expected": "3ca3310b18f04dcbd954cd3eadbe7c059a8db6b1ddb2928ab7d2a5935be277c5",
+      "actual": "0b481c129cc5a4be75ddc926eb9bdeff1c3d5db6d711f177fb2e977693594d15"
+    }
+  ],
+  "optimizer_steps": 0,
+  "models_loaded": false,
+  "source_snapshot": "/srv/research/ece285_math_rl_project/audits/PURE_OpenRLHF_integration_20261023/deployment_v1_source"
+}

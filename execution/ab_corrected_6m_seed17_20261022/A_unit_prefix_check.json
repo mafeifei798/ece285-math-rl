@@ -1,0 +1,20 @@
+{
+  "observed_unix": 1792663823.7663722,
+  "scope": "CPU-only re-verification of unit_* rows in immutable completed-update prefix of active corrected A; not final test evaluation",
+  "prefix_rows": 8864,
+  "prefix_tokens": 5882034,
+  "completed_update": 277,
+  "prefix_bytes_sha256": "84730494577ea2ea6f93ba2e68e21aeec03ade858735b0b02e3a2cea7af0bea8",
+  "unit_rows_reverified": 35,
+  "fixed_verifier_matches_saved_rows": true,
+  "changed_labels": 14,
+  "changed_groups": 5,
+  "old_false_negatives_fixed": 14,
+  "old_positives_removed": 0,
+  "changed_source_rows": [2096,2098,2100,2102,4818,5360,5363,8512,8513,8514,8515,8518,8747,8751],
+  "changed_groups_zero_based": [262,602,670,1064,1093],
+  "source_run": "runs/A_corrected_seed17_6M_20261022/rollouts.jsonl",
+  "source_unit_metadata": "audits/reward_repair_v3_20261021/unit_metadata.json",
+  "method": "Read the first progress.generated_completions rows; re-run frozen repaired_outcome and match saved reward/status/answer for all unit_* rows; compare legacy training.reward.outcome on exactly those same strings. All changed rewards were 0 to 1.",
+  "limitations": ["Prefix snapshot while A was still training", "Verifies unit handling; does not judge the complete mathematical derivation", "Does not establish a final accuracy effect or prove why old B lagged A", "This is a compact receipt; full completions remain in the preserved remote rollout ledger"]
+}

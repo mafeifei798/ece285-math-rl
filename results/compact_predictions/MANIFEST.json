@@ -1,0 +1,118 @@
+{
+  "files": [
+    {
+      "path": "results/compact_predictions/initial/math500.csv",
+      "label": "initial",
+      "dataset": "math500",
+      "questions": 500,
+      "correct": 245,
+      "generated_tokens": 381008,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/initial/math500.jsonl",
+      "source_sha256": "96d0ec60933002a14fe66115323068ecbe7926d84cac41069c181bd3769a7b54",
+      "shared_sha256": "6303231852495e5972559f198db4ff0167ed026a2c704e0e8d99dd3413c392d6"
+    },
+    {
+      "path": "results/compact_predictions/initial/gsm8k.csv",
+      "label": "initial",
+      "dataset": "gsm8k",
+      "questions": 1319,
+      "correct": 750,
+      "generated_tokens": 558656,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/initial/gsm8k.jsonl",
+      "source_sha256": "7d6977fe8566f54c79854c63b54977e843d4cc0365e83c801520a31fe29a903e",
+      "shared_sha256": "68fdeda077845dc0d431f3da1a61580de7ab2933d760191c536bcabdb5a5b9b9"
+    },
+    {
+      "path": "results/compact_predictions/A_1M/math500.csv",
+      "label": "A_1M",
+      "dataset": "math500",
+      "questions": 500,
+      "correct": 247,
+      "generated_tokens": 374009,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/A/math500.jsonl",
+      "source_sha256": "e20da3649223e7ef9989ed554cacd05d8a10e9e804b6e8e64e26060d1a9613d2",
+      "shared_sha256": "fbdcebd7d7b53f5eba80ff53b178137117e01b4b892cb218a01d6cf308afb689"
+    },
+    {
+      "path": "results/compact_predictions/A_1M/gsm8k.csv",
+      "label": "A_1M",
+      "dataset": "gsm8k",
+      "questions": 1319,
+      "correct": 752,
+      "generated_tokens": 566617,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/A/gsm8k.jsonl",
+      "source_sha256": "57ca03b101f2c26a1da265e8892dfa28e7b7bf5051e3d99d64b6ae8b1324096f",
+      "shared_sha256": "a2106b1cbd1d22c95c67294d30dc017ac1e4b8152bf69363e52e190aa281533a"
+    },
+    {
+      "path": "results/compact_predictions/C_mix_1M/math500.csv",
+      "label": "C_mix_1M",
+      "dataset": "math500",
+      "questions": 500,
+      "correct": 250,
+      "generated_tokens": 370942,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/C_mix/math500.jsonl",
+      "source_sha256": "383c34f404f606bb7f058e8c8089510967252b4ff2023e342bb416e1d23d849c",
+      "shared_sha256": "12cab00d5f86e2932778d6be77d1ae4a9bd904f18345b37f24413712ea528b94"
+    },
+    {
+      "path": "results/compact_predictions/C_mix_1M/gsm8k.csv",
+      "label": "C_mix_1M",
+      "dataset": "gsm8k",
+      "questions": 1319,
+      "correct": 764,
+      "generated_tokens": 552339,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/C_mix/gsm8k.jsonl",
+      "source_sha256": "9d55d0d4bf9c5de5e31dd9fc90398b5320834cef85994fbbd0c17160d1949626",
+      "shared_sha256": "77acd5d8daf2c11e3ecb0f16c6871d3b9af6a21b4ee00fa57df3ab810cd377e8"
+    },
+    {
+      "path": "results/compact_predictions/C_bounded_1M/math500.csv",
+      "label": "C_bounded_1M",
+      "dataset": "math500",
+      "questions": 500,
+      "correct": 251,
+      "generated_tokens": 373742,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/C_bounded/math500.jsonl",
+      "source_sha256": "7f31980820f99da6f1935d30b5b56526463c44c744be18e4f0ae3b7becdfdb77",
+      "shared_sha256": "840af5738363eeed0f731d964fc1c380b74fd4d14fa4c604ef27f1d2be1630ae"
+    },
+    {
+      "path": "results/compact_predictions/C_bounded_1M/gsm8k.csv",
+      "label": "C_bounded_1M",
+      "dataset": "gsm8k",
+      "questions": 1319,
+      "correct": 754,
+      "generated_tokens": 543209,
+      "source_path": "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/C_bounded/gsm8k.jsonl",
+      "source_sha256": "1fca0e26e0fee749d0235f1703c7e8d6a3a7d4ff8d87961a6536192343b66c90",
+      "shared_sha256": "5ee9af537db5134e71fa21bba505f05995e83a0effbad5f21a5c0a23173eac82"
+    },
+    {
+      "path": "results/compact_predictions/A_6M_recheck/math500.csv",
+      "label": "A_6M_recheck",
+      "dataset": "math500",
+      "questions": 500,
+      "correct": 275,
+      "generated_tokens": 354876,
+      "source_path": "execution/a6m_protocol_recheck_20261029/evidence/runs/A6M_protocol_recheck_20261029/A_6M/math500.jsonl",
+      "source_sha256": "4a898067c69b1d4ff0aa7475a439f0a9789fa2c3f8147103401f130ffbdbbe2b",
+      "shared_sha256": "0b7a037eed420da18e48a78997be3b1b6f76028fe4cde3359d698ee4b8d51bbc"
+    },
+    {
+      "path": "results/compact_predictions/A_6M_recheck/gsm8k.csv",
+      "label": "A_6M_recheck",
+      "dataset": "gsm8k",
+      "questions": 1319,
+      "correct": 906,
+      "generated_tokens": 506258,
+      "source_path": "execution/a6m_protocol_recheck_20261029/evidence/runs/A6M_protocol_recheck_20261029/A_6M/gsm8k.jsonl",
+      "source_sha256": "c9970dda2f1a9f13f3d50acc42e20685e7b1020b7da9ff5d8e482a8bb8f3e0e0",
+      "shared_sha256": "8520d9c7ef1f13b3c8266615d5e6e23d74621cbdecce29bd6b8720a5670607b4"
+    }
+  ],
+  "all_new_model_calls": 0,
+  "protocol": "Existing greedy V1 evaluations; fixed verifier; max_completion_length=2048",
+  "scope": "Compact records omit question text, gold, full completion and token arrays. Scores are preserved, not regraded.",
+  "limits": "Can verify counts and paired correctness differences; cannot regrade or inspect full reasoning without original inputs."
+}

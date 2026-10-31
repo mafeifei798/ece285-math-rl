@@ -1,0 +1,41 @@
+C bounded correct-only process advantage integration — authorized2026-10-29
+
+Remote root MUST be /srv/research/ece285_math_rl_project.
+Source experiments/c_bounded_integration_20261029; run runs/C_bounded_no_update_20261029.
+Dispatch audits/C_bounded_integration_20261029_dispatch/dispatch.json and runner.log.
+Read dispatch/PID/status/result before intervention. No duplicate dispatch or
+formal RL. GPU1 sharing previously authorized; do not touch other jobs.
+
+Scope: real initial Qwen2.5-Math1.5B actor+LoRA16 and frozen existing7B C PRM
+(adapterhash4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356).
+A = pure outcome group-std advantage +0.2*y*(m-mean(m among correct)).
+No normalization after combining. Original mixed advantage computed by pinned
+TRL is explicitly discarded before buffering. Tokens/masks/rowtags track the
+actual tensor into pinned GRPO loss. Training/optimizer/save_model entry locked.
+
+CPU receipt audits/C_bounded_integration_20261029_cpu/receipt.json alreadyPASSED:
+536 real stored responses67groups, all3group types,1608 pinnedloss algebra calls,
+wrongpositive0, maxFP64difference1.002e-7. Re-normalization/rescaling/shuffle/
+missingtags/tokenmisalignment all rejected. CPU tokens/logits synthetic only.
+
+Live audit: exactly1new vLLM batch4questionsx8, temp1 cap2048, historicalfirst4
+questions fixed before sampling. VLLMcache .15 vsbaseline .3 auditresourceonly.
+Actual generated token IDs preserved and checked against callback/masks.32real
+actor forward/backward losses; NO optimizer constructed/step or checkpoint save.
+Saved-text phase40real responses=oneallcorrect,onemixed,threeoldallwronggroups;
+realC rescoring vsfixedscores + realactorforward/backward. Savedactor tokenIDs
+explicitly retokenized, NOT exacthistorical IDs. Actualcombinedadvantage never
+renormalized. BothactorandC fullparameter hashes before/after, oldA/B89files plus
+C/D adapters/receipts/frozen outputs protected. D retention adaptation forbidden.
+
+Expected result.json complete_no_update, actual_loss_input_trace72rows, optimizer0,
+wrongpositive0, byte-identical lossinput advantages, mutation tests rejected,
+fullactor/C hashes unchanged. No accuracy/convergence/fulltrainingmemory claims.
+On failure preserve logs/source/state. Diagnose first; do not silently loosen
+acceptance or relaunch/re-generate if actual new samples already saved. No
+scheduled Codex automation has been created.
+
+INITIAL LIVE ATTEMPT1251847: actual32generation and actual32forward/backward passed; stoppedbefore saved-score parity because TF32 precision leakedfromvLLM. Both generated rawIDs and signal tensors saved. Frozen C diagnostic40sameinputs: TF32off maxstepdiff0; TF32on maxstepdiff0.0207817. No weightsupdated. Originalsource and failure preserved.
+V2 source experiments/c_bounded_integration_20261029_v2 release5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc; scorer disablesTF32 onlyinsideCscore and restorescallerflags. Auditparity tightened to2e-6. RUN runs/C_bounded_no_update_20261029_v2; dispatch audits/C_bounded_integration_20261029_dispatch_v2. CPU_V2 replay passed beforedispatch. V2reusesexactoriginal32tokenIDs, recomputesactualTRLrewardcallbacks/Cscores/ref-logps, actualTRLbufferandloss; nonewsampling. Fullfreshgeneration pathalreadyexercisedinitialattempt. Preservebothreceipts, no formalRL/optimizer/Dtraining.
+
+COMPLETE: v2 actual no-update accepted; no further work or automatic launch authorized.32exact generated tokens reused +40saved-text realmodel losses72;47wrong,0positive; allnewadvantages bitwise retained into pinnedloss, independentFP64maxerror9.059e-8. Fullactor/C hashes unchanged; AB89 plusCD17 files verified. C40oldscoremaxdiff0 afterTF32 context fix. Actual source ofprecision mismatch is inherited TrainingArguments tf32=True (not exclusivelyvLLM); numericfinding corrected inreport. Originalv1failure/samples preserved. OriginalCPU536/67groups1608losschecks passed. No optimizer constructed/step, no formalRL orDadaptation, no scheduledautomation. Finalsrc experiments/c_bounded_integration_20261029_v2 release5e374d...; finalRUN runs/C_bounded_no_update_20261029_v2. Evidence copied locally underexecution/c_bounded_integration_20261029/artifacts. Readresult/independentacceptance forstatus; do NOT redispatch.

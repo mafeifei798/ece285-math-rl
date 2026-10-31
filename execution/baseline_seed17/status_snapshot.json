@@ -1,0 +1,144 @@
+{
+  "checked_at_utc": "2026-10-20T23:44:47.216980+00:00",
+  "remote_root": "/srv/research/ece285_math_rl_project",
+  "ssh_host": "researcher@server.example.invalid",
+  "ssh_port": 11032,
+  "pipeline": {
+    "pid": 1141857,
+    "status": "formal_A_seed17",
+    "started_unix": 1792539635.8497264,
+    "children": {
+      "reward_tests": 1141858,
+      "prepare_data": 1141859,
+      "initial_policy_evaluation": 1142101,
+      "pilot_A_seed17": 1142102,
+      "pilot_gate": 1145044,
+      "A_seed17_controller": 1145045
+    }
+  },
+  "controller": {
+    "pid": 1145045,
+    "status": "training",
+    "started_unix": 1792539774.0740063,
+    "seed": 17,
+    "arm": "A_outcome_GRPO",
+    "target_completion_tokens": 6000000,
+    "queue_other_runs": false,
+    "child_pid": 1145046
+  },
+  "training_status": {
+    "status": "training",
+    "pid": 1145046,
+    "started_unix": 1792539779.753937,
+    "pilot": false
+  },
+  "training_progress": {
+    "generated_completion_tokens": 43699,
+    "generated_completions": 64,
+    "generated_groups": 8,
+    "mixed_reward_groups": 7,
+    "correct_completions": 27,
+    "truncated_completions": 6,
+    "reward_status_counts": {
+      "symbolic": 21,
+      "truncated": 6,
+      "exact": 27,
+      "missing_or_invalid_box": 10
+    },
+    "last_batch": {
+      "generated_completion_tokens": 17142,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 3,
+      "correct_completions": 12,
+      "truncated_completions": 1
+    },
+    "global_step": 2,
+    "elapsed_seconds": 77.9729421613738,
+    "target_completion_tokens": 6000000,
+    "effective_completion_tokens_per_second": 560.438003090354,
+    "torch_peak_allocated_GiB": 31.456080436706543,
+    "torch_peak_reserved_GiB": 32.431640625
+  },
+  "initial_evaluation_progress": {
+    "dataset": "math500",
+    "done": 320,
+    "total": 500,
+    "elapsed_seconds": 189.8437259197235
+  },
+  "pilot_status": {
+    "status": "pilot_completed",
+    "pid": 1142102,
+    "started_unix": 1792539667.8483398,
+    "pilot": true,
+    "finished_unix": 1792539770.0162895,
+    "global_step": 3,
+    "stop_reason": "max_steps",
+    "accounting": {
+      "generated_completion_tokens": 63775,
+      "generated_completions": 96,
+      "generated_groups": 12,
+      "mixed_reward_groups": 11,
+      "correct_completions": 46,
+      "truncated_completions": 9,
+      "reward_status_counts": {
+        "symbolic": 33,
+        "truncated": 9,
+        "exact": 44,
+        "missing_or_invalid_box": 9,
+        "unparseable": 1
+      },
+      "last_batch": {
+        "generated_completion_tokens": 23591,
+        "generated_completions": 32,
+        "generated_groups": 4,
+        "mixed_reward_groups": 4,
+        "correct_completions": 18,
+        "truncated_completions": 4
+      }
+    },
+    "budget": 6000000,
+    "budget_overshoot": 0,
+    "lora_B_abs_sum": 87.64304026961327,
+    "metrics": {
+      "train_runtime": 77.6293,
+      "train_samples_per_second": 1.237,
+      "train_steps_per_second": 0.039,
+      "total_flos": 0.0,
+      "train_loss": 6.963809331258138e-06
+    }
+  },
+  "latest_training_metrics": {
+    "step": 2,
+    "loss": 0.0,
+    "grad_norm": 0.04269757866859436,
+    "learning_rate": 5e-06,
+    "num_tokens": 48947.0,
+    "completions/mean_length": 535.6875,
+    "completions/min_length": 75.0,
+    "completions/max_length": 2048.0,
+    "completions/clipped_ratio": 0.03125,
+    "completions/mean_terminated_length": 486.9031982421875,
+    "completions/min_terminated_length": 75.0,
+    "completions/max_terminated_length": 1707.0,
+    "rewards/outcome_accuracy/mean": 0.375,
+    "rewards/outcome_accuracy/std": 0.49186936020851135,
+    "reward": 0.375,
+    "reward_std": 0.3335031569004059,
+    "frac_reward_zero_std": 0.25,
+    "project/generated_completion_tokens": 43699.0,
+    "project/mixed_group_fraction": 0.75,
+    "kl": 0.00030244261495226965,
+    "entropy": 0.5564115179004148,
+    "clip_ratio/low_mean": 0.0,
+    "clip_ratio/low_min": 0.0,
+    "clip_ratio/high_mean": 0.0,
+    "clip_ratio/high_max": 0.0,
+    "clip_ratio/region_mean": 0.0,
+    "epoch": 0.0011441647597254005
+  },
+  "gpus": [
+    "0, NVIDIA A100-SXM4-80GB, 33801 MiB, 90 %",
+    "1, NVIDIA A100-SXM4-80GB, 49105 MiB, 30 %"
+  ]
+}

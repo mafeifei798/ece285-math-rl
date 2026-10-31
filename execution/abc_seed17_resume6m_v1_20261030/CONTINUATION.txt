@@ -1,0 +1,30 @@
+USER PAUSED — 2026-10-30 America/Los_Angeles
+用户最新明确要求“暂停使用显卡”。本项目训练和调度器已停止，GPU上下文已释放。禁止自动恢复、重派旧controller、启动排队的训练/评测，直到用户明确授权恢复。下面早先的长跑计划已暂挂，不能据其启动任务。
+controller PID3319102、训练PID3334407均已退出；其他GPU作业未触碰。pause_process_receipt.json保存信号与GPU前后证据。
+已完成更新全部落在完整可恢复断点：A115步（2,390,451 token）、C-mix50步（1,034,873）、C-bounded50步（1,038,895）。模型/优化器/scheduler/RNG/TrainerState/账本均按receipt hash核验。没有已完成但未保存的更新，也没有超出断点的rollout尾部。A已复制到paused_checkpoints/A/checkpoint-115，C两组用milestones/checkpoint-50。精确远端路径见pause_receipt.json。
+原始1M及历史结果保留。后续恢复需先读pause_receipt.json、核对PID/锁/原始hash，并在独立版本恢复完整状态；不能删除既有dispatch intent或从头重训。当前阶段不完成，不把暂停说成训练完成。
+
+----- EARLIER PLAN (SUSPENDED) -----
+用户已明确授权：仅seed17，将当前A/C-mix/C-bounded从原1M完整checkpoint续跑到约6M；相同题目顺序和更新次数；统一V1；奖励/loss不变；约3M留验证点；结束后共同MATH500/GSM8K评测。不得启动seed42、D适配、新模型、额外奖励/loss、超预算、从头重训或新自动任务。
+
+全部远端操作在/srv/research/ece285_math_rl_project。
+source experiments/abc_seed17_resume6m_v1_20261030
+run runs/ABC_seed17_resume6M_V1_20261030
+audit audits/ABC_seed17_resume6M_V1_20261030
+原始三组：runs/C_bounded_triplet_seed17_1M_20261029_v2/{A,C_mix,C_bounded}/checkpoint-48
+原代码及所有结果保持不动；CPU预检保护1101文件，536参考行通过，关键reward/advantage/loss函数AST与原版本相同，advantages.py字节相同。
+
+唯一controller PID3319102；本地dispatch.json含唯一receipt。严禁重复运行prepare_remote.py或dispatch.py。先用inspect_remote.py只读检查真实PID/锁/阶段/receipt/checkpoint。工具会话47895是只读等待三组验收，不是GPU作业。
+
+共同关口：从各自48→50（真实恢复验收计入预算），全部通过后50→144，统一500题验证集；再144→288，统一MATH500/GSM8K测试。固定144/288更新，3M/6M是按当前长度近似标记，不为凑token让某组多看题。每次更新4题×8回答=32条，288步1152道同顺序题。只seed17。
+模型/PRM/λ=.2/loss/lr=5e-6/beta=.04/温度1/2048上限均不改变。VLLM_USE_V1=1且代码核验实际V1模块。三组相同新重启边界48/50/144；vLLM采样RNG重建限制仍披露。
+每组新目录milestones/checkpoint-48是原断点的逐文件hash匹配副本；每到50/144/288完整归档，Trainer checkpoint轮换不会删里程碑。模型/优化器/scheduler/CPU及CUDA RNG/data skip均做真实恢复验收；实际loss处查advantage字节未变、未二次归一化、token对齐、样本恰好一次。
+
+GPU1共享已有明确授权。两张卡都还有别人作业，不能中止/移动它们。训练阶段要求空闲>=42000MiB，评测>=20000MiB，达不到等待。有限controller最长48小时；阶段故障保存证据后停止，不自动重试。有checkpoint/已提交raw_generation必须基于证据恢复，不能静默重新采样或从头跑。
+
+控制器自动完成：3组50验收→共同144→validation144→CPU验收→共同288→MATH500/GSM8K288→CPU最终验收/配对统计→comparison.json、REPORT.txt、report.html。不是定时自动跟进任务。
+本地inspect_remote.py只读并刷新latest_snapshot.json；build_status.py生成review.html快照页面。页面不是实时刷新。
+完成后取回三组stage_result、断点hash、训练/评分token、资源日志、3M验证及6M全部预测/CPUacceptance/comparison，独立验算和报告。不把单seed题目区间当seed稳定性；不给未完成结果下结论。旧历史6M A是V0评测，当前共同V1结果不能与旧记录混为同一协议；本次新三组统一V1。
+
+最新真实验收：三组48→50全部通过，gate=true；A从新checkpoint-50再次恢复并已到52步，向144共同关口继续。receipt详见本地acceptance_evidence.json和远端acceptance_gate.json。
+短联调采样进程显存峰值A21802MiB，C-mix/C-bounded35450MiB；这是采样峰值，不是未来最长回答的保证。长跑仍进行，未完成3M验证或6M测试。没有创建定时自动任务。

@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "gradient_coordinates_checked": 1450,
+  "max_absolute_gradient_error": 9.504734777010526e-10,
+  "example_errors": [
+    0.1,
+    0.9
+  ],
+  "example_weights": [
+    0.017986209962091555,
+    0.9820137900379085
+  ],
+  "example_pooled_error": 0.8856110320303269,
+  "example_failure_loss": 0.12147744053981725,
+  "example_success_loss": 2.168150638518009,
+  "same_outcome_normalization_max_error": 1.9984014443252818e-15,
+  "illustrative_paired_power": {
+    "n": 500,
+    "assumed_disagreement": 0.1,
+    "power": 0.8,
+    "two_sided_alpha": 0.05,
+    "standard_error_pp": 1.4142135623730951,
+    "interval_half_width_pp": 2.771807648699356,
+    "detectable_difference_pp": 3.9620398115993454,
+    "observed_project_effect": false
+  },
+  "tests": [
+    "convex pooling bounds",
+    "detached-weight loss gradient signs and finite differences",
+    "C-minus-D equals success loss at shared parameters",
+    "temperature limits",
+    "outcome-order preservation",
+    "zero-variance group advantage",
+    "centered advantages",
+    "authorized 24M-per-run token-budget arithmetic",
+    "same-outcome process-weight cancellation with exact epsilon",
+    "illustrative single-seed paired accuracy power calculation"
+  ],
+  "not_tested": [
+    "training implementation",
+    "GPU feasibility",
+    "model accuracy",
+    "dataset overlap"
+  ]
+}

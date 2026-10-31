@@ -1,0 +1,147 @@
+{
+  "snapshot_utc": "2026-10-23T10:25:06Z",
+  "automation": "deleted",
+  "arms": {
+    "P_VR": {
+      "batches": 10,
+      "responses": 320,
+      "tokens": 208822,
+      "counts": {
+        "empty": 0,
+        "short": 5,
+        "truncated": 25,
+        "no_box": 45,
+        "step_count_disagreement": 0,
+        "terminal_eos_flag_contradiction": 0
+      },
+      "validation": {
+        "validation_0.json": {
+          "count": 64,
+          "correct": 32.0,
+          "accuracy": 0.5,
+          "empty": 0,
+          "short": 0,
+          "limitation": "64 policy-held-out questions; known PRM800K overlap; diagnostics only, no checkpoint selection"
+        },
+        "validation_10.json": {
+          "count": 64,
+          "correct": 28.0,
+          "accuracy": 0.4375,
+          "empty": 0,
+          "short": 0,
+          "limitation": "64 policy-held-out questions; known PRM800K overlap; diagnostics only, no checkpoint selection"
+        }
+      },
+      "failures": {},
+      "short_by_batch": [
+        {
+          "batch": 1,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 2,
+          "short": 2,
+          "empty": 0
+        },
+        {
+          "batch": 3,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 4,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 5,
+          "short": 1,
+          "empty": 0
+        },
+        {
+          "batch": 6,
+          "short": 1,
+          "empty": 0
+        },
+        {
+          "batch": 7,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 8,
+          "short": 1,
+          "empty": 0
+        },
+        {
+          "batch": 9,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 10,
+          "short": 0,
+          "empty": 0
+        }
+      ]
+    },
+    "P_PRM": {
+      "batches": 6,
+      "responses": 192,
+      "tokens": 120763,
+      "counts": {
+        "empty": 0,
+        "short": 6,
+        "truncated": 10,
+        "no_box": 26,
+        "step_count_disagreement": 0,
+        "terminal_eos_flag_contradiction": 0
+      },
+      "validation": {
+        "validation_0.json": {
+          "count": 64,
+          "correct": 32.0,
+          "accuracy": 0.5,
+          "empty": 0,
+          "short": 0,
+          "limitation": "64 policy-held-out questions; known PRM800K overlap; diagnostics only, no checkpoint selection"
+        }
+      },
+      "failures": {},
+      "short_by_batch": [
+        {
+          "batch": 1,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 2,
+          "short": 3,
+          "empty": 0
+        },
+        {
+          "batch": 3,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 4,
+          "short": 0,
+          "empty": 0
+        },
+        {
+          "batch": 5,
+          "short": 1,
+          "empty": 0
+        },
+        {
+          "batch": 6,
+          "short": 2,
+          "empty": 0
+        }
+      ]
+    }
+  },
+  "comparison_ready": false
+}

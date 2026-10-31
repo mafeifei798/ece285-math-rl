@@ -1,0 +1,72 @@
+{
+  "version": "reward-repair-v2-20261021",
+  "changes_actual_advantages": false,
+  "group_size": 8,
+  "epsilon": 0.0001,
+  "reward_device": "cpu",
+  "reward_dtype": "torch.float32",
+  "actual_device": "cpu",
+  "actual_dtype": "torch.float32",
+  "rewards": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "actual_advantages": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "problem_ids": [
+    "q0",
+    "q0",
+    "q0",
+    "q0",
+    "q0",
+    "q0",
+    "q0",
+    "q0"
+  ],
+  "expected_advantages": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "cpu_float64_advantages": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "max_same_device_error": 0.0,
+  "max_float64_reference_difference": 0.0,
+  "hard_atol": 9.5367431640625e-07,
+  "hard_rtol": 9.5367431640625e-07,
+  "reference_mean": [
+    0.0
+  ],
+  "reference_sample_std": [
+    0.0
+  ],
+  "passed": true,
+  "errors": []
+}

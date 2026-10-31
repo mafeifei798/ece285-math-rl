@@ -1,0 +1,18 @@
+[
+  {
+    "file": "model-00001-of-00004.safetensors",
+    "first_4MiB_matches_pinned_HF_partial": true
+  },
+  {
+    "file": "model-00002-of-00004.safetensors",
+    "first_4MiB_matches_pinned_HF_partial": true
+  },
+  {
+    "file": "model-00003-of-00004.safetensors",
+    "first_4MiB_matches_pinned_HF_partial": true
+  },
+  {
+    "file": "model-00004-of-00004.safetensors",
+    "first_4MiB_matches_pinned_HF_partial": true
+  }
+]

@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C/D机制分析及离线修复</title><style>body{max-width:1030px;margin:42px auto;padding:0 20px;background:#f4f7fb;color:#203047;font:16px/1.85 system-ui}main{background:white;border-radius:16px;padding:30px 38px}h1{font-size:28px;line-height:1.4}h2{font-size:21px;margin-top:30px}.tag{background:#e3f0e9;color:#246344;padding:4px 12px;border-radius:20px;display:inline-block}.note{padding:16px 20px;background:#fff6e6;border-left:4px solid #d89b3c}.formula{padding:16px;background:#eef3fb;border-radius:8px;overflow-wrap:anywhere}td,th{padding:11px;border-bottom:1px solid #e3e8ef;text-align:left}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}th{background:#f2f5fa}a{color:#2853a0}code{background:#f1f4f8;padding:2px 5px}details{margin:24px 0}pre{font:14px/1.75 ui-monospace,monospace;white-space:pre-wrap;background:#f7f8fa;padding:20px;border-radius:12px}</style><main><span class="tag">CPU离线验证已完成 · 0次模型调用 · 0次参数更新</span><h1>C 为什么奖励短错答，D 为什么整体压分</h1><p class="note"><b>主线保持：过程奖励如何帮助数学RL。</b> 当前先保留C评分器，修复过程分进入RL的方式；旧A/B/C/D冻结保留。PRM自身只保留一个后续候选：在D上恢复原PRM的软保真约束。本轮不训练、不宣称准确率提高。</p><h2>C：低分不代表低advantage</h2><p>三条旧异常样本都在全错组中。只输出错误多项式的案例2095，过程分仅0.0321，但它的奖励0.00642高于组均值0.00227，经组内标准化后成为+1.50优势。第三个案例是5段无效论坛式回复，并非短答案。因此只惩罚长度不能解决。</p><table><tr><th>旧案例</th><th>C过程分</th><th>组奖励均值</th><th>原advantage</th><th>修复候选</th></tr><tr><td>old-case-78</td><td>0.239349</td><td>0.009703</td><td>+2.266</td><td>0</td></tr><tr><td>old-case-2095</td><td>0.032101</td><td>0.002271</td><td>+1.502</td><td>0</td></tr><tr><td>old-case-4975</td><td>0.058777</td><td>0.002238</td><td>+2.355</td><td>0</td></tr></table><p>短答案在min聚合下少了多次暴露低分步骤的机会。同题同结果、不同步数的全错组回答对，短者胜率B为57.1%、C为64.7%；这是相关性而非长度的因果证明。训练数据中仅3条成功、4条失败纯答案框，不能把C的表现归咎于大量正向短答案标签。</p><p>改SWS只能修一部分排名；改平均值会把答对但过程有错解答的接受率从9.4%抬到56.3%。因此不直接靠换聚合或长度规则修复。</p><h2>D：正确步骤的大范围降分</h2><table><tr><th>有效步骤诊断（368步）</th><th>B</th><th>C</th><th>D</th></tr><tr><td>平均步骤分</td><td>0.970</td><td>0.952</td><td>0.359</td></tr><tr><td>低于0.5的步骤数</td><td>7</td><td>13</td><td>240</td></tr></table><p>D删除了当前rollout分布上的成功约束。失败项会给每个步骤一个压低正确概率的方向；把所有步骤都打低也能降低这个分量。来自另一数据分布的正负平衡锚点，不保证能制止这种漂移。统一上调分数不能改变AUROC，不能把D的86.99%恢复为C的95.07%。</p><p>这与观测退化吻合，但并非已经完成整个训练轨迹的参数级因果归因。完整LCA使用正负两类轨迹监督，不能把其保证直接转给单边D。</p><h2>当前推荐：答对者之间的有界过程偏好</h2><div class="formula">A<sub>out</sub> = (y − mean(y)) / (sample_std(y) + 10<sup>−4</sup>)<br>A<sub>new</sub> = A<sub>out</sub> + 0.2 · y · (m − mean(m among correct responses))<br><b>合成后不再归一化</b>；无正确回答时过程项为0。</div><p>错答不靠PRM拿正优势；全错组回到纯结果基线的0；全对组仍保留过程排序，但每条过程贡献绝对值不超过0.2。已做全部402组离线候选回放。</p><table><tr><th>C上的诊断</th><th>原混合奖励</th><th>简单结果门控</th><th>有界候选</th></tr><tr><td>全错组正优势错答</td><td>34/128</td><td>0/128</td><td>0/128</td></tr><tr><td>全对组平均|A|</td><td>0.781</td><td>0.781</td><td>0.039</td></tr><tr><td>全对组最大|A|</td><td>2.419</td><td>2.419</td><td>0.141</td></tr></table><p class="note">零错误正优势由公式保证，是接入机制验收；C的原分数、错误排名和真实数学能力并未因此改善。此规则也放弃全错组的过程探索。正确子集内使用过程优势已有<a href="https://arxiv.org/html/2603.26535v1">PAPO</a>等工作，本候选是修复对照，不包装成新算法。</p><h2>PRM适配候选：把缺失的成功约束换成软保真</h2><div class="formula">L<sub>keep</sub> = L<sub>fail</sub> + L<sub>step</sub> + mean<sub>successful rollout, step</sub> KL(B<sub>step</sub> ∥ current<sub>step</sub>)</div><p>B是冻结的原7B PRM。用它的原有判断代替“答对就把所有步骤推成正确”的伪标签；也避免D完全删除成功分布约束。数据、锚点、LoRA、批次与步数保持一致。B分数可在既有成功rollout上一次性缓存，无新judge、无人工标注。</p><p>现在只核验了缓存logit上的导数方向及有限差分，没有训练该候选，也不能证明LoRA更新后一定改善。它会继承B盲点，可能限制有益改变，仍需后续受控验证。该候选是常见保真约束的应用，不是已经建立的独立算法创新。</p><h2>证据</h2><p><a href="REPORT.txt">完整分析</a> · <a href="REPAIR_PLAN.json">明确执行边界</a> · <a href="diagnosis_and_counterfactuals.json">逐项诊断</a> · <a href="replayed_groups.jsonl">逐组回放</a> · <a href="signal_repair.py">候选函数</a> · <a href="repair_contract_receipt.json">数学契约验收</a></p><details><summary>展开完整文字分析与限制</summary><pre>C / D 机制分析与修复候选（2026-10-29）
+
+本轮只做既有数据的CPU分析：0次新模型调用，0次参数更新。原A/B/C/D和验答规则均不变。
+分析对象：B/C/D各728条固定分数，64个主要8回答组、3个旧异常组、192条ProcessBench诊断，以及原512题×4适配缓冲的CPU统计。
+
+一、C的具体问题：较差候选中的相对第一，被当成强正信号
+
+案例2095只写出错误多项式。C的过程分0.0321007，已经很低；但本组8条全错，R=0.2m。
+该回答R=0.00642014，组均值0.00227076，样本标准差0.00266281，epsilon=0.0001。
+A=(0.00642014-0.00227076)/(0.00266281+0.0001)=+1.50187。
+因此并非C认为这条有96.8%正确概率；PRM排序错误与全错组相对归一化叠加，产生了错误的正向学习信号。
+案例78也只有一个答案框，C分0.239349，A=+2.26582；案例4975是5段论坛式无效回复，C最小分0.0587766，A=+2.35523。
+第三条并不短，不能把问题归结为短回答，更不能用简单长度惩罚修复。
+
+训练风格不足：817条可用成功适配解答仅3条纯答案框，827条失败解答仅4条纯答案框；不能断言模型因大量正向短答案标签学坏。
+在同题、同最终结果但步数不同的全错组回答对中，较短者获更高min分的比例B为57.14%、C为64.66%。这是相关性证据，尚非“长度导致高分”的因果干预。
+min只需长回答中的某一步很低就拖低全链，而纯答案框只有一个受检查位置，存在结构性机会差异。
+训练使用SWS软聚合、离线RL奖励使用min，也值得检查；但只换SWS时，C的案例78仍排名第一、案例4975排名第二，不能完整修复。
+直接改平均值则把ProcessBench答对但过程有缺陷解答的接受率从9.38%抬到56.25%，会掩盖局部错误，不推荐。
+
+二、D的具体问题：在新策略分布上，单边失败监督允许普遍压分
+
+368个已标注有效步骤：
+B平均步骤分0.96961，低于0.5有7/368；C平均0.95234，13/368；D平均0.35930，240/368。
+因此D不只是某一个最差步骤变低，正确步骤的大范围降分是真实的。
+D的首错位置平均分也降到0.00806，说明它会压低错误，但未能保持有效推导。
+
+实际弱监督目标：E=sum(w_t*(1-p_t))，w_t=softmax((1-p_t)/0.2)，训练时w停止梯度。
+Lfail=-log(E)，对应dLfail/dz_t=w_t*p_t*(1-p_t)/E &gt; 0。
+该分量在每个位置都给出向下压正确概率的方向；让所有p接近0即可让失败项接近0，不要求辨认真实错误位置。
+C的成功项会抵抗这一方向；D删除了同分布成功约束，只保留来自不同来源、不同输入分布的步骤标签锚点。
+锚点正负各1024不意味着它能抵消目标rollout分布的漂移，也不意味着这组参数梯度必然平衡。
+这些是目标结构与观测退化相符的机制证据；尚未做整段训练轨迹的参数级因果归因。
+
+在固定probe上的弱监督项压力测试中，给C所有步骤logit减ln(10)，失败loss从0.244降至0.094，但成功loss从0.443升至0.916。
+只保留失败项时，普遍压分能改善被优化的分量。此测试不含锚点，不能冒充总loss或真实更新结果。
+统一偏移logit、改阈值可以改变接受率，却不能改变min排序和AUROC。D的86.99% AUROC不能凭调回分数变成C的95.07%。
+LCA的原始轨迹目标包含正确/错误两类轨迹；我们D的单边改动不具备直接照搬其一致性/抗噪声保证的条件。
+
+三、当前可落地的RL信号修复：固定现有C，只在答对者之间加入有界过程偏好
+
+y为当前规则验答结果，m为原PRM过程聚合分，均不改。先计算纯结果GRPO优势：
+Aout=(y-mean(y))/(sample_std(y)+1e-4)。
+令mean_correct为本题组内答对解答的m均值，无答对解答时过程项为0。
+候选：Anew=Aout+0.2*y*(m-mean_correct)。合成后不再归一化。
+
+这使错答不因过程分拿到正优势；全错组回到纯结果基线的0；全对组仍能按过程质量排序；任何过程增量绝对值不超过0.2。
+只有一个答对回答时，没有同类过程偏好可比较，过程增量为0。
+这修的是信号接入，不会让C原始分数或错误排名自动变准，也牺牲全错组的过程探索。
+
+既有C min评分的实际CPU回放：
+- 16个全错组，正advantage错答从34/128变成0/128，三个旧异常案例均从强正advantage变成0。
+- 简单R=y*(1+0.2m)门控也能消除这些错答正优势，但全对组仍按过程分标准差重新放大。
+- 16个全对组，原混合/简单门控的平均|A|均0.78142、最大2.41879；有界版本平均0.03936、最大0.14116。
+- 全部64+3组×3个评分器×2种聚合，共402个候选组回放的数学契约通过。
+
+这些“错误正优势为0”的数字由公式构造保证，是机制验收，不是数学能力提高的实验发现。
+正确子集内组合过程优势已有PAPO等工作；本候选为当前故障的保守工程对照，不宣传为独立新算法。
+原A/B/C/D保留不动，所有评分器若后续比较，都使用同一信号规则，不能只为C或D单独修改。
+
+四、PRM本身的唯一后续修复候选：保留原PRM判断的软约束
+
+若继续修D，建议将其缺失的成功分布约束改为：
+Lkeep=Lfail+Lstep+E[mean_t KL(B_t || PRM_t)]，最后一项只用原成功rollout。
+B是冻结的原7B PRM，缓存其原有步骤分布。其余数据、锚点、批次、LoRA、步数和系数保持一致。
+这不把所有答对解答的步骤伪标成正确，也不把成功分布约束完全删掉；仅要求不轻易推翻原PRM已具备的判断。
+它是标准功能保真/蒸馏思路，不是已经证明有效的PRM新算法。
+
+当前只做了输出logit层面的方向核验：
+KL对学生logit的导数为(p_student-p_B)/T。
+D在已知有效步骤上，未按长度平均的平均导数为-0.6103，方向是把被压低的分数拉回；
+对答对但有错解答的首错位置，当前SWS硬成功目标的平均导数C约-0.1866，而同一位置按步骤平均的B保真KL导数约-0.0136。
+两种目标对这些位置给出的鼓励不同，保真不要求推到1。但B仍可能把错误打高，保真也会继承它的盲点。
+这是输出信号诊断，不是LoRA参数梯度比较，更没有训练后的PRM性能证据。
+
+本轮不训练该候选。以后若获准，只做这一个目标修复，与C/D用同样数据、同样预算比较；既有ProcessBench/异常案例只作已看过的诊断，不用来挑权重或挑checkpoint。
+需要同时观察有效推导接受率、过程有效性AUROC、不同组的真实advantage与已知短错答排名；不能仅用loss下降、分数恢复或正优势数下降过关。
+
+五、交付与边界
+
+signal_repair.py为纯CPU候选函数，未接任何训练器。analyze_repairs.py复现全部计算。
+verify_repair_contract.py验证全错组0、错答不能正优势、过程增量有界、常数过程退化为纯结果、置换等变及KL导数有限差分。
+REPAIR_PLAN.json、diagnosis_and_counterfactuals.json和replayed_groups.jsonl保存完整证据。
+原始输入文件hash核验未变；本轮没有新生成、模型调用、参数更新或自动训练任务。
+
+原始文献：
+PAPO：https://arxiv.org/html/2603.26535v1 （正确子集内的过程优势使用，原文进行子集标准差归一化；本候选不按小过程方差重新放大。）
+LCA：https://arxiv.org/html/2606.27739v2 （轨迹MIL目标、SWS及停止梯度；D不是完整LCA复现。）
+</pre></details></main></html>

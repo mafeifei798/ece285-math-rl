@@ -1,0 +1,10 @@
+{
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+  "data_manifest_sha256": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459",
+  "reward_code_sha256": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+  "adapter_sha256": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+  "verifier_version": "reward-repair-v3-20261021",
+  "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "repair_source_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3"
+}

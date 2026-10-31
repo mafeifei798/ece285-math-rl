@@ -1,0 +1,18 @@
+{
+  "repository": "HuggingFaceH4/prm800k-trl-dedup",
+  "revision": "fd8cba17d8214bfbabf6e7e10f29da4e6614dd6c",
+  "source_sha256": "d9e39ca727f8000c158f3baf51c7fe0c175f86146ad9250c2965f48172006864",
+  "anchors_sha256": "8956e3ad382596079a178581e802f75fb3aec693152a176d4ab8e4fa1c2d2876",
+  "count": 128,
+  "labels": {
+    "0": 64,
+    "1": 64
+  },
+  "forbidden_overlap": 0,
+  "scope": "128 class-balanced native prefixes; at most one per question per label; original MATH train only",
+  "eligible_unique_prefixes": {
+    "0": 127121,
+    "1": 289482
+  },
+  "excluded": {}
+}

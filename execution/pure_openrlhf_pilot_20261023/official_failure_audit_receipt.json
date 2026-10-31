@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-10-23T10:10:40.372370+00:00",
+  "cpu_only": true,
+  "training_changed": false,
+  "models_loaded": false,
+  "scoring_launched": false,
+  "protected_files_checked": 81,
+  "protected_files_changed": [],
+  "same_batch_hypothetical_outcome_LOO": [
+    {
+      "row": 2,
+      "group_outcomes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "outcome_LOO": 0.0
+    },
+    {
+      "row": 4,
+      "group_outcomes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "outcome_LOO": 0.0
+    },
+    {
+      "row": 15,
+      "group_outcomes": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "outcome_LOO": 0.0
+    }
+  ],
+  "counterfactual_scope": "Only the verifier LOO component is computed; no mixed-reward run or complete alternate normalized advantages are claimed.",
+  "input_sha256": {
+    "prm_signal_decomposition.json": "d347e4514f113b76f031c4aece76cb43c25b5cca0bf22b4fc84e81146beabfab",
+    "evidence/P_PRM_batch_0002.json": "7f725c0a03aa2ca2c1c568ad3e91d33aecdb94a2fededec8645a0995cb9be70a",
+    "evidence/P_PRM_batch_0002_signals.pt": "fd2692d055110c9f7e064830c73b6d141dea78243ff3462e7977a2a2a5217032",
+    "official_runtime_audit.json": "e6a068fd879b2b74f647a0454afa7914350baf578c5f6553bcce8b3fc70ddb83",
+    "prm_replacement_evidence.json": "4ea2a6c02fe95c2476f32bd1e51cbb61570a9fd471f92b889acf39fa2a6c3c86"
+  },
+  "decision": "Keep the fixed running pilot unchanged. No missing official hard safeguard found. Qualify a candidate PRM offline on full current groups with its native input adapter before any replacement training. No replacement scoring performed in this audit."
+}

@@ -1,0 +1,42 @@
+{
+  "selection": "all historical corrected A/B update batches containing an empty decoded response; diagnostic sample, not a population accuracy sample",
+  "counts": {
+    "A": {
+      "rows": 9088,
+      "empty_rows": 5,
+      "fraction": 0.0005501760563380282,
+      "selected_update_batches": [
+        16,
+        22,
+        166,
+        264,
+        280
+      ]
+    },
+    "B": {
+      "rows": 8960,
+      "empty_rows": 4,
+      "fraction": 0.0004464285714285714,
+      "selected_update_batches": [
+        6,
+        106,
+        144,
+        210
+      ]
+    }
+  },
+  "rows": 288,
+  "empty_indices": [
+    13,
+    56,
+    80,
+    113,
+    148,
+    162,
+    198,
+    226,
+    274
+  ],
+  "training_started": false,
+  "new_generations": 0
+}

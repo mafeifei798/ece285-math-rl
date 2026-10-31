@@ -1,0 +1,1567 @@
+{
+  "scope": "Structural flags, no relabeling; selected post-outcome subgroups cannot establish a causal explanation",
+  "datasets": {
+    "math500": {
+      "A_only": {
+        "total": 47,
+        "complete_incorrect": 34,
+        "complete_incorrect_early_box": 5,
+        "cases": [
+          {
+            "id": "math500/1",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/4",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/6",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/15",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/21",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/32",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/33",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/49",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/50",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/74",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/84",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/88",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/101",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/106",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/108",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/112",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/128",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/133",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/153",
+            "category": "truncated",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/158",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/175",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/191",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/210",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/230",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/231",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/233",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/241",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/244",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/266",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/289",
+            "category": "truncated",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/295",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/303",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/312",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/321",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/324",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/339",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/377",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/388",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/394",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/431",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/447",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/450",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/451",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/454",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/465",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/468",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/486",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          }
+        ]
+      },
+      "B_only": {
+        "total": 46,
+        "complete_incorrect": 25,
+        "complete_incorrect_early_box": 3,
+        "cases": [
+          {
+            "id": "math500/3",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/26",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/41",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/58",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/61",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/71",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/77",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/78",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/82",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/97",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/107",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/113",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/122",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/149",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/156",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/159",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/163",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/167",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/179",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/190",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/194",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/195",
+            "category": "truncated",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/198",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/201",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/209",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/226",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/256",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/281",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/297",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/298",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/333",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/338",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/340",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/346",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/351",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/353",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/359",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/366",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/367",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/378",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/389",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/400",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/410",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/433",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "math500/452",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "math500/482",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          }
+        ]
+      }
+    },
+    "gsm8k": {
+      "A_only": {
+        "total": 120,
+        "complete_incorrect": 89,
+        "complete_incorrect_early_box": 44,
+        "cases": [
+          {
+            "id": "gsm8k/test/13",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/26",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/28",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/43",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/44",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/53",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/69",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/72",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/82",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/126",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/135",
+            "category": "truncated",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/136",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/154",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/167",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/180",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/192",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/194",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/198",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/221",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/233",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/234",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/277",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/282",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/302",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/312",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/331",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/339",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/347",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/359",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/385",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/395",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/425",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/426",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/436",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/446",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/448",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/459",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/460",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/462",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/473",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/475",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/478",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/480",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/491",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/497",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/505",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/512",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/523",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/540",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/551",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/624",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/642",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/662",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/667",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/700",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/707",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/714",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/741",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/744",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/787",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/790",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/803",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/805",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/807",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/828",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/839",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/843",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/845",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/849",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/861",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/863",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/864",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/866",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/867",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/868",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/875",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/891",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/893",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/895",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/896",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/912",
+            "category": "truncated",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/920",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/921",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/927",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/933",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/938",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/939",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/958",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/973",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/979",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/995",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/998",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1010",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1013",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1025",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1034",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1044",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1045",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1046",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1057",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1090",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1095",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1101",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1132",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1142",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1149",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1151",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1155",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1169",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1180",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1186",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1202",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1206",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1227",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1248",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1252",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1267",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1277",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1292",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1301",
+            "category": "truncated",
+            "early_last_box": true
+          }
+        ]
+      },
+      "B_only": {
+        "total": 93,
+        "complete_incorrect": 50,
+        "complete_incorrect_early_box": 7,
+        "cases": [
+          {
+            "id": "gsm8k/test/0",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/6",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/25",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/29",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/34",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/47",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/56",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/63",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/132",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/155",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/171",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/177",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/187",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/197",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/199",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/213",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/219",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/256",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/301",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/310",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/316",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/326",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/349",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/363",
+            "category": "truncated",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/371",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/387",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/415",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/421",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/465",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/501",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/520",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/555",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/564",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/573",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/586",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/606",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/614",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/618",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/625",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/651",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/666",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/669",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/687",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/690",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/691",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/699",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/708",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/713",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/719",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/735",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/736",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/757",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/765",
+            "category": "unparsable",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/770",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/789",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/799",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/827",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/844",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/848",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/871",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/882",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/911",
+            "category": "truncated",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/932",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/960",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/985",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/988",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/992",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/996",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1004",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1033",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1054",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1059",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1062",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1064",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1086",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1139",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1140",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1141",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1156",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1158",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1160",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1168",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1200",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1214",
+            "category": "complete_incorrect",
+            "early_last_box": true
+          },
+          {
+            "id": "gsm8k/test/1215",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1217",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1236",
+            "category": "truncated",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1242",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1268",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1278",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1284",
+            "category": "complete_incorrect",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1303",
+            "category": "unparsable",
+            "early_last_box": false
+          },
+          {
+            "id": "gsm8k/test/1306",
+            "category": "truncated",
+            "early_last_box": true
+          }
+        ]
+      }
+    }
+  }
+}

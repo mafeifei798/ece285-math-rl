@@ -1,0 +1,6 @@
+{
+  "pid": 3446649,
+  "started_unix": 1792678746.226929,
+  "directory": "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/eval_verification_20261022T1418Z",
+  "purpose": "CPU frozen-verifier replay only; no training or model inference"
+}

@@ -1,0 +1,43 @@
+{
+  "math500": {
+    "lost": 36,
+    "gained": 31,
+    "lost_status": {
+      "missing_or_invalid_box": 5,
+      "symbolic": 24,
+      "truncated": 7
+    },
+    "gained_status": {
+      "symbolic": 21,
+      "truncated": 6,
+      "missing_or_invalid_box": 4
+    },
+    "net_flip_by_status": {
+      "truncated": 1,
+      "symbolic": 3,
+      "missing_or_invalid_box": 1
+    }
+  },
+  "gsm8k": {
+    "lost": 98,
+    "gained": 67,
+    "lost_status": {
+      "symbolic": 71,
+      "missing_or_invalid_box": 15,
+      "truncated": 10,
+      "unparseable": 2
+    },
+    "gained_status": {
+      "symbolic": 44,
+      "missing_or_invalid_box": 15,
+      "truncated": 7,
+      "unparseable": 1
+    },
+    "net_flip_by_status": {
+      "unparseable": 1,
+      "truncated": 3,
+      "missing_or_invalid_box": 0,
+      "symbolic": 27
+    }
+  }
+}

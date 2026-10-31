@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-10-23T06:13:55.885392+00:00",
+  "artifacts": {
+    "experiments/pure_empty_boundary_20261022/verify_guard.py": {
+      "bytes": 4225,
+      "sha256": "dc4615d69268253aa693162bac524aebd17dcd856711435f98444deb788aa144"
+    },
+    "experiments/pure_empty_boundary_20261022/score_existing.py": {
+      "bytes": 6183,
+      "sha256": "6e798f7323895c6c994a8e71beb6eca928ad8d07dbc246ac5b413e3515642a0a"
+    },
+    "experiments/pure_empty_boundary_20261022/guard.py": {
+      "bytes": 3053,
+      "sha256": "16bda90b401469570e749b059ea8c389f6ec08fd4d7f11095d9d33ed75af1261"
+    },
+    "experiments/pure_empty_boundary_20261022/analyze.py": {
+      "bytes": 7980,
+      "sha256": "76919ca896945a0c5304b69c0901e2b19316ae67f2b6ee4c9ba21c02d5e49956"
+    },
+    "execution/pure_empty_boundary_20261022/protected_before.json": {
+      "bytes": 17106,
+      "sha256": "780474fa63d4d9897e44b7a4b2a0cc34b26db0f59944e281cea947f6acbc558a"
+    },
+    "execution/pure_empty_boundary_20261022/remote_exit_check.json": {
+      "bytes": 222,
+      "sha256": "7c4c7932c4cd2df8f0f3bf74c6bb03a922674ce4a6b77395da37c57f3b5f31e6"
+    },
+    "execution/pure_empty_boundary_20261022/review.html": {
+      "bytes": 12661,
+      "sha256": "e2de14c98d9d926b7676ea7c128d72b1d593f3a45d977c5df347fc667ce4ce3e"
+    },
+    "execution/pure_empty_boundary_20261022/guard_acceptance.json": {
+      "bytes": 1029,
+      "sha256": "8831622e91e3b25bffae39c8d7f1211a43fcedc31d9df05156524a115d09a7cc"
+    },
+    "execution/pure_empty_boundary_20261022/remote_scoring.tar.gz": {
+      "bytes": 438739,
+      "sha256": "a5b364a26a8f625c262a05016c298f8c6128f9550311d5ed87c9356ac92ef1c3"
+    },
+    "execution/pure_empty_boundary_20261022/offline_analysis.json": {
+      "bytes": 26660,
+      "sha256": "62de0e0d2c18437558cfd15bc5464d1d6cb82b7651553dc734d5cb0b18bf4168"
+    },
+    "execution/pure_empty_boundary_20261022/preservation.json": {
+      "bytes": 105,
+      "sha256": "ae5cdbf9aff53e63838dff747adc314b319cd7de9e9add34cce6492c396d6c3a"
+    },
+    "execution/pure_empty_boundary_20261022/offline_gt10_manifest.json": {
+      "bytes": 25329,
+      "sha256": "6e14a949fbe6c3ff54d203c2ccdc458ddfdaab7f972965f5d598ace619489bf8"
+    },
+    "execution/pure_empty_boundary_20261022/inputs.jsonl": {
+      "bytes": 663193,
+      "sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d"
+    },
+    "execution/pure_empty_boundary_20261022/acceptance_receipt.json": {
+      "bytes": 5422,
+      "sha256": "2870b3b3eb132888289748c38d65f61f46008efc013ebe4b1e182d2a92df2202"
+    },
+    "execution/pure_empty_boundary_20261022/selection.json": {
+      "bytes": 744,
+      "sha256": "08ec97e79cfb9a1a27a72f4c5e52331d60185658bbd3359f1f3b4d5c0061a4e7"
+    },
+    "execution/pure_empty_boundary_20261022/first_attempt.json": {
+      "bytes": 367,
+      "sha256": "e36d3ac1877c421600b11334133e598305724e6f26b09c8f0d2960a8b13f7e57"
+    },
+    "execution/pure_empty_boundary_20261022/HANDOFF.txt": {
+      "bytes": 2539,
+      "sha256": "6d86c5d998077dedb85edd2d01099868974dbe8030debc2c0802bcbaeedecce9"
+    },
+    "execution/pure_empty_boundary_20261022/build_review.py": {
+      "bytes": 12320,
+      "sha256": "b53f64c8469362fad024a105b2bfb33d4bcd20b21083a64032567d475287ef47"
+    },
+    "execution/pure_empty_boundary_20261022/sources/Qwen_README.md": {
+      "bytes": 6063,
+      "sha256": "ae8f09edf1a928646bcf79086d2a5f5f83f719d18f47e1046f6863713ba1880b"
+    },
+    "execution/pure_empty_boundary_20261022/remote/frozen_scoring_v2/result.json": {
+      "bytes": 1947,
+      "sha256": "64a5363672ea03fdb63d8c8675a4d94e447ba6f95b974be1255275f52ea2c370"
+    },
+    "execution/pure_empty_boundary_20261022/remote/frozen_scoring_v2/pure_prm_interface.json": {
+      "bytes": 288,
+      "sha256": "86b95a44565b94702bc7d995e76e5a2892251d1d0a98e1501f1e099046235b0a"
+    },
+    "execution/pure_empty_boundary_20261022/remote/frozen_scoring_v2/prm_loading.json": {
+      "bytes": 337,
+      "sha256": "25153893e5f5cb48c0331ce0e4bc3f4ba2ab840594b696c74aa66bd18b614db9"
+    },
+    "execution/pure_empty_boundary_20261022/remote/frozen_scoring_v2/scored.jsonl": {
+      "bytes": 2971356,
+      "sha256": "422ecbcebb5df0160182e3780f0dd0beeeb0f8192784758bfcb02452e9127f74"
+    },
+    "execution/pure_empty_boundary_20261022/remote/frozen_scoring_v2/status.json": {
+      "bytes": 94,
+      "sha256": "35a129c718daafb1ff0e66e8a4e34f02b1a4bb1e72e9be0476071f2979729091"
+    },
+    "execution/pure_empty_boundary_20261022/remote/frozen_scoring/status.json": {
+      "bytes": 138,
+      "sha256": "310a0d804a4ae95e2c0f3f4190cf991e953df7b02adf68fe924992c4e43f5dcd"
+    }
+  },
+  "source_and_original_evidence_preserved": true,
+  "html_internal_links_checked": 13,
+  "browser_render_checked": false
+}

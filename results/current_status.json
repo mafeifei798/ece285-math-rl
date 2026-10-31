@@ -1,0 +1,34 @@
+{
+  "snapshot_date": "2026-10-31",
+  "state": "paused_by_user",
+  "automatic_resume": false,
+  "state_source": "execution/abc_seed17_resume6m_v1_20261030/pause_receipt.json",
+  "source_is_saved_pause_receipt_not_new_GPU_probe": true,
+  "completed_common_evaluation": "results/unified_four_model_1m.json",
+  "common_evaluated_update": 48,
+  "historical_a6m_recheck": "results/historical_a6m_v1_recheck.json",
+  "incomplete_continuation_checkpoints": {
+    "A": {
+      "checkpoint_step": 115,
+      "checkpoint_generated_tokens": 2390451,
+      "checkpoint_contract_sha256": "97589d35e5738f03a28f609f25cbad536d93b3209e09ed26148b1c3a490d0508",
+      "completed_updates_beyond_checkpoint": 0
+    },
+    "C_mix": {
+      "checkpoint_step": 50,
+      "checkpoint_generated_tokens": 1034873,
+      "checkpoint_contract_sha256": "9485e28de46d30be25729c7f73f7518b749492f6f9a787cc01d41b14d6a3beff",
+      "completed_updates_beyond_checkpoint": 0
+    },
+    "C_bounded": {
+      "checkpoint_step": 50,
+      "checkpoint_generated_tokens": 1038895,
+      "checkpoint_contract_sha256": "9ca411bf1ee819bb7a2cda64dd0fdcf93eb864a675cee696872c18048755f74e",
+      "completed_updates_beyond_checkpoint": 0
+    }
+  },
+  "new_three_arm_3m_validation_complete": false,
+  "new_three_arm_6m_test_complete": false,
+  "new_training_or_inference_for_publication": false,
+  "warning": "Paused arms have different steps. They are not a new fair comparison. No stable process-reward accuracy gain established."
+}

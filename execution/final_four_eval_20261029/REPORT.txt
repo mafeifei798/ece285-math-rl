@@ -1,0 +1,81 @@
+单卡小模型数学推理RL：四模型统一测试报告
+训练：既有1M seed17 checkpoint；本轮训练0。
+核心结论：MATH500上C-bounded−A为+0.80pp，题目配对95%区间[-1.80,+3.40]pp；GSM8K上C-bounded−A为+0.15pp，题目配对95%区间[-1.44,+1.74]pp。本轮没有建立C-bounded在两个基准上都稳定优于A的证据；不能把修复某类学习信号等同于已提升整体数学能力。
+准确率：
+Initial | 0 | 245/500 (49.00%) | 750/1319 (56.86%)
+A: outcome | 1,005,003 | 247/500 (49.40%) | 752/1319 (57.01%)
+C-mix | 1,001,853 | 250/500 (50.00%) | 764/1319 (57.92%)
+C-bounded | 1,009,017 | 251/500 (50.20%) | 754/1319 (57.16%)
+
+同题比较（pp）：
+math500 | A minus initial | +0.40 | [-2.00, +2.80] | 20/18 | 0.8714
+math500 | C_mix minus A | +0.60 | [-2.00, +3.20] | 24/21 | 0.766
+math500 | C_bounded minus A | +0.80 | [-1.80, +3.40] | 23/19 | 0.644
+math500 | C_bounded minus C_mix | +0.20 | [-2.60, +2.80] | 23/22 | 1
+math500 | C_bounded minus initial | +1.20 | [-1.00, +3.40] | 19/13 | 0.3771
+gsm8k | A minus initial | +0.15 | [-1.44, +1.74] | 60/58 | 0.9267
+gsm8k | C_mix minus A | +0.91 | [-0.68, +2.50] | 66/54 | 0.3153
+gsm8k | C_bounded minus A | +0.15 | [-1.44, +1.74] | 60/58 | 0.9267
+gsm8k | C_bounded minus C_mix | -0.76 | [-2.43, +0.91] | 57/67 | 0.4191
+gsm8k | C_bounded minus initial | +0.30 | [-1.36, +2.05] | 67/63 | 0.7926
+
+输出诊断：
+Initial | math500 | 0 | 3 | 53 | 58 | 355 | 93 | 762.0
+Initial | gsm8k | 0 | 2 | 67 | 107 | 884 | 392 | 423.5
+A: outcome | math500 | 0 | 3 | 53 | 62 | 368 | 79 | 748.0
+A: outcome | gsm8k | 0 | 2 | 66 | 106 | 896 | 382 | 429.6
+C-mix | math500 | 0 | 1 | 45 | 53 | 368 | 86 | 741.9
+C-mix | gsm8k | 0 | 1 | 59 | 96 | 915 | 377 | 418.8
+C-bounded | math500 | 0 | 1 | 45 | 53 | 369 | 83 | 747.5
+C-bounded | gsm8k | 0 | 2 | 57 | 97 | 908 | 377 | 411.8
+
+成本：
+Initial | 0 | 0 | 0 | — | 939,664 | 26.0
+A: outcome | 0 | 0.0 | 77.6 | 20.64 | 940,626 | 43.1
+C-mix | 883,527 | 184.2 | 37.0 | 34.05 | 923,281 | 42.0
+C-bounded | 880,996 | 196.8 | 43.3 | 34.05 | 916,951 | 42.2
+评测生成token合计：3,720,522；完整评测与CPU验收墙钟：154.2分钟。
+
+选定实际回答的助手审读（非人工金标准，不估计总体比例）：
+math/train/geometry/6：原题被遗弃，后文切换到不相关题目；该错答获得正优势。
+C-mix training rollout, step_before_update30; deliberately selected high positive-advantage wrong response
+开头给出 boxed{56}，随后转到“Yousof works 30 hours each week”，末尾给出另一个题目的 boxed{1}。
+原图坐标的鞋带面积为25，28条单位边的实际边长为56/28=2，故实际面积25×2²=100。模型输出没有完成原题，后面连续回答其他问题。C的最低步骤分约0.252，并非高置信度正确，但在该组相对奖励下实际advantage为+2.313。不能据此估计总体跑题率，也不能证明它造成测试分数下降。
+math/train/geometry/634：存在可直接核对的几何错误与虚构数值输出，低过程分仍变成强正优势。
+C-mix training rollout, step_before_update19; deliberately selected high positive-advantage wrong response
+“The perpendicular bisector ... one of which is B”；随后直接假设“AD = 5 * sqrt(337)”并声称输出22。
+B不在AC的垂直平分线上，因为AB=43而BC=13。独立取A=(0,0), C=(48,0)，得B=(83/2,13√3/2)，外心O=(24,−11/√3)，另一侧交点D=(24,−18√3)，所以AD=6√43，floor(6+√43)=12。即使接受其假设，floor(5+√337)也应是23而非22。没有执行模型生成的代码。C最低步骤分仅0.025565，实际advantage却为+2.254；此例主要说明低绝对分也可能在组内标准化后成为正学习信号。
+math500/107：胜例：C-bounded纠正了开头的错误答案；A正确列举后又回到错误结论。
+Final MATH500: C-bounded correct, A incorrect; purposefully short non-diagram example
+两者起初都写boxed{14}，正文均列出9个奇素数；A最后仍说14，C-bounded末尾改为boxed{9}。
+30以内素数共10个，去掉唯一偶素数2，交集有9个。A不是单纯缺框：它在列出正确中间结果后又明确接受14；C-bounded最终结论与列举一致。这是选定同题的真实收益，不代表总体改善机制已被证明。
+math500/472：胜例中也有纯输出协议差异：两者都算对，但A没有答案框。
+Final MATH500: C-bounded correct, A no boxed answer
+A正文得出137又1/2但全篇没有boxed；C-bounded给出同样计算并用boxed包装。
+50×(11/4)=275/2=137又1/2。两者数学计算都正确，固定规则因A缺框记0。保留原分数，但不能把这个胜例算作数学推理能力的提升。
+math500/253：负例也有输出协议问题：C-bounded正文正确，最后一个框仍是问号。
+Final MATH500: A correct, C-bounded unparseable last box
+两者开头均为boxed{?}，正文均算出1/8；A补boxed{1/8}，C-bounded只给未加框的1/8。
+2英尺=24英寸，3/24=1/8。C-bounded的正文有正确结论，但冻结验答器读取到问号。这个损失不能简单解释为数学计算退步。
+math500/198：真正数学负例：错误的自我修正推翻了正确组合计数。
+Final MATH500: A correct, C-bounded incorrect
+C-bounded先写出7!×2!=10080，随后称6个女生加1个男生块“实际上是6个单位”，回到1440。
+把两男生当一块，连同6个女生共有7个单位，排列7!种，块内两男生2种，共10080。C-bounded后续把单位数算成6，并写出不成立的“7!*2=10080/2=5040”。这是数学推导退化，不能靠改变答案提取规则修好。
+gsm8k/test/321：GSM8K胜例：正文双方都算对，差别在于是否把末框更新为正确答案。
+GSM8K saved common completed832-question prefix; short parseable C-bounded gain, not representative sampling
+A先写boxed{2}，后文算出笔价1美元但没有新框；C-bounded同样先写2，末尾补boxed{1}。
+杂志4/2=2美元，笔价2−1=1美元。这个差异支持最终答案与正文一致性的改善案例，不证明C-bounded学会了新的算术技能；正式分数保持A0、C-bounded1。
+gsm8k/test/717：GSM8K负例：旧的错误答案框仍然存在，并出现原题没有的“选项”叙述。
+GSM8K saved common completed832-question prefix; short parseable C-bounded loss, not representative sampling
+C-bounded开头boxed{1.00}，后文正确算出找零5美元，却声称5不在所给选项中；A末尾boxed{$5}。
+6×0.50+8×0.25=5美元，10−5=5美元。C-bounded没有更新末框；问题也没有给任何选项。这说明门控训练信号并未消除最终框与正文冲突，不能把该方法当作输出一致性的保证。
+
+限制：
+- One training seed; paired intervals cover question sampling only, not training-seed robustness.
+- The current500-question validation and these test benchmarks are different sets; do not mix their scores.
+- Known exact PRM800K question overlap audit is not a guarantee against all pretraining/paraphrase exposure.
+- No checkpoint or prompt chosen using this final evaluation; historical benchmark results have previously been viewed.
+- Short correct answers are not hacking; short wrong or early boxes are diagnostics, not proof of a failure mechanism.
+- Correct final answer does not certify a valid proof; qualitative review is separate from frozen benchmark scores.
+- Recorded training seconds cover successful smoke/continuation, not every earlier failed setup or environment repair.
+- C-mix actual-minus-outcome advantage is not a uniquely separable process component.

@@ -1,0 +1,20 @@
+[
+  {
+    "phase": "cached_exact_live_token_replay",
+    "rows": 32,
+    "replaced_before_shuffle": true,
+    "outcome_normalizations": 1,
+    "post_combination_normalizations": 0,
+    "wrong_positive": 0,
+    "max_abs_process": 0.12458205223083496
+  },
+  {
+    "phase": "saved_real_text_retokenized",
+    "rows": 40,
+    "replaced_before_shuffle": true,
+    "outcome_normalizations": 1,
+    "post_combination_normalizations": 0,
+    "wrong_positive": 0,
+    "max_abs_process": 0.06488817930221558
+  }
+]

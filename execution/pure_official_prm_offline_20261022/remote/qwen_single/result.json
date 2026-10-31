@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "rows": 288,
+  "empty_rows": 9,
+  "primary_microbatch": 1,
+  "all_official_input_ids_equal": true,
+  "max_direct_adapter_abs_error": 0,
+  "reconstruction_length_mismatches": 9,
+  "alignment_failures": 1,
+  "source_release_sha256": "bb702b408216dd3cab3e655d82b1b68a901641ca4d2e84a94c5df6b5b58af84a",
+  "input_sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d",
+  "costs": [
+    {
+      "seconds": 13.739761204924434,
+      "scored_responses": 32,
+      "prm_input_tokens": 14137,
+      "prm_padded_tokens": 14137
+    },
+    {
+      "seconds": 15.802772668655962,
+      "scored_responses": 32,
+      "prm_input_tokens": 20051,
+      "prm_padded_tokens": 20051
+    },
+    {
+      "seconds": 15.525377401150763,
+      "scored_responses": 32,
+      "prm_input_tokens": 19699,
+      "prm_padded_tokens": 19699
+    },
+    {
+      "seconds": 22.43591392505914,
+      "scored_responses": 32,
+      "prm_input_tokens": 32503,
+      "prm_padded_tokens": 32503
+    },
+    {
+      "seconds": 16.64474436501041,
+      "scored_responses": 32,
+      "prm_input_tokens": 21277,
+      "prm_padded_tokens": 21277
+    },
+    {
+      "seconds": 20.391952047124505,
+      "scored_responses": 32,
+      "prm_input_tokens": 24759,
+      "prm_padded_tokens": 24759
+    },
+    {
+      "seconds": 18.501985718961805,
+      "scored_responses": 32,
+      "prm_input_tokens": 22021,
+      "prm_padded_tokens": 22021
+    },
+    {
+      "seconds": 15.759120958857238,
+      "scored_responses": 32,
+      "prm_input_tokens": 17271,
+      "prm_padded_tokens": 17271
+    },
+    {
+      "seconds": 20.171432393137366,
+      "scored_responses": 32,
+      "prm_input_tokens": 23760,
+      "prm_padded_tokens": 23760
+    }
+  ],
+  "elapsed_seconds": 176.56562374066561,
+  "model_frozen": true,
+  "optimizer_steps": 0,
+  "policy_model_loaded": false,
+  "new_generations": 0,
+  "peak_allocated_GiB": 13.591687679290771,
+  "peak_reserved_GiB": 14.154296875
+}

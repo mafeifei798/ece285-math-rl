@@ -1,0 +1,5 @@
+{
+  "max_step_error": 0.0,
+  "TF32_disabled_for_C": true,
+  "rows": 40
+}

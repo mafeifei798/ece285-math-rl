@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "canonical_gold_checks": 998,
+  "new_unit_questions_checked": 11,
+  "existing_unit_metadata_unchanged": true,
+  "failures": [],
+  "questions_sha256": "76bd71b5617eb7d87c552596fdc7a784d480ca0876eeba28892b632be524024f",
+  "unit_metadata_sha256": "ed42fe4bcb42365da3899337c487b19c7fcb0e5cadebefe0bf91857779cd76f6",
+  "scope": "CPU verifier input self-consistency; no policy inference or training",
+  "created_unix": 1792696422.6232328
+}

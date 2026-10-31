@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "new_training": false,
+  "runtime_class_binding": true,
+  "model_constructed": false,
+  "hashes": {
+    "protected_before.json": "d5533a82cefeaccb97ad09899082b41ffd57773ec0b93fd9b1555c5d283afac3",
+    "input_manifest.json": "a6753bdf08751caa29b985c848c6d439580237dbe36f5f1247ab99868b34e04d",
+    "review.html": "f58b480be7b51e4f8d4406498d1a1fbc4fe5482689c8d507a92579675aaccba7",
+    "local_QA.json": "0bbae0ab57e5d04a90bd87be2ca7637c608100b41aacce72c2ed87696c35e933",
+    "replay_attempt1_import_error.log": "0bd55988deab625524d6eebb7588c8b606a8615134cf9e0877e65fd1436a2db0",
+    "complete.json": "6180b9832eff72e6315bbd72877923ae42e8401d74d8f5320b6bd7e822f0859d",
+    "REPORT.txt": "8d1bb5eb718510ecadde108613995ff48dffbdb6374d14c198c82557b59d6a2f",
+    "runtime_QA.json": "de314a2009963cd6dea82e444f0f5af9ed68bb31bde9de3e5089b0c0e5d97c1e",
+    "replay.log": "334688f295e39e9645b640d108480658b3f557789f9e5f5eb3cb2f0e0fdd70e7",
+    "loss_input_trace.csv": "322578148e1b58cc2a89676c4373389dd0ad59cd6e3701f1985835a5186f4d96"
+  }
+}

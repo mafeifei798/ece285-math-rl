@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "CPU_only": true,
+  "two_identical_score_sets_produce_zero_reward_rank_advantage_differences": true,
+  "prior_random_review_denominators_reproduced": {
+    "clean": 7,
+    "errors": 20,
+    "clean_rejected": 6,
+    "errors_fully_passed": 3
+  },
+  "control_is_not_Qwen_predictions": true,
+  "new_training": false
+}

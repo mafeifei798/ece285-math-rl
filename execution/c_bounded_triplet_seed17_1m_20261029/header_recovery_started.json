@@ -1,0 +1,9 @@
+{
+  "pid": 1748802,
+  "unix": 1793266676.7838562,
+  "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+  "resume_from_existing_smoke_checkpoints": true,
+  "reward_loss_data_seed_budget_unchanged": true,
+  "environment_change": "Project-local CPython3.11 headers via CPATH; system Python untouched",
+  "scheduling_change": "Run actual checkpoint continuation acceptance first; immutable initial validation follows A pilot, with unchanged checkpoint/prompt/verifier/seed"
+}

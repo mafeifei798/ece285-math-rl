@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-10-21T07:42:22.201759+00:00",
+  "scope": "Read-only final review; proposal, protocol and delivered files unchanged; no training or course submission.",
+  "compilers": "Tectonic and built-in Codex LaTeX compiler: success",
+  "pages": {
+    "body": 2,
+    "references": 1
+  },
+  "visual_check": "All three recompiled pages inspected; pixel-identical to the previously reviewed final version.",
+  "authors": [
+    "Hongyi Ding",
+    "Jasmine Jiang",
+    "Yang Zeng"
+  ],
+  "official_style_url": "https://media.neurips.cc/Conferences/NeurIPS2025/Styles.zip",
+  "official_style_byte_match": true,
+  "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+  "LCA_source": "https://arxiv.org/html/2606.27739v2",
+  "LCA_verified_version_date": "2026-09-26",
+  "LCA_verified_section": "E.3 Robustness to Label Noise",
+  "LCA_paraphrase": "Replaces 5/10/15/20 percent of originally correct trajectories with error-containing trajectories while retaining correct labels; supports the controlled-noise wording in the proposal.",
+  "source_zip_verified_files": 9,
+  "course_submission": "User will submit personally; not submitted by assistant",
+  "snapshot_hashes": {
+    "ece285_math_rl_proposal.pdf": "298f516519b839bc1337a4befa8151a5853d0a29316291ef06fcf34d981c5782",
+    "ece285_math_rl_proposal_source.zip": "161b1ae7ee265b622e175401acfeb772e1b08aab8697da28db195a64ee9faf35"
+  }
+}

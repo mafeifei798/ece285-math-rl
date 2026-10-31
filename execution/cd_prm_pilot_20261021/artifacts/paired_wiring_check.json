@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "identical_initialization": true,
+  "identical_batch_manifest": true,
+  "first_unclipped_gradient_C_minus_D_equals_success_gradient": true,
+  "max_absolute_error": 3.725290298461914e-08,
+  "note": "Gradient equality checked at common initialization, before parameter divergence or clipping."
+}

@@ -1,0 +1,9 @@
+{
+  "math/train/number_theory/551": {
+    "answer_type": "legacy",
+    "question_text_sha256": "c76e84319550ee2f5971208db27f7ae323dc67d4e746f72ed7f9bc684d13a98e",
+    "gold_text_sha256": "793733573a1dfd14a2e889a11b2ad7b6981de29df813863b528dc1ae99416eeb",
+    "reason": "No largest positive multiple exists: multiplying any valid n by 10 preserves the 0/8 digits and divisibility. Dataset solution instead finds a smallest n.",
+    "action": "exclude whole question group prospectively in every arm; do not rewrite original data"
+  }
+}

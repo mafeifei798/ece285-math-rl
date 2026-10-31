@@ -1,0 +1,51 @@
+{
+  "snapshot_utc": "2026-10-22T22:09:11.441957+00:00",
+  "snapshot_pt": "2026-10-22T15:09:11.441957-07:00",
+  "completed_responses": 512,
+  "target_responses": 3992,
+  "progress_percent": 12.825651302605209,
+  "completed_responses_by_cell": {
+    "A_original": 128,
+    "A_final_only": 128,
+    "B_original": 128,
+    "B_final_only": 128
+  },
+  "completed_math_questions_per_cell": 128,
+  "completed_gsm8k_questions_per_cell": 0,
+  "remaining_responses": 3480,
+  "runtime_hours": 1.940555008980963,
+  "windows": {
+    "4": {
+      "mean_seconds_per_16_responses": 188.93035578727722,
+      "remaining_hours_linear": 11.414542328814665,
+      "projected_finish_pt": "2026-10-23T02:34:03.794341-07:00"
+    },
+    "8": {
+      "mean_seconds_per_16_responses": 212.04905265569687,
+      "remaining_hours_linear": 12.811296931281685,
+      "projected_finish_pt": "2026-10-23T03:57:52.110910-07:00"
+    },
+    "12": {
+      "mean_seconds_per_16_responses": 218.18442291021347,
+      "remaining_hours_linear": 13.181975550825397,
+      "projected_finish_pt": "2026-10-23T04:20:06.553940-07:00"
+    },
+    "32": {
+      "mean_seconds_per_16_responses": 212.8377780020237,
+      "remaining_hours_linear": 12.858949087622266,
+      "projected_finish_pt": "2026-10-23T04:00:43.658672-07:00"
+    }
+  },
+  "practical_remaining_hours_range": [
+    12,
+    14
+  ],
+  "range_is_not_a_confidence_interval": true,
+  "assumptions": [
+    "Shared GPU load remains similar.",
+    "Later GSM8K response lengths may differ; estimate is based on MATH batches so far.",
+    "CPU verification and transfer time are additional, not measured yet."
+  ],
+  "error_lines_detected": [],
+  "final_comparison_ready": false
+}

@@ -1,0 +1,68 @@
+{
+  "status": "assistant_review_of_selected_saved_training_outputs",
+  "source_sha256": "fc36c98d518aecad53b63583904717738444387cdfedfda6c94d536600d3caae",
+  "mathematical_check": "independent derivation; never executed generated code",
+  "not_prevalence_estimate": true,
+  "cases": [
+    {
+      "problem_id": "math/train/geometry/6",
+      "scope": "C-mix training rollout, step_before_update30; deliberately selected high positive-advantage wrong response",
+      "finding": "原题被遗弃，后文切换到不相关题目；该错答获得正优势。",
+      "evidence": "开头给出 boxed{56}，随后转到“Yousof works 30 hours each week”，末尾给出另一个题目的 boxed{1}。",
+      "explanation": "原图坐标的鞋带面积为25，28条单位边的实际边长为56/28=2，故实际面积25×2²=100。模型输出没有完成原题，后面连续回答其他问题。C的最低步骤分约0.252，并非高置信度正确，但在该组相对奖励下实际advantage为+2.313。不能据此估计总体跑题率，也不能证明它造成测试分数下降。"
+    },
+    {
+      "problem_id": "math/train/geometry/634",
+      "scope": "C-mix training rollout, step_before_update19; deliberately selected high positive-advantage wrong response",
+      "finding": "存在可直接核对的几何错误与虚构数值输出，低过程分仍变成强正优势。",
+      "evidence": "“The perpendicular bisector ... one of which is B”；随后直接假设“AD = 5 * sqrt(337)”并声称输出22。",
+      "explanation": "B不在AC的垂直平分线上，因为AB=43而BC=13。独立取A=(0,0), C=(48,0)，得B=(83/2,13√3/2)，外心O=(24,−11/√3)，另一侧交点D=(24,−18√3)，所以AD=6√43，floor(6+√43)=12。即使接受其假设，floor(5+√337)也应是23而非22。没有执行模型生成的代码。C最低步骤分仅0.025565，实际advantage却为+2.254；此例主要说明低绝对分也可能在组内标准化后成为正学习信号。"
+    },
+    {
+      "problem_id": "math500/107",
+      "scope": "Final MATH500: C-bounded correct, A incorrect; purposefully short non-diagram example",
+      "finding": "胜例：C-bounded纠正了开头的错误答案；A正确列举后又回到错误结论。",
+      "evidence": "两者起初都写boxed{14}，正文均列出9个奇素数；A最后仍说14，C-bounded末尾改为boxed{9}。",
+      "explanation": "30以内素数共10个，去掉唯一偶素数2，交集有9个。A不是单纯缺框：它在列出正确中间结果后又明确接受14；C-bounded最终结论与列举一致。这是选定同题的真实收益，不代表总体改善机制已被证明。"
+    },
+    {
+      "problem_id": "math500/472",
+      "scope": "Final MATH500: C-bounded correct, A no boxed answer",
+      "finding": "胜例中也有纯输出协议差异：两者都算对，但A没有答案框。",
+      "evidence": "A正文得出137又1/2但全篇没有boxed；C-bounded给出同样计算并用boxed包装。",
+      "explanation": "50×(11/4)=275/2=137又1/2。两者数学计算都正确，固定规则因A缺框记0。保留原分数，但不能把这个胜例算作数学推理能力的提升。"
+    },
+    {
+      "problem_id": "math500/253",
+      "scope": "Final MATH500: A correct, C-bounded unparseable last box",
+      "finding": "负例也有输出协议问题：C-bounded正文正确，最后一个框仍是问号。",
+      "evidence": "两者开头均为boxed{?}，正文均算出1/8；A补boxed{1/8}，C-bounded只给未加框的1/8。",
+      "explanation": "2英尺=24英寸，3/24=1/8。C-bounded的正文有正确结论，但冻结验答器读取到问号。这个损失不能简单解释为数学计算退步。"
+    },
+    {
+      "problem_id": "math500/198",
+      "scope": "Final MATH500: A correct, C-bounded incorrect",
+      "finding": "真正数学负例：错误的自我修正推翻了正确组合计数。",
+      "evidence": "C-bounded先写出7!×2!=10080，随后称6个女生加1个男生块“实际上是6个单位”，回到1440。",
+      "explanation": "把两男生当一块，连同6个女生共有7个单位，排列7!种，块内两男生2种，共10080。C-bounded后续把单位数算成6，并写出不成立的“7!*2=10080/2=5040”。这是数学推导退化，不能靠改变答案提取规则修好。"
+    },
+    {
+      "problem_id": "gsm8k/test/321",
+      "scope": "GSM8K saved common completed832-question prefix; short parseable C-bounded gain, not representative sampling",
+      "finding": "GSM8K胜例：正文双方都算对，差别在于是否把末框更新为正确答案。",
+      "evidence": "A先写boxed{2}，后文算出笔价1美元但没有新框；C-bounded同样先写2，末尾补boxed{1}。",
+      "explanation": "杂志4/2=2美元，笔价2−1=1美元。这个差异支持最终答案与正文一致性的改善案例，不证明C-bounded学会了新的算术技能；正式分数保持A0、C-bounded1。"
+    },
+    {
+      "problem_id": "gsm8k/test/717",
+      "scope": "GSM8K saved common completed832-question prefix; short parseable C-bounded loss, not representative sampling",
+      "finding": "GSM8K负例：旧的错误答案框仍然存在，并出现原题没有的“选项”叙述。",
+      "evidence": "C-bounded开头boxed{1.00}，后文正确算出找零5美元，却声称5不在所给选项中；A末尾boxed{$5}。",
+      "explanation": "6×0.50+8×0.25=5美元，10−5=5美元。C-bounded没有更新末框；问题也没有给任何选项。这说明门控训练信号并未消除最终框与正文冲突，不能把该方法当作输出一致性的保证。"
+    }
+  ],
+  "test_case_source_sha256": "91d6a79c4b71a22fa48cb85401085c5c538dab68af55b9a4cae4e9205ed4fc62",
+  "selection_limit": "Test examples deliberately favor shorter non-diagram gains/losses; no prevalence or mechanism-causality estimate.",
+  "gsm_case_source_sha256": "f2b747e4804354feb5beaf4da37e153b8fb0f9ea2778990c0bd0490c3b2e336f",
+  "gsm_selection_common_prefix": 832
+}

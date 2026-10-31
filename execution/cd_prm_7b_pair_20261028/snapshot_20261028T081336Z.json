@@ -1,0 +1,91 @@
+{
+  "checked_unix": 1793175215.7744656,
+  "remote_run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "controller.json": {
+    "status": "running",
+    "pid": 3237174,
+    "started_unix": 1793174084.3281112,
+    "release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
+    "gpu": 1,
+    "sharing_authorized": true,
+    "completed_stages": [
+      "prepare"
+    ],
+    "active_child": {
+      "stage": "generate",
+      "pid": 3238739,
+      "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/generate.log"
+    },
+    "actor_optimizer_updates": 0,
+    "automatic_RL_launch": false,
+    "stage_started_unix": 1793174103.9323573
+  },
+  "dispatch.json": {
+    "pid": 3237174,
+    "started_unix": 1793174084.2960937,
+    "cwd": "/srv/research/ece285_math_rl_project",
+    "source": "/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
+    "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+    "source_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
+    "gpu": 1,
+    "gpu_sharing_authorized": true,
+    "actor_optimizer_updates": 0,
+    "complete_RL_authorized": false
+  },
+  "progress.json": {
+    "stage": "generating_buffer",
+    "pid": 3238739,
+    "unix": 1793175176.1164935,
+    "questions_done": 400,
+    "questions_total": 512,
+    "generated_responses": 1600,
+    "elapsed_seconds": 1038.7448287010193
+  },
+  "cpu_checks.json": {
+    "passed": true,
+    "success_term_gradient_identity": true,
+    "score_translation_does_not_change_relative_advantage": true,
+    "qwen_native_markers": true,
+    "CRLF_normalization": true,
+    "anchor_original_boundaries_preserved": true,
+    "policy_updates": 0
+  },
+  "selection.json": {
+    "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+    "buffer_questions": 512,
+    "primary_probe_groups": 64,
+    "primary_probe_rows": 512,
+    "illustrative_rows": 24,
+    "selection": "hash-selected within outcome strata, never selected by PRM scores",
+    "files": {
+      "buffer_questions.jsonl": "d76580a0651197574ad5122fde4eb68cf42d6329b7fd0b7fb2d072c44b2962a7",
+      "probe.jsonl": "0d2f72fc0d38eeff944d495e8e8b299b3a7195bbf255578f799e46c9f4f8685d",
+      "illustrations.jsonl": "3c2fa25c6f2dea2dca4398e61a43fa3aea1a42cf3504cebc688c8e292b47fed4",
+      "processbench.jsonl": "4e1e98c715b85dede4d136bf84685971c619d9083467f7c2390a866e1b02e8f2",
+      "forbidden.json": "f90fc588b2f6e329586d570a4ac1a80ae036e066f6c7cb13e9537985473f7a86"
+    }
+  },
+  "anchor_manifest.json": {
+    "source_repository": "HuggingFaceH4/prm800k-trl-dedup",
+    "source_revision": "fd8cba17d8214bfbabf6e7e10f29da4e6614dd6c",
+    "source_sha256": "d9e39ca727f8000c158f3baf51c7fe0c175f86146ad9250c2965f48172006864",
+    "sha256": "d0ce3590b256a3f30d951c9ee87acbf1dd46faca51a39f72f10b3245c7be898d",
+    "count": 2048,
+    "labels": {
+      "0": 1024,
+      "1": 1024
+    },
+    "excluded": {},
+    "forbidden_question_overlap": 0,
+    "data_admission_version": 2,
+    "conflicting_source_prefixes": 1831,
+    "conflicting_source_records": 279951,
+    "selection": "Exclude both labels for conflicting native prefixes across entire eligible source; deterministic one prefix per question per class then hash-select 1024 per class",
+    "boundaries": "original annotated step list preserved; supervision only at final native marker of each prefix"
+  },
+  "C": {},
+  "D": {},
+  "child_alive": true,
+  "child_log_tail": "_buffer\", \"pid\": 3238739, \"unix\": 1793174219.6070433, \"questions_done\": 32, \"questions_total\": 512, \"generated_responses\": 128, \"elapsed_seconds\": 82.23537611961365}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174261.0301259, \"questions_done\": 48, \"questions_total\": 512, \"generated_responses\": 192, \"elapsed_seconds\": 123.65845346450806}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174300.2870607, \"questions_done\": 64, \"questions_total\": 512, \"generated_responses\": 256, \"elapsed_seconds\": 162.91539239883423}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174338.9470608, \"questions_done\": 80, \"questions_total\": 512, \"generated_responses\": 320, \"elapsed_seconds\": 201.5753927230835}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174378.0049403, \"questions_done\": 96, \"questions_total\": 512, \"generated_responses\": 384, \"elapsed_seconds\": 240.6332745552063}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174422.3300178, \"questions_done\": 112, \"questions_total\": 512, \"generated_responses\": 448, \"elapsed_seconds\": 284.9583508968353}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174466.7294772, \"questions_done\": 128, \"questions_total\": 512, \"generated_responses\": 512, \"elapsed_seconds\": 329.35781049728394}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174510.5445147, \"questions_done\": 144, \"questions_total\": 512, \"generated_responses\": 576, \"elapsed_seconds\": 373.1728482246399}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174561.3599803, \"questions_done\": 160, \"questions_total\": 512, \"generated_responses\": 640, \"elapsed_seconds\": 423.98831582069397}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174606.7693665, \"questions_done\": 176, \"questions_total\": 512, \"generated_responses\": 704, \"elapsed_seconds\": 469.39770102500916}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174639.3473449, \"questions_done\": 192, \"questions_total\": 512, \"generated_responses\": 768, \"elapsed_seconds\": 501.97567987442017}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174685.4257183, \"questions_done\": 208, \"questions_total\": 512, \"generated_responses\": 832, \"elapsed_seconds\": 548.0540511608124}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174730.7641373, \"questions_done\": 224, \"questions_total\": 512, \"generated_responses\": 896, \"elapsed_seconds\": 593.3924713134766}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174770.9523382, \"questions_done\": 240, \"questions_total\": 512, \"generated_responses\": 960, \"elapsed_seconds\": 633.580673456192}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174807.8300326, \"questions_done\": 256, \"questions_total\": 512, \"generated_responses\": 1024, \"elapsed_seconds\": 670.4583661556244}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174848.6738775, \"questions_done\": 272, \"questions_total\": 512, \"generated_responses\": 1088, \"elapsed_seconds\": 711.3022122383118}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174886.36453, \"questions_done\": 288, \"questions_total\": 512, \"generated_responses\": 1152, \"elapsed_seconds\": 748.9928648471832}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174925.5045562, \"questions_done\": 304, \"questions_total\": 512, \"generated_responses\": 1216, \"elapsed_seconds\": 788.1328918933868}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793174969.5650697, \"questions_done\": 320, \"questions_total\": 512, \"generated_responses\": 1280, \"elapsed_seconds\": 832.1934053897858}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793175010.9748735, \"questions_done\": 336, \"questions_total\": 512, \"generated_responses\": 1344, \"elapsed_seconds\": 873.6032071113586}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793175039.8310483, \"questions_done\": 352, \"questions_total\": 512, \"generated_responses\": 1408, \"elapsed_seconds\": 902.4593832492828}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793175083.7245393, \"questions_done\": 368, \"questions_total\": 512, \"generated_responses\": 1472, \"elapsed_seconds\": 946.3528740406036}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793175130.8219464, \"questions_done\": 384, \"questions_total\": 512, \"generated_responses\": 1536, \"elapsed_seconds\": 993.4502816200256}\n{\"stage\": \"generating_buffer\", \"pid\": 3238739, \"unix\": 1793175176.1164935, \"questions_done\": 400, \"questions_total\": 512, \"generated_responses\": 1600, \"elapsed_seconds\": 1038.7448287010193}\n",
+  "gpu": "0, 10729 MiB, 70423 MiB, 99 %\n1, 26065 MiB, 55087 MiB, 100 %\n"
+}

@@ -1,0 +1,28 @@
+{
+  "done": 7276,
+  "total": 7276,
+  "counts": {
+    "initial": {
+      "math500": 500,
+      "gsm8k": 1319
+    },
+    "A": {
+      "math500": 500,
+      "gsm8k": 1319
+    },
+    "C_mix": {
+      "math500": 500,
+      "gsm8k": 1319
+    },
+    "C_bounded": {
+      "math500": 500,
+      "gsm8k": 1319
+    }
+  },
+  "arm": "C_bounded",
+  "dataset": "gsm8k",
+  "elapsed_seconds": 9233.217881679535,
+  "unix": 1793325013.0625157,
+  "pid": 2723446,
+  "last_batch_inference_seconds": 91.63455057144165
+}

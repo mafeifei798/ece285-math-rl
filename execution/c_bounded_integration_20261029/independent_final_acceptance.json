@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "exact_live_generated_tokens_reused": 32,
+  "actual_loss_rows_independently_recomputed": 72,
+  "live_and_saved_token_mask_fingerprints_verified": 72,
+  "max_FP64_advantage_error": 9.058772976189289e-08,
+  "max_abs_process_component": 0.12458205223083496,
+  "wrong_positive_at_loss": 0,
+  "post_combination_normalizations": 0,
+  "C_score_parity_max_error": 0.0,
+  "actor_and_C_parameter_hashes_unchanged": true,
+  "original_AB_files_unchanged": 89,
+  "CD_and_scoring_files_unchanged": 17,
+  "optimizer_steps": 0,
+  "formal_RL": false,
+  "D_adaptation": false,
+  "precision_finding": {
+    "shared_training_tf32": true,
+    "TF32_off_max_error": 0.0,
+    "TF32_on_max_error": 0.020781725645065308,
+    "precise_cause": "Inherited TrainingArguments tf32=True shared global state; do not attribute exclusively to vLLM"
+  }
+}

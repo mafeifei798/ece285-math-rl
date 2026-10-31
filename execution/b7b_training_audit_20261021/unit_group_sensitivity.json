@@ -1,0 +1,41 @@
+{
+  "A": {
+    "typed_percent_corrected_group_counts": {
+      "mixed": 875,
+      "all_wrong": 210,
+      "all_correct": 35
+    },
+    "transitions": {
+      "mixed -> mixed": 875,
+      "all_wrong -> all_wrong": 210,
+      "all_correct -> all_correct": 35
+    }
+  },
+  "B_old": {
+    "typed_percent_corrected_group_counts": {
+      "mixed": 897,
+      "all_wrong": 211,
+      "all_correct": 32
+    },
+    "transitions": {
+      "mixed -> mixed": 896,
+      "all_wrong -> all_wrong": 211,
+      "all_correct -> all_correct": 32,
+      "all_wrong -> mixed": 1
+    }
+  },
+  "B7": {
+    "typed_percent_corrected_group_counts": {
+      "mixed": 893,
+      "all_wrong": 206,
+      "all_correct": 33
+    },
+    "transitions": {
+      "mixed -> mixed": 892,
+      "all_wrong -> all_wrong": 206,
+      "all_correct -> all_correct": 32,
+      "all_wrong -> mixed": 1,
+      "mixed -> all_correct": 1
+    }
+  }
+}

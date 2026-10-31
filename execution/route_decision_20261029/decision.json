@@ -1,0 +1,42 @@
+{
+  "status": "ANALYSIS_ONLY_NO_NEW_TRAINING",
+  "recommendation": "One budget-limited test of frozen-C process-signal scaling before considering a route change.",
+  "resources_assumed": "one shared A100; existing local configuration uses an 80GiB A100",
+  "current_triplet_complete": true,
+  "new_training_started": false,
+  "new_model_calls": 0,
+  "remote_mutations": 0,
+  "proposed_stage1_actor_generated_tokens": 2000000,
+  "optional_stage2_actor_generated_tokens": 6000000,
+  "all_future_training_requires_explicit_budget_authorization": true,
+  "PRM_input_tokens_and_evaluation_generation_are_additional": true,
+  "full_official_PAPO_reproduction": false,
+  "new_algorithm_priority_claim": false,
+  "stage1_arms": [
+    {
+      "arm": "A",
+      "budget": 1000000,
+      "state": "existing_completed"
+    },
+    {
+      "arm": "PAPO-standard-controlled",
+      "coefficient": 1.0,
+      "budget": 1000000,
+      "state": "proposed_not_started"
+    },
+    {
+      "arm": "PAPO-magnitude-matched",
+      "coefficient_candidate": 0.052956140041351324,
+      "budget": 1000000,
+      "state": "proposed_not_started"
+    },
+    {
+      "arm": "C-bounded",
+      "coefficient": 0.2,
+      "budget": 1000000,
+      "state": "existing_completed"
+    }
+  ],
+  "implementation_note": "V3 currently has CPU acceptance only. Its old proposal used PAPO coefficient0.2; this decision proposes comparing default1.0 and a training-only calibrated coefficient. No source/protocol/launcher was changed to execute this proposal.",
+  "small_effects_or_nonsignificance_do_not_establish_equivalence": true
+}

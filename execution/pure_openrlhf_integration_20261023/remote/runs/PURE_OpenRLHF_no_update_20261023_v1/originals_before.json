@@ -1,0 +1,3653 @@
+{
+  "sha256": {
+    "experiments/ab_corrected_6m_seed17_20261022/README.txt": "a0195bf66a2ec005c3bab5ac288e497605bd347fa76c2ce44558fee428871c26",
+    "experiments/ab_corrected_6m_seed17_20261022/evaluate.py": "f0fea2f71d790f1a3a3b02bef588b2824600ee9f2638611543f68703ff1833de",
+    "experiments/ab_corrected_6m_seed17_20261022/launch_pair.py": "4d0d7e8009e5c8a17801be603985d8dc93b3100a72df10221bcd4b141c86c99c",
+    "experiments/ab_corrected_6m_seed17_20261022/pair_utils.py": "5b5710e0e85faea631875cab67d267b7c770bb3985b102baeec8a5196937749e",
+    "experiments/ab_corrected_6m_seed17_20261022/plan.json": "693d0ca9135f029a3b48da4c274a7c4564f2df65e2684e0726f4b0cdc2b4c1d1",
+    "experiments/ab_corrected_6m_seed17_20261022/preflight.py": "d9b8d5d88cc5bf9a9780e96baa01be67be4e2349307d72fe17519c4d1521634b",
+    "experiments/ab_corrected_6m_seed17_20261022/release.json": "9eac99ad38cf0ebb389f295655024eff1a09ff530ca05462bd2d9bcfcdbe6907",
+    "experiments/ab_corrected_6m_seed17_20261022/train_arm.py": "09559840a6bd37a3ec42b0ff26a78e0e3f6f829dc371a263fc3bb2a4fa6d998f",
+    "experiments/b_baseline_corrected_20261021/README.txt": "419fa790447bd7c82704db8a72422eb192a46605a8164d20c1725421cbe59b65",
+    "experiments/b_baseline_corrected_20261021/build_training_version.py": "15eef4bc290615fc11fb48f0cbcf907d50ca5951c82b466a5e34b3636cca5156",
+    "experiments/b_baseline_corrected_20261021/protocol.json": "3fe5e2f9aa577b2dac6b94cc5a6dc46e09b972d45f661aef03b9c99fca6ad40a",
+    "experiments/b_baseline_corrected_20261021/release.json": "cd5164a6743075fd03afec37224afb256a714cec995b25c68b41de2331aa000d",
+    "experiments/b_baseline_corrected_20261021/replay.py": "93fecc201ad805df991e2074a79557590abe0b4615f8ed14a5c156e32ae6a439",
+    "experiments/b_baseline_corrected_20261021/rewards.py": "a3e1ab067d4510209b676dc0678715e8dcdb657fdb9a2e5a5436c246df944033",
+    "experiments/b_baseline_corrected_20261021/trainer.py": "314fc43be6c50854856bdd11c2dd4a516475df8416df1a9a2f108ba2bc8848a8",
+    "experiments/b_baseline_corrected_20261021/vendor/grpo_trainer_0_23_1.py": "f217183c84be9b38b23454920eb1b914726aa3c4b9dd4c076d455bdaa67bf1b8",
+    "experiments/b_baseline_corrected_20261021/vendor/trl_utils_0_23_1.py": "07cccc9023d60528544390d70efc0a505d2dc1e92473133c045d33f7ed976360",
+    "experiments/b_baseline_corrected_20261021/verify_release.py": "320c39a51e11a3124b6f86adeca75243793e44e9f16900e5fc594a04ebc46c9f",
+    "experiments/b_qwen7b_6m_20261021/frozen_prm.py": "575ff18cfb511c15763199db127cd4989e12243994d7016c590ef289692f8735",
+    "experiments/b_qwen7b_6m_20261021/launch.py": "d543681808122697bdf894ecca2a1bdf1166a6ac4f2007d639f765c8efd48b6c",
+    "experiments/b_qwen7b_6m_20261021/protocol.json": "fe8fdaf43526ab508eb5b796d8b92670cb2d0c430c9ebd31575121ae23a40885",
+    "experiments/b_qwen7b_6m_20261021/support.py": "ebb6a1dc1f981a0d3b122d6c83f900a656c183c8055a494d5e4ad63900940ef5",
+    "experiments/b_qwen7b_6m_20261021/train.py": "54158b5986063eee944cf6404d35cc05c2041581379d918d8bfc1a4c4814bfba",
+    "experiments/pure_integration_20261022/._alignment.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._approved_plan.json": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._common.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._no_update.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._offline_check.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._prm.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._release.json": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._signals.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._trainer.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/._vendor": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/alignment.py": "bed6156c8426bd62638396480735e93544353ac14f18f8a5d06301d46066b2a5",
+    "experiments/pure_integration_20261022/approved_plan.json": "ba95a96c69ef0e936e7d7c147f63d14d5ac761f3f29d27a914f1928ced771488",
+    "experiments/pure_integration_20261022/common.py": "3c8e5b92e67e9a3918924d8ce79ab30d74580c8e18c7bf9c827cfafdcf8a1890",
+    "experiments/pure_integration_20261022/dispatch_no_update.py": "00995e9ddf1fb80341530a34f4197e6477c85c64efc02420bdaea085e3a93a2f",
+    "experiments/pure_integration_20261022/no_update.py": "d84c02807e2d455a6379f740b6298079aa4a9eb17352bbd28d3bbaef769c8c58",
+    "experiments/pure_integration_20261022/offline_check.py": "d579afef9a0889ce9dd8ebede639305c31067537b747de93b7a90ba99146e781",
+    "experiments/pure_integration_20261022/prm.py": "d47cf609b6fdc427b19582e14bf55e1c5cb181bde0929e89b4950b77855d1370",
+    "experiments/pure_integration_20261022/release.json": "bb702b408216dd3cab3e655d82b1b68a901641ca4d2e84a94c5df6b5b58af84a",
+    "experiments/pure_integration_20261022/signals.py": "825a67d958aeaec316fd854ec3df0775ac7b17609e7e0842d63a114909f0b491",
+    "experiments/pure_integration_20261022/trainer.py": "3c9eeb60eba07092e5e3ba77b76ad35a457aabbccf85b04fa81b80f19a05e606",
+    "experiments/pure_integration_20261022/vendor/._manifest.json": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/vendor/._pure_core.py": "545709f3c21e2b1f6ad504f3e1b3b41601033d3912b11841923d7709ef917aa9",
+    "experiments/pure_integration_20261022/vendor/manifest.json": "f838f00e5de87a1678a04a4dd4d7e9a2ef0c6176fe8e4da4ee01f7b8c0bbc55a",
+    "experiments/pure_integration_20261022/vendor/pure_core.py": "ddeb99f76d3cd85ea649b14aab1d7cb50e157f773a625d3fa0ba5be506df7432",
+    "experiments/pure_official_prm_offline_20261022/analyze.py": "7e810c6c4eb3be1f729682344293dc4f3612b41647261e7e32a886ef406d3d0f",
+    "experiments/pure_official_prm_offline_20261022/download_ranges.py": "7bb46e788e317ddd81bd0b8eb2e98ca0d027e84ff731f5069881e09403b61016",
+    "experiments/pure_official_prm_offline_20261022/download_resumable.py": "845bdb83776406c9cf5acb8454d51871b10bb6b2331fa94c295d76eb76a4f7fd",
+    "experiments/pure_official_prm_offline_20261022/download_tail.py": "5ec6e8e0beaebc2254e9cb778b42e2b3d8a1fca88736c5d287a350c42462539d",
+    "experiments/pure_official_prm_offline_20261022/fetch_assets.py": "52698e8932536b595f088b9b9e0a5f896c5993712ae4ec39cfcd249f9d1087f0",
+    "experiments/pure_official_prm_offline_20261022/run_offline.py": "5f0c4c7bd7fccdfc5982d2acadf2345a261e3715bc0d874d83b1fc482950619f",
+    "experiments/pure_official_prm_offline_20261022/score_existing.py": "b1ee3d9eb3b1638f4db10f169edacfe02aaa20055e0e4f26f4159cd59ae9b12d",
+    "experiments/pure_official_prm_offline_20261022/score_existing_single.py": "705f6fa4dbf90c4b2662a6396ce356707fe7f90097fd9a5bc49ad1df0245d159",
+    "experiments/pure_official_prm_offline_20261022/score_qwen_single.py": "4f700bdfdebc94209655d2c28212ec27c220281beade9b48f591c0607faf9503",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/adapter_config.json": "ba647e824edff976ae8bf664ac421ce2146c955f9d8135a59480f13cff0744fc",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/adapter_model.safetensors": "480c464c20e59ae1237cd27351f79c76988ab9a194c2e15a5aad8c6413348846",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/completion_accounting.json": "7293e8428603efa9bbf1de93bbc18181c16124d3dbf300bc17281b176dec6caa",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/trainer_state.json": "aa966e9ea4bce3897a8568f0fb6be71e87f57cfebb827b6c788cc2abac908797",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/adapter_config.json": "ba647e824edff976ae8bf664ac421ce2146c955f9d8135a59480f13cff0744fc",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/adapter_model.safetensors": "54ed91fc24de0b8da8f7effeb16c9e03a44f1a3eaeafd0ae65e71cad0fddf652",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/completion_accounting.json": "ca88cd280667bcaa2192990b6130e1f51995c72491bd772669ad6a50430f5195",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/trainer_state.json": "ad1ebcbbdea38b1404dadf03d1a00ece284fbc79d9ec38629e200d2ed163f14f",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/adapter_config.json": "ba647e824edff976ae8bf664ac421ce2146c955f9d8135a59480f13cff0744fc",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/adapter_model.safetensors": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/completion_accounting.json": "871de1287f9e69663ee32b2b9de6e7700eb8061fc7430d31535eb9ab40a80f61",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/trainer_state.json": "3f1e3cdb222f6f208810b7d2af54c2a26f2fd6f57b95c3f8dccb19a52a6d0b09",
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_corrected_seed17_6M_20261022/evaluation/evaluation_config.json": "b8b724e1b65a714a288b94d222d226a0881540389b1ff18a54915182de2e57ea",
+    "runs/A_corrected_seed17_6M_20261022/evaluation/evaluation_summary.json": "f20426af8860bc6582a7d4057a1e101776e9c42db63f7a33f2e80724b5471c06",
+    "runs/A_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": "021a9ec789d5844b6768a74eed7f56f8b4b88302a48a47605d62de9215b88354",
+    "runs/A_corrected_seed17_6M_20261022/evaluation/math500.jsonl": "febc9a0bb4ec58f499e6dc9bf0e9ab9dc5dd01690a1d8193eec772416fd21670",
+    "runs/A_corrected_seed17_6M_20261022/evaluation/progress.json": "5c209c6cd8a98196d29e680f4950a379c9ea5d479dfd485df584e5132609d6db",
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/adapter_config.json": "ba647e824edff976ae8bf664ac421ce2146c955f9d8135a59480f13cff0744fc",
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/adapter_model.safetensors": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_corrected_seed17_6M_20261022/initial_sampling.json": "910914f2e6571836781a8ce9f5a9014e1ddb9d7b7771ce3159b1b4351fbf5c38",
+    "runs/A_corrected_seed17_6M_20261022/initial_sampling_match.json": "2fadcaa0bf5a3fd6c516c7724a626759086cbfdc55a18a6b2dd79f919abbdb63",
+    "runs/A_corrected_seed17_6M_20261022/live_audits.json": "e20e6e099a53c858a1fa8dcea93f9e9de0712692453d50d395ef62138f54326b",
+    "runs/A_corrected_seed17_6M_20261022/metrics.jsonl": "7656cac49868efb58991afb4e1f0e29ac6086cb041749af46c436ca79394e833",
+    "runs/A_corrected_seed17_6M_20261022/progress.json": "45e2098bbe3b183547728a2f2eece1297c89b6b72c00ca96021933b546adadc6",
+    "runs/A_corrected_seed17_6M_20261022/rollouts.jsonl": "6ceb2e86ba1ddb53feeaca21fa30f7588b6b25dfcc1dd8549dd5928775d31caf",
+    "runs/A_corrected_seed17_6M_20261022/run_config.json": "f9708fe8a7fec69d6afacb6476bd9c7acf657e837c5ac1dbb3c59d736b0afd6f",
+    "runs/A_corrected_seed17_6M_20261022/status.json": "f24d0308f4913bab0ba7b01349a9ff7dbb084346fd194c1071beca7be1090744",
+    "runs/A_corrected_seed17_6M_20261022/trainer_state.json": "1a2999db22d392dbf285bb6fe77c4e8526c2589225b34dc62d361f6adcf271ed",
+    "runs/A_seed17/checkpoint-240/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/checkpoint-240/adapter_model.safetensors": "ddef5300b2559747bbac6601c31fe45e0ab4e1b5d0cdccf39480879bcb1e46b1",
+    "runs/A_seed17/checkpoint-240/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/checkpoint-240/completion_accounting.json": "49eea634f8cce026d753703c7d69d4c9aaa71e795556dc6b133e0b43bce1ddf7",
+    "runs/A_seed17/checkpoint-240/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/checkpoint-240/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/checkpoint-240/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/checkpoint-240/trainer_state.json": "a0f2f5bb79508204557a108aa26b748fbb0c882bffab821fc17d416c3b5dc919",
+    "runs/A_seed17/checkpoint-240/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/checkpoint-260/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/checkpoint-260/adapter_model.safetensors": "63f2d74ff7c1a506f433cd3c515a89d7edf6695bf88741b7693c20913125c15f",
+    "runs/A_seed17/checkpoint-260/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/checkpoint-260/completion_accounting.json": "57b382d829f9e7aa4788a3715a606427eb04e18d4e722434330a0902d462b8d9",
+    "runs/A_seed17/checkpoint-260/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/checkpoint-260/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/checkpoint-260/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/checkpoint-260/trainer_state.json": "de2c503ac4139f543748c8a4c212ff7ce603c1ff8c0777e15f4df4707b42fa83",
+    "runs/A_seed17/checkpoint-260/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/checkpoint-280/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/checkpoint-280/adapter_model.safetensors": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b",
+    "runs/A_seed17/checkpoint-280/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/checkpoint-280/completion_accounting.json": "7b8fecd746a146ee1210090411547531212fcf12ddd887ae06e45420f3bcb397",
+    "runs/A_seed17/checkpoint-280/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/checkpoint-280/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/checkpoint-280/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/checkpoint-280/trainer_state.json": "2625191068b6e0def6fd35c9128c014530996df682982ea232b71ec2e70b76fa",
+    "runs/A_seed17/checkpoint-280/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/controller.json": "784dfb5fd72165a4b77d151ee4e9a000e3e1eb0758da67e98a14358970d6d830",
+    "runs/A_seed17/controller_before_evaluation_recovery.json": "930cc813cd2ab12505e0e3727add1c5f6b09fb222eff670ebe8dd6ba945dc41b",
+    "runs/A_seed17/evaluation/evaluation_config.json": "04e925bb3af5992acba32466a608ed65ecc08598e8e0f361aae0953994e0d9ff",
+    "runs/A_seed17/evaluation/evaluation_summary.json": "64d7ecb526c62110d3a3cbe555880ce4624540bf237017773e83ce41dd564af3",
+    "runs/A_seed17/evaluation/gsm8k.jsonl": "22091ebd7dc6055254a8087b6d78e6fa62cd63367526b60ea91c7d8a3e8d6349",
+    "runs/A_seed17/evaluation/math500.jsonl": "97795da6d7c6360d7e314b1d7755e9542464c438143f7de0f2c363b339e3586d",
+    "runs/A_seed17/evaluation/progress.json": "e6c8cca9ab7249dd67834c750cfe3c6915616ffd79272e51469da8d539f9f9b5",
+    "runs/A_seed17/evaluation_recovery.json": "d8a275ff9f074e0a9fe1689fc5e32cf66195bf60af5344b5aa4c76fa5d17e39f",
+    "runs/A_seed17/final_adapter/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/final_adapter/adapter_model.safetensors": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b",
+    "runs/A_seed17/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/metrics.jsonl": "8ff2d1907c0c66d6f98d40239431ac8e361cd4ccafafead5be4864f1d9280c4b",
+    "runs/A_seed17/progress.json": "6bf705bc1e29650462c42a8fb7a07b7c7becc01a99c8e3c6f5f78f29071399b8",
+    "runs/A_seed17/rollouts.jsonl": "fd82e1711388e4b4e30f44d0632ac9a25e9f7f73c26c1398b1b6ca225b247aaf",
+    "runs/A_seed17/run_config.json": "2203d5fe874be46933b18b2fefa82c426199cc80170ba1db554f838bac7ea1bb",
+    "runs/A_seed17/status.json": "445aa1b31d4f006f1a2a676bfd85e7fde2f5cf4008ed1486652cb0beccf910c6",
+    "runs/A_seed17/trainer_state.json": "f56c6700f384a5bbdce852e8c8869425820be2a74680a4b073b42f4d0863aefb",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/0_1792625767009720676.json": "854fb18a9a113c12c6cc96f69982cfd9049517f26a4ed2f8ceb148b94759051b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/100_1792628830215711327.json": "65a0bbca6f8b834d3ef0094b99a47c9a35fe92eddc5f9489e9199274fe20ece5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/101_1792628859577245981.json": "ce10c60a5ec7fa316cd3ae30c442751d6a9d7c0563c9b861e79ed182abef12a5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/102_1792628886749948805.json": "8f61f6eef9204482bbcb0c5ad51af5aa83c69d7bcfdb93088fb37fe382a749eb",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/103_1792628922248059199.json": "21603883e2da52c238b0fe9ffc5f7b916ea7abaaf74b0c15417f359010d8588c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/104_1792628949098130747.json": "3393dddec75ec1752d8de21b61d94f742b7ecbb6d6b5f88e25e87a44a24862a2",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/105_1792628976721102072.json": "0153c82215dce1681f70d8e03e5a5c7b1dc646e822b5fb34acf950e2802c5d16",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/106_1792629003301363403.json": "677a54fa8b74f1b26093c2967747d5c45c92f00046046ecf53888be57d88112c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/107_1792629037173035011.json": "df97047ca046927f318de156555385b0035076f77575cb66e6b3b3140737368d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/108_1792629064217847796.json": "8a62d7dda916739783f1ebb19d91645d6591616fbe5dd4dd54e1bc6dc7c5748d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/109_1792629089959642832.json": "5fd543c06a810133e1b7e661d27d453c6cfbd37751c958c1cfd9b504512e2b9a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/10_1792626103736537374.json": "e24589a04a6c31597be23354b37f27b4a13da4709cdc443fe4cf43d42ff1f8bc",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/110_1792629118386399470.json": "35d0c8e3b3592ccea1bd32ec90cdb2bfc0a6804ba1840a7336ef721fdcbbbbb5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/111_1792629146169022317.json": "9e59ad7df5e9cdb934f0ab49e39547ac3bb1837a6b3176547bdc206f30839651",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/112_1792629176089345692.json": "a1b9bb0b9261838232b77dcd248630f2edf7c96e7405e081653b4b535908c465",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/113_1792629207693523813.json": "a54412047ac0838c950d19d7db6eefe4245830ad4fa0b1227d972c61906e294c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/114_1792629235604492003.json": "e34e0e7ebde0f7abd527a81c9078baf9b161ed543890686b175857e81df4eb1b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/115_1792629271136967831.json": "d2b0906c9a4fdb19d37a252c4af71ce3b55fb2def49ccc3334f70631a6ff763d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/116_1792629297371943301.json": "6e5de5ee03d37eb351bc9f9eca372c3ac6c1bddf21a46abfed2625d1b90f20f0",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/117_1792629327267864872.json": "76d641166e4f0a40113b252b15c0b03240da9c2c943fd4c79e62c351a04d1322",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/118_1792629357537502213.json": "099002f32186230fee780694227569af22d8ca080b0f7c229fc1e8b00a48bd17",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/119_1792629388848345083.json": "4727c4f4043b85f1d706e04e8d34d1415c661917c86752282313fd91dc6c462a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/11_1792626141675459269.json": "712356e46dd2ac9106e8a046ae7bd32146c465e1e45ab1476039f347e9088a2c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/120_1792629420178679153.json": "0db9d09541cb6473670441c6d500bb32c7764e8f1192b8fbb75633ed8cfc8180",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/121_1792629455023056173.json": "8e9992031977663ae009e29512f7474dbe6da2b653f22304f34292cac31896a6",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/122_1792629479939643924.json": "1a456df411dd9a9c0b784fbcc885bb292e0244892e085946c1749bcc370fe817",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/123_1792629508556052189.json": "f9e062544e28194180de8c8922c5dd29928c13529cb837016232723d19450aa1",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/124_1792629536043396281.json": "e198b7fa05356c663dd1ca75690ce9d3842acbee5033bb43cb14105f633f2256",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/125_1792629569800706097.json": "855f643e31a04eb3ea2f51d0d6ed5acae3982ef40957c8b9f441f6cefb4f8b7f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/126_1792629599532660493.json": "76a5e815926e92a6bfff3914e5ea321a03f52c1b829042ea84ffa1775a6d02a1",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/127_1792629625213147898.json": "943de86adab7e55822b3e2580aa6274021196a96b57f7854e0fa54f47ec09ff5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/128_1792629652721857395.json": "4ad8a291cdf74afa9aaadb0bde7124a2a5e1f54a46dc5d0a0e2b28ee774b62cd",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/129_1792629686251513998.json": "62d891546bc40b3fdef4ea0b55bf845847f74b145f000a570ce12904a89b7bb6",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/12_1792626177133270985.json": "ac84f1d131120eb69e6a4113e57e94cfdab7e67d7fc54650504ad02d10898092",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/130_1792629714822379788.json": "db9a1f67b161dd5880814bb96e8b50d32d540d3ef3384075b3e790694038a064",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/131_1792629742035528922.json": "67071642b9f575561414a65d77f7a5fd35c10f9621905efe082a09afcca2f377",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/132_1792629772885859107.json": "bf48eb05651b73225a0c0d4d4c57254a75488fcd6cb34016b84d8cce8c7edeab",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/133_1792629807211612044.json": "9f417a2739f097cc34d3956c866b1f0ed55af44d5279975d0ff35e3bb08a096b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/134_1792629835712032328.json": "22e9d448332bd86013a991ed5c15fa00ce0c225660e5f808084a8abd2e7434e7",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/135_1792629865597348319.json": "02af87aa6be39202cf911e4c3b21c20bde5cdbac55940433cfbdde94a924e441",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/136_1792629893620909069.json": "ffc835f29fdc2cbd8c2c82da85460335033256a3b967257cbe17fb713b5a22e7",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/137_1792629926544596246.json": "0d39d10e3e35bf93def37d8305686114b196a3eefdfeb637538fe55c87b33e55",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/138_1792629953125922119.json": "77c781220a7ddd4826d25d9dc018486f75d8054ac0fda86e83a6d8fad85f08d7",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/139_1792629981659747935.json": "fe4d4c45c3476d618579a75229e68f11d4b09004603806b9dbb2c104ae7bca00",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/13_1792626212327663708.json": "776a34827b43524397aed19fe98e2fe16737d21fd6498a23968c42d7055ad439",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/140_1792630012554567034.json": "1f78c0e5f79fa2ce24ecbaec6ce1c060732976e880ee5f0702f4e0cbdaffdec8",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/141_1792630046788172662.json": "74f03161fe611d87a7b3bcce39507a977dc9b002d2cd75a2b977c4d458f553d9",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/142_1792630074744385546.json": "04a32721aab8cedcd50543d25aac362bf88503ed43a24a401ebd6a7d8f487ddc",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/143_1792630099310655781.json": "5231f32d347f06bc64df262bfcac85d2d1506db6befec8bb433f7d35571aef67",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/144_1792630129127378769.json": "8ca7b76cf4b6661e7853bebb78557c8562484e0918ee496cc94e2653d424028c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/145_1792630160415805206.json": "465b86505c4ba1940d5c1de7814505c2a6c35c7841e1bd0dd411d3494162871b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/146_1792630187683040428.json": "19696eb5a9d542ba2bd6e696f3f5eeeef9ae6d63ece590c8c8b03955ecca487e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/147_1792630216943178805.json": "44766cb7fc075a3fb48217bdfdcd3feab60fd8ed7f18ee192d898bb182591ad1",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/148_1792630240864911437.json": "5124dc3c36f2d5f999a5de3348bb425fc4bd4035f368b668639f26e18b80bd63",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/149_1792630271564840975.json": "d6016c8d4dfa430b5fe537d41be329c4b2689e1468269c4e430d1772ce03ad25",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/14_1792626237361091727.json": "0a28e5e7c9729b7d9336eb2dae1f57a56daa99b28bb21c5f3b3cbd74083b5ec8",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/150_1792630300009774504.json": "69e18c369d76e00c2610b2ad14eef9427ead5d5149d789d94dc20425826713cd",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/151_1792630324765189723.json": "70efb7077a4e19a4000444e75240e0e93626d7903edbef816609d17a11cf928e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/152_1792630360212225754.json": "239a7a64f8d3b52ae0858f448a66bb364c7ae1f98862cea9b342d2de9f6943a4",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/153_1792630390818960915.json": "d1656a83d1417b96a99e8b7d5f6dc6ea673a0a67974672ec4b81dd6c8377e798",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/154_1792630420489572523.json": "ca060668bc7f5a2d27039a2bedc50f97f1bbddd5b800d5ae59389f615c051402",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/155_1792630449849605657.json": "d44927c5db8520aafc59c427332b2428f2b0ea81a257ebaf950e87f080e52c1c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/156_1792630482851650641.json": "994475af87689c18a205e1b8b4f9cf80518b244ebfc475c44754066a73e5bd80",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/157_1792630510115328117.json": "b2396d07cc6f2e97b9cdfda69beeec40d17c78be32177952c664f84c4b54d515",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/158_1792630533599043908.json": "e5a96166c99f4dbb7248a926b6ce7a171ee80db14a5726a38837f80e2bc6354e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/159_1792630562278032460.json": "03303d75ce26e1a8e39afb044be5f7b37a7ef56ee6e25bff0a3bcd8f46dcb256",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/15_1792626278110240327.json": "14f22cdf1c975d1876486145a668242eee3e2a50958f9043f234dba10137f443",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/160_1792630596857774406.json": "9a6ec10f768bdf21539fa93d5eac6c82f2d4e98559e21a748a7358965caa3b5e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/161_1792630620405888478.json": "8cb5d02664dba56b0defde069de6b98de2d5a6da764ad22c6624d5512256f7e0",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/162_1792630650422858426.json": "83a7c0cc608e631ada9ab72240d8470d66aeeb62b8be5793aef34b5c083843cf",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/163_1792630673457568614.json": "1a224c2832ef3d2b9763d1ee3d30da0f81232a15d9a91201ee08ebca179f03e7",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/164_1792630701880069232.json": "a809ab3ccc977760322a124322175d0605b291a9066a549b9347cdbafb5b03b3",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/165_1792630729961862998.json": "92a6ddcb8a1e0a995fd7a6b595b1eff26b1d098af15851eed468da5880498bbf",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/166_1792630757157548578.json": "e7648378f27a210680a6c7664753a62162adf4256cc5358ebca687023de27818",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/167_1792630790017528280.json": "ab8c6dbdb1d548b826ac4f078c9c5ef3f3673a84250850203f0838aaa60acc14",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/168_1792630823093850396.json": "962aef585c91ab7755440d0f2e39eff23c0d67ca0cc6308e7b418059bca0370b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/169_1792630852025018026.json": "be6e68c2bb9b9ddc8bd6064bd95f56d1dfb468629b6174933d9c6d7055462f1b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/16_1792626309956278811.json": "17af6cf1ca3ccac9bc455d9909e6efaeaed5db21d803df11d85195e009604caf",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/170_1792630883855069531.json": "904ef3cedeafd5f3d49a377c0d59b81c2798d4ff912e64fe3491235873d14d5b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/171_1792630919376463194.json": "11d7de39098f2e10d07909a48860266a644802b1268083919d8ffcaa9da2f528",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/172_1792630948941534646.json": "b03fc1e465c7364eb869dd6f6fd9ad00741947ced5326ed5e0138cd5c098544d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/173_1792630979445258726.json": "21ee911c2cea422266b42b38bee09d43d30aa28dd1fad1ea7557230571038642",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/174_1792631009820038859.json": "1e6e16c652fe73c464c98832b38b872a445b45927c444d4cbca0d9d460b0d865",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/175_1792631036831634129.json": "33de9231ff7af0fa7874f4227f9b59107a52b41c1809982a6e6452562ba8227c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/176_1792631073812440720.json": "a3ff9476f61a637ce7dea572ef44e6dbef79a9cb72f2a5a9d731adbae0c77c34",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/177_1792631100611634333.json": "6d5162f1da1af7e82425f5b4751e9c1ecd19186e4b5eb402e1f978fc794dcf19",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/178_1792631129667121516.json": "c2136104774e34a46cc95e7364f656f0d92fb756c4f9b7f305154017edca85ed",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/179_1792631160730485827.json": "42f20aaff96cbe03140edc705604e1e97e3289aa66d15c71c86bbe55ebcbb9b5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/17_1792626342176691382.json": "19820c10eafb4ce314e53efe5a7b2696dd043217ed0f4a6d8831d8ffb1676b8e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/180_1792631193335569193.json": "43d9df808d0ed601483a067d7dad982f68bddb2e4a2c3ead0d194d30e555a608",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/181_1792631223780692583.json": "c137df42a1ded39e7e4a10b4e16d8b46e11a757363cd831c8437a56dbb01484b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/182_1792631245669762208.json": "95c33715372003c66d929cf868ccd790bcc20f41a48e13a94d7ac6f1c12ef002",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/183_1792631280912564499.json": "d3c782636961aafa814eb31869f6eee841a5142f7b861de91e2c51e0a4a951bf",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/184_1792631310509897013.json": "137658ca6848f153bc5e76725b45fae6635e957cf541f538c87c5776991a6f67",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/185_1792631339583772982.json": "b126d3dab2a636667df1b535a4ca17250eaa4778273a0d42dea0c907e14931ad",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/186_1792631370344741759.json": "7d09a15c707729d8169305ac35f9b311b7e76f8f8659b15bacc63864bfa04f51",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/187_1792631398761157632.json": "e889776626c9d56c3820ced8ea55bd184272264d338b02a6ebcea1501f2c45b7",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/188_1792631427148776079.json": "f3a047508a27c00fee82a390a70fab155891fa1ad753fe52214f6298811e08c5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/189_1792631454691874216.json": "da59c8b4c81fe1f10d70d05a12b9eea8403a66f4c10554c4e479520776e93d04",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/18_1792626374090892849.json": "844d1807e1b50c158eb2da47c6365f1695babffc727eb23f65371dc95502b9f9",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/190_1792631480886292476.json": "33a5720036f564e67bb29e94df61ce08910206e3fec40003abf38d8bdf72fa5a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/191_1792631507980015194.json": "97e1cf32e543cb4a40881acc584d9453285278dc06a19e0c585de5083a2e42fc",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/192_1792631536267447415.json": "66e728a5b6d5fc945e3b234d222b7b8f670e27e51b6209d936e06e5078cfd949",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/193_1792631565544797426.json": "d0f92d06e7c1de80e0bde90682a9a76f75c8bcbd43f5906a558730c8794ccbd7",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/194_1792631591932767478.json": "f146b2b21dda06086259cd578d9593088d0ed3d5a4cc0467f67e9dbc995f3d9b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/195_1792631617809965739.json": "aebf1f766763074a599aff01e5f038a18a18141044f5108e44cc4c1910e487b6",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/196_1792631640581445024.json": "ce946a3379d1c4f12e3499149e1b3f35a00911d1008717cc80ddc1c0ae2ca308",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/197_1792631663375150916.json": "6c1914cf467a7d4aaa4ce017db563ec2aacdbcb078d93ae79eaee3f16b51a301",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/198_1792631690850781024.json": "f46054d2de6bdd4cfe7a8bff92d1c4f034c85637fefe32f0da624b8c6071afd1",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/199_1792631717708560652.json": "63d3a9f1b88fca1be00d82a0ba94bf1b8c01e9ed4d5fa52a0465031d90960058",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/19_1792626406482976509.json": "b2778972cc6cc497419bbe73103248d07444b21c52a3bb06671d23dc8f355bed",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/1_1792625794683549944.json": "2d2709f637685badbaf1f73b7fc1c71550b4eb79922099fecf8d8d0740b28e23",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/200_1792631747761810828.json": "bf6a61edc1db618b69b0655463c6e18c42961dda5bc4a1294652b65450bc0008",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/201_1792631775078289360.json": "69fc0bc515e26d5b0227cbd1182484ae52d93ecd6f824f4f1a2cae7c44418be2",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/202_1792631799318368112.json": "c63355dd42ea72ce8902bcd39d74dd1f4bf0ea80639ed5983702955e4c5dfc49",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/203_1792631827312629883.json": "013511c46b4b174202c8c2fee4470202bf40f698fb138abd48e1c2e58b407012",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/204_1792631855568309957.json": "74866017fc1d0a2cf0866c0d2c359d81ebad5b125a6398ae35d12b668eade8b7",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/205_1792631883856234617.json": "bda34b6bee929f6274b96b75a1e7ce50b9d24cc0acef37e353906a1a43eb1262",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/206_1792631912703248880.json": "4b5572520f1d24828ec7db78a4ebceae4aee44f99050e4614150eb6fb90aa3b5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/207_1792631943757100987.json": "79ffd385387f4ee4934513fcb3ca9587a8a7997ad7f2d69b81348798f0ae7580",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/208_1792631973705177177.json": "e4fedd61e9aa51beb2650dcd5300ba3990f7b96f68a3ab9773313d8d813ee4d6",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/209_1792632010036829763.json": "7d4ad2879772a53e5d9daf227013ff4b53fd8ed82a8dbfc3b9860a2b166c52aa",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/20_1792626448622263908.json": "2e39ad78493fab286d879beff1364adb3804f2da6e70948e8c04eb2664f7df5d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/210_1792632038760732250.json": "5dc2901e6870ed309490a4c48bab6efad1b19a74b91d83eb1210bfef0faa0863",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/211_1792632068910413579.json": "705c45ed7ef5eb04aff9090fc8c6dffd3afbdd6302af05251524c6b948a3dd97",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/212_1792632099033033233.json": "a6b89e98130b5d3986a9e0b7cce67cebf40d55ea0baf14edfcc9cfd26b0d0ae1",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/213_1792632127697490174.json": "ae5f8071659936311772281a1ba53f66e12272a9470e16e655e60d604823c0cb",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/214_1792632158209897793.json": "6c6771d1d365db47382fcce84f97ec9badecd9699a63484de79208f98eefe00f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/215_1792632194410013484.json": "1294ebdbc7260b018cdf0949e01d42a51aa60350296de0418776f6e6e92e32c1",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/216_1792632225374993394.json": "78641cc052247d41f5811c1e319845b7926192565002573728fdd11d34ea4450",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/217_1792632252984482999.json": "e0a068fd9ec01aa3110ec4d914f45a6f5904173e9bcf82ede13ae15bbd90a00d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/218_1792632290802047982.json": "9bac49189e0b68eb16b641abed5b5e009a45989249a58efdfd3ee19079b04efe",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/219_1792632322174533371.json": "74b94d00aa00bc37582e58d3dad06d8683d25bcbfa75f79d67be6f2c5958b46f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/21_1792626474207301402.json": "4c2903add5e587a37b7998797ebd62dae712467cf7098ba140576bc85dcba0d4",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/220_1792632350480098240.json": "99c68475adb9666fa19530046e233fb72d49605def46fdf09ceb2a1911c7e002",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/221_1792632384259147929.json": "62d33feaa1fd0fe1d85ad82b7de195ccabb5543260151d95fe8ac9aefd93d205",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/222_1792632416378432920.json": "234c610fd3f286e101739b51a125c25d57160a660a38b74f7c845c51a09571ee",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/223_1792632443813302977.json": "aec729848d7684ff4fd3aab8f6bbcaed444ca0ec224198def40eece368c0d68d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/224_1792632469492378588.json": "8b77ef08ae0d81ba4f9190485c14ef242f465bbf0cc8d678623beb9ed1a65620",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/225_1792632504991069631.json": "26ab292dcec975b0379efeaae9d9aa9c772bff4bf8dadd3fd4ce13c15773ca71",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/226_1792632534061680886.json": "3ef5e5b558111e3545cbcbdd5b49300536a5bda5e131de67bf1b13897fe9997a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/227_1792632561287145193.json": "e5218b01962fd8dd0688a69c02b0b8053f39f0cff53f3917ed699448c226f888",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/228_1792632588138422313.json": "997963301da6bafdf7a112f020c4b4c81c29f92b0b855a455cd2cdd921dc2085",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/229_1792632616840686363.json": "9c04f97a84543a11b6f2dde0b5f16fe109179a5f9539b22dd615b1e803131d27",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/22_1792626503828789029.json": "b8f318f2348fb5d87377b35dedb7ba83342533be532c52c12c9f982cb62844d3",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/230_1792632644265274175.json": "41ae74d40ed7cb02da0f3f7c8b0cebf0586df896a16d7c72e6be3c1250bbc3b5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/231_1792632672016556527.json": "a1557690096e9112ffe5e5225835a81f5c2ea7bc4a97bfd7fa1f1a9b0f99a102",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/232_1792632700862139040.json": "ef2fe99de296cd78067ca5002bb7da31fb9b1791a55efb5ec18f12dcb6043f8f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/233_1792632729906147370.json": "b7d4a5a9c6d8cf6e0d934687e3d70b38db282a18a80cb99a3d9f9aeacaf4870c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/234_1792632759861300267.json": "ca6857353c24292daf33882e40f858d81b17e41cbca6739ae742393779417be0",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/235_1792632793283793693.json": "55b01978fa438bb7b99a14b9c747c4374336b43ae23b43ad2f7c5aacc752f163",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/236_1792632820422646514.json": "0cce95851ac37972d2f04d4cd4c8ce29fc48601d5cdc2523098b70cd5d283383",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/237_1792632849135092695.json": "bb3e5188f8160b54b26c935e39f8663a5e05846ef548bfc084d0f73a6080e488",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/238_1792632884121784290.json": "445aa19708b177a8dbcfb5107004f1365d7efa41adf7d89f7a751bf0b19ea31e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/239_1792632912068507921.json": "eabae0a63ef20ea275c950db6400c6c4c7f75c85d3a564a11d8740dedbe8cbe6",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/23_1792626536815976375.json": "3d1090a7ed3d2744b602ef27439e18a5269cfe1a4cba9ad7148fb087cd91c56b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/240_1792632948037696575.json": "da9270a8559a9cd18691a2a2edf98df43fdeaaec61004d5a4301635a241d96b4",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/241_1792632980383906517.json": "a7714ee1c544b1794a70f6bb11a85a5d969440f956627521b1f6769a58355160",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/242_1792633011381602940.json": "7dd1205c474a4eb624783fba1f2d2d2776b788d4da6a6cdb48e31b64528b1425",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/243_1792633041250285006.json": "0ef61550517eb1d4a394d0e5d3b5e2bc57792524f2b0ba34476da9797b48f68a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/244_1792633069349256822.json": "ca2786ad8179c9f376ad0aaebd60ce20407a5cf830ea0e01df047503bb6b79a2",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/245_1792633099841229647.json": "e826f5c56f56a55144628f39de7104c7df1dd14daf57f23492965f4fd66276cb",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/246_1792633135687098774.json": "adcfc6bb93cdbeb3f1becdef175a1514cc643d91e139541dea527184dfb29530",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/247_1792633162737282433.json": "d4547e15a191da8904ba9be63ea5ca68e3a6579dc1881e2452dc7c58755c8818",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/248_1792633192012621886.json": "c3f8a03e3dcead6ce486fbebe9cd91ac10c05521a35e19a8c6513d0ed63d8f5a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/249_1792633217587062299.json": "f7bbbc16b0b15a0bd598b9c62bb0a626bd34c31ef620fee34c025f8aaa7029d4",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/24_1792626569666337881.json": "ddf32e0cf9a9a81e0f0d1f8abdeaabda377ea0774853fb4a62daf34ec799c334",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/250_1792633250120971010.json": "3eed3a3456de53e28591cde4ba0f9d75e55fd5a2400f7dc893b07fad3d6625bb",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/251_1792633279082760015.json": "6bc2315aa42f6d8b574072b7f579dad570fe76963a4d66d268a30ee14de430b9",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/252_1792633313512152012.json": "07707aefa3479ee4b7d8b2985cf8eaf96e36580a3e636d95cda1103330fa8406",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/253_1792633339602230566.json": "ddf390e0aab43228a2888a26c97ec1b62edee86075313e486a3aee3c1ea1bf82",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/254_1792633369100755612.json": "39f5ed7a9f63717b3444be7af00f4de18a02445eaf39d4acecf36001b6b26c5e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/255_1792633399320575113.json": "25ea00fb2eb607461f822d3b403b74778e28a5d69f6acb932a52b3fdb39dcc20",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/256_1792633432150857144.json": "2cfaa475530d511a7054d1f5dac9e786e9c441395b759140b9ae1a886e24be21",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/257_1792633459521958253.json": "6d9f1d0193fa6f1aef837bb440cc40678a9f171ef770e9844d70f0bf721971f5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/258_1792633487911006029.json": "337de5c49aaf77be83a2ab9080d100357e923b748e823f6f72fe6bd30443be26",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/259_1792633519633194465.json": "f7e88a67b6e66ee15c0abf8f6f54cf90fc2da9210272d6a28973bfa25cf9ccf3",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/25_1792626600446762072.json": "bc8b8b5681694dca92b7bcc7f1f303ad50d50663a05521eae7c143d37634558b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/260_1792633549306162860.json": "0a2ba29fb4b1921bea4255f8a29273f9c55c847b687f6536895c5af30c675724",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/261_1792633575551643515.json": "f244860b60d955e40be2c41d8cf2bceba19cd16f939cb2e2a869249cc8881409",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/262_1792633603121441478.json": "a5d78c52718e98a37d2c565be566e717c0d6752c4d51663f5870c323c0e1e812",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/263_1792633639087544639.json": "0ce2986cbd9eb9fcdf2983818de57e87475a655670e02dde09c1a84a8e7a2597",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/264_1792633667509841010.json": "c25e181748e1eb04ae874a377378852debc9b617f3cf33fed3fc0cd1afd6c561",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/265_1792633696457337208.json": "d204dd0a2b512c9d278144ecdacb6781d7dbf9440b6c2f56820c02266dd842de",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/266_1792633725567963253.json": "0c679eeaffe9ca899d4354f3d58cb40c021578b62f635f0aad9e720d953fe7da",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/267_1792633756501845815.json": "59ff92d0ebf37c0ac4e257333952a066590e8a01a3e95b0053bd0112653a8f80",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/268_1792633782703331517.json": "07c482969ac2c0fb7e4eca16f9a22e1f8e2b5afb4b5b89c06033d81678fb06b4",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/269_1792633807306985523.json": "6f381d53214d0863f061379ea863bb6a13bb4b9d7ba33227aaef76197c9aedd3",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/26_1792626632183355994.json": "034e71e11a50b9a24f99acdbe6413b663509d9188187f40b70c967418674156d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/270_1792633840193757163.json": "5ee89aabf5c95a7c0512ec6071e50816f00e0e011c628fd20d825f883af9c66f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/271_1792633868225636483.json": "241bb36c924e1c47144df986fbbc3ced0d7e2e1864135cc127a169514c1abcdc",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/272_1792633895147026788.json": "bc98201b0ca0be9e112a7667b432da0b1b4aab9a633b1c0179bac9064f9f017c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/273_1792633922255148146.json": "c4aecdbba21fe15d9e2895e3678bfa287a51c103f08d8bba9924734ad808a841",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/274_1792633955669635435.json": "07fe383c76407437a35e6855e3734f77928138f2ba42142e30013c6c5f5c1c56",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/275_1792633983271846101.json": "4a5ad196c8c1e9c90392a3c1a80e27f1e4e301d8432aba0bfea3e5c1662134f2",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/276_1792634010803393368.json": "849522c81bf470187de36857a682912fe5367f4c20a144b993a04d3ad864639a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/277_1792634040631606160.json": "08f7238c5518dfc9603029c72e6bfd6fd7d493221c7b1ff8e4b9752075b5c786",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/278_1792634071883712206.json": "3654350f53b60250bd7c8b00d54f02718b710d6397fb8b026752998f213e7eaa",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/279_1792634100714279222.json": "76156b04c9782960357305fffdb73ab9b5d42625c7128a4181c1f456a1e3addc",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/27_1792626671735246903.json": "ddd283a7fd084b56880fd5d2998492bcf125bbf174fd76c613a9be1be60b016e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/280_1792634132291036720.json": "94e7d4a2d967bb6f393150390e45acbb081f1b61786b2203088904098a755612",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/281_1792634161245083061.json": "35b48b7f828da621f35470113a41087c9f92de9b2315f5d59fd19690d603cdea",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/282_1792634194200756307.json": "3b3d99a7ab5922964bfa964aafa32a1a314ac3bae25d19d095c63d69b88b7413",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/28_1792626703085030273.json": "c15ac8e05694586d79657b1f2613ce77061fa044c728729cdd687db42b47c6e8",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/29_1792626732187220825.json": "7af1ac17d9aa1f4c4f613a1df2966cd0f5ef4e823aa9af53065d1b8b7c0adf01",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/2_1792625826500302355.json": "891752cbf0e3a4c1c95cccbbef333503a34eb8fef5508ac64da975fb48278446",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/30_1792626760373427148.json": "19a7122d866be07f0eaa43691c2c1741583de1eef8916efddd6ce6c9c9f24d51",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/31_1792626795602911138.json": "82abb75c16a6301095caf83cac6038acafc0ec6a2f2095cdf8e8435046bff1b9",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/32_1792626825973728873.json": "966b53574d01005db6ee311c06ffe297283b1db35b6cad006df85283f669476b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/33_1792626859878155473.json": "db0092126348657179eb9c3adeaf1447cf5531ad68e56c380138626d870e9619",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/34_1792626893534683430.json": "6a927ff5aa38fdfeb4c5f37d2f751a83783a18d6ca6c026fe0da61a8a266c54d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/35_1792626926946723237.json": "969d6b22b87f102d35542cabc9d3fe1b0315321f79a4c4e7ee8f2d8988cf5fbe",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/36_1792626953848352457.json": "3b8c19b18b18689081cc748823530457abb7bd80bb21c6c71865896f755a9830",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/37_1792626987293575813.json": "43c6d29442a6d20620827a9ddacaa1be2e48622bbed5c0efdcd917a1c1ac8c03",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/38_1792627016240604611.json": "b82d8fe55942bc157d0ec403c4150fd9836f9d5c4ccb4ee64bca9ecf14c61562",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/39_1792627044929277814.json": "d81083febdeda97fb071a9ecb144afa91821968f38e6a3fe2e94d4fcce72d94e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/3_1792625865005059292.json": "d5cf6075991fe73d5e65d6c960a0c40464e64678a5bed8b7d8cf663723e28b71",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/40_1792627074477642235.json": "92d38aa64bcb065af0a8c2a433ff1d1b695f7158dc9f1287e1b78823ab85b857",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/41_1792627101237059679.json": "4b33b9d015486eb6e75815ea07593dfa55d636e87ec38fdb3dc1d7b829a1c2f5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/42_1792627130247943317.json": "2a9dc2a99d5dda940df7fc49ce0200da0fda7c623bc9e8e09b625b4fff465914",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/43_1792627161913512971.json": "688baece183ea0bbc34a0f02f9f108ccb2b717582938136a7e7cb2aded41a55f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/44_1792627188809947626.json": "aebe7cdd9a29ff27ac0dae19be561ceba0212ca5357860da65d3ba8a9fc24f36",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/45_1792627216872192620.json": "6d96a539eb2edd99114b2f5662eab281675585edc64996c20a809d1c64af1f46",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/46_1792627244329885637.json": "618f135f999a51cfd226b9779281df8614f67301ac63aee1cab0c73882c6c7de",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/47_1792627279609402777.json": "9e7337d9d7174a78692f1cf711ce0ec18b151ef4f18de2dad932ff33a04d7082",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/48_1792627307184111005.json": "54effbbe51f41df23e61030a1b00a22f1b934876717e792e29af91052a681786",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/49_1792627326293383477.json": "586bf408e6492bff5fd38ff82f0886c060a23705802b5c1b54a2970055472dec",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/4_1792625895870509865.json": "a0f78fea31cbc08b27e9b8f2b4bc123a04cc0605a9731df23b5a9595bbc462c2",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/50_1792627358533248794.json": "dd17db08d0ce2e8a7a8f27a16d35ee581c198570d8ca60541429728da10c5aac",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/51_1792627394175967703.json": "c55f5aba29ab7b82e7ee4fc543bf280d0b83c3999a8dbbcaafedef807a05cb90",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/52_1792627423460386110.json": "054043244dc1b068bd92e0248fe16da349e059282a01f7d9688b05d2b6c4e74e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/53_1792627448419954101.json": "4d4f841246021aa18f16895c1791faf4da30aef8cea9e7963557a8754a9bfacf",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/54_1792627472964526430.json": "a6e72726ca9ca0ac40f52cb05004747cb4155401f5c0114bfc0d67724798c086",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/55_1792627503018410549.json": "5877b8e67b32271c56c3ff4b68ef259228a4025ff7f05d267bb857cb385923a2",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/56_1792627536400605632.json": "f51cd416435521692bf579e19cbd754219580cb322ca3ba10d8bf5ba13899bb1",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/57_1792627562750199630.json": "c79bd1ecd1135052bc54b8285dec3b1b8d103ae2911085a71fcd36561464a2f0",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/58_1792627590997797563.json": "4a3ddb4483e7f2283adbcc65a734b9a8ec20b7019ea501446638710f855b9dcd",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/59_1792627620420438049.json": "73718dbc38481f6f8516e5e3093342038c798d6e1259f6f7fbc3018c8e0fb28a",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/5_1792625935675832767.json": "927f6d930fb900410cbe75660554993676a586bcaadc8c4b1eb580a4e799cdf5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/60_1792627649397539570.json": "3f3c900bc1d1bac48674c4ae62e7f394ddf5218f511f0b56780077b8e3156498",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/61_1792627677083709783.json": "bf531f539b20e73e0dc8c1be3150c7e680f1aa0888e208ce41a2232319da92ca",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/62_1792627706034591775.json": "1faa51dcaf78de159fdfbf7e7a044976f496f334a26621482fc687ca0b230a3f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/63_1792627738854232302.json": "77cac8f25ff66226fd226281a0d68a697e3de9f0938b6830b32f6e72d9560887",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/64_1792627770573080986.json": "05aa1c71d8ad1a14ffbc5b4b26e933921ed8fe363b3e6d5e2966b24b95d56a02",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/65_1792627798727521314.json": "59a4f67e109a3b028a14e607160d14ecf9c8a8f165008d69ec15efa5374a795e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/66_1792627828416734133.json": "390d39dcc4afad91e92decd265caf4ab47e1ff5e3a5500a78e2315ddbf51a626",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/67_1792627862250205793.json": "3aa462da83c5cb2c32b627c44d0b1d886243eaca7444176a2d82cbdea0ae7e3c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/68_1792627894689850817.json": "53fde684034d85f29b4ac717a4513f3f875072692c2f788fde9311debc8bf1eb",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/69_1792627922139201958.json": "ee7b2b143d4188669aca9cb43037248b8cdcdecf76b66981139d225e82e361be",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/6_1792625968212293327.json": "122298bd581d92530e5f86e30483dc43f52fe1eb732e533b0ae390285fc88554",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/70_1792627941077618317.json": "8f0ed9e0907ab5bddd08be1bc863388d5d58814e5cc81720abb56ef64e676d9d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/71_1792627973690497316.json": "0b61aeea8e40e5991129fa818f6ca6ebed9880cce8432430184eaebec6c63017",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/72_1792627996939656844.json": "5eaa58782e440605a277f6f87ab13a6b5c2934caa77a72c4ea9f1a650c2333d6",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/73_1792628023260268288.json": "c06fdb3a465785e65571c3baad05348390e749aa5cdd2238391cffff805e2a18",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/74_1792628050315136097.json": "227c6febe3c1d60ec9c2abb2a78a171677d492760eea9e8c255ecf9396a9bdf3",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/75_1792628079485972398.json": "1b281e0ae419e978d6fdb06c8a55188ddd9eb9edf72ce6df62ece059aa66a36e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/76_1792628111636827822.json": "75eaea1f245e6c8cfa718d4afb3b28d4767ccc951ec4e92d1681ac2df392ef69",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/77_1792628141146152445.json": "6ed02e348ff8aaf64844af9a9c09f5b6f5b96d89944179753bd6371819ba29d6",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/78_1792628169527920645.json": "5a94c352b127567b56bb8918ef60077b85e0478798ef093ad2979ab4628a53f4",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/79_1792628202378806125.json": "bfcc707f4be1a7135fe55e361fae2c0214d8a300d6a0fd2ac271fc41604de46c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/7_1792625999338716652.json": "a95ffa153af72d490a543cddbd315504571bc76c9511170f1e981e8def047236",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/80_1792628236562111453.json": "23b9bc9cf94bab7304b96f38610814156925e9e65ed5e17de3fdc114d91d9947",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/81_1792628263655207293.json": "91bb24be722a04c76f1c958567e22606a3f38af50d3dc581814df28151f48fb5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/82_1792628292235251699.json": "ff55f8e45b43f024b8eb98160854f80abfe655afa29483be2297cb7d47a03708",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/83_1792628323879384756.json": "51091a632f28b85963e84b98ecf35873e0dca7482008c7fe74ec00a334a29d9b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/84_1792628355187968293.json": "8cc81f4cde70b0789cd5331559f8d34a37493a308c1df7667a67e7b7bb80f717",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/85_1792628385392461884.json": "086c75478e4ecc48c16a3461e4db1b0cfcb8d6a894e8a6839492f46f2d4921e5",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/86_1792628414301022143.json": "c652ea0bbe3a9e6bb1715d49002e5717ee27559d70d78898826e720d783dc960",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/87_1792628447235284208.json": "63caf6039bbd44097d302de0ac4964f4c0c3a29afb8603a0d68b5dc255972375",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/88_1792628472944438493.json": "720e33bb6edc42bff636524f52f8635a79632cecd307fbf72216918e1da7b753",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/89_1792628505929795784.json": "f1cc12e181c34dcc42d8188a7adfbb62d42c30af9a0efa0281a568036cf6bc1f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/8_1792626040331251274.json": "da4a1e5fccca4943a1736c89c0ea018897b9b12d016b5540dd4d85ad4d60c351",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/90_1792628539367914868.json": "26b883ef18ec437f56b0bd163f407350d7397a2bc8ba01637578416d1ad0953c",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/91_1792628567633916956.json": "a4b385c342a25327f72155a09349347428ef1db893e4ab973814ee7372f61e02",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/92_1792628597155817847.json": "da5e3db9389e9a437d87ba7933e205c52abb73ba1d2470de323bd8765fb8a2cb",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/93_1792628628937846205.json": "dddaa335ad25eb1c7a15b055b7b103d118bd55317338b0cce83cd6e33ff6f26d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/94_1792628659609002784.json": "de893c479edf45ecfa11c2a4b326b92db521367a3882cdd30c9f83dc1035007f",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/95_1792628682516084611.json": "77b0632839359eb12db9504f2df912b11b54bf9c95ae04a36b59fd54e204ae5b",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/96_1792628710952780221.json": "a90869b0fa3db6e52c84d65cd264fd0e5f6826cca9d55513dba62ab7a160a331",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/97_1792628742956399481.json": "365b91216f74b0b6a421459dc2bde8f1ef1f0fc636961bd22f3bef03e54e302d",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/98_1792628768372200833.json": "a6996ca9f28d8b7d4eb3823f6ca86d8914ec6defb779232fd5f14c7842ca32c4",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/99_1792628797302085881.json": "80a61695e32fecbcddc6edbe78ad70f71f51e302613626e4dffe7e5b41773d4e",
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/9_1792626071796892982.json": "92d476da37564edca1e977170739a6f80fbab036972520f0265bfc175ea43c67",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/adapter_config.json": "69d7c10a263245588efcefc9731079f1a0c9036b775bcef37b29da281a2823c2",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/adapter_model.safetensors": "9b2335d00a1a4ce1040864bcaca68cf9610fdd648f64081ffa3dfe6cc145a928",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/completion_accounting.json": "f575017cc061b20ac9b6697e440a6fb5bcabae6e82873d6683fd4dfa1be0f43d",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/trainer_state.json": "680245dcadb9d0e268ad4457999acebf22b25c0f9dabcdb81eb2b1b43a9c35ef",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/adapter_config.json": "69d7c10a263245588efcefc9731079f1a0c9036b775bcef37b29da281a2823c2",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/adapter_model.safetensors": "b096ea6d31ebb8c076888d1ccdebf96b77ddeca92f775c495af899ff5eed3e23",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/completion_accounting.json": "ca69fc7741927a5c8d0e6424234b4ed1785292934fb60f8733ffa14b7dfaa967",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/trainer_state.json": "a02c0f8c18a99159725db3f647d32e86fa3dfb3f9b862545edf7160ae0178485",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/adapter_config.json": "69d7c10a263245588efcefc9731079f1a0c9036b775bcef37b29da281a2823c2",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/adapter_model.safetensors": "5284202599581fac8308d7e900a97e49908f5d41a800dd6e7e632602559ad567",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/completion_accounting.json": "b2c98008662301374140a871d5cb5e85389ebf7ba2bea430393c896303158e6b",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/trainer_state.json": "a2b80915f84d197c00121b625805214827655217dd6d50451d3cb43b7e46bccf",
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_Qwen7B_seed17_6M/controller.json": "b10367df5658ed9ecc66d1e613358a386f596f9781dfa2f65327778e60e0146e",
+    "runs/B_Qwen7B_seed17_6M/execution_plan.json": "cc7ddc935509b8c6af2f401af0d28a7dc83af02ed27619ff958c8225405b386a",
+    "runs/B_Qwen7B_seed17_6M/execution_source_hashes.json": "8141de60427682a7bd33c7322b9593257578a2c8b5b7101c305e6f250ef21ea1",
+    "runs/B_Qwen7B_seed17_6M/final_adapter/adapter_config.json": "69d7c10a263245588efcefc9731079f1a0c9036b775bcef37b29da281a2823c2",
+    "runs/B_Qwen7B_seed17_6M/final_adapter/adapter_model.safetensors": "5284202599581fac8308d7e900a97e49908f5d41a800dd6e7e632602559ad567",
+    "runs/B_Qwen7B_seed17_6M/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_Qwen7B_seed17_6M/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_Qwen7B_seed17_6M/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_Qwen7B_seed17_6M/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_Qwen7B_seed17_6M/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_Qwen7B_seed17_6M/group_diagnostics.jsonl": "2a9084d40da31f50d9e823db6c9a490cbebd49c24c89e6ce3fa6bbb8e7eeace1",
+    "runs/B_Qwen7B_seed17_6M/initial_sampling_match.json": "6c606fde46e6e31e58c693a0fdbd65659874d0f7592f2e61735ab08f678c279b",
+    "runs/B_Qwen7B_seed17_6M/initialization_audit.json": "c075be1ba8c5c87f206ffefa1716b16b4a10cf63a7c5be3c6519b6aff60ec088",
+    "runs/B_Qwen7B_seed17_6M/metrics.jsonl": "48998c19a6c8cde8eafa6daeaa34b2142cc1fc2fbf1d2befde08a89f40073598",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/adapter_config.json": "69d7c10a263245588efcefc9731079f1a0c9036b775bcef37b29da281a2823c2",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/adapter_model.safetensors": "5284202599581fac8308d7e900a97e49908f5d41a800dd6e7e632602559ad567",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/completion_accounting.json": "b2c98008662301374140a871d5cb5e85389ebf7ba2bea430393c896303158e6b",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/trainer_state.json": "a2b80915f84d197c00121b625805214827655217dd6d50451d3cb43b7e46bccf",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/evaluation_config.json": "dd3500598165b683683058e064d27d539afde2314aa7a48ebd4002891e774b4e",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json": "74b1de9a7c4a0a9dbfed1e7623629f084a6543a951ade428114c44dc8c1f513b",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/gsm8k.jsonl": "67f945e1b06a9675e3e750a6693f2c008adfba7fd2c3f98cd1c4ae53e1c89c3f",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/math500.jsonl": "a13962e2986af46cebcca1f5a0167d528d85a627f7f9ed8afbfd9bf4bfc66bad",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/progress.json": "82f8113a65029137ef2da8c6a006125bfe8d081e640dd622de05c38aca208a1f",
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/milestone.json": "fca9d41641870e56ec334d0e28b9e6b5d628c57b3f23e3ca6aeb431c19091ab6",
+    "runs/B_Qwen7B_seed17_6M/milestones.json": "58f22f5787df9ca9e0f8d682f64467e6e7ea0962e8b9b89a4563b28ff24ba1e8",
+    "runs/B_Qwen7B_seed17_6M/originals_after.json": "b7ebc913a1300a32ac1e64a4d570eb2d3621a6487b36c56076a706158200bfba",
+    "runs/B_Qwen7B_seed17_6M/originals_before.json": "b7ebc913a1300a32ac1e64a4d570eb2d3621a6487b36c56076a706158200bfba",
+    "runs/B_Qwen7B_seed17_6M/pilot_gate.json": "27ac1ffc01d63e98381980b4a7d0d8a9bf5ae1d69e62599a6961146994cbce33",
+    "runs/B_Qwen7B_seed17_6M/prm_loading.json": "aaec4e15b4524670fc33aa0a36d285d6859fed78af9b424bec17168713ac32ff",
+    "runs/B_Qwen7B_seed17_6M/progress.json": "896d0c9afb658843d28fea988e24e4a3f3fb2668b29db68daab58228d61bb724",
+    "runs/B_Qwen7B_seed17_6M/rollouts.jsonl": "a4f44bc233940c93532ab9c8df4529b95c8bea42b391a9b17409b074725d39bf",
+    "runs/B_Qwen7B_seed17_6M/run_config.json": "af68a331138c0f7c6db93a6c8418f67a7f1f65a2a5b0f0b1bc13cb9148797377",
+    "runs/B_Qwen7B_seed17_6M/stages.jsonl": "30a9e4243924d1d12da78157ed2e42d95f94a4bd3515c8f897c77fb6b8ca112e",
+    "runs/B_Qwen7B_seed17_6M/start_receipt.json": "36a93f2411f084ec504e119689f82595c0275f4a12df6d73ebf79b6f3018811e",
+    "runs/B_Qwen7B_seed17_6M/status.json": "cf6e79cf95318cce93836b0e8cd4ac6c041eaa044ba2044cdebec75667611a4d",
+    "runs/B_Qwen7B_seed17_6M/trainer_state.json": "4dcc4d9d157c343b25ca6339786126434700fac100375978db7179b854f7b3ec",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/adapter_config.json": "7d49b7c0ffd3f2fb4fd4aba70be797dd3c83cf68f89f1553f9962ba96bba0de6",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/adapter_model.safetensors": "c9a9f262d9818ff224289551f21d309d67c9376cb1bf0f49194d47f9e2646668",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/completion_accounting.json": "180c0493c613ad4a76707c4577b516c907ebc8e2dda3c55319ba8dcf3f558fb7",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/trainer_state.json": "ad49a1bc3ff07d1e01e344d1a4d262ab460326735d564e37f357cf3fe66e9647",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/adapter_config.json": "7d49b7c0ffd3f2fb4fd4aba70be797dd3c83cf68f89f1553f9962ba96bba0de6",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/adapter_model.safetensors": "6abb7a10751ebb925166b912ee21b855c048095b24d2357b660d06ff05aea1a5",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/completion_accounting.json": "51a4284a629d5b8e00335a42ac714873b18c2f516fa8491e67641468cba6b783",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/trainer_state.json": "a04badb3d08e442fb89048db5c4854000d4cf0ad03356980ed782cbcad3cc7de",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/adapter_config.json": "7d49b7c0ffd3f2fb4fd4aba70be797dd3c83cf68f89f1553f9962ba96bba0de6",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/adapter_model.safetensors": "c98d03b3a4d67223cf36552cbd1c11bbcf17148b15843fbd1b26b373abfa957f",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/completion_accounting.json": "b4b7ae8aaecfe0279cae6b8252ea11006450d918b32b75377cde67c4aad0c5a2",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/trainer_state.json": "8fcbf497672107c4b69a13d106a4bd2f963c1df4b6ec8cad886bc26fc6ee0cac",
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_corrected_seed17_6M_20261022/evaluation/evaluation_config.json": "1a9713f445313266d4e157e6f75f5bd9060c51b4c5f737e5f8d854aad4c66cf3",
+    "runs/B_corrected_seed17_6M_20261022/evaluation/evaluation_summary.json": "d3d8bb29aa3b9c3791bcc63362eebd261053dd57b2cad1a27b76c0681e1c516a",
+    "runs/B_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": "4a6e1aaad49a608d35d18a3c294d8c93f490b7617cdfd82c2da2574e06bd9c87",
+    "runs/B_corrected_seed17_6M_20261022/evaluation/math500.jsonl": "8707a8d3244e31319425d88e254da3ae51003e507c4e1cfb04f32524b0840835",
+    "runs/B_corrected_seed17_6M_20261022/evaluation/progress.json": "72b54ca1b2bd74217eb8c6ec9880fbe92e32ec1fe096da55db40db5c6b3f228c",
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/adapter_config.json": "7d49b7c0ffd3f2fb4fd4aba70be797dd3c83cf68f89f1553f9962ba96bba0de6",
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/adapter_model.safetensors": "c98d03b3a4d67223cf36552cbd1c11bbcf17148b15843fbd1b26b373abfa957f",
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_corrected_seed17_6M_20261022/initial_sampling.json": "910914f2e6571836781a8ce9f5a9014e1ddb9d7b7771ce3159b1b4351fbf5c38",
+    "runs/B_corrected_seed17_6M_20261022/initial_sampling_match.json": "2fadcaa0bf5a3fd6c516c7724a626759086cbfdc55a18a6b2dd79f919abbdb63",
+    "runs/B_corrected_seed17_6M_20261022/live_audits.json": "883dffad943d6393d4e1748e275e46cb117097349c9d977a5e31b806afd313b4",
+    "runs/B_corrected_seed17_6M_20261022/metrics.jsonl": "c0f69597ebcac42d39510bda9ea86406fae074b50ef3e31a3de5f0e7c3ec06d9",
+    "runs/B_corrected_seed17_6M_20261022/prm_loading.json": "aaec4e15b4524670fc33aa0a36d285d6859fed78af9b424bec17168713ac32ff",
+    "runs/B_corrected_seed17_6M_20261022/progress.json": "8d3b8959b84050a9d5c661d96bf0ad9d1febcb63bdb89f80fae0d9f6e0b298a6",
+    "runs/B_corrected_seed17_6M_20261022/rollouts.jsonl": "adfc269057091108f0c84274b78164d1795d19b85856297f9876d60e191ff304",
+    "runs/B_corrected_seed17_6M_20261022/run_config.json": "a63df550f14190b05b63e65f18e0732a60c57394b3f98d805579df65a739d4b8",
+    "runs/B_corrected_seed17_6M_20261022/status.json": "ea14a2001a6b55ac0f92c20c9abfc42392fc0b7d0c82b1e3491e29cb3d117352",
+    "runs/B_corrected_seed17_6M_20261022/trainer_state.json": "54fe58550a4f80038d6013b99ca0a9a069f692c71274256438d13dd862209089",
+    "runs/B_seed17_6M/checkpoint-260/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/checkpoint-260/adapter_model.safetensors": "70a1665beeffa1cc1c276e4119febc334d47868792c5cf45e9de720f4dd6ad7d",
+    "runs/B_seed17_6M/checkpoint-260/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/checkpoint-260/completion_accounting.json": "9ed45bcd27c65dd2bf471e8ce253db7c2aafd29d42362d585dd6491dd7e7cd25",
+    "runs/B_seed17_6M/checkpoint-260/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/checkpoint-260/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/checkpoint-260/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/checkpoint-260/trainer_state.json": "856c260ea691ebd33ebbc08a24cd171e1c25aa44d8a5adfc976cbed7a5747b0c",
+    "runs/B_seed17_6M/checkpoint-260/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/checkpoint-280/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/checkpoint-280/adapter_model.safetensors": "2ed08cd06b71e8cb587f8fcbaae307259f6a1fe09f1cca458df1c5158d77722a",
+    "runs/B_seed17_6M/checkpoint-280/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/checkpoint-280/completion_accounting.json": "e1140456e14c61b54c24888f22ba4f56fe9e82f531b293de830e3964a36c4c3c",
+    "runs/B_seed17_6M/checkpoint-280/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/checkpoint-280/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/checkpoint-280/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/checkpoint-280/trainer_state.json": "a42e7f968d037486239466e1adbfba9c40f2a210a1d8d05c882b61dc3ce3526c",
+    "runs/B_seed17_6M/checkpoint-280/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/checkpoint-285/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/checkpoint-285/adapter_model.safetensors": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed",
+    "runs/B_seed17_6M/checkpoint-285/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/checkpoint-285/completion_accounting.json": "582a72d767ec78e0a039b038e4a4058e83b6a9fbea720cce6b485c99b8c5414b",
+    "runs/B_seed17_6M/checkpoint-285/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/checkpoint-285/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/checkpoint-285/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/checkpoint-285/trainer_state.json": "c70dce108e128b0d824034289875dfbc122462a1444f679fc83a4f8dde8e4f7e",
+    "runs/B_seed17_6M/checkpoint-285/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/final_adapter/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/final_adapter/adapter_model.safetensors": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed",
+    "runs/B_seed17_6M/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/group_diagnostics.jsonl": "642b7845c56186dcc5a95c1a5dcfc433e47ab0b40b48c3171250475260cbcf62",
+    "runs/B_seed17_6M/metrics.jsonl": "0a4f8ebda1650617a78c846f89e9961d10466dbf333c7c9fe49b7b0c2e8a812c",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_model.safetensors": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/completion_accounting.json": "582a72d767ec78e0a039b038e4a4058e83b6a9fbea720cce6b485c99b8c5414b",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/trainer_state.json": "c70dce108e128b0d824034289875dfbc122462a1444f679fc83a4f8dde8e4f7e",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_config.json": "977f57f2180ef818fec1da75e5b6433e4b934641e67c8ab7b01055de32ecd499",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json": "6024fe8aac62d5f49f87f365944a5f3a179b52cf6954dc70aef971d650f1b614",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/gsm8k.jsonl": "423818082af5d5c756370e54074b1432cf01b35720cf9765b16c87726657bd4e",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/math500.jsonl": "ba7b53076d39033c6a64fa2f6bc7c27cbae6ed1eecfa309681f74e3a8850351c",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/progress.json": "b48775bc026ed0edf2719fd7a0ca3d782cefa9792b30a1e52034876f5e4ac08a",
+    "runs/B_seed17_6M/milestones/6000000/milestone.json": "e77ef78333cd7c3dbd309afda5c39967c1708f16183483ca6c11ba73d497042b",
+    "runs/B_seed17_6M/milestones.json": "b888dfe0c504b6bb2bc5796c31642f04429372eda020f251ca39d0f6247874da",
+    "runs/B_seed17_6M/progress.json": "d7a7d0299132b5be02b4f9e09334a929ee2f9d97a79887764542215944aa662a",
+    "runs/B_seed17_6M/rollouts.jsonl": "2d5309f259bf454d9e446dea750a9bcbea6e3c1349ae483c9862e0beac540228",
+    "runs/B_seed17_6M/run_config.json": "82093c13c3d8e76cba367446fecc0b898bfa53d2674fa594ba09bbc7b305cca9",
+    "runs/B_seed17_6M/status.json": "fef5914b8ce2a6d884215237078a0921787df3bde89da18f043785dff7dd5f5a",
+    "runs/B_seed17_6M/trainer_state.json": "af8f99ebf2bb431587292b82f5572b333854db42183d6de445dd79bd1b021895",
+    "runs/PURE_no_update_20261022_v2/P_PRM_loss_audit.json": "8777601502ef2eee93bce3e95ed5084e7829487bebea460aac4ea438253e5ebe",
+    "runs/PURE_no_update_20261022_v2/P_VR_loss_audit.json": "5c34b2cfe0e9130b0a8cc261e72fac84e7edcfaa24356edc9f0bd56bfbd352f1",
+    "runs/PURE_no_update_20261022_v2/generated_exact_ids.jsonl": "b2420c8dacdf5ebd583925e10aa4b21433ec5f4cddd4b1264cfc412ed9f09921",
+    "runs/PURE_no_update_20261022_v2/initialization.json": "735b5fbd8601c0fce77ef0d7999b9c947309b700f3c869dbbba3288f98cf81cc",
+    "runs/PURE_no_update_20261022_v2/native_edge_forwards.json": "964debd6a6673fb15a0d450a3b5cc3fe8bef00581db48c7f5f4fd3fe74260468",
+    "runs/PURE_no_update_20261022_v2/nvml_peaks.json": "3291bba47f0660475eb4b5be4c529c2f50bbc294ca61978bad4225b712ba48b6",
+    "runs/PURE_no_update_20261022_v2/nvml_samples.jsonl": "6c7a6ee5cc9acfd20b39ad77bf99ef59ecc418e09fed3f1acfa12860a9db593f",
+    "runs/PURE_no_update_20261022_v2/originals_before.json": "bc6e84cd96fa13d7bfb0d8417eeb11f01650bc65e1bdcce3924abe9ac8e9efd3",
+    "runs/PURE_no_update_20261022_v2/preservation.json": "156b00f219840cd3365edf08df0fe4a70047e5c73b0f8f1e89e935173a634590",
+    "runs/PURE_no_update_20261022_v2/prm_loading.json": "25153893e5f5cb48c0331ce0e4bc3f4ba2ab840594b696c74aa66bd18b614db9",
+    "runs/PURE_no_update_20261022_v2/pure_prm_interface.json": "86b95a44565b94702bc7d995e76e5a2892251d1d0a98e1501f1e099046235b0a",
+    "runs/PURE_no_update_20261022_v2/result.json": "d5579269094dd27a6411058ce2290f7b7460a3cb4a151cd58ef5ad9aa264f08c",
+    "runs/PURE_no_update_20261022_v2/run_config.json": "b15c4ddc4107a9c7cdaebbae5d926d8c732f3298b7a549e6990b293f8f27f5e5",
+    "runs/PURE_no_update_20261022_v2/scored_alignment.jsonl": "2c026821e86e0659a1caa7078cd16cbf43bd7c955203b4f319a9ab79c7ddc9be",
+    "runs/PURE_no_update_20261022_v2/stages.json": "6d12ebd94c83b8771de9dc950bda56e4b1b302564f7088a870061166e15b38f6",
+    "runs/PURE_no_update_20261022_v2/status.json": "404b300c0bd01bcc342e3b31361a788f498582b4f1afdf379d64db1d95511d6d",
+    "runs/PURE_no_update_20261022_v3/P_PRM_loss_audit.json": "a7ad1a01a884152f5c196d712b5c27debc3ef7579ca6ad53411114ebe1ec9445",
+    "runs/PURE_no_update_20261022_v3/P_VR_loss_audit.json": "314887cb1f09fa609327861dee6692f0b9cecfe75c503511063caf0cb6f45620",
+    "runs/PURE_no_update_20261022_v3/generated_exact_ids.jsonl": "b2420c8dacdf5ebd583925e10aa4b21433ec5f4cddd4b1264cfc412ed9f09921",
+    "runs/PURE_no_update_20261022_v3/initialization.json": "c8fcf908a4d73afd1b7e2eeb57666178e58b6fbd197b68b7c3fc65104e35a01c",
+    "runs/PURE_no_update_20261022_v3/native_edge_forwards.json": "92a371818c2cebbc98fee7c9ff366cc05382ec6c8ee180bb41dce40822f867fb",
+    "runs/PURE_no_update_20261022_v3/nvml_peaks.json": "446a67e3444ab1955a4eba90e5b2f3d38731a0e73740583963b35229705cc102",
+    "runs/PURE_no_update_20261022_v3/nvml_samples.jsonl": "b8583434a81e00c70fba46778e2bb2a6a4b3eddd957a27538b0af284ced88f84",
+    "runs/PURE_no_update_20261022_v3/originals_before.json": "bc6e84cd96fa13d7bfb0d8417eeb11f01650bc65e1bdcce3924abe9ac8e9efd3",
+    "runs/PURE_no_update_20261022_v3/preservation.json": "156b00f219840cd3365edf08df0fe4a70047e5c73b0f8f1e89e935173a634590",
+    "runs/PURE_no_update_20261022_v3/prm_loading.json": "25153893e5f5cb48c0331ce0e4bc3f4ba2ab840594b696c74aa66bd18b614db9",
+    "runs/PURE_no_update_20261022_v3/pure_prm_interface.json": "86b95a44565b94702bc7d995e76e5a2892251d1d0a98e1501f1e099046235b0a",
+    "runs/PURE_no_update_20261022_v3/result.json": "b06c240b749f06e71e76a8047e9499be7d268569e4a132a0c07c05dbbdc6a161",
+    "runs/PURE_no_update_20261022_v3/run_config.json": "b5563e99b64c73f08d1d7097b90abc42a94c7e5bb1315f8087c81d0843d983da",
+    "runs/PURE_no_update_20261022_v3/scored_alignment.jsonl": "671cd5ec4bee488ad9768b7a82ed2fd635a20ba4e496043508c2505567dda0fa",
+    "runs/PURE_no_update_20261022_v3/stages.json": "40992ff31e41a7b301a20461f1310b73d51bbc3f7acd14cd16894bf7ceee1c23",
+    "runs/PURE_no_update_20261022_v3/status.json": "cfef75e707e1a862466eb9e371add58273d778e869b19253887bdf9e54f3794a",
+    "training/README.md": "4228bce17eaadbdaaf78575b9b99c6797be7bb57477a9b2344993c0f7beff16f",
+    "training/baseline_config.json": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+    "training/check_pilot.py": "e5be6d9856d2956685bbfa012a2e5e5c9b9fcb3bc59f288713508d6b37b025bd",
+    "training/common.py": "d7b19e2cfff0db5097b5dc6d2df6b85d391e1718657dcb85bf042e4351a95174",
+    "training/evaluate_policy.py": "fd3eaf0a0d47c64907f73fb528d0dc21ab2534c16d82a7b170a3eabd6ce4b256",
+    "training/launch_pipeline.py": "3535ac0c2e2c0233087f4a6750cdb8f8e80181ae227ca657b5f493c289b3245a",
+    "training/prepare_assets.py": "ec5e2e879395f6fc8127a5b78c18def535073610e7fc591c4d9ba52ada10a42b",
+    "training/prepare_data.py": "0aba39d1a51451e57a3751f7490dae971982aa582d5708b00b1a1ae23ea16716",
+    "training/requirements.txt": "94dd94ece7eb817e0f31232eb7d10ff5a7bfea84d2f63ece52f849f7c3ee7422",
+    "training/reward.py": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+    "training/run_baseline.py": "582bb18ee1c00695bc721a8c470a0a591ff968c3880137dade97f34418448ecc",
+    "training/setup_environment.py": "826c79dde8388185ef1310d7324e46b663c57d693facd96c1baaa39b3ab76b06",
+    "training/test_reward.py": "909ff78215df99e68b120f79f8838aa4447ff337c93e4f0d1240f46c2c7d174b",
+    "training/train_baseline.py": "407505f628f0731adb8c668f47f0ef691b761362d670e456823c7ec998be3cd5",
+    "training_b/README.md": "b455446745bd2d2a0fe11d0cbcb73dae6e8942c7857be5b61a97deea5d58d5c3",
+    "training_b/check_native_prm.py": "18eaca2107c9221c06b0196d897934a01fc35b0fda9c8e777dab443d5b9a2f23",
+    "training_b/config.json": "3d10e6f4bb1cbaf81b13f80642d59b94ad2c595b1919b6bbc30ef9a5b0bca291",
+    "training_b/prepare_prm.py": "36a379bc93d944691980ee2c0e475ca237f614521c31eaeb630402d686fb1860",
+    "training_b/prm_reward.py": "0da9a07f046d2aba064245e0046944833c6e6ddeca1aa0f01b518d456fe64078",
+    "training_b/run_b.py": "16b4e8f1f593ba16323d991f6bfd62c0192eae24612f0809c8957a854a177554",
+    "training_b/test_b.py": "f503ab2d3f2e9e1825cf4e3352e0cef54f3ad3afec42f83ed403c77edb42a771",
+    "training_b/train_b.py": "7c264e0b419effa7871a6b503c515a0353bfd7d48bc6a4d7ba5ff47805c483ac"
+  },
+  "inventory": {
+    "runs/A_corrected_seed17_6M_20261022/metrics.jsonl": [
+      222594,
+      1792664347783555058
+    ],
+    "runs/A_corrected_seed17_6M_20261022/initial_sampling.json": [
+      88754,
+      1792654627872951993
+    ],
+    "runs/A_corrected_seed17_6M_20261022/rollouts.jsonl": [
+      22896064,
+      1792664317954775999
+    ],
+    "runs/A_corrected_seed17_6M_20261022/README.md": [
+      1934,
+      1792664347207615458
+    ],
+    "runs/A_corrected_seed17_6M_20261022/status.json": [
+      3132,
+      1792664349195407281
+    ],
+    "runs/A_corrected_seed17_6M_20261022/run_config.json": [
+      8426,
+      1792654612272750286
+    ],
+    "runs/A_corrected_seed17_6M_20261022/live_audits.json": [
+      220,
+      1792664347143622169
+    ],
+    "runs/A_corrected_seed17_6M_20261022/trainer_state.json": [
+      269167,
+      1792664348271503942
+    ],
+    "runs/A_corrected_seed17_6M_20261022/run.lock": [
+      0,
+      1792654590604467387
+    ],
+    "runs/A_corrected_seed17_6M_20261022/initial_sampling_match.json": [
+      60,
+      1792654628052954312
+    ],
+    "runs/A_corrected_seed17_6M_20261022/progress.json": [
+      1200,
+      1792664347143622169
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/completion_accounting.json": [
+      944,
+      1792664347783555058
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/vocab.json": [
+      2776833,
+      1792664347359599519
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/tokenizer_config.json": [
+      4715,
+      1792664347331602455
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/README.md": [
+      5373,
+      1792664347219614199
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/chat_template.jinja": [
+      2513,
+      1792664347331602455
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/rng_state.pth": [
+      14581,
+      1792664347727560930
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/tokenizer.json": [
+      11422063,
+      1792664347471587775
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/scheduler.pt": [
+      1465,
+      1792664347727560930
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/optimizer.pt": [
+      148053627,
+      1792664347727560930
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/training_args.bin": [
+      7249,
+      1792664347479586936
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/trainer_state.json": [
+      268917,
+      1792664347751558414
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/adapter_config.json": [
+      1014,
+      1792664347327602874
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/merges.txt": [
+      1671853,
+      1792664347399595325
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/special_tokens_map.json": [
+      616,
+      1792664347331602455
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/adapter_model.safetensors": [
+      73911112,
+      1792664347327602874
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-284/added_tokens.json": [
+      605,
+      1792664347331602455
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/completion_accounting.json": [
+      944,
+      1792664005125100702
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/vocab.json": [
+      2776833,
+      1792664004501087119
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/tokenizer_config.json": [
+      4715,
+      1792664004465086335
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/README.md": [
+      5373,
+      1792664004321083200
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/chat_template.jinja": [
+      2513,
+      1792664004465086335
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/rng_state.pth": [
+      14581,
+      1792664005045098960
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/tokenizer.json": [
+      11422063,
+      1792664004709091646
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/scheduler.pt": [
+      1465,
+      1792664005045098960
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/optimizer.pt": [
+      148053627,
+      1792664005045098960
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/training_args.bin": [
+      7249,
+      1792664004717091820
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/trainer_state.json": [
+      265155,
+      1792664005081099744
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/adapter_config.json": [
+      1014,
+      1792664004465086335
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/merges.txt": [
+      1671853,
+      1792664004597089208
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/special_tokens_map.json": [
+      616,
+      1792664004465086335
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/adapter_model.safetensors": [
+      73911112,
+      1792664004461086248
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-280/added_tokens.json": [
+      605,
+      1792664004465086335
+    ],
+    "runs/A_corrected_seed17_6M_20261022/evaluation/evaluation.lock": [
+      0,
+      1792672615127166040
+    ],
+    "runs/A_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": [
+      2140831,
+      1792675285773977462
+    ],
+    "runs/A_corrected_seed17_6M_20261022/evaluation/evaluation_summary.json": [
+      1351,
+      1792675285777977665
+    ],
+    "runs/A_corrected_seed17_6M_20261022/evaluation/math500.jsonl": [
+      1225284,
+      1792673417537066768
+    ],
+    "runs/A_corrected_seed17_6M_20261022/evaluation/evaluation_config.json": [
+      667,
+      1792672615191162429
+    ],
+    "runs/A_corrected_seed17_6M_20261022/evaluation/progress.json": [
+      98,
+      1792675285773977462
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/vocab.json": [
+      2776833,
+      1792664348127519011
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/tokenizer_config.json": [
+      4715,
+      1792664348103521523
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/README.md": [
+      5373,
+      1792664347879544991
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/chat_template.jinja": [
+      2513,
+      1792664348103521523
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/tokenizer.json": [
+      11422063,
+      1792664348239507291
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/training_args.bin": [
+      7249,
+      1792664348103521523
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/adapter_config.json": [
+      1014,
+      1792664347967535763
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/merges.txt": [
+      1671853,
+      1792664348167514825
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/special_tokens_map.json": [
+      616,
+      1792664348107521104
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/adapter_model.safetensors": [
+      73911112,
+      1792664347967535763
+    ],
+    "runs/A_corrected_seed17_6M_20261022/final_adapter/added_tokens.json": [
+      605,
+      1792664348107521104
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/completion_accounting.json": [
+      942,
+      1792662366636975255
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/vocab.json": [
+      2776833,
+      1792662366200965310
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/tokenizer_config.json": [
+      4715,
+      1792662366180964854
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/README.md": [
+      5373,
+      1792662366076962481
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/chat_template.jinja": [
+      2513,
+      1792662366180964854
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/rng_state.pth": [
+      14581,
+      1792662366580973978
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/tokenizer.json": [
+      11422063,
+      1792662366328968229
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/scheduler.pt": [
+      1465,
+      1792662366576973886
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/optimizer.pt": [
+      148053627,
+      1792662366576973886
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/training_args.bin": [
+      7249,
+      1792662366336968412
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/trainer_state.json": [
+      246218,
+      1792662366600974433
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/adapter_config.json": [
+      1014,
+      1792662366180964854
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/merges.txt": [
+      1671853,
+      1792662366248966405
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/special_tokens_map.json": [
+      616,
+      1792662366180964854
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/adapter_model.safetensors": [
+      73911112,
+      1792662366180964854
+    ],
+    "runs/A_corrected_seed17_6M_20261022/checkpoint-260/added_tokens.json": [
+      605,
+      1792662366180964854
+    ],
+    "runs/B_corrected_seed17_6M_20261022/metrics.jsonl": [
+      226246,
+      1792672593724401151
+    ],
+    "runs/B_corrected_seed17_6M_20261022/initial_sampling.json": [
+      88754,
+      1792664631576838976
+    ],
+    "runs/B_corrected_seed17_6M_20261022/rollouts.jsonl": [
+      33104770,
+      1792672582485071444
+    ],
+    "runs/B_corrected_seed17_6M_20261022/README.md": [
+      1934,
+      1792672593144435363
+    ],
+    "runs/B_corrected_seed17_6M_20261022/status.json": [
+      3185,
+      1792672594724342250
+    ],
+    "runs/B_corrected_seed17_6M_20261022/run_config.json": [
+      8457,
+      1792664613673922678
+    ],
+    "runs/B_corrected_seed17_6M_20261022/live_audits.json": [
+      220,
+      1792672593136435835
+    ],
+    "runs/B_corrected_seed17_6M_20261022/prm_loading.json": [
+      337,
+      1792664613577928595
+    ],
+    "runs/B_corrected_seed17_6M_20261022/trainer_state.json": [
+      272175,
+      1792672594244370507
+    ],
+    "runs/B_corrected_seed17_6M_20261022/run.lock": [
+      0,
+      1792664587619571120
+    ],
+    "runs/B_corrected_seed17_6M_20261022/initial_sampling_match.json": [
+      60,
+      1792664631756828274
+    ],
+    "runs/B_corrected_seed17_6M_20261022/progress.json": [
+      1253,
+      1792672593136435835
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/completion_accounting.json": [
+      996,
+      1792671411191838590
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/vocab.json": [
+      2776833,
+      1792671410807828578
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/tokenizer_config.json": [
+      4715,
+      1792671410779827847
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/README.md": [
+      5373,
+      1792671410687825447
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/chat_template.jinja": [
+      2513,
+      1792671410779827847
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/rng_state.pth": [
+      14581,
+      1792671411147837443
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/tokenizer.json": [
+      11422063,
+      1792671410919831499
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/scheduler.pt": [
+      1465,
+      1792671411147837443
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/optimizer.pt": [
+      148053627,
+      1792671411143837338
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/training_args.bin": [
+      7249,
+      1792671410927831708
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/trainer_state.json": [
+      233131,
+      1792671411163837860
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/adapter_config.json": [
+      1014,
+      1792671410779827847
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/merges.txt": [
+      1671853,
+      1792671410851829725
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/special_tokens_map.json": [
+      616,
+      1792671410779827847
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/adapter_model.safetensors": [
+      73911112,
+      1792671410779827847
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-240/added_tokens.json": [
+      605,
+      1792671410779827847
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/completion_accounting.json": [
+      997,
+      1792672593724401151
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/vocab.json": [
+      2776833,
+      1792672593300426161
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/tokenizer_config.json": [
+      4715,
+      1792672593276427577
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/README.md": [
+      5373,
+      1792672593156434655
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/chat_template.jinja": [
+      2513,
+      1792672593276427577
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/rng_state.pth": [
+      14581,
+      1792672593672404218
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/tokenizer.json": [
+      11422063,
+      1792672593420419083
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/scheduler.pt": [
+      1465,
+      1792672593672404218
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/optimizer.pt": [
+      148053627,
+      1792672593668404454
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/training_args.bin": [
+      7249,
+      1792672593428418611
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/trainer_state.json": [
+      271925,
+      1792672593696402802
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/adapter_config.json": [
+      1014,
+      1792672593276427577
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/merges.txt": [
+      1671853,
+      1792672593344423566
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/special_tokens_map.json": [
+      616,
+      1792672593276427577
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/adapter_model.safetensors": [
+      73911112,
+      1792672593272427813
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-280/added_tokens.json": [
+      605,
+      1792672593276427577
+    ],
+    "runs/B_corrected_seed17_6M_20261022/evaluation/evaluation.lock": [
+      0,
+      1792675303838881062
+    ],
+    "runs/B_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": [
+      2212479,
+      1792678098768605661
+    ],
+    "runs/B_corrected_seed17_6M_20261022/evaluation/evaluation_summary.json": [
+      1354,
+      1792678098772605705
+    ],
+    "runs/B_corrected_seed17_6M_20261022/evaluation/math500.jsonl": [
+      1244948,
+      1792676124045277217
+    ],
+    "runs/B_corrected_seed17_6M_20261022/evaluation/evaluation_config.json": [
+      667,
+      1792675303902884236
+    ],
+    "runs/B_corrected_seed17_6M_20261022/evaluation/progress.json": [
+      98,
+      1792678098772605705
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/vocab.json": [
+      2776833,
+      1792672594088379690
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/tokenizer_config.json": [
+      4715,
+      1792672594068380867
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/README.md": [
+      5373,
+      1792672593832394780
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/chat_template.jinja": [
+      2513,
+      1792672594068380867
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/tokenizer.json": [
+      11422063,
+      1792672594200373096
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/training_args.bin": [
+      7249,
+      1792672594068380867
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/adapter_config.json": [
+      1014,
+      1792672593924389354
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/merges.txt": [
+      1671853,
+      1792672594128377336
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/special_tokens_map.json": [
+      616,
+      1792672594072380632
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/adapter_model.safetensors": [
+      73911112,
+      1792672593924389354
+    ],
+    "runs/B_corrected_seed17_6M_20261022/final_adapter/added_tokens.json": [
+      605,
+      1792672594072380632
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/completion_accounting.json": [
+      997,
+      1792672035916430291
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/vocab.json": [
+      2776833,
+      1792672035512423742
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/tokenizer_config.json": [
+      4715,
+      1792672035496423483
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/README.md": [
+      5373,
+      1792672035384421668
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/chat_template.jinja": [
+      2513,
+      1792672035496423483
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/rng_state.pth": [
+      14581,
+      1792672035872429577
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/tokenizer.json": [
+      11422063,
+      1792672035628425623
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/scheduler.pt": [
+      1465,
+      1792672035868429513
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/optimizer.pt": [
+      148053627,
+      1792672035868429513
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/training_args.bin": [
+      7249,
+      1792672035640425817
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/trainer_state.json": [
+      252555,
+      1792672035892429901
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/adapter_config.json": [
+      1014,
+      1792672035496423483
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/merges.txt": [
+      1671853,
+      1792672035556424456
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/special_tokens_map.json": [
+      616,
+      1792672035496423483
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/adapter_model.safetensors": [
+      73911112,
+      1792672035492423418
+    ],
+    "runs/B_corrected_seed17_6M_20261022/checkpoint-260/added_tokens.json": [
+      605,
+      1792672035496423483
+    ],
+    "runs/A_seed17/evaluation_recovery.lock": [
+      0,
+      1792549107169605217
+    ],
+    "runs/A_seed17/metrics.jsonl": [
+      249144,
+      1792547578666698996
+    ],
+    "runs/A_seed17/rollouts.jsonl": [
+      20420898,
+      1792547560666649748
+    ],
+    "runs/A_seed17/README.md": [
+      1890,
+      1792547578118697472
+    ],
+    "runs/A_seed17/controller.json": [
+      624,
+      1792551530476509366
+    ],
+    "runs/A_seed17/status.json": [
+      1112,
+      1792547579154700353
+    ],
+    "runs/A_seed17/evaluation_recovery.json": [
+      498,
+      1792551530476509366
+    ],
+    "runs/A_seed17/controller_before_evaluation_recovery.json": [
+      333,
+      1792549109389616761
+    ],
+    "runs/A_seed17/run_config.json": [
+      3422,
+      1792539779750930547
+    ],
+    "runs/A_seed17/trainer_state.json": [
+      298433,
+      1792547579102700209
+    ],
+    "runs/A_seed17/controller.lock": [
+      0,
+      1792539774070784918
+    ],
+    "runs/A_seed17/run.lock": [
+      0,
+      1792539779658928193
+    ],
+    "runs/A_seed17/progress.json": [
+      821,
+      1792547578082697372
+    ],
+    "runs/A_seed17/checkpoint-240/completion_accounting.json": [
+      568,
+      1792546426691638181
+    ],
+    "runs/A_seed17/checkpoint-240/vocab.json": [
+      2776833,
+      1792546426267634530
+    ],
+    "runs/A_seed17/checkpoint-240/tokenizer_config.json": [
+      4715,
+      1792546426239634289
+    ],
+    "runs/A_seed17/checkpoint-240/README.md": [
+      5373,
+      1792546426139633427
+    ],
+    "runs/A_seed17/checkpoint-240/chat_template.jinja": [
+      2513,
+      1792546426239634289
+    ],
+    "runs/A_seed17/checkpoint-240/rng_state.pth": [
+      14581,
+      1792546426623637595
+    ],
+    "runs/A_seed17/checkpoint-240/tokenizer.json": [
+      11422063,
+      1792546426391635597
+    ],
+    "runs/A_seed17/checkpoint-240/scheduler.pt": [
+      1465,
+      1792546426623637595
+    ],
+    "runs/A_seed17/checkpoint-240/optimizer.pt": [
+      148053627,
+      1792546426619637560
+    ],
+    "runs/A_seed17/checkpoint-240/training_args.bin": [
+      7249,
+      1792546426399635666
+    ],
+    "runs/A_seed17/checkpoint-240/trainer_state.json": [
+      255603,
+      1792546426643637767
+    ],
+    "runs/A_seed17/checkpoint-240/adapter_config.json": [
+      1014,
+      1792546426239634289
+    ],
+    "runs/A_seed17/checkpoint-240/merges.txt": [
+      1671853,
+      1792546426311634908
+    ],
+    "runs/A_seed17/checkpoint-240/special_tokens_map.json": [
+      616,
+      1792546426239634289
+    ],
+    "runs/A_seed17/checkpoint-240/adapter_model.safetensors": [
+      73911112,
+      1792546426239634289
+    ],
+    "runs/A_seed17/checkpoint-240/added_tokens.json": [
+      605,
+      1792546426239634289
+    ],
+    "runs/A_seed17/checkpoint-280/completion_accounting.json": [
+      568,
+      1792547578666698996
+    ],
+    "runs/A_seed17/checkpoint-280/vocab.json": [
+      2776833,
+      1792547578262697873
+    ],
+    "runs/A_seed17/checkpoint-280/tokenizer_config.json": [
+      4715,
+      1792547578238697806
+    ],
+    "runs/A_seed17/checkpoint-280/README.md": [
+      5373,
+      1792547578130697506
+    ],
+    "runs/A_seed17/checkpoint-280/chat_template.jinja": [
+      2513,
+      1792547578234697795
+    ],
+    "runs/A_seed17/checkpoint-280/rng_state.pth": [
+      14581,
+      1792547578602698818
+    ],
+    "runs/A_seed17/checkpoint-280/tokenizer.json": [
+      11422063,
+      1792547578374698184
+    ],
+    "runs/A_seed17/checkpoint-280/scheduler.pt": [
+      1465,
+      1792547578602698818
+    ],
+    "runs/A_seed17/checkpoint-280/optimizer.pt": [
+      148053627,
+      1792547578602698818
+    ],
+    "runs/A_seed17/checkpoint-280/training_args.bin": [
+      7249,
+      1792547578382698206
+    ],
+    "runs/A_seed17/checkpoint-280/trainer_state.json": [
+      298185,
+      1792547578626698884
+    ],
+    "runs/A_seed17/checkpoint-280/adapter_config.json": [
+      1014,
+      1792547578234697795
+    ],
+    "runs/A_seed17/checkpoint-280/merges.txt": [
+      1671853,
+      1792547578302697984
+    ],
+    "runs/A_seed17/checkpoint-280/special_tokens_map.json": [
+      616,
+      1792547578238697806
+    ],
+    "runs/A_seed17/checkpoint-280/adapter_model.safetensors": [
+      73911112,
+      1792547578234697795
+    ],
+    "runs/A_seed17/checkpoint-280/added_tokens.json": [
+      605,
+      1792547578238697806
+    ],
+    "runs/A_seed17/evaluation/evaluation.lock": [
+      0,
+      1792547587722724387
+    ],
+    "runs/A_seed17/evaluation/gsm8k.jsonl": [
+      2091028,
+      1792551527344533616
+    ],
+    "runs/A_seed17/evaluation/evaluation_summary.json": [
+      1186,
+      1792551527348533586
+    ],
+    "runs/A_seed17/evaluation/math500.jsonl": [
+      1187218,
+      1792549922447986196
+    ],
+    "runs/A_seed17/evaluation/evaluation_config.json": [
+      428,
+      1792547587798724602
+    ],
+    "runs/A_seed17/evaluation/progress.json": [
+      99,
+      1792551527344533616
+    ],
+    "runs/A_seed17/final_adapter/vocab.json": [
+      2776833,
+      1792547578934699741
+    ],
+    "runs/A_seed17/final_adapter/tokenizer_config.json": [
+      4715,
+      1792547578918699697
+    ],
+    "runs/A_seed17/final_adapter/README.md": [
+      5373,
+      1792547578678699029
+    ],
+    "runs/A_seed17/final_adapter/chat_template.jinja": [
+      2513,
+      1792547578918699697
+    ],
+    "runs/A_seed17/final_adapter/tokenizer.json": [
+      11422063,
+      1792547579070700119
+    ],
+    "runs/A_seed17/final_adapter/training_args.bin": [
+      7249,
+      1792547578914699685
+    ],
+    "runs/A_seed17/final_adapter/adapter_config.json": [
+      1014,
+      1792547578766699274
+    ],
+    "runs/A_seed17/final_adapter/merges.txt": [
+      1671853,
+      1792547578978699863
+    ],
+    "runs/A_seed17/final_adapter/special_tokens_map.json": [
+      616,
+      1792547578918699697
+    ],
+    "runs/A_seed17/final_adapter/adapter_model.safetensors": [
+      73911112,
+      1792547578766699274
+    ],
+    "runs/A_seed17/final_adapter/added_tokens.json": [
+      605,
+      1792547578918699697
+    ],
+    "runs/A_seed17/checkpoint-260/completion_accounting.json": [
+      569,
+      1792546977915787980
+    ],
+    "runs/A_seed17/checkpoint-260/vocab.json": [
+      2776833,
+      1792546977499785162
+    ],
+    "runs/A_seed17/checkpoint-260/tokenizer_config.json": [
+      4715,
+      1792546977471784972
+    ],
+    "runs/A_seed17/checkpoint-260/README.md": [
+      5373,
+      1792546977375784323
+    ],
+    "runs/A_seed17/checkpoint-260/chat_template.jinja": [
+      2513,
+      1792546977471784972
+    ],
+    "runs/A_seed17/checkpoint-260/rng_state.pth": [
+      14581,
+      1792546977855787573
+    ],
+    "runs/A_seed17/checkpoint-260/tokenizer.json": [
+      11422063,
+      1792546977627786029
+    ],
+    "runs/A_seed17/checkpoint-260/scheduler.pt": [
+      1465,
+      1792546977855787573
+    ],
+    "runs/A_seed17/checkpoint-260/optimizer.pt": [
+      148053627,
+      1792546977855787573
+    ],
+    "runs/A_seed17/checkpoint-260/training_args.bin": [
+      7249,
+      1792546977635786083
+    ],
+    "runs/A_seed17/checkpoint-260/trainer_state.json": [
+      276911,
+      1792546977879787736
+    ],
+    "runs/A_seed17/checkpoint-260/adapter_config.json": [
+      1014,
+      1792546977471784972
+    ],
+    "runs/A_seed17/checkpoint-260/merges.txt": [
+      1671853,
+      1792546977543785460
+    ],
+    "runs/A_seed17/checkpoint-260/special_tokens_map.json": [
+      616,
+      1792546977471784972
+    ],
+    "runs/A_seed17/checkpoint-260/adapter_model.safetensors": [
+      73911112,
+      1792546977471784972
+    ],
+    "runs/A_seed17/checkpoint-260/added_tokens.json": [
+      605,
+      1792546977471784972
+    ],
+    "runs/B_seed17_6M/metrics.jsonl": [
+      274092,
+      1792592768953160854
+    ],
+    "runs/B_seed17_6M/group_diagnostics.jsonl": [
+      632787,
+      1792592756224976240
+    ],
+    "runs/B_seed17_6M/rollouts.jsonl": [
+      24063002,
+      1792592756220976182
+    ],
+    "runs/B_seed17_6M/README.md": [
+      1896,
+      1792592767841144820
+    ],
+    "runs/B_seed17_6M/status.json": [
+      1934,
+      1792592769441167882
+    ],
+    "runs/B_seed17_6M/run_config.json": [
+      7424,
+      1792585136376188465
+    ],
+    "runs/B_seed17_6M/trainer_state.json": [
+      325956,
+      1792592769425167652
+    ],
+    "runs/B_seed17_6M/run.lock": [
+      0,
+      1792585135892185114
+    ],
+    "runs/B_seed17_6M/milestones.json": [
+      3553,
+      1792595549340640285
+    ],
+    "runs/B_seed17_6M/progress.json": [
+      1560,
+      1792592767829144647
+    ],
+    "runs/B_seed17_6M/checkpoint-285/completion_accounting.json": [
+      1305,
+      1792592768429153299
+    ],
+    "runs/B_seed17_6M/checkpoint-285/vocab.json": [
+      2776833,
+      1792592768005147187
+    ],
+    "runs/B_seed17_6M/checkpoint-285/tokenizer_config.json": [
+      4715,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/checkpoint-285/README.md": [
+      5373,
+      1792592767853144993
+    ],
+    "runs/B_seed17_6M/checkpoint-285/chat_template.jinja": [
+      2513,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/checkpoint-285/rng_state.pth": [
+      14581,
+      1792592768373152492
+    ],
+    "runs/B_seed17_6M/checkpoint-285/tokenizer.json": [
+      11422063,
+      1792592768125148917
+    ],
+    "runs/B_seed17_6M/checkpoint-285/scheduler.pt": [
+      1465,
+      1792592768373152492
+    ],
+    "runs/B_seed17_6M/checkpoint-285/optimizer.pt": [
+      148053627,
+      1792592768373152492
+    ],
+    "runs/B_seed17_6M/checkpoint-285/training_args.bin": [
+      7249,
+      1792592768133149032
+    ],
+    "runs/B_seed17_6M/checkpoint-285/trainer_state.json": [
+      325708,
+      1792592768397152838
+    ],
+    "runs/B_seed17_6M/checkpoint-285/adapter_config.json": [
+      1014,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/checkpoint-285/merges.txt": [
+      1671853,
+      1792592768045147763
+    ],
+    "runs/B_seed17_6M/checkpoint-285/special_tokens_map.json": [
+      616,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/checkpoint-285/adapter_model.safetensors": [
+      73911112,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/checkpoint-285/added_tokens.json": [
+      605,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/checkpoint-280/completion_accounting.json": [
+      1306,
+      1792592631499026762
+    ],
+    "runs/B_seed17_6M/checkpoint-280/vocab.json": [
+      2776833,
+      1792592630999018387
+    ],
+    "runs/B_seed17_6M/checkpoint-280/tokenizer_config.json": [
+      4715,
+      1792592630971017917
+    ],
+    "runs/B_seed17_6M/checkpoint-280/README.md": [
+      5373,
+      1792592630839015705
+    ],
+    "runs/B_seed17_6M/checkpoint-280/chat_template.jinja": [
+      2513,
+      1792592630971017917
+    ],
+    "runs/B_seed17_6M/checkpoint-280/rng_state.pth": [
+      14581,
+      1792592631447025891
+    ],
+    "runs/B_seed17_6M/checkpoint-280/tokenizer.json": [
+      11422063,
+      1792592631119020397
+    ],
+    "runs/B_seed17_6M/checkpoint-280/scheduler.pt": [
+      1465,
+      1792592631443025823
+    ],
+    "runs/B_seed17_6M/checkpoint-280/optimizer.pt": [
+      148053627,
+      1792592631443025823
+    ],
+    "runs/B_seed17_6M/checkpoint-280/training_args.bin": [
+      7249,
+      1792592631131020598
+    ],
+    "runs/B_seed17_6M/checkpoint-280/trainer_state.json": [
+      319996,
+      1792592631471026292
+    ],
+    "runs/B_seed17_6M/checkpoint-280/adapter_config.json": [
+      1014,
+      1792592630971017917
+    ],
+    "runs/B_seed17_6M/checkpoint-280/merges.txt": [
+      1671853,
+      1792592631043019125
+    ],
+    "runs/B_seed17_6M/checkpoint-280/special_tokens_map.json": [
+      616,
+      1792592630971017917
+    ],
+    "runs/B_seed17_6M/checkpoint-280/adapter_model.safetensors": [
+      73911112,
+      1792592630971017917
+    ],
+    "runs/B_seed17_6M/checkpoint-280/added_tokens.json": [
+      605,
+      1792592630971017917
+    ],
+    "runs/B_seed17_6M/final_adapter/vocab.json": [
+      2776833,
+      1792592769237164944
+    ],
+    "runs/B_seed17_6M/final_adapter/tokenizer_config.json": [
+      4715,
+      1792592769217164656
+    ],
+    "runs/B_seed17_6M/final_adapter/README.md": [
+      5373,
+      1792592768965161026
+    ],
+    "runs/B_seed17_6M/final_adapter/chat_template.jinja": [
+      2513,
+      1792592769217164656
+    ],
+    "runs/B_seed17_6M/final_adapter/tokenizer.json": [
+      11422063,
+      1792592769361166729
+    ],
+    "runs/B_seed17_6M/final_adapter/training_args.bin": [
+      7249,
+      1792592769217164656
+    ],
+    "runs/B_seed17_6M/final_adapter/adapter_config.json": [
+      1014,
+      1792592769061162409
+    ],
+    "runs/B_seed17_6M/final_adapter/merges.txt": [
+      1671853,
+      1792592769281165578
+    ],
+    "runs/B_seed17_6M/final_adapter/special_tokens_map.json": [
+      616,
+      1792592769217164656
+    ],
+    "runs/B_seed17_6M/final_adapter/adapter_model.safetensors": [
+      73911112,
+      1792592769061162409
+    ],
+    "runs/B_seed17_6M/final_adapter/added_tokens.json": [
+      605,
+      1792592769221164714
+    ],
+    "runs/B_seed17_6M/milestones/6000000/milestone.json": [
+      3203,
+      1792595549340640285
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/completion_accounting.json": [
+      1305,
+      1792592768429153299
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/vocab.json": [
+      2776833,
+      1792592768005147187
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer_config.json": [
+      4715,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/README.md": [
+      5373,
+      1792592767853144993
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/chat_template.jinja": [
+      2513,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/rng_state.pth": [
+      14581,
+      1792592768373152492
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer.json": [
+      11422063,
+      1792592768125148917
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/scheduler.pt": [
+      1465,
+      1792592768373152492
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/optimizer.pt": [
+      148053627,
+      1792592768373152492
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/training_args.bin": [
+      7249,
+      1792592768133149032
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/trainer_state.json": [
+      325708,
+      1792592768397152838
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_config.json": [
+      1014,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/merges.txt": [
+      1671853,
+      1792592768045147763
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/special_tokens_map.json": [
+      616,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_model.safetensors": [
+      73911112,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/added_tokens.json": [
+      605,
+      1792592767985146899
+    ],
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation.lock": [
+      0,
+      1792592794185519783
+    ],
+    "runs/B_seed17_6M/milestones/6000000/evaluation/gsm8k.jsonl": [
+      2237432,
+      1792595527220134767
+    ],
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json": [
+      1206,
+      1792595527224134859
+    ],
+    "runs/B_seed17_6M/milestones/6000000/evaluation/math500.jsonl": [
+      1210630,
+      1792593590101865431
+    ],
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_config.json": [
+      428,
+      1792592794249520681
+    ],
+    "runs/B_seed17_6M/milestones/6000000/evaluation/progress.json": [
+      99,
+      1792595527220134767
+    ],
+    "runs/B_seed17_6M/checkpoint-260/completion_accounting.json": [
+      1305,
+      1792592093990661346
+    ],
+    "runs/B_seed17_6M/checkpoint-260/vocab.json": [
+      2776833,
+      1792592093578659061
+    ],
+    "runs/B_seed17_6M/checkpoint-260/tokenizer_config.json": [
+      4715,
+      1792592093558658950
+    ],
+    "runs/B_seed17_6M/checkpoint-260/README.md": [
+      5373,
+      1792592093438658283
+    ],
+    "runs/B_seed17_6M/checkpoint-260/chat_template.jinja": [
+      2513,
+      1792592093558658950
+    ],
+    "runs/B_seed17_6M/checkpoint-260/rng_state.pth": [
+      14581,
+      1792592093938661057
+    ],
+    "runs/B_seed17_6M/checkpoint-260/tokenizer.json": [
+      11422063,
+      1792592093698659726
+    ],
+    "runs/B_seed17_6M/checkpoint-260/scheduler.pt": [
+      1465,
+      1792592093938661057
+    ],
+    "runs/B_seed17_6M/checkpoint-260/optimizer.pt": [
+      148053627,
+      1792592093938661057
+    ],
+    "runs/B_seed17_6M/checkpoint-260/training_args.bin": [
+      7249,
+      1792592093706659770
+    ],
+    "runs/B_seed17_6M/checkpoint-260/trainer_state.json": [
+      297161,
+      1792592093958661168
+    ],
+    "runs/B_seed17_6M/checkpoint-260/adapter_config.json": [
+      1014,
+      1792592093558658950
+    ],
+    "runs/B_seed17_6M/checkpoint-260/merges.txt": [
+      1671853,
+      1792592093618659282
+    ],
+    "runs/B_seed17_6M/checkpoint-260/special_tokens_map.json": [
+      616,
+      1792592093558658950
+    ],
+    "runs/B_seed17_6M/checkpoint-260/adapter_model.safetensors": [
+      73911112,
+      1792592093554658927
+    ],
+    "runs/B_seed17_6M/checkpoint-260/added_tokens.json": [
+      605,
+      1792592093558658950
+    ],
+    "runs/B_Qwen7B_seed17_6M/metrics.jsonl": [
+      271916,
+      1792634206410660445
+    ],
+    "runs/B_Qwen7B_seed17_6M/group_diagnostics.jsonl": [
+      627800,
+      1792634194198711912
+    ],
+    "runs/B_Qwen7B_seed17_6M/rollouts.jsonl": [
+      23951769,
+      1792634194190711947
+    ],
+    "runs/B_Qwen7B_seed17_6M/README.md": [
+      1910,
+      1792634205354664786
+    ],
+    "runs/B_Qwen7B_seed17_6M/execution_plan.json": [
+      1765,
+      1792625572564912964
+    ],
+    "runs/B_Qwen7B_seed17_6M/controller.json": [
+      807,
+      1792637093571053603
+    ],
+    "runs/B_Qwen7B_seed17_6M/initialization_audit.json": [
+      936,
+      1792625748558824145
+    ],
+    "runs/B_Qwen7B_seed17_6M/status.json": [
+      1934,
+      1792634206882658511
+    ],
+    "runs/B_Qwen7B_seed17_6M/originals_after.json": [
+      98069,
+      1792637091215039958
+    ],
+    "runs/B_Qwen7B_seed17_6M/originals_before.json": [
+      98069,
+      1792625572564912964
+    ],
+    "runs/B_Qwen7B_seed17_6M/run_config.json": [
+      6725,
+      1792625719058519169
+    ],
+    "runs/B_Qwen7B_seed17_6M/prm_loading.json": [
+      337,
+      1792625748466823202
+    ],
+    "runs/B_Qwen7B_seed17_6M/start_receipt.json": [
+      373,
+      1792625568872870267
+    ],
+    "runs/B_Qwen7B_seed17_6M/trainer_state.json": [
+      323422,
+      1792634206870658561
+    ],
+    "runs/B_Qwen7B_seed17_6M/controller.lock": [
+      0,
+      1792625568912870730
+    ],
+    "runs/B_Qwen7B_seed17_6M/stages.jsonl": [
+      428,
+      1792637088727025547
+    ],
+    "runs/B_Qwen7B_seed17_6M/run.lock": [
+      0,
+      1792625706242384910
+    ],
+    "runs/B_Qwen7B_seed17_6M/initial_sampling_match.json": [
+      88,
+      1792625764322984883
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones.json": [
+      3593,
+      1792637088823026104
+    ],
+    "runs/B_Qwen7B_seed17_6M/pilot_gate.json": [
+      4760,
+      1792625697870296610
+    ],
+    "runs/B_Qwen7B_seed17_6M/progress.json": [
+      1560,
+      1792634205342664835
+    ],
+    "runs/B_Qwen7B_seed17_6M/execution_source_hashes.json": [
+      2482,
+      1792625572560912917
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/completion_accounting.json": [
+      1303,
+      1792634115203116305
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/vocab.json": [
+      2776833,
+      1792634114803118687
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/tokenizer_config.json": [
+      4715,
+      1792634114787118782
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/README.md": [
+      5373,
+      1792634114687119379
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/chat_template.jinja": [
+      2513,
+      1792634114787118782
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/rng_state.pth": [
+      14581,
+      1792634115147116638
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/tokenizer.json": [
+      11422063,
+      1792634114919117995
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/scheduler.pt": [
+      1465,
+      1792634115147116638
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/optimizer.pt": [
+      148053627,
+      1792634115147116638
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/training_args.bin": [
+      7249,
+      1792634114927117947
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/trainer_state.json": [
+      319736,
+      1792634115171116495
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/adapter_config.json": [
+      1014,
+      1792634114783118806
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/merges.txt": [
+      1671853,
+      1792634114843118448
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/special_tokens_map.json": [
+      616,
+      1792634114787118782
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/adapter_model.safetensors": [
+      73911112,
+      1792634114783118806
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-280/added_tokens.json": [
+      605,
+      1792634114787118782
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/vocab.json": [
+      2776833,
+      1792634206738659101
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/tokenizer_config.json": [
+      4715,
+      1792634206718659184
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/README.md": [
+      5373,
+      1792634206514660020
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/chat_template.jinja": [
+      2513,
+      1792634206718659184
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/tokenizer.json": [
+      11422063,
+      1792634206838658691
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/training_args.bin": [
+      7249,
+      1792634206718659184
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/adapter_config.json": [
+      1014,
+      1792634206594659691
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/merges.txt": [
+      1671853,
+      1792634206774658954
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/special_tokens_map.json": [
+      616,
+      1792634206718659184
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/adapter_model.safetensors": [
+      73911112,
+      1792634206594659691
+    ],
+    "runs/B_Qwen7B_seed17_6M/final_adapter/added_tokens.json": [
+      605,
+      1792634206718659184
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/milestone.json": [
+      3227,
+      1792637088823026104
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/evaluation.lock": [
+      0,
+      1792634228542574169
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/gsm8k.jsonl": [
+      2155321,
+      1792637085835008796
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json": [
+      1216,
+      1792637085839008820
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/math500.jsonl": [
+      1194176,
+      1792635057227306766
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/evaluation_config.json": [
+      428,
+      1792634228606573932
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/evaluation/progress.json": [
+      99,
+      1792637085835008796
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/completion_accounting.json": [
+      1304,
+      1792634205870662662
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/vocab.json": [
+      2776833,
+      1792634205478664275
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/tokenizer_config.json": [
+      4715,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/README.md": [
+      5373,
+      1792634205362664753
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/chat_template.jinja": [
+      2513,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/rng_state.pth": [
+      14581,
+      1792634205814662892
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/tokenizer.json": [
+      11422063,
+      1792634205590663814
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/scheduler.pt": [
+      1465,
+      1792634205814662892
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/optimizer.pt": [
+      148053627,
+      1792634205814662892
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/training_args.bin": [
+      7249,
+      1792634205602663765
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/trainer_state.json": [
+      323172,
+      1792634205838662793
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/adapter_config.json": [
+      1014,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/merges.txt": [
+      1671853,
+      1792634205518664111
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/special_tokens_map.json": [
+      616,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/adapter_model.safetensors": [
+      73911112,
+      1792634205458664357
+    ],
+    "runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283/added_tokens.json": [
+      605,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/completion_accounting.json": [
+      1304,
+      1792633532156302457
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/vocab.json": [
+      2776833,
+      1792633531752314601
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/tokenizer_config.json": [
+      4715,
+      1792633531732315202
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/README.md": [
+      5373,
+      1792633531632318211
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/chat_template.jinja": [
+      2513,
+      1792633531732315202
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/rng_state.pth": [
+      14581,
+      1792633532104304018
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/tokenizer.json": [
+      11422063,
+      1792633531872310991
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/scheduler.pt": [
+      1465,
+      1792633532100304138
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/optimizer.pt": [
+      148053627,
+      1792633532100304138
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/training_args.bin": [
+      7249,
+      1792633531880310750
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/trainer_state.json": [
+      296888,
+      1792633532124303418
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/adapter_config.json": [
+      1014,
+      1792633531732315202
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/merges.txt": [
+      1671853,
+      1792633531796313277
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/special_tokens_map.json": [
+      616,
+      1792633531732315202
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/adapter_model.safetensors": [
+      73911112,
+      1792633531732315202
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-260/added_tokens.json": [
+      605,
+      1792633531732315202
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/completion_accounting.json": [
+      1304,
+      1792634205870662662
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/vocab.json": [
+      2776833,
+      1792634205478664275
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/tokenizer_config.json": [
+      4715,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/README.md": [
+      5373,
+      1792634205362664753
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/chat_template.jinja": [
+      2513,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/rng_state.pth": [
+      14581,
+      1792634205814662892
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/tokenizer.json": [
+      11422063,
+      1792634205590663814
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/scheduler.pt": [
+      1465,
+      1792634205814662892
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/optimizer.pt": [
+      148053627,
+      1792634205814662892
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/training_args.bin": [
+      7249,
+      1792634205602663765
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/trainer_state.json": [
+      323172,
+      1792634205838662793
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/adapter_config.json": [
+      1014,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/merges.txt": [
+      1671853,
+      1792634205518664111
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/special_tokens_map.json": [
+      616,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/adapter_model.safetensors": [
+      73911112,
+      1792634205458664357
+    ],
+    "runs/B_Qwen7B_seed17_6M/checkpoint-283/added_tokens.json": [
+      605,
+      1792634205462664342
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/11_1792626141675459269.json": [
+      4995,
+      1792626141674474407
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/24_1792626569666337881.json": [
+      5013,
+      1792626569661927134
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/226_1792632534061680886.json": [
+      4949,
+      1792632534057897765
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/22_1792626503828789029.json": [
+      5194,
+      1792626503829416900
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/40_1792627074477642235.json": [
+      4993,
+      1792627074473700748
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/154_1792630420489572523.json": [
+      5157,
+      1792630420488429845
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/74_1792628050315136097.json": [
+      5137,
+      1792628050312392668
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/100_1792628830215711327.json": [
+      5137,
+      1792628830211777396
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/96_1792628710952780221.json": [
+      5006,
+      1792628710949822927
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/170_1792630883855069531.json": [
+      5028,
+      1792630883852727528
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/163_1792630673457568614.json": [
+      5018,
+      1792630673456388919
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/195_1792631617809965739.json": [
+      4932,
+      1792631617807204397
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/251_1792633279082760015.json": [
+      4980,
+      1792633279079574093
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/246_1792633135687098774.json": [
+      5113,
+      1792633135681903897
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/153_1792630390818960915.json": [
+      5026,
+      1792630390816478422
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/14_1792626237361091727.json": [
+      5171,
+      1792626237359279367
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/29_1792626732187220825.json": [
+      5060,
+      1792626732183164940
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/244_1792633069349256822.json": [
+      5006,
+      1792633069349110459
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/267_1792633756501845815.json": [
+      4468,
+      1792633756499076482
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/12_1792626177133270985.json": [
+      4963,
+      1792626177130775511
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/58_1792627590997797563.json": [
+      5188,
+      1792627590996997652
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/109_1792629089959642832.json": [
+      5194,
+      1792629089955793098
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/36_1792626953848352457.json": [
+      4924,
+      1792626953848815597
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/3_1792625865005059292.json": [
+      5286,
+      1792625865003978040
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/80_1792628236562111453.json": [
+      5046,
+      1792628236560821098
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/188_1792631427148776079.json": [
+      5092,
+      1792631427146437871
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/110_1792629118386399470.json": [
+      5276,
+      1792629118384217284
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/280_1792634132291036720.json": [
+      4910,
+      1792634132287017841
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/99_1792628797302085881.json": [
+      4999,
+      1792628797299246355
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/68_1792627894689850817.json": [
+      4991,
+      1792627894688051256
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/10_1792626103736537374.json": [
+      5069,
+      1792626103734148192
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/238_1792632884121784290.json": [
+      5075,
+      1792632884118804378
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/17_1792626342176691382.json": [
+      5026,
+      1792626342176136139
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/245_1792633099841229647.json": [
+      5199,
+      1792633099841477026
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/6_1792625968212293327.json": [
+      5373,
+      1792625968212944038
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/88_1792628472944438493.json": [
+      4495,
+      1792628472941611585
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/203_1792631827312629883.json": [
+      5076,
+      1792631827310717192
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/148_1792630240864911437.json": [
+      4934,
+      1792630240864909462
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/260_1792633549306162860.json": [
+      4919,
+      1792633549303797402
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/144_1792630129127378769.json": [
+      4826,
+      1792630129125474817
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/20_1792626448622263908.json": [
+      5146,
+      1792626448620984298
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/201_1792631775078289360.json": [
+      5100,
+      1792631775077042218
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/64_1792627770573080986.json": [
+      5187,
+      1792627770572023699
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/166_1792630757157548578.json": [
+      5193,
+      1792630757156491516
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/52_1792627423460386110.json": [
+      5138,
+      1792627423460701058
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/231_1792632672016556527.json": [
+      5053,
+      1792632672015940839
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/63_1792627738854232302.json": [
+      5214,
+      1792627738850896190
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/35_1792626926946723237.json": [
+      5146,
+      1792626926944617072
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/171_1792630919376463194.json": [
+      5056,
+      1792630919376808549
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/187_1792631398761157632.json": [
+      5013,
+      1792631398758330179
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/257_1792633459521958253.json": [
+      4937,
+      1792633459517607509
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/37_1792626987293575813.json": [
+      5204,
+      1792626987293061789
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/242_1792633011381602940.json": [
+      5122,
+      1792633011380404249
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/266_1792633725567963253.json": [
+      4902,
+      1792633725567638495
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/41_1792627101237059679.json": [
+      4931,
+      1792627101233896141
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/205_1792631883856234617.json": [
+      5013,
+      1792631883856406068
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/113_1792629207693523813.json": [
+      5132,
+      1792629207693534613
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/138_1792629953125922119.json": [
+      5023,
+      1792629953122928499
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/90_1792628539367914868.json": [
+      4999,
+      1792628539362836910
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/191_1792631507980015194.json": [
+      5099,
+      1792631507974254582
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/177_1792631100611634333.json": [
+      5056,
+      1792631100609302958
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/101_1792628859577245981.json": [
+      5121,
+      1792628859576246328
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/19_1792626406482976509.json": [
+      5044,
+      1792626406480650881
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/273_1792633922255148146.json": [
+      5112,
+      1792633922252733900
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/93_1792628628937846205.json": [
+      5048,
+      1792628628936424782
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/5_1792625935675832767.json": [
+      4993,
+      1792625935672644552
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/65_1792627798727521314.json": [
+      5010,
+      1792627798724988813
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/141_1792630046788172662.json": [
+      5081,
+      1792630046782058017
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/184_1792631310509897013.json": [
+      4948,
+      1792631310506004871
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/197_1792631663375150916.json": [
+      5077,
+      1792631663373032144
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/254_1792633369100755612.json": [
+      4811,
+      1792633369100596682
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/7_1792625999338716652.json": [
+      5023,
+      1792625999337226484
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/263_1792633639087544639.json": [
+      4948,
+      1792633639085459880
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/51_1792627394175967703.json": [
+      5055,
+      1792627394175031528
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/194_1792631591932767478.json": [
+      4847,
+      1792631591930110695
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/270_1792633840193757163.json": [
+      4983,
+      1792633840189763048
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/179_1792631160730485827.json": [
+      4883,
+      1792631160729491988
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/185_1792631339583772982.json": [
+      4999,
+      1792631339578110357
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/95_1792628682516084611.json": [
+      4974,
+      1792628682513343632
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/147_1792630216943178805.json": [
+      5177,
+      1792630216941010945
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/28_1792626703085030273.json": [
+      5169,
+      1792626703082945305
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/167_1792630790017528280.json": [
+      5110,
+      1792630790016544094
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/77_1792628141146152445.json": [
+      5142,
+      1792628141142640705
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/47_1792627279609402777.json": [
+      4980,
+      1792627279607191211
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/72_1792627996939656844.json": [
+      5063,
+      1792627996934979938
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/33_1792626859878155473.json": [
+      5080,
+      1792626859876120171
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/237_1792632849135092695.json": [
+      5154,
+      1792632849134350821
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/61_1792627677083709783.json": [
+      5047,
+      1792627677080568634
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/199_1792631717708560652.json": [
+      5053,
+      1792631717707060848
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/274_1792633955669635435.json": [
+      4958,
+      1792633955668379233
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/192_1792631536267447415.json": [
+      5136,
+      1792631536263609307
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/258_1792633487911006029.json": [
+      5232,
+      1792633487905701574
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/196_1792631640581445024.json": [
+      4955,
+      1792631640580133022
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/178_1792631129667121516.json": [
+      5161,
+      1792631129665392966
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/124_1792629536043396281.json": [
+      5016,
+      1792629536038831765
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/206_1792631912703248880.json": [
+      5115,
+      1792631912701222067
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/70_1792627941077618317.json": [
+      5017,
+      1792627941077418862
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/21_1792626474207301402.json": [
+      4903,
+      1792626474205185339
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/189_1792631454691874216.json": [
+      5014,
+      1792631454687535578
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/240_1792632948037696575.json": [
+      5007,
+      1792632948035617095
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/57_1792627562750199630.json": [
+      4937,
+      1792627562747732701
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/78_1792628169527920645.json": [
+      4798,
+      1792628169523307142
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/173_1792630979445258726.json": [
+      5099,
+      1792630979444958327
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/165_1792630729961862998.json": [
+      5057,
+      1792630729960453051
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/271_1792633868225636483.json": [
+      5031,
+      1792633868225384707
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/186_1792631370344741759.json": [
+      4971,
+      1792631370342223809
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/76_1792628111636827822.json": [
+      5078,
+      1792628111633930340
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/104_1792628949098130747.json": [
+      4979,
+      1792628949093650214
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/89_1792628505929795784.json": [
+      5260,
+      1792628505926225591
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/181_1792631223780692583.json": [
+      5026,
+      1792631223777701166
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/42_1792627130247943317.json": [
+      5039,
+      1792627130242107590
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/83_1792628323879384756.json": [
+      5118,
+      1792628323874680201
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/149_1792630271564840975.json": [
+      5072,
+      1792630271564793453
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/98_1792628768372200833.json": [
+      5059,
+      1792628768366774484
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/31_1792626795602911138.json": [
+      4937,
+      1792626795599640973
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/119_1792629388848345083.json": [
+      4946,
+      1792629388848036391
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/259_1792633519633194465.json": [
+      4818,
+      1792633519632684154
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/128_1792629652721857395.json": [
+      5115,
+      1792629652719772661
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/60_1792627649397539570.json": [
+      5089,
+      1792627649395464194
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/45_1792627216872192620.json": [
+      5041,
+      1792627216866737011
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/94_1792628659609002784.json": [
+      5084,
+      1792628659608953433
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/253_1792633339602230566.json": [
+      4902,
+      1792633339600263495
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/121_1792629455023056173.json": [
+      5082,
+      1792629455021486038
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/105_1792628976721102072.json": [
+      4879,
+      1792628976718076355
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/176_1792631073812440720.json": [
+      4962,
+      1792631073813222321
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/209_1792632010036829763.json": [
+      5066,
+      1792632010035773969
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/248_1792633192012621886.json": [
+      5094,
+      1792633192010566743
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/133_1792629807211612044.json": [
+      5152,
+      1792629807212827566
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/234_1792632759861300267.json": [
+      4941,
+      1792632759861161814
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/211_1792632068910413579.json": [
+      5137,
+      1792632068909183579
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/256_1792633432150857144.json": [
+      5059,
+      1792633432149303096
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/4_1792625895870509865.json": [
+      5235,
+      1792625895872272018
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/66_1792627828416734133.json": [
+      5021,
+      1792627828413972405
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/151_1792630324765189723.json": [
+      5230,
+      1792630324764627706
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/159_1792630562278032460.json": [
+      4948,
+      1792630562276333491
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/223_1792632443813302977.json": [
+      5203,
+      1792632443812459286
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/164_1792630701880069232.json": [
+      4866,
+      1792630701876418415
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/225_1792632504991069631.json": [
+      5102,
+      1792632504989444210
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/73_1792628023260268288.json": [
+      4894,
+      1792628023259685811
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/2_1792625826500302355.json": [
+      5017,
+      1792625826499604701
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/172_1792630948941534646.json": [
+      5154,
+      1792630948940880343
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/23_1792626536815976375.json": [
+      5237,
+      1792626536813673264
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/34_1792626893534683430.json": [
+      5093,
+      1792626893532369898
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/161_1792630620405888478.json": [
+      5064,
+      1792630620404349916
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/212_1792632099033033233.json": [
+      5150,
+      1792632099029870239
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/43_1792627161913512971.json": [
+      5011,
+      1792627161910338029
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/137_1792629926544596246.json": [
+      4995,
+      1792629926543221308
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/18_1792626374090892849.json": [
+      4938,
+      1792626374088392533
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/103_1792628922248059199.json": [
+      4845,
+      1792628922249233034
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/107_1792629037173035011.json": [
+      5023,
+      1792629037170998532
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/136_1792629893620909069.json": [
+      5048,
+      1792629893619614974
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/79_1792628202378806125.json": [
+      5020,
+      1792628202376059236
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/145_1792630160415805206.json": [
+      4968,
+      1792630160413292199
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/241_1792632980383906517.json": [
+      5022,
+      1792632980380021158
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/150_1792630300009774504.json": [
+      5095,
+      1792630300008699478
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/216_1792632225374993394.json": [
+      5104,
+      1792632225372528861
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/224_1792632469492378588.json": [
+      5001,
+      1792632469492877960
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/130_1792629714822379788.json": [
+      5042,
+      1792629714818454669
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/210_1792632038760732250.json": [
+      4997,
+      1792632038760473321
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/127_1792629625213147898.json": [
+      4987,
+      1792629625212421309
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/156_1792630482851650641.json": [
+      4937,
+      1792630482848361442
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/106_1792629003301363403.json": [
+      5115,
+      1792629003298483519
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/8_1792626040331251274.json": [
+      5028,
+      1792626040325592864
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/193_1792631565544797426.json": [
+      5041,
+      1792631565544951232
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/222_1792632416378432920.json": [
+      5059,
+      1792632416376003125
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/198_1792631690850781024.json": [
+      4915,
+      1792631690846077456
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/204_1792631855568309957.json": [
+      5034,
+      1792631855567576479
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/26_1792626632183355994.json": [
+      5010,
+      1792626632182406679
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/214_1792632158209897793.json": [
+      4978,
+      1792632158207157504
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/139_1792629981659747935.json": [
+      4916,
+      1792629981654637662
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/48_1792627307184111005.json": [
+      4949,
+      1792627307179390420
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/279_1792634100714279222.json": [
+      5107,
+      1792634100711204890
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/56_1792627536400605632.json": [
+      5033,
+      1792627536398507422
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/114_1792629235604492003.json": [
+      5196,
+      1792629235601941947
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/269_1792633807306985523.json": [
+      5153,
+      1792633807302244985
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/97_1792628742956399481.json": [
+      5023,
+      1792628742954355900
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/0_1792625767009720676.json": [
+      5003,
+      1792625767007012100
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/169_1792630852025018026.json": [
+      5152,
+      1792630852024660117
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/85_1792628385392461884.json": [
+      5316,
+      1792628385391923490
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/255_1792633399320575113.json": [
+      5179,
+      1792633399320936207
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/233_1792632729906147370.json": [
+      5055,
+      1792632729904751576
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/155_1792630449849605657.json": [
+      5049,
+      1792630449848392169
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/265_1792633696457337208.json": [
+      5346,
+      1792633696456208864
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/126_1792629599532660493.json": [
+      5158,
+      1792629599533065563
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/13_1792626212327663708.json": [
+      4950,
+      1792626212327071065
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/1_1792625794683549944.json": [
+      5054,
+      1792625794679290232
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/108_1792629064217847796.json": [
+      5153,
+      1792629064215406798
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/25_1792626600446762072.json": [
+      4915,
+      1792626600442163798
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/115_1792629271136967831.json": [
+      4960,
+      1792629271134457864
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/243_1792633041250285006.json": [
+      5036,
+      1792633041248769711
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/183_1792631280912564499.json": [
+      4995,
+      1792631280909899311
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/227_1792632561287145193.json": [
+      4934,
+      1792632561282314736
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/182_1792631245669762208.json": [
+      4968,
+      1792631245665776164
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/142_1792630074744385546.json": [
+      5039,
+      1792630074741842374
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/118_1792629357537502213.json": [
+      5092,
+      1792629357535700948
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/38_1792627016240604611.json": [
+      5043,
+      1792627016241274385
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/143_1792630099310655781.json": [
+      5074,
+      1792630099305668159
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/32_1792626825973728873.json": [
+      4949,
+      1792626825971867794
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/92_1792628597155817847.json": [
+      5215,
+      1792628597151869154
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/220_1792632350480098240.json": [
+      4977,
+      1792632350474867022
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/81_1792628263655207293.json": [
+      4993,
+      1792628263653410781
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/39_1792627044929277814.json": [
+      5157,
+      1792627044929484641
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/207_1792631943757100987.json": [
+      4997,
+      1792631943754068683
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/9_1792626071796892982.json": [
+      5096,
+      1792626071793870120
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/16_1792626309956278811.json": [
+      4978,
+      1792626309955875261
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/87_1792628447235284208.json": [
+      4891,
+      1792628447233125015
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/50_1792627358533248794.json": [
+      5032,
+      1792627358532897508
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/175_1792631036831634129.json": [
+      4938,
+      1792631036833115004
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/174_1792631009820038859.json": [
+      5063,
+      1792631009817039689
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/117_1792629327267864872.json": [
+      4902,
+      1792629327263267143
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/276_1792634010803393368.json": [
+      4991,
+      1792634010799866934
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/157_1792630510115328117.json": [
+      5047,
+      1792630510112344806
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/217_1792632252984482999.json": [
+      5008,
+      1792632252985067642
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/53_1792627448419954101.json": [
+      5088,
+      1792627448414067299
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/213_1792632127697490174.json": [
+      4929,
+      1792632127694503610
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/281_1792634161245083061.json": [
+      4945,
+      1792634161242865124
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/250_1792633250120971010.json": [
+      5067,
+      1792633250119241189
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/125_1792629569800706097.json": [
+      5316,
+      1792629569797860866
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/275_1792633983271846101.json": [
+      4860,
+      1792633983268111874
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/162_1792630650422858426.json": [
+      4982,
+      1792630650420369327
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/59_1792627620420438049.json": [
+      4782,
+      1792627620418264372
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/277_1792634040631606160.json": [
+      5031,
+      1792634040631624744
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/160_1792630596857774406.json": [
+      4916,
+      1792630596856339780
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/200_1792631747761810828.json": [
+      5047,
+      1792631747760118252
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/249_1792633217587062299.json": [
+      5142,
+      1792633217582864660
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/27_1792626671735246903.json": [
+      5093,
+      1792626671730707760
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/132_1792629772885859107.json": [
+      5059,
+      1792629772885389023
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/112_1792629176089345692.json": [
+      5219,
+      1792629176089070944
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/278_1792634071883712206.json": [
+      4978,
+      1792634071879395495
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/44_1792627188809947626.json": [
+      5042,
+      1792627188806533435
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/120_1792629420178679153.json": [
+      5200,
+      1792629420174782894
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/232_1792632700862139040.json": [
+      5201,
+      1792632700860347883
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/55_1792627503018410549.json": [
+      5040,
+      1792627503016888493
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/218_1792632290802047982.json": [
+      5179,
+      1792632290797783780
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/168_1792630823093850396.json": [
+      5075,
+      1792630823092603364
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/228_1792632588138422313.json": [
+      4900,
+      1792632588134719004
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/102_1792628886749948805.json": [
+      5039,
+      1792628886748676402
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/272_1792633895147026788.json": [
+      5147,
+      1792633895145048008
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/116_1792629297371943301.json": [
+      4920,
+      1792629297366836922
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/221_1792632384259147929.json": [
+      4950,
+      1792632384255456793
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/49_1792627326293383477.json": [
+      4830,
+      1792627326291528372
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/158_1792630533599043908.json": [
+      5112,
+      1792630533596336488
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/268_1792633782703331517.json": [
+      5228,
+      1792633782698633980
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/71_1792627973690497316.json": [
+      5001,
+      1792627973686340989
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/215_1792632194410013484.json": [
+      5214,
+      1792632194407907759
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/123_1792629508556052189.json": [
+      4970,
+      1792629508551678941
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/131_1792629742035528922.json": [
+      4901,
+      1792629742029936362
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/86_1792628414301022143.json": [
+      4995,
+      1792628414300490838
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/202_1792631799318368112.json": [
+      4925,
+      1792631799313833902
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/239_1792632912068507921.json": [
+      5232,
+      1792632912067162178
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/264_1792633667509841010.json": [
+      4889,
+      1792633667508818225
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/152_1792630360212225754.json": [
+      5278,
+      1792630360212540251
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/135_1792629865597348319.json": [
+      5155,
+      1792629865595978639
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/208_1792631973705177177.json": [
+      5150,
+      1792631973702855694
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/236_1792632820422646514.json": [
+      4971,
+      1792632820417973520
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/69_1792627922139201958.json": [
+      5245,
+      1792627922136868657
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/247_1792633162737282433.json": [
+      5059,
+      1792633162734223412
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/252_1792633313512152012.json": [
+      5008,
+      1792633313511967320
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/111_1792629146169022317.json": [
+      5079,
+      1792629146168629502
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/62_1792627706034591775.json": [
+      5045,
+      1792627706029682093
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/190_1792631480886292476.json": [
+      4920,
+      1792631480884900612
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/140_1792630012554567034.json": [
+      5299,
+      1792630012550348642
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/219_1792632322174533371.json": [
+      5048,
+      1792632322170360099
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/180_1792631193335569193.json": [
+      5159,
+      1792631193329598832
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/282_1792634194200756307.json": [
+      5160,
+      1792634194198711912
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/30_1792626760373427148.json": [
+      4986,
+      1792626760371376958
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/91_1792628567633916956.json": [
+      5073,
+      1792628567631345545
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/262_1792633603121441478.json": [
+      4914,
+      1792633603118337248
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/54_1792627472964526430.json": [
+      4954,
+      1792627472963363396
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/129_1792629686251513998.json": [
+      4922,
+      1792629686247036868
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/67_1792627862250205793.json": [
+      5206,
+      1792627862247052998
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/84_1792628355187968293.json": [
+      5205,
+      1792628355183319315
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/122_1792629479939643924.json": [
+      5204,
+      1792629479936618129
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/75_1792628079485972398.json": [
+      5026,
+      1792628079485134962
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/134_1792629835712032328.json": [
+      5087,
+      1792629835708397223
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/82_1792628292235251699.json": [
+      5089,
+      1792628292230020006
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/235_1792632793283793693.json": [
+      4901,
+      1792632793277612520
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/229_1792632616840686363.json": [
+      5052,
+      1792632616839143860
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/146_1792630187683040428.json": [
+      5110,
+      1792630187681148999
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/15_1792626278110240327.json": [
+      4961,
+      1792626278107615280
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/261_1792633575551643515.json": [
+      5149,
+      1792633575547062343
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/230_1792632644265274175.json": [
+      5305,
+      1792632644263543102
+    ],
+    "runs/B_Qwen7B_seed17_6M/advantage_audits/46_1792627244329885637.json": [
+      5024,
+      1792627244326935966
+    ],
+    "runs/PURE_no_update_20261022_v2/preservation.json": [
+      456,
+      1792733131825292645
+    ],
+    "runs/PURE_no_update_20261022_v2/nvml_samples.jsonl": [
+      146804,
+      1792733131833293149
+    ],
+    "runs/PURE_no_update_20261022_v2/P_VR_loss_audit.json": [
+      7815,
+      1792733084626184587
+    ],
+    "runs/PURE_no_update_20261022_v2/scored_alignment.jsonl": [
+      318314,
+      1792733061204535761
+    ],
+    "runs/PURE_no_update_20261022_v2/signals.pt": [
+      3936822,
+      1792733069137102436
+    ],
+    "runs/PURE_no_update_20261022_v2/status.json": [
+      132,
+      1792733131825292645
+    ],
+    "runs/PURE_no_update_20261022_v2/initialization.json": [
+      6589,
+      1792732941298839704
+    ],
+    "runs/PURE_no_update_20261022_v2/generated_exact_ids.jsonl": [
+      268095,
+      1792733052511904888
+    ],
+    "runs/PURE_no_update_20261022_v2/P_PRM_loss_audit.json": [
+      7825,
+      1792733101187306972
+    ],
+    "runs/PURE_no_update_20261022_v2/originals_before.json": [
+      164617,
+      1792732903742467879
+    ],
+    "runs/PURE_no_update_20261022_v2/run_config.json": [
+      7680,
+      1792732904314460066
+    ],
+    "runs/PURE_no_update_20261022_v2/prm_loading.json": [
+      337,
+      1792732964944931411
+    ],
+    "runs/PURE_no_update_20261022_v2/stages.json": [
+      1578,
+      1792733130021178894
+    ],
+    "runs/PURE_no_update_20261022_v2/run.lock": [
+      0,
+      1792732897006560320
+    ],
+    "runs/PURE_no_update_20261022_v2/native_edge_forwards.json": [
+      5317,
+      1792733061332544969
+    ],
+    "runs/PURE_no_update_20261022_v2/pure_prm_interface.json": [
+      288,
+      1792732964944931411
+    ],
+    "runs/PURE_no_update_20261022_v2/nvml_peaks.json": [
+      1456,
+      1792733131833293149
+    ],
+    "runs/PURE_no_update_20261022_v2/result.json": [
+      3584,
+      1792733131825292645
+    ],
+    "runs/PURE_no_update_20261022_v3/preservation.json": [
+      456,
+      1792733942199676829
+    ],
+    "runs/PURE_no_update_20261022_v3/nvml_samples.jsonl": [
+      92081,
+      1792733942203676887
+    ],
+    "runs/PURE_no_update_20261022_v3/P_VR_loss_audit.json": [
+      7816,
+      1792733896634991598
+    ],
+    "runs/PURE_no_update_20261022_v3/scored_alignment.jsonl": [
+      318026,
+      1792733873818627916
+    ],
+    "runs/PURE_no_update_20261022_v3/signals.pt": [
+      3936822,
+      1792733881550752759
+    ],
+    "runs/PURE_no_update_20261022_v3/status.json": [
+      131,
+      1792733942199676829
+    ],
+    "runs/PURE_no_update_20261022_v3/initialization.json": [
+      6589,
+      1792733826957834599
+    ],
+    "runs/PURE_no_update_20261022_v3/generated_exact_ids.jsonl": [
+      268095,
+      1792733865038484123
+    ],
+    "runs/PURE_no_update_20261022_v3/P_PRM_loss_audit.json": [
+      7828,
+      1792733912831241277
+    ],
+    "runs/PURE_no_update_20261022_v3/originals_before.json": [
+      164617,
+      1792733797825307872
+    ],
+    "runs/PURE_no_update_20261022_v3/run_config.json": [
+      7680,
+      1792733798269316101
+    ],
+    "runs/PURE_no_update_20261022_v3/prm_loading.json": [
+      337,
+      1792733835421982691
+    ],
+    "runs/PURE_no_update_20261022_v3/stages.json": [
+      1594,
+      1792733940463651681
+    ],
+    "runs/PURE_no_update_20261022_v3/run.lock": [
+      0,
+      1792733795005255450
+    ],
+    "runs/PURE_no_update_20261022_v3/native_edge_forwards.json": [
+      5317,
+      1792733873958630193
+    ],
+    "runs/PURE_no_update_20261022_v3/pure_prm_interface.json": [
+      288,
+      1792733835425982761
+    ],
+    "runs/PURE_no_update_20261022_v3/nvml_peaks.json": [
+      1465,
+      1792733942203676887
+    ],
+    "runs/PURE_no_update_20261022_v3/result.json": [
+      3826,
+      1792733942199676829
+    ]
+  }
+}

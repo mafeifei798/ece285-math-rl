@@ -1,0 +1,9 @@
+Completed frozen offline comparison. No training authorized or started.
+Primary report: review.html
+Primary PURE/Qwen scores: remote/scoring_single/scored.jsonl and remote/qwen_single/scored.jsonl
+Fixed input: ../pure_empty_boundary_20261022/inputs.jsonl
+CPU replay: experiments/pure_official_prm_offline_20261022/analyze.py with explicit --qwen-scores, --pure-scores, --evidence paths above. Then finalize.py.
+Qwen original batch2 retained. Secondary old-batch comparison: qwen_old_batch2_sensitivity/.
+PURE first batch2 attempt failed .005 check, retained remote/supporting/scoring.log; single scoring is primary.
+9 empty positive scores for both PRMs; 8 replayable empties positive raw and whitened advantage. This is not historical B advantage or proof of whole-model training quality.
+User has NOT authorized formal training.

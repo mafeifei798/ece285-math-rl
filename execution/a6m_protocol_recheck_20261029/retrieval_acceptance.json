@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "new_raw_token_records_recounted": 1819,
+  "total_prediction_records_recounted": 7276,
+  "prediction_sha256": {
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/initial/math500.jsonl": "96d0ec60933002a14fe66115323068ecbe7926d84cac41069c181bd3769a7b54",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/initial/gsm8k.jsonl": "7d6977fe8566f54c79854c63b54977e843d4cc0365e83c801520a31fe29a903e",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/A/math500.jsonl": "e20da3649223e7ef9989ed554cacd05d8a10e9e804b6e8e64e26060d1a9613d2",
+    "evidence/runs/Final_four_eval_seed17_1M_20261029/A/gsm8k.jsonl": "57ca03b101f2c26a1da265e8892dfa28e7b7bf5051e3d99d64b6ae8b1324096f",
+    "evidence/runs/A_corrected_seed17_6M_20261022/evaluation/math500.jsonl": "febc9a0bb4ec58f499e6dc9bf0e9ab9dc5dd01690a1d8193eec772416fd21670",
+    "evidence/runs/A_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": "021a9ec789d5844b6768a74eed7f56f8b4b88302a48a47605d62de9215b88354",
+    "evidence/runs/A6M_protocol_recheck_20261029/A_6M/math500.jsonl": "4a898067c69b1d4ff0aa7475a439f0a9789fa2c3f8147103401f130ffbdbbe2b",
+    "evidence/runs/A6M_protocol_recheck_20261029/A_6M/gsm8k.jsonl": "c9970dda2f1a9f13f3d50acc42e20685e7b1020b7da9ff5d8e482a8bb8f3e0e0"
+  },
+  "archive_sha256": "64791c74043f9434a4bbb315ca0c9e3f54aa1bcc9584d51870a24f4184eb3366",
+  "historical_adapter_hash_checked": true,
+  "new_training": false,
+  "new_generation": false,
+  "early_read_case_texts_match_completed_predictions": true
+}

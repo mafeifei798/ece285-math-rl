@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-10-29T22:46:46.829561+00:00",
+  "controller_status": "failed",
+  "completed_stages": [
+    2,
+    10,
+    20
+  ],
+  "common_step": 20,
+  "failure": "P_PRM_stage_40 exited with 1; no automatic retry or budget extension",
+  "comparison_present": false,
+  "read_only": true,
+  "restarted": false,
+  "arm_receipts": {
+    "P_VR": {
+      "status.json": {
+        "status": "completed",
+        "arm": "P_VR",
+        "target_step": 40,
+        "batch_step": 40,
+        "optimizer_steps": 40,
+        "pid": 1881976,
+        "time": 1792756011.3066442,
+        "stage": "done",
+        "tokens": 843243,
+        "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0040",
+        "collapsed": false
+      }
+    },
+    "P_PRM": {
+      "status.json": {
+        "status": "failed",
+        "arm": "P_PRM",
+        "target_step": 40,
+        "batch_step": 36,
+        "optimizer_steps": 36,
+        "pid": 2004077,
+        "time": 1792757258.1809628,
+        "stage": "generation",
+        "tokens": 772581,
+        "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0036",
+        "error": "Token ID is outside the actor tokenizer vocabulary"
+      }
+    }
+  }
+}

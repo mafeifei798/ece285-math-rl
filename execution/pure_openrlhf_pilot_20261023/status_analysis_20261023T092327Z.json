@@ -1,0 +1,22 @@
+{
+  "status_snapshot_utc": "2026-10-23T09:23:27Z",
+  "completed": false,
+  "P_VR": {"batches": 2, "training_tokens": 52911, "responses": 64, "empty": 0, "short_content_le32": 2, "truncated": 8, "no_box": 7, "batch_seconds": [255.00167608261108, 263.1196436882019]},
+  "P_PRM": {"completed_batches": 0, "state": "initializing; actor and PRM checkpoint load observed; no failure receipt"},
+  "short_response_audit": {
+    "source": "runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/batches/0002.json",
+    "problem_id": "math/train/counting_and_probability/328",
+    "gold": "77",
+    "group_outcomes": "all eight wrong",
+    "examples": [
+      {"text": " $\\boxed{243}$\nGrammar: :::::", "content_tokens": 13, "verifier_reward": 0, "avg_advantage_at_loss": 0.1901552379131317},
+      {"text": " The correct answer is \\boxed{9}", "content_tokens": 9, "verifier_reward": 0, "avg_advantage_at_loss": 0.18479768931865692}
+    ],
+    "long_wrong_same_group_avg_advantage_range": [0.19759473204612732, 0.20380519330501556],
+    "interpretation": "Two genuinely wrong short responses receive positive normalized advantage, but so do all six long wrong responses in this group. This is P-VR, so it cannot be attributed to PRM. Not evidence yet of a learned short-response exploitation trend. Keep fixed official signal unchanged and monitor paired trajectories.",
+    "normalization_calls": 1,
+    "loss_extra_normalization_calls": 0
+  },
+  "accuracy_decision": "No final MATH500/GSM8K predictions yet; cannot compare arms or justify 6M extension. Continue only authorized pilot.",
+  "limits": "Only two P-VR updates. No P-PRM updated-policy outputs yet. Shared GPU performance is variable. No new training, reward, loss, verifier or prompt changes in this status check."
+}

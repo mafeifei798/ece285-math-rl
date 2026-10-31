@@ -1,0 +1,208 @@
+{
+  "created_utc": "2026-10-23T04:24:31.268491+00:00",
+  "all_998_prompt_pairs_match_frozen_templates": true,
+  "n_predictions": 3992,
+  "predictions_sha256": "7ae033a7a4752e8e41923f8ded9b4f3256f6d1971172df8b9548596462587767",
+  "method": "Descriptive status partitions and paired transitions using unchanged official outcomes. Parseable incorrect does not imply incorrect reasoning.",
+  "datasets": {
+    "math_validation": {
+      "cells": {
+        "A_original": {
+          "parseable_incorrect_answer": 155,
+          "unparseable": 6,
+          "correct": 289,
+          "truncated": 38,
+          "missing_or_invalid_box": 10
+        },
+        "A_final_only": {
+          "parseable_incorrect_answer": 135,
+          "correct": 287,
+          "missing_or_invalid_box": 36,
+          "truncated": 38,
+          "unparseable": 2
+        },
+        "B_original": {
+          "parseable_incorrect_answer": 169,
+          "correct": 272,
+          "truncated": 51,
+          "unparseable": 3,
+          "missing_or_invalid_box": 3
+        },
+        "B_final_only": {
+          "correct": 266,
+          "missing_or_invalid_box": 47,
+          "parseable_incorrect_answer": 145,
+          "truncated": 38,
+          "unparseable": 2
+        }
+      },
+      "prompt_transitions": {
+        "A": {
+          "correct_to_wrong": {
+            "missing_or_invalid_box": 23,
+            "parseable_incorrect_answer": 33,
+            "truncated": 4,
+            "unparseable": 1
+          },
+          "wrong_to_correct": {
+            "unparseable": 3,
+            "parseable_incorrect_answer": 41,
+            "truncated": 8,
+            "missing_or_invalid_box": 7
+          },
+          "status_transitions": {
+            "parseable_incorrect_answer -> parseable_incorrect_answer": 84,
+            "unparseable -> correct": 3,
+            "correct -> missing_or_invalid_box": 23,
+            "parseable_incorrect_answer -> correct": 41,
+            "correct -> correct": 228,
+            "truncated -> parseable_incorrect_answer": 16,
+            "correct -> parseable_incorrect_answer": 33,
+            "parseable_incorrect_answer -> missing_or_invalid_box": 10,
+            "truncated -> correct": 8,
+            "missing_or_invalid_box -> correct": 7,
+            "parseable_incorrect_answer -> truncated": 20,
+            "truncated -> truncated": 14,
+            "unparseable -> parseable_incorrect_answer": 2,
+            "correct -> truncated": 4,
+            "missing_or_invalid_box -> missing_or_invalid_box": 3,
+            "unparseable -> unparseable": 1,
+            "correct -> unparseable": 1
+          }
+        },
+        "B": {
+          "correct_to_wrong": {
+            "truncated": 7,
+            "missing_or_invalid_box": 30,
+            "parseable_incorrect_answer": 32,
+            "unparseable": 1
+          },
+          "wrong_to_correct": {
+            "parseable_incorrect_answer": 45,
+            "truncated": 17,
+            "unparseable": 1,
+            "missing_or_invalid_box": 1
+          },
+          "status_transitions": {
+            "parseable_incorrect_answer -> correct": 45,
+            "correct -> correct": 202,
+            "parseable_incorrect_answer -> missing_or_invalid_box": 14,
+            "parseable_incorrect_answer -> parseable_incorrect_answer": 90,
+            "correct -> truncated": 7,
+            "truncated -> parseable_incorrect_answer": 22,
+            "truncated -> correct": 17,
+            "parseable_incorrect_answer -> truncated": 20,
+            "correct -> missing_or_invalid_box": 30,
+            "correct -> parseable_incorrect_answer": 32,
+            "unparseable -> missing_or_invalid_box": 1,
+            "truncated -> truncated": 11,
+            "unparseable -> correct": 1,
+            "missing_or_invalid_box -> correct": 1,
+            "truncated -> missing_or_invalid_box": 1,
+            "missing_or_invalid_box -> parseable_incorrect_answer": 1,
+            "correct -> unparseable": 1,
+            "unparseable -> unparseable": 1,
+            "missing_or_invalid_box -> missing_or_invalid_box": 1
+          }
+        }
+      }
+    },
+    "gsm8k_validation": {
+      "cells": {
+        "A_original": {
+          "correct": 380,
+          "parseable_incorrect_answer": 78,
+          "missing_or_invalid_box": 34,
+          "truncated": 3,
+          "unparseable": 5
+        },
+        "A_final_only": {
+          "correct": 338,
+          "parseable_incorrect_answer": 118,
+          "missing_or_invalid_box": 27,
+          "truncated": 17
+        },
+        "B_original": {
+          "correct": 368,
+          "parseable_incorrect_answer": 96,
+          "missing_or_invalid_box": 21,
+          "truncated": 11,
+          "unparseable": 4
+        },
+        "B_final_only": {
+          "correct": 295,
+          "parseable_incorrect_answer": 132,
+          "truncated": 25,
+          "missing_or_invalid_box": 47,
+          "unparseable": 1
+        }
+      },
+      "prompt_transitions": {
+        "A": {
+          "correct_to_wrong": {
+            "parseable_incorrect_answer": 63,
+            "truncated": 10,
+            "missing_or_invalid_box": 17
+          },
+          "wrong_to_correct": {
+            "parseable_incorrect_answer": 26,
+            "missing_or_invalid_box": 17,
+            "truncated": 2,
+            "unparseable": 3
+          },
+          "status_transitions": {
+            "correct -> correct": 290,
+            "parseable_incorrect_answer -> correct": 26,
+            "missing_or_invalid_box -> correct": 17,
+            "parseable_incorrect_answer -> parseable_incorrect_answer": 49,
+            "correct -> parseable_incorrect_answer": 63,
+            "missing_or_invalid_box -> missing_or_invalid_box": 8,
+            "correct -> truncated": 10,
+            "missing_or_invalid_box -> truncated": 4,
+            "correct -> missing_or_invalid_box": 17,
+            "truncated -> correct": 2,
+            "truncated -> parseable_incorrect_answer": 1,
+            "missing_or_invalid_box -> parseable_incorrect_answer": 5,
+            "unparseable -> correct": 3,
+            "parseable_incorrect_answer -> truncated": 3,
+            "unparseable -> missing_or_invalid_box": 2
+          }
+        },
+        "B": {
+          "correct_to_wrong": {
+            "parseable_incorrect_answer": 69,
+            "missing_or_invalid_box": 35,
+            "truncated": 14
+          },
+          "wrong_to_correct": {
+            "missing_or_invalid_box": 12,
+            "truncated": 5,
+            "parseable_incorrect_answer": 27,
+            "unparseable": 1
+          },
+          "status_transitions": {
+            "correct -> correct": 250,
+            "parseable_incorrect_answer -> parseable_incorrect_answer": 60,
+            "missing_or_invalid_box -> correct": 12,
+            "correct -> parseable_incorrect_answer": 69,
+            "truncated -> correct": 5,
+            "parseable_incorrect_answer -> correct": 27,
+            "truncated -> parseable_incorrect_answer": 1,
+            "truncated -> truncated": 5,
+            "correct -> missing_or_invalid_box": 35,
+            "parseable_incorrect_answer -> truncated": 5,
+            "missing_or_invalid_box -> missing_or_invalid_box": 6,
+            "missing_or_invalid_box -> unparseable": 1,
+            "correct -> truncated": 14,
+            "unparseable -> correct": 1,
+            "parseable_incorrect_answer -> missing_or_invalid_box": 4,
+            "unparseable -> missing_or_invalid_box": 2,
+            "unparseable -> parseable_incorrect_answer": 1,
+            "missing_or_invalid_box -> parseable_incorrect_answer": 1,
+            "missing_or_invalid_box -> truncated": 1
+          }
+        }
+      }
+    }
+  }
+}

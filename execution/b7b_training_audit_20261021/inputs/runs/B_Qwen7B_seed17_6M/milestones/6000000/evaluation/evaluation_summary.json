@@ -1,0 +1,35 @@
+{
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "adapter": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/milestones/6000000/checkpoint-283",
+  "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+  "greedy": true,
+  "started_unix": 1792634228.6124067,
+  "datasets": {
+    "math500": {
+      "count": 500,
+      "correct": 276.0,
+      "accuracy": 0.552,
+      "generated_tokens": 361901,
+      "truncated": 40,
+      "predictions_sha256": "a13962e2986af46cebcca1f5a0167d528d85a627f7f9ed8afbfd9bf4bfc66bad"
+    },
+    "gsm8k": {
+      "count": 1319,
+      "correct": 894.0,
+      "accuracy": 0.6777862016679302,
+      "generated_tokens": 516288,
+      "truncated": 32,
+      "predictions_sha256": "67f945e1b06a9675e3e750a6693f2c008adfba7fd2c3f98cd1c4ae53e1c89c3f"
+    }
+  },
+  "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+  "prm800k_known_question_overlap": {
+    "train": 6993,
+    "validation": 500,
+    "math500": 0,
+    "gsm8k": 0,
+    "processbench_unique_questions": 847
+  },
+  "finished_unix": 1792637085.8437343,
+  "elapsed_seconds": 2857.2313277721405
+}

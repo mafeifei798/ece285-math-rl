@@ -1,0 +1,95 @@
+{
+  "checked_unix": 1793260979.0144856,
+  "dispatch.json": {
+    "pid": 1251847,
+    "launched_unix": 1793260723.9402761,
+    "command": [
+      "nice",
+      "-n",
+      "10",
+      "/srv/research/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/srv/research/ece285_math_rl_project/experiments/c_bounded_integration_20261029/no_update.py",
+      "--authorized-no-update"
+    ],
+    "run": "/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029",
+    "log": "/srv/research/ece285_math_rl_project/audits/C_bounded_integration_20261029_dispatch/runner.log",
+    "gpu": 1,
+    "sharing_authorized": true,
+    "free_memory_MiB": 49859,
+    "source_release_sha256": "579d4d0217c5224c1614adf6de5810b1d054bcda81099e638854831b29e625f5",
+    "scope": "Real-model no-update integration only; no formal RL or D adaptation",
+    "optimizer_updates_authorized": false
+  },
+  "status.json": {
+    "stage": "failed",
+    "pid": 1251847,
+    "unix": 1793260927.6607206,
+    "optimizer_steps": 0,
+    "error": ""
+  },
+  "stages.json": {
+    "build_actor_vllm_and_frozen_C": {
+      "seconds": 42.888633251190186,
+      "peak_allocated_GiB": 27.936872005462646,
+      "peak_reserved_GiB": 28.3984375
+    },
+    "parameter_hashes_before": {
+      "seconds": 28.860761404037476,
+      "peak_allocated_GiB": 27.861676692962646,
+      "peak_reserved_GiB": 28.3984375
+    },
+    "live_generation_scoring_and_TRL_buffer": {
+      "seconds": 85.4758312702179,
+      "peak_allocated_GiB": 29.030224800109863,
+      "peak_reserved_GiB": 29.767578125
+    },
+    "live_real_actor_forward_backward_no_update": {
+      "seconds": 34.534504890441895,
+      "peak_allocated_GiB": 29.870424270629883,
+      "peak_reserved_GiB": 30.4609375
+    }
+  },
+  "failure.json": {
+    "error": "",
+    "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_integration_20261029/no_update.py\", line 109, in main\n    assert max(diffs,default=0)<.002\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "time": 1793260927.6604033
+  },
+  "C_loading.json": {
+    "adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+    "C_steps": 512,
+    "frozen": true,
+    "no_new_PRM_adaptation": true,
+    "canonical_CRLF_adapter_used": true,
+    "native_marker_id": [
+      151651
+    ]
+  },
+  "independent_version.json": {
+    "version": "c_bounded_integration_20261029",
+    "source_release_sha256": "579d4d0217c5224c1614adf6de5810b1d054bcda81099e638854831b29e625f5",
+    "formal_RL_authorized": false,
+    "optimizer_constructed": false,
+    "actor_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+    "audit_overrides": {
+      "max_steps": 1,
+      "report_to": [],
+      "save_strategy": "no",
+      "logging_strategy": "no",
+      "vllm_gpu_memory_utilization": 0.15
+    },
+    "overrides_reason": "One no-update batch with lower vLLM cache footprint on shared GPU; reward/verifier/GRPO clipping/KL unchanged",
+    "sampling": {
+      "group_size": 8,
+      "questions": 4,
+      "temperature": 1.0,
+      "cap": 2048,
+      "seed": 17
+    }
+  },
+  "log_tail": "g CUDA graph shapes:  43%|\u2588\u2588\u2588\u2588\u258e     | 3/7 [00:01<00:02,  1.85it/s]\nCapturing CUDA graph shapes:  57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 4/7 [00:02<00:01,  1.91it/s]\nCapturing CUDA graph shapes:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 5/7 [00:02<00:01,  1.94it/s]\nCapturing CUDA graph shapes:  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 6/7 [00:03<00:00,  1.96it/s]\nCapturing CUDA graph shapes: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 7/7 [00:03<00:00,  1.93it/s]\nCapturing CUDA graph shapes: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 7/7 [00:03<00:00,  1.89it/s]\nINFO 10-29 15:59:21 [model_runner.py:1507] Graph capturing finished in 4 secs, took 0.09 GiB\nINFO 10-29 15:59:21 [worker.py:467] Free memory on device (45.16/79.25 GiB) on startup. Desired GPU memory utilization is (0.15, 11.89 GiB). Actual usage is 2.88 GiB for weight, 0.26 GiB for peak activation, 0.09 GiB for non-torch memory, and 0.09 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=9040474931` to fit into requested memory, or `--kv-cache-memory=44765642752` to fully utilize gpu memory. Current kv cache memory in use is 9294230323 bytes.\nINFO 10-29 15:59:21 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 8.05 seconds\nINFO 10-29 15:59:22 [llm.py:295] Supported_tasks: ['generate']\nINFO 10-29 15:59:22 [__init__.py:36] No IOProcessor plugins requested by the model\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:00<00:00, 104.49it/s]\nSome weights of the model checkpoint at /srv/research/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n{\"stage\": \"parameter_hashes_before\", \"pid\": 1251847, \"unix\": 1793260769.8444557, \"optimizer_steps\": 0}\n{\"stage\": \"live_generation_scoring_and_TRL_buffer\", \"pid\": 1251847, \"unix\": 1793260798.7068744, \"optimizer_steps\": 0}\n/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/model_executor/layers/sampler.py:876: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:306.)\n  selected_logprobs = logprobs[[\nYou're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.\n{\"stage\": \"live_real_actor_forward_backward_no_update\", \"pid\": 1251847, \"unix\": 1793260884.1834664, \"optimizer_steps\": 0}\n{\"stage\": \"saved_text_real_C_native_score_parity\", \"pid\": 1251847, \"unix\": 1793260918.7480845, \"optimizer_steps\": 0}\n{\"stage\": \"failed\", \"pid\": 1251847, \"unix\": 1793260927.6607206, \"optimizer_steps\": 0, \"error\": \"\"}\n[rank0]: Traceback (most recent call last):\n[rank0]:   File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_integration_20261029/no_update.py\", line 188, in <module>\n[rank0]:     if __name__=='__main__':main()\n[rank0]:                             ^^^^^^\n[rank0]:   File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_integration_20261029/no_update.py\", line 109, in main\n[rank0]:     assert max(diffs,default=0)<.002\n[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^\n[rank0]: AssertionError\n[rank0]:[W1029 16:02:08.171366988 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())\n",
+  "pid_alive": false,
+  "gpu": "0, 27879 MiB, 53274 MiB, 100 %\n1, 26302 MiB, 54851 MiB, 100 %\n"
+}

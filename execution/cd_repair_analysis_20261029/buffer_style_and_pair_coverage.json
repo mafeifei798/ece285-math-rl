@@ -1,0 +1,4126 @@
+{
+  "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "postprocess_status": "complete",
+  "buffer_counts": {
+    "0": {
+      "n": 827,
+      "bare_box": 4,
+      "single_step": 56,
+      "under64_tokens": 25,
+      "under128_tokens": 46
+    },
+    "1": {
+      "n": 817,
+      "bare_box": 3,
+      "single_step": 49,
+      "under64_tokens": 11,
+      "under128_tokens": 44
+    }
+  },
+  "question_group_counts": {
+    "all_wrong_or_no_valid_correct": 146,
+    "mixed": 256,
+    "all_correct_or_no_valid_wrong": 110
+  },
+  "available_pairs": 674,
+  "short_wrong_pairs": 31,
+  "bare_wrong_pairs": 4,
+  "per_question": [
+    {
+      "problem_id": "math/train/intermediate_algebra/1242",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1327",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/541",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/543",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/894",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1475",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/150",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/706",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/394",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1135",
+      "correct": 0,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/881",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/960",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/164",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/186",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/628",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/33",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/790",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/436",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/758",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/354",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1104",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/688",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 1,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/642",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/360",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/351",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/132",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/113",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/770",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/901",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/208",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/42",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/688",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/250",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/49",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/473",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/578",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/260",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/342",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/588",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1632",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/333",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/701",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/56",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/724",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/525",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/102",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/24",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/621",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/759",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/634",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/31",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1137",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/443",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/231",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/596",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/890",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1072",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1199",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/205",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/387",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1132",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/269",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/848",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/785",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/96",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/8",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 3,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1171",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/67",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/876",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/564",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/622",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/343",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/195",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/339",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/96",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/254",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/832",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/208",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/162",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1637",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/900",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/447",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/170",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 2,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1137",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/858",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1106",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/26",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/233",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1136",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/78",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/370",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/15",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/295",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/507",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/691",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 2,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/35",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1083",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/624",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/146",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/647",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/928",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/538",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/32",
+      "correct": 0,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1105",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/728",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1041",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/143",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/526",
+      "correct": 0,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/19",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1520",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/379",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/420",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/569",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/726",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/685",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/602",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/342",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/57",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/477",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/296",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/133",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/289",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/708",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/831",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/131",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/305",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/275",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1659",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1156",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/246",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/687",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/108",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/752",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/321",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/407",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1047",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/601",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/598",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/906",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/683",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/403",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/952",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/683",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/461",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1206",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/522",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/825",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/304",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/741",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/535",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/524",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/179",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/294",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/733",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/51",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/714",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/554",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/219",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 2,
+      "bare_wrong_pairs": 2
+    },
+    {
+      "problem_id": "math/train/algebra/492",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/697",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/388",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/379",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/190",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/426",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/98",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/490",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/381",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/255",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/922",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/114",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/646",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/52",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/101",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/309",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/209",
+      "correct": 0,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1741",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1392",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/885",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1468",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/690",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1523",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/205",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/71",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 2,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/442",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/411",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1636",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1390",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/284",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 3,
+      "bare_wrong_pairs": 1
+    },
+    {
+      "problem_id": "math/train/geometry/193",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1268",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/183",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/815",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/487",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/434",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/963",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/162",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/469",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/85",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/236",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/982",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/908",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/540",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/39",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/465",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/705",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/219",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/608",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1265",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/542",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/508",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/218",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1562",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/348",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/590",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/65",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/289",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/899",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/341",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/341",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/718",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/178",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/170",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/30",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/359",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/640",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/364",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1051",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/419",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/351",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 2,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/788",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1252",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1114",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/519",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/62",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/795",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/945",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/135",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/116",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/372",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/220",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/705",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/574",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/553",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/753",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/603",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/686",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 2,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1223",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1211",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/595",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1119",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/721",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/378",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1444",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1129",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/177",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/78",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/636",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/671",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/154",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/224",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1579",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1313",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/423",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/9",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1303",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/586",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/598",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/764",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/442",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/629",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/359",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/855",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/107",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/386",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/187",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/114",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 3,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/693",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/732",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1220",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/986",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/426",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1177",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/347",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/705",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/302",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/335",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/428",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1118",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/803",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1176",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/64",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/491",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/487",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/611",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/425",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/107",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/306",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1023",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 3,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/266",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/550",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1375",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1287",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/970",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/162",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/256",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/603",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/358",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1066",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1164",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/589",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1329",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/598",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/341",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/452",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1455",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/251",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/102",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/833",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/804",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/640",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/735",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/1139",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/648",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/108",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/35",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 1,
+      "bare_wrong_pairs": 1
+    },
+    {
+      "problem_id": "math/train/number_theory/492",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/210",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/763",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/180",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/7",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/406",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/900",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/807",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/415",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/352",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1116",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/736",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 1,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/551",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1042",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/276",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/95",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/493",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/461",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/334",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/208",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1314",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1310",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/206",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/973",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/424",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/999",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/460",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/894",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1466",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/437",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/434",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 2,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1074",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/718",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1078",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/298",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/661",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/157",
+      "correct": 1,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/403",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/551",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/635",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1240",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1101",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/454",
+      "correct": 0,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/120",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/293",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/793",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/194",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/733",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1209",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/369",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/404",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/499",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/195",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/183",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/189",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/111",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/477",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/661",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/522",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/818",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/95",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/225",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/58",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/687",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/41",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1572",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/247",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/221",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/533",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1738",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/37",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/641",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/140",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/873",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/704",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/426",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/186",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/353",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/280",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/493",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/819",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/510",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1226",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/934",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/320",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1272",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/576",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/727",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1246",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/974",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/75",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/110",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/194",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/99",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/298",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/523",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1173",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/247",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 1,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/501",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1660",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/313",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/408",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/307",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/616",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1311",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/690",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1376",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/240",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/112",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/849",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/347",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/767",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/237",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1522",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1086",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1053",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/445",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/268",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/793",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/80",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1141",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/513",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/589",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/896",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1065",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/633",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/209",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/153",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/143",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/872",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/797",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/271",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/166",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/407",
+      "correct": 0,
+      "wrong": 1,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/593",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/137",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/579",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1691",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/384",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/383",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/554",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/638",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/814",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/101",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/394",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/574",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/337",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/171",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1180",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/660",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/184",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/308",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/165",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/103",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/700",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/30",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/82",
+      "correct": 2,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/145",
+      "correct": 0,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/322",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 1,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/55",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/14",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/352",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/666",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/79",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/1",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/330",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1587",
+      "correct": 2,
+      "wrong": 1,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/712",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1736",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/848",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/315",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/precalculus/745",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/400",
+      "correct": 3,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/155",
+      "correct": 0,
+      "wrong": 3,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/159",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/1125",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/129",
+      "correct": 0,
+      "wrong": 4,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/762",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/number_theory/503",
+      "correct": 3,
+      "wrong": 1,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/792",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/134",
+      "correct": 4,
+      "wrong": 0,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/976",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1229",
+      "correct": 2,
+      "wrong": 2,
+      "pairs": 4,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/geometry/546",
+      "correct": 0,
+      "wrong": 2,
+      "pairs": 0,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/prealgebra/194",
+      "correct": 1,
+      "wrong": 2,
+      "pairs": 2,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/algebra/319",
+      "correct": 1,
+      "wrong": 1,
+      "pairs": 1,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/957",
+      "correct": 1,
+      "wrong": 3,
+      "pairs": 3,
+      "short_wrong_pairs": 0,
+      "bare_wrong_pairs": 0
+    }
+  ]
+}

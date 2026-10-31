@@ -1,0 +1,18 @@
+{
+  "source_repository": "HuggingFaceH4/prm800k-trl-dedup",
+  "source_revision": "fd8cba17d8214bfbabf6e7e10f29da4e6614dd6c",
+  "source_sha256": "d9e39ca727f8000c158f3baf51c7fe0c175f86146ad9250c2965f48172006864",
+  "sha256": "d0ce3590b256a3f30d951c9ee87acbf1dd46faca51a39f72f10b3245c7be898d",
+  "count": 2048,
+  "labels": {
+    "0": 1024,
+    "1": 1024
+  },
+  "excluded": {},
+  "forbidden_question_overlap": 0,
+  "data_admission_version": 2,
+  "conflicting_source_prefixes": 1831,
+  "conflicting_source_records": 279951,
+  "selection": "Exclude both labels for conflicting native prefixes across entire eligible source; deterministic one prefix per question per class then hash-select 1024 per class",
+  "boundaries": "original annotated step list preserved; supervision only at final native marker of each prefix"
+}

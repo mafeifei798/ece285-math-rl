@@ -1,0 +1,19 @@
+https://github.com/hiyouga/EasyR1/blob/602a12820f69cf45ea98de08a63b3509313a7d02/examples/qwen3_4b_math_grpo_lora.sh
+Upstream blob: 228f062f368829891063240285033132b506f1c9
+EXCERPT ONLY
+1: #!/bin/bash
+2: 
+3: set -x
+4: 
+5: MODEL_PATH=Qwen/Qwen3-4B  # replace it with your local file path
+6: 
+7: python3 -m verl.trainer.main \
+8:     config=examples/config.yaml \
+9:     data.max_response_length=2048 \
+10:     worker.actor.model.model_path=${MODEL_PATH} \
+11:     worker.actor.model.lora.rank=64 \
+12:     worker.actor.model.lora.alpha=64 \
+13:     worker.actor.optim.lr=1e-5 \
+14:     worker.rollout.tensor_parallel_size=1 \
+15:     trainer.experiment_name=qwen3_4b_math_grpo_lora \
+16:     trainer.n_gpus_per_node=1

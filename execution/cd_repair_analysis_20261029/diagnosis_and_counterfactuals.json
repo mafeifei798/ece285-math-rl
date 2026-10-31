@@ -1,0 +1,1024 @@
+{
+  "optimizer_updates": 0,
+  "new_model_calls": 0,
+  "new_training": false,
+  "analysis_only": true,
+  "selection": "All frozen groups included. No threshold selected using these diagnostics.",
+  "cases": [
+    {
+      "example_id": "old-case-78",
+      "question": "The equation $a^7xy-a^6y-a^5x=a^4(b^4-1)$ is equivalent to the equation $(a^mx-a^n)(a^py-a^2)=a^4b^4$ for some integers $m$, $n$, and $p$.  Find $mnp$.",
+      "completion": " \\boxed{-70}",
+      "style": {
+        "bare_box": true,
+        "characters": 11,
+        "paragraph_steps": 1
+      },
+      "arms": {
+        "B": {
+          "step_scores": [
+            0.05749327689409256
+          ],
+          "process_min": 0.05749327689409256,
+          "reward": 0.011498655378818513,
+          "group_reward_mean": 0.005801604216685519,
+          "group_reward_sample_std": 0.004390770959320861,
+          "advantage": 1.2686131239991012,
+          "eligible_group_members": 7,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 1.0,
+            "sws_training_pool": 7.0,
+            "mean_diagnostic_only": 7.0
+          }
+        },
+        "C": {
+          "step_scores": [
+            0.2393493503332138
+          ],
+          "process_min": 0.2393493503332138,
+          "reward": 0.04786987006664276,
+          "group_reward_mean": 0.009702738971100189,
+          "group_reward_sample_std": 0.01674475113423423,
+          "advantage": 2.2658173635974914,
+          "eligible_group_members": 7,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 1.0,
+            "sws_training_pool": 1.0,
+            "mean_diagnostic_only": 6.0
+          }
+        },
+        "D": {
+          "step_scores": [
+            0.00010889690747717395
+          ],
+          "process_min": 0.00010889690747717395,
+          "reward": 2.1779381495434794e-05,
+          "group_reward_mean": 2.741538611417127e-05,
+          "group_reward_sample_std": 2.5518629570413968e-05,
+          "advantage": -0.04490173220046995,
+          "eligible_group_members": 7,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 4.0,
+            "sws_training_pool": 6.0,
+            "mean_diagnostic_only": 6.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "old-case-2095",
+      "question": "Let $f(x)$ and $g(x)$ be nonzero polynomials such that\n\\[f(g(x)) = f(x) g(x).\\]If $g(2) = 37,$ find $g(x).$",
+      "completion": " \\boxed{g(x) = 2x^2-3}",
+      "style": {
+        "bare_box": true,
+        "characters": 21,
+        "paragraph_steps": 1
+      },
+      "arms": {
+        "B": {
+          "step_scores": [
+            0.015072628855705261
+          ],
+          "process_min": 0.015072628855705261,
+          "reward": 0.0030145257711410526,
+          "group_reward_mean": 0.007610757369548082,
+          "group_reward_sample_std": 0.01529630349610839,
+          "advantage": -0.2985282477989946,
+          "eligible_group_members": 5,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 4.0,
+            "sws_training_pool": 5.0,
+            "mean_diagnostic_only": 5.0
+          }
+        },
+        "C": {
+          "step_scores": [
+            0.03210070729255676
+          ],
+          "process_min": 0.03210070729255676,
+          "reward": 0.006420141458511353,
+          "group_reward_mean": 0.0022707647731294855,
+          "group_reward_sample_std": 0.002662807315757019,
+          "advantage": 1.5018697666135217,
+          "eligible_group_members": 5,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 1.0,
+            "sws_training_pool": 4.0,
+            "mean_diagnostic_only": 4.0
+          }
+        },
+        "D": {
+          "step_scores": [
+            7.254361844388768e-05
+          ],
+          "process_min": 7.254361844388768e-05,
+          "reward": 1.4508723688777536e-05,
+          "group_reward_mean": 2.0343710048109642e-05,
+          "group_reward_sample_std": 3.1880442322601526e-05,
+          "advantage": -0.04424451890187506,
+          "eligible_group_members": 5,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 4.0,
+            "sws_training_pool": 5.0,
+            "mean_diagnostic_only": 5.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "old-case-4975",
+      "question": "The vertices of an equilateral triangle lie on the hyperbola $xy=1$, and a vertex of this hyperbola is the centroid of the triangle. What is the square of the area of the triangle?",
+      "completion": " \\boxed{ {3} \\times \\times \\times \\times \\times \\times \\times }\n\nI really dont understand it.\nThis is my first time posting in a math community. I hope am doing it because I really wanna understand it. \n\nWell, I have noticed you doing FTW problems. did you join AoPS a couple of times? if so, please use the search function.\nThe answer is $\\boxed{9\\sqrt{3}}$. (The link below gave me all the information I needed.)\n\nThanks. But I just dont know where to look it up. I already signed up for Alcumus AoPS\nThe search function is pretty standard. You can see it by searching. Just go to the header, and you see search results with the word written on top; clicking on it will bring you to the search results.\n\nOh ok, I understand now. Thank you so much!\nIt'd be $3\\sqrt{3}$ and there are many similar problems from the 2008 USAMO.",
+      "style": {
+        "bare_box": false,
+        "characters": 825,
+        "paragraph_steps": 5
+      },
+      "arms": {
+        "B": {
+          "step_scores": [
+            0.02843603491783142,
+            0.6863700151443481,
+            0.1465752124786377,
+            0.8766343593597412,
+            0.4799911379814148
+          ],
+          "process_min": 0.02843603491783142,
+          "reward": 0.005687206983566284,
+          "group_reward_mean": 0.007077958289301023,
+          "group_reward_sample_std": 0.008475090983452937,
+          "advantage": -0.162185020359367,
+          "eligible_group_members": 6,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 4.0,
+            "sws_training_pool": 4.0,
+            "mean_diagnostic_only": 6.0
+          }
+        },
+        "C": {
+          "step_scores": [
+            0.10594827681779861,
+            0.7010483145713806,
+            0.05877656117081642,
+            0.6279512047767639,
+            0.16105617582798004
+          ],
+          "process_min": 0.05877656117081642,
+          "reward": 0.011755312234163285,
+          "group_reward_mean": 0.0022375216030923184,
+          "group_reward_sample_std": 0.003941136287094541,
+          "advantage": 2.3552262488491693,
+          "eligible_group_members": 6,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 1.0,
+            "sws_training_pool": 2.0,
+            "mean_diagnostic_only": 5.0
+          }
+        },
+        "D": {
+          "step_scores": [
+            7.722191367065534e-05,
+            0.0025509123224765062,
+            0.00041731575038284063,
+            0.0037072531413286924,
+            0.0014103584690019488
+          ],
+          "process_min": 7.722191367065534e-05,
+          "reward": 1.544438273413107e-05,
+          "group_reward_mean": 1.0100944621171948e-05,
+          "group_reward_sample_std": 7.253467486584737e-06,
+          "advantage": 0.04982065265003759,
+          "eligible_group_members": 6,
+          "all_wrong": true,
+          "aggregator_ranks": {
+            "min": 2.0,
+            "sws_training_pool": 2.0,
+            "mean_diagnostic_only": 2.0
+          }
+        }
+      }
+    }
+  ],
+  "length_pairs": {
+    "B": {
+      "mixed": {
+        "pairs": 336,
+        "shorter_wins_fraction": 0.49702380952380953
+      },
+      "all_wrong": {
+        "pairs": 266,
+        "shorter_wins_fraction": 0.5714285714285714
+      },
+      "all_correct": {
+        "pairs": 405,
+        "shorter_wins_fraction": 0.5135802469135803
+      }
+    },
+    "C": {
+      "mixed": {
+        "pairs": 336,
+        "shorter_wins_fraction": 0.5610119047619048
+      },
+      "all_wrong": {
+        "pairs": 266,
+        "shorter_wins_fraction": 0.6466165413533834
+      },
+      "all_correct": {
+        "pairs": 405,
+        "shorter_wins_fraction": 0.5679012345679012
+      }
+    },
+    "D": {
+      "mixed": {
+        "pairs": 336,
+        "shorter_wins_fraction": 0.6294642857142857
+      },
+      "all_wrong": {
+        "pairs": 266,
+        "shorter_wins_fraction": 0.5601503759398496
+      },
+      "all_correct": {
+        "pairs": 405,
+        "shorter_wins_fraction": 0.6518518518518519
+      }
+    }
+  },
+  "PB": {
+    "B": {
+      "min": {
+        "answer_correct_validity_AUROC": 0.9427490234375,
+        "valid_acceptance": 0.90625,
+        "invalid_answer_correct_acceptance": 0.171875,
+        "mean_valid_sequence_score": 0.8793408150959294,
+        "mean_invalid_answer_correct_sequence_score": 0.20601789111242397
+      },
+      "sws_training_pool": {
+        "answer_correct_validity_AUROC": 0.94189453125,
+        "valid_acceptance": 0.9375,
+        "invalid_answer_correct_acceptance": 0.1875,
+        "mean_valid_sequence_score": 0.9141914604640645,
+        "mean_invalid_answer_correct_sequence_score": 0.29499439811631717
+      },
+      "mean_diagnostic_only": {
+        "answer_correct_validity_AUROC": 0.943603515625,
+        "valid_acceptance": 1.0,
+        "invalid_answer_correct_acceptance": 0.78125,
+        "mean_valid_sequence_score": 0.9663019049515419,
+        "mean_invalid_answer_correct_sequence_score": 0.6874014508754086
+      },
+      "step_distribution": {
+        "valid_mean_step_score": 0.9696097388084087,
+        "valid_mean_sequence_min": 0.8793408150959294,
+        "valid_fraction_steps_below_half": 0.019021739130434784,
+        "valid_step_count": 368,
+        "valid_steps_below_half": 7,
+        "first_error_mean_score": 0.2654716036286118
+      },
+      "retention_term_logit_directions": {
+        "known_valid_steps_teacher_KL_gradient": 0.0,
+        "answer_correct_first_error_actual_SWS_success_gradient": -0.20693170000139954,
+        "answer_correct_first_error_teacher_KL_gradient": 0.0,
+        "answer_correct_first_error_teacher_KL_trajectory_averaged_gradient": 0.0,
+        "reference": "SWS success derivative=-w_t*p_t*(1-p_t)/sum(w*p), detached w. KL derivative=(p_current-p_B)/T. Raw KL derivative also shown before step averaging.",
+        "parameter_gradient_or_training_result": false
+      }
+    },
+    "C": {
+      "min": {
+        "answer_correct_validity_AUROC": 0.95068359375,
+        "valid_acceptance": 0.875,
+        "invalid_answer_correct_acceptance": 0.09375,
+        "mean_valid_sequence_score": 0.8416045486555959,
+        "mean_invalid_answer_correct_sequence_score": 0.13930883051943965
+      },
+      "sws_training_pool": {
+        "answer_correct_validity_AUROC": 0.950439453125,
+        "valid_acceptance": 0.90625,
+        "invalid_answer_correct_acceptance": 0.109375,
+        "mean_valid_sequence_score": 0.8809951057464882,
+        "mean_invalid_answer_correct_sequence_score": 0.21522766391074813
+      },
+      "mean_diagnostic_only": {
+        "answer_correct_validity_AUROC": 0.954345703125,
+        "valid_acceptance": 1.0,
+        "invalid_answer_correct_acceptance": 0.5625,
+        "mean_valid_sequence_score": 0.9496027031798671,
+        "mean_invalid_answer_correct_sequence_score": 0.5589146744901271
+      },
+      "step_distribution": {
+        "valid_mean_step_score": 0.952339160403505,
+        "valid_mean_sequence_min": 0.8416045486555959,
+        "valid_fraction_steps_below_half": 0.035326086956521736,
+        "valid_step_count": 368,
+        "valid_steps_below_half": 13,
+        "first_error_mean_score": 0.18628444057412707
+      },
+      "logit_drift_vs_B": {
+        "valid_steps_mean": -0.8496235106666912,
+        "first_error_mean": -0.793463172250934
+      },
+      "retention_term_logit_directions": {
+        "known_valid_steps_teacher_KL_gradient": -0.017270578404903696,
+        "answer_correct_first_error_actual_SWS_success_gradient": -0.18658967665358855,
+        "answer_correct_first_error_teacher_KL_gradient": -0.08549007028341293,
+        "answer_correct_first_error_teacher_KL_trajectory_averaged_gradient": -0.01361600613557249,
+        "reference": "SWS success derivative=-w_t*p_t*(1-p_t)/sum(w*p), detached w. KL derivative=(p_current-p_B)/T. Raw KL derivative also shown before step averaging.",
+        "parameter_gradient_or_training_result": false
+      }
+    },
+    "D": {
+      "min": {
+        "answer_correct_validity_AUROC": 0.869873046875,
+        "valid_acceptance": 0.140625,
+        "invalid_answer_correct_acceptance": 0.0,
+        "mean_valid_sequence_score": 0.1551502100010964,
+        "mean_invalid_answer_correct_sequence_score": 0.00798058796098644
+      },
+      "sws_training_pool": {
+        "answer_correct_validity_AUROC": 0.7646484375,
+        "valid_acceptance": 0.15625,
+        "invalid_answer_correct_acceptance": 0.0,
+        "mean_valid_sequence_score": 0.19243207415971308,
+        "mean_invalid_answer_correct_sequence_score": 0.020876636265160797
+      },
+      "mean_diagnostic_only": {
+        "answer_correct_validity_AUROC": 0.712646484375,
+        "valid_acceptance": 0.3125,
+        "invalid_answer_correct_acceptance": 0.0625,
+        "mean_valid_sequence_score": 0.3858773746506821,
+        "mean_invalid_answer_correct_sequence_score": 0.1463194959762433
+      },
+      "step_distribution": {
+        "valid_mean_step_score": 0.35930129252635057,
+        "valid_mean_sequence_min": 0.1551502100010964,
+        "valid_fraction_steps_below_half": 0.6521739130434783,
+        "valid_step_count": 368,
+        "valid_steps_below_half": 240,
+        "first_error_mean_score": 0.008057941009539604
+      },
+      "logit_drift_vs_B": {
+        "valid_steps_mean": -8.615440724132357,
+        "first_error_mean": -5.638244147264883
+      },
+      "retention_term_logit_directions": {
+        "known_valid_steps_teacher_KL_gradient": -0.6103084462820582,
+        "answer_correct_first_error_actual_SWS_success_gradient": -0.0998207423558875,
+        "answer_correct_first_error_teacher_KL_gradient": -0.28592754904238404,
+        "answer_correct_first_error_teacher_KL_trajectory_averaged_gradient": -0.04920431776035744,
+        "reference": "SWS success derivative=-w_t*p_t*(1-p_t)/sum(w*p), detached w. KL derivative=(p_current-p_B)/T. Raw KL derivative also shown before step averaging.",
+        "parameter_gradient_or_training_result": false
+      }
+    }
+  },
+  "reward_replay": {
+    "B/min": {
+      "probe/mixed/original": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8327840626709704,
+        "max_abs_change_vs_outcome_only": 0.305216320138541
+      },
+      "probe/mixed/outcome_gate_same_GRPO_normalization": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8336140048286241,
+        "max_abs_change_vs_outcome_only": 0.305216320138541
+      },
+      "probe/mixed/bounded_correct_only_process_advantage": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8361786959101086,
+        "max_abs_change_vs_outcome_only": 0.1339525319635868
+      },
+      "probe/all_wrong/original": {
+        "groups": 16,
+        "wrong_positive": 46,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.7460669436744362,
+        "max_abs_change_vs_outcome_only": 2.4665581169831445
+      },
+      "probe/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_correct/original": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.8148019763942411,
+        "max_abs_change_vs_outcome_only": 2.3421532081149725
+      },
+      "probe/all_correct/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.8148019763942411,
+        "max_abs_change_vs_outcome_only": 2.3421532081149725
+      },
+      "probe/all_correct/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.04892334587148071,
+        "max_abs_change_vs_outcome_only": 0.12589812567457556
+      },
+      "illustrations/all_wrong/original": {
+        "groups": 3,
+        "wrong_positive": 8,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.7421196622101194,
+        "max_abs_change_vs_outcome_only": 2.433867601458904
+      },
+      "illustrations/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "illustrations/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      }
+    },
+    "B/sws_training_pool": {
+      "probe/mixed/original": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8328837527223083,
+        "max_abs_change_vs_outcome_only": 0.25069792009664854
+      },
+      "probe/mixed/outcome_gate_same_GRPO_normalization": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8340179012162892,
+        "max_abs_change_vs_outcome_only": 0.24419576617893796
+      },
+      "probe/mixed/bounded_correct_only_process_advantage": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8361786959101086,
+        "max_abs_change_vs_outcome_only": 0.13287223148127225
+      },
+      "probe/all_wrong/original": {
+        "groups": 16,
+        "wrong_positive": 60,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.7747785033631858,
+        "max_abs_change_vs_outcome_only": 2.33650203260286
+      },
+      "probe/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_correct/original": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.7984144105973907,
+        "max_abs_change_vs_outcome_only": 2.4429420222578178
+      },
+      "probe/all_correct/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.7984144105973907,
+        "max_abs_change_vs_outcome_only": 2.4429420222578178
+      },
+      "probe/all_correct/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.0443535020842668,
+        "max_abs_change_vs_outcome_only": 0.13263288523947717
+      },
+      "illustrations/all_wrong/original": {
+        "groups": 3,
+        "wrong_positive": 8,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.759012878478008,
+        "max_abs_change_vs_outcome_only": 1.9782751101266591
+      },
+      "illustrations/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "illustrations/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      }
+    },
+    "C/min": {
+      "probe/mixed/original": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8331206544875741,
+        "max_abs_change_vs_outcome_only": 0.29840658072757076
+      },
+      "probe/mixed/outcome_gate_same_GRPO_normalization": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.833948130613301,
+        "max_abs_change_vs_outcome_only": 0.2950800954224286
+      },
+      "probe/mixed/bounded_correct_only_process_advantage": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8361786959101086,
+        "max_abs_change_vs_outcome_only": 0.14654777854681011
+      },
+      "probe/all_wrong/original": {
+        "groups": 16,
+        "wrong_positive": 34,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.6896773155419591,
+        "max_abs_change_vs_outcome_only": 2.466652546628455
+      },
+      "probe/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_correct/original": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.7814194278017501,
+        "max_abs_change_vs_outcome_only": 2.4187940389860003
+      },
+      "probe/all_correct/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.7814194278017501,
+        "max_abs_change_vs_outcome_only": 2.4187940389860003
+      },
+      "probe/all_correct/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.0393579796758786,
+        "max_abs_change_vs_outcome_only": 0.1411607380025089
+      },
+      "illustrations/all_wrong/original": {
+        "groups": 3,
+        "wrong_positive": 6,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.7097529474066756,
+        "max_abs_change_vs_outcome_only": 2.3552262488491693
+      },
+      "illustrations/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "illustrations/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      }
+    },
+    "C/sws_training_pool": {
+      "probe/mixed/original": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.833293515248961,
+        "max_abs_change_vs_outcome_only": 0.2784624896834901
+      },
+      "probe/mixed/outcome_gate_same_GRPO_normalization": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8343561802201588,
+        "max_abs_change_vs_outcome_only": 0.2721884423920043
+      },
+      "probe/mixed/bounded_correct_only_process_advantage": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8361786959101086,
+        "max_abs_change_vs_outcome_only": 0.13661968099840371
+      },
+      "probe/all_wrong/original": {
+        "groups": 16,
+        "wrong_positive": 56,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.7143811550800452,
+        "max_abs_change_vs_outcome_only": 2.412257270969101
+      },
+      "probe/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_correct/original": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.7639389737611361,
+        "max_abs_change_vs_outcome_only": 2.4585362736408873
+      },
+      "probe/all_correct/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.7639389737611361,
+        "max_abs_change_vs_outcome_only": 2.4585362736408873
+      },
+      "probe/all_correct/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.033693740109051566,
+        "max_abs_change_vs_outcome_only": 0.1472054018602546
+      },
+      "illustrations/all_wrong/original": {
+        "groups": 3,
+        "wrong_positive": 10,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.7743344768319135,
+        "max_abs_change_vs_outcome_only": 2.0289426258857612
+      },
+      "illustrations/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "illustrations/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      }
+    },
+    "D/min": {
+      "probe/mixed/original": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8358309776451393,
+        "max_abs_change_vs_outcome_only": 0.37929528518865246
+      },
+      "probe/mixed/outcome_gate_same_GRPO_normalization": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.835830996616397,
+        "max_abs_change_vs_outcome_only": 0.37928797919243434
+      },
+      "probe/mixed/bounded_correct_only_process_advantage": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8361786959101086,
+        "max_abs_change_vs_outcome_only": 0.1406011489278171
+      },
+      "probe/all_wrong/original": {
+        "groups": 16,
+        "wrong_positive": 50,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.12026794281704022,
+        "max_abs_change_vs_outcome_only": 1.5590469172389265
+      },
+      "probe/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_correct/original": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.30758642008928644,
+        "max_abs_change_vs_outcome_only": 2.466929051269103
+      },
+      "probe/all_correct/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.30758642008928644,
+        "max_abs_change_vs_outcome_only": 2.466929051269103
+      },
+      "probe/all_correct/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.0015242679897113478,
+        "max_abs_change_vs_outcome_only": 0.07705012120313769
+      },
+      "illustrations/all_wrong/original": {
+        "groups": 3,
+        "wrong_positive": 10,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.12567127589501895,
+        "max_abs_change_vs_outcome_only": 0.574124082295592
+      },
+      "illustrations/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "illustrations/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      }
+    },
+    "D/sws_training_pool": {
+      "probe/mixed/original": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8358041087540187,
+        "max_abs_change_vs_outcome_only": 0.3940640948455309
+      },
+      "probe/mixed/outcome_gate_same_GRPO_normalization": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8358046011245575,
+        "max_abs_change_vs_outcome_only": 0.394038636183835
+      },
+      "probe/mixed/bounded_correct_only_process_advantage": {
+        "groups": 32,
+        "wrong_positive": 0,
+        "wrong_count": 140,
+        "mean_abs_advantage": 0.8361786959101086,
+        "max_abs_change_vs_outcome_only": 0.14660086242213327
+      },
+      "probe/all_wrong/original": {
+        "groups": 16,
+        "wrong_positive": 41,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.4192177490256994,
+        "max_abs_change_vs_outcome_only": 2.1796565482687895
+      },
+      "probe/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 128,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "probe/all_correct/original": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.5888568697330054,
+        "max_abs_change_vs_outcome_only": 2.45111401753274
+      },
+      "probe/all_correct/outcome_gate_same_GRPO_normalization": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.5888568697330054,
+        "max_abs_change_vs_outcome_only": 2.45111401753274
+      },
+      "probe/all_correct/bounded_correct_only_process_advantage": {
+        "groups": 16,
+        "wrong_positive": 0,
+        "wrong_count": 0,
+        "mean_abs_advantage": 0.0025921893766608656,
+        "max_abs_change_vs_outcome_only": 0.0838848005352571
+      },
+      "illustrations/all_wrong/original": {
+        "groups": 3,
+        "wrong_positive": 6,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.4368750443758285,
+        "max_abs_change_vs_outcome_only": 2.150850474645659
+      },
+      "illustrations/all_wrong/outcome_gate_same_GRPO_normalization": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      },
+      "illustrations/all_wrong/bounded_correct_only_process_advantage": {
+        "groups": 3,
+        "wrong_positive": 0,
+        "wrong_count": 24,
+        "mean_abs_advantage": 0.0,
+        "max_abs_change_vs_outcome_only": 0.0
+      }
+    }
+  },
+  "logit_shift_stress": {
+    "B": {
+      "0.0": {
+        "AUROC_unchanged": 0.9427490234375,
+        "valid_acceptance": 0.90625,
+        "invalid_answer_correct_acceptance": 0.171875
+      },
+      "2.302585092994046": {
+        "AUROC_unchanged": 0.9427490234375,
+        "valid_acceptance": 0.984375,
+        "invalid_answer_correct_acceptance": 0.53125
+      },
+      "4.605170185988092": {
+        "AUROC_unchanged": 0.9427490234375,
+        "valid_acceptance": 0.984375,
+        "invalid_answer_correct_acceptance": 0.953125
+      }
+    },
+    "C": {
+      "0.0": {
+        "AUROC_unchanged": 0.95068359375,
+        "valid_acceptance": 0.875,
+        "invalid_answer_correct_acceptance": 0.09375
+      },
+      "2.302585092994046": {
+        "AUROC_unchanged": 0.95068359375,
+        "valid_acceptance": 0.96875,
+        "invalid_answer_correct_acceptance": 0.328125
+      },
+      "4.605170185988092": {
+        "AUROC_unchanged": 0.95068359375,
+        "valid_acceptance": 0.984375,
+        "invalid_answer_correct_acceptance": 0.8125
+      }
+    },
+    "D": {
+      "0.0": {
+        "AUROC_unchanged": 0.869873046875,
+        "valid_acceptance": 0.140625,
+        "invalid_answer_correct_acceptance": 0.0
+      },
+      "2.302585092994046": {
+        "AUROC_unchanged": 0.869873046875,
+        "valid_acceptance": 0.25,
+        "invalid_answer_correct_acceptance": 0.015625
+      },
+      "4.605170185988092": {
+        "AUROC_unchanged": 0.869873046875,
+        "valid_acceptance": 0.390625,
+        "invalid_answer_correct_acceptance": 0.03125
+      }
+    }
+  },
+  "weak_loss_shift_stress": {
+    "B": {
+      "-2.302585092994046": {
+        "failure_only_mean": 0.1231364411133626,
+        "success_mean": 1.1327133888901213,
+        "success_plus_failure_mean": 1.255849830003484,
+        "anchors_not_included": true
+      },
+      "0.0": {
+        "failure_only_mean": 0.3309919830992088,
+        "success_mean": 0.5333284107375295,
+        "success_plus_failure_mean": 0.8643203938367383,
+        "anchors_not_included": true
+      },
+      "2.302585092994046": {
+        "failure_only_mean": 1.0790810721712996,
+        "success_mean": 0.17016597728108226,
+        "success_plus_failure_mean": 1.2492470494523817,
+        "anchors_not_included": true
+      }
+    },
+    "C": {
+      "-2.302585092994046": {
+        "failure_only_mean": 0.09402648569232841,
+        "success_mean": 0.9158478308914058,
+        "success_plus_failure_mean": 1.0098743165837343,
+        "anchors_not_included": true
+      },
+      "0.0": {
+        "failure_only_mean": 0.24433049728450798,
+        "success_mean": 0.443337887120892,
+        "success_plus_failure_mean": 0.6876683844054,
+        "anchors_not_included": true
+      },
+      "2.302585092994046": {
+        "failure_only_mean": 0.7030837526765492,
+        "success_mean": 0.16156306525209316,
+        "success_plus_failure_mean": 0.8646468179286424,
+        "anchors_not_included": true
+      }
+    },
+    "D": {
+      "-2.302585092994046": {
+        "failure_only_mean": 0.0004779287420808236,
+        "success_mean": 8.155589565791809,
+        "success_plus_failure_mean": 8.15606749453389,
+        "anchors_not_included": true
+      },
+      "0.0": {
+        "failure_only_mean": 0.0017227490585210996,
+        "success_mean": 6.177972772718828,
+        "success_plus_failure_mean": 6.179695521777349,
+        "anchors_not_included": true
+      },
+      "2.302585092994046": {
+        "failure_only_mean": 0.007818856759750784,
+        "success_mean": 4.335037838196788,
+        "success_plus_failure_mean": 4.342856694956539,
+        "anchors_not_included": true
+      }
+    }
+  },
+  "frozen_input_hashes": {
+    "probe.jsonl": "0d2f72fc0d38eeff944d495e8e8b299b3a7195bbf255578f799e46c9f4f8685d",
+    "illustrations.jsonl": "3c2fa25c6f2dea2dca4398e61a43fa3aea1a42cf3504cebc688c8e292b47fed4",
+    "processbench.jsonl": "4e1e98c715b85dede4d136bf84685971c619d9083467f7c2390a866e1b02e8f2",
+    "group_advantages.jsonl": "5717dc66f578d4d5fb28cd9bbea83229ca294ed5509524458d04b7e228ea3383",
+    "scores_B.jsonl": "639f61e50e73204dc490d7351d25016d4fc2e61332ebc6e559ccbe6d63042dfa",
+    "scores_C.jsonl": "b75a7c173c0ea7f492dec832730973d6da7cda64be1d4c77245d3d7ca369c02e",
+    "scores_D.jsonl": "ed6f787516c7ff62617255cd2b345c8ffe5b3bb9fc61b696c8a0b71040698c3d"
+  },
+  "all_original_artifacts_unchanged": true
+}

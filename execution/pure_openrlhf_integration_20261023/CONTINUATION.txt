@@ -1,0 +1,21 @@
+PURE OpenRLHF independent no-update integration — completed 2026-10-23
+
+Authorized scope: independent P-VR/P-PRM, exact-token forward/backward probe, no optimizer/no formal training, preserve original A/B and veRL.
+Remote root: /srv/research/ece285_math_rl_project
+SSH: port 11032, researcher@server.example.invalid, identity /home/researcher/.ssh/research_server_ed25519, IdentitiesOnly=yes.
+Code: experiments/pure_openrlhf_integration_20261023
+Run: runs/PURE_OpenRLHF_no_update_20261023_v1
+Audit: audits/PURE_OpenRLHF_integration_20261023
+Dispatcher receipt and run already exist. DO NOT dispatch again or overwrite results.
+Runner PID88194 completed and exited; GPU allocation released. No ongoing project worker from this probe.
+
+Results: 32 fresh outputs, 26557 emitted tokens, 446 boundaries, 27 original EOS +5 official terminal replacements; retained verifier sees original truncation. Two arms use the same outputs/logprobs. Native BF16 PRM transform, FP32 task/baseline, official zero-preserving normalization once; micro-loss normalization zero. 64 backward calls; actor/PRM full hashes unchanged. CPU18 + real tokenizer9 + independent FP64 replay passed.
+Peak own-process GPU memory46.66015625 GiB; generation166.321753 token/s; PRM1.348217 responses/s. Shared A100; optimizer memory excluded. Joint VR measurement includes PRM resident.
+
+Scope boundary: official OpenRLHF pinned signal functions/PolicyLoss are extracted and AST/source-hash verified. Current TRL backend is used only for actor/LoRA/vLLM setup and sync, with GRPO loss/reward/train/optimizer entry points blocked. Full Ray/DeepSpeed distributed runtime is not reproduced. No convergence/quality or formal-training-memory claim.
+PRM still assigns high probabilities to fixed empty/whitespace/Thank-you probes; CRLF probe remains one step under official token boundary rules. These are documented limitations, not silently fixed with custom rewards.
+CPU preflight initially hit Python3.13/3.11 AST serialization mismatch; saved failure and v1 source snapshot, revised test only, reran gate successfully before GPU launch. No reward/loss changed.
+Program exit logged NCCL destroy_process_group reminder; post_exit.json confirms actual PID/GPU release.
+
+Evidence: review.html, independent_runtime_acceptance.json, local_evidence_verification.json, post_exit.json, remote/runs/.../result.json and signals.pt. Archive hash ea358ed59114b8be99691b334a48a25748c61ff8747abef35c7db8db54db8654.
+Any formal training or new budget requires a subsequent user instruction. No training start is implied by this completed check.

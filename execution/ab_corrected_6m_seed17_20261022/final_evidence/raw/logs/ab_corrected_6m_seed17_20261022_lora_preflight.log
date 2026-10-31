@@ -1,0 +1,69 @@
+INFO 10-22 15:35:56 [__init__.py:216] Automatically detected platform cuda.
+INFO 10-22 15:35:57 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-22 15:35:57 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-22 15:35:57 [utils.py:328] non-default args: {'dtype': 'bfloat16', 'seed': 285, 'max_model_len': 4096, 'gpu_memory_utilization': 0.6, 'max_num_batched_tokens': 4096, 'max_num_seqs': 64, 'disable_log_stats': True, 'enforce_eager': True, 'enable_lora': True, 'model': '/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2'}
+INFO 10-22 15:36:03 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 10-22 15:36:03 [__init__.py:1815] Using max model len 4096
+WARNING 10-22 15:36:03 [lora.py:92] `lora_extra_vocab_size` is deprecated and will be removed in v0.12.0. Additional vocabulary support for LoRA adapters is being phased out.
+WARNING 10-22 15:36:03 [cuda.py:103] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+INFO 10-22 15:36:03 [__init__.py:3400] Cudagraph is disabled under eager mode
+INFO 10-22 15:36:03 [llm_engine.py:221] Initializing a V0 LLM engine (v0.10.2) with config: model='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', speculative_config=None, tokenizer='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=285, served_model_name=/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=False, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 10-22 15:36:05 [cuda.py:456] Using Flash Attention backend.
+[W1022 15:36:10.454847592 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1022 15:36:11.523710461 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1022 15:36:11.524583502 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO 10-22 15:36:11 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 10-22 15:36:11 [model_runner.py:1051] Starting to load model /srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.22it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  2.22it/s]
+
+INFO 10-22 15:36:11 [default_loader.py:268] Loading weights took 0.57 seconds
+INFO 10-22 15:36:12 [punica_selector.py:19] Using PunicaWrapperGPU.
+INFO 10-22 15:36:12 [model_runner.py:1083] Model loading took 2.9144 GiB and 0.962326 seconds
+INFO 10-22 15:36:14 [worker.py:290] Memory profiling takes 1.96 seconds
+INFO 10-22 15:36:14 [worker.py:290] the current vLLM instance can use total_gpu_memory (79.25GiB) x gpu_memory_utilization (0.60) = 47.55GiB
+INFO 10-22 15:36:14 [worker.py:290] model weights take 2.91GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 0.48GiB; the rest of the memory reserved for KV Cache is 44.07GiB.
+INFO 10-22 15:36:15 [executor_base.py:114] # cuda blocks: 103142, # CPU blocks: 9362
+INFO 10-22 15:36:15 [executor_base.py:119] Maximum concurrency for 4096 tokens per request: 402.90x
+INFO 10-22 15:36:17 [worker.py:467] Free memory on device (78.83/79.25 GiB) on startup. Desired GPU memory utilization is (0.6, 47.55 GiB). Actual usage is 2.91 GiB for weight, 0.48 GiB for peak activation, 0.09 GiB for non-torch memory, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=47159386828` to fit into requested memory, or `--kv-cache-memory=80751318528` to fully utilize gpu memory. Current kv cache memory in use is 47316673228 bytes.
+INFO 10-22 15:36:17 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 4.87 seconds
+INFO 10-22 15:36:18 [llm.py:295] Supported_tasks: ['generate']
+INFO 10-22 15:36:18 [__init__.py:36] No IOProcessor plugins requested by the model
+{
+  "status": "completed",
+  "passed": true,
+  "pid": 3044481,
+  "started_unix": 1792654553.0507472,
+  "adapter": "/srv/research/ece285_math_rl_project/runs/pilot_B_corrected_seed17_20261022/final_adapter",
+  "cuda_visible_devices": "1",
+  "purpose": "compiler and LoRA inference plumbing only; no accuracy selection",
+  "header_receipt_sha256": "27a323af35cb1581643f32adbf311fa3faf1125cf760e013b0a4be843bbd4317",
+  "fresh_header_compile_passed": true,
+  "include_paths": [
+    "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
+    "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
+  ],
+  "adapter_sha256": "112cbe8d0bbfc82a2e3fbce6cc2ced35a8d035067c7969fa9cd3f50eff6968a6",
+  "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "validation_question_ids": [
+    "math/train/prealgebra/423",
+    "math/train/algebra/1641"
+  ],
+  "max_new_tokens": 8,
+  "real_lora_generation_passed": true,
+  "generated_tokens": [
+    8,
+    8
+  ],
+  "finished_unix": 1792654579.5841494
+}
+[rank0]:[W1022 15:36:20.855393769 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

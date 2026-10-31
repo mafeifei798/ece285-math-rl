@@ -1,0 +1,12 @@
+{
+  "B_status": "failed",
+  "B_source_hashes_unchanged": true,
+  "new_training_launched_by_this_audit": false,
+  "CPU_inference_complete": true,
+  "GPU_processes": "1511394, /srv/research/rna_structure_autoencoder_20260905/env/bin/python, 7124 MiB\n",
+  "source_SHA256": {
+    "runs/B_seed17_6M/rollouts.jsonl": "2d5309f259bf454d9e446dea750a9bcbea6e3c1349ae483c9862e0beac540228",
+    "data/prepared/train.jsonl": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",
+    "data/raw/prm800k_train_questions.jsonl": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076"
+  }
+}

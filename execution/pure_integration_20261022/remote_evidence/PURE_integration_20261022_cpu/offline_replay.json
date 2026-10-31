@@ -1,0 +1,231 @@
+{
+  "passed": false,
+  "source": "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/rollouts.jsonl",
+  "source_sha256": "adfc269057091108f0c84274b78164d1795d19b85856297f9876d60e191ff304",
+  "inventory": {
+    "rows": 8960,
+    "reconstructed_length_matches_logged": 8674,
+    "crlf_responses": 928,
+    "scored_in_old_B": 7304,
+    "truncated": 567,
+    "aligned_rows": 8949,
+    "mapped_steps": 106314
+  },
+  "errors": [
+    {
+      "row": 158,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 995,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 1951,
+      "error": "Raw response differs from decoding original token IDs"
+    },
+    {
+      "row": 3758,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 3835,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 4647,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 6741,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 7229,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 7975,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 8114,
+      "error": "Response exceeds fixed completion width"
+    },
+    {
+      "row": 8880,
+      "error": "Response exceeds fixed completion width"
+    }
+  ],
+  "available_complete_scored_groups": 297,
+  "replayed_groups": 32,
+  "replayed_responses": 256,
+  "batches": [
+    {
+      "P_VR": {
+        "valid_tokens": 13626,
+        "mean": 3.966643902231226e-08,
+        "std": 0.9999998211860657,
+        "positive_tokens": 8295,
+        "normalization_calls": 1,
+        "reward_sum": 23.0,
+        "max_abs_reference_difference": 2.384185791015625e-07
+      },
+      "P_PRM": {
+        "valid_tokens": 13626,
+        "mean": -1.3035508228398385e-09,
+        "std": 0.9999999403953552,
+        "positive_tokens": 7391,
+        "normalization_calls": 1,
+        "reward_sum": -3.6974499225616455,
+        "max_abs_reference_difference": 2.384185791015625e-07
+      }
+    },
+    {
+      "P_VR": {
+        "valid_tokens": 15678,
+        "mean": -6.660756390886036e-09,
+        "std": 1.0,
+        "positive_tokens": 9850,
+        "normalization_calls": 1,
+        "reward_sum": 20.0,
+        "max_abs_reference_difference": 5.960464477539063e-08
+      },
+      "P_PRM": {
+        "valid_tokens": 15678,
+        "mean": 1.8248647037921728e-09,
+        "std": 0.9999999403953552,
+        "positive_tokens": 9297,
+        "normalization_calls": 1,
+        "reward_sum": -0.20961585640907288,
+        "max_abs_reference_difference": 4.76837158203125e-07
+      }
+    },
+    {
+      "P_VR": {
+        "valid_tokens": 18628,
+        "mean": -9.924294630536679e-08,
+        "std": 1.0,
+        "positive_tokens": 10592,
+        "normalization_calls": 1,
+        "reward_sum": 21.0,
+        "max_abs_reference_difference": 1.1920928955078125e-07
+      },
+      "P_PRM": {
+        "valid_tokens": 18628,
+        "mean": -1.8302477755582913e-08,
+        "std": 1.0,
+        "positive_tokens": 8777,
+        "normalization_calls": 1,
+        "reward_sum": -0.05763503909111023,
+        "max_abs_reference_difference": 3.5762786865234375e-07
+      }
+    },
+    {
+      "P_VR": {
+        "valid_tokens": 17801,
+        "mean": 2.9305086357567234e-08,
+        "std": 1.0,
+        "positive_tokens": 7473,
+        "normalization_calls": 1,
+        "reward_sum": 17.0,
+        "max_abs_reference_difference": 1.1920928955078125e-07
+      },
+      "P_PRM": {
+        "valid_tokens": 17801,
+        "mean": 1.749867273304062e-08,
+        "std": 0.9999999403953552,
+        "positive_tokens": 9493,
+        "normalization_calls": 1,
+        "reward_sum": -4.602842330932617,
+        "max_abs_reference_difference": 3.5762786865234375e-07
+      }
+    },
+    {
+      "P_VR": {
+        "valid_tokens": 15258,
+        "mean": 7.705085636189324e-08,
+        "std": 0.9999998807907104,
+        "positive_tokens": 5533,
+        "normalization_calls": 1,
+        "reward_sum": 17.0,
+        "max_abs_reference_difference": 2.384185791015625e-07
+      },
+      "P_PRM": {
+        "valid_tokens": 15258,
+        "mean": -5.625290788735526e-10,
+        "std": 0.9999999403953552,
+        "positive_tokens": 9518,
+        "normalization_calls": 1,
+        "reward_sum": -0.49328991770744324,
+        "max_abs_reference_difference": 2.980232238769531e-07
+      }
+    },
+    {
+      "P_VR": {
+        "valid_tokens": 23681,
+        "mean": -1.5142163078962767e-08,
+        "std": 1.0,
+        "positive_tokens": 9573,
+        "normalization_calls": 1,
+        "reward_sum": 15.0,
+        "max_abs_reference_difference": 1.1920928955078125e-07
+      },
+      "P_PRM": {
+        "valid_tokens": 23681,
+        "mean": -4.067442382904574e-09,
+        "std": 0.9999999403953552,
+        "positive_tokens": 12608,
+        "normalization_calls": 1,
+        "reward_sum": -5.492610931396484,
+        "max_abs_reference_difference": 5.364418029785156e-07
+      }
+    },
+    {
+      "P_VR": {
+        "valid_tokens": 15561,
+        "mean": 4.9810346069989464e-08,
+        "std": 0.9999999403953552,
+        "positive_tokens": 10119,
+        "normalization_calls": 1,
+        "reward_sum": 20.0,
+        "max_abs_reference_difference": 1.1920928955078125e-07
+      },
+      "P_PRM": {
+        "valid_tokens": 15561,
+        "mean": -3.257360603470261e-08,
+        "std": 1.0,
+        "positive_tokens": 9399,
+        "normalization_calls": 1,
+        "reward_sum": 0.6076989769935608,
+        "max_abs_reference_difference": 4.76837158203125e-07
+      }
+    },
+    {
+      "P_VR": {
+        "valid_tokens": 13160,
+        "mean": 3.4407642601763655e-07,
+        "std": 1.0,
+        "positive_tokens": 10109,
+        "normalization_calls": 1,
+        "reward_sum": 22.0,
+        "max_abs_reference_difference": 4.76837158203125e-07
+      },
+      "P_PRM": {
+        "valid_tokens": 13160,
+        "mean": -2.7175369510246128e-08,
+        "std": 1.0,
+        "positive_tokens": 8153,
+        "normalization_calls": 1,
+        "reward_sum": -2.6048951148986816,
+        "max_abs_reference_difference": 5.960464477539062e-07
+      }
+    }
+  ],
+  "limitations": [
+    "Historical raw token IDs absent: re-tokenized text, not original sampled IDs.",
+    "Reuse only existing nonempty PRM scores; missing-score rows are audited for alignment but not assigned invented scores.",
+    "Historical KL set to zero for math replay: old/ref log-probs were not logged. Real preflight computes both.",
+    "These signal checks do not estimate trained model accuracy."
+  ]
+}

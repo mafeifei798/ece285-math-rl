@@ -1,0 +1,73 @@
+{
+  "review_date": "2026-10-20",
+  "counts": {
+    "all_solutions": 1000,
+    "unique_questions": 955,
+    "answer_correct_solutions": 500,
+    "answer_correct_unique_questions": 500,
+    "answer_correct_valid": 406,
+    "answer_correct_invalid": 94
+  },
+  "power": {
+    "primary_endpoint_unchanged": true,
+    "planning_not_observed": "No C/D predictions exist; the 10% disagreement rate is an illustrative assumption, not a measured project quantity.",
+    "single_seed_paired_n": 500,
+    "assumed_disagreement_probability": 0.1,
+    "two_sided_alpha": 0.05,
+    "target_power": 0.8,
+    "approximation": "For paired binary differences d in {-1,0,1}, Var(d)=q-delta^2. Near the null, SE approximately sqrt(q/n). MDE approximately (z_.975+z_.8)*sqrt(q/n).",
+    "approximate_SE_pp": 1.4142135623730951,
+    "approximate_95pct_half_width_pp": 2.7718076486993555,
+    "approximate_80pct_power_MDE_pp": 3.962039811599346,
+    "seed_correlation": "The single-seed planning calculation is not the MDE of a three-seed mean. Actual uncertainty depends on covariance across seeds within questions. Keep each question across all arms/seeds as one cluster; also report seed dispersion.",
+    "actual_reporting": [
+      "per-seed counts C-wrong/D-correct and C-correct/D-wrong",
+      "per-seed disagreement rates",
+      "mean paired accuracy difference and question-cluster interval",
+      "paired-seed differences and standard deviation"
+    ],
+    "decision": "An interval spanning zero or substantial seed inconsistency is inconclusive, not proof of equivalence. Do not move the primary claim to a more favorable diagnostic after observing results.",
+    "extra_benchmarks": "GSM8K remains the prespecified transfer evaluation. No new benchmark is silently added to the primary pooled endpoint; any additional set requires contamination audit and a separate stated estimand."
+  },
+  "literature_checks": {
+    "LCA": {
+      "url": "https://arxiv.org/abs/2606.27739v2",
+      "v2_date": "2026-09-26",
+      "metadata": "Authors report accepted EMNLP 2026 Oral, camera-ready; proposal cites the verified arXiv v2 without relying on proceedings availability.",
+      "noise_experiment": "Appendix E.3 replaces 5/10/15/20 percent of correct trajectories with error-containing ones while keeping correct outcome labels; this is already studied, not our novel observation."
+    },
+    "PRIME": {
+      "url": "https://arxiv.org/html/2502.01456v2",
+      "scope": "Outcome-supervised online implicit rewards are not explicit correctness labels on every token. Outcome supervision does not directly identify which steps are valid."
+    },
+    "PURE": {
+      "url": "https://arxiv.org/html/2504.15275v3",
+      "scope": "Min-form credit assignment reduces but does not eliminate PRM hacking; one-step/no-delimiter behavior is discussed. Our sequence minimum reward is not a PURE reproduction."
+    },
+    "TRL": {
+      "url": "https://huggingface.co/docs/trl/v0.23.1/grpo_trainer",
+      "verified": "group, batch, none scaling; False aliases none; formal scaling unchanged"
+    },
+    "H4_PRM": {
+      "url": "https://huggingface.co/HuggingFaceH4/Qwen2.5-Math-1.5B-Instruct-PRM-0.2",
+      "verified": "Training and scoring separator is double newline; LABEL_1 is correctness."
+    }
+  },
+  "accepted": [
+    "limitations/significance wording",
+    "normalization caveat and stratified monitoring",
+    "step-count and missing-delimiter monitoring",
+    "PRM-only anchor control",
+    "power limitation",
+    "explicit LoRA rank ownership",
+    "prioritize C/D"
+  ],
+  "not_adopted": [
+    "replacing primary policy accuracy with PRM diagnostics solely for power",
+    "claiming diagnostic AUROC has a much larger clean sample",
+    "silently disabling normalization after A has begun",
+    "adding multiple unaudited benchmarks",
+    "claiming zero use of human labels"
+  ],
+  "artifacts_note": "This is a document and protocol review, not new model training or a training instrumentation deployment."
+}

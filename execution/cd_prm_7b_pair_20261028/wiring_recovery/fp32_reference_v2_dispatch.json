@@ -1,0 +1,9 @@
+{
+  "pid": 1108451,
+  "started_unix": 1793256281.4962862,
+  "GPU": 1,
+  "free_memory_MiB": 49859,
+  "optimizer_updates": 0,
+  "script_sha256": "e85281aee787b54ff9c431d05783363d73c2328274512ba11cde5d7439ee6e49",
+  "scope": "FP32 deterministic first-batch reference only, no optimizer, unchanged training inputs and results"
+}

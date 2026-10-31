@@ -1,0 +1,15 @@
+{
+  "config_sha256": "a1505067dd605982d1e29c526129b9baa0fc07c5302441709270bb405b3ee91b",
+  "buffer_questions": 512,
+  "primary_probe_groups": 64,
+  "primary_probe_rows": 512,
+  "illustrative_rows": 24,
+  "selection": "hash-selected within outcome strata, never selected by PRM scores",
+  "files": {
+    "buffer_questions.jsonl": "d76580a0651197574ad5122fde4eb68cf42d6329b7fd0b7fb2d072c44b2962a7",
+    "probe.jsonl": "0d2f72fc0d38eeff944d495e8e8b299b3a7195bbf255578f799e46c9f4f8685d",
+    "illustrations.jsonl": "3c2fa25c6f2dea2dca4398e61a43fa3aea1a42cf3504cebc688c8e292b47fed4",
+    "processbench.jsonl": "4e1e98c715b85dede4d136bf84685971c619d9083467f7c2390a866e1b02e8f2",
+    "forbidden.json": "f90fc588b2f6e329586d570a4ac1a80ae036e066f6c7cb13e9537985473f7a86"
+  }
+}

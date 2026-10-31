@@ -1,0 +1,22 @@
+{
+  "status": "paused_by_user",
+  "training_complete": false,
+  "GPU_released": true,
+  "automatic_resume": false,
+  "sha256": {
+    "wait_acceptance.py": "c5cb85936f6c53ffed674a409f88c516f2dcca34eb774bd4a3ccca5b1519435e",
+    "latest_snapshot.json": "fc89e56686359f6f4a48fb89af5dffd639a09182e5e839b43e763ab458ad9a6b",
+    "review.html": "b12df518fe57ce5854d1064d468d50f8a7bf0159dfa6b10324c60eb6249af957",
+    "dispatch.py": "652515cab3558f4e5157254bb67e2af655005b3cfefa3118015690eb687adf1c",
+    "CONTINUATION.txt": "44123fddb9110bddde67658749fb36b782c82d0ad04aa45618cb24ef4a2b9446",
+    "build_status.py": "7b2b1a34f9055acd398e6ade65048afc0831c9ba7ba441b3f399a0babf092ea4",
+    "dispatch.json": "79658bb063daf3bec46660521e101d920899cbb902bf636268a575ac0a344741",
+    "pause_receipt.json": "5815de71b36c003abf87d07e4a322313e5044553839401cd2a85a15047dab3fd",
+    "pause_process_receipt.json": "cd43949585e9ca4abf4e168c4ac46b62761c64010ae86bebec5d54099e552539",
+    "acceptance_evidence.json": "f9b717ab4f5a8233e9c9b2e228a9cc1e0c40ecd338076d3fd98dc15150cd87f5",
+    "RUNNING_ACCEPTANCE.json": "c0c5e8bd258106bda5b7831bf5e765d2008f72cd0d22bdac9e2c02bfde23020a",
+    "inspect_remote.py": "dd03d57058a773389d56322e47ba82c58ddfdbe3b8169c8e73f8920d831bffa8",
+    "admission.json": "727a902513c316f298075d4f1a7dedceeecc3ae26500a0c2a230339a9aabd83d",
+    "prepare_remote.py": "f9e9baca916a3225ede598a8aae5d14ae415f89b33e154275a047c55288c6947"
+  }
+}

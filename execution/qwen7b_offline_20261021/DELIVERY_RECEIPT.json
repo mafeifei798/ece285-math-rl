@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "archive_sha256": "cf0966d9283a7b3c066d3ac345dbc270c2d62406f1f5aa6c03cbbb476de3f935",
+  "delivered_files_verified": 62,
+  "local_source_files_verified": 12,
+  "original_local_sources_unchanged": true,
+  "original_remote_A_B_protection_passed": true,
+  "review_cases_in_HTML": 50,
+  "independent_QA_passed": true,
+  "identity_negative_control_passed": true,
+  "new_training": false,
+  "model_updates": 0,
+  "new_rollouts": 0,
+  "imported_dependencies_verified_locally": 2
+}

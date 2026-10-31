@@ -1,0 +1,9 @@
+The reference function in papo_reference.py is extracted from:
+  https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/verl/trainer/ppo/core_algos.py#L333-L481
+PAPO: Stabilizing Rubric Integration Training via Decoupled Advantage Normalization
+  https://arxiv.org/abs/2603.26535v4
+
+The upstream Apache-2.0 copyright/license header is retained in that file.
+Changes: isolated imports and identity registry decorator added; official function
+body unchanged. This is an attribution/reference fixture, not an authorship claim.
+See LICENSE for the Apache License version2.0.

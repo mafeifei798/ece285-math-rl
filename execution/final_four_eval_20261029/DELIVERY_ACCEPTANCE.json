@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "completed_utc": "2026-10-30T01:52:34.404537+00:00",
+  "generation_complete": true,
+  "models": 4,
+  "datasets": 2,
+  "predictions_regraded": 7276,
+  "protected_old_files_unchanged": 609,
+  "local_prediction_and_adapter_hash_acceptance": true,
+  "report_relative_links_checked": 19,
+  "missing_links": 0,
+  "figures_visually_reviewed": [
+    "accuracy.png",
+    "paired_differences.png",
+    "training_diagnostics.png"
+  ],
+  "HTML_validation": "Static structure, all relative links, data consistency checked; full-page browser screenshot was unavailable because file: navigation was blocked by browser policy. No workaround attempted.",
+  "full_wall_seconds": 9252.72445487976,
+  "new_training_updates": 0,
+  "new_PRM_calls": 0
+}

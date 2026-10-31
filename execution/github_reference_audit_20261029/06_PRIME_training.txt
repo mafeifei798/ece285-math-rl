@@ -1,0 +1,56 @@
+https://github.com/PRIME-RL/PRIME/blob/18ad596f08d487bb546d80d738d99ec697bd2e75/training/README.md
+Upstream blob: b7c9af4966840aa3e219b86f2ceec1aaa145d1e4
+EXCERPT ONLY
+49: 
+50: 
+51: ### Implicit Process Reward
+52: We adopt [implicit PRM](https://arxiv.org/abs/2412.01981) which obtains dense rewards by training on the cheaper response-level labels. To train the policy model, we combine the process rewards and the ground truth outcome rewards to calculate the advantage. During reinforcement learning, the PRM is updated according to the ground truth label. 
+53: 
+54: The reference model in implicit PRM can be set as either the initial SFT model or the up-to-date policy model. Both strategies yield similar performance. 
+55: 
+56: In this work, we update the implicit PRM with cross entropy(CE) loss due to memory efficiency.
+57: ```yaml
+58: reward_model:
+59:   rm_coef: 5
+60:   rm_type: prime
+61:   prime_granularity: token
+62:   prime_norm: batch_norm
+63:   mini_batch_size: 256
+64:   micro_batch_size: 64
+65:   prime_model:
+66:     path: PRIME-RL/Eurus-2-7B-SFT
+67:     ref_type: freeze
+68:     ref_path: PRIME-RL/Eurus-2-7B-SFT
+69:     update: after
+70:     beta_train: 0.05
+71:     loss_type: ce
+72:     use_remove_padding: False
+73: ```
+74: - ``reward_model.rm_coef``: Weight for reward model in the reward combination. 
+75: - ``reward_model.rm_type``: Type of reward model, ``prime`` for implicit PRM and ``value`` for normal reward models. 
+76: - ``reward_model.prime_granularity``: Granularity to assign reward value. If set to ``token``, every token will have a process reward. If set to ``whole``, the reward will only appear on the last token just like vanilla RLHF. 
+77: - ``reward_model.prime_norm``: How to normalize process reward value to stabilize training. Default to ``batch_norm``
+78: - ``reward_model.mini_batch_size``: Mini batch size for PRM update. **Should be divisible by world_size.**
+79: - ``reward_model.micro_batch_size``: Micro batch size for PRM update. **Should be divisible by world_size.**
+80: - ``reward_model.path``: Model as initialization of implicit PRM. 
+81: - ``reward_model.ref_type``: PRM Reference model type. ``freeze``: the reference model has frozen parameters. ``policy``: the reference model synchronizes with the policy model. 
+82: - ``reward_model.ref_path``: Reference model in implicit PRM. 
+83: - ``reward_model.prime_model.update``: ``none`` to disable online PRM update, ``after`` to update the PRM after the policy model (Single-Forward), ``before`` to update the PRM before the policy model (Double-Forward). 
+84: - ``reward_model.prime_model.beta_train``: Beta value used to update the PRM. 
+85: - ``reward_model.prime_model.loss_type``: Loss function to update the PRM. Only ``ce`` is supported now.
+86: - ``reward_model.prime_model.use_remove_padding``: Whether to remove padding tokens in the PRM loss calculation. Turn on to accelerate and save memory. Support Llama, Qwen, Mistral, and InternLM for now.
+87: 
+88: ### Advantage Estimation
+89: From pilot study, we compared different online RL algorithms and found that REINFORCE-like algorithms, despite simpler than PPO, are strong enough to produce stable results. We choose the best performing [RLOO](https://arxiv.org/abs/2402.14740) as our RL algorithm. 
+90: 
+91: To extend RLOO to support process rewards and merging different reward types (ground truth and reward model), we perform Leave-One-Out separately on different rewards. We directly use the return value of RLOO as advantage. 
+92: ```yaml
+93: algorithm:
+94:   adv_estimator: rloo
+95:   adv_params:
+96:     verifier_gamma: ${algorithm.gamma}
+97:     reward_model_gamma: ${algorithm.gamma}
+98: ```
+99: - ``algorithm.adv_estimator``: The advantage estimator, like ``gae``,``rloo``. If the advantage does not need a value estimation model, the critic model is completely disabled during training. 
+100: - ``algorithm.adv_params.verifier_gamma`` ``algorithm.adv_params.reward_model_gamma``: Set separate gamma for different sources of reward
+101: 

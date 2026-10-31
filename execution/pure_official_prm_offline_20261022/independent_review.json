@@ -1,0 +1,344 @@
+{
+  "passed": true,
+  "method": "Python standard library float64; no project signal functions reused",
+  "script": "/home/researcher/Desktop/python/ece285_math_rl_project/experiments/pure_official_prm_offline_20261022/independent_cpu_check.py",
+  "script_sha256": "12cfb480692674b86c8a6ec53f27a9f0edc1141faf0c85caa82621bc4c5d6f33",
+  "source_files": {
+    "inputs": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
+      "sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d"
+    },
+    "qwen": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/qwen_single/scored.jsonl",
+      "sha256": "3681d0cdf0d017d877339eaeb6481421bf4faa23b4b09570afba49f99d811d72"
+    },
+    "pure": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/scoring_single/scored.jsonl",
+      "sha256": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5"
+    },
+    "metrics": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/per_response_metrics.jsonl",
+      "sha256": "c9aa812f71838a3edcd8f5c1960b59e010506ac51696260804be6e5c099d8452"
+    },
+    "summary": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/summary.json",
+      "sha256": "1f7bed16364371574a410d582be3f2ab5271071d0ae8ce54294af87a209963ae"
+    }
+  },
+  "cpu_only": true,
+  "torch_imported": false,
+  "model_loaded": false,
+  "gpu_jobs_started": 0,
+  "optimizer_steps": 0,
+  "new_generations": 0,
+  "verified_row_arm_pairs": 1024,
+  "max_terminal_advantage_abs_error": 4.824354649102247e-07,
+  "empty_signal_counts": {
+    "P_VR": {
+      "n": 8,
+      "raw_positive": 0,
+      "whitened_positive": 0,
+      "correct_peers": 23,
+      "correct_peers_outranked": 0
+    },
+    "QWEN_PRM": {
+      "n": 8,
+      "raw_positive": 8,
+      "whitened_positive": 8,
+      "correct_peers": 23,
+      "correct_peers_outranked": 23
+    },
+    "PURE_NATIVE": {
+      "n": 8,
+      "raw_positive": 8,
+      "whitened_positive": 8,
+      "correct_peers": 23,
+      "correct_peers_outranked": 23
+    },
+    "PURE_RL_PROMPT": {
+      "n": 8,
+      "raw_positive": 8,
+      "whitened_positive": 8,
+      "correct_peers": 23,
+      "correct_peers_outranked": 22
+    }
+  },
+  "historical_empty_rows": 9,
+  "historical_empty_rewards_zero_and_prm_not_called": true,
+  "skipped_batches": [
+    "B:210"
+  ],
+  "empty_case_details": {
+    "P_VR": [
+      {
+        "index": 13,
+        "batch_id": "A:16",
+        "raw_advantage": -0.12472098214285714,
+        "whitened_advantage": -1.0492102722235046,
+        "correct_peers": 4,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 56,
+        "batch_id": "A:22",
+        "raw_advantage": -0.12332589285714286,
+        "whitened_advantage": -1.1994576577336353,
+        "correct_peers": 4,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 80,
+        "batch_id": "A:166",
+        "raw_advantage": -0.04457310267857143,
+        "whitened_advantage": -0.9175619231657142,
+        "correct_peers": 2,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 113,
+        "batch_id": "A:264",
+        "raw_advantage": 0.0,
+        "whitened_advantage": -0.31674266921947863,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 148,
+        "batch_id": "A:280",
+        "raw_advantage": -0.09828404017857142,
+        "whitened_advantage": -0.6734570778531416,
+        "correct_peers": 6,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 162,
+        "batch_id": "B:6",
+        "raw_advantage": -0.05678013392857143,
+        "whitened_advantage": -0.6055613414172424,
+        "correct_peers": 1,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 198,
+        "batch_id": "B:106",
+        "raw_advantage": -0.20033482142857142,
+        "whitened_advantage": -1.0684348931662169,
+        "correct_peers": 6,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 226,
+        "batch_id": "B:144",
+        "raw_advantage": 0.0,
+        "whitened_advantage": -0.6777313121034981,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      }
+    ],
+    "QWEN_PRM": [
+      {
+        "index": 13,
+        "batch_id": "A:16",
+        "raw_advantage": 0.5346633876320759,
+        "whitened_advantage": 2.485038847248402,
+        "correct_peers": 4,
+        "correct_peers_outranked": 4
+      },
+      {
+        "index": 56,
+        "batch_id": "A:22",
+        "raw_advantage": 0.5303374411896941,
+        "whitened_advantage": 2.459682452044402,
+        "correct_peers": 4,
+        "correct_peers_outranked": 4
+      },
+      {
+        "index": 80,
+        "batch_id": "A:166",
+        "raw_advantage": 0.5150598157092623,
+        "whitened_advantage": 2.151486197346223,
+        "correct_peers": 2,
+        "correct_peers_outranked": 2
+      },
+      {
+        "index": 113,
+        "batch_id": "A:264",
+        "raw_advantage": 0.6391723385569609,
+        "whitened_advantage": 3.215257739255957,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 148,
+        "batch_id": "A:280",
+        "raw_advantage": 0.47380946743007213,
+        "whitened_advantage": 2.3165841581484177,
+        "correct_peers": 6,
+        "correct_peers_outranked": 6
+      },
+      {
+        "index": 162,
+        "batch_id": "B:6",
+        "raw_advantage": 0.5431006155551971,
+        "whitened_advantage": 2.8945338631876236,
+        "correct_peers": 1,
+        "correct_peers_outranked": 1
+      },
+      {
+        "index": 198,
+        "batch_id": "B:106",
+        "raw_advantage": 0.5049907711561,
+        "whitened_advantage": 2.6734191131841487,
+        "correct_peers": 6,
+        "correct_peers_outranked": 6
+      },
+      {
+        "index": 226,
+        "batch_id": "B:144",
+        "raw_advantage": 0.5955325696420385,
+        "whitened_advantage": 2.2835683745590405,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      }
+    ],
+    "PURE_NATIVE": [
+      {
+        "index": 13,
+        "batch_id": "A:16",
+        "raw_advantage": 0.5230388980940638,
+        "whitened_advantage": 3.181820643024273,
+        "correct_peers": 4,
+        "correct_peers_outranked": 4
+      },
+      {
+        "index": 56,
+        "batch_id": "A:22",
+        "raw_advantage": 0.509146297265952,
+        "whitened_advantage": 2.9507308128645047,
+        "correct_peers": 4,
+        "correct_peers_outranked": 4
+      },
+      {
+        "index": 80,
+        "batch_id": "A:166",
+        "raw_advantage": 0.4596949877943209,
+        "whitened_advantage": 1.9367849610990655,
+        "correct_peers": 2,
+        "correct_peers_outranked": 2
+      },
+      {
+        "index": 113,
+        "batch_id": "A:264",
+        "raw_advantage": 0.6184752012953242,
+        "whitened_advantage": 3.644203801506131,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 148,
+        "batch_id": "A:280",
+        "raw_advantage": 0.47901627197094915,
+        "whitened_advantage": 3.1358825124601775,
+        "correct_peers": 6,
+        "correct_peers_outranked": 6
+      },
+      {
+        "index": 162,
+        "batch_id": "B:6",
+        "raw_advantage": 0.48060729159603666,
+        "whitened_advantage": 2.742143348444916,
+        "correct_peers": 1,
+        "correct_peers_outranked": 1
+      },
+      {
+        "index": 198,
+        "batch_id": "B:106",
+        "raw_advantage": 0.5070632578283824,
+        "whitened_advantage": 3.4039632684524603,
+        "correct_peers": 6,
+        "correct_peers_outranked": 6
+      },
+      {
+        "index": 226,
+        "batch_id": "B:144",
+        "raw_advantage": 0.45378743710292563,
+        "whitened_advantage": 2.2085931829813985,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      }
+    ],
+    "PURE_RL_PROMPT": [
+      {
+        "index": 13,
+        "batch_id": "A:16",
+        "raw_advantage": 0.5119801416187671,
+        "whitened_advantage": 3.3203798273046305,
+        "correct_peers": 4,
+        "correct_peers_outranked": 4
+      },
+      {
+        "index": 56,
+        "batch_id": "A:22",
+        "raw_advantage": 0.4953231295968188,
+        "whitened_advantage": 2.6130676979449348,
+        "correct_peers": 4,
+        "correct_peers_outranked": 4
+      },
+      {
+        "index": 80,
+        "batch_id": "A:166",
+        "raw_advantage": 0.46303004348997673,
+        "whitened_advantage": 1.97109733728837,
+        "correct_peers": 2,
+        "correct_peers_outranked": 2
+      },
+      {
+        "index": 113,
+        "batch_id": "A:264",
+        "raw_advantage": 0.6203488253115508,
+        "whitened_advantage": 3.637937841807841,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      },
+      {
+        "index": 148,
+        "batch_id": "A:280",
+        "raw_advantage": 0.4529093563648412,
+        "whitened_advantage": 2.9157894720702893,
+        "correct_peers": 6,
+        "correct_peers_outranked": 5
+      },
+      {
+        "index": 162,
+        "batch_id": "B:6",
+        "raw_advantage": 0.49828334358692283,
+        "whitened_advantage": 2.7413395261480464,
+        "correct_peers": 1,
+        "correct_peers_outranked": 1
+      },
+      {
+        "index": 198,
+        "batch_id": "B:106",
+        "raw_advantage": 0.49716382188984604,
+        "whitened_advantage": 3.2701882943401483,
+        "correct_peers": 6,
+        "correct_peers_outranked": 6
+      },
+      {
+        "index": 226,
+        "batch_id": "B:144",
+        "raw_advantage": 0.5384623213555545,
+        "whitened_advantage": 2.713083644268116,
+        "correct_peers": 0,
+        "correct_peers_outranked": 0
+      }
+    ]
+  },
+  "interpretation": [
+    "Both PRMs produce a positive raw and whitened signal for each of eight replayable empty responses; P-VR does not.",
+    "Duplicate normalization is not needed to create this failure: every PRM raw advantage is already positive before the single whitening.",
+    "23/23 and 22/23 count comparisons against answer-correct peer responses, not independent questions or process-label error rates.",
+    "Historical A/B assigned these empty responses zero reward and did not call PRM, so this finding does not explain the old B versus A accuracy difference.",
+    "This is selected historical text with reconstructed tokens and KL=0, not a completed new training experiment or proof of future collapse."
+  ]
+}

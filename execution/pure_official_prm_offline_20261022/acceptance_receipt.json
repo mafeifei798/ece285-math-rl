@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "created_utc": "2026-10-23T07:32:22.294046+00:00",
+  "task": "Official PURE PRM vs Qwen PRM on fixed saved288 responses",
+  "scoring_rows": 288,
+  "empty_rows": 9,
+  "advantage_rows": 256,
+  "advantage_empty_rows": 8,
+  "independent_signal_checks": 32,
+  "original_local_protected_files": 132,
+  "original_local_files_changed": [],
+  "original_pure_release_sha256": "bb702b408216dd3cab3e655d82b1b68a901641ca4d2e84a94c5df6b5b58af84a",
+  "primary_single_for_both": true,
+  "model_weights_verified": true,
+  "model_grads_disabled": true,
+  "training_started": false,
+  "optimizer_steps": 0,
+  "new_generations": 0,
+  "answer_verifier_changed": false,
+  "reward_or_loss_installed": false,
+  "token_ids": "Reconstructed historical IDs; not exact original RL token replay",
+  "kl": 0,
+  "conclusion": "Both official PRMs assign positive scores and positive RLOO advantages to empty completions in the fixed diagnostic sample; swapping PRM does not remove this failure mode.",
+  "initial_batch2_failure_preserved": true,
+  "numerical_sensitivity": {
+    "primary_microbatch": 1,
+    "qwen_old_batch2_vs_new_single": {
+      "rows": 288,
+      "steps": 2919,
+      "max_probability_abs_difference": 0.031891465187072754,
+      "mean_probability_abs_difference": 0.0015489230866741126,
+      "step_positive_sign_crossings": 7,
+      "empty_max_probability_abs_difference": 2.8371810913085938e-05,
+      "reward_rank_changed_rows": 6,
+      "whitened_terminal_sign_changed_rows": 1
+    },
+    "pure_empty_batch2_vs_single": {
+      "native_raw": {
+        "n": 9,
+        "max_probability_abs_difference": 0.0494040846824646,
+        "differences_above_initial_tolerance": 2,
+        "signed_score_sign_crossings": 0,
+        "all_batch_input_and_padding_verified": true,
+        "max_repeated_single_error": 0.0
+      },
+      "official_rl_prompt": {
+        "n": 9,
+        "max_probability_abs_difference": 0.003577888011932373,
+        "differences_above_initial_tolerance": 0,
+        "signed_score_sign_crossings": 0,
+        "all_batch_input_and_padding_verified": true,
+        "max_repeated_single_error": 0.0
+      }
+    }
+  },
+  "remote_result_hashes_match_local": true,
+  "scoring_processes_exited": true,
+  "original_remote_release_unchanged": true
+}

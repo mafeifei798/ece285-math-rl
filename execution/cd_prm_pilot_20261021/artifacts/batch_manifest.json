@@ -1,0 +1,206 @@
+{
+  "counts": {
+    "fail": 34,
+    "success": 19,
+    "anchor_positive": 64,
+    "anchor_negative": 64
+  },
+  "schedule": [
+    {
+      "fail": 14,
+      "success": 12,
+      "anchor_positive": 13,
+      "anchor_negative": 41
+    },
+    {
+      "fail": 18,
+      "success": 1,
+      "anchor_positive": 47,
+      "anchor_negative": 32
+    },
+    {
+      "fail": 20,
+      "success": 4,
+      "anchor_positive": 28,
+      "anchor_negative": 24
+    },
+    {
+      "fail": 4,
+      "success": 14,
+      "anchor_positive": 11,
+      "anchor_negative": 39
+    },
+    {
+      "fail": 29,
+      "success": 11,
+      "anchor_positive": 24,
+      "anchor_negative": 58
+    },
+    {
+      "fail": 28,
+      "success": 3,
+      "anchor_positive": 45,
+      "anchor_negative": 59
+    },
+    {
+      "fail": 1,
+      "success": 0,
+      "anchor_positive": 14,
+      "anchor_negative": 48
+    },
+    {
+      "fail": 31,
+      "success": 5,
+      "anchor_positive": 7,
+      "anchor_negative": 50
+    },
+    {
+      "fail": 2,
+      "success": 6,
+      "anchor_positive": 27,
+      "anchor_negative": 47
+    },
+    {
+      "fail": 6,
+      "success": 15,
+      "anchor_positive": 15,
+      "anchor_negative": 42
+    },
+    {
+      "fail": 10,
+      "success": 17,
+      "anchor_positive": 43,
+      "anchor_negative": 34
+    },
+    {
+      "fail": 27,
+      "success": 10,
+      "anchor_positive": 39,
+      "anchor_negative": 22
+    },
+    {
+      "fail": 23,
+      "success": 7,
+      "anchor_positive": 60,
+      "anchor_negative": 15
+    },
+    {
+      "fail": 15,
+      "success": 16,
+      "anchor_positive": 2,
+      "anchor_negative": 0
+    },
+    {
+      "fail": 16,
+      "success": 8,
+      "anchor_positive": 49,
+      "anchor_negative": 8
+    },
+    {
+      "fail": 32,
+      "success": 18,
+      "anchor_positive": 38,
+      "anchor_negative": 62
+    },
+    {
+      "fail": 13,
+      "success": 13,
+      "anchor_positive": 57,
+      "anchor_negative": 16
+    },
+    {
+      "fail": 12,
+      "success": 9,
+      "anchor_positive": 9,
+      "anchor_negative": 2
+    },
+    {
+      "fail": 7,
+      "success": 2,
+      "anchor_positive": 44,
+      "anchor_negative": 61
+    },
+    {
+      "fail": 0,
+      "success": 16,
+      "anchor_positive": 35,
+      "anchor_negative": 43
+    },
+    {
+      "fail": 3,
+      "success": 10,
+      "anchor_positive": 63,
+      "anchor_negative": 55
+    },
+    {
+      "fail": 8,
+      "success": 4,
+      "anchor_positive": 41,
+      "anchor_negative": 44
+    },
+    {
+      "fail": 21,
+      "success": 7,
+      "anchor_positive": 52,
+      "anchor_negative": 9
+    },
+    {
+      "fail": 17,
+      "success": 14,
+      "anchor_positive": 53,
+      "anchor_negative": 6
+    },
+    {
+      "fail": 25,
+      "success": 2,
+      "anchor_positive": 34,
+      "anchor_negative": 5
+    },
+    {
+      "fail": 22,
+      "success": 17,
+      "anchor_positive": 55,
+      "anchor_negative": 11
+    },
+    {
+      "fail": 24,
+      "success": 5,
+      "anchor_positive": 5,
+      "anchor_negative": 53
+    },
+    {
+      "fail": 5,
+      "success": 9,
+      "anchor_positive": 62,
+      "anchor_negative": 19
+    },
+    {
+      "fail": 9,
+      "success": 12,
+      "anchor_positive": 26,
+      "anchor_negative": 7
+    },
+    {
+      "fail": 11,
+      "success": 8,
+      "anchor_positive": 18,
+      "anchor_negative": 17
+    },
+    {
+      "fail": 30,
+      "success": 18,
+      "anchor_positive": 23,
+      "anchor_negative": 45
+    },
+    {
+      "fail": 19,
+      "success": 3,
+      "anchor_positive": 54,
+      "anchor_negative": 10
+    }
+  ],
+  "buffer_sha256": "44259ae8bff050a60d79f5248c321d34a4774b187198f2d00ca26381f499c702",
+  "anchors_sha256": "8956e3ad382596079a178581e802f75fb3aec693152a176d4ab8e4fa1c2d2876",
+  "config_sha256": "3c39affff22dc243dc79dc6186b69172cf7dba6f9b6724a8ead627d8e61c3144",
+  "component_reduction": "Separate component means, summed; anchors mean of positive and negative; no reaveraging when c=0"
+}

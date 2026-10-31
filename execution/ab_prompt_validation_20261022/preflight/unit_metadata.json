@@ -1,0 +1,459 @@
+{
+  "math/train/prealgebra/1087": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "6a92670b4fa2dd62cecebc366b3fce1bc8ed2c086ac5d28803b64438608842ae",
+    "gold_text_sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/407": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "7bd02e7c4a36c428627590279bf85704007f02a3cd7549f8116f54576ad80c67",
+    "gold_text_sha256": "72b8c71a28848c7361cbb6115df92d20d3ae84619410af1cc8f523a4e94b8490",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/counting_and_probability/485": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "b12456556e30eec3a7a09d5c740d2a179f68514f6ddc9402f95be58146a6aed3",
+    "gold_text_sha256": "4075fa87d10cc77be114159d3633f57b729a60e99c59eaeefe8b1da4ccdd59cf",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/980": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "4527498667e60dd1bc425334db7e47c73894f56f550ea01a39cefbc394ff0804",
+    "gold_text_sha256": "306e5e44fe24b9b4004e7f89f0e466b9eb7cba8795364f740f99b1ee0017b29b",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/counting_and_probability/539": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "148175e14bc0416169cd5dfa52702f518994c0bd45b2856f927871d978175712",
+    "gold_text_sha256": "7f2253d7e228b22a08bda1f09c516f6fead81df6536eb02fa991a34bb38d9be8",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1013": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "c8667cf76960d65a7c00d21e1022addf16ab70ca8977337b1b68659ade55b9d9",
+    "gold_text_sha256": "37a24df75a4283fa0dec19cf86ab19d3101bdc06a746d85a8e0eb65d334ade41",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/geometry/596": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "1d421a1469548493bbf90660d4e6e2a3c78fe04b88a89cc910467473c3f7d4a2",
+    "gold_text_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/100": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "3a9d6cac40f33ebfc6b689b26fc39ed5cea69519e7728507bcdbdc9e645f4d75",
+    "gold_text_sha256": "46466118f73e099a04b3dbad71b1ced41e8217f84e5fea202fe8a56e7ef80669",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/307": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "f20cb6ffa3b4276ffdbb0a8d57dd45acde7e97dfe4ae234db2883382a3d7f631",
+    "gold_text_sha256": "85c0e583a6b5d1fd7cf2ce9b5e347ee4a42e73826b029230dc5c9c5617e7fb09",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/counting_and_probability/634": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "702bb96ce95b7f0d2bde4573ca6700fc6e540e1e2557d08a773260888464aedd",
+    "gold_text_sha256": "4f6c844184d2bd6520b6b140175aced1422c81aa383e34a79bebf242c1e1cc26",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/geometry/389": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "9605b0887f54fdd40e4365c952245b4e894d941b0629cc730d33edb3d93ed2bd",
+    "gold_text_sha256": "666f0201a5183d58b03abfeee4bbbe8438a4cf18cccd712b14bfb50b5f7ed3fc",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/geometry/336": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "ae6c2d656d086bf72107bc84d2046502199da27ea391aa1e3b06574c6f7d5187",
+    "gold_text_sha256": "2fca346db656187102ce806ac732e06a62df0dbb2829e511a770556d398e1a6e",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1374": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "06465dddb44148939a493e8e30a1369d44925b91c3d774380e794585278a9062",
+    "gold_text_sha256": "b4aea0d7e0199929cb7eac8f94352b0c78b4d5b83794343701f93b388b972e01",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/994": {
+    "answer_type": "percentage_points",
+    "question_text_sha256": "7ce9ce7e0bd4ad7e07d9706af157c944f620cf9584cb40081ba1a33b0f2620c6",
+    "gold_text_sha256": "8ec63388549933d163a0c589edaa624b4296ff1239a13e186f571130400a5963",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/123": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "7872c89c7a2b5fe7ec52ab6c19c715eaaf26e6b680256767612d6a9ef0f84403",
+    "gold_text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1648": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "7082e166b19b22dfc1c1c58c5c705108c40408d044969d4aba759426b29da0ad",
+    "gold_text_sha256": "b4fe5150fddd6382a977dd7ef1477fb1da0b108ebfb6c10b9eb2942e941eaed2",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1475": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "68663ef61a38b8817352595802159d925d4c3b28525f49e5cd3fb5bb64ac1d17",
+    "gold_text_sha256": "5e9eb260e076977666bc81b26ab5f48f5fe4005667a59ad668e947d56c7451cf",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/counting_and_probability/578": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "ebe11c3ffcc8accb68742d825818ef0ca271cfa53cc4c7a30a2e77b9def8400d",
+    "gold_text_sha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/95": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "fb1efd014cbc6ef11349e8a88f3163c28548508648fe1c5c38059c06a50e3f7e",
+    "gold_text_sha256": "93f432a7d292ab6db1e436be73db623c02752480dea9adb9ee984c083d4f4aa4",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/841": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "85d3db378df78b1d9aff0d9e8f48644501ac4236dc753fac2019b8739218a068",
+    "gold_text_sha256": "4075fa87d10cc77be114159d3633f57b729a60e99c59eaeefe8b1da4ccdd59cf",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/433": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d7b15c42de097d3de1277dc76cafc2318ec4a9d85e9817023b5696e98242bcf4",
+    "gold_text_sha256": "abf241b01e320b6f75057e60b66976e3ba259c7ffdcddbcd39eb49d1c09041ff",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/118": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "03b182f16405b466adfc4c1118dd454b6658d11eae4601ebc68f746029ae2326",
+    "gold_text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/425": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "e0291dd20eee43642a868f1c8e6c71e0a8615c8d42151d50b80899bba7be6b37",
+    "gold_text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/geometry/700": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "8117cd72b839cf21869a2872c1f4dd9a22e499596687d0414cec4031245f4b60",
+    "gold_text_sha256": "cd678b1860d0b89107a6f987946b486e4188ce9a9fba1ccac49e08b065ce0bb0",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/641": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d55cb37cad277673e811353eda1a6b0aea17b92c0665de90b79fb5448f743ec8",
+    "gold_text_sha256": "52524a6cc469019ee6e3585c756f6a8425b07348c2d270629cc632a0270223af",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/424": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "4889734cc0485e2fa9090b38a2a4cb71baa38191bde41c4a9b0a85d6bb522c1e",
+    "gold_text_sha256": "71ee45a3c0db9a9865f7313dd3372cf60dca6479d46261f3542eb9346e4a04d6",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/number_theory/738": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "29096187c9b851f49d9163f0311dc97873dd9aed4336ba15a4048ca63e6601ff",
+    "gold_text_sha256": "08985ebeaf122dc003a5ef56989fc7bbe288de101cd76ac60ad7fc6c577bd552",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/number_theory/303": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "c2bb30b81e0ca0a24ed5363ae7a6b53d96e8e209126ff8eb50643fd536ecdd85",
+    "gold_text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/580": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "741ab4063714a70ed4103c01c6166df2d1af45e2483566f730d84b7388d6e065",
+    "gold_text_sha256": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1503": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "789940455ae14b98f5c2e46dc3f4302121cbf4603b79bd191aa53ef80e318327",
+    "gold_text_sha256": "43279b71022d16e03417321125393f0fd4144e0477a03805a0f63afa7ee298c4",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/244": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "4c643425dfeb3a6346040ff977fa6bb4574f935735d65f4336047fe94744fe0c",
+    "gold_text_sha256": "28d6d2a47fca99967b6a0eaccd5225e19590d5ce5e810fe3a9ea0ab8213e79a6",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/951": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d38f60731857177f11f706e9bc2cd593c1b91a2ce5a2eca38af652f08e6f1895",
+    "gold_text_sha256": "08985ebeaf122dc003a5ef56989fc7bbe288de101cd76ac60ad7fc6c577bd552",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1290": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "ac8979771c0618ec1b1a974a6743317cba0d2a3d842833c51650817e2d00b729",
+    "gold_text_sha256": "552230819632e772e0fd75dacfb823b1d73d628d95f6bac7f238894f2fda96bd",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/1119": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "43c75c96d4799d5a46aa58b9a58a74c0eb6692565de8bd965329984676c4b272",
+    "gold_text_sha256": "58a44ef59594afeae13365faed55fe28331f1571bf554297556804c7ff84622c",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/geometry/795": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "57c29c96a65333269cbdfd01831232412393f23d7c5d90ae4f5b43f7a7e75d2a",
+    "gold_text_sha256": "39f8a96369f2c006719e8e0fffe9f63edcacaf7882c5b00f3d5e738ab1c8d30f",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/68": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "e94f365d02eb462eadb38dd1e526de38438508aa4c0e601a4044ad4711730cc7",
+    "gold_text_sha256": "a88a7902cb4ef697ba0b6759c50e8c10297ff58f942243de19b984841bfe1f73",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/900": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "df200632a6a9df54b1d9e63502f0aa6bd5fcf77d2c57c1b7e5c56c5448bde8a5",
+    "gold_text_sha256": "df92bb098b55baa9d4f47e99e0637f2a39a6828e31f5af24359dc2c94d846108",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/geometry/867": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d47e8d765d89a6f93c337d60ffed03b8e16a6db62a664b56b997c4074128de86",
+    "gold_text_sha256": "72898fffd9d88fc7d5ebda3993512d8609b309bfe357792216f8b0391eb0329d",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/counting_and_probability/741": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "61f09c22b661894ec6435088e68f2731ca896dff6104148d0910d09d6f95d79d",
+    "gold_text_sha256": "b0c17c0e1187df9204b84d5bf7d1cd685cf2b9f21840641e1e0488b987eb6f2d",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1591": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "599f98700230a803294ef533b20ae69ed85aeaeefde1c6c1e117e45118a8b160",
+    "gold_text_sha256": "86fd0d69b7b0e37db9c623288315f24fe37230ed1ff3425c155452a6810309fa",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/717": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "6900b4b7966d74ecdc0c7c860af19dc816e53f332192731030e43ed2beae33ca",
+    "gold_text_sha256": "c0ab4c5bf3abbd5760cf320b5ed041ca62188ef801a4878fdca351f6b5b2d7ef",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/597": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d6bd8bb3ff2de55565974ee44609c8862d1e8d88caaf96527c27077139dae926",
+    "gold_text_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/geometry/789": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "fe9806807dfcf3ff549924364b94781623b4542a1afc471cdf3babb1f87ca3f5",
+    "gold_text_sha256": "2df7e45aba83cdb1970772f398f5e71dbcae81308d6075e142ad5ca03350d76b",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/prealgebra/813": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "438d7a81999905ba04e60d0c6eb4e19b1d1ce5ec6c466108faf0505644ebf793",
+    "gold_text_sha256": "08985ebeaf122dc003a5ef56989fc7bbe288de101cd76ac60ad7fc6c577bd552",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math/train/algebra/1464": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "378f3b5caebc7c02168fed51b8cbbcc9a6c2c111e98e909f545903e53ad4a9d9",
+    "gold_text_sha256": "cf51bd76819aa6c12532e2db2c53ae6725d58d3a10f3eae097b0dd287fc030e5",
+    "review_basis": "explicit requested output unit; question/gold reviewed"
+  },
+  "math500/67": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "3c77f3abead87cb6dbf179ceb8ad0bfb90edca4d496497c26f5192da835514e4",
+    "gold_text_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/14": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "8aba72e5533aaf2c7e62b0a22bcef10ca8b597ce2b045683dd4489528d1d0d3d",
+    "gold_text_sha256": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/140": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "09a8532e00e3cd9a41779c00b791730f72848bf57e0ea9e380ad034816e7ec31",
+    "gold_text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/184": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "deb7c4010383be036c6f43eefd041361bbc79180b6522049b1416b179a7e2164",
+    "gold_text_sha256": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/226": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d58e5838fc7750bc87cf98d3888c5cb7bac568a0c7969d1466ce5fd6acb956fc",
+    "gold_text_sha256": "c6f3ac57944a531490cd39902d0f777715fd005efac9a30622d5f5205e7f6894",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/348": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "bea5faee61e3b15d13204c0e60c7ab4594fbb95a340504ef3a0aee9b03c28cf6",
+    "gold_text_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/393": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "821ba4d3cdae58d0b884efdb4ca167a3c5b24251c56454a100fc9ac986206381",
+    "gold_text_sha256": "f5ca38f748a1d6eaf726b8a42fb575c3c71f1864a8143301782de13da2d9202b",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/458": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "1978c44a04ec0c2bd9c2c83b6f7bffff92c71bdf93ba13597a75bc035f6af8c3",
+    "gold_text_sha256": "9f14025af0065b30e47e23ebb3b491d39ae8ed17d33739e5ff3827ffb3634953",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/473": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d240279b4063e04cd504d41efa92f441a6df9156a8b1ee09007c58621d37e9fe",
+    "gold_text_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/707": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "9db7165d3827e84d0c5caa195cce87b0ca44aab04b3ab490afb781ccfef13d51",
+    "gold_text_sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/728": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "532f21d9d56d9a0cc773a18c0a49a4e7aa7449fc1b06ad0b9dcb3710b23d9613",
+    "gold_text_sha256": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/772": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "41150db1bb8cae0d0f93b7c1cd0e472773ca32021f3a8e6f3f60cccca2ca4e20",
+    "gold_text_sha256": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/890": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "fc290e5920b76571c108f483a4bfa04da3382e909e26c6a2092b836f990cbd93",
+    "gold_text_sha256": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/999": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "01916eeafa3fc71aa8adb750db9bb73be8d806dcb57ea3868245a924d69df7ca",
+    "gold_text_sha256": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1030": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "5eef63aee8639040452671b119306ca5bf70524481c3a34e4c54b1c3e327fca1",
+    "gold_text_sha256": "c2356069e9d1e79ca924378153cfbbfb4d4416b1f99d41a2940bfdb66c5319db",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1079": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "53b2e43627a40e3e690d02d835bb17df4422d85eec3381e445d18849adfc20c2",
+    "gold_text_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1094": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d36ca220f1854e823517588685356a322515f2e2912bc5427e955bd877827d32",
+    "gold_text_sha256": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1152": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "fedfc30ae73a9f3a9b142acac32bd214a14407c73079c107076740f8db8fb09d",
+    "gold_text_sha256": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1159": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "75bd98ff26a608769a1553b795ded53dba0272110a651e6040a6c3b3f9c52565",
+    "gold_text_sha256": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1179": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "213b8d6329ee91c7f3bd3ee7bce5818db01b08b0d107b26c757745cf26e26f21",
+    "gold_text_sha256": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1235": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "78dd8c8b20f38c37bf2b306b4fa3ab15feae8b3eb6da642bbc6813a58d392456",
+    "gold_text_sha256": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "gsm8k/test/1239": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "d41990a9d49079fe979ef86bbb895fa09451e7ebb04f3601c19dd6b96b0b52ba",
+    "gold_text_sha256": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb",
+    "review_basis": "Question-only manual unit review before applying alternative labels; no model-specific rule."
+  },
+  "math/train/counting_and_probability/321": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "5871c9863f147b63cfb87df1ab196108bb6687a5130726662442538781aaf6b6",
+    "gold_text_sha256": "552230819632e772e0fd75dacfb823b1d73d628d95f6bac7f238894f2fda96bd"
+  },
+  "gsm8k/train/515": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "00afb9d4acb6ad5b12f6fb335f4c89ff37f3a15452fd4176adab016a51590d77",
+    "gold_text_sha256": "c2356069e9d1e79ca924378153cfbbfb4d4416b1f99d41a2940bfdb66c5319db"
+  },
+  "gsm8k/train/5695": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "f7fdf9a6b43b6e4899c03f0d6066d08be95fb6c408787c2bcb06834ab599df5a",
+    "gold_text_sha256": "39fa9ec190eee7b6f4dff1100d6343e10918d044c75eac8f9e9a2596173f80c9"
+  },
+  "gsm8k/train/2472": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "cd114668707d324413eacc96fe8066a44eb52ad03ca31b40a764c9bc35b6c747",
+    "gold_text_sha256": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
+  },
+  "gsm8k/train/4014": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "72420d41411ac74ebf254c1d734899b239e9bef5f2595275844f639f6c5527a6",
+    "gold_text_sha256": "b7a56873cd771f2c446d369b649430b65a756ba278ff97ec81bb6f55b2e73569"
+  },
+  "gsm8k/train/6830": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "7218d17254f9e79d337eb382a2e48d4623250a05d608fdb72cbc96ca9e80884d",
+    "gold_text_sha256": "1a6562590ef19d1045d06c4055742d38288e9e6dcd71ccde5cee80f1d5a774eb"
+  },
+  "gsm8k/train/2299": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "5efa9e8db41f79b37509b42a9ab93489941a3e5c969093af4637d82395800212",
+    "gold_text_sha256": "d59eced1ded07f84c145592f65bdf854358e009c5cd705f5215bf18697fed103"
+  },
+  "gsm8k/train/7446": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "70091b56f61b8edd382c66581c91ddd17d691009ec7be5d8f3b261dc7cbeb2cf",
+    "gold_text_sha256": "41cfc0d1f2d127b04555b7246d84019b4d27710a3f3aff6e7764375b1e06e05d"
+  },
+  "gsm8k/train/4820": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "fc2f804f1935008a81902b3bd40e1edb3b84185717be8269d65805dbaf29caf5",
+    "gold_text_sha256": "ff5a1ae012afa5d4c889c50ad427aaf545d31a4fac04ffc1c4d03d403ba4250a"
+  },
+  "gsm8k/train/1635": {
+    "answer_type": "percentage_points",
+    "question_text_sha256": "c24140cd2c46fc60f19f97120533fd0c13f1259d3334f7e970d7fa6cfed4340c",
+    "gold_text_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+  },
+  "gsm8k/train/2204": {
+    "answer_type": "percent_value",
+    "question_text_sha256": "8e9b610531731220f09f5caee3e210c9ac600a8696541f5d82f37bac07b32800",
+    "gold_text_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5"
+  }
+}

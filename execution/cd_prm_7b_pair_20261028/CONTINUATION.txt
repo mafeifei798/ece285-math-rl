@@ -1,0 +1,110 @@
+7B C/D paired PRM adaptation — authorized 2026-10-28
+
+Remote root MUST be /srv/research/ece285_math_rl_project.
+Do not use /home/researcher or another project directory. All new caches are under the
+math project cache directory. Original A/B code and results remain hash-guarded.
+
+Scope: frozen initial actor generates exactly 512 training questions x4;
+2048 shared public native-step anchors (1024 per class); paired PRM LoRA
+adaptation C/D; offline baseline B/C/D score/rank/advantage and ProcessBench
+subset diagnostics. No policy optimizer, full RL, extra seed, or G/S training.
+The user explicitly allowed sharing GPU1 after memory/utilization inspection.
+
+Source: experiments/cd_prm_7b_pair_20261028
+Run: runs/CD_PRM7B_pair_seed17_20261028
+Controller: controller.json, dispatch.json, controller.lock in that run.
+Inspect live PID/receipts/checkpoints before any intervention. NEVER redispatch
+or restart from base when existing PRM updates/checkpoints exist.
+
+CPU checks passed before dispatch: success-term gradient identity, native Qwen
+marker alignment, CRLF normalization, original annotated anchor boundaries,
+and score-translation invariance of group-relative advantage.
+
+Finite stage sequence: CPU select+anchors; frozen-actor generation; freeze
+encoded data/schedule; real-model no-update PRM preflight; C; D; actual first
+gradient C-D wiring; score B/C/D on same saved inputs; CPU paired analysis.
+No automatic retries. If a child fails, preserve its log, receipts, source and
+checkpoint, diagnose first, and do not substitute methods or add budget.
+
+PRM: Qwen/Qwen2.5-Math-PRM-7B revision0610740060112df12585d00a1c5f4624d2f59051.
+Actor: Qwen2.5-Math-1.5B base revision4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2.
+LoRA8 alpha16, head/base frozen, BF16, nonreentrant gradient checkpointing.
+LR2e-5, same AdamW; C=Lfail+Lsuccess+Lstep; D=Lfail+0*Lsuccess+Lstep.
+Separate component means, no reaveraging. SWS pooling temperature0.2, weights
+detached. Same data, seed17, initial LoRA, batch order, optimizer and updates.
+Per update:2 failure+2 success+2 positive anchors+2 negative anchors, processed
+sequentially for memory. Steps=max(512,ceil(fail/2),ceil(success/2)); rule frozen
+before data generation; all eligible samples and all2048 anchors covered.
+PRM checkpoints each32 updates plus final adapters; never train the actor.
+
+64 corrected-B groups (16 all-correct,16 all-wrong,32 mixed) are hash-selected
+without PRM scores. These, validation/test and ProcessBench questions are excluded
+from PRM buffer and anchors. Old3 error groups are separate illustrations.
+192 fixed stratified ProcessBench examples, not official full benchmark scores.
+Exact-text decontamination does not remove inherited PRM pretraining exposure.
+
+Scoring: original repaired verifier outcomes, canonical CRLF view and native
+<extra_0> steps; R=y+.2min(p), sample-std GRPO epsilon1e-4. Invalid outputs have
+flagged zero placeholders; probe context overflow is an error, not a new reward.
+Rank/advantage improvements matter; lower absolute scores alone are not success.
+Verifier-incorrect does not certify invalid derivation. No downstream C/D
+accuracy exists until a separately authorized policy training/evaluation.
+
+Local read-only inspector:
+python3 /home/researcher/Desktop/python/ece285_math_rl_project/execution/cd_prm_7b_pair_20261028/inspect_remote.py
+It needs SSH/network permission but does not launch remote work. No scheduled
+Codex automation was created. Existing cancelled automations remain cancelled.
+
+On completion: retrieve summary.json, RESULTS.txt, review.html, shared manifests,
+wiring/preflight/CPU checks, C/D completion receipts and scores, group advantages,
+then independently verify preservation and recompute key rank/advantage values.
+Preserve uncertain/negative outcomes. Do not launch C/D policy RL automatically.
+
+LIVE CONTROLLER AND PRE-UPDATE DATA ADMISSION (2026-10-28)
+Controller PID3237174, initial release421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7.
+During frozen-actor generation, independent audit found6 pairs of identical
+native input IDs with opposite public step labels in the original anchors.
+Before any PRM update, ONLY controller was paused (SIGSTOP); its existing
+healthy generation child3238739 continued producing/reusing the same chunks.
+Source and anchor originals archived at run/admission_migration_v2.
+Only prepare.py admission was repaired: exclude both labels of conflicting
+native prefixes globally before deterministic selection, retain source step
+boundaries and original selection ordering, then fill1024 anchors per class.
+Retained2035 unique native inputs and added/replaced13; total2048 unique inputs.
+Independent audit reconstructed all2048 encodings/markers and confirmed no
+forbidden overlap. No loss/config/model/buffer selection change. Accepted
+migration was written before SIGCONT resumed the SAME controller. No redispatch.
+Current releaseb35e38b2addc45b36703812b47bc1595b9a36a34a68801baa2d318c82893cc8e.
+See admission_migration_v2/accepted.json for exact initial/new hashes and timing.
+Controller's original dispatch release pin is intentionally retained as history;
+new stage releases/adaptation checkpoints pin the admitted version explicitly.
+
+VERIFIED RUNNING as of 2026-10-28 01:25:12 PDT: generation2048 complete; shared counts fail827/success817/anchor1024+1024,512 updates per arm,2,038,677 input tokens each. Independent input/schedule audit passed for all native inputs. Real model no-update preflight passed13.865GiB. C firstcheckpoint step32 audited on CPU; FP32 LoRA tensors, valid optimizer/version pins, metrics contiguous through step46. Original89 protected files unchanged. C active PID3299090; D has not yet started. Current rough remaining estimate2-3h including scoring, subject to sharing. Full policy RL remains prohibited. No Codex automation created.
+
+FOLLOW-UP 2026-10-28: BOTH PRM adaptations completed512 steps. C3715s,
+D2631s, bothpeak15.232GiB, final adapters and hashes valid. No actor update.
+Original controller3237174 failed at paired_wiring after adaptation: strict
+coordinate-wise BF16 gradient test maxresidual0.00061288; original failure kept.
+A no-update four-pass BF16 replay (wiring_recovery/replay_gradients.py) proved
+same-input gradients themselves vary~0.63-0.69% in relative L2; historical
+C-D-success residual norm0.009369 matches repeat-C/D error norms0.00879/0.00933.
+FP64 reductions used for norms/cosines; initial FP32 CPU norms were inaccurate.
+Independent deterministic FP32+mathSDPA first-batch reference PASSED ORIGINAL
+atol2e-6/rtol.005 withmaxresidual5.588e-9, relativeL2 error1.451e-7, no optimizer
+updates, all parameters unchanged. Reference at wiring_recovery/fp32_reference_v2.
+Earlier reference helper had a file-path error before backward; its log is
+preserved in fp32_reference; fixed helper is separate v2, training untouched.
+
+Finite recovery PID1113327 is now ONLY scoringB/C/D then CPUanalyze using
+unchanged source release b35e38b2..., fixed outputs and original training config.
+Receipt wiring_recovery/postprocess.json; source/log samefolder. Never re-run
+training or original failedcontroller. New controller gates on passed FP32ref,
+matching C/D init/batches/firstlosses/completion512 and valid finaladapter hashes.
+GPU1 sharing remainsauthorized. Evalfree threshold24GiB is specific to read-only
+scoring after measured15.232GiB peak; original52GiB training admission unchanged.
+Original paired_wiring.json remains failed as history; new reassessment and
+both real-model audits are attached, not a silent pass/threshold relaxation.
+On completion retrieve results and independently verify group reward/advantage
+and final preservation. No full RL, extra seeds, budget, model or automation.
+
+COMPLETE as of 2026-10-28 23:56:36 PDT: recovery postprocess finished all B/C/D728-row scoring and CPUanalyze; no further jobs or training are needed for this authorized scope. Artifacts fetched41files,4.59MB. Independent result audit passed: all64primarygroups x3 reward/rank/advantages, scoreshash, C/Dcontrols, PBmetrics and original89protectedfiles unchanged. Recomputed clustered95%AUROC intervals D-C[-13.736,-3.404]pp and exploratory C-B[-0.543,+2.310]pp. C mixedAUROC88.72 vsB87.19, but3knownshortwrong/nonsenseexamples allCtop1 positiveA1.50-2.36. D PBvalidaccept14.06%,AUROC86.99 vsC95.07/B94.27; low scores dampA viaeps14/16allwronggroups. Current evidence does NOT justify fullC/DpolicyRL. Localreview.html andRESULTS.txt updated. No publicupload, recurringautomation, newseed or policyoptimizer launched. Originalfailedcontroller remains historical; postprocess.json is current completion authority.

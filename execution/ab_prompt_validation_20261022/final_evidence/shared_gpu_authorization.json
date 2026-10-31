@@ -1,0 +1,8 @@
+{
+  "user_answer": "允许共享GPU立即评测",
+  "recorded_unix": 1792699800.2923467,
+  "gpu": 1,
+  "scope": "Existing frozen four-cell inference only; no training, no protocol or grading changes",
+  "admission_change": "Allow other GPU processes and GPU utilization; retain evaluator free>=40000 MiB gate",
+  "frozen_release_sha256": "1a5f57dcf2823f6fc91b2e37baf66bef96851ab809e09253fcb2d69fc1df3c84"
+}

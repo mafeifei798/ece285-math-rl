@@ -1,0 +1,169 @@
+{
+  "conclusion": "未发现奖励计算、步骤索引、A/B 超参数或评测协议错误；已确认当前 PRM 存在明显错误回答高分，且组内归一化会放大同结果组的过程信号。PRM、分段和 min 聚合各自的因果贡献尚不能独立确定。",
+  "scope": "A/B seed 17 的同一 6M token 节点；保存记录全量重放，加 10 条 CPU 前向抽查。未改训练代码或参数，未打断训练。",
+  "checks": {
+    "reward_rows_recomputed": 9120,
+    "reward_replay_errors": [],
+    "verifier_replay": {
+      "n": 112,
+      "errors": []
+    },
+    "first32_completions_identical": true,
+    "prompt_order_identical_on_common_prefix": true,
+    "saved_training_args_difference": {
+      "logging_dir": [
+        "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+        "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/tensorboard"
+      ],
+      "output_dir": [
+        "/srv/research/ece285_math_rl_project/runs/A_seed17",
+        "/srv/research/ece285_math_rl_project/runs/B_seed17_6M"
+      ]
+    },
+    "forward_cases": 10,
+    "cpu_batch_single_max_diff": 3.546476364135742e-06,
+    "cpu_prefix_full_max_diff": 4.172325134277344e-07,
+    "cpu_FP32_vs_GPU_BF16_max_step_diff": 0.03214108943939209,
+    "cpu_FP32_vs_GPU_BF16_max_aggregate_diff": 0.008219510316848755
+  },
+  "confirmed_evidence": {
+    "same_outcome_groups": 244,
+    "all_groups": 1140,
+    "all_wrong_groups": 212,
+    "all_correct_groups": 32,
+    "pairwise_outcome_proxy_AUC": 0.44997205142537733,
+    "proxy_warning": "This is final-answer agreement, not process-label accuracy.",
+    "clear_counterexample": {
+      "row_index": 2095,
+      "given": "g(2)=37",
+      "completion": "g(x)=2x^2-3",
+      "direct_substitution": 5,
+      "saved_PRM_score": 0.9791356921195984,
+      "independent_CPU_PRM_score": 0.9771650433540344,
+      "reward": 0.1958271384239197,
+      "normalized_advantage": 2.440088787259933,
+      "group_outcomes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "latest_status": {
+    "checked_pt": "2026-10-21T10:33:48.236622-07:00",
+    "controller": {
+      "status": "training_24M",
+      "pid": 1898321,
+      "started_unix": 1792577694.9436934,
+      "scope": "Only B seed 17, pilot, 24M training and the three fixed milestone evaluations. No C/D or additional seeds.",
+      "target_completion_tokens": 24000000,
+      "A_sources_unchanged": true,
+      "replication_gate_executed": false,
+      "heartbeat_unix": 1792604011.2925665,
+      "child_pid": 2220917,
+      "gpu": 0,
+      "last_child_exit_code": 0
+    },
+    "progress": {
+      "generated_completion_tokens": 12537559,
+      "generated_completions": 18944,
+      "generated_groups": 2368,
+      "mixed_reward_groups": 2366,
+      "correct_completions": 7941,
+      "truncated_completions": 1148,
+      "prm_input_tokens": 10737895,
+      "prm_padded_tokens": 15920365,
+      "prm_scored_completions": 15989,
+      "native_steps": 170099,
+      "single_step_completions": 1066,
+      "no_double_newline_completions": 1437,
+      "prm_forward_seconds": 538.6496057035401,
+      "reward_status_counts": {
+        "symbolic": 8847,
+        "truncated": 1148,
+        "exact": 7142,
+        "missing_or_invalid_box": 1579,
+        "unparseable": 228
+      },
+      "outcome_group_counts": {
+        "mixed": 1851,
+        "mixed_has_invalid": 1256,
+        "mixed_all_valid": 595,
+        "all_wrong": 424,
+        "all_wrong_has_invalid": 349,
+        "all_wrong_all_valid": 75,
+        "all_correct": 93,
+        "all_correct_all_valid": 93
+      },
+      "last_batch": {
+        "generated_completion_tokens": 10577,
+        "generated_completions": 32,
+        "generated_groups": 4,
+        "mixed_reward_groups": 4,
+        "correct_completions": 23,
+        "truncated_completions": 0,
+        "native_steps": 214,
+        "single_step_completions": 3,
+        "no_double_newline_completions": 4,
+        "prm_forward_seconds": 0.5556521061807871,
+        "prm_input_tokens": 11442,
+        "prm_padded_tokens": 16830,
+        "prm_scored_completions": 30
+      },
+      "global_step": 592,
+      "elapsed_seconds": 8413.385438024998,
+      "target_completion_tokens": 24000000,
+      "effective_completion_tokens_per_second": 775.5485646134513,
+      "torch_peak_allocated_GiB": 34.45738935470581,
+      "torch_peak_reserved_GiB": 35.48046875,
+      "resumed_from_global_step": 285,
+      "source_completion_tokens": 6012570,
+      "continuation_generated_completion_tokens": 6524989
+    },
+    "source_hash_matches": {
+      "training_b/check_native_prm.py": true,
+      "training_b/prm_reward.py": true,
+      "training_b/prepare_prm.py": true,
+      "training_b/train_b.py": true,
+      "training_b/run_b.py": true,
+      "training_b/test_b.py": true,
+      "training_b/config.json": true,
+      "training/train_baseline.py": true,
+      "training/common.py": true,
+      "training/reward.py": true,
+      "training/evaluate_policy.py": true,
+      "operations/continue_baseline.py": true,
+      "operations/run_continuation.py": true,
+      "operations/lora_preflight.py": true
+    },
+    "process_cmdlines": {
+      "1898321": ".venv/bin/python training_b/run_b.py ",
+      "2220917": "/srv/research/ece285_math_rl_project/.venv/bin/python training_b/train_b.py --run-dir /srv/research/ece285_math_rl_project/runs/B_seed17_24M --target 24000000 --resume /srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285 --prior-run /srv/research/ece285_math_rl_project/runs/B_seed17_6M "
+    },
+    "failure_file_present": false,
+    "recent_metrics_nonfinite": [],
+    "audit_used_GPU": false
+  },
+  "limitations": [
+    "单 seed 的中期结果；尚未完成 B 24M 固定终点评测。",
+    "没有在这次检查中完成 ProcessBench 全量过程标签评测。",
+    "单步与多步样本不是随机分组；分数差不能单独证明 min 聚合的因果效应。",
+    "CPU FP32 与 GPU BF16 有精度差异；独立复算不等于逐位复现。"
+  ],
+  "files_sha256": {
+    "mechanism_slices.json": "7a2b4d713a5202b1c870e8752fce5978fc6a7772bed1de7c8df9ba2e0b0eac49",
+    "min_locations.json": "0872897296d0dc4c08e5d7662c032d9c2c903e9fe2af27d83b01a18557af81ff",
+    "positive_wrong_examples.json": "1bef7db6183b27d4216634f41ecf287e6cc9d5b39cf91e927a4fa4a3a0daa253",
+    "selected_examples.json": "f89f9b8cd6d9923c0fdecf46b5bf58d83b8f68a2127b580d1931bd4aa4b35e0a",
+    "forward_replay.json": "b89bd9dae9a8c9881dff19dec9a6a5f5ac63bc8a741387654a0107af441a9254",
+    "final_status.json": "d977acf609a66119d09d6181afae6d0236fe5e6b79e5a07d5bfc87afad2e3b8d",
+    "groups_replayed.json": "8f9b8205d0a667346c5b4d92127fecb226e8fcf9c1dca47d9c31a537e2f8a2ca",
+    "eval_and_contract.json": "9c17e4724d16205b3c8421400fa92cfdeb302d2d095d49e2a512d8889f33fb18",
+    "reward_replay.json": "b2b1f230dfde200e72144f8be98ea0556451adf6a2f0936c1d2f8668af0f6d8f"
+  }
+}

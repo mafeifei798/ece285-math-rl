@@ -1,0 +1,7 @@
+{
+  "stage": "CPU_audit_complete",
+  "pid": 2830949,
+  "unix": 1793325026.6060526,
+  "training": false,
+  "comparison": "/srv/research/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029/comparison.json"
+}

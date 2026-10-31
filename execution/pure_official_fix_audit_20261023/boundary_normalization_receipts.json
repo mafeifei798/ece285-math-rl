@@ -1,0 +1,2242 @@
+[
+  {
+    "batch_id": "A:16",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 11990,
+    "boundary_token_count": 233,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 233,
+    "nonzero_advantage_count_after_boundary_mask": 11757,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.2601812088574036e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 11757,
+        "mean": 0.3940693829714,
+        "variance": 0.24804461411934092,
+        "reciprocal_std": 2.0078677270505443,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:16",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 11990,
+    "boundary_token_count": 233,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 233,
+    "nonzero_advantage_count_after_boundary_mask": 11757,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.515165302696687e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 11757,
+        "mean": -0.08095358391819564,
+        "variance": 0.06126362038020749,
+        "reciprocal_std": 4.04016099069937,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:16",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 11990,
+    "boundary_token_count": 233,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 233,
+    "nonzero_advantage_count_after_boundary_mask": 11757,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.5784431256781204e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 11757,
+        "mean": -0.08318608526507293,
+        "variance": 0.036308039788393594,
+        "reciprocal_std": 5.248057668430069,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:16",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 11990,
+    "boundary_token_count": 233,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 233,
+    "nonzero_advantage_count_after_boundary_mask": 11757,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 4.520204308633424e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 11757,
+        "mean": -0.07816287198301129,
+        "variance": 0.031614597060613286,
+        "reciprocal_std": 5.624140668495068,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:22",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 17488,
+    "boundary_token_count": 367,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 367,
+    "nonzero_advantage_count_after_boundary_mask": 17121,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.5565877642398362e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 17121,
+        "mean": 0.46869322170279487,
+        "variance": 0.24760771525237354,
+        "reciprocal_std": 2.0096383675758775,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:22",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 17488,
+    "boundary_token_count": 367,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 367,
+    "nonzero_advantage_count_after_boundary_mask": 17121,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.9727901889865507e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 17121,
+        "mean": -0.0266833834068444,
+        "variance": 0.051368236813370494,
+        "reciprocal_std": 4.41217440006591,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:22",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 17488,
+    "boundary_token_count": 367,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 367,
+    "nonzero_advantage_count_after_boundary_mask": 17121,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.8159370718251466e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 17121,
+        "mean": -0.02130249023980812,
+        "variance": 0.03230021350367612,
+        "reciprocal_std": 5.564130451267584,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:22",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 17488,
+    "boundary_token_count": 367,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 367,
+    "nonzero_advantage_count_after_boundary_mask": 17121,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.589780307398314e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 17121,
+        "mean": -0.009553658251439737,
+        "variance": 0.03738364938220812,
+        "reciprocal_std": 5.172007578610518,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:166",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 16858,
+    "boundary_token_count": 261,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 261,
+    "nonzero_advantage_count_after_boundary_mask": 16597,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.945251975055129e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 16597,
+        "mean": 0.390428110727752,
+        "variance": 0.22655585848663812,
+        "reciprocal_std": 2.1009337196460574,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:166",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 16858,
+    "boundary_token_count": 261,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 261,
+    "nonzero_advantage_count_after_boundary_mask": 16597,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.408013439174738e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 16597,
+        "mean": -0.033093802020592415,
+        "variance": 0.06493471796425182,
+        "reciprocal_std": 3.924293858522541,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:166",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 16858,
+    "boundary_token_count": 261,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 261,
+    "nonzero_advantage_count_after_boundary_mask": 16597,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.3222320216499384e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 16597,
+        "mean": -0.020760094296443772,
+        "variance": 0.06161494014930106,
+        "reciprocal_std": 4.0286263085235685,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:166",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 16858,
+    "boundary_token_count": 261,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 261,
+    "nonzero_advantage_count_after_boundary_mask": 16597,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.0683969870205487e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 16597,
+        "mean": -0.02307932679651392,
+        "variance": 0.0609005324656848,
+        "reciprocal_std": 4.052186777704691,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:264",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 29316,
+    "boundary_token_count": 456,
+    "natural_zero_nonboundary_count": 9411,
+    "initial_zero_advantage_count_after_boundary_mask": 9867,
+    "nonzero_advantage_count_after_boundary_mask": 19449,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.0711163089816012e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 19449,
+        "mean": 0.17260563945585158,
+        "variance": 0.20804490283062219,
+        "reciprocal_std": 2.1924084135773025,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:264",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 29316,
+    "boundary_token_count": 456,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 456,
+    "nonzero_advantage_count_after_boundary_mask": 28860,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.6789529455607521e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 28860,
+        "mean": -0.05742795022499147,
+        "variance": 0.04688667506386134,
+        "reciprocal_std": 4.618227062967823,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:264",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 29316,
+    "boundary_token_count": 456,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 456,
+    "nonzero_advantage_count_after_boundary_mask": 28860,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.6769394584059683e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 28860,
+        "mean": -0.03556689542680475,
+        "variance": 0.032209672233521794,
+        "reciprocal_std": 5.571945338331398,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:264",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 29316,
+    "boundary_token_count": 456,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 456,
+    "nonzero_advantage_count_after_boundary_mask": 28860,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.7610132285739155e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 28860,
+        "mean": -0.04725083715805322,
+        "variance": 0.03367676721091281,
+        "reciprocal_std": 5.44922577973459,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:280",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18752,
+    "boundary_token_count": 322,
+    "natural_zero_nonboundary_count": 9351,
+    "initial_zero_advantage_count_after_boundary_mask": 9673,
+    "nonzero_advantage_count_after_boundary_mask": 9079,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.9972990150662895e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 9079,
+        "mean": 0.36720122620775214,
+        "variance": 0.4230245953586,
+        "reciprocal_std": 1.537507314806916,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:280",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18752,
+    "boundary_token_count": 322,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 322,
+    "nonzero_advantage_count_after_boundary_mask": 18430,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.3577636154570314e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18430,
+        "mean": -0.05299401854195723,
+        "variance": 0.05182977402273309,
+        "reciprocal_std": 4.392485558806358,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:280",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18752,
+    "boundary_token_count": 322,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 322,
+    "nonzero_advantage_count_after_boundary_mask": 18430,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.2873287219837835e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18430,
+        "mean": -0.014672520061387875,
+        "variance": 0.024768301281630146,
+        "reciprocal_std": 6.35406845139326,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "A:280",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18752,
+    "boundary_token_count": 322,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 322,
+    "nonzero_advantage_count_after_boundary_mask": 18430,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.2301932672542648e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18430,
+        "mean": -0.03285184750091881,
+        "variance": 0.027665953955822612,
+        "reciprocal_std": 6.012113558845461,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:6",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 19047,
+    "boundary_token_count": 359,
+    "natural_zero_nonboundary_count": 11982,
+    "initial_zero_advantage_count_after_boundary_mask": 12341,
+    "nonzero_advantage_count_after_boundary_mask": 6706,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.1451999815115244e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 6706,
+        "mean": 0.435760363442015,
+        "variance": 0.5745485228435991,
+        "reciprocal_std": 1.3192789826935372,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:6",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 19047,
+    "boundary_token_count": 359,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 359,
+    "nonzero_advantage_count_after_boundary_mask": 18688,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.1187489185336972e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18688,
+        "mean": -0.08807427059139017,
+        "variance": 0.047553598606676926,
+        "reciprocal_std": 4.58572815801656,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:6",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 19047,
+    "boundary_token_count": 359,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 359,
+    "nonzero_advantage_count_after_boundary_mask": 18688,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.0590986649082765e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18688,
+        "mean": -0.08258205332115984,
+        "variance": 0.04223643511738505,
+        "reciprocal_std": 4.865823733116926,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:6",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 19047,
+    "boundary_token_count": 359,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 359,
+    "nonzero_advantage_count_after_boundary_mask": 18688,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.8884708774535852e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18688,
+        "mean": -0.06662599520114619,
+        "variance": 0.042427293070719345,
+        "reciprocal_std": 4.854867013293455,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:106",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18724,
+    "boundary_token_count": 338,
+    "natural_zero_nonboundary_count": 11066,
+    "initial_zero_advantage_count_after_boundary_mask": 11404,
+    "nonzero_advantage_count_after_boundary_mask": 7320,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 5.927186552678876e-08,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 7320,
+        "mean": 0.6066634950609725,
+        "variance": 0.7818248340665718,
+        "reciprocal_std": 1.1309548551231283,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:106",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18724,
+    "boundary_token_count": 338,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 338,
+    "nonzero_advantage_count_after_boundary_mask": 18386,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.4575934859095696e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18386,
+        "mean": -0.04399222419466522,
+        "variance": 0.04204819371154364,
+        "reciprocal_std": 4.8767032332408,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:106",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18724,
+    "boundary_token_count": 338,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 338,
+    "nonzero_advantage_count_after_boundary_mask": 18386,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.0836602132590087e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18386,
+        "mean": -0.04366368004242709,
+        "variance": 0.0260826751046387,
+        "reciprocal_std": 6.1919000048943404,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:106",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 18724,
+    "boundary_token_count": 338,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 338,
+    "nonzero_advantage_count_after_boundary_mask": 18386,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.1729700883099667e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 18386,
+        "mean": -0.06039047912443473,
+        "variance": 0.02900581242420568,
+        "reciprocal_std": 5.871613805486518,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:144",
+    "arm": "P_VR",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 14157,
+    "boundary_token_count": 291,
+    "natural_zero_nonboundary_count": 8594,
+    "initial_zero_advantage_count_after_boundary_mask": 8885,
+    "nonzero_advantage_count_after_boundary_mask": 5272,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 2.1771166780482076e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 5272,
+        "mean": 0.7404383426060128,
+        "variance": 1.0392715194178557,
+        "reciprocal_std": 0.9809242860147492,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:144",
+    "arm": "QWEN_PRM",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 14157,
+    "boundary_token_count": 291,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 291,
+    "nonzero_advantage_count_after_boundary_mask": 13866,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 3.2004976602273416e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 13866,
+        "mean": -0.07804888510853847,
+        "variance": 0.08775503691242892,
+        "reciprocal_std": 3.375701007849418,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:144",
+    "arm": "PURE_NATIVE",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 14157,
+    "boundary_token_count": 291,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 291,
+    "nonzero_advantage_count_after_boundary_mask": 13866,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.9771909509636032e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 13866,
+        "mean": -0.05791415481813511,
+        "variance": 0.05394268430095085,
+        "reciprocal_std": 4.305600421856088,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  },
+  {
+    "batch_id": "B:144",
+    "arm": "PURE_RL_PROMPT",
+    "scope": "OpenRLHF boundary suppression and normalization transplant; NOT full OpenRLHF baseline reproduction",
+    "input_stage": "raw_pre_whitening",
+    "raw_provenance_is_callers_responsibility": true,
+    "reward_or_raw_baseline_recomputed": false,
+    "upstream_verl_whitening_calls": 0,
+    "normalization_calls": 1,
+    "boundary_masking_before_normalization": true,
+    "source": {
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+      "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
+      "method": "NaiveReplayBuffer.normalize",
+      "line_start": 213,
+      "line_end": 254,
+      "ast_extracted_method_only": true
+    },
+    "input_shape": [
+      32,
+      2048
+    ],
+    "input_and_output_dtype": "float32",
+    "device": "cpu",
+    "valid_token_count": 14157,
+    "boundary_token_count": 291,
+    "natural_zero_nonboundary_count": 0,
+    "initial_zero_advantage_count_after_boundary_mask": 291,
+    "nonzero_advantage_count_after_boundary_mask": 13866,
+    "all_boundary_outputs_zero": true,
+    "all_initial_zero_outputs_zero": true,
+    "raw_input_not_modified": true,
+    "all_zero_behavior": "raise ValueError before invoking official zero-denominator normalizer",
+    "right_padding_removed_before_official_method": true,
+    "packing_samples": false,
+    "identity_all_reduce_calls": [
+      {
+        "operation": "sum",
+        "numel": 2
+      },
+      {
+        "operation": "sum",
+        "numel": 1
+      }
+    ],
+    "float64_oracle": {
+      "passed": true,
+      "max_abs_error": 1.100616624505335e-07,
+      "atol": 2e-05,
+      "rtol": 2e-05,
+      "statistics": {
+        "nonzero_count": 13866,
+        "mean": -0.08325771122737498,
+        "variance": 0.05275343056247571,
+        "reciprocal_std": 4.353861868833326,
+        "variance_includes_initial_zero_slots": true,
+        "variance_denominator_excludes_initial_zero_slots": true,
+        "variance_floor": 1e-08,
+        "bessel_correction": false
+      }
+    },
+    "limits": [
+      "No reward model scores changed; high-scoring empty responses may still affect peers' raw baselines.",
+      "Normal EOS and all supplied step boundaries also lose their direct policy-gradient term.",
+      "Nonempty unhelpful text retains nonboundary advantages and is not fixed by this transplant.",
+      "Zero direct EOS gradient does not freeze its probability under shared model parameter updates.",
+      "Both experimental arms need the identical adapter and frozen input/mask protocol for a fair comparison."
+    ]
+  }
+]

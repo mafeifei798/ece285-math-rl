@@ -1,0 +1,372 @@
+INFO 10-23 04:12:51 [__init__.py:216] Automatically detected platform cuda.
+INFO 10-23 04:12:53 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-23 04:12:53 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2] to model_path [/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2]
+INFO 10-23 04:12:53 [utils.py:328] non-default args: {'dtype': 'bfloat16', 'seed': 285, 'max_model_len': 4096, 'gpu_memory_utilization': 0.25, 'max_num_batched_tokens': 4096, 'max_num_seqs': 32, 'disable_log_stats': True, 'enforce_eager': True, 'enable_lora': True, 'max_loras': 2, 'model': '/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2'}
+INFO 10-23 04:13:00 [__init__.py:742] Resolved architecture: Qwen2ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 10-23 04:13:00 [__init__.py:1815] Using max model len 4096
+WARNING 10-23 04:13:00 [lora.py:92] `lora_extra_vocab_size` is deprecated and will be removed in v0.12.0. Additional vocabulary support for LoRA adapters is being phased out.
+WARNING 10-23 04:13:00 [cuda.py:103] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+INFO 10-23 04:13:00 [__init__.py:3400] Cudagraph is disabled under eager mode
+INFO 10-23 04:13:00 [llm_engine.py:221] Initializing a V0 LLM engine (v0.10.2) with config: model='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', speculative_config=None, tokenizer='/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=285, served_model_name=/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=False, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 10-23 04:13:02 [cuda.py:456] Using Flash Attention backend.
+[W1023 04:13:08.332026026 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1023 04:13:08.398398410 socket.cpp:200] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[W1023 04:13:08.399039066 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO 10-23 04:13:08 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 10-23 04:13:08 [model_runner.py:1051] Starting to load model /srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.98s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.98s/it]
+
+INFO 10-23 04:13:15 [default_loader.py:268] Loading weights took 3.18 seconds
+INFO 10-23 04:13:15 [punica_selector.py:19] Using PunicaWrapperGPU.
+INFO 10-23 04:13:16 [model_runner.py:1083] Model loading took 2.9488 GiB and 6.356441 seconds
+INFO 10-23 04:13:24 [worker.py:290] Memory profiling takes 7.68 seconds
+INFO 10-23 04:13:24 [worker.py:290] the current vLLM instance can use total_gpu_memory (79.25GiB) x gpu_memory_utilization (0.25) = 19.81GiB
+INFO 10-23 04:13:24 [worker.py:290] model weights take 2.95GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 0.26GiB; the rest of the memory reserved for KV Cache is 16.51GiB.
+INFO 10-23 04:13:24 [executor_base.py:114] # cuda blocks: 38646, # CPU blocks: 9362
+INFO 10-23 04:13:24 [executor_base.py:119] Maximum concurrency for 4096 tokens per request: 150.96x
+INFO 10-23 04:13:26 [worker.py:467] Free memory on device (36.65/79.25 GiB) on startup. Desired GPU memory utilization is (0.25, 19.81 GiB). Actual usage is 2.95 GiB for weight, 0.26 GiB for peak activation, 0.09 GiB for non-torch memory, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=17571823104` to fit into requested memory, or `--kv-cache-memory=35654647296` to fully utilize gpu memory. Current kv cache memory in use is 17729109504 bytes.
+INFO 10-23 04:13:26 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 10.61 seconds
+INFO 10-23 04:13:27 [llm.py:295] Supported_tasks: ['generate']
+INFO 10-23 04:13:27 [__init__.py:36] No IOProcessor plugins requested by the model
+{"cell": "A_original", "completed_predictions": 16, "generated_completion_tokens": 11897, "last_batch_seconds": 217.41195392608643, "elapsed_seconds": 256.8481516838074}
+{"cell": "A_final_only", "completed_predictions": 32, "generated_completion_tokens": 21185, "last_batch_seconds": 133.20640516281128, "elapsed_seconds": 390.0552086830139}
+{"cell": "B_original", "completed_predictions": 48, "generated_completion_tokens": 32369, "last_batch_seconds": 204.73688316345215, "elapsed_seconds": 594.7929036617279}
+{"cell": "B_final_only", "completed_predictions": 64, "generated_completion_tokens": 42462, "last_batch_seconds": 224.30893397331238, "elapsed_seconds": 819.1025946140289}
+{"cell": "A_final_only", "completed_predictions": 80, "generated_completion_tokens": 54118, "last_batch_seconds": 214.16727089881897, "elapsed_seconds": 1033.270602464676}
+{"cell": "B_original", "completed_predictions": 96, "generated_completion_tokens": 66704, "last_batch_seconds": 223.25893115997314, "elapsed_seconds": 1256.5302827358246}
+{"cell": "B_final_only", "completed_predictions": 112, "generated_completion_tokens": 76154, "last_batch_seconds": 201.63132858276367, "elapsed_seconds": 1458.162325143814}
+{"cell": "A_original", "completed_predictions": 128, "generated_completion_tokens": 88343, "last_batch_seconds": 191.13017320632935, "elapsed_seconds": 1649.2932362556458}
+{"cell": "B_original", "completed_predictions": 144, "generated_completion_tokens": 98921, "last_batch_seconds": 200.17995238304138, "elapsed_seconds": 1849.4739627838135}
+{"cell": "B_final_only", "completed_predictions": 160, "generated_completion_tokens": 108240, "last_batch_seconds": 232.69528794288635, "elapsed_seconds": 2082.170319080353}
+{"cell": "A_original", "completed_predictions": 176, "generated_completion_tokens": 118635, "last_batch_seconds": 233.93453216552734, "elapsed_seconds": 2316.1056439876556}
+{"cell": "A_final_only", "completed_predictions": 192, "generated_completion_tokens": 126241, "last_batch_seconds": 133.17472743988037, "elapsed_seconds": 2449.2812936306}
+{"cell": "B_final_only", "completed_predictions": 208, "generated_completion_tokens": 136156, "last_batch_seconds": 172.31038355827332, "elapsed_seconds": 2621.5924558639526}
+{"cell": "A_original", "completed_predictions": 224, "generated_completion_tokens": 147148, "last_batch_seconds": 187.59703946113586, "elapsed_seconds": 2809.1903796195984}
+{"cell": "A_final_only", "completed_predictions": 240, "generated_completion_tokens": 160243, "last_batch_seconds": 232.95000863075256, "elapsed_seconds": 3042.141195297241}
+{"cell": "B_original", "completed_predictions": 256, "generated_completion_tokens": 172684, "last_batch_seconds": 235.12106156349182, "elapsed_seconds": 3277.263076543808}
+{"cell": "A_original", "completed_predictions": 272, "generated_completion_tokens": 184443, "last_batch_seconds": 235.98276782035828, "elapsed_seconds": 3513.2467119693756}
+{"cell": "A_final_only", "completed_predictions": 288, "generated_completion_tokens": 198643, "last_batch_seconds": 234.76879596710205, "elapsed_seconds": 3748.016330242157}
+{"cell": "B_original", "completed_predictions": 304, "generated_completion_tokens": 215818, "last_batch_seconds": 241.6179130077362, "elapsed_seconds": 3989.63503575325}
+{"cell": "B_final_only", "completed_predictions": 320, "generated_completion_tokens": 234201, "last_batch_seconds": 242.41147112846375, "elapsed_seconds": 4232.047387838364}
+{"cell": "A_final_only", "completed_predictions": 336, "generated_completion_tokens": 245008, "last_batch_seconds": 237.51231122016907, "elapsed_seconds": 4469.560729980469}
+{"cell": "B_original", "completed_predictions": 352, "generated_completion_tokens": 256257, "last_batch_seconds": 225.74731540679932, "elapsed_seconds": 4695.309145689011}
+{"cell": "B_final_only", "completed_predictions": 368, "generated_completion_tokens": 267407, "last_batch_seconds": 235.45184636116028, "elapsed_seconds": 4930.761848449707}
+{"cell": "A_original", "completed_predictions": 384, "generated_completion_tokens": 278107, "last_batch_seconds": 223.10918068885803, "elapsed_seconds": 5153.8724110126495}
+{"cell": "B_original", "completed_predictions": 400, "generated_completion_tokens": 292621, "last_batch_seconds": 239.74368286132812, "elapsed_seconds": 5393.6169629096985}
+{"cell": "B_final_only", "completed_predictions": 416, "generated_completion_tokens": 305575, "last_batch_seconds": 237.40766859054565, "elapsed_seconds": 5631.025547504425}
+{"cell": "A_original", "completed_predictions": 432, "generated_completion_tokens": 315747, "last_batch_seconds": 228.7890031337738, "elapsed_seconds": 5859.815489053726}
+{"cell": "A_final_only", "completed_predictions": 448, "generated_completion_tokens": 327534, "last_batch_seconds": 234.73064351081848, "elapsed_seconds": 6094.547109127045}
+{"cell": "B_final_only", "completed_predictions": 464, "generated_completion_tokens": 340530, "last_batch_seconds": 230.9763650894165, "elapsed_seconds": 6325.524570465088}
+{"cell": "A_original", "completed_predictions": 480, "generated_completion_tokens": 351701, "last_batch_seconds": 155.99080848693848, "elapsed_seconds": 6481.516360044479}
+{"cell": "A_final_only", "completed_predictions": 496, "generated_completion_tokens": 361751, "last_batch_seconds": 137.57113671302795, "elapsed_seconds": 6619.088493585587}
+{"cell": "B_original", "completed_predictions": 512, "generated_completion_tokens": 376564, "last_batch_seconds": 231.18311285972595, "elapsed_seconds": 6850.272635221481}
+{"cell": "A_original", "completed_predictions": 528, "generated_completion_tokens": 386004, "last_batch_seconds": 225.36640095710754, "elapsed_seconds": 7075.640082836151}
+{"cell": "A_final_only", "completed_predictions": 544, "generated_completion_tokens": 394616, "last_batch_seconds": 232.78457236289978, "elapsed_seconds": 7308.425841808319}
+{"cell": "B_original", "completed_predictions": 560, "generated_completion_tokens": 402666, "last_batch_seconds": 189.8687596321106, "elapsed_seconds": 7498.295599937439}
+{"cell": "B_final_only", "completed_predictions": 576, "generated_completion_tokens": 410168, "last_batch_seconds": 231.15900468826294, "elapsed_seconds": 7729.455668210983}
+{"cell": "A_final_only", "completed_predictions": 592, "generated_completion_tokens": 420605, "last_batch_seconds": 228.59155893325806, "elapsed_seconds": 7958.048315048218}
+{"cell": "B_original", "completed_predictions": 608, "generated_completion_tokens": 429669, "last_batch_seconds": 166.8818621635437, "elapsed_seconds": 8124.931219100952}
+{"cell": "B_final_only", "completed_predictions": 624, "generated_completion_tokens": 439316, "last_batch_seconds": 224.8677966594696, "elapsed_seconds": 8349.800132274628}
+{"cell": "A_original", "completed_predictions": 640, "generated_completion_tokens": 447780, "last_batch_seconds": 232.4591805934906, "elapsed_seconds": 8582.260517597198}
+{"cell": "B_original", "completed_predictions": 656, "generated_completion_tokens": 459133, "last_batch_seconds": 224.39808130264282, "elapsed_seconds": 8806.659898281097}
+{"cell": "B_final_only", "completed_predictions": 672, "generated_completion_tokens": 470000, "last_batch_seconds": 192.77628588676453, "elapsed_seconds": 8999.437258005142}
+{"cell": "A_original", "completed_predictions": 688, "generated_completion_tokens": 481534, "last_batch_seconds": 226.53653502464294, "elapsed_seconds": 9225.97486782074}
+{"cell": "A_final_only", "completed_predictions": 704, "generated_completion_tokens": 493953, "last_batch_seconds": 229.10707449913025, "elapsed_seconds": 9455.08317899704}
+{"cell": "B_final_only", "completed_predictions": 720, "generated_completion_tokens": 502368, "last_batch_seconds": 181.3105924129486, "elapsed_seconds": 9636.394826412201}
+{"cell": "A_original", "completed_predictions": 736, "generated_completion_tokens": 511021, "last_batch_seconds": 126.50509142875671, "elapsed_seconds": 9762.900898456573}
+{"cell": "A_final_only", "completed_predictions": 752, "generated_completion_tokens": 520231, "last_batch_seconds": 238.45312309265137, "elapsed_seconds": 10001.355198383331}
+{"cell": "B_original", "completed_predictions": 768, "generated_completion_tokens": 529306, "last_batch_seconds": 166.3910050392151, "elapsed_seconds": 10167.747349739075}
+{"cell": "A_original", "completed_predictions": 784, "generated_completion_tokens": 539882, "last_batch_seconds": 181.05659818649292, "elapsed_seconds": 10348.805042266846}
+{"cell": "A_final_only", "completed_predictions": 800, "generated_completion_tokens": 550470, "last_batch_seconds": 228.2156891822815, "elapsed_seconds": 10577.021832466125}
+{"cell": "B_original", "completed_predictions": 816, "generated_completion_tokens": 563905, "last_batch_seconds": 235.94041657447815, "elapsed_seconds": 10812.963544130325}
+{"cell": "B_final_only", "completed_predictions": 832, "generated_completion_tokens": 574615, "last_batch_seconds": 230.73141717910767, "elapsed_seconds": 11043.696583271027}
+{"cell": "A_final_only", "completed_predictions": 848, "generated_completion_tokens": 584436, "last_batch_seconds": 235.76269435882568, "elapsed_seconds": 11279.460412025452}
+{"cell": "B_original", "completed_predictions": 864, "generated_completion_tokens": 594705, "last_batch_seconds": 230.01011753082275, "elapsed_seconds": 11509.471609592438}
+{"cell": "B_final_only", "completed_predictions": 880, "generated_completion_tokens": 607169, "last_batch_seconds": 230.17696046829224, "elapsed_seconds": 11739.649593830109}
+{"cell": "A_original", "completed_predictions": 896, "generated_completion_tokens": 617828, "last_batch_seconds": 192.99647402763367, "elapsed_seconds": 11932.647197008133}
+{"cell": "B_original", "completed_predictions": 912, "generated_completion_tokens": 627081, "last_batch_seconds": 149.6096625328064, "elapsed_seconds": 12082.2579703331}
+{"cell": "B_final_only", "completed_predictions": 928, "generated_completion_tokens": 638063, "last_batch_seconds": 229.87822151184082, "elapsed_seconds": 12312.137330532074}
+{"cell": "A_original", "completed_predictions": 944, "generated_completion_tokens": 648840, "last_batch_seconds": 230.0111746788025, "elapsed_seconds": 12542.14969944954}
+{"cell": "A_final_only", "completed_predictions": 960, "generated_completion_tokens": 659289, "last_batch_seconds": 236.17789006233215, "elapsed_seconds": 12778.328884363174}
+{"cell": "B_final_only", "completed_predictions": 976, "generated_completion_tokens": 673128, "last_batch_seconds": 238.53831243515015, "elapsed_seconds": 13016.868554353714}
+{"cell": "A_original", "completed_predictions": 992, "generated_completion_tokens": 688038, "last_batch_seconds": 235.77858543395996, "elapsed_seconds": 13252.648546218872}
+{"cell": "A_final_only", "completed_predictions": 1008, "generated_completion_tokens": 704000, "last_batch_seconds": 239.0621521472931, "elapsed_seconds": 13491.711891889572}
+{"cell": "B_original", "completed_predictions": 1024, "generated_completion_tokens": 718176, "last_batch_seconds": 234.67328810691833, "elapsed_seconds": 13726.386591434479}
+{"cell": "A_original", "completed_predictions": 1040, "generated_completion_tokens": 730036, "last_batch_seconds": 229.16307258605957, "elapsed_seconds": 13955.551450967789}
+{"cell": "A_final_only", "completed_predictions": 1056, "generated_completion_tokens": 741483, "last_batch_seconds": 228.03445410728455, "elapsed_seconds": 14183.58707022667}
+{"cell": "B_original", "completed_predictions": 1072, "generated_completion_tokens": 752908, "last_batch_seconds": 227.11991572380066, "elapsed_seconds": 14410.70822262764}
+{"cell": "B_final_only", "completed_predictions": 1088, "generated_completion_tokens": 760328, "last_batch_seconds": 116.08276510238647, "elapsed_seconds": 14526.792201757431}
+{"cell": "A_final_only", "completed_predictions": 1104, "generated_completion_tokens": 769547, "last_batch_seconds": 134.71947932243347, "elapsed_seconds": 14661.513239383698}
+{"cell": "B_original", "completed_predictions": 1120, "generated_completion_tokens": 778868, "last_batch_seconds": 169.2493278980255, "elapsed_seconds": 14830.763908624649}
+{"cell": "B_final_only", "completed_predictions": 1136, "generated_completion_tokens": 786032, "last_batch_seconds": 62.37124443054199, "elapsed_seconds": 14893.136361122131}
+{"cell": "A_original", "completed_predictions": 1152, "generated_completion_tokens": 794323, "last_batch_seconds": 55.66779685020447, "elapsed_seconds": 14948.805387020111}
+{"cell": "B_original", "completed_predictions": 1168, "generated_completion_tokens": 809366, "last_batch_seconds": 119.68952298164368, "elapsed_seconds": 15068.49615931511}
+{"cell": "B_final_only", "completed_predictions": 1184, "generated_completion_tokens": 819968, "last_batch_seconds": 97.8168556690216, "elapsed_seconds": 15166.31438422203}
+{"cell": "A_original", "completed_predictions": 1200, "generated_completion_tokens": 834171, "last_batch_seconds": 106.14485168457031, "elapsed_seconds": 15272.460376024246}
+{"cell": "A_final_only", "completed_predictions": 1216, "generated_completion_tokens": 844154, "last_batch_seconds": 82.69773459434509, "elapsed_seconds": 15355.15937948227}
+{"cell": "B_final_only", "completed_predictions": 1232, "generated_completion_tokens": 852263, "last_batch_seconds": 70.45006442070007, "elapsed_seconds": 15425.610774755478}
+{"cell": "A_original", "completed_predictions": 1248, "generated_completion_tokens": 861888, "last_batch_seconds": 79.98693919181824, "elapsed_seconds": 15505.598955869675}
+{"cell": "A_final_only", "completed_predictions": 1264, "generated_completion_tokens": 870583, "last_batch_seconds": 76.12836813926697, "elapsed_seconds": 15581.728659391403}
+{"cell": "B_original", "completed_predictions": 1280, "generated_completion_tokens": 881107, "last_batch_seconds": 114.57512855529785, "elapsed_seconds": 15696.305095911026}
+{"cell": "A_original", "completed_predictions": 1296, "generated_completion_tokens": 897272, "last_batch_seconds": 117.15275239944458, "elapsed_seconds": 15813.459023475647}
+{"cell": "A_final_only", "completed_predictions": 1312, "generated_completion_tokens": 912129, "last_batch_seconds": 108.33051657676697, "elapsed_seconds": 15921.79076719284}
+{"cell": "B_original", "completed_predictions": 1328, "generated_completion_tokens": 929820, "last_batch_seconds": 109.29860305786133, "elapsed_seconds": 16031.090604305267}
+{"cell": "B_final_only", "completed_predictions": 1344, "generated_completion_tokens": 945259, "last_batch_seconds": 113.51482892036438, "elapsed_seconds": 16144.606687545776}
+{"cell": "A_final_only", "completed_predictions": 1360, "generated_completion_tokens": 956302, "last_batch_seconds": 108.33273267745972, "elapsed_seconds": 16252.940883398056}
+{"cell": "B_original", "completed_predictions": 1376, "generated_completion_tokens": 969731, "last_batch_seconds": 112.10721158981323, "elapsed_seconds": 16365.049360990524}
+{"cell": "B_final_only", "completed_predictions": 1392, "generated_completion_tokens": 981336, "last_batch_seconds": 111.87347960472107, "elapsed_seconds": 16476.92422413826}
+{"cell": "A_original", "completed_predictions": 1408, "generated_completion_tokens": 991570, "last_batch_seconds": 108.77211594581604, "elapsed_seconds": 16585.697934150696}
+{"cell": "B_original", "completed_predictions": 1424, "generated_completion_tokens": 1005463, "last_batch_seconds": 112.80186009407043, "elapsed_seconds": 16698.501222372055}
+{"cell": "B_final_only", "completed_predictions": 1440, "generated_completion_tokens": 1016899, "last_batch_seconds": 108.73720669746399, "elapsed_seconds": 16807.239783525467}
+{"cell": "A_original", "completed_predictions": 1456, "generated_completion_tokens": 1030988, "last_batch_seconds": 96.76858472824097, "elapsed_seconds": 16904.00979590416}
+{"cell": "A_final_only", "completed_predictions": 1472, "generated_completion_tokens": 1041589, "last_batch_seconds": 97.59994888305664, "elapsed_seconds": 17001.61115503311}
+{"cell": "B_final_only", "completed_predictions": 1488, "generated_completion_tokens": 1050547, "last_batch_seconds": 97.58009243011475, "elapsed_seconds": 17099.192699193954}
+{"cell": "A_original", "completed_predictions": 1504, "generated_completion_tokens": 1060449, "last_batch_seconds": 97.40454006195068, "elapsed_seconds": 17196.59857416153}
+{"cell": "A_final_only", "completed_predictions": 1520, "generated_completion_tokens": 1070501, "last_batch_seconds": 96.07703995704651, "elapsed_seconds": 17292.677055835724}
+{"cell": "B_original", "completed_predictions": 1536, "generated_completion_tokens": 1079293, "last_batch_seconds": 97.07830238342285, "elapsed_seconds": 17389.756846666336}
+{"cell": "A_original", "completed_predictions": 1552, "generated_completion_tokens": 1091188, "last_batch_seconds": 99.02385234832764, "elapsed_seconds": 17488.78219127655}
+{"cell": "A_final_only", "completed_predictions": 1568, "generated_completion_tokens": 1099671, "last_batch_seconds": 62.195900440216064, "elapsed_seconds": 17550.979575395584}
+{"cell": "B_original", "completed_predictions": 1584, "generated_completion_tokens": 1109164, "last_batch_seconds": 76.97315120697021, "elapsed_seconds": 17627.954125642776}
+{"cell": "B_final_only", "completed_predictions": 1600, "generated_completion_tokens": 1120306, "last_batch_seconds": 105.81239008903503, "elapsed_seconds": 17733.767961025238}
+{"cell": "A_final_only", "completed_predictions": 1616, "generated_completion_tokens": 1130072, "last_batch_seconds": 102.41724991798401, "elapsed_seconds": 17836.187032222748}
+{"cell": "B_original", "completed_predictions": 1632, "generated_completion_tokens": 1147950, "last_batch_seconds": 101.76280379295349, "elapsed_seconds": 17937.95215821266}
+{"cell": "B_final_only", "completed_predictions": 1648, "generated_completion_tokens": 1159178, "last_batch_seconds": 100.29394721984863, "elapsed_seconds": 18038.24767589569}
+{"cell": "A_original", "completed_predictions": 1664, "generated_completion_tokens": 1171589, "last_batch_seconds": 101.122065782547, "elapsed_seconds": 18139.37123608589}
+{"cell": "B_original", "completed_predictions": 1680, "generated_completion_tokens": 1181135, "last_batch_seconds": 99.26523852348328, "elapsed_seconds": 18238.63800573349}
+{"cell": "B_final_only", "completed_predictions": 1696, "generated_completion_tokens": 1188648, "last_batch_seconds": 53.553597927093506, "elapsed_seconds": 18292.193043470383}
+{"cell": "A_original", "completed_predictions": 1712, "generated_completion_tokens": 1196228, "last_batch_seconds": 35.982651710510254, "elapsed_seconds": 18328.177261590958}
+{"cell": "A_final_only", "completed_predictions": 1728, "generated_completion_tokens": 1206325, "last_batch_seconds": 102.35891222953796, "elapsed_seconds": 18430.53802871704}
+{"cell": "B_final_only", "completed_predictions": 1744, "generated_completion_tokens": 1217796, "last_batch_seconds": 100.97511601448059, "elapsed_seconds": 18531.514793395996}
+{"cell": "A_original", "completed_predictions": 1760, "generated_completion_tokens": 1229116, "last_batch_seconds": 97.41498136520386, "elapsed_seconds": 18628.93129491806}
+{"cell": "A_final_only", "completed_predictions": 1776, "generated_completion_tokens": 1240726, "last_batch_seconds": 95.95740580558777, "elapsed_seconds": 18724.89037656784}
+{"cell": "B_original", "completed_predictions": 1792, "generated_completion_tokens": 1252179, "last_batch_seconds": 94.88746666908264, "elapsed_seconds": 18819.779384851456}
+{"cell": "A_original", "completed_predictions": 1808, "generated_completion_tokens": 1264545, "last_batch_seconds": 95.2668809890747, "elapsed_seconds": 18915.047942638397}
+{"cell": "A_final_only", "completed_predictions": 1824, "generated_completion_tokens": 1278615, "last_batch_seconds": 95.79870629310608, "elapsed_seconds": 19010.848162412643}
+{"cell": "B_original", "completed_predictions": 1840, "generated_completion_tokens": 1291192, "last_batch_seconds": 96.23242592811584, "elapsed_seconds": 19107.082080364227}
+{"cell": "B_final_only", "completed_predictions": 1856, "generated_completion_tokens": 1302943, "last_batch_seconds": 74.71636009216309, "elapsed_seconds": 19181.800042629242}
+{"cell": "A_final_only", "completed_predictions": 1872, "generated_completion_tokens": 1311099, "last_batch_seconds": 58.745362758636475, "elapsed_seconds": 19240.547008275986}
+{"cell": "B_original", "completed_predictions": 1888, "generated_completion_tokens": 1318592, "last_batch_seconds": 40.01912236213684, "elapsed_seconds": 19280.56772828102}
+{"cell": "B_final_only", "completed_predictions": 1904, "generated_completion_tokens": 1327404, "last_batch_seconds": 97.2970700263977, "elapsed_seconds": 19377.8663520813}
+{"cell": "A_original", "completed_predictions": 1920, "generated_completion_tokens": 1336692, "last_batch_seconds": 97.14644074440002, "elapsed_seconds": 19475.014312028885}
+{"cell": "B_original", "completed_predictions": 1936, "generated_completion_tokens": 1351313, "last_batch_seconds": 97.86374735832214, "elapsed_seconds": 19572.879623651505}
+{"cell": "B_final_only", "completed_predictions": 1952, "generated_completion_tokens": 1364645, "last_batch_seconds": 97.05993223190308, "elapsed_seconds": 19669.9410738945}
+{"cell": "A_original", "completed_predictions": 1968, "generated_completion_tokens": 1378545, "last_batch_seconds": 97.32767939567566, "elapsed_seconds": 19767.270355939865}
+{"cell": "A_final_only", "completed_predictions": 1984, "generated_completion_tokens": 1391926, "last_batch_seconds": 96.94093298912048, "elapsed_seconds": 19864.212862491608}
+{"cell": "B_final_only", "completed_predictions": 2000, "generated_completion_tokens": 1397363, "last_batch_seconds": 29.91308283805847, "elapsed_seconds": 19894.12754178047}
+{"cell": "A_original", "completed_predictions": 2016, "generated_completion_tokens": 1402452, "last_batch_seconds": 28.551227569580078, "elapsed_seconds": 19922.68041419983}
+{"cell": "A_final_only", "completed_predictions": 2032, "generated_completion_tokens": 1408295, "last_batch_seconds": 39.18816423416138, "elapsed_seconds": 19961.870279073715}
+{"cell": "B_original", "completed_predictions": 2048, "generated_completion_tokens": 1417104, "last_batch_seconds": 95.75454568862915, "elapsed_seconds": 20057.626519680023}
+{"cell": "A_original", "completed_predictions": 2064, "generated_completion_tokens": 1422964, "last_batch_seconds": 31.005106925964355, "elapsed_seconds": 20088.633354902267}
+{"cell": "A_final_only", "completed_predictions": 2080, "generated_completion_tokens": 1431197, "last_batch_seconds": 96.36991834640503, "elapsed_seconds": 20185.005013227463}
+{"cell": "B_original", "completed_predictions": 2096, "generated_completion_tokens": 1439889, "last_batch_seconds": 96.95790982246399, "elapsed_seconds": 20281.96470952034}
+{"cell": "B_final_only", "completed_predictions": 2112, "generated_completion_tokens": 1449477, "last_batch_seconds": 96.00064754486084, "elapsed_seconds": 20377.967012882233}
+{"cell": "A_final_only", "completed_predictions": 2128, "generated_completion_tokens": 1457007, "last_batch_seconds": 94.36741733551025, "elapsed_seconds": 20472.33624815941}
+{"cell": "B_original", "completed_predictions": 2144, "generated_completion_tokens": 1462512, "last_batch_seconds": 29.77712368965149, "elapsed_seconds": 20502.1150226593}
+{"cell": "B_final_only", "completed_predictions": 2160, "generated_completion_tokens": 1469582, "last_batch_seconds": 96.34496998786926, "elapsed_seconds": 20598.46178817749}
+{"cell": "A_original", "completed_predictions": 2176, "generated_completion_tokens": 1474676, "last_batch_seconds": 31.344070196151733, "elapsed_seconds": 20629.80769586563}
+{"cell": "B_original", "completed_predictions": 2192, "generated_completion_tokens": 1479292, "last_batch_seconds": 23.929266214370728, "elapsed_seconds": 20653.738739967346}
+{"cell": "B_final_only", "completed_predictions": 2208, "generated_completion_tokens": 1486357, "last_batch_seconds": 94.63644027709961, "elapsed_seconds": 20748.377068281174}
+{"cell": "A_original", "completed_predictions": 2224, "generated_completion_tokens": 1494784, "last_batch_seconds": 96.20440363883972, "elapsed_seconds": 20844.583231687546}
+{"cell": "A_final_only", "completed_predictions": 2240, "generated_completion_tokens": 1500295, "last_batch_seconds": 42.74739909172058, "elapsed_seconds": 20887.33247447014}
+{"cell": "B_final_only", "completed_predictions": 2256, "generated_completion_tokens": 1506921, "last_batch_seconds": 95.6006269454956, "elapsed_seconds": 20982.93495821953}
+{"cell": "A_original", "completed_predictions": 2272, "generated_completion_tokens": 1511814, "last_batch_seconds": 27.285083293914795, "elapsed_seconds": 21010.221851348877}
+{"cell": "A_final_only", "completed_predictions": 2288, "generated_completion_tokens": 1518696, "last_batch_seconds": 98.35883283615112, "elapsed_seconds": 21108.582583665848}
+{"cell": "B_original", "completed_predictions": 2304, "generated_completion_tokens": 1525560, "last_batch_seconds": 97.54122114181519, "elapsed_seconds": 21206.12567305565}
+{"cell": "A_original", "completed_predictions": 2320, "generated_completion_tokens": 1530838, "last_batch_seconds": 33.93750619888306, "elapsed_seconds": 21240.06526684761}
+{"cell": "A_final_only", "completed_predictions": 2336, "generated_completion_tokens": 1537708, "last_batch_seconds": 95.7034821510315, "elapsed_seconds": 21335.77068901062}
+{"cell": "B_original", "completed_predictions": 2352, "generated_completion_tokens": 1542950, "last_batch_seconds": 33.13989615440369, "elapsed_seconds": 21368.912357330322}
+{"cell": "B_final_only", "completed_predictions": 2368, "generated_completion_tokens": 1549670, "last_batch_seconds": 95.09629321098328, "elapsed_seconds": 21464.010504245758}
+{"cell": "A_final_only", "completed_predictions": 2384, "generated_completion_tokens": 1555523, "last_batch_seconds": 26.20462465286255, "elapsed_seconds": 21490.21700310707}
+{"cell": "B_original", "completed_predictions": 2400, "generated_completion_tokens": 1563319, "last_batch_seconds": 95.27135348320007, "elapsed_seconds": 21585.4902279377}
+{"cell": "B_final_only", "completed_predictions": 2416, "generated_completion_tokens": 1569680, "last_batch_seconds": 60.52177119255066, "elapsed_seconds": 21646.013854026794}
+{"cell": "A_original", "completed_predictions": 2432, "generated_completion_tokens": 1576219, "last_batch_seconds": 36.01799654960632, "elapsed_seconds": 21682.03379034996}
+{"cell": "B_original", "completed_predictions": 2448, "generated_completion_tokens": 1583882, "last_batch_seconds": 96.75493550300598, "elapsed_seconds": 21778.79074859619}
+{"cell": "B_final_only", "completed_predictions": 2464, "generated_completion_tokens": 1593431, "last_batch_seconds": 95.41198658943176, "elapsed_seconds": 21874.20471215248}
+{"cell": "A_original", "completed_predictions": 2480, "generated_completion_tokens": 1599029, "last_batch_seconds": 33.761017084121704, "elapsed_seconds": 21907.967551231384}
+{"cell": "A_final_only", "completed_predictions": 2496, "generated_completion_tokens": 1606509, "last_batch_seconds": 94.97598385810852, "elapsed_seconds": 22002.94552063942}
+{"cell": "B_final_only", "completed_predictions": 2512, "generated_completion_tokens": 1611303, "last_batch_seconds": 26.131272792816162, "elapsed_seconds": 22029.078653097153}
+{"cell": "A_original", "completed_predictions": 2528, "generated_completion_tokens": 1616093, "last_batch_seconds": 21.221566438674927, "elapsed_seconds": 22050.30224299431}
+{"cell": "A_final_only", "completed_predictions": 2544, "generated_completion_tokens": 1621826, "last_batch_seconds": 34.761106729507446, "elapsed_seconds": 22085.06539440155}
+{"cell": "B_original", "completed_predictions": 2560, "generated_completion_tokens": 1627105, "last_batch_seconds": 29.285587310791016, "elapsed_seconds": 22114.352979660034}
+{"cell": "A_original", "completed_predictions": 2576, "generated_completion_tokens": 1632157, "last_batch_seconds": 22.83232355117798, "elapsed_seconds": 22137.187277555466}
+{"cell": "A_final_only", "completed_predictions": 2592, "generated_completion_tokens": 1637387, "last_batch_seconds": 30.67501664161682, "elapsed_seconds": 22167.864277124405}
+{"cell": "B_original", "completed_predictions": 2608, "generated_completion_tokens": 1642221, "last_batch_seconds": 25.62894034385681, "elapsed_seconds": 22193.495180130005}
+{"cell": "B_final_only", "completed_predictions": 2624, "generated_completion_tokens": 1648313, "last_batch_seconds": 94.3593499660492, "elapsed_seconds": 22287.856676101685}
+{"cell": "A_final_only", "completed_predictions": 2640, "generated_completion_tokens": 1655666, "last_batch_seconds": 95.61335062980652, "elapsed_seconds": 22383.472066164017}
+{"cell": "B_original", "completed_predictions": 2656, "generated_completion_tokens": 1663720, "last_batch_seconds": 94.90355563163757, "elapsed_seconds": 22478.377662420273}
+{"cell": "B_final_only", "completed_predictions": 2672, "generated_completion_tokens": 1672518, "last_batch_seconds": 94.89308953285217, "elapsed_seconds": 22573.272788763046}
+{"cell": "A_original", "completed_predictions": 2688, "generated_completion_tokens": 1680755, "last_batch_seconds": 95.12336206436157, "elapsed_seconds": 22668.398176908493}
+{"cell": "B_original", "completed_predictions": 2704, "generated_completion_tokens": 1686484, "last_batch_seconds": 33.298723459243774, "elapsed_seconds": 22701.69889497757}
+{"cell": "B_final_only", "completed_predictions": 2720, "generated_completion_tokens": 1693359, "last_batch_seconds": 95.03779435157776, "elapsed_seconds": 22796.738703489304}
+{"cell": "A_original", "completed_predictions": 2736, "generated_completion_tokens": 1698680, "last_batch_seconds": 34.39375185966492, "elapsed_seconds": 22831.134661912918}
+{"cell": "A_final_only", "completed_predictions": 2752, "generated_completion_tokens": 1705500, "last_batch_seconds": 95.04085040092468, "elapsed_seconds": 22926.177637815475}
+{"cell": "B_final_only", "completed_predictions": 2768, "generated_completion_tokens": 1712935, "last_batch_seconds": 95.53455662727356, "elapsed_seconds": 23021.71424460411}
+{"cell": "A_original", "completed_predictions": 2784, "generated_completion_tokens": 1718704, "last_batch_seconds": 43.33244252204895, "elapsed_seconds": 23065.048791646957}
+{"cell": "A_final_only", "completed_predictions": 2800, "generated_completion_tokens": 1727766, "last_batch_seconds": 95.17477607727051, "elapsed_seconds": 23160.225481271744}
+{"cell": "B_original", "completed_predictions": 2816, "generated_completion_tokens": 1735434, "last_batch_seconds": 95.09459257125854, "elapsed_seconds": 23255.32213830948}
+{"cell": "A_original", "completed_predictions": 2832, "generated_completion_tokens": 1742146, "last_batch_seconds": 67.50262188911438, "elapsed_seconds": 23322.82694864273}
+{"cell": "A_final_only", "completed_predictions": 2848, "generated_completion_tokens": 1747965, "last_batch_seconds": 30.69456958770752, "elapsed_seconds": 23353.52365088463}
+{"cell": "B_original", "completed_predictions": 2864, "generated_completion_tokens": 1754806, "last_batch_seconds": 61.7056725025177, "elapsed_seconds": 23415.231758356094}
+{"cell": "B_final_only", "completed_predictions": 2880, "generated_completion_tokens": 1760323, "last_batch_seconds": 39.59483551979065, "elapsed_seconds": 23454.828650951385}
+{"cell": "A_final_only", "completed_predictions": 2896, "generated_completion_tokens": 1766620, "last_batch_seconds": 34.91669964790344, "elapsed_seconds": 23489.74741244316}
+{"cell": "B_original", "completed_predictions": 2912, "generated_completion_tokens": 1772912, "last_batch_seconds": 64.45339131355286, "elapsed_seconds": 23554.202924966812}
+{"cell": "B_final_only", "completed_predictions": 2928, "generated_completion_tokens": 1780450, "last_batch_seconds": 96.32945728302002, "elapsed_seconds": 23650.534560203552}
+{"cell": "A_original", "completed_predictions": 2944, "generated_completion_tokens": 1786638, "last_batch_seconds": 56.88761568069458, "elapsed_seconds": 23707.424427509308}
+{"cell": "B_original", "completed_predictions": 2960, "generated_completion_tokens": 1792084, "last_batch_seconds": 36.11563181877136, "elapsed_seconds": 23743.54232430458}
+{"cell": "B_final_only", "completed_predictions": 2976, "generated_completion_tokens": 1799368, "last_batch_seconds": 95.62318277359009, "elapsed_seconds": 23839.167659521103}
+{"cell": "A_original", "completed_predictions": 2992, "generated_completion_tokens": 1804445, "last_batch_seconds": 32.04284191131592, "elapsed_seconds": 23871.212649583817}
+{"cell": "A_final_only", "completed_predictions": 3008, "generated_completion_tokens": 1809971, "last_batch_seconds": 32.14919686317444, "elapsed_seconds": 23903.363988637924}
+{"cell": "B_final_only", "completed_predictions": 3024, "generated_completion_tokens": 1814609, "last_batch_seconds": 30.41830015182495, "elapsed_seconds": 23933.784552574158}
+{"cell": "A_original", "completed_predictions": 3040, "generated_completion_tokens": 1819581, "last_batch_seconds": 24.83681631088257, "elapsed_seconds": 23958.623554706573}
+{"cell": "A_final_only", "completed_predictions": 3056, "generated_completion_tokens": 1824958, "last_batch_seconds": 31.802773475646973, "elapsed_seconds": 23990.42851448059}
+{"cell": "B_original", "completed_predictions": 3072, "generated_completion_tokens": 1829421, "last_batch_seconds": 25.329845190048218, "elapsed_seconds": 24015.76082801819}
+{"cell": "A_original", "completed_predictions": 3088, "generated_completion_tokens": 1834570, "last_batch_seconds": 26.4036283493042, "elapsed_seconds": 24042.166937589645}
+{"cell": "A_final_only", "completed_predictions": 3104, "generated_completion_tokens": 1839988, "last_batch_seconds": 41.98949432373047, "elapsed_seconds": 24084.15872502327}
+{"cell": "B_original", "completed_predictions": 3120, "generated_completion_tokens": 1845128, "last_batch_seconds": 27.794088125228882, "elapsed_seconds": 24111.954912662506}
+{"cell": "B_final_only", "completed_predictions": 3136, "generated_completion_tokens": 1849714, "last_batch_seconds": 23.396174430847168, "elapsed_seconds": 24135.353193044662}
+{"cell": "A_final_only", "completed_predictions": 3152, "generated_completion_tokens": 1855769, "last_batch_seconds": 46.21791648864746, "elapsed_seconds": 24181.57337617874}
+{"cell": "B_original", "completed_predictions": 3168, "generated_completion_tokens": 1861265, "last_batch_seconds": 32.9774169921875, "elapsed_seconds": 24214.553050756454}
+{"cell": "B_final_only", "completed_predictions": 3184, "generated_completion_tokens": 1866585, "last_batch_seconds": 33.47166419029236, "elapsed_seconds": 24248.02689552307}
+{"cell": "A_original", "completed_predictions": 3200, "generated_completion_tokens": 1872181, "last_batch_seconds": 32.82422590255737, "elapsed_seconds": 24280.853434324265}
+{"cell": "B_original", "completed_predictions": 3216, "generated_completion_tokens": 1877027, "last_batch_seconds": 26.437807321548462, "elapsed_seconds": 24307.293566465378}
+{"cell": "B_final_only", "completed_predictions": 3232, "generated_completion_tokens": 1883462, "last_batch_seconds": 104.77744507789612, "elapsed_seconds": 24412.073415756226}
+{"cell": "A_original", "completed_predictions": 3248, "generated_completion_tokens": 1888460, "last_batch_seconds": 31.55687117576599, "elapsed_seconds": 24443.632611751556}
+{"cell": "A_final_only", "completed_predictions": 3264, "generated_completion_tokens": 1894029, "last_batch_seconds": 31.703686237335205, "elapsed_seconds": 24475.338362693787}
+{"cell": "B_final_only", "completed_predictions": 3280, "generated_completion_tokens": 1900419, "last_batch_seconds": 42.8281364440918, "elapsed_seconds": 24518.168793201447}
+{"cell": "A_original", "completed_predictions": 3296, "generated_completion_tokens": 1905752, "last_batch_seconds": 24.220888137817383, "elapsed_seconds": 24542.391749620438}
+{"cell": "A_final_only", "completed_predictions": 3312, "generated_completion_tokens": 1912131, "last_batch_seconds": 42.501047134399414, "elapsed_seconds": 24584.895003080368}
+{"cell": "B_original", "completed_predictions": 3328, "generated_completion_tokens": 1917209, "last_batch_seconds": 24.342023134231567, "elapsed_seconds": 24609.239257097244}
+{"cell": "A_original", "completed_predictions": 3344, "generated_completion_tokens": 1922463, "last_batch_seconds": 28.61978268623352, "elapsed_seconds": 24637.861352205276}
+{"cell": "A_final_only", "completed_predictions": 3360, "generated_completion_tokens": 1929978, "last_batch_seconds": 106.74469947814941, "elapsed_seconds": 24744.6084356308}
+{"cell": "B_original", "completed_predictions": 3376, "generated_completion_tokens": 1936073, "last_batch_seconds": 38.618229150772095, "elapsed_seconds": 24783.22877764702}
+{"cell": "B_final_only", "completed_predictions": 3392, "generated_completion_tokens": 1943582, "last_batch_seconds": 107.0307879447937, "elapsed_seconds": 24890.261863946915}
+{"cell": "A_final_only", "completed_predictions": 3408, "generated_completion_tokens": 1948855, "last_batch_seconds": 29.442147731781006, "elapsed_seconds": 24919.70636820793}
+{"cell": "B_original", "completed_predictions": 3424, "generated_completion_tokens": 1954789, "last_batch_seconds": 46.14030861854553, "elapsed_seconds": 24965.84898042679}
+{"cell": "B_final_only", "completed_predictions": 3440, "generated_completion_tokens": 1959787, "last_batch_seconds": 47.41569375991821, "elapsed_seconds": 25013.267120838165}
+{"cell": "A_original", "completed_predictions": 3456, "generated_completion_tokens": 1965599, "last_batch_seconds": 28.535125017166138, "elapsed_seconds": 25041.804565668106}
+{"cell": "B_original", "completed_predictions": 3472, "generated_completion_tokens": 1973490, "last_batch_seconds": 106.68330383300781, "elapsed_seconds": 25148.49027132988}
+{"cell": "B_final_only", "completed_predictions": 3488, "generated_completion_tokens": 1982029, "last_batch_seconds": 107.00715374946594, "elapsed_seconds": 25255.499802827835}
+{"cell": "A_original", "completed_predictions": 3504, "generated_completion_tokens": 1987621, "last_batch_seconds": 42.2156286239624, "elapsed_seconds": 25297.717690706253}
+{"cell": "A_final_only", "completed_predictions": 3520, "generated_completion_tokens": 1996812, "last_batch_seconds": 107.82371497154236, "elapsed_seconds": 25405.54369688034}
+{"cell": "B_final_only", "completed_predictions": 3536, "generated_completion_tokens": 2004021, "last_batch_seconds": 107.19679355621338, "elapsed_seconds": 25512.742928028107}
+{"cell": "A_original", "completed_predictions": 3552, "generated_completion_tokens": 2008877, "last_batch_seconds": 28.352808237075806, "elapsed_seconds": 25541.098022937775}
+{"cell": "A_final_only", "completed_predictions": 3568, "generated_completion_tokens": 2014661, "last_batch_seconds": 30.18120002746582, "elapsed_seconds": 25571.281462669373}
+{"cell": "B_original", "completed_predictions": 3584, "generated_completion_tokens": 2019597, "last_batch_seconds": 29.294824838638306, "elapsed_seconds": 25600.578628063202}
+{"cell": "A_original", "completed_predictions": 3600, "generated_completion_tokens": 2025919, "last_batch_seconds": 47.40129590034485, "elapsed_seconds": 25647.98222398758}
+{"cell": "A_final_only", "completed_predictions": 3616, "generated_completion_tokens": 2034436, "last_batch_seconds": 107.9614040851593, "elapsed_seconds": 25755.94638299942}
+{"cell": "B_original", "completed_predictions": 3632, "generated_completion_tokens": 2041517, "last_batch_seconds": 64.45004630088806, "elapsed_seconds": 25820.398957014084}
+{"cell": "B_final_only", "completed_predictions": 3648, "generated_completion_tokens": 2049971, "last_batch_seconds": 107.26308751106262, "elapsed_seconds": 25927.664990901947}
+{"cell": "A_final_only", "completed_predictions": 3664, "generated_completion_tokens": 2059208, "last_batch_seconds": 107.44586300849915, "elapsed_seconds": 26035.11379647255}
+{"cell": "B_original", "completed_predictions": 3680, "generated_completion_tokens": 2065834, "last_batch_seconds": 107.65256118774414, "elapsed_seconds": 26142.7688498497}
+{"cell": "B_final_only", "completed_predictions": 3696, "generated_completion_tokens": 2073779, "last_batch_seconds": 109.61478996276855, "elapsed_seconds": 26252.386157274246}
+{"cell": "A_original", "completed_predictions": 3712, "generated_completion_tokens": 2078365, "last_batch_seconds": 23.280517578125, "elapsed_seconds": 26275.66907286644}
+{"cell": "B_original", "completed_predictions": 3728, "generated_completion_tokens": 2082594, "last_batch_seconds": 22.651246786117554, "elapsed_seconds": 26298.322878599167}
+{"cell": "B_final_only", "completed_predictions": 3744, "generated_completion_tokens": 2087717, "last_batch_seconds": 29.597207069396973, "elapsed_seconds": 26327.922464609146}
+{"cell": "A_original", "completed_predictions": 3760, "generated_completion_tokens": 2092018, "last_batch_seconds": 26.95127582550049, "elapsed_seconds": 26354.876381635666}
+{"cell": "A_final_only", "completed_predictions": 3776, "generated_completion_tokens": 2097179, "last_batch_seconds": 32.21351170539856, "elapsed_seconds": 26387.092352867126}
+{"cell": "B_final_only", "completed_predictions": 3792, "generated_completion_tokens": 2103397, "last_batch_seconds": 119.36509776115417, "elapsed_seconds": 26506.459978818893}
+{"cell": "A_original", "completed_predictions": 3808, "generated_completion_tokens": 2108628, "last_batch_seconds": 30.462087869644165, "elapsed_seconds": 26536.924692869186}
+{"cell": "A_final_only", "completed_predictions": 3824, "generated_completion_tokens": 2115637, "last_batch_seconds": 117.17574405670166, "elapsed_seconds": 26654.103607416153}
+{"cell": "B_original", "completed_predictions": 3840, "generated_completion_tokens": 2120698, "last_batch_seconds": 34.96375107765198, "elapsed_seconds": 26689.06999731064}
+{"cell": "A_original", "completed_predictions": 3856, "generated_completion_tokens": 2126471, "last_batch_seconds": 42.091222047805786, "elapsed_seconds": 26731.16379761696}
+{"cell": "A_final_only", "completed_predictions": 3872, "generated_completion_tokens": 2134511, "last_batch_seconds": 118.5671706199646, "elapsed_seconds": 26849.73347759247}
+{"cell": "B_original", "completed_predictions": 3888, "generated_completion_tokens": 2140133, "last_batch_seconds": 41.68889665603638, "elapsed_seconds": 26891.42489695549}
+{"cell": "B_final_only", "completed_predictions": 3904, "generated_completion_tokens": 2146002, "last_batch_seconds": 38.58762168884277, "elapsed_seconds": 26930.0150308609}
+{"cell": "A_final_only", "completed_predictions": 3920, "generated_completion_tokens": 2151463, "last_batch_seconds": 30.275471210479736, "elapsed_seconds": 26960.292840480804}
+{"cell": "B_original", "completed_predictions": 3936, "generated_completion_tokens": 2156597, "last_batch_seconds": 30.894911289215088, "elapsed_seconds": 26991.19002723694}
+{"cell": "B_final_only", "completed_predictions": 3952, "generated_completion_tokens": 2161842, "last_batch_seconds": 30.43814778327942, "elapsed_seconds": 27021.630489110947}
+{"cell": "A_original", "completed_predictions": 3968, "generated_completion_tokens": 2166994, "last_batch_seconds": 30.988890409469604, "elapsed_seconds": 27052.62189388275}
+{"cell": "B_original", "completed_predictions": 3974, "generated_completion_tokens": 2169013, "last_batch_seconds": 28.853574991226196, "elapsed_seconds": 27081.478002548218}
+{"cell": "B_final_only", "completed_predictions": 3980, "generated_completion_tokens": 2172523, "last_batch_seconds": 128.56556224822998, "elapsed_seconds": 27210.04636836052}
+{"cell": "A_original", "completed_predictions": 3986, "generated_completion_tokens": 2174278, "last_batch_seconds": 29.582388401031494, "elapsed_seconds": 27239.631645441055}
+{"cell": "A_final_only", "completed_predictions": 3992, "generated_completion_tokens": 2176338, "last_batch_seconds": 34.66973042488098, "elapsed_seconds": 27274.30416750908}
+{
+  "status": "completed",
+  "training": false,
+  "finished_utc": "2026-10-23T03:47:23.512788+00:00",
+  "elapsed_seconds": 27275.75862312317,
+  "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+  "predictions_sha256": "7ae033a7a4752e8e41923f8ded9b4f3256f6d1971172df8b9548596462587767",
+  "count": 3992,
+  "generated_completion_tokens": 2176338,
+  "protection_after": {
+    "passed": true,
+    "files": 210
+  },
+  "cells": {
+    "A_original": {
+      "math_validation": {
+        "n": 498,
+        "correct": 289.0,
+        "accuracy": 0.5803212851405622,
+        "truncated": 38,
+        "generated_tokens": 348190
+      },
+      "gsm8k_validation": {
+        "n": 500,
+        "correct": 380.0,
+        "accuracy": 0.76,
+        "truncated": 3,
+        "generated_tokens": 173833
+      }
+    },
+    "A_final_only": {
+      "math_validation": {
+        "n": 498,
+        "correct": 287.0,
+        "accuracy": 0.5763052208835341,
+        "truncated": 38,
+        "generated_tokens": 338200
+      },
+      "gsm8k_validation": {
+        "n": 500,
+        "correct": 338.0,
+        "accuracy": 0.676,
+        "truncated": 17,
+        "generated_tokens": 207335
+      }
+    },
+    "B_original": {
+      "math_validation": {
+        "n": 498,
+        "correct": 272.0,
+        "accuracy": 0.5461847389558233,
+        "truncated": 51,
+        "generated_tokens": 373167
+      },
+      "gsm8k_validation": {
+        "n": 500,
+        "correct": 368.0,
+        "accuracy": 0.736,
+        "truncated": 11,
+        "generated_tokens": 190208
+      }
+    },
+    "B_final_only": {
+      "math_validation": {
+        "n": 498,
+        "correct": 266.0,
+        "accuracy": 0.5341365461847389,
+        "truncated": 38,
+        "generated_tokens": 335243
+      },
+      "gsm8k_validation": {
+        "n": 500,
+        "correct": 295.0,
+        "accuracy": 0.59,
+        "truncated": 25,
+        "generated_tokens": 210162
+      }
+    }
+  }
+}
+[rank0]:[W1023 11:47:24.053549680 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

@@ -1,0 +1,8 @@
+{
+  "pid": 1113327,
+  "started_unix": 1793256431.829106,
+  "GPU": 1,
+  "optimizer_updates": 0,
+  "script_sha256": "7769106b5059a89eeb5b08e5a825ca2dfc2449434f11894b176c36529994d93d",
+  "scope": "Only frozen-answer B/C/D scoring and CPU analysis, no training, strict FP32 reference gate passed"
+}

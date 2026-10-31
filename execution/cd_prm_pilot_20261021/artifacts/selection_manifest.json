@@ -1,0 +1,18 @@
+{
+  "config_sha256": "3c39affff22dc243dc79dc6186b69172cf7dba6f9b6724a8ead627d8e61c3144",
+  "selection_unix": 1792606319.023344,
+  "B_rollout_source_sha256": "2d5309f259bf454d9e446dea750a9bcbea6e3c1349ae483c9862e0beac540228",
+  "known_cases_excluded_from_adaptation": true,
+  "probe_groups": 27,
+  "probe_rows": 216,
+  "processbench_rows": 96,
+  "selection": "Hash selection within fixed outcome strata; known-error groups disclosed separately",
+  "files": {
+    "buffer_questions.jsonl": "13d627e16ef92497b1846effbb1d000b09884c40a7e650e22f33cfa1b8db8987",
+    "probe_B6M.jsonl": "16c40ac981a7d7ce31725b1d568f7a435118a326a70280a3f12a9807feb3cc54",
+    "processbench_subset.jsonl": "cf5cb852478f95b3475a9de44115e0096fcf954f67e9253b24f996dd19281e71",
+    "forbidden_anchor_question_hashes.json": "ec590e9f534d0e5b3de624e3b2784816736ec2f5989d36f07afe7d05973bf676"
+  },
+  "original_CPU_config_sha256": "31c5982c533659cd745620aac3e125498df1b1a7ba83c91d804f6b2b408ad772",
+  "migration_note": "Selection/data unchanged; only execution device changed after unrelated B failure, before buffer completion or C/D adaptation."
+}

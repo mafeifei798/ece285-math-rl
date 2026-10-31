@@ -1,0 +1,14 @@
+{
+  "fetched_utc": "2026-10-22T19:11:23.631325+00:00",
+  "archive_sha256": "dcb843ed3aebe54cc111766deff747b8c9693ee6f2f024b87f98f1e270f8ee51",
+  "files_verified_against_release": {
+    "unit_decisions.json": true,
+    "protection_manifest.json": true,
+    "unit_metadata.json": true,
+    "questions.jsonl": true,
+    "blind_review_question_ids.json": true,
+    "protocol.json": true,
+    "unit_candidates.json": true,
+    "dataset_audit.json": true
+  }
+}

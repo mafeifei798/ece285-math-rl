@@ -1,0 +1,17 @@
+{
+  "status": "completed_quantitative_report",
+  "pid": 91536,
+  "script_sha256": "222957f2370b4e5a0e474164c89ddfe4fa201d23d13342f3331660698c8a78a5",
+  "started_unix": 1792700555.6760871,
+  "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+  "new_training": false,
+  "can_launch_gpu_work": false,
+  "maximum_wait_hours": 48,
+  "heartbeat_unix": 1792727289.0453691,
+  "remote_status": "completed",
+  "completed_predictions": 3992,
+  "last_connection_error": null,
+  "finished_unix": 1792727289.045367,
+  "qualitative_review_complete": false,
+  "all_downloaded_hashes_passed": true
+}

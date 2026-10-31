@@ -1,0 +1,47 @@
+{
+  "build_actor_vllm_and_frozen_C": {
+    "seconds": 38.61744451522827,
+    "peak_allocated_GiB": 27.936872005462646,
+    "peak_reserved_GiB": 28.3984375
+  },
+  "parameter_hashes_before": {
+    "seconds": 34.447715759277344,
+    "peak_allocated_GiB": 27.861676692962646,
+    "peak_reserved_GiB": 28.3984375
+  },
+  "reuse_exact_live_tokens_rescore_and_TRL_buffer": {
+    "seconds": 14.12189531326294,
+    "peak_allocated_GiB": 29.02998447418213,
+    "peak_reserved_GiB": 30.6328125
+  },
+  "live_real_actor_forward_backward_no_update": {
+    "seconds": 36.57921862602234,
+    "peak_allocated_GiB": 29.869574546813965,
+    "peak_reserved_GiB": 31.21484375
+  },
+  "saved_text_real_C_native_score_parity": {
+    "seconds": 9.85929799079895,
+    "peak_allocated_GiB": 28.409491539001465,
+    "peak_reserved_GiB": 31.21484375
+  },
+  "saved_text_actual_reference_logps": {
+    "seconds": 6.812684059143066,
+    "peak_allocated_GiB": 29.040382385253906,
+    "peak_reserved_GiB": 31.21484375
+  },
+  "saved_text_real_actor_forward_backward_no_update": {
+    "seconds": 45.16649913787842,
+    "peak_allocated_GiB": 29.871076107025146,
+    "peak_reserved_GiB": 31.216796875
+  },
+  "corrupted_signal_guard_tests": {
+    "seconds": 0.05607724189758301,
+    "peak_allocated_GiB": 27.87296438217163,
+    "peak_reserved_GiB": 31.216796875
+  },
+  "parameter_hashes_and_preservation_after": {
+    "seconds": 30.253647327423096,
+    "peak_allocated_GiB": 27.872962474822998,
+    "peak_reserved_GiB": 31.216796875
+  }
+}

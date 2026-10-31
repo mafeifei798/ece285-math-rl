@@ -1,0 +1,11 @@
+{
+  "unit_patch_holds_PRM_scores_fixed": true,
+  "split_patch_holds_outcome_labels_fixed": true,
+  "no_invalid_placeholder_misread_as_PRM_score": true,
+  "all_original_partners_retained_for_advantages": true,
+  "original_logged_reward_formula_reproduced": true,
+  "all_actual_advantages_checked_against_installed_TRL": true,
+  "actual_advantages_not_mutated_by_audit": true,
+  "all_variants_have_original_row_count": true,
+  "new_training": false
+}

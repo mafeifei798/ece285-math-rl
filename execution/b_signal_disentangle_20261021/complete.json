@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "new_training": false,
+  "new_PRM_inference": false,
+  "originals_preserved": true,
+  "rows": 9056,
+  "manually_reviewed_rows": 32,
+  "max_local_FP32_advantage_replay_difference": 9.655952453613281e-06,
+  "reward_order_reversals": 0,
+  "summary_sha256": "77941a00099a2c715aa9e94d52851111fa6f0fe99741c6b9d89bd03f7889bc80"
+}

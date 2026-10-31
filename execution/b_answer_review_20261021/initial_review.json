@@ -1,0 +1,1405 @@
+{
+  "reviewer": "Codex single-reviewer step audit; not an independent human label set",
+  "scores_and_gold_not_displayed_before_this_file": true,
+  "labels": {
+    "C": "局部数学/计算或合理程序步骤成立，不保证此前前缀没有错误",
+    "E": "该段含明确数学错误/错误结论",
+    "U": "内容不明、待独立计算或运行上下文无法确认"
+  },
+  "prefix_rule": "主要错罚统计只计未出现E或U之前的确定有效前缀；已有错误后的局部正确步骤单列，不直接算PRM误罚。",
+  "question_issues_excluded_from_PRM_error_rate": true,
+  "review_packet_sha256": "f4fd5c637e1a1f6fe8435cf5773fd8ccaf77d70fe4ccc9cbe132c1d7d43a3fe3",
+  "created_unix": 1792610458.891351,
+  "records": [
+    {
+      "review_id": "R01",
+      "source_row": 5521,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "1": "Pascal 三角形没有给出有效推导；1/4大于首项0.12，不可能。",
+        "3": "通项和下标范围正确。",
+        "4": "计算步骤计划正确。",
+        "9": "range(1,14)正确表示1至13。",
+        "11": "代码本身应计算真实乘积，显示的1/4并非其输出。"
+      },
+      "verification": "每项小于1，且首项3/25=0.12，所以整个乘积不可能为1/4。可用阶乘消去或精确有理数复算。代码构造的乘积公式正确，所声称的输出和结论错误。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "false_claimed_code_output",
+        "unsupported_initial_answer"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R02",
+      "source_row": 3932,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {
+        "1": "1·2·3·4·5=120正确。",
+        "3": "相邻阶乘的最大公因数是较小阶乘。",
+        "7": "(120,720,120)正确。"
+      },
+      "verification": "6!=6×5!，故gcd(5!,6!)=5!=120；代码、120/720和乘积表示均一致。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "R03",
+      "source_row": 5853,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {
+        "1": "同一段的余式定理正确，但框出的77错误。",
+        "4": "代入5的表达式正确。",
+        "12": "50-85+47正确。",
+        "14": "50-85=-35正确。",
+        "17": "最终12正确，覆盖了开头的77，但未明示撤回。"
+      },
+      "verification": "余式定理给出f(5)=50-85+47=12。第1段先框77，后面的代入与计算完整正确并最终框12。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "conflicting_boxed_answers"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R04",
+      "source_row": 8519,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "1至100中5的倍数为5k,k=1..20，占20%。等差数列计数、分母100、Python range均正确。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "R05",
+      "source_row": 112,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E",
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "1": "2001既无推导，也大于0..1000可出现的整数c数量1001。",
+        "2": "floor/ceil按整数与非整数分情况正确。",
+        "4": "两种剩余类0、2(mod9)正确。",
+        "6": "0,9,..999共有112个。",
+        "7": "floor(998/9)+1=111，且末项为992。",
+        "8": "正确合计应223。",
+        "9": "2010计数及1001-2010=2001均错误。"
+      },
+      "verification": "x整数时c=9n；非整数时c=9n+2。0..1000内分别112和111个，总223。第二序列末项992，绝非998。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "arithmetic_error",
+        "counting_error"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R06",
+      "source_row": 3892,
+      "step_labels": [
+        "C"
+      ],
+      "step_notes": {
+        "1": "一段同时包含通分、约分、带分数转换和结论，边界较粗。"
+      },
+      "verification": "15×7/10×1/9=105/90=7/6=1又1/6，各等式正确。末尾改用带分数不造成数学错误。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R07",
+      "source_row": 4124,
+      "step_labels": [
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "1": "x²+1不满足原函数方程。",
+        "2": "置y=0左侧应为f(0)，不能写f(x)；后续配方、根重数和结论也不成立。"
+      },
+      "verification": "取y=0得1=f(x²/2)+x²，从而f(t)=1-2t(t≥0)；代回原方程可得全体实数f(x)=1-2x。候选x²+1在x=1,y=0即矛盾。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "invalid_function_substitution",
+        "coarse_native_segment"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R08",
+      "source_row": 3175,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "U",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E",
+        "C",
+        "E"
+      ],
+      "step_notes": {
+        "9": "poly_from_roots API不可用，11段已有显式纠正；不把它与最终数学错误混为一谈。",
+        "12": "根减2对应将变量代成x+2，正确。",
+        "17": "替换代码正确。",
+        "19": "给出的展开式不等于P(x+2)，是错误的声称输出。",
+        "21": "沿用错误展开式。"
+      },
+      "verification": "新多项式为P(x+2)=(x+2)^3-5(x+2)+7=x³+6x²+7x+5。第一次API尝试在文中被明确识别并修正；真正的数值/代数错误在19段显示错误输出。",
+      "first_math_error": 19,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "false_claimed_code_output",
+        "acknowledged_runtime_error"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R09",
+      "source_row": 6417,
+      "step_labels": [
+        "U",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {
+        "1": "框56正确；后续闲聊和不明问题无法确定语义。",
+        "2": "不按旋转同构合并，选顶点集合计数正确。"
+      },
+      "verification": "圆上任意3个不同顶点不共线，所以共有C(8,3)=56；组合数及代码正确。第1段夹杂六元素/720等与题无关的论坛问句，无法把它作为严谨推导。",
+      "first_math_error": null,
+      "chain_verdict": "uncertain",
+      "later_correct_derivation": false,
+      "flags": [
+        "off_topic_text"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R10",
+      "source_row": 6465,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "5<sqrt29<6，使用非整数分支，floor(sqrt29)+5=10；全部步骤成立。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "R11",
+      "source_row": 2358,
+      "step_labels": [
+        "U",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {
+        "4": "在构造子族a=b-1中方程正确，不应单独声称这是无损限制。",
+        "5": "该子族最小b=6，给出5,6,9。",
+        "6": "加上三角不等式的一般上界即可证明最大9。"
+      },
+      "verification": "c为最大边时2c<20，故整数c≤9；(5,6,9)实现9。后续选相邻a,b可构造最优值；第1段无对应小问，无法解释8/5/3的所指。",
+      "first_math_error": null,
+      "chain_verdict": "uncertain",
+      "later_correct_derivation": false,
+      "flags": [
+        "off_topic_text",
+        "implicit_upper_bound"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R12",
+      "source_row": 4883,
+      "step_labels": [
+        "E",
+        "C",
+        "E",
+        "E",
+        "E",
+        "E",
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E",
+        "C",
+        "E"
+      ],
+      "step_notes": {
+        "2": "“周期12”若不指最小周期，本句可以成立；3段明确排除较小周期才错。",
+        "3": "题目未要求最小周期恰好12。",
+        "4": "1000001=101×9901，给出的73×13717421不等。",
+        "6": "列出的较小周期本身大体正确，排除这些数却不符合题意。",
+        "13": "N%(n*k)不是判断循环节长度的条件，k=1会拒绝所有因子。",
+        "16": "此代码不可能打印8。"
+      },
+      "verification": "条件只要求12为一个周期，允许最小周期1/2/3/4/6。故n>1应遍历10^12-1的全部非1因子；因子分解为3^3·7·11·13·37·101·9901，数量255。代码中k=1就把每个因子排除，实际输出0。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "misread_period_requirement",
+        "false_claimed_code_output"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R13",
+      "source_row": 4069,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E"
+      ],
+      "step_notes": {
+        "6": "所写Python表达式会给0.67，不是0.33。"
+      },
+      "verification": "期望=(1/2)×1+(1/3)×3-(1/6)×5=2/3，四舍五入0.67。概率、收益和求和代码正确，开头0.06和末尾0.33错误。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "false_claimed_code_output"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R14",
+      "source_row": 4136,
+      "step_labels": [
+        "E",
+        "C",
+        "E"
+      ],
+      "step_notes": {
+        "2": "180-120=60正确。",
+        "3": "不能用圆周长除弦长求边数，中心角也应120°；7.22式的四舍五入并不能构造8边。"
+      },
+      "verification": "正多边形外角和360°，边数360/120=3，周长15。内角60°正确；其后的弦长、中心角、周长除边长、任意取8边均错误。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "geometry_error",
+        "coarse_native_segment"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R15",
+      "source_row": 3,
+      "step_labels": [
+        "E",
+        "C",
+        "E",
+        "C",
+        "E",
+        "E",
+        "C",
+        "E",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "3": "最后化简漏掉一个2^(1/3)因子；T应为2·2^(1/3)/(2^(2/3)-1)。",
+        "4": "此坐标构造本身可表示直角三角形，角alpha在(a,0)。",
+        "5": "题目要从锐角顶点出发，中线却从直角原点画出。",
+        "6": "两条邻边不是都为1，角平分线也非45°。",
+        "7": "对已经错误定义的那条线求斜率，局部运算成立。",
+        "9": "两直线夹角正切公式正确，但所代斜率承袭前错。",
+        "10": "以错误斜率为前提的分式整理成立。",
+        "12": "没有证明头部表达式与前面的式子等价，直接恢复原先错答。"
+      },
+      "verification": "令t=tan(alpha/2)=2^(-1/3)，T=tan alpha=2t/(1-t²)。从角alpha出发的中线与AO夹角atan(T/2)，与角平分线之差的正切=(T/2-t)/(1+tT/2)=t³=1/2。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "wrong_vertex",
+        "algebra_error",
+        "unsupported_initial_answer"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R16",
+      "source_row": 9081,
+      "step_labels": [
+        "E",
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E",
+        "E",
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "3": "仅重复错误目标，不是新的等价变形错误。",
+        "4": "绝对值对称性正确。",
+        "5": "从两边减去相同项的等价变换正确。",
+        "6": "三角不等式定义正确。",
+        "7": "套用绝对值三角不等式正确。",
+        "8": "|-b/2|=|b|/2正确。",
+        "9": "上界≥|b|不能推出原式≥|b|。",
+        "10": "a,b≥0不能去掉a-b/2的绝对值，也不推出a≥b。"
+      },
+      "verification": "展开立方体反射：方向可取(12,7,5)，首次到整12网格顶点需要尺度12，路径12sqrt218，m+n=230。后文转去证明一般不成立的无关不等式，a=b/2且b≠0即反例。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "off_topic_derivation",
+        "false_inequality"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R17",
+      "source_row": 2223,
+      "step_labels": [
+        "E",
+        "C",
+        "E",
+        "E",
+        "C",
+        "C",
+        "E",
+        "E",
+        "E",
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "2": "除数配对与平方数的奇偶性论证正确。",
+        "3": "“S(n)仅在平方数为奇”错误；n=2时S=3已是反例。",
+        "6": "floor(sqrt2005)=44及非平方数1961的计算正确。",
+        "7": "从奇偶翻转推出按是否平方直接分类，仍不成立。"
+      },
+      "verification": "tau(k)仅在平方数为奇数，所以S(n)模2=floor(sqrt n)模2。n至2005中奇数平方层的长度之和为990，偶层1015，差25。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "parity_reasoning_error"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R18",
+      "source_row": 188,
+      "step_labels": [
+        "U",
+        "E",
+        "U"
+      ],
+      "step_notes": {
+        "2": "称某个有限数为最大值错误；888888888888888000/15的局部除法正确。"
+      },
+      "verification": "按实际题面不存在最大n：任何合条件正数再乘10，仍只含0和8且仍为15的倍数，并且更大。第二段的具体除法可以成立，但无法证明最大；尾段乱码不可判定。",
+      "first_math_error": 2,
+      "chain_verdict": "ill_posed",
+      "later_correct_derivation": false,
+      "flags": [
+        "ill_posed_question",
+        "off_topic_garbage"
+      ],
+      "input_issue": "题面largest且未给位数或数值上限，最大正整数不存在。"
+    },
+    {
+      "review_id": "R19",
+      "source_row": 524,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E",
+        "C",
+        "E",
+        "E",
+        "C",
+        "C",
+        "E",
+        "E",
+        "E",
+        "E",
+        "E",
+        "C",
+        "E",
+        "C",
+        "C",
+        "E",
+        "E",
+        "E",
+        "C",
+        "E"
+      ],
+      "step_notes": {
+        "2": "切差恒等式正确。",
+        "4": "tan(65-40)的这条恒等式正确，但尚未表达题中的2tan40。",
+        "5": "第一象限的tan65°不为负。",
+        "10": "仅将上一条负分母转到分子，局部代数成立。",
+        "11": "切和恒等式本身正确。",
+        "15": "tan(alpha-90°)应为-cot(alpha)，不是-tan(alpha)。",
+        "17": "作为奇函数改写的恒等式成立，但不能推出下一步的数值代入。",
+        "19": "tan(90-theta)=cot(theta)正确。",
+        "20": "对18段表达式做互余替换，局部成立。",
+        "24": "若23段假设成立，alpha=130的代数运算成立；假设本身无依据。",
+        "25": "130°与50°并非同一正切值，且均未满足题目。"
+      },
+      "verification": "数值或恒等式均可复核tan65°-2tan40°=tan25°，所求为25°。tan65°>0；切差公式本身正确，之后多次无效改式。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "trigonometric_identity_error"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R20",
+      "source_row": 6833,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "U",
+        "E"
+      ],
+      "step_notes": {
+        "4": "停止语义是否包含首次越界项需说明，对本题最小差结果无影响。",
+        "5": "range(9)包含1而注释未包含；显示的输出2错误。代码使用CRLF空行，按双LF切分没有拆开。"
+      },
+      "verification": "枚举给定两列可得最小正差4，例如20-16、64-60、260-256。是否纳入首次越300的项不改变最小值。代码还多放入A的1，但实际打印仍为4，不是2。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "false_claimed_code_output",
+        "CRLF_internal_blank_lines"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R21",
+      "source_row": 6280,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "提取1212后为(55-15)×1212=40×1212=48480。第1段60000错误，其余推导和验证代码正确。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "conflicting_boxed_answers"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R22",
+      "source_row": 5915,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "平方12个，立方5个，六次幂2个；并集15，补集135。第1段137错误，后续容斥论证和最终135正确。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "conflicting_boxed_answers"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R23",
+      "source_row": 6325,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E",
+        "C",
+        "E",
+        "E",
+        "C",
+        "C",
+        "C",
+        "E",
+        "U",
+        "C",
+        "E"
+      ],
+      "step_notes": {
+        "2": "f(2)=8a+4b+2c+d正确。",
+        "5": "分配律展开正确。",
+        "6": "这两个乘积正确。",
+        "7": "列出的三个乘积均正确，但第8段漏收另一项。",
+        "8": "缺少-8x项。",
+        "15": "对先前错误定义的系数做代入，形式正确，不能证明原问题值。",
+        "16": "所写(-6,31,-35,28)会得到34，不是110。",
+        "17": "乱码式过渡无法赋予数学含义。"
+      },
+      "verification": "所求为P(2)=(12-10+4)(7-4)=18。正确展开式为-6x³+31x²-43x+28；第8段漏掉4×(-2x)=-8x，随后代码连错误系数算出的34也没有正确显示。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "missing_expansion_term",
+        "false_claimed_code_output"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R24",
+      "source_row": 604,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "等腰直角三角形直角边均4，面积8；两套勾股/正弦计算成立。sin90°=斜边/自身虽无必要但数值恒等正确。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "R25",
+      "source_row": 1209,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "E",
+        "E",
+        "C",
+        "E",
+        "C",
+        "E",
+        "E",
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "4": "四段各自时间和距离均正确。",
+        "5": "时间和应为2，不是1.75。",
+        "6": "以错误的总时间代入平均速率公式，公式本身正确。",
+        "7": "第一段代码正确。",
+        "8": "第二段代码正确。",
+        "9": "第三段代码正确。",
+        "10": "第四段代码正确。",
+        "11": "代码的距离和时间求和正确，会得到102和2。",
+        "12": "代码应打印51，58.2857并非该代码输出。",
+        "14": "102/1.75的除法数值正确，但1.75不是总时间。",
+        "15": "题目没有给出所谓expected answer 48。",
+        "16": "各段重查正确。",
+        "20": "无依据回到48。"
+      },
+      "verification": "四段距离20,25,45,12总102；时间0.5,0.5,0.75,0.25总2小时，故平均51。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "arithmetic_error",
+        "false_claimed_code_output",
+        "hallucinated_given_answer"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R26",
+      "source_row": 4694,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "由定义域x>0，log4x=(log2x)/2，log2(x²)=2log2x；得到log2x=4，即x=16。所有实际数学步骤成立，开头不完整盒子仅是格式噪声。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "R27",
+      "source_row": 4160,
+      "step_labels": [
+        "U",
+        "E",
+        "C",
+        "E",
+        "C",
+        "C",
+        "C",
+        "E"
+      ],
+      "step_notes": {
+        "2": "若顶点在以原点为中心的圆上，距离就是r，不能再加一次竖直平移。",
+        "3": "标准平移抛物线顶点与距离定义正确。",
+        "4": "列出不同到原点距离的所谓顶点，不满足同一圆。",
+        "6": "在假定坐标下用勾股求距离的方法正确。",
+        "7": "该坐标的距离确为sqrt13/4。",
+        "8": "3/4不从前一步sqrt13/4推出，虽与题图正确答案相同。"
+      },
+      "verification": "题面的Asymptote给出了y=x²+3/4的旋转构型，圆半径3/4。正文随意指定不共圆的顶点并错误使用平移；sqrt13/4的距离计算本身成立，但不能推出3/4。",
+      "first_math_error": 2,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "unsupported_coordinates",
+        "correct_answer_wrong_derivation"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R28",
+      "source_row": 885,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "由u=4x-1可得h(u)=(u+15)/2；固定点15，代回可验证。第1段26错误，后续推导与最终15正确。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "conflicting_boxed_answers"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R29",
+      "source_row": 1083,
+      "step_labels": [
+        "E",
+        "E",
+        "E",
+        "E",
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {
+        "5": "引用的函数公式与题图相符，但“正确的轴对称”说法错误。",
+        "6": "展开正确。",
+        "7": "系数正确。",
+        "9": "目标计算3正确。",
+        "11": "再次求值3正确。",
+        "14": "最终3正确，前面虚构的对称论证没有被明确撤回。"
+      },
+      "verification": "题图代码给定f=x(x-1)(x-2)/8。目标=-f(-2)=3；其展开系数和最后计算正确。但x=1是点对称中心，不是竖直对称轴或极大值点，f'(1)=-1/8≠0。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "false_symmetry_claim",
+        "correct_answer_wrong_derivation"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "R30",
+      "source_row": 3116,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "10y+9≡0(mod7)给y≡4(mod7)，最小非负y=4，整数49。逆元5、所有同余变形均正确。空盒子仅格式噪声。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "S01",
+      "source_row": 4457,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "45x+30=15(3x+2)，素因数、GCF和SymPy验证代码都一致。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "S02",
+      "source_row": 2957,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "长宽3s和s，周长8s=120，s=15，面积3s²=675。把图中长短边叫成height/width相反只改变命名，不改变计算。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [],
+      "input_issue": null
+    },
+    {
+      "review_id": "S03",
+      "source_row": 2295,
+      "step_labels": [
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "可被5整除的十进制整数末位只能0或5；两种均能实现，代码列举也一致。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [
+        "CRLF_internal_blank_lines"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S04",
+      "source_row": 2495,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "p(x)-x为首一6次多项式且有1..6六个根，故等于这些一次因子的乘积；p(7)=6!+7=727。第1段78854错误，后续完整正确。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "conflicting_boxed_answers"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S05",
+      "source_row": 1948,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "素数5,7,11,13,17的十组pq-p-q逐项计算正确；唯一选项匹配为119(C)。开头选D错误，后面给出正确穷举和结论。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "conflicting_initial_choice"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S06",
+      "source_row": 796,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "U",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "U",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {
+        "13": "sympy对于非符号求解目标的具体输出需独立检查；正文已把它识别为运行问题，数学证明并不依赖该输出。",
+        "20": "没有实际工具执行记录，NameError的上下文不确定；此处不当作新的数学错误。",
+        "28": "方程x+y-39=0的解目标39正确。"
+      },
+      "verification": "行列式=(x-y)(x+y-39)，x≠y排除首因子，得x+y=39。主体两遍展开与求和正确。16是开头错答。生成的运行报错上下文不能视为真实工具执行。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "conflicting_boxed_answers",
+        "unverified_execution_context"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S07",
+      "source_row": 1852,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "c+k(z-c)=(-1+4i)-2(1-2i)=-3+8i。第1段虚部符号错，12段明确撤回并修正，后续代码正确。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "explicit_self_correction"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S08",
+      "source_row": 745,
+      "step_labels": [
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "共轭化简得到1/sqrt(n-1)-1/sqrt(n)，求和望远镜消去得1-1/100=99/100；中间乘除与求和上下限都成立。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [
+        "CRLF_internal_blank_lines"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S09",
+      "source_row": 7434,
+      "step_labels": [
+        "E"
+      ],
+      "step_notes": {
+        "1": "在同一段中，从正确的5+2a+b改成5+2(-2+5)，即错误位置；段内包含多个计算步骤。"
+      },
+      "verification": "配对因子系数比较得a=-2,b=5；P=5+2a+b=6,Q=25，所以P+Q=31。它错误地把b也乘2得到11；头部5和末尾36均错。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment",
+        "coefficient_error"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S10",
+      "source_row": 2852,
+      "step_labels": [
+        "E"
+      ],
+      "step_notes": {
+        "1": "所谓乘x后的方程不等价；从x²-2xy-10y=0也不能得到所写y式，2x²-10x=x²-10x更推不出x²=5x。"
+      },
+      "verification": "原式5x(x+2y)=x²(x+2y)，由x,y>0可约去，唯一x=5。头部框2错误；后续乘x、解y和移项都不等价，最后偶然写出正确的未框5。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment",
+        "boxed_vs_prose_conflict",
+        "correct_terminal_prose_wrong_derivation"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S11",
+      "source_row": 1812,
+      "step_labels": [
+        "E"
+      ],
+      "step_notes": {
+        "1": "第一次把角条件当角平分线已错；AE+EC=AC亦无依据；7.222不能通过四舍五入变9。"
+      },
+      "verification": "角条件说明AE和AD为等角共轭线，不意味着AE是角平分线。BD=9,DC=6；正弦面积比给(BE/EC)(BD/DC)=(AB/AC)²，得BE=2535/463。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment",
+        "wrong_angle_bisector"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S12",
+      "source_row": 3469,
+      "step_labels": [
+        "E",
+        "C",
+        "C",
+        "C",
+        "C"
+      ],
+      "step_notes": {
+        "2": "f(0)支线无关但正确；从1开始四次计算到-41都对，不能把它直接当五次迭代答案。",
+        "4": "range(5)会正确计算到-33。",
+        "5": "没有展示print输出，不声称某个虚假的输出。"
+      },
+      "verification": "逐次迭代1→-1→7→-49→-41→-33。第1段16错；第2段给出f^4(1)=-41的计算本身正确，末尾代码恰循环5次也正确，但正文没有给出要求的第五次值。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "incomplete_final_evaluation",
+        "boxed_vs_code_conflict"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S13",
+      "source_row": 7480,
+      "step_labels": [
+        "E",
+        "U",
+        "E"
+      ],
+      "step_notes": {
+        "2": "未完成的题目抄写，没有可核验推导。",
+        "3": "仅重述题目并重复错答，没有推导。"
+      },
+      "verification": "n次单位根的实部条件等价于存在整数k使n/12≤k≤n/8。n=15无解；所有n≥16可由重叠区间8k≤n≤12k(k≥2)覆盖，故m=16。1476、840都不是最小值。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "question_copy_no_reasoning"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S14",
+      "source_row": 7169,
+      "step_labels": [
+        "E"
+      ],
+      "step_notes": {
+        "1": "声称x-y=1不能使x,y为整数明显错误；后续乱配对应值。"
+      },
+      "verification": "(x-y,x+y)只能取(1,51)、(3,17)，同为奇数使x,y均为整数，得到(26,25)、(10,7)，共2对。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment",
+        "parity_error"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S15",
+      "source_row": 166,
+      "step_labels": [
+        "E",
+        "E"
+      ],
+      "step_notes": {
+        "2": "单段中先列出正确换底，再无依据把乘积变成和；属于段内前对后错。"
+      },
+      "verification": "五个换底公式本身都正确；相乘后的常数=(1/6)(2/5)(3/4)(4/3)(5/2)=1/6，余下log_y x。转成带平方比的加法及57均不成立。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment",
+        "product_to_sum_error",
+        "off_topic_text"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S16",
+      "source_row": 8950,
+      "step_labels": [
+        "E",
+        "U"
+      ],
+      "step_notes": {},
+      "verification": "解二次方程得x=e^(iπ/4)或e^(3iπ/4)，2187≡3(mod8)，两支均给差i√2；亦因|x|=1知差模≤2，所以2^127不可能。第2段奇偶性闲聊无法形成相关推导。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "off_topic_text",
+        "no_relevant_derivation"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S17",
+      "source_row": 6030,
+      "step_labels": [
+        "E"
+      ],
+      "step_notes": {},
+      "verification": "平方和恒等式使原式=[(x+1)+(3-x)]²=4²=16。头部20错误，随后用正确恒等式明确改为16。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": true,
+      "flags": [
+        "coarse_native_segment",
+        "explicit_self_correction"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S18",
+      "source_row": 4575,
+      "step_labels": [
+        "E"
+      ],
+      "step_notes": {
+        "1": "包含“infinite order”的错误断言；有限迭代到固定点的等价性需要证明，不能用看起来重复替代。末尾383正确但没有框起来。"
+      },
+      "verification": "题面是有限次迭代F^k(x)=x，不是无限连分式；用Möbius迭代可独立证明本题实固定点仍为F(x)=x的两根。该二次式的两根绝对值和sqrt383，平方383。头部190错；把有限式直接当无限式的理由错误，之后二次公式与绝对值计算正确。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment",
+        "finite_infinite_confusion",
+        "boxed_vs_prose_conflict"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S19",
+      "source_row": 8813,
+      "step_labels": [
+        "C"
+      ],
+      "step_notes": {},
+      "verification": "g(x)=15给f^-1(x)=5，等价于x=f(5)=24/8=3；所有运算与反函数逻辑正确。",
+      "first_math_error": null,
+      "chain_verdict": "clean_valid",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment"
+      ],
+      "input_issue": null
+    },
+    {
+      "review_id": "S20",
+      "source_row": 2056,
+      "step_labels": [
+        "E"
+      ],
+      "step_notes": {
+        "1": "配方右侧额外-9，随后又把17/2错算为9，属于同一原生段内的连续错误。"
+      },
+      "verification": "除以2后配方应得(x+5/2)²+(y-3/2)²=9+25/4+9/4=35/2；面积35π/2。原文多减一次9，且其所写右侧其实17/2，也不是9。",
+      "first_math_error": 1,
+      "chain_verdict": "contains_errors",
+      "later_correct_derivation": false,
+      "flags": [
+        "coarse_native_segment",
+        "completing_square_error"
+      ],
+      "input_issue": null
+    }
+  ]
+}

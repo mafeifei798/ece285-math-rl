@@ -1,0 +1,142 @@
+<!doctype html><meta charset="utf-8"><title>7B C/D 配对适配</title><style>body{max-width:1100px;margin:40px auto;font:16px/1.8 system-ui;color:#20324a}pre{white-space:pre-wrap;background:#f2f6fa;padding:24px;border-radius:12px}</style><h1>7B C/D 配对 PRM 适配</h1><pre>7B C/D 配对 PRM 适配与离线检查完成
+只训练了评分器 LoRA；没有策略 RL。
+初始策略采样：512题×4＝2048条。共享锚点：2048条。
+适配更新：C/D 各512步，输入和初始adapter相同，只有成功项系数不同。
+
+ProcessBench 固定分层子集（不是官方完整成绩）：
+B {&quot;n&quot;: 192, &quot;valid_count&quot;: 64, &quot;error_count&quot;: 128, &quot;valid_acceptance&quot;: 0.90625, &quot;first_error_accuracy&quot;: 0.6796875, &quot;harmonic_mean&quot;: 0.7767857142857143, &quot;answer_correct_valid_vs_invalid_AUROC&quot;: 0.9427490234375, &quot;mean_valid_min_score&quot;: 0.8793408150959294, &quot;mean_invalid_answer_correct_min_score&quot;: 0.20601789111242397}
+C {&quot;n&quot;: 192, &quot;valid_count&quot;: 64, &quot;error_count&quot;: 128, &quot;valid_acceptance&quot;: 0.875, &quot;first_error_accuracy&quot;: 0.734375, &quot;harmonic_mean&quot;: 0.7985436893203883, &quot;answer_correct_valid_vs_invalid_AUROC&quot;: 0.95068359375, &quot;mean_valid_min_score&quot;: 0.8416045486555959, &quot;mean_invalid_answer_correct_min_score&quot;: 0.13930883051943965}
+D {&quot;n&quot;: 192, &quot;valid_count&quot;: 64, &quot;error_count&quot;: 128, &quot;valid_acceptance&quot;: 0.140625, &quot;first_error_accuracy&quot;: 0.3515625, &quot;harmonic_mean&quot;: 0.20089285714285715, &quot;answer_correct_valid_vs_invalid_AUROC&quot;: 0.869873046875, &quot;mean_valid_min_score&quot;: 0.1551502100010964, &quot;mean_invalid_answer_correct_min_score&quot;: 0.00798058796098644}
+
+分层组内信号：
+{
+  &quot;B&quot;: {
+    &quot;probe/mixed&quot;: {
+      &quot;groups&quot;: 32,
+      &quot;wrong_positive&quot;: 0,
+      &quot;wrong_count&quot;: 140,
+      &quot;wrong_positive_fraction&quot;: 0.0,
+      &quot;mean_absolute_advantage&quot;: 0.8327840626709704,
+      &quot;mean_group_outcome_AUROC&quot;: 0.8719494047619047
+    },
+    &quot;probe/all_wrong&quot;: {
+      &quot;groups&quot;: 16,
+      &quot;wrong_positive&quot;: 46,
+      &quot;wrong_count&quot;: 128,
+      &quot;wrong_positive_fraction&quot;: 0.359375,
+      &quot;mean_absolute_advantage&quot;: 0.7460669436744362,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    },
+    &quot;probe/all_correct&quot;: {
+      &quot;groups&quot;: 16,
+      &quot;wrong_positive&quot;: 0,
+      &quot;wrong_count&quot;: 0,
+      &quot;wrong_positive_fraction&quot;: null,
+      &quot;mean_absolute_advantage&quot;: 0.8148019763942411,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    },
+    &quot;illustrations/all_wrong&quot;: {
+      &quot;groups&quot;: 3,
+      &quot;wrong_positive&quot;: 8,
+      &quot;wrong_count&quot;: 24,
+      &quot;wrong_positive_fraction&quot;: 0.3333333333333333,
+      &quot;mean_absolute_advantage&quot;: 0.7421196622101194,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    }
+  },
+  &quot;C&quot;: {
+    &quot;probe/mixed&quot;: {
+      &quot;groups&quot;: 32,
+      &quot;wrong_positive&quot;: 0,
+      &quot;wrong_count&quot;: 140,
+      &quot;wrong_positive_fraction&quot;: 0.0,
+      &quot;mean_absolute_advantage&quot;: 0.8331206544875741,
+      &quot;mean_group_outcome_AUROC&quot;: 0.8872209821428572
+    },
+    &quot;probe/all_wrong&quot;: {
+      &quot;groups&quot;: 16,
+      &quot;wrong_positive&quot;: 34,
+      &quot;wrong_count&quot;: 128,
+      &quot;wrong_positive_fraction&quot;: 0.265625,
+      &quot;mean_absolute_advantage&quot;: 0.6896773155419591,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    },
+    &quot;probe/all_correct&quot;: {
+      &quot;groups&quot;: 16,
+      &quot;wrong_positive&quot;: 0,
+      &quot;wrong_count&quot;: 0,
+      &quot;wrong_positive_fraction&quot;: null,
+      &quot;mean_absolute_advantage&quot;: 0.7814194278017501,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    },
+    &quot;illustrations/all_wrong&quot;: {
+      &quot;groups&quot;: 3,
+      &quot;wrong_positive&quot;: 6,
+      &quot;wrong_count&quot;: 24,
+      &quot;wrong_positive_fraction&quot;: 0.25,
+      &quot;mean_absolute_advantage&quot;: 0.7097529474066756,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    }
+  },
+  &quot;D&quot;: {
+    &quot;probe/mixed&quot;: {
+      &quot;groups&quot;: 32,
+      &quot;wrong_positive&quot;: 0,
+      &quot;wrong_count&quot;: 140,
+      &quot;wrong_positive_fraction&quot;: 0.0,
+      &quot;mean_absolute_advantage&quot;: 0.8358309776451393,
+      &quot;mean_group_outcome_AUROC&quot;: 0.8454799107142857
+    },
+    &quot;probe/all_wrong&quot;: {
+      &quot;groups&quot;: 16,
+      &quot;wrong_positive&quot;: 50,
+      &quot;wrong_count&quot;: 128,
+      &quot;wrong_positive_fraction&quot;: 0.390625,
+      &quot;mean_absolute_advantage&quot;: 0.12026794281704022,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    },
+    &quot;probe/all_correct&quot;: {
+      &quot;groups&quot;: 16,
+      &quot;wrong_positive&quot;: 0,
+      &quot;wrong_count&quot;: 0,
+      &quot;wrong_positive_fraction&quot;: null,
+      &quot;mean_absolute_advantage&quot;: 0.30758642008928644,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    },
+    &quot;illustrations/all_wrong&quot;: {
+      &quot;groups&quot;: 3,
+      &quot;wrong_positive&quot;: 10,
+      &quot;wrong_count&quot;: 24,
+      &quot;wrong_positive_fraction&quot;: 0.4166666666666667,
+      &quot;mean_absolute_advantage&quot;: 0.12567127589501897,
+      &quot;mean_group_outcome_AUROC&quot;: null
+    }
+  }
+}
+
+分数与advantage变化：
+{
+  &quot;C&quot;: {
+    &quot;score_pearson_vs_B&quot;: 0.9270951015794436,
+    &quot;mean_min_score_delta&quot;: 0.026907727372952144,
+    &quot;positive_advantage_sign_flip_fraction&quot;: 0.091796875
+  },
+  &quot;D&quot;: {
+    &quot;score_pearson_vs_B&quot;: 0.13336072920097428,
+    &quot;mean_min_score_delta&quot;: -0.3799365819111438,
+    &quot;positive_advantage_sign_flip_fraction&quot;: 0.181640625
+  }
+}
+
+D-C答对内部AUROC差区间：[-0.13736111111111116, -0.03404032469232787]
+
+限制：
+Single PRM-adaptation seed; no C/D policy was trained or evaluated.
+Verifier-incorrect is not necessarily mathematically invalid reasoning.
+Primary probe is outcome-stratified, so aggregate rates are not prevalence estimates.
+ProcessBench subset is fixed and overlap-aware; inherited exposure is not removed.
+Absolute score reductions or positive-advantage changes do not prove improved mathematical ability.
+Floating-point scoring backend is shared B/C/D; original stored B scores are not silently overwritten.</pre><pre>
+
+Gradient verification recovery: original BF16 coordinate-wise test FAILED and remains preserved. Same-input BF16 repeated backward showed numerical variation. Deterministic FP32 no-update reference PASSED the original tolerance. No optimization or loss change was performed during recovery. See wiring_recovery/reassessment.json.
+</pre>

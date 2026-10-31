@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "PRM_unchanged": true,
+  "VR_changed": true,
+  "calls_are_separate_validation_branches": true,
+  "normalization_per_branch": 1
+}

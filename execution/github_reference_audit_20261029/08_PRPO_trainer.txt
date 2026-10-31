@@ -1,0 +1,19 @@
+https://github.com/SchumiDing/srpocode/blob/662bbc6c2815900ca96e39106f31e8988f2d961a/verl2/verl/trainer/ppo/ray_trainer.py
+Upstream blob: d5d73bca4e2a441928b7299ad9ef4cacb185eaf3
+EXCERPT ONLY
+1144:                     # print(f"batch.batch['responses']", batch.batch["responses"], flush=True)
+1145:                     with marked_timer("reward", timing_raw, color="yellow"):
+1146:                     # compute reward model score
+1147:                         if should_log_heartbeat:
+1148:                             print(f"[HEARTBEAT] Computing rewards at step {self.global_steps}, batch {batch_idx}", flush=True)
+1149:                         try:
+1150:                             rewards_tensor, beta_tensor, adv_tensor = self.reward_fn.compute_for_rollout(batch.batch["input_ids"], groundtruth, batch.batch["response_mask"], batch.batch["responses"], entropys, repeat_times=self.config.actor_rollout_ref.rollout.n)
+1151:                             if should_log_heartbeat:
+1152:                                 print(f"[HEARTBEAT] Reward computation completed at step {self.global_steps}, batch {batch_idx}", flush=True)
+1153:                         except Exception as e:
+1154:                             print(f"[ERROR] Reward computation failed at step {self.global_steps}, batch {batch_idx}: {type(e).__name__}: {e}", flush=True)
+1155:                             raise
+1156:                         batch.batch["token_level_scores"] = adv_tensor
+1157:                         batch.batch["advantages"] = adv_tensor
+1158:                         batch.batch["token_level_rewards"] = rewards_tensor
+1159:                         batch.batch["returns"] = rewards_tensor

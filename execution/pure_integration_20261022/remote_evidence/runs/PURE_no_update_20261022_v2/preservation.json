@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "hashed_files": 598,
+  "inventoried_files": 710,
+  "actor_before": "3ba1e37a84cacf7da68b9113de5911dfff8e2a0fcd7913ace87e7c500bcd7352",
+  "actor_after": "3ba1e37a84cacf7da68b9113de5911dfff8e2a0fcd7913ace87e7c500bcd7352",
+  "prm_before": "93310002eddc40ac55384ca55ffd76888401894f420631cc2091054e3c9fe528",
+  "prm_after": "93310002eddc40ac55384ca55ffd76888401894f420631cc2091054e3c9fe528",
+  "actor_and_prm_parameters_unchanged": true
+}

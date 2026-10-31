@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "mode": "independent CPU evidence review; no remote access or model loading",
+  "input_evidence_sha256": {
+    "result.json": "2f5cfc81b694eb5f9438af558a6c4cf68aa106db686ccc8c33001768d5b150db",
+    "status.json": "efb56a0c28b6855711fa568bc171513007c475c7269ca01692c7a0e4109be432",
+    "run_config.json": "5c436123a70e27d055a7a3e727d9f834060bde608542232d127e6fa6f8a51490",
+    "initialization.json": "22659841f9c35d35f0077da00507ac67347b74a9b9f9f73cd0c9956bf5ebc55e",
+    "generated_exact_ids.jsonl": "5e2db2c314eb5e19d3734e5ae72c9a6c9a2f74f7b4bd0bd3ffb21c0d50b4bb4a",
+    "verified_rows.jsonl": "e63bedbb92d90004d98df8286522248c6ac0ca8b8b62863d6b90fac7f886b3f6",
+    "scored_alignment.jsonl": "fbc410767bc4047c12d0793cd015d62f59a5f2ecc39be0f5abe4d49df2159bdd",
+    "signals.pt": "8d71ad73fc603646a2762442a5bd4bd016af6ba770c590f2958289606b58b105",
+    "P_VR_signal_receipt.json": "6d1161e22df672190fcc2375b01e3c4aa637d2e2561f4941b427efb88853b77e",
+    "P_PRM_signal_receipt.json": "587616843d0b65e2ef326bb5ee7fffd3ecc19de6ad8557f4c3ecd37abbf03161",
+    "P_VR_loss_audit.json": "99b85d90742eea7608a61f483b1229d2cb0f65d87f643658daa587a46dbfcbfd",
+    "P_PRM_loss_audit.json": "40dde1e088e4d7ef14f7496d8a7145e0c807829793079e862b9edda0763b00b2",
+    "preservation.json": "c6a36fa7e382c227446a07f3543d321d81a804e80cfcecb346e2b93edb044156",
+    "outcome_independence.json": "687ad115cdd926650f1391cfd910d57223b9d822eb60401c918872f0188329e5",
+    "tokenizer_checks.json": "4f62498414b5bd8a89d08a5f1105f6ce2ff51e78a6dc3f748a04381801989d4e",
+    "prm_loading.json": "c667d049ec54dd2b6fb28c5b0a9b9af68ea701333b9cd52459134a7a78929e3d",
+    "stages.json": "9f6a3d93755ce30f0f074b1a548de41a14186815520b33a5f93a69b9445c6d3b",
+    "nvml_peaks.json": "2f09f4a451f2f4947285b1b5a6c3fba15bd89f414dce3042d82759be39a58e42"
+  },
+  "exact_token_rows": 32,
+  "unique_boundary_count": 446,
+  "processed_changed_rows": 5,
+  "eos": {
+    "raw_ended_eos": 27,
+    "official_inserted_eos": 5
+  },
+  "source": "literal saved token IDs and independent float64 signal formulas",
+  "signal_oracle_errors": {
+    "P_VR": {
+      "baseline_reward": 2.5544847737091203e-08,
+      "kl": 0.0,
+      "reward": 2.5544847737091203e-08,
+      "raw_returns": 2.5544847737091203e-08,
+      "returns": 2.5544847737091203e-08,
+      "advantages": 2.4454936697893004e-07
+    },
+    "P_PRM": {
+      "baseline_reward": 2.3553311190305237e-08,
+      "kl": 0.0,
+      "reward": 2.3553311190305237e-08,
+      "raw_returns": 8.58132581105231e-08,
+      "returns": 8.58132581105231e-08,
+      "advantages": 2.073568774463297e-07
+    }
+  },
+  "arms": {
+    "P_VR": {
+      "gradient_norm": 0.04686115607023888,
+      "old_ref_max_abs": 0.0,
+      "normalization_calls": 1,
+      "loss_normalization_calls": 0,
+      "nonzero_boundary_advantages": 0,
+      "optimizer_steps": 0,
+      "avg_ratio_range": [
+        1.0,
+        1.0
+      ]
+    },
+    "P_PRM": {
+      "gradient_norm": 0.05806881402326889,
+      "old_ref_max_abs": 0.0,
+      "normalization_calls": 1,
+      "loss_normalization_calls": 0,
+      "nonzero_boundary_advantages": 0,
+      "optimizer_steps": 0,
+      "avg_ratio_range": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "parameter_hash_equality": true,
+  "preservation_receipt_passed": true,
+  "timing_arithmetic_passed": true,
+  "limitations": [
+    "PRM task matrix is accepted from saved native-BF16 GPU transform; this script does not rerun the PRM.",
+    "Remote whole-file preservation is supported by the completed runner receipt, not freshly rehashed through this local script.",
+    "No optimizer state memory, multiple updates or training-quality conclusion is certified.",
+    "Displayed throughput is one shared-GPU probe, not a controlled standalone benchmark."
+  ]
+}

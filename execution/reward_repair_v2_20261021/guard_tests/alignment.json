@@ -1,0 +1,44 @@
+{
+  "version": "reward-repair-v2-20261021",
+  "changes_actual_advantages": false,
+  "group_size": 8,
+  "epsilon": 0.0001,
+  "reward_device": "cpu",
+  "reward_dtype": "torch.float32",
+  "actual_device": "cpu",
+  "actual_dtype": "torch.float32",
+  "rewards": [
+    0.0,
+    0.10000000149011612,
+    0.30000001192092896,
+    0.4000000059604645,
+    0.5,
+    0.6000000238418579,
+    0.800000011920929,
+    1.0
+  ],
+  "actual_advantages": [
+    -1.3687583208084106,
+    -1.0728106498718262,
+    -0.4809150695800781,
+    -0.18496733903884888,
+    0.11098039150238037,
+    0.4069282114505768,
+    0.9988237023353577,
+    1.590719223022461
+  ],
+  "problem_ids": [
+    "a",
+    "a",
+    "a",
+    "a",
+    "a",
+    "a",
+    "a",
+    "b"
+  ],
+  "passed": false,
+  "errors": [
+    "question_group_alignment"
+  ]
+}

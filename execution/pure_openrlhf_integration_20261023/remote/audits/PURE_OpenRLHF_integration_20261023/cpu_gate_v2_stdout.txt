@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "test_count": 18,
+  "tests": {
+    "nonzero_KL_and_complete_float64_signal_oracle": true,
+    "boundary_and_empty_zero_after_nonzero_KL": true,
+    "caller_inputs_unchanged": true,
+    "PVR_never_reads_PRM_logits": true,
+    "PVR_ignores_PRM_dtype_and_device": true,
+    "PRM_reward_independent_of_verifier_labels": true,
+    "PVR_responds_to_verifier_labels": true,
+    "native_BF16_softmax_signed_softmin_before_FP32_task_copy": true,
+    "natural_zero_advantages_preserved": true,
+    "all_zero_advantages_block_instead_of_substitute": true,
+    "repeat_normalization_blocked": true,
+    "sealed_signal_mutation_detected": true,
+    "official_policy_clip_positive_negative_loss_and_gradient": true,
+    "microbatch1_divided_by_B_equals_response_mean_full_loss": true,
+    "micro_loss_gradients_match_independent_piecewise_oracle": true,
+    "no_direct_boundary_empty_or_padding_policy_gradient": true,
+    "official_ratio_over_10_microbatch_guard": true,
+    "official_FP32_log_softmax_and_gather": true
+  },
+  "source_files": {
+    "signals.py": "6ad54e124f8cdf7cd803dddad7c1fd3d3e6c142316068fe583ac1068eb4fcb2e",
+    "cpu_checks.py": "d22d341498e63154574430cf71ce89717e10683206e2c6612600a30b16b697bf",
+    "vendor.py": "539479a97a120162d4bc2f26e0098cd305b0907beca495f75996cc031214c223",
+    "vendor_manifest.json": "1cc6916026c0b84eb871bce7bc8e991281a87bbcfd692bf7ec9cb9297933a1bc"
+  },
+  "policy_loss_gradient_oracle_max_abs_error": 2.4129668679817584e-09
+}

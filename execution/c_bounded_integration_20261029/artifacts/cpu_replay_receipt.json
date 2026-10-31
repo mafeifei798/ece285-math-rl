@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "stored_rows": 536,
+  "groups": 67,
+  "group_types": {
+    "mixed": 32,
+    "all_wrong": 19,
+    "all_correct": 16
+  },
+  "cached_C_scores": true,
+  "original_repaired_verifier_reexecuted": true,
+  "exact_pinned_TRL_buffer_and_loss": true,
+  "loss_calls": 1608,
+  "max_FP64_reference_error": 1.0019387275406189e-07,
+  "max_loss_formula_error": 1.862645149230957e-09,
+  "wrong_positive": 0,
+  "post_combination_normalizations": 0,
+  "loss_input_bitwise_preserved": true,
+  "negative_tests_rejected": [
+    "second_normalization",
+    "rescale",
+    "swap_advantages_only",
+    "missing_tags",
+    "token_tag_misalignment"
+  ],
+  "models_loaded": 0,
+  "optimizer_steps": 0,
+  "fixture": "Actor tokens/logits are synthetic; lengths and C scores are real saved data. CPU replay batch536; live audit uses32."
+}

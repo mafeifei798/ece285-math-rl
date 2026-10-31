@@ -1,0 +1,59 @@
+{
+  "reviewed_utc": "2026-10-23T08:24:04.530631+00:00",
+  "mode": "static read-only review of root files; own signals and cpu_checks were updated only under explicit parent request",
+  "source_hashes": {
+    "engine.py": "0f8a2a241ebff721f1806c17b67a460b920c0d9c040e21123384b3610170d5d6",
+    "no_update.py": "c71d9da97233ec34976c24d5d80b87acaa00eb84f3a7ce59713067440cb71efc",
+    "dispatch.py": "8b729b0cbb7c40911009dbea6ff0b481d25ab6ac49857809969bc9605bfa469a",
+    "protocol.json": "b4242995071c0df0f12655ea75e40824c801fc09bf051d264c7cfd83f37415e5",
+    "signals.py": "6ad54e124f8cdf7cd803dddad7c1fd3d3e6c142316068fe583ac1068eb4fcb2e",
+    "vendor.py": "539479a97a120162d4bc2f26e0098cd305b0907beca495f75996cc031214c223",
+    "cpu_checks.py": "0d6ff0aeffab6ca62f5e1fcf5e8feeb80f7d7e183c7a8677be9ed171b2e2ab06",
+    "prm.py": "5dba90d91d5216f3fb3a75faf2439cd35f5416540a7e16fd36510d01d927757f",
+    "alignment.py": "49d49b69884d3492b0de95038303efeea8d6b5efc9bfcebbd53a99901cdc5cbd",
+    "tokenizer_checks.py": "386e2ede278d4a2ad07e44c7ad286384987510c74c98112a3282bc35c9145e76"
+  },
+  "checks": {
+    "SignalBatch_TENSOR_FIELDS_match_saved_tensors": "pass",
+    "engine_prepare_arm_logits_positions_groups_old_ref_API": "pass; native BF16 kwargs still need root engine integration at this snapshot",
+    "logps_completion_slice_and_labels": "pass: last n+1 logits drop final -> n completion predictor positions, labels final n",
+    "official_log_probs_fp32_and_position_ids": "pass: matches Actor.forward semantics and pinned function",
+    "KL_coefficient_source": "pass: explicit .001 k1, official example train_pure.sh line32; CLI default is .01",
+    "KL_location_and_no_separate_loss": "pass: reward-beta*old_reference_kl before returns; no veRL KL loss",
+    "single_micro_loss_to_GPU": "pass: frozen CPU signal row moved to new_logps.device; no normalization in loss",
+    "loss_reduction": "pass: official response token mean divided by B; avg_ratio>10 guard is per microbatch1",
+    "PVR_PRM_controls": "pass: one generation batch, same initialization/masks/logps/reference, identical KL/mask/norm/loss; no PRM dependency in PVR",
+    "no_updates": "pass static: GRPO training/reward/loss/optimizer methods blocked, optimizer None asserts, no optimizer step, parameter hashes before/after required",
+    "duplicate_launch_protection": "pass: dispatch lock, fixed run/receipt absence, process match and no_update run directory check",
+    "old_results_preservation": "pass static: old file inventory/hashes compared; actual pass awaits real run",
+    "PRM_frozen_method_name": "resolved by root: verify_frozen now called",
+    "tokenizer_check_import": "resolved by root: tokenizer_checks module now used"
+  },
+  "issues_resolved_during_review": [
+    "runner called nonexistent PRM.assert_frozen; root corrected to verify_frozen",
+    "runner imported tokenizer checks from alignment; root corrected module",
+    "signals initially used FP32 PRM transform; now supports native BF16 on explicit device"
+  ],
+  "pending_at_snapshot": [
+    {
+      "priority": "required before freeze",
+      "item": "engine.prepare must explicitly pass step_logits_dtype=bfloat16 and prm_transform_device=cuda:0 for real PRM output; signals now supports both kwargs"
+    },
+    {
+      "priority": "documentation",
+      "item": "protocol currently says signal arithmetic FP32; distinguish native BF16 PRM transform from FP32 task/baseline/KL/returns/norm"
+    },
+    {
+      "priority": "recommended gate",
+      "item": "dispatch passed CPU receipt should be tied to current source_files hashes, not only passed=true"
+    }
+  ],
+  "limits": [
+    "Static review does not prove actual GPU execution, memory sufficiency or absence of runtime issues.",
+    "GPU shared-memory check is instantaneous; it does not reserve memory from other jobs.",
+    "Fresh zero-LoRA actor/reference may have zero measured KL; nonzero k1/k3 paths have separate CPU tests.",
+    "No optimizer states are allocated; recorded peak cannot certify training peak.",
+    "All-zero signal batches deliberately fail without resampling or replacing rewards."
+  ],
+  "model_or_remote_jobs_launched_by_reviewer": false
+}

@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C有界过程优势接入验收</title><style>body{max-width:1000px;margin:42px auto;padding:0 22px;background:#f3f6fa;color:#223149;font:16px/1.85 system-ui}main{padding:30px 36px;background:white;border-radius:16px}h1{font-size:28px;line-height:1.4}h2{font-size:20px;margin-top:28px}.tag{display:inline-block;background:#dff1e5;color:#1a6037;padding:3px 12px;border-radius:20px}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}th,td{padding:12px;border-bottom:1px solid #e4e9f0;text-align:left}th{background:#f2f5fa}.note{padding:15px 20px;border-left:4px solid #d7a43b;background:#fff7e8}.formula{padding:18px;background:#eef3fb;border-radius:10px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f7f8fa;padding:20px;font-size:14px}a{color:#29569c}code{background:#f0f3f8;padding:2px 5px;overflow-wrap:anywhere}</style><main><span class="tag">真实模型无更新验收通过</span><h1>C 的有界过程优势已接入独立版本</h1><p>原始1.5B actor + LoRA16；冻结的现有7B C评分器。最终版本 <code>c_bounded_integration_20261029_v2</code>，没有启动正式RL或D保真适配。</p><div class="formula">Aout = (y−mean(y))/(sample_std(y)+10⁻⁴)<br>Anew = Aout + 0.2·y·(m−mean(m among correct responses))<br><b>合成后不再归一化。</b></div><h2>实际验收结果</h2><table><tr><th>检查</th><th>结果</th></tr><tr><td>真实模型loss输入</td><td>72条：32条实际生成token重放 + 40条旧案例</td></tr><tr><td>错答正advantage</td><td>0 / 47</td></tr><tr><td>三条旧异常案例</td><td>advantage全部为0</td></tr><tr><td>合成后再次归一化</td><td>0次；优势从构建到实际loss逐位一致</td></tr><tr><td>独立FP64参照最大差</td><td>9.06×10⁻⁸</td></tr><tr><td>原始token / mask / 回答指纹</td><td>72条独立核验通过；32条生成ID与初次生成一致</td></tr><tr><td>actor/C参数哈希</td><td>前后逐字节一致</td></tr><tr><td>优化器创建 / 参数更新</td><td>0 / 0</td></tr><tr><td>原实验保护</td><td>A/B89个文件 + C/D/评分17个文件hash未变</td></tr></table><p>CPU回放另覆盖536条旧回答、67组、1608次pinned TRL loss校验。正常路径之外，二次归一化、错误重排、tag丢失、token错位和强行给错答正优势等篡改均被拒绝。</p><h2>独立版本如何防止二次归一化</h2><p>TRL旧mixed-reward优势经核对后丢弃。有界优势在原生shuffle/split/buffer之前替换并附带row tag和token/mask指纹。实际loss入口验证最终FP32 tensor逐位不变；同时用实际模型loss公式验证，没有在内部用归一化副本替代。原GRPO剪裁、KL和梯度累积缩放保留。</p><h2>C评分的精度隔离已修复</h2><p>首轮在32条真实生成与loss后，旧案例分数复现未通过，原失败与原始token全部保留。原训练参数<code>tf32=True</code>带来的全局数值设置，与C离线评分关闭TF32的设置不同。TF32开时40例最大步骤差0.02078，关时差0。</p><p>V2只在C评分内部关闭TF32，随后恢复调用方设置；actor保持原设置。没有重采样，复用初次实际生成的32条token，重新计算验答/C分数/ref logps。最终旧案例步骤分数差为0，验收门槛收紧而非放宽。</p><p class="note">这是接线与无更新数值验收，没有策略训练或数学准确率提升结论。历史文本阶段进行了明确标注的actor重分词，只有32条生成回答声称保留精确采样token。测得约29.87GiB allocated/31.22GiB reserved，不含优化器，不能作为正式训练显存上限。</p><h2>代码和证据</h2><p><a href="../../experiments/c_bounded_integration_20261029_v2/c_trainer.py">独立trainer接入</a> · <a href="../../experiments/c_bounded_integration_20261029_v2/advantages.py">有界优势构建</a> · <a href="../../experiments/c_bounded_integration_20261029_v2/c_prm.py">冻结C与精度上下文</a> · <a href="artifacts/result.json">真实模型验收</a> · <a href="artifacts/actual_loss_input_trace.jsonl">实际loss逐条记录</a> · <a href="artifacts/independent_final_acceptance.json">独立CPU核验</a> · <a href="live_signals.pt">实际信号张量</a> · <a href="RESULTS.txt">完整文字记录</a></p><details><summary>完整记录与边界</summary><pre>C 有界过程优势：独立接入与真实模型无更新验收完成
+
+最终独立版本：experiments/c_bounded_integration_20261029_v2
+服务器运行证据：/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029_v2
+Source release：5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc
+
+公式：Aout=(y-mean(y))/(sample_std(y)+1e-4)
+Anew=Aout+0.2*y*(m-mean(m among correct responses))。
+无答对回答时过程项0；只有一个答对时过程增量0；合成后不再归一化。
+TRL原mixed-reward优势仅作核对后丢弃；实际loss消费新组合优势。
+整数tag和token/mask指纹随回答穿过实际TRL shuffle/split/buffer，loss入口逐位核验。
+原GRPO ratio clipping、KL(beta0.04)、token/梯度累积归约均保留；过程项不更新PRM。
+
+CPU验收：536条既有真实回答、67完整组（含三种结果类型），1608次实际pinned TRL loss代数校验。
+最终真模型验收：32条实际生成回答的原始token重放，加40条旧案例的真实模型前向/反向，共72个实际loss输入。
+其中47条答错，正advantage为0；全错组为0；三条旧异常例优势均为0。
+32条生成的原始prompt/completion IDs与初次生成完全一致，没有重采样；总生成26557个completion token。
+40条历史回答使用明确标注的重分词actor输入，不冒称其原始历史token；实际token/mask指纹已独立重建。
+最终最大CPU FP64参照差9.06e-08；loss实际值与ratio1公式最大差3.73e-9。
+合成后归一化次数0，loss入口优势逐位未改。错误正优势0/47。
+八类负向验收均拒绝：再次组归一化、倍乘优势、只换优势顺序、缺少tag、token错位、注入错答正优势、正式train调用、创建optimizer调用。
+
+模型与原实验保护：
+actor采用原始Qwen2.5-Math1.5B加LoRA16，与旧A/B起始adapter摘要一致；PRM采用已完成的7B C adapter并冻结。
+actor与C完整参数逐字节hash前后一致；没有创建优化器，没有参数更新，没有保存训练checkpoint。
+原A/B的89个保护文件和C/D/评分的17个保护文件hash未变。D保真适配、正式RL及自动任务均未启动。
+联调峰值allocated29.87GiB、reserved31.22GiB；这是共享卡、vLLM缓存比例0.15、无优化器的工作集，不能当完整正式训练峰值。
+
+发现及修复的接入问题：
+第一轮真实生成/实际32条loss已通过，但C重评旧案例与旧离线分数不一致而停机。保留原失败和全部token。
+原因是沿用原TrainingArguments tf32=True所产生的全局精度状态，与C离线评分的TF32关闭状态不一致。
+此前将来源笼统归到vLLM不够精确；现有证据直接确认训练参数tf32=True。不是C权重变化。
+冻结C40例实测：TF32开启时最大步骤分差0.0207817；关闭时差0。
+V2只在C评分内部关闭TF32并恢复调用方设置，保留actor设置与参数。严格分数复现门槛从0.002收紧至2e-6。
+随后复用首轮原始32个实际token序列，重算C分数/验答/reference logps，再次走真实TRL缓存与loss，完整通过。
+C对40条旧案例的最终最大步骤分差为0。未用重采样、修改reward或放宽验收阈值解决问题。
+
+边界：这是有界优势接线和无更新数值验收，不是策略训练、准确率提高或收敛证据。
+该版本不会改善C的原始错误排名；修的是过程分如何进入学习信号。
+未验收多轮更新/恢复训练；当前正式train、optimizer及save_model入口锁住。
+</pre></details></main></html>

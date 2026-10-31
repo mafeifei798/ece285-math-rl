@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "rows": 288,
+  "empty_rows": 9,
+  "variants": [
+    "native_raw",
+    "official_rl_prompt"
+  ],
+  "costs": {
+    "native_raw": {
+      "seconds": 176.28766881814227,
+      "scored_responses": 288,
+      "prm_input_tokens": 186838,
+      "padded_tokens": 186838
+    },
+    "official_rl_prompt": {
+      "seconds": 177.85477241594344,
+      "scored_responses": 288,
+      "prm_input_tokens": 192638,
+      "padded_tokens": 192638
+    }
+  },
+  "elapsed_seconds": 367.5517204059288,
+  "forward_seconds": 354.1984216850251,
+  "peak_allocated_GiB": 13.631380081176758,
+  "peak_reserved_GiB": 14.548828125,
+  "input_sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d",
+  "qwen_results_sha256": "422ecbcebb5df0160182e3780f0dd0beeeb0f8192784758bfcb02452e9127f74",
+  "model_assets_sha256": "d65ae3c32912b888142799dc64dfdfc9caa0772c288dca334b2dab4d78a09b56",
+  "model_revision": "b0cce6763f2317762c9cb46720c8fe7b07f44a88",
+  "matched_checkpoint_tensors": 340,
+  "primary_microbatch": 1,
+  "primary_forward": "Literal model-card single-example forward without padding",
+  "batch2_empty_sensitivity_recorded": true,
+  "extra_single_empty_forwards_per_variant": 9,
+  "extra_batch2_pair_forwards_per_variant": 9,
+  "cost_scope": "Per-variant time includes nine independent single and nine paired empty diagnostics; primary token totals exclude diagnostics",
+  "official_source_commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "identical_canonical_steps": true,
+  "all_independent_serializations_equal": true,
+  "empty_terminal_step": "EOS-only boundary from official RL; literal model-card steps=[] has no score",
+  "official_rl_prompt_scope": "Official prompt string with fixed canonical steps; not literal actor-token split or truncation emulation",
+  "new_generations": 0,
+  "optimizer_steps": 0,
+  "policy_model_loaded": false,
+  "model_frozen": true,
+  "training_started": false
+}

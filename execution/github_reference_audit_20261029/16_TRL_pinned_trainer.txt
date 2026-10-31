@@ -1,0 +1,24 @@
+https://github.com/huggingface/trl/blob/v0.23.1/trl/trainer/grpo_trainer.py
+Upstream blob: 7c4e5d265bec323f7e8e1eb1657ae450fb4f5e4b
+EXCERPT ONLY
+1645:         else:
+1646:             entropy_mask = None
+1647: 
+1648:         # Compute the KL divergence between the model and the reference model
+1649:         if self.beta != 0.0:
+1650:             ref_per_token_logps = inputs["ref_per_token_logps"]
+1651:             per_token_kl = (
+1652:                 torch.exp(ref_per_token_logps - per_token_logps) - (ref_per_token_logps - per_token_logps) - 1
+1653:             )
+1654: 
+1655:         # Compute the loss
+1656:         advantages = inputs["advantages"]
+1657:         # When num_iterations == 1 and steps_per_generation <= gradient_accumulation_steps,
+1658:         # old_per_token_logps == per_token_logps. In this case we can skip its computation
+1659:         # (see _generate_and_score_completions) and instead use per_token_logps.detach().
+1660:         # The exception is when using vLLM, where we always compute old_per_token_logps
+1661:         # for importance sampling
+1662:         old_per_token_logps = inputs.get("old_per_token_logps")
+1663:         old_per_token_logps = per_token_logps.detach() if old_per_token_logps is None else old_per_token_logps
+1664: 
+1665:         log_ratio = per_token_logps - old_per_token_logps

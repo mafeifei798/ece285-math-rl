@@ -1,0 +1,34 @@
+旧6M A统一协议重评：已完成
+至少一项原正确数没有在本轮统一协议下精确复现；具体差值和同题变化见下表。
+MATH500相对当前1M A为+5.60pp，配对95%区间[+2.00, +9.20]pp；GSM8K相对当前1M A为+11.68pp，配对95%区间[+9.10, +14.33]pp。
+
+模型 | 训练生成token | 参数更新次数 | MATH500 | GSM8K：
+初始模型 | 0 | 0 | 245/500（49.00%） | 750/1319（56.86%）
+当前A，约1M | 1,005,003 | 48 | 247/500（49.40%） | 752/1319（57.01%）
+旧A，原6M评测 | 6,022,435 | 284 | 270/500（54.00%） | 884/1319（67.02%）
+旧A，本轮统一重评 | 6,022,435 | 284 | 275/500（55.00%） | 906/1319（68.69%）
+
+复现正文与验答一致性：
+math500 | 192/500 | 192/500 | 453/500 | 否
+gsm8k | 674/1319 | 674/1319 | 1229/1319 | 否
+
+同题比较：
+math500 | A_6M_recheck minus A_6M_historical | +1.00 | [-1.60, +3.60] | 26/21 | 0.5601
+math500 | A_6M_recheck minus A_1M | +5.60 | [+2.00, +9.20] | 60/32 | 0.004609
+math500 | A_6M_recheck minus initial | +6.00 | [+2.00, +9.80] | 66/36 | 0.003866
+gsm8k | A_6M_recheck minus A_6M_historical | +1.67 | [+0.30, +3.11] | 56/34 | 0.0263
+gsm8k | A_6M_recheck minus A_1M | +11.68 | [+9.10, +14.33] | 244/90 | 1.485e-17
+gsm8k | A_6M_recheck minus initial | +11.83 | [+9.25, +14.56] | 249/93 | 1.407e-17
+
+运行路径审计：旧历史评测实际使用vLLM V0，本轮1M A与6M重评实际都使用V1；缓存、分块预填充、异步输出及内存配置也有差别。未做单因素切换，不能量化每项对分数的因果贡献。
+相同正文的评分与status不一致数均为0。未做单因素重生成，不把差异归因某一项配置。
+
+新生成token：861,134；派发至验收：40.8分钟；采样显存峰值：12.72GiB。
+
+限制：
+Only the already-trained historical A checkpoint is re-evaluated; current A_1M and initial results are reused without new generation.
+Same prompts, questions, gold answers, base model, verifier, inference and LoRA settings as the four-model evaluation; single-model ordering replaces four-model rotation.
+Historical 6M A and current 1M A are different training trajectories, not checkpoints from one uninterrupted run. Training vLLM memory settings and restart histories differ.
+Shared-GPU timing is not isolated throughput. Floating-point and scheduling changes can alter greedy output; exact text agreement is measured rather than assumed.
+Paired bootstrap intervals cover questions, not training-seed uncertainty. One training seed does not establish robust gains.
+No changed verifier, prompt selection, new training, PRM inference or checkpoint selection. Correct final answers do not certify valid derivations.

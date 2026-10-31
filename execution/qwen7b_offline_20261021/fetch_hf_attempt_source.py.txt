@@ -1,0 +1,97 @@
+"""Download public inference assets; verify against official HF blob metadata."""
+import concurrent.futures
+import hashlib
+import json
+import os
+from pathlib import Path
+import sys
+import time
+
+os.environ["HF_HUB_DISABLE_XET"] = "1"
+os.environ["HF_HUB_DOWNLOAD_TIMEOUT"] = "40"
+os.environ["HF_HUB_ETAG_TIMEOUT"] = "20"
+import requests
+from huggingface_hub import hf_hub_download
+
+REPO = "Qwen/Qwen2.5-Math-PRM-7B"
+PIN = "0610740060112df12585d00a1c5f4624d2f59051"
+
+
+def digest(path, algorithm="sha256"):
+    h = hashlib.new(algorithm)
+    with Path(path).open("rb") as f:
+        for block in iter(lambda: f.read(8 * 1024 * 1024), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def verify(path, record):
+    if not path.is_file() or path.stat().st_size != record["size"]:
+        return False
+    if "lfs" in record:
+        return digest(path) == record["lfs"]["sha256"]
+    raw = path.read_bytes()
+    return hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest() == record["blobId"]
+
+
+def main():
+    model_dir, metadata_path, output = map(Path, sys.argv[1:4])
+    data = json.loads(metadata_path.read_text())
+    assert data["id"] == REPO and data["sha"] == PIN
+    model_dir.mkdir(parents=True, exist_ok=True)
+    start = time.monotonic()
+    selected = [f for f in data["siblings"] if f["rfilename"] != ".gitattributes"]
+
+    def fetch(record):
+        name = record["rfilename"]
+        target = model_dir / name
+        if verify(target, record):
+            return {"name": name, "sha256": digest(target), "bytes": target.stat().st_size, "reused": True}
+        try:
+            hf_hub_download(REPO, name, revision=PIN, local_dir=model_dir,
+                            endpoint="https://hf-mirror.com", token=False)
+            assert verify(target, record), "Official digest mismatch"
+            origin = "HF mirror, official pinned HF digest verified"
+        except Exception as exc:
+            # Public secondary transport is admitted only if the official digest matches.
+            print(json.dumps({"stage": "mirror_fallback", "file": name, "exception": type(exc).__name__}), flush=True)
+            url = f"https://modelscope.cn/models/{REPO}/resolve/master/{name}"
+            partial = target.with_suffix(target.suffix + ".download")
+            for attempt in range(3):
+                offset = partial.stat().st_size if partial.exists() else 0
+                try:
+                    headers = {"Range": f"bytes={offset}-"} if offset else {}
+                    with requests.get(url, headers=headers, stream=True, timeout=(10, 60)) as r:
+                        r.raise_for_status()
+                        mode = "ab" if offset and r.status_code == 206 else "wb"
+                        with partial.open(mode) as f:
+                            for chunk in r.iter_content(4 * 1024 * 1024):
+                                f.write(chunk)
+                    assert verify(partial, record), "Secondary transport differs from official HF blob"
+                    partial.replace(target)
+                    break
+                except Exception:
+                    if attempt == 2:
+                        raise
+            origin = "ModelScope transport, official pinned HF digest verified"
+        result = {"name": name, "sha256": digest(target), "bytes": target.stat().st_size,
+                  "reused": False, "transport": origin}
+        print(json.dumps({"stage": "asset_verified", **result}), flush=True)
+        return result
+
+    small = [f for f in selected if not f["rfilename"].endswith(".safetensors")]
+    large = [f for f in selected if f["rfilename"].endswith(".safetensors")]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        small_results = list(pool.map(fetch, small))
+    print(json.dumps({"stage": "code_and_tokenizer_ready", "model_dir": str(model_dir)}), flush=True)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        large_results = list(pool.map(fetch, large))
+    result = {"complete": True, "repo": REPO, "revision": PIN, "files": small_results + large_results,
+              "official_metadata_sha256": digest(metadata_path), "elapsed_seconds": time.monotonic() - start,
+              "training": False, "model_updates": 0}
+    output.write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps({k: v for k, v in result.items() if k != "files"}), flush=True)
+
+
+if __name__ == "__main__":
+    main()

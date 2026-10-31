@@ -1,0 +1,22 @@
+{
+  "verified_utc": "2026-10-23T23:16:35.715286+00:00",
+  "repository": "https://github.com/mafeifei798/ece285-math-rl",
+  "visibility": "public",
+  "branch": "main",
+  "commit": "75f3235582d3510b854a9fe47b96a892221e49b2",
+  "tracked_files": 348,
+  "python_files": 235,
+  "original_project_modified": false,
+  "snapshot_kind": "sanitized independent review snapshot",
+  "source_files_hash_verified_unchanged": 339,
+  "remote_verification": [
+    "GitHub connector visibility=public",
+    "GitHub Desktop push complete",
+    "logged-out Chrome shows public repository and same commit"
+  ],
+  "screenshot": "public_repository.png",
+  "no_training_launched": true,
+  "full_rollouts_checkpoints_weights_included": false,
+  "remote_commit_verified_by_connector": true,
+  "screenshot_sha256": "735e830408486c4c13045d980755db0ba190a94edbd7c48bdc1925d7ca1bccb8"
+}

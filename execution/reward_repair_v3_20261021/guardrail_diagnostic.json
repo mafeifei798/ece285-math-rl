@@ -1,0 +1,31 @@
+{
+  "status": "OFFLINE PROPOSAL ONLY; no trainer uses it",
+  "formula": "A_outcome_GRPO+0.2*(m-mean_group(m))",
+  "invalid_process_minimum": 0,
+  "group_size": 8,
+  "coefficient": 0.2,
+  "absolute_process_component_bound": 0.17500000000000002,
+  "maximum_observed_absolute_process_component": 0.17132142186164856,
+  "does_not_repair_PRM_ranking": true,
+  "stats": {
+    "mixed": {
+      "groups": 893,
+      "current_mean_abs_advantage": 0.8162078565384491,
+      "candidate_mean_abs_advantage": 0.8554435968399048,
+      "candidate_max_abs_advantage": 2.6429178714752197,
+      "candidate_outcome_sign_violations": 0
+    },
+    "all_correct": {
+      "groups": 33,
+      "current_mean_abs_advantage": 0.795836034296151,
+      "candidate_mean_abs_advantage": 0.04608127474784851,
+      "candidate_max_abs_advantage": 0.15651297569274902
+    },
+    "all_wrong": {
+      "groups": 206,
+      "current_mean_abs_advantage": 0.7342866592638269,
+      "candidate_mean_abs_advantage": 0.014041448943316936,
+      "candidate_max_abs_advantage": 0.1604781597852707
+    }
+  }
+}

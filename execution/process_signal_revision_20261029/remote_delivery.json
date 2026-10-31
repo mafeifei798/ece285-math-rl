@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "source": "/srv/research/ece285_math_rl_project/experiments/process_signal_v3_20261029",
+  "source_release_sha256": "76c3f84797db5994570821ecc3190d012323f52d384d252d5bee4ea6e1d6c6a9",
+  "original_running_source_unchanged": true,
+  "new_training_tokens_allocated": 0,
+  "CUDA_initialized": false
+}

@@ -1,0 +1,5 @@
+{
+  "pid": 91536,
+  "script_sha256": "222957f2370b4e5a0e474164c89ddfe4fa201d23d13342f3331660698c8a78a5",
+  "role": "Collect only this existing completed inference run, verify hashes, render quantitative report; no training or inference launches"
+}

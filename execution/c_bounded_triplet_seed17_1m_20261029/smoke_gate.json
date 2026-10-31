@@ -1,0 +1,141 @@
+{
+  "passed": true,
+  "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+  "all_three_real_updates": {
+    "A": {
+      "passed": true,
+      "arm": "A",
+      "phase": "smoke",
+      "global_step": 2,
+      "accounting": {
+        "generated_completion_tokens": 48192,
+        "generated_completions": 64,
+        "generated_groups": 8,
+        "correct_completions": 30,
+        "truncated_completions": 9,
+        "prm_input_tokens": 0,
+        "prm_padded_tokens": 0,
+        "prm_scored_completions": 0,
+        "prm_forward_seconds": 0.0,
+        "outcome_group_counts": {
+          "mixed": 7,
+          "all_wrong": 1
+        },
+        "status_counts": {
+          "truncated": 9,
+          "symbolic": 15,
+          "exact": 30,
+          "missing_or_invalid_box": 9,
+          "unparseable": 1
+        },
+        "loss_rows": 64,
+        "loss_wrong_positive": 0,
+        "process_nonzero_rows": 0,
+        "process_abs_sum": 0.0,
+        "outcome_abs_sum": 42.529930114746094,
+        "positive_advantage_rows": 30,
+        "empty_rows": 0,
+        "short_wrong_rows": 0
+      },
+      "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+      "adapter_changed": true,
+      "PRM_frozen": true,
+      "originals_preserved": true,
+      "peak_reserved_GiB": 20.353515625,
+      "peak_allocated_GiB": 19.443862438201904,
+      "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+      "seconds": 242.65051102638245
+    },
+    "C_mix": {
+      "passed": true,
+      "arm": "C_mix",
+      "phase": "smoke",
+      "global_step": 2,
+      "accounting": {
+        "generated_completion_tokens": 50416,
+        "generated_completions": 64,
+        "generated_groups": 8,
+        "correct_completions": 31,
+        "truncated_completions": 10,
+        "prm_input_tokens": 30788,
+        "prm_padded_tokens": 30788,
+        "prm_scored_completions": 43,
+        "prm_forward_seconds": 12.215056355111301,
+        "outcome_group_counts": {
+          "mixed": 7,
+          "all_wrong": 1
+        },
+        "status_counts": {
+          "truncated": 10,
+          "symbolic": 12,
+          "exact": 31,
+          "missing_or_invalid_box": 10,
+          "unparseable": 1
+        },
+        "loss_rows": 64,
+        "loss_wrong_positive": 2,
+        "process_nonzero_rows": 64,
+        "process_abs_sum": 7.319896697998047,
+        "outcome_abs_sum": 44.06092071533203,
+        "positive_advantage_rows": 33,
+        "empty_rows": 0,
+        "short_wrong_rows": 0
+      },
+      "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+      "adapter_changed": true,
+      "PRM_frozen": true,
+      "originals_preserved": true,
+      "peak_reserved_GiB": 34.0390625,
+      "peak_allocated_GiB": 33.02789115905762,
+      "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+      "seconds": 273.6339521408081
+    },
+    "C_bounded": {
+      "passed": true,
+      "arm": "C_bounded",
+      "phase": "smoke",
+      "global_step": 2,
+      "accounting": {
+        "generated_completion_tokens": 49307,
+        "generated_completions": 64,
+        "generated_groups": 8,
+        "correct_completions": 32,
+        "truncated_completions": 6,
+        "prm_input_tokens": 37482,
+        "prm_padded_tokens": 37482,
+        "prm_scored_completions": 49,
+        "prm_forward_seconds": 15.261458496097475,
+        "outcome_group_counts": {
+          "mixed": 7,
+          "all_wrong": 1
+        },
+        "status_counts": {
+          "truncated": 6,
+          "symbolic": 17,
+          "exact": 32,
+          "missing_or_invalid_box": 8,
+          "unparseable": 1
+        },
+        "loss_rows": 64,
+        "loss_wrong_positive": 0,
+        "process_nonzero_rows": 31,
+        "process_abs_sum": 1.2844603657722473,
+        "outcome_abs_sum": 43.53250312805176,
+        "positive_advantage_rows": 32,
+        "empty_rows": 0,
+        "short_wrong_rows": 0
+      },
+      "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+      "adapter_changed": true,
+      "PRM_frozen": true,
+      "originals_preserved": true,
+      "peak_reserved_GiB": 34.0390625,
+      "peak_allocated_GiB": 33.02789115905762,
+      "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
+      "seconds": 272.2013533115387
+    }
+  },
+  "matched_initial_adapter": true,
+  "matched_training_arguments": true,
+  "matched_initial_raw_generation": true
+}

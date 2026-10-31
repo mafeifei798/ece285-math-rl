@@ -1,0 +1,8 @@
+{
+  "previous_download_pid": 2568833,
+  "reused_contiguous_prefixes": true,
+  "reason": "Use bounded parallel HTTP ranges for remaining public weights",
+  "official_hashes_unchanged": true,
+  "training_interrupted": false,
+  "new_script_sha256": "2cd4e8740f7eb21988258496012332d7c3239b3512ebab747f2044d42707f3c3"
+}

@@ -1,0 +1,5 @@
+{"stage": "official_weight_hash_verified", "file": "model-00001-of-00004.safetensors", "bytes": 3971153412}
+{"stage": "official_weight_hash_verified", "file": "model-00002-of-00004.safetensors", "bytes": 3864726352}
+{"stage": "official_weight_hash_verified", "file": "model-00003-of-00004.safetensors", "bytes": 3864726424}
+{"stage": "official_weight_hash_verified", "file": "model-00004-of-00004.safetensors", "bytes": 3556377672}
+{"complete": true, "seconds": 397.3321963227354}

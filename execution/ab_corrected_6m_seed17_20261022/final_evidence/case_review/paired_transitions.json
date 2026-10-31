@@ -1,0 +1,36 @@
+{
+  "math500": {
+    "correct -> correct": 223,
+    "correct -> truncated": 10,
+    "unparsable -> correct": 9,
+    "correct -> complete_incorrect": 34,
+    "complete_incorrect -> truncated": 21,
+    "complete_incorrect -> complete_incorrect": 118,
+    "truncated -> truncated": 16,
+    "unparsable -> unparsable": 7,
+    "truncated -> correct": 12,
+    "complete_incorrect -> correct": 25,
+    "truncated -> complete_incorrect": 17,
+    "complete_incorrect -> unparsable": 2,
+    "correct -> unparsable": 3,
+    "unparsable -> truncated": 1,
+    "unparsable -> complete_incorrect": 2
+  },
+  "gsm8k": {
+    "complete_incorrect -> correct": 50,
+    "correct -> correct": 764,
+    "complete_incorrect -> complete_incorrect": 251,
+    "complete_incorrect -> truncated": 10,
+    "correct -> truncated": 16,
+    "unparsable -> complete_incorrect": 13,
+    "truncated -> truncated": 12,
+    "unparsable -> correct": 38,
+    "correct -> complete_incorrect": 89,
+    "truncated -> correct": 5,
+    "truncated -> complete_incorrect": 15,
+    "unparsable -> unparsable": 35,
+    "correct -> unparsable": 15,
+    "unparsable -> truncated": 3,
+    "complete_incorrect -> unparsable": 3
+  }
+}

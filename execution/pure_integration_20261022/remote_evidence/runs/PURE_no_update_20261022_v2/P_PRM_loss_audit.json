@@ -1,0 +1,333 @@
+{
+  "arm": "P_PRM",
+  "loss_calls": 32,
+  "valid_tokens": 26557,
+  "gradient_norm": 0.055861252844535476,
+  "nonzero_gradient_tensors": 196,
+  "trainable_tensors": 392,
+  "optimizer_steps": 0,
+  "whitening_calls": 1,
+  "advantage_passed_to_loss_unchanged": true,
+  "loss_trace": [
+    {
+      "row": 0,
+      "tokens": 912,
+      "loss": -0.24134515225887299,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 1,
+      "tokens": 2048,
+      "loss": -0.08246947079896927,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 2,
+      "tokens": 2048,
+      "loss": -0.17211875319480896,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 3,
+      "tokens": 1207,
+      "loss": 0.14791567623615265,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 4,
+      "tokens": 1678,
+      "loss": -0.5170251131057739,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 5,
+      "tokens": 1960,
+      "loss": -0.04501032829284668,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 6,
+      "tokens": 1900,
+      "loss": 0.24141480028629303,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 7,
+      "tokens": 2048,
+      "loss": 0.12547776103019714,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 8,
+      "tokens": 570,
+      "loss": -1.7524664402008057,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 9,
+      "tokens": 315,
+      "loss": 1.6605720520019531,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 10,
+      "tokens": 687,
+      "loss": 0.41469213366508484,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 11,
+      "tokens": 196,
+      "loss": 0.11462733149528503,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 12,
+      "tokens": 307,
+      "loss": 0.40706968307495117,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 13,
+      "tokens": 121,
+      "loss": -1.999567985534668,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 14,
+      "tokens": 542,
+      "loss": 1.4836547374725342,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 15,
+      "tokens": 818,
+      "loss": 1.6864902973175049,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 16,
+      "tokens": 495,
+      "loss": -0.7358871698379517,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 17,
+      "tokens": 2048,
+      "loss": 0.20166942477226257,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 18,
+      "tokens": 357,
+      "loss": 2.012594699859619,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 19,
+      "tokens": 233,
+      "loss": 0.3212184011936188,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 20,
+      "tokens": 392,
+      "loss": -1.5124521255493164,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 21,
+      "tokens": 457,
+      "loss": -1.523259162902832,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 22,
+      "tokens": 389,
+      "loss": 1.575508952140808,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 23,
+      "tokens": 624,
+      "loss": 0.7586014270782471,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 24,
+      "tokens": 362,
+      "loss": -1.260573148727417,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 25,
+      "tokens": 374,
+      "loss": -1.2464593648910522,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 26,
+      "tokens": 342,
+      "loss": -0.892799437046051,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 27,
+      "tokens": 297,
+      "loss": -1.2443339824676514,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 28,
+      "tokens": 172,
+      "loss": 0.5278403759002686,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 29,
+      "tokens": 2048,
+      "loss": 0.208324134349823,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 30,
+      "tokens": 346,
+      "loss": -0.8480815291404724,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    },
+    {
+      "row": 31,
+      "tokens": 264,
+      "loss": -1.3677030801773071,
+      "advantage_retained": true,
+      "normalization_calls": 1,
+      "clip_fraction": 0.0,
+      "approximate_kl": 0.0,
+      "average_ratio": 1.0
+    }
+  ]
+}

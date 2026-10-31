@@ -1,0 +1,20 @@
+{
+  "pid": 88194,
+  "run": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_no_update_20261023_v1",
+  "log": "/srv/research/ece285_math_rl_project/audits/PURE_OpenRLHF_integration_20261023/runner.log",
+  "command": [
+    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_integration_20261023/no_update.py",
+    "--run",
+    "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_no_update_20261023_v1",
+    "--authorized-no-update"
+  ],
+  "launched": 1792744327.65592,
+  "gpu_snapshot": "0, 81920, 31917, 100\n1, 81920, 67090, 100\n",
+  "shared_gpu": true,
+  "formal_training": false,
+  "optimizer_updates_authorized": false,
+  "release_sha256": "59cd4d6a43c96ae76498f2e7a6d888d3bb2bb5d97d39efe38760184ff201bcbd"
+}

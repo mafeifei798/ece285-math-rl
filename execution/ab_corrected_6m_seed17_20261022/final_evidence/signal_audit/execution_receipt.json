@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/analyze_pair_signals.py",
+    "--root",
+    "/srv/research/ece285_math_rl_project",
+    "--output",
+    "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/signal_audit_final_20261022T141800Z/analysis.json"
+  ],
+  "started_unix": 1792678727.4998262,
+  "finished_unix": 1792678733.8741643,
+  "returncode": 0,
+  "script_sha256": "46a53a909a65d86d29d7a850956d8e54fc8369a2bb1fb40a409272a819911340",
+  "cpu_only": true,
+  "stdout_sha256": "b7907b099c5b3bb5a715cfdd2406187d3ae32bf022ae5d51e03d5bdb55a3a10c"
+}

@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "arms": {
+    "P_VR": {
+      "parity": true,
+      "fixed_width": 2048,
+      "whitening_calls": 1,
+      "accumulated_gradient": 0.4783872067928314,
+      "reference_gradient": 0.4783872067928314,
+      "outcome_independence": false,
+      "mutation_rejected": true
+    },
+    "P_PRM": {
+      "parity": true,
+      "fixed_width": 2048,
+      "whitening_calls": 1,
+      "accumulated_gradient": 0.37600409984588623,
+      "reference_gradient": 0.37600409984588623,
+      "outcome_independence": true,
+      "mutation_rejected": true
+    }
+  },
+  "official_functions_unchanged": true,
+  "vr_padding_retained": true,
+  "no_optimizer": true
+}

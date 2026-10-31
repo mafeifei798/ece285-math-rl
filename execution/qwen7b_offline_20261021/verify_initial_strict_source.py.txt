@@ -1,0 +1,108 @@
+"""Separate CPU-only arithmetic, provenance and count verification of saved outputs."""
+import hashlib
+import json
+import math
+from pathlib import Path
+import struct
+import sys
+
+
+def lines(path):
+    return [json.loads(s) for s in path.read_text().splitlines() if s.strip()]
+
+
+def sha(path):
+    h=hashlib.sha256()
+    with path.open('rb') as f:
+        for b in iter(lambda:f.read(8*1024*1024),b''):h.update(b)
+    return h.hexdigest()
+
+
+def sgn(v):return int(v>1e-6)-int(v< -1e-6)
+
+
+def main():
+    root,out=map(lambda p:Path(p).resolve(),sys.argv[1:3])
+    source=lines(root/'runs/B_seed17_6M/rollouts.jsonl')
+    manifest=json.loads((out/'input_manifest.json').read_text())
+    for rel,checksum in manifest['inputs'].items():assert sha(root/rel)==checksum,rel
+    eligible=set(manifest['eligible_rows']);score_views=0;steps=0
+    for model in ['h4','qwen7b']:
+        records=lines(out/f'scores_{model}.jsonl')
+        raw={r['source_row']:r for r in records if r['view']=='raw'}
+        assert set(raw)==eligible,'Unexpected raw coverage / review common-set restriction required'
+        assert len({(r['source_row'],r['view']) for r in records})==len(records)
+        for r in records:
+            i=r['source_row'];assert i in eligible
+            assert r['raw_sha256']==hashlib.sha256(source[i]['completion'].encode()).hexdigest()
+            assert r['step_count']==len(r['step_scores'])==len(r['positions'])==len(r['spans'])
+            assert r['positions']==sorted(set(r['positions']))
+            assert r['min_score']==min(r['step_scores'])
+            assert all(math.isfinite(p) and 0<=p<=1 for p in r['step_scores'])
+            if r['view']=='raw':assert len(r['step_scores'])==source[i]['step_count']
+            for p in r['positions']:assert 0<=p<r['input_tokens']
+            score_views+=1;steps+=len(r['step_scores'])
+        receipt=json.loads((out/f'receipt_{model}.json').read_text())
+        assert receipt['complete'] and receipt['model_weight_updates']==0 and receipt['new_rollouts']==0
+        assert receipt['total_views']==len(records)
+        assert receipt['input_tokens']==sum(r['input_tokens'] for r in records)
+        assert receipt['forward_calls']==math.ceil(len(records)/8)
+        assert math.isclose(receipt['production_views_per_second'],len(records)/receipt['forward_seconds'])
+        assert receipt['model_frozen_verified'] and receipt['repeat_max_difference']<=1e-7
+    checked_groups=0;max_difference=0.;variants={}
+    for path in sorted((out/'variants').glob('*.jsonl')):
+        data=lines(path);variants[path.stem]=data
+        assert len(data)==len(source)
+        assert [r['source_row'] for r in data]==list(range(len(source)))
+        for offset in range(0,len(data),8):
+            group=data[offset:offset+8]
+            assert len({r['problem_id'] for r in group})==1
+            if any(not r['group_usable'] for r in group):continue
+            reward=[]
+            for r in group:
+                value=r['outcome_reward']+.2*r['min_score'] if r['process_scored'] else r['outcome_reward']
+                fp=struct.unpack('f',struct.pack('f',value))[0]
+                assert abs(value-r['reward'])<1e-12
+                assert fp==r['reward_fp32']
+                if not source[r['source_row']]['valid_for_process_reward']:
+                    assert r['min_score'] is None and r['reward']==0
+                reward.append(fp)
+            mean=math.fsum(reward)/8
+            std=math.sqrt(math.fsum((v-mean)**2 for v in reward)/7)
+            for r,v in zip(group,reward):
+                expected=(v-mean)/(std+1e-4)
+                error=abs(expected-r['advantage']);max_difference=max(max_difference,error)
+                assert error<.001
+                rank=1+sum(w>v for w in reward)+(sum(w==v for w in reward)-1)/2
+                assert rank==r['reward_rank']
+            checked_groups+=1
+    summary=json.loads((out/'summary.json').read_text())
+    count_checks={}
+    for a,b,key in [('h4_raw','qwen7b_raw','model_only_raw'),('h4_repaired','qwen7b_repaired','model_only_repaired'),('logged_B','h4_raw','historical_H4_reinference_drift')]:
+        left,right=variants[a],variants[b];changed_groups=0;flips=0;ng=0;material=0
+        for offset in range(0,len(source),8):
+            aa,bb=left[offset:offset+8],right[offset:offset+8]
+            if any(r['quarantined'] or not r['group_usable'] for r in aa+bb):continue
+            ng+=1
+            changed=any(sgn(aa[i]['reward_fp32']-aa[j]['reward_fp32'])!=sgn(bb[i]['reward_fp32']-bb[j]['reward_fp32']) for i in range(8) for j in range(i+1,8))
+            changed_groups+=changed
+            flips+=sum(sgn(x['advantage'])!=sgn(y['advantage']) for x,y in zip(aa,bb))
+            material+=sum(abs(x['advantage']-y['advantage'])>.01 for x,y in zip(aa,bb))
+        d={'groups':ng,'reward_order_changed_groups':changed_groups,'advantage_sign_flips':flips,'advantage_changed_rows_gt_0p01':material}
+        assert all(summary['comparisons'][key][k]==v for k,v in d.items())
+        count_checks[key]=d
+    before=json.loads((out/'originals_before.json').read_text());after=json.loads((out/'originals_after.json').read_text())
+    assert before['hashed']==after['hashed'] and before['result_file_inventory']==after['result_file_inventory']
+    assert after['passed']
+    loading=json.loads((out/'qwen_loading_info.json').read_text())
+    assert not loading['missing_keys'] and not loading['unexpected_keys'] and not loading['mismatched_keys']
+    receipt={'passed':True,'checked_score_views':score_views,'checked_step_positions':steps,'checked_variant_groups':checked_groups,
+             'max_independent_FP64_vs_GPU_FP32_advantage_difference':max_difference,'independent_comparison_counts':count_checks,
+             'source_inputs_unchanged':True,'original_sources_and_results_preserved':True,'qwen_all_weights_loaded':True,
+             'model_weight_updates':0,'new_rollouts':0,'new_training':False,
+             'limitations':'Reuses fixed previous single-reviewer labels; this arithmetic QA is not a second mathematical annotator.'}
+    (out/'independent_QA.json').write_text(json.dumps(receipt,indent=2)+'\n')
+    print(json.dumps(receipt),flush=True)
+
+
+if __name__=='__main__':main()

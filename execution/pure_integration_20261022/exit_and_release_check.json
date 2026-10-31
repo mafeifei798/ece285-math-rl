@@ -1,0 +1,15 @@
+{
+  "verified_utc_date": "2026-10-23",
+  "final_release_matches_remote_GPU_run": true,
+  "remote_release_files": 21,
+  "probe_pids_exited": [
+    2982696,
+    2987403,
+    3055076
+  ],
+  "probe_processes_absent_from_nvidia_smi": true,
+  "old_local_source_hashes_preserved": true,
+  "html_local_links_checked": 12,
+  "broken_links": [],
+  "formal_training_started": false
+}

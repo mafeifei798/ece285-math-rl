@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "common_step": 2,
+  "acceptance_keys": [
+    "finite_gradients",
+    "parameters_updated",
+    "frozen_base_unchanged",
+    "PRM_frozen",
+    "normalization_once",
+    "loss_normalization_zero",
+    "safe_vllm_sync"
+  ],
+  "initial_adapters_equal": true,
+  "initial_samples_equal": true,
+  "fixed_updates_and_questions": true,
+  "same_actual_token_budget": false,
+  "actual_generated_tokens": {
+    "P_VR": 52911,
+    "P_PRM": 48778
+  },
+  "collapsed": {
+    "P_VR": false,
+    "P_PRM": false
+  },
+  "collapse_reasons": {
+    "P_VR": [],
+    "P_PRM": []
+  },
+  "stage_receipt_sha256": {
+    "P_VR": "6afe5b58813d0cbfa6a4065c47d1921171e3924434a060de749f9aacfb652a6e",
+    "P_PRM": "8b587aba76da1e093d6169490390db0a2adf11d7914df57cf6f9aa88ef39ce19"
+  }
+}

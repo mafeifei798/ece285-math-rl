@@ -1,0 +1,23 @@
+{
+  "status": "paused_by_user",
+  "training_complete": false,
+  "three_arm_48_to50_verified": true,
+  "A_50_to144_first_update_verified": true,
+  "common_prompt_order_verified": true,
+  "engine": "V1",
+  "reward_loss_unchanged": true,
+  "originals_protected": 1101,
+  "extra_seeds": false,
+  "controller_pid": 3319102,
+  "controller_alive": false,
+  "child_alive": false,
+  "local_report_links_checked": 5,
+  "full_report_screenshot_performed": false,
+  "GPU_released": true,
+  "automatic_resume": false,
+  "checkpoint_resume_steps": {
+    "A": 115,
+    "C_mix": 50,
+    "C_bounded": 50
+  }
+}

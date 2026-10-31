@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "completed_utc": "2026-10-30T06:27:17.325439+00:00",
+  "controller_complete_and_not_alive": true,
+  "new_predictions": 1819,
+  "frozen_verifier_regraded_records": 7276,
+  "protected_old_files_unchanged": 797,
+  "local_prediction_and_adapter_hashes_checked": true,
+  "selected_case_texts_match_final": true,
+  "runtime_log_excerpt_hashes_checked": true,
+  "figure_visually_reviewed": "accuracy_comparison.png",
+  "report_relative_links_checked": 14,
+  "missing_links": 0,
+  "HTML_QA": "Static links/structure/data checked; full-page screenshot not performed because file: browser navigation was blocked in this chat. No workaround attempted.",
+  "full_wall_seconds": 2446.4731302261353,
+  "new_training_updates": 0,
+  "accuracy_exactly_reproduced": false,
+  "historical_engine": "V0",
+  "current_1M_and_recheck_engine": "V1",
+  "causal_single_factor_engine_test": false
+}

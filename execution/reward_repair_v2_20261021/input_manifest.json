@@ -1,0 +1,27 @@
+{
+  "version": "reward-repair-v2-20261021",
+  "source": {
+    "rollouts": "2d5309f259bf454d9e446dea750a9bcbea6e3c1349ae483c9862e0beac540228",
+    "train": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e"
+  },
+  "rows": 9120,
+  "groups": 1140,
+  "training_questions": 6993,
+  "group_size": 8,
+  "epsilon": 0.0001,
+  "process_coefficient": 0.2,
+  "metadata_sha256": "d801a71d5104e99d9da4db0c3b70daf63f319546c73a335391eb5130d69bb0c5",
+  "quarantine_sha256": "a95c22696d123b97deb1bcba8919dc369e49bc33a3ad487e89814f178e013e83",
+  "changed_inventory_sha256": "81f8cf424b6d8289f394dbdb0ec75978ae9bf5be8d603fa51977b7e59e8ff1d2",
+  "typed_questions": 45,
+  "known_deferred_metadata": {
+    "math/train/counting_and_probability/484": "composite gold 0.56 = 56%; keep legacy; not observed in B-6M"
+  },
+  "ranking_policy": "within original 8-response groups; descending midranks; all partners retained",
+  "sign_deadband": 1e-06,
+  "material_advantage_change": 0.01,
+  "new_training": false,
+  "new_rollouts": false,
+  "source_root": "/home/researcher/Desktop/python/ece285_math_rl_project",
+  "inference_scope": "all complete PRM-eligible partners in any group whose native PRM input changes; legacy and normalized encodings scored on same frozen model/backend and padding shape"
+}

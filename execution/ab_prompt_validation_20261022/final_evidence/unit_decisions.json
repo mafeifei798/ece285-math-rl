@@ -1,0 +1,397 @@
+{
+  "created_utc": "2026-10-22T19:08:55.744156+00:00",
+  "reviewed_before_any_completions": true,
+  "all_existing_metadata_unchanged": true,
+  "source": "Question and gold schema only; no policy outputs observed.",
+  "new_percent_value": 10,
+  "new_percentage_points": 1,
+  "decisions": [
+    {
+      "problem_id": "math/train/prealgebra/228",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "math/train/algebra/231",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "math/train/algebra/1718",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "math/train/algebra/1513",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/321",
+      "answer_type": "percent_value",
+      "reason": "asks smallest possible percent of adults"
+    },
+    {
+      "problem_id": "math/train/prealgebra/97",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "math/train/prealgebra/437",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6546",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/152",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/3953",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5914",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5379",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6693",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4436",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4362",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5454",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/35",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/671",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/515",
+      "answer_type": "percent_value",
+      "reason": "asks percentage chance of serious accident"
+    },
+    {
+      "problem_id": "gsm8k/train/1272",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/3045",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5695",
+      "answer_type": "percent_value",
+      "reason": "asks percentage of chips"
+    },
+    {
+      "problem_id": "gsm8k/train/813",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6564",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/2472",
+      "answer_type": "percent_value",
+      "reason": "explicitly asks probability expressed as a percentage"
+    },
+    {
+      "problem_id": "gsm8k/train/5861",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/7124",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/3119",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4418",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/1534",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5074",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/1210",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/3037",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4073",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6319",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/2721",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5157",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5090",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4014",
+      "answer_type": "percent_value",
+      "reason": "asks percentage of bottle liquid"
+    },
+    {
+      "problem_id": "gsm8k/train/4183",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/554",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6830",
+      "answer_type": "percent_value",
+      "reason": "asks percentage of gingerbread men"
+    },
+    {
+      "problem_id": "gsm8k/train/961",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/1413",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5479",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4523",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6423",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/894",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/717",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/2299",
+      "answer_type": "percent_value",
+      "reason": "asks percentage of games"
+    },
+    {
+      "problem_id": "gsm8k/train/4759",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/751",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5017",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6920",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/7446",
+      "answer_type": "percent_value",
+      "reason": "asks percent of school population"
+    },
+    {
+      "problem_id": "gsm8k/train/3948",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/7135",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/7459",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4841",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/4820",
+      "answer_type": "percent_value",
+      "reason": "explicitly asks amount expressed as percentage of a bottle"
+    },
+    {
+      "problem_id": "gsm8k/train/1635",
+      "answer_type": "percentage_points",
+      "reason": "difference of grade percentages; absolute percentage-point difference"
+    },
+    {
+      "problem_id": "gsm8k/train/148",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5634",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/7274",
+      "answer_type": "legacy",
+      "reason": "Asks odds without explicit output unit; conservatively retain legacy grading, no inferred percentage conversion."
+    },
+    {
+      "problem_id": "gsm8k/train/1236",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/3260",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5886",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6596",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/3650",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/1234",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/1649",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5321",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/5620",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6792",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/6757",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    },
+    {
+      "problem_id": "gsm8k/train/2204",
+      "answer_type": "percent_value",
+      "reason": "asks percent discount"
+    },
+    {
+      "problem_id": "gsm8k/train/2725",
+      "answer_type": "legacy",
+      "reason": "Percent appears in inputs or code, but requested answer has another unit; preserve original fallback."
+    }
+  ],
+  "rule_changed": false,
+  "note": "Metadata extends the existing frozen unit-aware rule to new questions; historical outputs and metadata are untouched."
+}

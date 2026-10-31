@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "arm": "A",
+  "pilot": false,
+  "global_step": 284,
+  "accounting": {
+    "generated_completion_tokens": 6022435,
+    "generated_completions": 9088,
+    "generated_groups": 1136,
+    "mixed_reward_groups": 884,
+    "correct_completions": 3766,
+    "truncated_completions": 492,
+    "prm_input_tokens": 0,
+    "prm_padded_tokens": 0,
+    "prm_scored_completions": 0,
+    "prm_forward_seconds": 0.0,
+    "reward_status_counts": {
+      "symbolic": 4077,
+      "truncated": 492,
+      "exact": 3369,
+      "missing_or_invalid_box": 1002,
+      "unparseable": 113,
+      "unit_symbolic": 11,
+      "unit_exact": 24
+    },
+    "outcome_group_counts": {
+      "mixed": 884,
+      "all_correct": 29,
+      "all_wrong": 223
+    },
+    "last_batch": {
+      "generated_completion_tokens": 22757,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 2,
+      "correct_completions": 5,
+      "truncated_completions": 1,
+      "prm_input_tokens": 0,
+      "prm_padded_tokens": 0,
+      "prm_scored_completions": 0,
+      "prm_forward_seconds": 0.0
+    }
+  },
+  "budget": 6000000,
+  "stop_reason": "token_budget_reached",
+  "actor_adapter_changed": true,
+  "lora_B_abs_sum": 1013.2188569903374,
+  "prm_frozen_verified": false,
+  "metrics": {
+    "train_runtime": 9735.1397,
+    "train_samples_per_second": 65.741,
+    "train_steps_per_second": 2.054,
+    "total_flos": 0.0,
+    "train_loss": 8.670986849338847e-05
+  },
+  "finished_unix": 1792664349.008525,
+  "checkpoint": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+  "checkpoint_sha256": {
+    "completion_accounting.json": "871de1287f9e69663ee32b2b9de6e7700eb8061fc7430d31535eb9ab40a80f61",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "README.md": "78126f95e986f22f2cc5ea59277057787d878ef5e59f7d920b443f05b43176f7",
+    "chat_template.jinja": "c564d12c9977b8942423753b0c409a11f50142508ced170e9fe1c2f5b803cf70",
+    "rng_state.pth": "65a6a7550c080aa37fb40e9df0070848437a239bf1edc2bec2d16ab627ccfbdc",
+    "tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "scheduler.pt": "2943f432a5cc4c6418ed022f86a758857acbcdfa6e36c405f125d323c751f6cd",
+    "optimizer.pt": "a3263580c1da0fd2830624e40f2a5e6811727b793000aaf2304835ef5804f042",
+    "training_args.bin": "dc1c4c44be8c2e8e12fd5c8db5cd5edeab3a8af6399fda37521d818ce12e8b24",
+    "trainer_state.json": "3f1e3cdb222f6f208810b7d2af54c2a26f2fd6f57b95c3f8dccb19a52a6d0b09",
+    "adapter_config.json": "ba647e824edff976ae8bf664ac421ce2146c955f9d8135a59480f13cff0744fc",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "adapter_model.safetensors": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+  }
+}

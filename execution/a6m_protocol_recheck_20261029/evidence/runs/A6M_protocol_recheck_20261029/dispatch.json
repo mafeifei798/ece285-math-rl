@@ -1,0 +1,21 @@
+{
+  "pid": 3173527,
+  "unix": 1793338815.6237192,
+  "source": "/srv/research/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029",
+  "run": "/srv/research/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029",
+  "command": [
+    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/srv/research/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029/controller.py"
+  ],
+  "GPU": 1,
+  "GPU_free_MiB_before": 62508,
+  "source_release_sha256": "d367ded2061e6efb3205baf303177ef0dbcb710b293f0763237a403f4ce5df8b",
+  "contract_sha256": "3cffcbdd0506f488b992b480a8a61759c1eb13d2c01ad2ac063b12116faba996",
+  "generations": 1819,
+  "new_training": false,
+  "new_PRM_inference": false,
+  "environment_only_project_cache": "/srv/research/ece285_math_rl_project/cache/a6m_protocol_recheck_20261029",
+  "no_automatic_retry": true
+}

@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "rows": 3713,
+  "model_revision": "bc44d4a24bf1f7453fc3892dec25c4669e54ede5",
+  "weights_sha256": "9b26289b485cfd170bfd63d752e86da344b21cdc2a42545d5b172d9636d50d24",
+  "model_weight_updates": 0,
+  "new_rollouts": 0,
+  "dtype": "bfloat16",
+  "device": "NVIDIA A100-SXM4-80GB",
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.56.2"
+  },
+  "repeat_max_difference": 0.0,
+  "unchanged_input_max_difference": 0.0,
+  "costs": {
+    "forward_calls": 1888,
+    "unpadded_input_tokens": 5919594,
+    "padded_input_tokens": 8693985,
+    "repeated_forward_calls": 30
+  },
+  "elapsed_seconds_current_invocation": 330.2399536371231,
+  "all_native_prefix_checks_passed": true,
+  "model_frozen_verified": true,
+  "old_new_batch_padding_shape_matched": true,
+  "cache_note": "Outside prespecified scored groups, unchanged frozen-model scores are reused from original logs; no new model changes."
+}

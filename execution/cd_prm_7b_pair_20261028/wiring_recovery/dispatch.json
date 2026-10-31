@@ -1,0 +1,9 @@
+{
+  "pid": 1099990,
+  "started_unix": 1793256000.2998812,
+  "GPU": 1,
+  "free_memory_MiB": 49859,
+  "optimizer_updates": 0,
+  "script_sha256": "31c530246fec38220f398136eeefcf658652908bb5881abf81ec3e5191259721",
+  "scope": "Replay four first-batch gradients, no optimizer, no training resume, all parameters verified unchanged"
+}

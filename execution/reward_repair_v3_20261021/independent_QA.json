@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "paired_score_rows_verified": 2580,
+  "all_original_eight_partner_groups_preserved": true,
+  "variants_checked": {
+    "combined": {
+      "float64_reference_max_difference": 7.235649956083279e-06,
+      "nonfinite": 0
+    },
+    "crlf_only": {
+      "float64_reference_max_difference": 7.235649956083279e-06,
+      "nonfinite": 0
+    },
+    "logged": {
+      "float64_reference_max_difference": 7.235649956083279e-06,
+      "nonfinite": 0
+    },
+    "matched_legacy": {
+      "float64_reference_max_difference": 7.235649956083279e-06,
+      "nonfinite": 0
+    },
+    "units_only": {
+      "float64_reference_max_difference": 7.235649956083279e-06,
+      "nonfinite": 0
+    }
+  },
+  "all_report_links_exist": true,
+  "no_training": true
+}

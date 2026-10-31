@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-23T09:45:45Z",
+  "arms": {
+    "P_VR": {
+      "batches": 4,
+      "responses": 128,
+      "counts": {
+        "empty": 0,
+        "short": 2,
+        "truncated": 14,
+        "no_box": 16
+      },
+      "batch_seconds": [
+        255.00167608261108,
+        263.1196436882019,
+        226.6911005973816,
+        217.29752850532532
+      ],
+      "tokens": 97923,
+      "short_positive_mass": 4.5101504027843475,
+      "empty_positive_mass": 0.0
+    },
+    "P_PRM": {
+      "batches": 2,
+      "responses": 64,
+      "counts": {
+        "empty": 0,
+        "short": 3,
+        "truncated": 5,
+        "no_box": 8
+      },
+      "batch_seconds": [
+        266.5770502090454,
+        264.725802898407
+      ],
+      "tokens": 48778,
+      "short_positive_mass": 72.80399465560913,
+      "empty_positive_mass": 0.0
+    }
+  }
+}

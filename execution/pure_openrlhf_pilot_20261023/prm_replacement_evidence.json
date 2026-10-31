@@ -1,0 +1,458 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-23T10:08:06.336124+00:00",
+  "purpose": "Read-only evidence for a possible PRM replacement; not authorization to replace a running model or to launch scoring/training.",
+  "inputs": {
+    "historical_inputs": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
+      "sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d"
+    },
+    "historical_summary": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/summary.json",
+      "sha256": "1f7bed16364371574a410d582be3f2ab5271071d0ae8ce54294af87a209963ae"
+    },
+    "historical_qwen_scores": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/qwen_single/scored.jsonl",
+      "sha256": "3681d0cdf0d017d877339eaeb6481421bf4faa23b4b09570afba49f99d811d72"
+    },
+    "historical_pure_scores": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/scoring_single/scored.jsonl",
+      "sha256": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5"
+    },
+    "current_pprm_batch2": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/evidence/P_PRM_batch_0002.json",
+      "sha256": "7f725c0a03aa2ca2c1c568ad3e91d33aecdb94a2fededec8645a0995cb9be70a"
+    },
+    "historical_qwen_scorer": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/experiments/pure_official_prm_offline_20261022/score_qwen_single.py",
+      "sha256": "4f700bdfdebc94209655d2c28212ec27c220281beade9b48f591c0607faf9503"
+    },
+    "historical_pure_scorer": {
+      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/experiments/pure_official_prm_offline_20261022/score_existing_single.py",
+      "sha256": "705f6fa4dbf90c4b2662a6396ce356707fe7f90097fd9a5bc49ad1df0245d159"
+    }
+  },
+  "execution": {
+    "cpu_json_analysis_only": true,
+    "new_scoring_calls": 0,
+    "gpu_jobs_started": 0,
+    "models_loaded": 0,
+    "models_downloaded": 0,
+    "optimizer_steps": 0,
+    "training_modified": false
+  },
+  "judgment": {
+    "recommendation": "First screen the already available Qwen2.5-Math-PRM-7B on a fixed current-rollout offline acceptance set; do not switch live training or claim it is better yet.",
+    "qwen_better_on_current_three": "unknown; no scores exist in the inspected artifacts",
+    "qwen_fixes_empty_reward": "not supported by old evidence",
+    "blind_model_switch_recommended": false
+  },
+  "old_offline": {
+    "scored_rows": 288,
+    "scored_empty_rows": 9,
+    "replayed_rows": 256,
+    "replayed_empty_rows": 8,
+    "empty_scoring": {
+      "QWEN_PRM": {
+        "n": 9,
+        "signed_positive": 9,
+        "positive_probability_min": 0.9981613755226135,
+        "positive_probability_max": 0.9999724626541138,
+        "mean_positive_probability": 0.999617318312327,
+        "reward_rank_first": 9
+      },
+      "PURE_NATIVE": {
+        "n": 9,
+        "signed_positive": 9,
+        "positive_probability_min": 0.6791787147521973,
+        "positive_probability_max": 0.9987356066703796,
+        "mean_positive_probability": 0.938110715813107,
+        "reward_rank_first": 9
+      },
+      "PURE_RL_PROMPT": {
+        "n": 9,
+        "signed_positive": 9,
+        "positive_probability_min": 0.9511421918869019,
+        "positive_probability_max": 0.9895108342170715,
+        "mean_positive_probability": 0.975037415822347,
+        "reward_rank_first": 8
+      }
+    },
+    "outcome_concordance": {
+      "P_VR": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 324,
+        "incorrect_higher": 0,
+        "tied": 0,
+        "concordance": 1.0
+      },
+      "QWEN_PRM": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 244,
+        "incorrect_higher": 80,
+        "tied": 0,
+        "concordance": 0.7530864197530864
+      },
+      "PURE_NATIVE": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 207,
+        "incorrect_higher": 117,
+        "tied": 0,
+        "concordance": 0.6388888888888888
+      },
+      "PURE_RL_PROMPT": {
+        "correct_incorrect_pairs": 324,
+        "correct_higher": 211,
+        "incorrect_higher": 113,
+        "tied": 0,
+        "concordance": 0.6512345679012346
+      }
+    },
+    "group_rank_correlation": {
+      "QWEN_PRM__vs__PURE_NATIVE": {
+        "groups": 36,
+        "mean_group_spearman": 0.5628306878306878
+      },
+      "QWEN_PRM__vs__PURE_RL_PROMPT": {
+        "groups": 36,
+        "mean_group_spearman": 0.544973544973545
+      },
+      "PURE_NATIVE__vs__PURE_RL_PROMPT": {
+        "groups": 36,
+        "mean_group_spearman": 0.796957671957672
+      }
+    },
+    "token_reconstruction_length_mismatches": 9,
+    "skipped_batches": [
+      {
+        "batch_id": "B:210",
+        "indices": [
+          277
+        ],
+        "reasons": [
+          "ValueError('Response exceeds fixed completion width')"
+        ],
+        "policy": "Exclude the entire 32-row batch from advantage replay; retain all raw scoring"
+      }
+    ],
+    "historical_limitations": [
+      "288 rows selected as nine full historical batches containing empty answers; not representative sampling.",
+      "All raw scores retained. Whole B:210 batch excluded only from token-advantage replay because one reconstructed response exceeds fixed width.",
+      "Old logs did not save emitted token IDs; reconstruction with logged-length agreement still does not prove exact original tokens.",
+      "KL fixed to zero; this is an offline counterfactual, not historical A/B advantages or a prediction of future training.",
+      "Native-input formats differ by PRM. Raw-question and official-RL-prompt variants use shared canonical steps, not the official literal token splitter.",
+      "Final-answer concordance is not process correctness; there are no new human step labels.",
+      "No winner selected, no training launched, no reward or answer-verification rules changed."
+    ],
+    "selected_short_examples": [
+      {
+        "historical_row": 0,
+        "problem_id": "math/train/number_theory/107",
+        "completion": " \\boxed{105}",
+        "outcome": 1.0,
+        "logged_tokens": 8,
+        "qwen_positive_scores": [
+          0.03963884338736534
+        ],
+        "pure_native_positive_scores": [
+          0.13660839200019836
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.43014732003211975
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 15,
+        "problem_id": "math/train/precalculus/599",
+        "completion": " \\boxed{...}",
+        "outcome": 0.0,
+        "logged_tokens": 6,
+        "qwen_positive_scores": [
+          0.36296921968460083
+        ],
+        "pure_native_positive_scores": [
+          0.15817435085773468
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.9626730680465698
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 59,
+        "problem_id": "math/train/intermediate_algebra/895",
+        "completion": " (1)",
+        "outcome": 0.0,
+        "logged_tokens": 4,
+        "qwen_positive_scores": [
+          0.9433475732803345
+        ],
+        "pure_native_positive_scores": [
+          0.8479677438735962
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.6992543935775757
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 65,
+        "problem_id": "math/train/intermediate_algebra/306",
+        "completion": " \\boxed{i, 1 + 5i}",
+        "outcome": 0.0,
+        "logged_tokens": 12,
+        "qwen_positive_scores": [
+          0.007345826365053654
+        ],
+        "pure_native_positive_scores": [
+          0.01428193412721157
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.09807932376861572
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 167,
+        "problem_id": "math/train/intermediate_algebra/606",
+        "completion": " $\\boxed{1, 2}$",
+        "outcome": 0.0,
+        "logged_tokens": 9,
+        "qwen_positive_scores": [
+          0.9039745330810547
+        ],
+        "pure_native_positive_scores": [
+          0.6076632142066956
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.7520125508308411
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 176,
+        "problem_id": "math/train/counting_and_probability/42",
+        "completion": " E.",
+        "outcome": 0.0,
+        "logged_tokens": 3,
+        "qwen_positive_scores": [
+          0.3298233151435852
+        ],
+        "pure_native_positive_scores": [
+          0.2422056347131729
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.896251380443573
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 242,
+        "problem_id": "math/train/algebra/1252",
+        "completion": " \\boxed{4.375}",
+        "outcome": 0.0,
+        "logged_tokens": 10,
+        "qwen_positive_scores": [
+          0.0204885546118021
+        ],
+        "pure_native_positive_scores": [
+          0.09268777817487717
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.034618839621543884
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 246,
+        "problem_id": "math/train/algebra/1252",
+        "completion": " \\boxed{\\frac{5}{4}}",
+        "outcome": 1.0,
+        "logged_tokens": 10,
+        "qwen_positive_scores": [
+          0.3396085798740387
+        ],
+        "pure_native_positive_scores": [
+          0.08756384998559952
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.2254166156053543
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 275,
+        "problem_id": "math/train/counting_and_probability/351",
+        "completion": " \\boxed{223}",
+        "outcome": 0.0,
+        "logged_tokens": 8,
+        "qwen_positive_scores": [
+          0.06560482829809189
+        ],
+        "pure_native_positive_scores": [
+          0.00562003580853343
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.6150878667831421
+        ],
+        "not_current_pilot_responses": true
+      },
+      {
+        "historical_row": 286,
+        "problem_id": "math/train/algebra/936",
+        "completion": " $m=-\\frac{9}{3}$, $b=2$.",
+        "outcome": 0.0,
+        "logged_tokens": 17,
+        "qwen_positive_scores": [
+          0.006388320587575436
+        ],
+        "pure_native_positive_scores": [
+          0.0378924235701561
+        ],
+        "pure_prompt_sensitivity_positive_scores": [
+          0.04603390023112297
+        ],
+        "not_current_pilot_responses": true
+      }
+    ],
+    "interpretation": [
+      "This was a selected historical set, not a random sample of current policy rollouts.",
+      "Outcome concordance is final-answer ranking, not step-level mathematical correctness.",
+      "Qwen and PURE both scored all nine empty rows positively; Qwen scored each empty row first within its group.",
+      "Some historical short incorrect outputs receive lower Qwen scores than PURE, others receive higher scores; no uniform improvement is established.",
+      "Historical advantage replay used the veRL signal family with reconstructed actor IDs and KL=0; it is not the current OpenRLHF exact-token boundary-mask result.",
+      "Historical A/B skipped PRM on empty responses and assigned zero reward, so this audit does not establish the cause of old B versus A accuracy."
+    ]
+  },
+  "current_three_matching": [
+    {
+      "current_row": 2,
+      "problem_id": "math/train/counting_and_probability/328",
+      "completion": " $\\boxed{243}$\nGrammar: :::::",
+      "exact_text_matches": [],
+      "same_problem_id_matches": [],
+      "current_outcome": 0.0,
+      "current_loss_mean_advantage": 1.0005089044570923,
+      "qwen_score_on_this_current_response": null
+    },
+    {
+      "current_row": 4,
+      "problem_id": "math/train/counting_and_probability/328",
+      "completion": " The correct answer is \\boxed{9}",
+      "exact_text_matches": [],
+      "same_problem_id_matches": [],
+      "current_outcome": 0.0,
+      "current_loss_mean_advantage": 1.5785071849822998,
+      "qwen_score_on_this_current_response": null
+    },
+    {
+      "current_row": 15,
+      "problem_id": "math/train/intermediate_algebra/1155",
+      "completion": " I'm sorry, I cannot provide the answer without more context or a specific question related to the problem. Could you please provide the details of the problem?",
+      "exact_text_matches": [],
+      "same_problem_id_matches": [],
+      "current_outcome": 0.0,
+      "current_loss_mean_advantage": 1.344118595123291,
+      "qwen_score_on_this_current_response": null
+    }
+  ],
+  "interface_requirements": {
+    "historical_comparison": "Same canonical text steps, but each model native serialization; PURE also had a prompt-sensitivity variant. Historical original actor-emitted token IDs were unavailable.",
+    "current_pilot": "Saved original emitted actor token IDs, official process_sequences, exact actor boundary positions, native BF16 PRM transform, and full OpenRLHF signal/loss path.",
+    "qwen_native": [
+      "Use Qwen own tokenizer and official chat template: system instruction, user question, assistant step strings joined and ended by <extra_0>.",
+      "Read the two-class logits at verified marker IDs; retain native dtype outputs plus FP32 diagnostic copies separately.",
+      "Retain original actor IDs/positions and saved old/reference log-probabilities. Do not reconstruct actor sequences by retokenizing decoded full text.",
+      "Construct and verify an explicit one-to-one mapping between the fixed original mathematical steps and score positions. Do not silently change the splitter, truncate input, or force PURE newline serialization on Qwen.",
+      "If necessary native adapters expose different step content or boundaries, disclose and separate that sensitivity. This is a model-plus-required-native-adapter replacement, not a causal comparison of weights alone.",
+      "Qwen card reports positive probability; converting its logits with the unchanged PURE signed/softmin transform is a declared replacement ablation, not the official PURE released PRM baseline."
+    ]
+  },
+  "proposed_offline_acceptance": {
+    "status": "proposal only; not executed",
+    "input_sets": [
+      "Discovery/regression: all 32 responses of the current batch2, including complete same-question groups and all three identified failure cases.",
+      "Independent confirmation: preselect complete saved 32-response batch(es) before seeing candidate scores, covering normal solutions, short correct answers, mixed groups and same-outcome groups.",
+      "Historical 288 text-only rows remain supplementary; keep their reconstruction limits separate."
+    ],
+    "fixed_controls": [
+      "No new generation, no changes to verifier, original actor token IDs, valid/boundary masks, prompt/question text, grouped membership or saved old/reference logps.",
+      "Use each model documented native input serialization; do not tune prompts or segmentation after observing scores.",
+      "Replay exactly the current OpenRLHF signed score, softmin temperature0.1, actual peer-length baseline, KL0.001, boundary mask and normalization once; retain P_VR unchanged.",
+      "Keep the current running pilot untouched; any eventual replacement is a separately named experiment."
+    ],
+    "primary_checks": [
+      "Interface gate: score-marker and actor-boundary mapping fully verified, no silent omissions or reconstruction failures.",
+      "Known-invalid regression gate: check whether the three answer-only wrong/refusal examples cease to receive positive response-mean advantage under unchanged full-group replay, rather than merely receiving smaller p scores.",
+      "Confirm the change on separately preselected complete batches and audited invalid cases; do not select a model solely because it passes the three discovered examples.",
+      "Check preservation of sensible signals on correct short answers and verified correct steps; a uniform downward score shift that also suppresses correct reasoning is not an improvement."
+    ],
+    "secondary_checks": [
+      "Report false positive/false negative scoring on audited examples; report final-answer concordance only as a secondary proxy.",
+      "Report process scores, peer baselines, KL, raw returns and normalized response-mean advantages separately.",
+      "Stratify by all-correct/all-wrong/mixed groups and length/empty/short/refusal/truncation, preserving every original response.",
+      "Report paired differences and uncertainty on the independent set; failure-case examples cannot estimate population error rates.",
+      "Record inference time, input tokens, and peak memory in a future authorized scoring pass; offline ranking alone cannot certify downstream RL reliability."
+    ],
+    "decision_rule": "Pass the interface and regression gates, avoid material regression on correct examples, and corroborate on the independent set before proposing a separately authorized training replacement. A failed gate is a rejection of this candidate/interface, not permission to add filters or new rewards."
+  },
+  "candidates": [
+    {
+      "priority": 1,
+      "model": "Qwen/Qwen2.5-Math-PRM-7B",
+      "role": "Available local checkpoint; bounded offline screening first",
+      "verified_better_for_current_failures": false
+    },
+    {
+      "priority": 2,
+      "model": "Skywork/Skywork-o1-Open-PRM-Qwen-2.5-7B",
+      "role": "Optional reserve only; not recommended to download or run before the existing Qwen screen",
+      "verified_better_for_current_failures": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://huggingface.co/Qwen/Qwen2.5-Math-PRM-7B",
+      "type": "official_model_card",
+      "verified_utc_date": "2026-10-23",
+      "supports": [
+        "Native chat serialization has system/user/assistant roles, inserts <extra_0> after every step, and scores positive class at each marker.",
+        "Recommended steps use double newlines for Qwen2.5-Math-Instruct responses.",
+        "This card reports BoN and ProcessBench, not a guarantee against optimization-driven reward hacking."
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2501.07301",
+      "type": "original_Qwen_PRM_paper",
+      "version": "v2, revised 2025-06-05",
+      "supports": [
+        "BoN may reward answer-correct but process-wrong responses and can overstate process verification quality.",
+        "Minimum scores can concentrate on final answer steps."
+      ]
+    },
+    {
+      "url": "https://arxiv.org/abs/2410.15115",
+      "type": "original_RL_reward_training_paper",
+      "version": "v3, revised 2024-11-27",
+      "supports": [
+        "Strong inference-time learned reward models may fail to help or harm RL training; experiments document reward hacking."
+      ]
+    },
+    {
+      "url": "https://huggingface.co/Skywork/Skywork-o1-Open-PRM-Qwen-2.5-7B",
+      "type": "official_secondary_candidate_model_card",
+      "supports": [
+        "A public 7B PRM with official inference code; reported evaluations include BoN@64 with averaged step rewards.",
+        "Not evidence that this model fixes this project current three failures."
+      ]
+    },
+    {
+      "url": "https://github.com/SkyworkAI/skywork-o1-prm-inference",
+      "type": "official_secondary_candidate_code",
+      "supports": [
+        "Own prepare_input, reward flags and derive_step_rewards interface must be audited if ever used."
+      ]
+    }
+  ]
+}

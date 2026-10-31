@@ -1,0 +1,30 @@
+{
+  "actor_before": "3ba1e37a84cacf7da68b9113de5911dfff8e2a0fcd7913ace87e7c500bcd7352",
+  "actor_after": "3ba1e37a84cacf7da68b9113de5911dfff8e2a0fcd7913ace87e7c500bcd7352",
+  "C_before": "85fdd8a99a02a2c97c7faa077fd3d88f4f5f7ec106acd53a12e46ae3c015f156",
+  "C_after": "85fdd8a99a02a2c97c7faa077fd3d88f4f5f7ec106acd53a12e46ae3c015f156",
+  "actor_and_C_unchanged": true,
+  "originals": {
+    "original_AB_files": 89,
+    "original_AB_unchanged": true,
+    "CD_and_scoring_hashes": {
+      "runs/CD_PRM7B_pair_seed17_20261028/C/completion.json": "3aa573e3dc1bb3e977b97c886de2e2b1fa19bdf66f125d40dc496438120d7de7",
+      "runs/CD_PRM7B_pair_seed17_20261028/C/initialization.json": "b1c0f0347b1fd20b83e9e5e16513da766243f6f574439ad249cfb74e8f4d0a3d",
+      "runs/CD_PRM7B_pair_seed17_20261028/C/latest_checkpoint.json": "711550cfcd602caf1b1ed91b213270891dac379b0633ce57e3b472daea2a458b",
+      "runs/CD_PRM7B_pair_seed17_20261028/C/metrics.jsonl": "4df87bf82ece25ad32fe58e2d48642a0f9421194cee625f869121d60b8839b5d",
+      "runs/CD_PRM7B_pair_seed17_20261028/C/adapter/adapter_model.safetensors": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+      "runs/CD_PRM7B_pair_seed17_20261028/C/adapter/adapter_config.json": "7e5bb33ab3f97b47346ba91cd554fa5bc54d52969bdacb07c9b93905be3742ce",
+      "runs/CD_PRM7B_pair_seed17_20261028/D/completion.json": "d8d72f18b10777fe1bf9393a3b82836b6432ed9ef9f992fbe97b99822bb24005",
+      "runs/CD_PRM7B_pair_seed17_20261028/D/initialization.json": "93d2e43880740d52014e06c4920ad733e8b7c2ab40d55232526b757e9cdfddc5",
+      "runs/CD_PRM7B_pair_seed17_20261028/D/latest_checkpoint.json": "5f6ce5640d3ff2e1a5dd4e0f511f7d318a5c0e4be2b1a51cd303c1568322c9ec",
+      "runs/CD_PRM7B_pair_seed17_20261028/D/metrics.jsonl": "12c454e2b40c58253804bd5db2cd77530cd3fe6d585c72b01ff15763c5ad84ab",
+      "runs/CD_PRM7B_pair_seed17_20261028/D/adapter/adapter_model.safetensors": "ab3a1856c576779a9955854d697ecf754381032de933bfad39b47775d7a9a4ab",
+      "runs/CD_PRM7B_pair_seed17_20261028/D/adapter/adapter_config.json": "9769e2988d7231c0de9ea5185892542268a7867be70203fc5f360dbccfc9cc33",
+      "runs/CD_PRM7B_pair_seed17_20261028/summary.json": "eda2d3082c9fba2b56fccd45b3e62a77f85567f96a11ec164104dc7386db749f",
+      "runs/CD_PRM7B_pair_seed17_20261028/scores_B.jsonl": "639f61e50e73204dc490d7351d25016d4fc2e61332ebc6e559ccbe6d63042dfa",
+      "runs/CD_PRM7B_pair_seed17_20261028/scores_C.jsonl": "b75a7c173c0ea7f492dec832730973d6da7cda64be1d4c77245d3d7ca369c02e",
+      "runs/CD_PRM7B_pair_seed17_20261028/scores_D.jsonl": "ed6f787516c7ff62617255cd2b345c8ffe5b3bb9fc61b696c8a0b71040698c3d",
+      "runs/CD_PRM7B_pair_seed17_20261028/paired_wiring.json": "382ad73a61dceb31f326dfea1171760d781fbb31509471942cf03747f83e9cc2"
+    }
+  }
+}

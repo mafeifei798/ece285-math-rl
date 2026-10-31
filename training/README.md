@@ -11,7 +11,7 @@ remain immutable. `baseline_config.json` records that original contract, not the
 new stopping budget. The explicit extension is `operations/continuation_24m.json`.
 
 Remote root: `/srv/research/ece285_math_rl_project`.
-SSH: `ssh -p 22 -i ~/.ssh/fym_125_76_110_84_ed25519 researcher@server.example.invalid`.
+SSH: `ssh -p 11032 -i ~/.ssh/research_server_ed25519 researcher@server.example.invalid`.
 The key is used by SSH; its contents are not stored in this project.
 
 ## Method and fairness

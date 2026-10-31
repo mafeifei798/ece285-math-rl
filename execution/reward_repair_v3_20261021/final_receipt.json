@@ -1,0 +1,36 @@
+{
+  "complete": true,
+  "version": "reward-repair-v3-20261021",
+  "original_inputs_unchanged": 331,
+  "new_training": false,
+  "new_actor_samples": 0,
+  "PRM_updates": 0,
+  "guardrail_training_enabled": false,
+  "source_sha256": {
+    "repairs.py": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+    "analyze.py": "ff19bd2817d021ef22b3df4af8436f36f7fa8b3efbedc4208f34cc0431842b09",
+    "test_repairs.py": "177b8a2f2b680a7283c2e8138ae1083d12ad2bced29b2cd084429dbb1d3c6fdc",
+    "render.py": "0418d880e8747da6dd994be1c07835c4ea01708b93d24ec7682ab17c7b864a08",
+    "protocol.json": "a2f6ae5ce35515f7c8f895a625cf9e5a81b89a1caba1e3d0720a1f9dc682eb0b",
+    "score.py": "dda03b83d3f49b41801198b50b81ded73d014e75a6bbd5ad27b714a93cd25dfa",
+    "prepare.py": "28ed14667dec7833b496424f73c31dab4f17fa265c38a3bc39c73a737dd999b1",
+    "README.txt": "73635a811afe1076ab2e167a5e360e5a37f2549c0714095be2cc0314d2e066bb"
+  },
+  "dependency_sha256": {
+    "experiments/reward_repair_v2_20261021/v2core.py": "553030153f9019fdb94ab0fb50873b4bcbcfe18df6d9177c964ee5ff7c5e5d14",
+    "experiments/reward_repair_v2_20261021/trl_kernel.py": "43a39d6403319f1ddd925e8d0eb70730ee50ac5fdb98b7ab19ce45c2e22f0a7d",
+    "experiments/reward_repair_v2_20261021/replay_offline.py": "d82c94a89346182a82a0fbb7b78d1dc0d1946a3018ee6ffee4568f610e2be107",
+    "experiments/qwen7b_offline_20261021/core.py": "0d9bf018e7e8054f5c991a81c346a7dd37688dc68ef45384e8531c7dffd9dcab",
+    "experiments/b_qwen7b_6m_20261021/frozen_prm.py": "575ff18cfb511c15763199db127cd4989e12243994d7016c590ef289692f8735"
+  },
+  "artifact_sha256": {
+    "REPORT.txt": "3fdc739b64538dc5c292bbe933d64c68569988d422e78ae49d5811a6080f5883",
+    "review.html": "7f55202c4f773b29c1016eb5c4bc41d7901fbb24f1bec6cda3eaee49d462ad7d",
+    "replay_complete.json": "eb07e803b12ea1c8e397dcf6837e48b3c271ce16c45e7a5e0553566dc7054f04",
+    "guardrail_diagnostic.json": "9ef92ae5b622e935cb4e45f383ea1b2ba820317f71625b9b7b7526bca1230915",
+    "scoring_complete.json": "ce5345fe178054fbbec80399a8381debaee031521962184af58883dd2f150919",
+    "unit_summary.json": "aebb95c19742f9ed9f38479598e85dae93382c322136933ca0dca902fd73cd3b",
+    "case_impacts.json": "1db92b4f0b646680bcd85852c2ab9a964f2c296d00a4dba8a1d5a4410cc55655",
+    "preparation.json": "a11b1ec1f66a12bec8a5afea2058df9c1ac8e1b33593d2a5ff815e0b8fc3e859"
+  }
+}

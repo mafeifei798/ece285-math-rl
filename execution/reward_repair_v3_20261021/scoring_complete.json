@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "no_training": true,
+  "actor_rollouts": 0,
+  "PRM_parameter_updates": 0,
+  "model_frozen": true,
+  "physical_gpu": "0",
+  "plan_sha256": "a11b1ec1f66a12bec8a5afea2058df9c1ac8e1b33593d2a5ff815e0b8fc3e859",
+  "model_revision": "0610740060112df12585d00a1c5f4624d2f59051",
+  "paired_rows": 2580,
+  "affected_microbatches": 668,
+  "native_positions_checked": 65254,
+  "maximum_historical_step_difference": 0.017984360456466675,
+  "maximum_unchanged_input_difference": 0.0,
+  "maximum_repeat_difference": 0.0,
+  "costs": {
+    "forward_calls": 1342,
+    "unpadded_tokens": 4386178,
+    "padded_tokens": 6291218,
+    "repeat_calls": 6
+  },
+  "wall_seconds": 485.0545870489441,
+  "peak_allocated_GiB": 14.747808456420898,
+  "peak_reserved_GiB": 19.427734375,
+  "original_331_inputs_unchanged": true,
+  "paired_scores_sha256": "f50e63cc90c5e3e7efa742104671173be0bcd2c30238950c2303b7fd9f69b0d6"
+}

@@ -1,0 +1,53 @@
+{
+  "generated_completion_tokens": 6014788,
+  "generated_completions": 9056,
+  "generated_groups": 1132,
+  "mixed_reward_groups": 1130,
+  "correct_completions": 3690,
+  "truncated_completions": 518,
+  "prm_input_tokens": 5397056,
+  "prm_padded_tokens": 7869781,
+  "prm_scored_completions": 7476,
+  "native_steps": 81182,
+  "single_step_completions": 348,
+  "no_double_newline_completions": 533,
+  "prm_forward_seconds": 592.8959347987548,
+  "reward_status_counts": {
+    "symbolic": 4138,
+    "truncated": 518,
+    "exact": 3338,
+    "missing_or_invalid_box": 934,
+    "unparseable": 128
+  },
+  "outcome_group_counts": {
+    "mixed": 893,
+    "mixed_has_invalid": 654,
+    "mixed_all_valid": 239,
+    "all_wrong": 207,
+    "all_wrong_has_invalid": 173,
+    "all_wrong_all_valid": 34,
+    "all_correct": 32,
+    "all_correct_all_valid": 32
+  },
+  "last_batch": {
+    "generated_completion_tokens": 18529,
+    "generated_completions": 32,
+    "generated_groups": 4,
+    "mixed_reward_groups": 4,
+    "correct_completions": 17,
+    "truncated_completions": 2,
+    "native_steps": 252,
+    "single_step_completions": 1,
+    "no_double_newline_completions": 1,
+    "prm_forward_seconds": 1.863077760208398,
+    "prm_input_tokens": 17346,
+    "prm_padded_tokens": 25078,
+    "prm_scored_completions": 30
+  },
+  "global_step": 283,
+  "elapsed_seconds": 8456.389113070909,
+  "target_completion_tokens": 6000000,
+  "effective_completion_tokens_per_second": 711.2714327091496,
+  "torch_peak_allocated_GiB": 44.839871883392334,
+  "torch_peak_reserved_GiB": 45.79296875
+}

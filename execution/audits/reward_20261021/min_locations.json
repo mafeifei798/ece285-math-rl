@@ -1,0 +1,18 @@
+{
+  "0": {
+    "valid_multistep": 3493,
+    "min_at_first_step": 122,
+    "min_at_last_step": 716,
+    "mean_min": 0.1567573179450537,
+    "mean_last": 0.40369971343857386,
+    "steps_code_at_min": 497
+  },
+  "1": {
+    "valid_multistep": 3525,
+    "min_at_first_step": 134,
+    "min_at_last_step": 656,
+    "mean_min": 0.148088952160196,
+    "mean_last": 0.44716363491437644,
+    "steps_code_at_min": 561
+  }
+}

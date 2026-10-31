@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "pid": 3537458,
+  "error": "RuntimeError('Frozen scoring exited 1; inspect saved evidence')",
+  "training": false
+}

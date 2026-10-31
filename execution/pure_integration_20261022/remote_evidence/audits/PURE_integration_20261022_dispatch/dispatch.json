@@ -1,0 +1,17 @@
+{
+  "pid": 2982696,
+  "run": "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v1",
+  "log": "/srv/research/ece285_math_rl_project/audits/PURE_integration_20261022_dispatch/runner.log",
+  "command": [
+    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "/srv/research/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py",
+    "--run",
+    "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v1",
+    "--i-understand-no-updates"
+  ],
+  "launched": 1792732807.2131827,
+  "gpu_snapshot": "0, 81920, 46602, 100\n1, 81920, 75309, 100\n",
+  "shared_gpu": true,
+  "formal_training": false,
+  "optimizer_updates_authorized": false
+}

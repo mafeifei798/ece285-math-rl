@@ -1,0 +1,39 @@
+{
+  "n": 20,
+  "uniform_seed": 285,
+  "reviewer": "Codex single-reviewer, not independent human labels",
+  "logged_status_counts": {
+    "symbolic": 7,
+    "exact": 6,
+    "missing_or_invalid_box": 4,
+    "truncated": 3
+  },
+  "math_status_counts": {
+    "error": 6,
+    "recovered_error": 4,
+    "valid": 2,
+    "target_solved_then_contaminated": 1,
+    "incomplete_with_error": 2,
+    "answer_correct_process_wrong": 1,
+    "target_solved_then_incomplete_contamination": 1,
+    "valid_missing_answer_box": 1,
+    "recovered_error_with_stale_box": 1,
+    "valid_percent_verifier_false_negative": 1
+  },
+  "fully_valid_target_reasoning_n": 4,
+  "scored_valid_reasoning_n": 3,
+  "valid_reasoning_any_step_below_0p5": 0,
+  "scored_with_known_earlier_errors_n": 10,
+  "all_step_scores_ge_0p5_despite_earlier_error": [
+    "B04",
+    "B07",
+    "B08"
+  ],
+  "unresolved_wrong_reasoning_all_step_scores_ge_0p5": [
+    "B04"
+  ],
+  "scored_rows": 13,
+  "unscored_rows": 7,
+  "known_unit_false_negative": "B20",
+  "caution": "0.5 is a descriptive threshold, not tuned. Recovery after an early error is separated from a permanently wrong derivation. Rates from3 valid scored examples cannot establish population reliability."
+}

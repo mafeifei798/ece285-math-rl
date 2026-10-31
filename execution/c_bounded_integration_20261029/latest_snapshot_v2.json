@@ -1,0 +1,272 @@
+{
+  "checked_unix": 1793261749.9627655,
+  "dispatch.json": {
+    "pid": 1279637,
+    "launched_unix": 1793261494.8945293,
+    "run": "/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029_v2",
+    "log": "/srv/research/ece285_math_rl_project/audits/C_bounded_integration_20261029_dispatch_v2/runner.log",
+    "gpu": 1,
+    "sharing_authorized": true,
+    "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+    "reuse_original_generation": true,
+    "source_generation_run": "/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029",
+    "scope": "No-update recovery with C-only TF32 precision context; exact original token reuse, no sampling/optimizer/RL/D adaptation"
+  },
+  "status.json": {
+    "stage": "complete_no_update",
+    "pid": 1279637,
+    "unix": 1793261714.1344962,
+    "optimizer_steps": 0,
+    "passed": true
+  },
+  "stages.json": {
+    "build_actor_vllm_and_frozen_C": {
+      "seconds": 38.61744451522827,
+      "peak_allocated_GiB": 27.936872005462646,
+      "peak_reserved_GiB": 28.3984375
+    },
+    "parameter_hashes_before": {
+      "seconds": 34.447715759277344,
+      "peak_allocated_GiB": 27.861676692962646,
+      "peak_reserved_GiB": 28.3984375
+    },
+    "reuse_exact_live_tokens_rescore_and_TRL_buffer": {
+      "seconds": 14.12189531326294,
+      "peak_allocated_GiB": 29.02998447418213,
+      "peak_reserved_GiB": 30.6328125
+    },
+    "live_real_actor_forward_backward_no_update": {
+      "seconds": 36.57921862602234,
+      "peak_allocated_GiB": 29.869574546813965,
+      "peak_reserved_GiB": 31.21484375
+    },
+    "saved_text_real_C_native_score_parity": {
+      "seconds": 9.85929799079895,
+      "peak_allocated_GiB": 28.409491539001465,
+      "peak_reserved_GiB": 31.21484375
+    },
+    "saved_text_actual_reference_logps": {
+      "seconds": 6.812684059143066,
+      "peak_allocated_GiB": 29.040382385253906,
+      "peak_reserved_GiB": 31.21484375
+    },
+    "saved_text_real_actor_forward_backward_no_update": {
+      "seconds": 45.16649913787842,
+      "peak_allocated_GiB": 29.871076107025146,
+      "peak_reserved_GiB": 31.216796875
+    },
+    "corrupted_signal_guard_tests": {
+      "seconds": 0.05607724189758301,
+      "peak_allocated_GiB": 27.87296438217163,
+      "peak_reserved_GiB": 31.216796875
+    },
+    "parameter_hashes_and_preservation_after": {
+      "seconds": 30.253647327423096,
+      "peak_allocated_GiB": 27.872962474822998,
+      "peak_reserved_GiB": 31.216796875
+    }
+  },
+  "result.json": {
+    "passed": true,
+    "status": "complete_no_update",
+    "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+    "live_generated_rows": 32,
+    "new_generation_calls_this_attempt": 0,
+    "generation_reused_from": "runs/C_bounded_no_update_20261029",
+    "live_generated_completion_tokens": 26557,
+    "exact_token_ID_rows_verified": 32,
+    "saved_real_text_rows": 40,
+    "saved_groups": [
+      {
+        "dataset": "probe",
+        "kind": "all_correct",
+        "group": "1010"
+      },
+      {
+        "dataset": "probe",
+        "kind": "mixed",
+        "group": "1009"
+      },
+      {
+        "dataset": "illustrations",
+        "kind": "all_wrong",
+        "group": "old-9"
+      },
+      {
+        "dataset": "illustrations",
+        "kind": "all_wrong",
+        "group": "old-261"
+      },
+      {
+        "dataset": "illustrations",
+        "kind": "all_wrong",
+        "group": "old-621"
+      }
+    ],
+    "native_C_score_max_error_vs_saved": 0.0,
+    "live_loss": {
+      "rows": 32,
+      "max_actual_loss_vs_ratio1_formula_error": 3.725290298461914e-09,
+      "finite_actor_LoRA_gradients": true,
+      "actor_gradient_abs_sum": 76.99444544501603,
+      "wrong_positive": 0
+    },
+    "saved_loss": {
+      "rows": 40,
+      "max_actual_loss_vs_ratio1_formula_error": 3.725290298461914e-09,
+      "finite_actor_LoRA_gradients": true,
+      "actor_gradient_abs_sum": 41.908307978883386,
+      "wrong_positive": 0
+    },
+    "actual_loss_rows": 72,
+    "wrong_positive_at_actual_loss": 0,
+    "loss_input_bitwise_preserved": true,
+    "actual_outcome_normalizations": 1,
+    "post_combination_normalizations": 0,
+    "legacy_mixed_advantages_discarded": true,
+    "negative_tests_rejected": [
+      "second_group_normalization",
+      "rescale_after_builder",
+      "shuffle_advantage_without_tokens",
+      "missing_provenance",
+      "token_tag_mismatch",
+      "injected_wrong_positive",
+      "formal_RL_entry",
+      "optimizer_creation"
+    ],
+    "optimizer_constructed": false,
+    "optimizer_steps": 0,
+    "formal_RL": false,
+    "D_adaptation": false,
+    "actor_and_C_parameters_unchanged": true,
+    "original_ABCD_preserved": true,
+    "stages": {
+      "build_actor_vllm_and_frozen_C": {
+        "seconds": 38.61744451522827,
+        "peak_allocated_GiB": 27.936872005462646,
+        "peak_reserved_GiB": 28.3984375
+      },
+      "parameter_hashes_before": {
+        "seconds": 34.447715759277344,
+        "peak_allocated_GiB": 27.861676692962646,
+        "peak_reserved_GiB": 28.3984375
+      },
+      "reuse_exact_live_tokens_rescore_and_TRL_buffer": {
+        "seconds": 14.12189531326294,
+        "peak_allocated_GiB": 29.02998447418213,
+        "peak_reserved_GiB": 30.6328125
+      },
+      "live_real_actor_forward_backward_no_update": {
+        "seconds": 36.57921862602234,
+        "peak_allocated_GiB": 29.869574546813965,
+        "peak_reserved_GiB": 31.21484375
+      },
+      "saved_text_real_C_native_score_parity": {
+        "seconds": 9.85929799079895,
+        "peak_allocated_GiB": 28.409491539001465,
+        "peak_reserved_GiB": 31.21484375
+      },
+      "saved_text_actual_reference_logps": {
+        "seconds": 6.812684059143066,
+        "peak_allocated_GiB": 29.040382385253906,
+        "peak_reserved_GiB": 31.21484375
+      },
+      "saved_text_real_actor_forward_backward_no_update": {
+        "seconds": 45.16649913787842,
+        "peak_allocated_GiB": 29.871076107025146,
+        "peak_reserved_GiB": 31.216796875
+      },
+      "corrupted_signal_guard_tests": {
+        "seconds": 0.05607724189758301,
+        "peak_allocated_GiB": 27.87296438217163,
+        "peak_reserved_GiB": 31.216796875
+      },
+      "parameter_hashes_and_preservation_after": {
+        "seconds": 30.253647327423096,
+        "peak_allocated_GiB": 27.872962474822998,
+        "peak_reserved_GiB": 31.216796875
+      }
+    },
+    "total_seconds": 217.9328854084015,
+    "limitations": [
+      "Exact tokens reused from first actual live generation after a scorer-only TF32 precision correction; no resampling. Not convergence or policy accuracy.",
+      "Saved actor tokens were retokenized explicitly; only live rows claim exact emitted tokens.",
+      "No optimizer states allocated; measured memory is no-update footprint, not full training peak.",
+      "Shared GPU and audit-only vLLM cache reduction; timings do not establish dedicated-card throughput.",
+      "The new signal does not itself fix C raw PRM ranking."
+    ]
+  },
+  "generation_checks.json": [
+    {
+      "phase": "cached_exact_live_token_replay",
+      "rows": 32,
+      "replaced_before_shuffle": true,
+      "outcome_normalizations": 1,
+      "post_combination_normalizations": 0,
+      "wrong_positive": 0,
+      "max_abs_process": 0.12458205223083496
+    },
+    {
+      "phase": "saved_real_text_retokenized",
+      "rows": 40,
+      "replaced_before_shuffle": true,
+      "outcome_normalizations": 1,
+      "post_combination_normalizations": 0,
+      "wrong_positive": 0,
+      "max_abs_process": 0.06488817930221558
+    }
+  ],
+  "C_loading.json": {
+    "adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+    "C_steps": 512,
+    "frozen": true,
+    "no_new_PRM_adaptation": true,
+    "canonical_CRLF_adapter_used": true,
+    "native_marker_id": [
+      151651
+    ]
+  },
+  "independent_version.json": {
+    "version": "c_bounded_integration_20261029_v2",
+    "source_release_sha256": "5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc",
+    "formal_RL_authorized": false,
+    "optimizer_constructed": false,
+    "actor_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+    "audit_overrides": {
+      "max_steps": 1,
+      "report_to": [],
+      "save_strategy": "no",
+      "logging_strategy": "no",
+      "vllm_gpu_memory_utilization": 0.15
+    },
+    "overrides_reason": "One no-update batch with lower vLLM cache footprint on shared GPU; reward/verifier/GRPO clipping/KL unchanged",
+    "sampling": {
+      "group_size": 8,
+      "questions": 4,
+      "temperature": 1.0,
+      "cap": 2048,
+      "seed": 17
+    }
+  },
+  "score_parity.json": {
+    "max_step_error": 0.0,
+    "TF32_disabled_for_C": true,
+    "rows": 40
+  },
+  "generation_reuse.json": {
+    "new_generation_calls": 0,
+    "rows": 32,
+    "original_token_IDs_retained": true,
+    "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029",
+    "source_tokens_sha256": "4f04b41c7230efc609b011be94ce186e017cf3f4626fff65eebad57ebd73e518",
+    "source_signals_sha256": "0caada0365eee4a9e1d79a5bc6dc2f6c2a119acf5d4574beda8257fd4a978e14",
+    "reference_logps_recomputed": true,
+    "C_scores_recomputed_with_TF32_disabled": true,
+    "limitation": "Full fresh vLLM generation tested in initial attempt; this attempt replays those exact actual token IDs through actual TRL reward callbacks, buffer and loss."
+  },
+  "log_tail": "uences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.\n\nCapturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]\nCapturing CUDA graph shapes:  14%|\u2588\u258d        | 1/7 [00:00<00:04,  1.45it/s]\nCapturing CUDA graph shapes:  29%|\u2588\u2588\u258a       | 2/7 [00:01<00:03,  1.46it/s]\nCapturing CUDA graph shapes:  43%|\u2588\u2588\u2588\u2588\u258e     | 3/7 [00:02<00:02,  1.51it/s]\nCapturing CUDA graph shapes:  57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 4/7 [00:02<00:01,  1.57it/s]\nCapturing CUDA graph shapes:  71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 5/7 [00:03<00:01,  1.62it/s]\nCapturing CUDA graph shapes:  86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 6/7 [00:03<00:00,  1.68it/s]\nCapturing CUDA graph shapes: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 7/7 [00:04<00:00,  1.69it/s]\nCapturing CUDA graph shapes: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 7/7 [00:04<00:00,  1.62it/s]\nINFO 10-29 16:12:05 [model_runner.py:1507] Graph capturing finished in 4 secs, took 1.51 GiB\nINFO 10-29 16:12:05 [worker.py:467] Free memory on device (52.19/79.25 GiB) on startup. Desired GPU memory utilization is (0.15, 11.89 GiB). Actual usage is 2.88 GiB for weight, 0.26 GiB for peak activation, 0.09 GiB for non-torch memory, and 1.51 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=7517942579` to fit into requested memory, or `--kv-cache-memory=50790301696` to fully utilize gpu memory. Current kv cache memory in use is 9294230323 bytes.\nINFO 10-29 16:12:05 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 7.68 seconds\nINFO 10-29 16:12:05 [llm.py:295] Supported_tasks: ['generate']\nINFO 10-29 16:12:05 [__init__.py:36] No IOProcessor plugins requested by the model\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 4/4 [00:00<00:00, 90.90it/s]\nSome weights of the model checkpoint at /srv/research/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n{\"stage\": \"parameter_hashes_before\", \"pid\": 1279637, \"unix\": 1793261536.4420586, \"optimizer_steps\": 0}\n{\"stage\": \"reuse_exact_live_tokens_rescore_and_TRL_buffer\", \"pid\": 1279637, \"unix\": 1793261570.8908322, \"optimizer_steps\": 0}\nYou're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.\n{\"stage\": \"live_real_actor_forward_backward_no_update\", \"pid\": 1279637, \"unix\": 1793261585.0134356, \"optimizer_steps\": 0}\n{\"stage\": \"saved_text_real_C_native_score_parity\", \"pid\": 1279637, \"unix\": 1793261621.6202323, \"optimizer_steps\": 0}\n{\"stage\": \"saved_text_actual_reference_logps\", \"pid\": 1279637, \"unix\": 1793261631.722153, \"optimizer_steps\": 0}\n{\"stage\": \"saved_text_real_actor_forward_backward_no_update\", \"pid\": 1279637, \"unix\": 1793261638.6324415, \"optimizer_steps\": 0}\n{\"stage\": \"corrupted_signal_guard_tests\", \"pid\": 1279637, \"unix\": 1793261683.8216126, \"optimizer_steps\": 0}\n{\"stage\": \"parameter_hashes_and_preservation_after\", \"pid\": 1279637, \"unix\": 1793261683.878394, \"optimizer_steps\": 0}\n{\"stage\": \"complete_no_update\", \"pid\": 1279637, \"unix\": 1793261714.1344962, \"optimizer_steps\": 0, \"passed\": true}\n[rank0]:[W1029 16:15:14.523789860 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())\n",
+  "loss_trace_rows": 72,
+  "pid_alive": false,
+  "gpu": "0, 30280 MiB, 50873 MiB, 100 %\n1, 26078 MiB, 55075 MiB, 100 %\n"
+}

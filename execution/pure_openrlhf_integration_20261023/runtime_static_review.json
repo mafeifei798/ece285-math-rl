@@ -1,0 +1,56 @@
+{
+  "review_type": "read-only source/interface review; no remote calls or model execution",
+  "passed": true,
+  "source_sha256": {
+    "engine.py": "52825ae5c538db594907a721e9ea55179b2b1a11ac516ff5632fbb6b6d47d8f3",
+    "no_update.py": "c71d9da97233ec34976c24d5d80b87acaa00eb84f3a7ce59713067440cb71efc",
+    "dispatch.py": "ab348489abbe6a0fe55503b9ed90554e79300153123497b4d722dbab27b2a001",
+    "signals.py": "6ad54e124f8cdf7cd803dddad7c1fd3d3e6c142316068fe583ac1068eb4fcb2e",
+    "protocol.json": "ecbbb8f40e1adceb1211a4d9354ee29b0e5d8e14409d73f607a9a38e6baeb8d0",
+    "alignment.py": "49d49b69884d3492b0de95038303efeea8d6b5efc9bfcebbd53a99901cdc5cbd",
+    "prm.py": "5dba90d91d5216f3fb3a75faf2439cd35f5416540a7e16fd36510d01d927757f",
+    "tokenizer_checks.py": "386e2ede278d4a2ad07e44c7ad286384987510c74c98112a3282bc35c9145e76"
+  },
+  "issues": [],
+  "validated_by_static_inspection": {
+    "formal_GRPO_reward_loss_train_optimizer_paths_blocked": true,
+    "no_optimizer_step_or_creation_in_probe": true,
+    "actor_and_PRM_full_parameter_hashes_before_after": true,
+    "raw_generated_IDs_separate_from_official_processed_IDs": true,
+    "logprob_predictor_slicing_n_plus_1_to_drop_last_matches_n_actions": true,
+    "VR_signal_does_not_read_PRM_logits": true,
+    "PRM_signal_does_not_use_verifier_outcomes": true,
+    "same_32_responses_old_ref_logits_and_boundaries_for_both_arms": true,
+    "one_official_normalization_per_independent_signal_construction": true,
+    "sealed_signal_hash_prevents_advantage_mutation_before_micro_loss": true,
+    "old_AB_and_verl_preservation_snapshot_before_after": true,
+    "launcher_receipt_run_lock_and_existing_process_guards": true,
+    "original_termination_preserved_for_verifier_despite_inserted_EOS": true,
+    "no_training_launch_or_new_reward": true,
+    "native_BF16_GPU_PRM_transform_before_FP32_task": true,
+    "dispatch_rejects_stale_CPU_receipt": true
+  },
+  "limitations": [
+    "Static review cannot establish GPU memory peak or actual successful forwards/backward.",
+    "Shared PRM resident during VR probe is not standalone VR memory or throughput.",
+    "All-zero P-VR advantages can intentionally fail the probe; do not silently resample or add signal.",
+    "FP32 old/reference logprobs are evaluated at initial zero-LoRA weights, so real KL is initially zero; nonzero KL is covered only by CPU fixtures.",
+    "One microbatch at a time plus no optimizer states does not certify formal training memory.",
+    "Single-example unpadded process_sequences applies the official last-token EOS behavior; pad-batched distributed runtime is not reproduced."
+  ],
+  "reviewed_utc": "2026-10-23T08:26:47.556029+00:00",
+  "resolved_findings": [
+    {
+      "finding": "run_tokenizer_checks import target",
+      "resolved": "Imports tokenizer_checks, reuses engine.builder."
+    },
+    {
+      "finding": "Frozen PRM method name",
+      "resolved": "Calls verify_frozen()."
+    },
+    {
+      "finding": "PRM native reward transform dtype",
+      "resolved": "Engine explicitly requests BF16 on cuda:0, helper casts only weighted result to FP32 for baseline/normalization."
+    }
+  ]
+}

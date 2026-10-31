@@ -1,0 +1,78 @@
+{
+  "complete": true,
+  "repo": "jinachris/PURE-PRM-7B",
+  "revision": "b0cce6763f2317762c9cb46720c8fe7b07f44a88",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "83cc366581c836c95fe9deeca46ff381e96188c3da167363808e6dacf464d218",
+      "bytes": 6524,
+      "reused": true
+    },
+    {
+      "file": "added_tokens.json",
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+      "bytes": 605,
+      "reused": true
+    },
+    {
+      "file": "config.json",
+      "sha256": "e0cf3f76180e964b23c3751acca10ff49bfcdca33e075b867ba3d8962cb4978c",
+      "bytes": 824,
+      "reused": true
+    },
+    {
+      "file": "merges.txt",
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "bytes": 1671853,
+      "reused": true
+    },
+    {
+      "file": "model.safetensors.index.json",
+      "sha256": "d77916bb48592c865eda35e8947222006c3a71f2f1a14715419b0655293f7a19",
+      "bytes": 27804,
+      "reused": true
+    },
+    {
+      "file": "special_tokens_map.json",
+      "sha256": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+      "bytes": 616,
+      "reused": true
+    },
+    {
+      "file": "tokenizer_config.json",
+      "sha256": "6c90413caefc621f6fcfb8d9e5ce8ba9c949f5b65bcf8a4808f994fb9c51cf91",
+      "bytes": 7349,
+      "reused": true
+    },
+    {
+      "file": "vocab.json",
+      "sha256": "87a257b04b17642a0688c98cd1df89c398bda4fee532d6f88b38a659ecb4ac8d",
+      "bytes": 3383407,
+      "reused": true
+    },
+    {
+      "file": "model-00001-of-00003.safetensors",
+      "sha256": "649f69aaad4e6374d437caa4273d422ef68c1335eb2eeb1798403ba711cc1a67",
+      "bytes": 4877660776,
+      "reused_prefix_bytes": 784334848
+    },
+    {
+      "file": "model-00002-of-00003.safetensors",
+      "sha256": "e08a98d4ae9d0f4b7ac55538aa88231b3f2dd6fd065a9e84e02194d7253e01ee",
+      "bytes": 4932751008,
+      "reused_prefix_bytes": 444596224
+    },
+    {
+      "file": "model-00003-of-00003.safetensors",
+      "sha256": "e11eb0f4e4e5ec353c475de4bd111f3c6eb04d4e4e17fde3f4155c144d9825a2",
+      "bytes": 4330879708,
+      "reused_prefix_bytes": 444596224
+    }
+  ],
+  "metadata_sha256": "f053c72be4b8f3d02d98cee41bffb85b9065d6325f3f2b0f78d8ce745b054cba",
+  "elapsed_seconds": 32.15041372505948,
+  "transport": "cached public mirror CDN URLs, persistent HTTP range sessions; official hashes verified",
+  "training": false,
+  "model_updates": 0
+}

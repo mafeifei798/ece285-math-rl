@@ -1,0 +1,386 @@
+[
+  {
+    "review_id": "Q01-R1",
+    "problem_id": "math/train/algebra/1320",
+    "cell": "B_original",
+    "dataset": "math_validation",
+    "gold": "4",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q01-R2",
+    "problem_id": "math/train/algebra/1320",
+    "cell": "B_final_only",
+    "dataset": "math_validation",
+    "gold": "4",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q01-R3",
+    "problem_id": "math/train/algebra/1320",
+    "cell": "A_final_only",
+    "dataset": "math_validation",
+    "gold": "4",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q01-R4",
+    "problem_id": "math/train/algebra/1320",
+    "cell": "A_original",
+    "dataset": "math_validation",
+    "gold": "4",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q02-R1",
+    "problem_id": "math/train/prealgebra/830",
+    "cell": "B_final_only",
+    "dataset": "math_validation",
+    "gold": "120^{\\circ}",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q02-R2",
+    "problem_id": "math/train/prealgebra/830",
+    "cell": "A_final_only",
+    "dataset": "math_validation",
+    "gold": "120^{\\circ}",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q02-R3",
+    "problem_id": "math/train/prealgebra/830",
+    "cell": "A_original",
+    "dataset": "math_validation",
+    "gold": "120^{\\circ}",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q02-R4",
+    "problem_id": "math/train/prealgebra/830",
+    "cell": "B_original",
+    "dataset": "math_validation",
+    "gold": "120^{\\circ}",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q03-R1",
+    "problem_id": "math/train/number_theory/164",
+    "cell": "B_final_only",
+    "dataset": "math_validation",
+    "gold": "26",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q03-R2",
+    "problem_id": "math/train/number_theory/164",
+    "cell": "A_final_only",
+    "dataset": "math_validation",
+    "gold": "26",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q03-R3",
+    "problem_id": "math/train/number_theory/164",
+    "cell": "A_original",
+    "dataset": "math_validation",
+    "gold": "26",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q03-R4",
+    "problem_id": "math/train/number_theory/164",
+    "cell": "B_original",
+    "dataset": "math_validation",
+    "gold": "26",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q04-R1",
+    "problem_id": "math/train/intermediate_algebra/471",
+    "cell": "A_final_only",
+    "dataset": "math_validation",
+    "gold": "8",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q04-R2",
+    "problem_id": "math/train/intermediate_algebra/471",
+    "cell": "B_final_only",
+    "dataset": "math_validation",
+    "gold": "8",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q04-R3",
+    "problem_id": "math/train/intermediate_algebra/471",
+    "cell": "B_original",
+    "dataset": "math_validation",
+    "gold": "8",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q04-R4",
+    "problem_id": "math/train/intermediate_algebra/471",
+    "cell": "A_original",
+    "dataset": "math_validation",
+    "gold": "8",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q05-R1",
+    "problem_id": "gsm8k/train/5434",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "274",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q05-R2",
+    "problem_id": "gsm8k/train/5434",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "274",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q05-R3",
+    "problem_id": "gsm8k/train/5434",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "274",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q05-R4",
+    "problem_id": "gsm8k/train/5434",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "274",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q06-R1",
+    "problem_id": "gsm8k/train/1236",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "10",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q06-R2",
+    "problem_id": "gsm8k/train/1236",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "10",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q06-R3",
+    "problem_id": "gsm8k/train/1236",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "10",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q06-R4",
+    "problem_id": "gsm8k/train/1236",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "10",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q07-R1",
+    "problem_id": "gsm8k/train/4800",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "36000",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q07-R2",
+    "problem_id": "gsm8k/train/4800",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "36000",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q07-R3",
+    "problem_id": "gsm8k/train/4800",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "36000",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q07-R4",
+    "problem_id": "gsm8k/train/4800",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "36000",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q08-R1",
+    "problem_id": "gsm8k/train/1278",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "632",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q08-R2",
+    "problem_id": "gsm8k/train/1278",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "632",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q08-R3",
+    "problem_id": "gsm8k/train/1278",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "632",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q08-R4",
+    "problem_id": "gsm8k/train/1278",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "632",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q09-R1",
+    "problem_id": "gsm8k/train/4052",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "16800",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q09-R2",
+    "problem_id": "gsm8k/train/4052",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "16800",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q09-R3",
+    "problem_id": "gsm8k/train/4052",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "16800",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q09-R4",
+    "problem_id": "gsm8k/train/4052",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "16800",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q10-R1",
+    "problem_id": "gsm8k/train/6372",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "82",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q10-R2",
+    "problem_id": "gsm8k/train/6372",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "82",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q10-R3",
+    "problem_id": "gsm8k/train/6372",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "82",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q10-R4",
+    "problem_id": "gsm8k/train/6372",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "82",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q11-R1",
+    "problem_id": "gsm8k/train/4833",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "114",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q11-R2",
+    "problem_id": "gsm8k/train/4833",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "114",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q11-R3",
+    "problem_id": "gsm8k/train/4833",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "114",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q11-R4",
+    "problem_id": "gsm8k/train/4833",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "114",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q12-R1",
+    "problem_id": "gsm8k/train/4560",
+    "cell": "B_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "730",
+    "reward": 1.0
+  },
+  {
+    "review_id": "Q12-R2",
+    "problem_id": "gsm8k/train/4560",
+    "cell": "A_original",
+    "dataset": "gsm8k_validation",
+    "gold": "730",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q12-R3",
+    "problem_id": "gsm8k/train/4560",
+    "cell": "B_original",
+    "dataset": "gsm8k_validation",
+    "gold": "730",
+    "reward": 0.0
+  },
+  {
+    "review_id": "Q12-R4",
+    "problem_id": "gsm8k/train/4560",
+    "cell": "A_final_only",
+    "dataset": "gsm8k_validation",
+    "gold": "730",
+    "reward": 1.0
+  }
+]

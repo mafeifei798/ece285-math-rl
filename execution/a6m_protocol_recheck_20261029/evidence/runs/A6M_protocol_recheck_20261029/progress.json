@@ -1,0 +1,16 @@
+{
+  "done": 1819,
+  "total": 1819,
+  "counts": {
+    "A_6M": {
+      "math500": 500,
+      "gsm8k": 1319
+    }
+  },
+  "arm": "A_6M",
+  "dataset": "gsm8k",
+  "elapsed_seconds": 2426.9307391643524,
+  "unix": 1793341248.4249554,
+  "pid": 3173534,
+  "last_batch_inference_seconds": 50.29909610748291
+}

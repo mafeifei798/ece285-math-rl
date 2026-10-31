@@ -1,0 +1,29 @@
+只纠错 A/B 配对实验启动记录
+快照时间：2026-10-22 00:40:15 PT
+状态：真实模型短联调全部通过；正式A训练中，B及统一评测待控制器顺序执行。
+A已生成：154,696 / 6,000,000 token。
+B预算：6,000,000 token，seed17；尚未开始正式训练。
+
+真实联调：A/B各两次参数更新；初始LoRA参数和首批生成完全一致。
+真实loss入口的advantage保持原TRL计算，未改奖励或loss。
+B的342个必要PRM评分张量核对通过，PRM冻结。
+LoRA导出与评测引擎真实推理通过。
+联调额外token：A 42,485，B 40,728，不占正式6M预算。
+正式A的初始参数与首批回答也已与联调核对一致。
+
+自动阶段：A正式6M -> B正式6M -> A/B统一greedy MATH500与GSM8K -> 配对比较。
+两组均从共同基座开始，不使用旧A/B或pilot权重作为正式起点。
+评测验答使用同一冻结的v3单位元数据；不做PRM重排，不挑测试集最优checkpoint。
+600万按完整更新到达预算时停止，实际超出量单独报告。
+保留原始混合奖励及组内标准化，不启用bounded-advantage，不启动C/D。
+
+服务器目录：/srv/research/ece285_math_rl_project
+控制器：runs/AB_corrected_seed17_6M_20261022/controller.json
+控制器PID：3039862
+正式A：runs/A_corrected_seed17_6M_20261022
+正式B：runs/B_corrected_seed17_6M_20261022
+旧代码和结果保留；控制器各阶段校验保存清单。
+
+此记录为启动时快照，不是实时状态，也不是完成结果。
+完成以服务端controller.status=completed和两组evaluation_summary.json为准。
+历史耗时估算两组训练和评测约6小时，实际以吞吐和日志为准。

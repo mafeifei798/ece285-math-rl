@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "success_term_gradient_identity": true,
+  "score_translation_does_not_change_relative_advantage": true,
+  "qwen_native_markers": true,
+  "CRLF_normalization": true,
+  "anchor_original_boundaries_preserved": true,
+  "policy_updates": 0
+}

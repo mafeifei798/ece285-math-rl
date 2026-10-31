@@ -1,0 +1,493 @@
+{
+  "checked_pt": "2026-10-21T10:26:55.838151-07:00",
+  "evaluations": {
+    "math500": {
+      "arms": {
+        "A": {
+          "n": 500,
+          "correct": 281.0,
+          "status": {
+            "symbolic": 195,
+            "truncated": 36,
+            "exact": 251,
+            "missing_or_invalid_box": 16,
+            "unparseable": 2
+          },
+          "categories": {
+            "correct": 281,
+            "truncated": 36,
+            "complete_parseable_wrong": 165,
+            "missing_or_invalid_box": 16,
+            "unparseable": 2
+          },
+          "mean_length": 714.208,
+          "median_length": 538.5,
+          "fraction_code_blocks": 0.518
+        },
+        "B": {
+          "n": 500,
+          "correct": 255.0,
+          "status": {
+            "symbolic": 221,
+            "truncated": 40,
+            "exact": 225,
+            "missing_or_invalid_box": 10,
+            "unparseable": 4
+          },
+          "categories": {
+            "correct": 255,
+            "truncated": 40,
+            "complete_parseable_wrong": 191,
+            "missing_or_invalid_box": 10,
+            "unparseable": 4
+          },
+          "mean_length": 724.316,
+          "median_length": 555.5,
+          "fraction_code_blocks": 0.494
+        }
+      },
+      "A_correct_B_wrong": 52,
+      "A_wrong_B_correct": 26,
+      "B_minus_A": -0.052,
+      "paired_question_bootstrap_95CI": [
+        -0.086,
+        -0.018
+      ],
+      "cross_categories": [
+        {
+          "A": "correct",
+          "B": "correct",
+          "n": 229
+        },
+        {
+          "A": "truncated",
+          "B": "truncated",
+          "n": 17
+        },
+        {
+          "A": "correct",
+          "B": "complete_parseable_wrong",
+          "n": 39
+        },
+        {
+          "A": "complete_parseable_wrong",
+          "B": "correct",
+          "n": 15
+        },
+        {
+          "A": "truncated",
+          "B": "complete_parseable_wrong",
+          "n": 14
+        },
+        {
+          "A": "complete_parseable_wrong",
+          "B": "complete_parseable_wrong",
+          "n": 136
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "missing_or_invalid_box",
+          "n": 6
+        },
+        {
+          "A": "correct",
+          "B": "truncated",
+          "n": 9
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "unparseable",
+          "n": 2
+        },
+        {
+          "A": "correct",
+          "B": "missing_or_invalid_box",
+          "n": 3
+        },
+        {
+          "A": "complete_parseable_wrong",
+          "B": "truncated",
+          "n": 14
+        },
+        {
+          "A": "truncated",
+          "B": "correct",
+          "n": 4
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "correct",
+          "n": 6
+        },
+        {
+          "A": "unparseable",
+          "B": "correct",
+          "n": 1
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "complete_parseable_wrong",
+          "n": 2
+        },
+        {
+          "A": "correct",
+          "B": "unparseable",
+          "n": 1
+        },
+        {
+          "A": "truncated",
+          "B": "missing_or_invalid_box",
+          "n": 1
+        },
+        {
+          "A": "unparseable",
+          "B": "unparseable",
+          "n": 1
+        }
+      ]
+    },
+    "gsm8k": {
+      "arms": {
+        "A": {
+          "n": 1319,
+          "correct": 925.0,
+          "status": {
+            "symbolic": 333,
+            "exact": 886,
+            "missing_or_invalid_box": 72,
+            "truncated": 25,
+            "unparseable": 3
+          },
+          "categories": {
+            "complete_parseable_wrong": 294,
+            "correct": 925,
+            "missing_or_invalid_box": 72,
+            "truncated": 25,
+            "unparseable": 3
+          },
+          "mean_length": 377.4874905231236,
+          "median_length": 320.0,
+          "fraction_code_blocks": 0.34723275208491283
+        },
+        "B": {
+          "n": 1319,
+          "correct": 820.0,
+          "status": {
+            "symbolic": 449,
+            "exact": 769,
+            "truncated": 52,
+            "missing_or_invalid_box": 41,
+            "unparseable": 8
+          },
+          "categories": {
+            "complete_parseable_wrong": 398,
+            "correct": 820,
+            "truncated": 52,
+            "missing_or_invalid_box": 41,
+            "unparseable": 8
+          },
+          "mean_length": 410.1220621683093,
+          "median_length": 321.0,
+          "fraction_code_blocks": 0.31842304776345715
+        }
+      },
+      "A_correct_B_wrong": 173,
+      "A_wrong_B_correct": 68,
+      "B_minus_A": -0.07960576194086429,
+      "paired_question_bootstrap_95CI": [
+        -0.1023502653525398,
+        -0.05686125852918878
+      ],
+      "cross_categories": [
+        {
+          "A": "complete_parseable_wrong",
+          "B": "complete_parseable_wrong",
+          "n": 233
+        },
+        {
+          "A": "correct",
+          "B": "correct",
+          "n": 752
+        },
+        {
+          "A": "correct",
+          "B": "truncated",
+          "n": 21
+        },
+        {
+          "A": "correct",
+          "B": "complete_parseable_wrong",
+          "n": 140
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "correct",
+          "n": 24
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "missing_or_invalid_box",
+          "n": 28
+        },
+        {
+          "A": "complete_parseable_wrong",
+          "B": "correct",
+          "n": 38
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "complete_parseable_wrong",
+          "n": 13
+        },
+        {
+          "A": "correct",
+          "B": "missing_or_invalid_box",
+          "n": 10
+        },
+        {
+          "A": "truncated",
+          "B": "truncated",
+          "n": 8
+        },
+        {
+          "A": "correct",
+          "B": "unparseable",
+          "n": 2
+        },
+        {
+          "A": "truncated",
+          "B": "correct",
+          "n": 5
+        },
+        {
+          "A": "truncated",
+          "B": "complete_parseable_wrong",
+          "n": 12
+        },
+        {
+          "A": "complete_parseable_wrong",
+          "B": "truncated",
+          "n": 18
+        },
+        {
+          "A": "unparseable",
+          "B": "correct",
+          "n": 1
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "truncated",
+          "n": 5
+        },
+        {
+          "A": "unparseable",
+          "B": "unparseable",
+          "n": 2
+        },
+        {
+          "A": "complete_parseable_wrong",
+          "B": "unparseable",
+          "n": 2
+        },
+        {
+          "A": "missing_or_invalid_box",
+          "B": "unparseable",
+          "n": 2
+        },
+        {
+          "A": "complete_parseable_wrong",
+          "B": "missing_or_invalid_box",
+          "n": 3
+        }
+      ]
+    }
+  },
+  "actual_saved_args_diff": {
+    "logging_dir": [
+      "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+      "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/tensorboard"
+    ],
+    "output_dir": [
+      "/srv/research/ece285_math_rl_project/runs/A_seed17",
+      "/srv/research/ece285_math_rl_project/runs/B_seed17_6M"
+    ]
+  },
+  "selected_args": {
+    "learning_rate": 5e-06,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 32,
+    "num_generations": 8,
+    "generation_batch_size": 32,
+    "seed": 17,
+    "data_seed": 17,
+    "beta": 0.04,
+    "epsilon": 0.2,
+    "max_completion_length": 2048,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "loss_type": "grpo",
+    "scale_rewards": "group",
+    "num_iterations": 1,
+    "mask_truncated_completions": false,
+    "lr_scheduler_type": "constant",
+    "warmup_steps": 0,
+    "bf16": true,
+    "tf32": true,
+    "max_grad_norm": 1.0,
+    "vllm_importance_sampling_correction": false
+  },
+  "source_hash_matches": {
+    "training_b/check_native_prm.py": true,
+    "training_b/prm_reward.py": true,
+    "training_b/prepare_prm.py": true,
+    "training_b/train_b.py": true,
+    "training_b/run_b.py": true,
+    "training_b/test_b.py": true,
+    "training_b/config.json": true,
+    "training/train_baseline.py": true,
+    "training/common.py": true,
+    "training/reward.py": true,
+    "training/evaluate_policy.py": true,
+    "operations/continue_baseline.py": true,
+    "operations/run_continuation.py": true,
+    "operations/lora_preflight.py": true
+  },
+  "receipts/B_pipeline.json": {
+    "status": "training_24M",
+    "pid": 1898321,
+    "started_unix": 1792577694.9436934,
+    "scope": "Only B seed 17, pilot, 24M training and the three fixed milestone evaluations. No C/D or additional seeds.",
+    "target_completion_tokens": 24000000,
+    "A_sources_unchanged": true,
+    "replication_gate_executed": false,
+    "heartbeat_unix": 1792603611.272109,
+    "child_pid": 2220917,
+    "gpu": 0,
+    "last_child_exit_code": 0
+  },
+  "runs/B_seed17_24M/progress.json": {
+    "generated_completion_tokens": 12246961,
+    "generated_completions": 18464,
+    "generated_groups": 2308,
+    "mixed_reward_groups": 2306,
+    "correct_completions": 7742,
+    "truncated_completions": 1130,
+    "prm_input_tokens": 10467177,
+    "prm_padded_tokens": 15524291,
+    "prm_scored_completions": 15553,
+    "native_steps": 165810,
+    "single_step_completions": 1015,
+    "no_double_newline_completions": 1379,
+    "prm_forward_seconds": 525.0442684968002,
+    "reward_status_counts": {
+      "symbolic": 8592,
+      "truncated": 1130,
+      "exact": 6961,
+      "missing_or_invalid_box": 1561,
+      "unparseable": 220
+    },
+    "outcome_group_counts": {
+      "mixed": 1809,
+      "mixed_has_invalid": 1234,
+      "mixed_all_valid": 575,
+      "all_wrong": 411,
+      "all_wrong_has_invalid": 346,
+      "all_wrong_all_valid": 65,
+      "all_correct": 88,
+      "all_correct_all_valid": 88
+    },
+    "last_batch": {
+      "generated_completion_tokens": 19147,
+      "generated_completions": 32,
+      "generated_groups": 4,
+      "mixed_reward_groups": 4,
+      "correct_completions": 7,
+      "truncated_completions": 1,
+      "native_steps": 333,
+      "single_step_completions": 3,
+      "no_double_newline_completions": 5,
+      "prm_forward_seconds": 1.1175023410469294,
+      "prm_input_tokens": 19367,
+      "prm_padded_tokens": 31502,
+      "prm_scored_completions": 29
+    },
+    "global_step": 577,
+    "elapsed_seconds": 8021.0497929267585,
+    "target_completion_tokens": 24000000,
+    "effective_completion_tokens_per_second": 777.2537461988708,
+    "torch_peak_allocated_GiB": 34.45738935470581,
+    "torch_peak_reserved_GiB": 35.48046875,
+    "resumed_from_global_step": 285,
+    "source_completion_tokens": 6012570,
+    "continuation_generated_completion_tokens": 6234391
+  },
+  "runs/B_seed17_24M/milestones.json": {
+    "run": "B_seed17",
+    "cumulative_completion_tokens": true,
+    "milestones": {
+      "12000000": {
+        "target_completion_tokens": 12000000,
+        "actual_completion_tokens": 12003972,
+        "overshoot": 3972,
+        "global_step": 565,
+        "checkpoint": "/srv/research/ece285_math_rl_project/runs/B_seed17_24M/milestones/12000000/checkpoint-565",
+        "checkpoint_sha256": {
+          "completion_accounting.json": "7c8a70d2264d740aa85cd78e1bb8cf798cd3c706675641a2fb5c71c2dee9d3b3",
+          "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+          "README.md": "78126f95e986f22f2cc5ea59277057787d878ef5e59f7d920b443f05b43176f7",
+          "chat_template.jinja": "c564d12c9977b8942423753b0c409a11f50142508ced170e9fe1c2f5b803cf70",
+          "rng_state.pth": "7141cf0d04ae671ddf463a2a559c4ffe8e4d47d2f6131ae2f4dab7dfcabc5adc",
+          "tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+          "scheduler.pt": "f8c154a7d70744ed335920e404e0e8d2638f5cc9ae623ecf49997be5d1bdaed1",
+          "optimizer.pt": "fc3593e3074d679907688c4cd736d9c675d69b58801e1709c85d3941b840aa98",
+          "training_args.bin": "a025dfe8957707125c916a832b44ee157065d358e9c2738f781e9ddf73075147",
+          "trainer_state.json": "90ade89a5b78480dd330ee62e9a1aff5979aecb98dc702e1e10b909098d7c4cd",
+          "adapter_config.json": "8ca1eeda91ffad2eff56dcb8edc7ae37804a37685866f51e51f3178c67df016e",
+          "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+          "special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+          "adapter_model.safetensors": "4e5b534d814b599b2dce39fce49aad9aca7063fd92f5a929812489bbaf8c3bbe",
+          "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
+        },
+        "evaluation_dir": "/srv/research/ece285_math_rl_project/runs/B_seed17_24M/milestones/12000000/evaluation",
+        "status": "saved_pending_evaluation",
+        "saved_unix": 1792603276.9917042
+      }
+    }
+  },
+  "runs/B_seed17_24M/resume_audit.json": {
+    "source_checkpoint": "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285",
+    "source_global_step": 285,
+    "adapter_restored_exactly": true,
+    "adapter_tensor_count": 392,
+    "optimizer_restored_exactly": true,
+    "optimizer_state_count": 392,
+    "optimizer_steps": [
+      285
+    ],
+    "scheduler_restored_exactly": true,
+    "learning_rates": [
+      5e-06,
+      5e-06
+    ],
+    "train_begin_global_step": 285,
+    "initial_cumulative_completion_tokens": 6012570,
+    "python_numpy_torch_cpu_cuda_rng_restored": true,
+    "first_rollout_global_step": 285,
+    "data_progress_verified": true,
+    "first_new_question_ids": [
+      "math/train/geometry/642",
+      "math/train/number_theory/479",
+      "math/train/intermediate_algebra/972",
+      "math/train/intermediate_algebra/799"
+    ],
+    "first_vllm_weight_sync_global_step": 285,
+    "first_resumed_generation_completed": true,
+    "first_resumed_optimizer_step": 286,
+    "optimizer_steps_after_first_update": [
+      286
+    ],
+    "adapter_probe_change_l1": 0.01762404665350914,
+    "first_update_completion_tokens": 6036260
+  }
+}

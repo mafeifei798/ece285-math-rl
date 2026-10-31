@@ -1,0 +1,32 @@
+https://github.com/hiyouga/EasyR1/blob/602a12820f69cf45ea98de08a63b3509313a7d02/examples/reward_function/math.py
+Upstream blob: f983357ef942233b1c41b231862ed78f97c5e3c2
+EXCERPT ONLY
+21: # Metadata
+22: REWARD_NAME = "math"
+23: REWARD_TYPE = "batch"
+24: 
+25: 
+26: def format_reward(response: str) -> float:
+27:     pattern = re.compile(r"<think>.*</think>.*\\boxed\{.*\}.*", re.DOTALL)
+28:     format_match = re.fullmatch(pattern, response)
+29:     return 1.0 if format_match else 0.0
+30: 
+31: 
+32: def accuracy_reward(response: str, ground_truth: str) -> float:
+33:     answer = extract_boxed_content(response)
+34:     return 1.0 if grade_answer(answer, ground_truth) else 0.0
+35: 
+36: 
+37: def compute_score(reward_inputs: list[dict[str, Any]], format_weight: float = 0.1) -> list[dict[str, float]]:
+38:     scores = []
+39:     for reward_input in reward_inputs:
+40:         response = re.sub(r"\s*(<|>|/)\s*", r"\1", reward_input["response"])  # handle qwen2.5vl-32b format
+41:         format_score = format_reward(response)
+42:         accuracy_score = accuracy_reward(response, reward_input["ground_truth"])
+43:         scores.append(
+44:             {
+45:                 "overall": (1 - format_weight) * accuracy_score + format_weight * format_score,
+46:                 "format": format_score,
+47:                 "accuracy": accuracy_score,
+48:             }
+49:         )

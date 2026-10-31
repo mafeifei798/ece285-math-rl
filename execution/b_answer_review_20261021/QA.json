@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "records": 50,
+  "reviewed_segments": 469,
+  "html_case_ids_unique": true,
+  "HTML_rows_verified": 519,
+  "HTML_no_external_scripts": true,
+  "all_raw_steps_scores_and_labels_preserved": true,
+  "browser_visual_preview": "Not performed: file:// blocked by browser URL policy. No alternative browser/network workaround attempted.",
+  "key_artifact_sha256": {
+    "selection.json": "3074c49e3dce4224c8c3898dfe301f6b6064a907395dc375da6deae9e19d3054",
+    "initial_review.json": "1decdd23e089fe3b8d838a0746924a45d6a486d19a717f478df7f1f382df9dcb",
+    "final_review.json": "7ca812223abc0a4c35e3583a3eef9367153394470ad2c203f5863df81f69c56b",
+    "reviewed_records.json": "0d3d13c7d8cf02b0d935614d5aefabbf2ace412e5e6806493781bfa7cc72a1c2",
+    "alignment.json": "7d58143c24235ab910810c7cb459ee830f7b0bc447a6360c699a49f4a5095dec",
+    "independent_math.json": "2f190dcdbcbfcb3acf029a131f016b6fe99bf5dac46466a95d9f1eb9b283d88a",
+    "forward_replay.json": "9e1eefd984f1c9029db1ba7a34f4c8acb0cd5e1ccb23314be2546a33579d2dd4",
+    "summary.json": "720b251f4caf98ddd0cbcf2e725e655d66c8e367df702c598c9a2c1b8496bd9c",
+    "REPORT.txt": "de75fddf54eed11f597806337aa8738a3932ebb0fe9c87e29bbd102a9db66bb3",
+    "review.html": "cd466ef07336fc999741ccb079e17e61f723a64684fa6930fccb59b76e761da5"
+  }
+}

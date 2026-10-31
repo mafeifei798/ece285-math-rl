@@ -1,0 +1,409 @@
+{
+  "date": "2026-10-29",
+  "scope": "Read-only GitHub research and local reference artifacts; no training changes, extra model calls, package installation, public Git writes or server mutations.",
+  "heads": [
+    {
+      "label": "PAPO",
+      "repo": "tanzelin430/PAPO",
+      "ref": "main",
+      "commit": "7d260f0a7a6e23d289e32bbc96f80408dddfa1d5",
+      "tree": "f93829d6ab9ce1ded7c279b438faeb13c0ef9bb9",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "PURE-verl",
+      "repo": "CJReinforce/PURE",
+      "ref": "verl",
+      "commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+      "tree": "3c314a8289569554fa78f04884e53765d4a336fa",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "PURE-openrlhf",
+      "repo": "CJReinforce/PURE",
+      "ref": "openrlhf",
+      "commit": "41f9363b8cc4af044b7fc5f7f9bbbf62139e9553",
+      "tree": "e7a268debd7ede20572ee6e1093d25b2a7ad1964",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "PRIME",
+      "repo": "PRIME-RL/PRIME",
+      "ref": "main",
+      "commit": "18ad596f08d487bb546d80d738d99ec697bd2e75",
+      "tree": "2e91996bfb6715aa7dff129721b7f14cae8e766c",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "PRPO",
+      "repo": "SchumiDing/srpocode",
+      "ref": "main",
+      "commit": "662bbc6c2815900ca96e39106f31e8988f2d961a",
+      "tree": "722df2309bb5385dbb7338e5e3f6644d9c8c88f7",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "PROF",
+      "repo": "Chenluye99/PROF",
+      "ref": "main",
+      "commit": "df96644abb877c295336833ea1ce223330842f74",
+      "tree": "92f825649c77a1652fd7ae0e5a0af5ca3bec4411",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "SimpleRL",
+      "repo": "hkust-nlp/simpleRL-reason",
+      "ref": "v1",
+      "commit": "cf1c7858bfc145a27aa733e75d930d34f0d318a6",
+      "tree": "b1b1e82c0cb72566221418a1d275946c3948efa5",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "DrGRPO",
+      "repo": "sail-sg/understand-r1-zero",
+      "ref": "main",
+      "commit": "dfca49dd460ee7cc8e4a5a162c876a7fd6993b87",
+      "tree": "0d0bb710451b16acc106e8331bab6b5faad73235",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "DAPO",
+      "repo": "BytedTsinghua-SIA/DAPO",
+      "ref": "main",
+      "commit": "33fe3176f0bb212588e84fc8ccf50dd554975144",
+      "tree": "e988f2785f55ff382bd3ef562dc47451ff0cea7a",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "EasyR1",
+      "repo": "hiyouga/EasyR1",
+      "ref": "main",
+      "commit": "602a12820f69cf45ea98de08a63b3509313a7d02",
+      "tree": "9fe739f1f940011e24f3558badc64d2912cd5c6d",
+      "snapshot_ref_matches_commit": true
+    },
+    {
+      "label": "TRL",
+      "repo": "huggingface/trl",
+      "ref": "v0.23.1",
+      "commit": "4529a1c8b1813480a85b02c9c8e7f75a29085d65",
+      "tree": "05a595f91267d884a8e6360a6249b299db2818e4"
+    },
+    {
+      "label": "LCA",
+      "repo": "JiaTianyu20031016/MIL",
+      "ref": "camera-ready",
+      "commit": "d8dc4593a95f8ed142d5c9166140e8843cb208fc"
+    }
+  ],
+  "projects": [
+    {
+      "label": "PAPO",
+      "repo": "tanzelin430/PAPO",
+      "level": "核心优势函数、启动脚本及评分器代码已读",
+      "role": "最接近的方法对照",
+      "finding": "结果优势按整组归一化；过程优势仅在正确子集中计算并另行标准化。代码还允许两项一起不除标准差。",
+      "use": "精确对照正确子集门控、过程项缩放、活跃组比例；当前三臂不会改动。",
+      "limit": "默认配方需多GPU及额外生成式grader；不能直接照搬到单A100，也不能把我们的门控说成原创。"
+    },
+    {
+      "label": "PURE",
+      "repo": "CJReinforce/PURE",
+      "level": "OpenRLHF与verl两分支的信用分配及baseline代码已读",
+      "role": "过程奖励机制和诊断参考",
+      "finding": "官方OpenRLHF分支使用RLOO、步骤/原token/EOS与分步baseline；不是把整条回答的min分混进GRPO就等于PURE。",
+      "use": "保留step/token baseline、EOS、重复/截断等诊断；分支和提交号必须固定。",
+      "limit": "verl的compute_return(min)仍有作者TODO注释；仅凭注释不能断言整条路径有bug，使用前要逐例回放验证。"
+    },
+    {
+      "label": "PRIME",
+      "repo": "PRIME-RL/PRIME",
+      "level": "训练文档与RLOO奖励合成源码已读",
+      "role": "隐式PRM相关工作",
+      "finding": "隐式过程奖励通过结果监督更新，与结果奖励分别做leave-one-out后合成，包含在线PRM更新及prompt过滤。",
+      "use": "借鉴多奖励源分开记录和成本核算；引用时区分隐式PRM与显式判别式PRM。",
+      "limit": "引入完整在线PRM更新会改变当前固定C实验，不作为本轮迁移目标。"
+    },
+    {
+      "label": "PRPO",
+      "repo": "SchumiDing/srpocode",
+      "level": "熵分段、多个reward manager、actor优势赋值路径已读；论文配置映射未完全确认",
+      "role": "细粒度token信用分配参考",
+      "finding": "仓库有多种naive/pure/rflux实现；naive4对分段分数归一化并加序列beta，再直接赋给token advantages。",
+      "use": "学习分段到token映射与中间张量检查；优先核对具体manager入口后再复现。",
+      "limit": "根README缺失；一些基线分支使用±1及长度惩罚，不能把原仓库结果当作与我们的0/1协议同条件。"
+    },
+    {
+      "label": "PROF",
+      "repo": "Chenluye99/PROF",
+      "level": "README及完整文件树已核对；没有可核实训练实现",
+      "role": "限制PRM影响的相关工作",
+      "finding": "按最终答对/答错分别过滤PRM不一致样本；README明确训练代码待发布，当前树没有训练Python文件。",
+      "use": "借鉴Blend可能低于GRPO的对照思路及过程质量评估。",
+      "limit": "不能作为即插即用实现；报告主要是temperature1的average@16，不能直接和我们的greedy数值比。"
+    },
+    {
+      "label": "LCA",
+      "repo": "JiaTianyu20031016/MIL",
+      "level": "camera-ready README、MIL模型池化和loss源码已读",
+      "role": "既有C/D适配的源方法",
+      "finding": "SoftMinPoolMILModelforPRM使用stop-gradient softmax权重进行SWS池化，训练document级分类loss。",
+      "use": "核对pooling、detach、ProcessBench和BoN的评分定义。",
+      "limit": "它是奖励模型训练框架；完整LCA训练或其理论保证不等于我们的少量LoRA适配，更不等于策略数学能力提升。"
+    },
+    {
+      "label": "SimpleRL",
+      "repo": "hkust-nlp/simpleRL-reason",
+      "level": "v1 README、训练脚本和数学规则评分工具已读",
+      "role": "结果奖励的研究基线参考",
+      "finding": "GSM8K/MATH、规则奖励及多种小模型公开配方；同模型不同提示模板会改变评测。",
+      "use": "借鉴纯结果奖励基线、checkpoint对比和多基准解答审阅工具。",
+      "limit": "README所列部分base与RL模型解码设置不同；发布分数不能直接与当前统一greedy实验横比。"
+    },
+    {
+      "label": "Dr.GRPO / Understanding R1-Zero",
+      "repo": "sail-sg/understand-r1-zero",
+      "level": "README、1.5B启动脚本和规则oracle实现已读",
+      "role": "小模型和提示模板的控制参考",
+      "finding": "直接提供Qwen2.5-Math-1.5B在R1/Qwen-Math模板下的实验脚本，并分析GRPO的长度/难度偏差。",
+      "use": "固定模板、初始化、KL、长度上限和评测协议，把模板因素与算法因素分开。",
+      "limit": "此轮不更换成Dr.GRPO，否则改变A以及全部实验的训练目标。"
+    },
+    {
+      "label": "EasyR1",
+      "repo": "hiyouga/EasyR1",
+      "level": "README、core_algos、数学reward和单GPU LoRA脚本已读",
+      "role": "资源受限工程参考",
+      "finding": "有单GPU Qwen3-4B LoRA配方和checkpoint恢复支持；数学reward默认混入0.1格式分。",
+      "use": "借鉴配置组织、LoRA部署和恢复工具；把accuracy/format/overall分开记录。",
+      "limit": "现有A不允许加格式奖励；估算显存不包含我们额外的7B PRM，不能用表格替代实测。"
+    },
+    {
+      "label": "DAPO",
+      "repo": "BytedTsinghua-SIA/DAPO",
+      "level": "官方README和文件树已核对；README指向的旧verl训练配方本次不可读取",
+      "role": "大规模RL的运行指标和实验组织参考",
+      "finding": "原仓库展示Qwen2.5-32B训练、公开数据/评测及外部verl配方入口。",
+      "use": "关注有效组比例、截断、token预算和各消融组件的成本。",
+      "limit": "当前单A100项目不移植其完整大规模recipe；没有读取到的配方不冒称已逐行核对。"
+    },
+    {
+      "label": "TRL",
+      "repo": "huggingface/trl",
+      "level": "实际使用的v0.23.1 GRPOTrainer与GRPOConfig源码已读",
+      "role": "当前代码的直接工程依据",
+      "finding": "reward加权后计算组均值和std；scale_rewards控制缩放；_compute_loss直接消费inputs['advantages']。",
+      "use": "在buffer/shuffle之前构造并标记优势，在loss入口核验；固定版本，防止多次归一化。",
+      "limit": "不把最新main分支当作当前0.23.1实现，也不在运行中升级库。"
+    }
+  ],
+  "excerpts": [
+    {
+      "name": "PAPO core",
+      "start": 333,
+      "end": 445,
+      "url": "https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/verl/trainer/ppo/core_algos.py",
+      "upstream_blob_sha": "a217ada4182dd918b3d0db1b4d45a093445e0868",
+      "content": "333: @register_adv_est(\"grpo_dual\")\n334: def compute_grpo_dual_objective_advantage(\n335:     token_level_rewards: torch.Tensor,\n336:     response_mask: torch.Tensor,\n337:     index: np.ndarray,\n338:     reward_prm: np.ndarray,\n339:     lambda_process: float = 1.0,\n340:     epsilon: float = 1e-6,\n341:     norm_adv_by_std_in_grpo: bool = True,\n342:     acc: np.ndarray = None,\n343:     **kwargs,\n344: ) -> tuple[torch.Tensor, torch.Tensor, dict]:\n345:     \"\"\"\n346:     PA_GRPO (Process-Aware GRPO): Dual-objective advantage computation.\n347: \n348:     Decomposes advantage into two independently normalized components:\n349:         A_total = A_out + lambda_process * A_proc\n350: \n351:     - A_out: standard GRPO advantage from binary rule-based rewards\n352:     - A_proc: process advantage from PRM scores, normalized ONLY among correct responses\n353:     - lambda_process: fixed weight for process advantage (default 1.0 = equal weight)\n354: \n355:     Args:\n356:         token_level_rewards: (bs, response_length) binary rule-based rewards\n357:         response_mask: (bs, response_length) mask for valid tokens\n358:         index: (bs,) group IDs for each response\n359:         reward_prm: (bs,) PRM scores (0, 0.5, 1) from non_tensor_batch\n360:         lambda_process: weight for process advantage (default 1.0)\n361:         epsilon: small value to avoid division by zero\n362:         norm_adv_by_std_in_grpo: whether to normalize by std (True=GRPO, False=Dr.GRPO)\n363:         acc: (bs,) binary accuracy from non_tensor_batch, used for correct_mask\n364:              when reward shaping (e.g. DAPO overlong penalty) makes scores_rule non-binary.\n365:              If None, falls back to scores_rule == 1.0.\n366: \n367:     Returns:\n368:         advantages: (bs, response_length) token-level advantages\n369:         returns: (bs, response_length) same as advantages (outcome-only)\n370:         metrics: dict of logging metrics\n371:     \"\"\"\n372:     scores_rule = token_level_rewards.sum(dim=-1)  # (bs,)\n373:     scores_prm = torch.tensor(reward_prm, dtype=scores_rule.dtype, device=scores_rule.device)\n374: \n375:     # Build global binary correctness mask (unaffected by reward shaping)\n376:     if acc is not None:\n377:         binary_acc = torch.tensor(acc, dtype=torch.bool, device=scores_rule.device)\n378:     else:\n379:         binary_acc = None\n380: \n381:     # Group responses by prompt uid\n382:     id2indices = defaultdict(list)\n383:     bsz = scores_rule.shape[0]\n384:     for i in range(bsz):\n385:         id2indices[index[i]].append(i)\n386: \n387:     A_out = torch.zeros_like(scores_rule)\n388:     A_proc = torch.zeros_like(scores_rule)\n389:     A_total = torch.zeros_like(scores_rule)\n390: \n391:     # Metrics accumulators\n392:     process_active_count = 0\n393:     total_group_count = 0\n394: \n395:     with torch.no_grad():\n396:         for uid, indices in id2indices.items():\n397:             total_group_count += 1\n398:             G = len(indices)\n399:             idx_t = torch.tensor(indices, dtype=torch.long, device=scores_rule.device)\n400:             group_rule = scores_rule[idx_t]\n401:             group_prm = scores_prm[idx_t]\n402: \n403:             # ─── Step 1: A_out (standard GRPO normalization) ───\n404:             group_A_out = torch.zeros(G, dtype=scores_rule.dtype, device=scores_rule.device)\n405:             if G > 1:\n406:                 mu_rule = group_rule.mean()\n407:                 std_rule = group_rule.std()\n408:                 if std_rule > epsilon:\n409:                     if norm_adv_by_std_in_grpo:\n410:                         group_A_out = (group_rule - mu_rule) / (std_rule + epsilon)\n411:                     else:\n412:                         group_A_out = group_rule - mu_rule\n413: \n414:             # ─── Step 2: A_proc (process advantage among correct subset) ───\n415:             group_A_proc = torch.zeros(G, dtype=scores_rule.dtype, device=scores_rule.device)\n416:             if binary_acc is not None:\n417:                 correct_mask = binary_acc[idx_t]\n418:             else:\n419:                 correct_mask = (group_rule == 1.0)\n420:             num_correct = correct_mask.sum().item()\n421:             process_active = False\n422: \n423:             if num_correct >= 2:\n424:                 prm_correct = group_prm[correct_mask]\n425:                 mu_prm = prm_correct.mean()\n426:                 std_prm = prm_correct.std()\n427: \n428:                 if std_prm > epsilon:\n429:                     process_active = True\n430:                     process_active_count += 1\n431:                     if norm_adv_by_std_in_grpo:\n432:                         group_A_proc[correct_mask] = (group_prm[correct_mask] - mu_prm) / (std_prm + epsilon)\n433:                     else:\n434:                         group_A_proc[correct_mask] = group_prm[correct_mask] - mu_prm\n435: \n436:             # ─── Step 3: Combine (fixed lambda, no adaptive clipping) ───\n437:             group_A_total = group_A_out + lambda_process * group_A_proc\n438: \n439:             # Write back to global tensors\n440:             for j, idx in enumerate(indices):\n441:                 A_out[idx] = group_A_out[j]\n442:                 A_proc[idx] = group_A_proc[j]\n443:                 A_total[idx] = group_A_total[j]\n444: \n445:         # Broadcast scalar advantages to token dimension"
+    },
+    {
+      "name": "PAPO PRM grader",
+      "start": 197,
+      "end": 206,
+      "url": "https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/verl/utils/reward_score/llm_process_reward.py",
+      "upstream_blob_sha": "1b68e6e41120cda2139e7396d1426e5316087421",
+      "content": "197: def normalize_imo_score(imo_score: float) -> float:\n198:     \"\"\"Normalize score (0.0-7.0) to 0-1 range.\n199: \n200:     Args:\n201:         imo_score: Raw score between 0.0 and 7.0\n202: \n203:     Returns:\n204:         Normalized score between 0.0 and 1.0\n205:     \"\"\"\n206:     return imo_score / 7.0"
+    },
+    {
+      "name": "PAPO config",
+      "start": 20,
+      "end": 44,
+      "url": "https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/scripts/run_grpo_qwen2.5_7b_base_megatron_8gpu_dual_lambda1.sh",
+      "upstream_blob_sha": "22af751db49200463edf316668d2d31294267c35",
+      "content": "20: \n21: # =================== Megatron Environment Configuration ===================\n22: export CUDA_DEVICE_MAX_CONNECTIONS=1\n23: export HYDRA_FULL_ERROR=1\n24: export VLLM_USE_V1=1\n25: export RAY_EXPERIMENTAL_NOSET_CUDA_VISIBLE_DEVICES=1\n26: export WANDB_MODE=offline\n27: export HF_HUB_OFFLINE=1\n28: export TRANSFORMERS_OFFLINE=1\n29: # export TIKTOKEN_ENCODINGS_BASE=/path/to/tiktoken_encodings  # Optional: set if offline\n30: \n31: # Disable Ray memory monitor to prevent false OOM kills\n32: export RAY_memory_monitor_refresh_ms=0\n33: \n34: # PA_GRPO: Enable dual-objective scoring in reward routing\n35: export USE_DUAL_OBJECTIVE=true\n36: # ORM + LLM fallback for binary A_out signal\n37: export USE_LLM_VERIFIER=true\n38: \n39: # LLM Grader (GPT-OSS-20B, for both LLM-fallback and PRM 3-tier scoring)\n40: export LLM_GRADER_API_BASE=\"${LLM_GRADER_API_BASE:-http://localhost:8000/v1}\"\n41: export LLM_GRADER_API_KEY=\"${LLM_GRADER_API_KEY:-dummy}\"\n42: export LLM_GRADER_MODEL=\"GPT-OSS-20B\"\n43: \n44: echo \"=== PA_GRPO: Qwen2.5-7B-Base Dual-Objective 8GPU (ORM+LLM for A_out, PRM for A_proc) ===\""
+    },
+    {
+      "name": "PURE verl core",
+      "start": 139,
+      "end": 183,
+      "url": "https://github.com/CJReinforce/PURE/blob/b174e508a4469663543cfcb366be78cf199d20bf/verl/trainer/ppo/core_algos.py",
+      "upstream_blob_sha": "478e9f32eb1013c75bdb6cba2d963c5457153594",
+      "content": "139: def compute_grpo_outcome_advantage(token_level_rewards: torch.Tensor,\n140:                                    eos_mask: torch.Tensor,\n141:                                    index: torch.Tensor,\n142:                                    epsilon: float = 1e-6,\n143:                                    adv_norm: bool = False,\n144:                                    return_aggregate_method: str = 'sum'):\n145:     \"\"\"\n146:     Compute advantage for GRPO, operating only on Outcome reward \n147:     (with only one scalar reward for each response).\n148:     Args:\n149:         token_level_rewards: `(torch.Tensor)`\n150:             shape: (bs, response_length)\n151:         eos_mask: `(torch.Tensor)`\n152:             shape: (bs, response_length)\n153:     \n154:     Returns:\n155:         advantages: `(torch.Tensor)`\n156:             shape: (bs, response_length)\n157:         Returns: `(torch.Tensor)`\n158:             shape: (bs, response_length)\n159:     \"\"\"\n160:     returns = compute_return(token_level_rewards, eos_mask, return_aggregate_method)\n161:     advantages = torch.zeros_like(returns)\n162:     \n163:     id2return = defaultdict(list)\n164:     id2mean = {}\n165:     id2std = {}\n166: \n167:     with torch.no_grad():\n168:         bsz = returns.shape[0]\n169:         for i in range(bsz):\n170:             id2return[index[i]].append(returns[i])\n171:         for idx in id2return:\n172:             if len(id2return[idx]) > 0:\n173:                 id2mean[idx] = torch.mean(torch.stack(id2return[idx]))\n174:                 id2std[idx] = torch.std(torch.stack(id2return[idx]))\n175:             else:\n176:                 raise ValueError(f\"no score in prompt index: {idx}\")\n177:         for i in range(bsz):\n178:             advantages[i] = (returns[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)\n179:         \n180:         if adv_norm:\n181:             advantages = verl_F.masked_whiten(advantages, eos_mask)\n182:             advantages *= eos_mask\n183:     return advantages, returns"
+    },
+    {
+      "name": "PURE experience",
+      "start": 661,
+      "end": 726,
+      "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py",
+      "upstream_blob_sha": "1335ad64e158d471f365afc84a534d2c125484b0",
+      "content": "661:         action_masks = right_padding(action_masks, False)\n662:         num_data = solveds.numel()\n663: \n664:         # calculate: PR - PR_baseline + coef * (VR - VR_baseline)\n665:         process_rewards = process_rewards.reshape(\n666:             -1, args.n_samples_per_prompt, process_rewards.size(1),\n667:         )\n668:         outcome_rewards = process_rewards.sum(-1)\n669: \n670:         # check if outcome reward mathces the ground truth\n671:         outcome_rewards_info = outcome_rewards.flatten()\n672:         # outcome_reward > 0 means prediction is correct\n673:         # outcome_reward <= 0 means prediction is wrong\n674:         prediction = outcome_rewards_info.clone().sign()\n675:         prediction[prediction == -1] = 0\n676: \n677:         match = torch.full_like(solveds, -1.0, dtype=torch.float)\n678:         match[have_answers] = (\n679:             prediction[have_answers] == solveds[have_answers]\n680:         ).float()\n681: \n682:         # average reward per step as baseline\n683:         if args.reward_baseline == \"step\":\n684:             num_steps = num_steps.reshape(-1, args.n_samples_per_prompt)\n685:             reward_masks = reward_masks.reshape(\n686:                 -1, args.n_samples_per_prompt, reward_masks.size(1),\n687:             )\n688: \n689:             average_process_reward = outcome_rewards / num_steps\n690:             process_reward_baseline = (\n691:                 average_process_reward.sum(-1, keepdim=True) - average_process_reward\n692:             ) / (args.n_samples_per_prompt - 1)\n693: \n694:             process_rewards = (\n695:                 process_rewards - process_reward_baseline.unsqueeze(-1)\n696:             ).masked_fill(~reward_masks, 0)\n697:             process_rewards = process_rewards.reshape(num_data, -1)\n698:         # (avg. reward per token) * (num of tokens of corresponding step) as baseline\n699:         else:\n700:             response_lengths = response_lengths.reshape(-1, args.n_samples_per_prompt)\n701:             average_reward_per_token = (\n702:                 outcome_rewards.sum(-1, keepdim=True) - outcome_rewards\n703:             ) / (\n704:                 response_lengths.sum(-1, keepdim=True) - response_lengths\n705:             )\n706:             \n707:             process_rewards = process_rewards.reshape(num_data, -1)\n708:             average_reward_per_token = average_reward_per_token.flatten()\n709:             \n710:             for i in range(num_data):\n711:                 process_rewards[i, reward_masks[i]] -= average_reward_per_token[i] * \\\n712:                     num_tokens_per_steps[i, score_masks[i]]\n713: \n714:         if \"VR\" in args.reward_mode:\n715:             # verifier reward\n716:             verifier_reward = solveds - 1  # in {-1, 0}\n717:             verifier_reward = verifier_reward.reshape(-1, args.n_samples_per_prompt)\n718:             verifier_reward_baseline = (\n719:                 verifier_reward.sum(-1, keepdim=True) - verifier_reward\n720:             ) / (args.n_samples_per_prompt - 1)\n721:             verifier_reward = verifier_reward - verifier_reward_baseline\n722:             verifier_reward = verifier_reward.flatten()\n723: \n724:             # add verifier reward to the last step\n725:             eos_indices = action_masks.size(1) - 1 - action_masks.long().fliplr().argmax(1)\n726:             process_rewards[torch.arange(num_data), eos_indices] += verifier_reward * args.verifiable_reward_coef"
+    },
+    {
+      "name": "PRIME training",
+      "start": 49,
+      "end": 101,
+      "url": "https://github.com/PRIME-RL/PRIME/blob/18ad596f08d487bb546d80d738d99ec697bd2e75/training/README.md",
+      "upstream_blob_sha": "b7c9af4966840aa3e219b86f2ceec1aaa145d1e4",
+      "content": "49: \n50: \n51: ### Implicit Process Reward\n52: We adopt [implicit PRM](https://arxiv.org/abs/2412.01981) which obtains dense rewards by training on the cheaper response-level labels. To train the policy model, we combine the process rewards and the ground truth outcome rewards to calculate the advantage. During reinforcement learning, the PRM is updated according to the ground truth label. \n53: \n54: The reference model in implicit PRM can be set as either the initial SFT model or the up-to-date policy model. Both strategies yield similar performance. \n55: \n56: In this work, we update the implicit PRM with cross entropy(CE) loss due to memory efficiency.\n57: ```yaml\n58: reward_model:\n59:   rm_coef: 5\n60:   rm_type: prime\n61:   prime_granularity: token\n62:   prime_norm: batch_norm\n63:   mini_batch_size: 256\n64:   micro_batch_size: 64\n65:   prime_model:\n66:     path: PRIME-RL/Eurus-2-7B-SFT\n67:     ref_type: freeze\n68:     ref_path: PRIME-RL/Eurus-2-7B-SFT\n69:     update: after\n70:     beta_train: 0.05\n71:     loss_type: ce\n72:     use_remove_padding: False\n73: ```\n74: - ``reward_model.rm_coef``: Weight for reward model in the reward combination. \n75: - ``reward_model.rm_type``: Type of reward model, ``prime`` for implicit PRM and ``value`` for normal reward models. \n76: - ``reward_model.prime_granularity``: Granularity to assign reward value. If set to ``token``, every token will have a process reward. If set to ``whole``, the reward will only appear on the last token just like vanilla RLHF. \n77: - ``reward_model.prime_norm``: How to normalize process reward value to stabilize training. Default to ``batch_norm``\n78: - ``reward_model.mini_batch_size``: Mini batch size for PRM update. **Should be divisible by world_size.**\n79: - ``reward_model.micro_batch_size``: Micro batch size for PRM update. **Should be divisible by world_size.**\n80: - ``reward_model.path``: Model as initialization of implicit PRM. \n81: - ``reward_model.ref_type``: PRM Reference model type. ``freeze``: the reference model has frozen parameters. ``policy``: the reference model synchronizes with the policy model. \n82: - ``reward_model.ref_path``: Reference model in implicit PRM. \n83: - ``reward_model.prime_model.update``: ``none`` to disable online PRM update, ``after`` to update the PRM after the policy model (Single-Forward), ``before`` to update the PRM before the policy model (Double-Forward). \n84: - ``reward_model.prime_model.beta_train``: Beta value used to update the PRM. \n85: - ``reward_model.prime_model.loss_type``: Loss function to update the PRM. Only ``ce`` is supported now.\n86: - ``reward_model.prime_model.use_remove_padding``: Whether to remove padding tokens in the PRM loss calculation. Turn on to accelerate and save memory. Support Llama, Qwen, Mistral, and InternLM for now.\n87: \n88: ### Advantage Estimation\n89: From pilot study, we compared different online RL algorithms and found that REINFORCE-like algorithms, despite simpler than PPO, are strong enough to produce stable results. We choose the best performing [RLOO](https://arxiv.org/abs/2402.14740) as our RL algorithm. \n90: \n91: To extend RLOO to support process rewards and merging different reward types (ground truth and reward model), we perform Leave-One-Out separately on different rewards. We directly use the return value of RLOO as advantage. \n92: ```yaml\n93: algorithm:\n94:   adv_estimator: rloo\n95:   adv_params:\n96:     verifier_gamma: ${algorithm.gamma}\n97:     reward_model_gamma: ${algorithm.gamma}\n98: ```\n99: - ``algorithm.adv_estimator``: The advantage estimator, like ``gae``,``rloo``. If the advantage does not need a value estimation model, the critic model is completely disabled during training. \n100: - ``algorithm.adv_params.verifier_gamma`` ``algorithm.adv_params.reward_model_gamma``: Set separate gamma for different sources of reward\n101: "
+    },
+    {
+      "name": "PRIME core",
+      "start": 108,
+      "end": 153,
+      "url": "https://github.com/PRIME-RL/PRIME/blob/18ad596f08d487bb546d80d738d99ec697bd2e75/training/verl/trainer/ppo/core_algos.py",
+      "upstream_blob_sha": "c63b1979959628ce3cffd6f9b04e4fd904dd04f7",
+      "content": "108: def compute_rloo_returns(data:verl.DataProto, eos_mask:torch.Tensor,n_samples,config):\n109:     # calculate rloo reward on different reward sources, and sum again\n110:     with torch.no_grad():\n111:         # reward = torch.zeros_like(data.batch['responses'], dtype=torch.float32)\n112:         advantages = torch.zeros_like(data.batch['responses'],dtype=torch.float32)\n113:         discount_rewards=[]\n114:         for k,v in data.batch.items():\n115:             if k == 'rm_scores':\n116:                 gamma = config.algorithm.adv_params.reward_model_gamma\n117:                 reward_mask = eos_mask.bool()\n118:             elif k == 'gt_scores':\n119:                 gamma = config.algorithm.adv_params.verifier_gamma\n120:                 prompt_ids = data.batch['prompts']\n121:                 prompt_length = prompt_ids.shape[-1]\n122:                 valid_response_length = data.batch['attention_mask'][:, prompt_length:].sum(-1)\n123:                 reward_mask = torch.zeros_like(v, dtype=torch.bool)\n124:                 reward_mask[torch.arange(0, valid_response_length.shape[0], dtype=torch.long, device=valid_response_length.device), valid_response_length-1]=True\n125:             else: # not a reward tensor\n126:                 continue\n127:             reward_tensor = v.clone()\n128:             reward_tensor[~reward_mask]=0\n129:             for start_pos in range(0, reward_tensor.shape[0], n_samples):\n130:                 cur_rewards_mean = torch.cat(\n131:                     [ reward_tensor[pos:pos + 1][ reward_mask[pos:pos + 1] ].mean(dim=0, keepdim=True) for pos\n132:                      in range(start_pos, start_pos + n_samples) ], dim=0)\n133:                 cur_rewards_sum = cur_rewards_mean.sum()\n134:                 cur_reward_baseline = cur_rewards_sum / (n_samples - 1)\n135:                 reward_tensor[start_pos:start_pos + n_samples][\n136:                     reward_mask[start_pos:start_pos + n_samples]] = \\\n137:                     reward_tensor[start_pos:start_pos + n_samples][\n138:                         reward_mask[start_pos:start_pos + n_samples]] * (\n139:                                 n_samples / (n_samples - 1)) - cur_reward_baseline\n140: \n141:             discount_reward = torch.zeros_like(reward_tensor)\n142:             for step in reversed(range(reward_tensor.shape[1])):\n143:                 if step == reward_tensor.shape[1]-1:\n144:                     discount_reward[:,step] = reward_tensor[:, step]\n145:                 else:\n146:                     discount_reward[:,step] = reward_tensor[:, step] + gamma * discount_reward[:, step+1]\n147:             discount_rewards.append(discount_reward)\n148:         # return is the sum of discounted reward\n149:         returns = sum(discount_rewards)\n150:         # advantage is whitened return\n151:         advantages = returns.clone()\n152:         advantages = verl_F.masked_whiten(advantages, eos_mask)\n153:     return advantages, returns"
+    },
+    {
+      "name": "PRPO trainer",
+      "start": 1144,
+      "end": 1159,
+      "url": "https://github.com/SchumiDing/srpocode/blob/662bbc6c2815900ca96e39106f31e8988f2d961a/verl2/verl/trainer/ppo/ray_trainer.py",
+      "upstream_blob_sha": "d5d73bca4e2a441928b7299ad9ef4cacb185eaf3",
+      "content": "1144:                     # print(f\"batch.batch['responses']\", batch.batch[\"responses\"], flush=True)\n1145:                     with marked_timer(\"reward\", timing_raw, color=\"yellow\"):\n1146:                     # compute reward model score\n1147:                         if should_log_heartbeat:\n1148:                             print(f\"[HEARTBEAT] Computing rewards at step {self.global_steps}, batch {batch_idx}\", flush=True)\n1149:                         try:\n1150:                             rewards_tensor, beta_tensor, adv_tensor = self.reward_fn.compute_for_rollout(batch.batch[\"input_ids\"], groundtruth, batch.batch[\"response_mask\"], batch.batch[\"responses\"], entropys, repeat_times=self.config.actor_rollout_ref.rollout.n)\n1151:                             if should_log_heartbeat:\n1152:                                 print(f\"[HEARTBEAT] Reward computation completed at step {self.global_steps}, batch {batch_idx}\", flush=True)\n1153:                         except Exception as e:\n1154:                             print(f\"[ERROR] Reward computation failed at step {self.global_steps}, batch {batch_idx}: {type(e).__name__}: {e}\", flush=True)\n1155:                             raise\n1156:                         batch.batch[\"token_level_scores\"] = adv_tensor\n1157:                         batch.batch[\"advantages\"] = adv_tensor\n1158:                         batch.batch[\"token_level_rewards\"] = rewards_tensor\n1159:                         batch.batch[\"returns\"] = rewards_tensor"
+    },
+    {
+      "name": "PRPO naive4.py",
+      "start": 393,
+      "end": 445,
+      "url": "https://github.com/SchumiDing/srpocode/blob/662bbc6c2815900ca96e39106f31e8988f2d961a/verl2/verl/workers/reward_manager/naive4.py",
+      "upstream_blob_sha": "d958f4e85ca29a5e8fb259bd3a5811d8357166b4",
+      "content": "393:         # 第二步：样本内归一化（segment_norms）\n394:         segment_norms = [info['segment_rewards'] for info in per_sample_info]\n395:         print(\"segment_norms[0]\", segment_norms[0], flush=True)\n396: \n397:         zscores = []\n398:         for j in range(0, len(segment_norms), repeat_times):\n399:             meanV = 0.5\n400:             num = 0\n401:             data = []\n402:             for i in range(j, j+repeat_times):\n403:                 maskedLength = torch.sum(response_mask[i])\n404:                 data.extend(segment_norms[i][:maskedLength-1].tolist())\n405:                 num += maskedLength-1\n406:             meanV = torch.mean(torch.tensor(data))\n407:             stdV = torch.std(torch.tensor(data))\n408:             for i in range(j, j+repeat_times):\n409:                 maskedLength = torch.sum(response_mask[i])\n410:                 zscores.append((segment_norms[i][:maskedLength-1] - meanV)/stdV)\n411:             \n412:         for i, row in enumerate(segment_norms):\n413:             T = per_sample_info[i]['T']\n414:             maskedLength = torch.sum(response_mask[i])\n415:             row[:maskedLength-1] = zscores[i]\n416:         # for i, row in enumerate(segment_norms):\n417:         #     print(row.shape, flush=True)\n418:         segment_norms = torch.stack(segment_norms)\n419:         # print(f\"length: {len(per_sample_info)}\")\n420:         rollout_raw_reward = [info['seq_reward'] for i, info in enumerate(per_sample_info)]\n421:         rewards_tensor = [info['segment_rewards'] for info in per_sample_info]\n422:         rewards_tensor = torch.stack(rewards_tensor)\n423:         # # 第三步：rollout-level 归一化 -> beta\n424:         for i in range(len(rollout_raw_reward)//repeat_times):\n425:             # print(f\"i: {i}\")\n426:             rollout_reward = rollout_raw_reward[(i)*repeat_times:(i+1)*repeat_times]\n427:             mean = float(sum(rollout_reward) / len(rollout_reward))\n428:             # std = float(torch.std(torch.tensor(rollout_reward\n429:             #                                    , dtype=torch.float32)))\n430:             # if std != 0:\n431:             #     tz_scores = (torch.tensor(rollout_reward) - mean) / std\n432:             # else:\n433:             #     tz_scores = torch.zeros(len(rollout_reward))\n434:             tz_scores = torch.tensor(rollout_reward)\n435:             tz_scores = tz_scores - mean\n436:             for j in range(i*repeat_times, (i+1)*repeat_times):\n437:                 # if std == 0:\n438:                 #     per_sample_info[j]['beta'] = 0\n439:                 # else:\n440:                     per_sample_info[j]['beta'] = tz_scores.tolist()[j-i*repeat_times]\n441:         # 第四步：构建 final advantages 并广播到时间步\n442:         for idx, info in enumerate(per_sample_info):\n443:             seg_norms = segment_norms[idx]\n444:             beta = info['beta']\n445:             per_timestep_adv = seg_norms + beta"
+    },
+    {
+      "name": "PRPO grpo manager",
+      "start": 61,
+      "end": 90,
+      "url": "https://github.com/SchumiDing/srpocode/blob/662bbc6c2815900ca96e39106f31e8988f2d961a/verl2/verl/workers/reward_manager/grpo.py",
+      "upstream_blob_sha": "8e35ef9df3c79e0cfdb27919bd9747c632546687",
+      "content": "61:     @staticmethod\n62:     def _default_rollout_comp(ground_truth: str, sequence: str, outLength: int) -> float:\n63:         pattern = r'\\\\boxed\\{([^{}]*(?:\\{[^{}]*\\}[^{}]*)*)\\}'\n64:         matches = re.findall(pattern, sequence)\n65:         maxLength = 8192\n66:         if len(matches) == 0:\n67:             # if len(sequence) > 4000:\n68:             #     return -1.0 - len(sequence)/1000\n69:             rw = -1.0\n70:             if outLength > maxLength/2:\n71:                 rw -= (outLength)/maxLength\n72:             return rw\n73:         predicted_answer = matches[-1]\n74:         \n75:         if compare_latex_expressions(predicted_answer, ground_truth):\n76:             # print(f\"Right answer: \\\"{predicted_answer}\\\" == \\\"{ground_truth}\\\"\", flush=True)\n77:             rw = 1.0\n78:             if outLength > maxLength/2:\n79:                 rw -= (outLength)/maxLength\n80:             return rw\n81:         else:\n82:             # print(f\"Wrong answer: \\\"{predicted_answer}\\\" != \\\"{ground_truth}\\\"\", flush=True)\n83:             # print(sequence[-100:], flush=True)\n84:             # if len(sequence) > 4000:\n85:             #     return -1.0 - len(sequence)/1000\n86:             rw = -1.0\n87:             if outLength > maxLength/2:\n88:                 rw -= (outLength)/maxLength\n89:             return rw\n90: "
+    },
+    {
+      "name": "EasyR1 math reward",
+      "start": 21,
+      "end": 49,
+      "url": "https://github.com/hiyouga/EasyR1/blob/602a12820f69cf45ea98de08a63b3509313a7d02/examples/reward_function/math.py",
+      "upstream_blob_sha": "f983357ef942233b1c41b231862ed78f97c5e3c2",
+      "content": "21: # Metadata\n22: REWARD_NAME = \"math\"\n23: REWARD_TYPE = \"batch\"\n24: \n25: \n26: def format_reward(response: str) -> float:\n27:     pattern = re.compile(r\"<think>.*</think>.*\\\\boxed\\{.*\\}.*\", re.DOTALL)\n28:     format_match = re.fullmatch(pattern, response)\n29:     return 1.0 if format_match else 0.0\n30: \n31: \n32: def accuracy_reward(response: str, ground_truth: str) -> float:\n33:     answer = extract_boxed_content(response)\n34:     return 1.0 if grade_answer(answer, ground_truth) else 0.0\n35: \n36: \n37: def compute_score(reward_inputs: list[dict[str, Any]], format_weight: float = 0.1) -> list[dict[str, float]]:\n38:     scores = []\n39:     for reward_input in reward_inputs:\n40:         response = re.sub(r\"\\s*(<|>|/)\\s*\", r\"\\1\", reward_input[\"response\"])  # handle qwen2.5vl-32b format\n41:         format_score = format_reward(response)\n42:         accuracy_score = accuracy_reward(response, reward_input[\"ground_truth\"])\n43:         scores.append(\n44:             {\n45:                 \"overall\": (1 - format_weight) * accuracy_score + format_weight * format_score,\n46:                 \"format\": format_score,\n47:                 \"accuracy\": accuracy_score,\n48:             }\n49:         )"
+    },
+    {
+      "name": "EasyR1 LoRA script",
+      "start": 1,
+      "end": 16,
+      "url": "https://github.com/hiyouga/EasyR1/blob/602a12820f69cf45ea98de08a63b3509313a7d02/examples/qwen3_4b_math_grpo_lora.sh",
+      "upstream_blob_sha": "228f062f368829891063240285033132b506f1c9",
+      "content": "1: #!/bin/bash\n2: \n3: set -x\n4: \n5: MODEL_PATH=Qwen/Qwen3-4B  # replace it with your local file path\n6: \n7: python3 -m verl.trainer.main \\\n8:     config=examples/config.yaml \\\n9:     data.max_response_length=2048 \\\n10:     worker.actor.model.model_path=${MODEL_PATH} \\\n11:     worker.actor.model.lora.rank=64 \\\n12:     worker.actor.model.lora.alpha=64 \\\n13:     worker.actor.optim.lr=1e-5 \\\n14:     worker.rollout.tensor_parallel_size=1 \\\n15:     trainer.experiment_name=qwen3_4b_math_grpo_lora \\\n16:     trainer.n_gpus_per_node=1"
+    },
+    {
+      "name": "DrGRPO 1.5B script",
+      "start": 12,
+      "end": 36,
+      "url": "https://github.com/sail-sg/understand-r1-zero/blob/dfca49dd460ee7cc8e4a5a162c876a7fd6993b87/examples/qwen2.5-math-1.5b.sh",
+      "upstream_blob_sha": "0e1eca3af5e0959b23e99f443223745c77f93bff",
+      "content": "12: # See the License for the specific language governing permissions and\n13: # limitations under the License.\n14: \n15: N_GPU=8\n16: N_SAMPLE=8\n17: \n18: # R1 template\n19: python train_zero_math.py \\\n20:     --critic_type drgrpo \\\n21:     --gpus $N_GPU \\\n22:     --enable_prefix_caching \\\n23:     --collocate \\\n24:     --vllm_sleep \\\n25:     --vllm_gpu_ratio 0.35 \\\n26:     --gradient-checkpointing \\\n27:     --flash-attn \\\n28:     --bf16 \\\n29:     --rnd-seed \\\n30:     --learning_rate 0.000001 \\\n31:     --lr_scheduler constant \\\n32:     --num_ppo_epochs 1 \\\n33:     --beta 0 \\\n34:     --oracle_type reward \\\n35:     --oracle math \\\n36:     --pretrain Qwen/Qwen2.5-Math-1.5B \\"
+    },
+    {
+      "name": "SimpleRL launch",
+      "start": 20,
+      "end": 49,
+      "url": "https://github.com/hkust-nlp/simpleRL-reason/blob/cf1c7858bfc145a27aa733e75d930d34f0d318a6/train_grpo_math_tune_ray.sh",
+      "upstream_blob_sha": "ec1cc44395d5e949e199117a10c0a24a536f4d59",
+      "content": "20: \n21: \n22: # Default values\n23: TRAIN_BATCH_SIZE=256\n24: VAL_BATCH_SIZE=500\n25: MAX_PROMPT_LENGTH=1024\n26: MAX_RESPONSE_LENGTH=3072\n27: LEARNING_RATE=5e-7\n28: PPO_MINI_BATCH_SIZE=256\n29: # per GPU\n30: PPO_MICRO_BATCH_SIZE=2\n31: CLIP_RATIO=0.2\n32: KL_LOSS_COEF=0.001\n33: ENTROPY_COEFFIENT=0.001\n34: KL_LOSS_TYPE=\"low_var_kl\"\n35: TEMPERATURE=1.0\n36: LOG_PROB_MICRO_BATCH_SIZE=160\n37: ROLLOUT_N=8\n38: KL_COEF=0.001\n39: TOTAL_EPOCHS=20\n40: DATASET_NAME=simplelr_math_35\n41: ROLLOUT_GPU_MEMORY_UTIL=0.6\n42: MODEL_NAME=Qwen2.5-Math-7B\n43: SAVE_FREQ=20\n44: TEST_FREQ=5\n45: REMOVE_CLIP=False\n46: ROLLOUT_TENSOR_MODEL_PARALLEL_SIZE=2\n47: MICRO_ROLLOUT_BATCH_SIZE=1024\n48: REMOVE_PREVIOUS_CKPT=False\n49: "
+    },
+    {
+      "name": "TRL pinned trainer",
+      "start": 1433,
+      "end": 1465,
+      "url": "https://github.com/huggingface/trl/blob/v0.23.1/trl/trainer/grpo_trainer.py",
+      "upstream_blob_sha": "7c4e5d265bec323f7e8e1eb1657ae450fb4f5e4b",
+      "content": "1433:         # Calculate rewards for each reward function. rewards_per_func aggregates rewards across all processes. This is\n1434:         # important because rewards will be normalized per group, and completions are distributed. We will later slice\n1435:         # rewards_per_func to extract each process's subset.\n1436:         rewards_per_func = self._calculate_rewards(inputs, original_prompts, completions, completion_ids_list)\n1437: \n1438:         # Apply weights to each reward function's output and sum\n1439:         rewards = (rewards_per_func * self.reward_weights.to(device).unsqueeze(0)).nansum(dim=1)\n1440: \n1441:         # Compute grouped-wise rewards\n1442:         mean_grouped_rewards = rewards.view(-1, self.num_generations).mean(dim=1)\n1443: \n1444:         # Normalize the rewards to compute the advantages\n1445:         mean_grouped_rewards = mean_grouped_rewards.repeat_interleave(self.num_generations, dim=0)\n1446:         advantages = rewards - mean_grouped_rewards\n1447: \n1448:         if self.scale_rewards in [\"group\", \"none\"]:\n1449:             # If self.scale_rewards = \"none\", we'll still log group level std\n1450:             std_rewards = rewards.view(-1, self.num_generations).std(dim=1)\n1451:             std_rewards = std_rewards.repeat_interleave(self.num_generations, dim=0)\n1452:         elif self.scale_rewards == \"batch\":\n1453:             # Compute global std\n1454:             std_rewards = rewards.std().expand_as(rewards)\n1455:         else:\n1456:             raise ValueError(\n1457:                 f\"Invalid value for scale_rewards: {self.scale_rewards}. Must be one of 'batch', 'group', or 'none'.\"\n1458:             )\n1459: \n1460:         is_std_zero = torch.isclose(std_rewards, torch.zeros_like(std_rewards))\n1461:         if self.scale_rewards != \"none\":\n1462:             advantages = advantages / (std_rewards + 1e-4)\n1463: \n1464:         # Slice to keep only the local part of the data\n1465:         process_slice = slice("
+    },
+    {
+      "name": "TRL pinned trainer",
+      "start": 1645,
+      "end": 1665,
+      "url": "https://github.com/huggingface/trl/blob/v0.23.1/trl/trainer/grpo_trainer.py",
+      "upstream_blob_sha": "7c4e5d265bec323f7e8e1eb1657ae450fb4f5e4b",
+      "content": "1645:         else:\n1646:             entropy_mask = None\n1647: \n1648:         # Compute the KL divergence between the model and the reference model\n1649:         if self.beta != 0.0:\n1650:             ref_per_token_logps = inputs[\"ref_per_token_logps\"]\n1651:             per_token_kl = (\n1652:                 torch.exp(ref_per_token_logps - per_token_logps) - (ref_per_token_logps - per_token_logps) - 1\n1653:             )\n1654: \n1655:         # Compute the loss\n1656:         advantages = inputs[\"advantages\"]\n1657:         # When num_iterations == 1 and steps_per_generation <= gradient_accumulation_steps,\n1658:         # old_per_token_logps == per_token_logps. In this case we can skip its computation\n1659:         # (see _generate_and_score_completions) and instead use per_token_logps.detach().\n1660:         # The exception is when using vLLM, where we always compute old_per_token_logps\n1661:         # for importance sampling\n1662:         old_per_token_logps = inputs.get(\"old_per_token_logps\")\n1663:         old_per_token_logps = per_token_logps.detach() if old_per_token_logps is None else old_per_token_logps\n1664: \n1665:         log_ratio = per_token_logps - old_per_token_logps"
+    },
+    {
+      "name": "LCA model",
+      "start": 415,
+      "end": 478,
+      "url": "https://github.com/JiaTianyu20031016/MIL/blob/d8dc4593a95f8ed142d5c9166140e8843cb208fc/MILmodel/mil_model_for_prm.py",
+      "upstream_blob_sha": "37674bd237447a44a7b5065f1328839a66e45bb1",
+      "content": "415: class SoftMinPoolMILModelforPRM(BaseMILModel):\n416:     \"\"\"\n417:     'Soft' version of MinPoolMILModelforPRM where segment probabilities are combined using a weighted average with softmin weights based on the positive class probabilities, rather than taking a hard minimum.\n418:     Control the softness of the minimum with a temperature parameter, and optionally apply instance dropout for regularization as in MinPoolMILModelforPRM.\n419:     \"\"\"\n420: \n421:     supported_modules = (\"classifier\",)\n422: \n423:     def __init__(self, pretrained_model, decision_threshold=0.5, dropout=0.0, temperature=1, **kwargs):\n424:         self.temperature = temperature\n425:         self.dropout = dropout\n426:         super().__init__(pretrained_model, decision_threshold=decision_threshold, **kwargs)\n427: \n428:     def _init_weights(self, **kwargs):\n429:         hidden_size = self.pretrained_model.config.hidden_size\n430:         self.backbone_dtype = next(self.pretrained_model.parameters()).dtype\n431:         self.classifier = MLP(input_dim=hidden_size, hidden_dim=hidden_size, output_dim=2).to(dtype=self.backbone_dtype)\n432: \n433:     def _forward_impl(self, eval, batch: Batch) -> Tuple[Tensor, Tensor, Optional[Dict[str, Tensor]]]:\n434:         segment_ids: Tensor = batch[\"segment_input_ids\"]\n435:         segment_mask: Tensor = batch[\"segment_attention_mask\"]\n436:         document_ids: Tensor = batch[\"input_ids\"]\n437:         document_mask: Tensor = batch[\"attention_mask\"]\n438: \n439:         if segment_ids.dim() != 3 or segment_mask.dim() != 3:\n440:             raise ValueError(\"Segment tensors must be 3D with shape [batch, segments, seq_len].\")\n441: \n442:         batch_size, max_segments, segment_length = segment_ids.shape\n443:         dtype = self.backbone_dtype\n444:         device = segment_ids.device\n445: \n446:         if max_segments == 0 or segment_length == 0:\n447:             doc_probs = torch.zeros((batch_size, 2), dtype=dtype, device=device)\n448:             doc_probs[:, 0] = 1.0\n449:             empty = torch.zeros((0, 2), dtype=dtype, device=device)\n450:             return doc_probs, empty, None\n451: \n452:         # forward\n453:         outputs = self.pretrained_model(\n454:             input_ids=document_ids,\n455:             attention_mask=document_mask,\n456:             output_hidden_states=True,\n457:         )\n458: \n459:         # extract segment embeddings at each segment's end position\n460:         end_positions = batch[\"segment_ends\"]  # shape [batch, max_segments]\n461:         batch_indices = torch.arange(batch_size, device=device).unsqueeze(1).expand(-1, max_segments)\n462:         segment_embeddings_grid = outputs.hidden_states[-1][batch_indices, end_positions] # shape [batch, max_segments, hidden]\n463:         segment_logits_grid = self.classifier(segment_embeddings_grid)    # shape [batch, max_segments, classes]\n464:         segment_probs_grid = torch.softmax(segment_logits_grid, dim=-1)   # shape [batch, max_segments, classes]\n465: \n466:         # document-level prediction by 'soft' minimum segment probability for the positive class\n467:         # the softmin weights are computed as a softmax over the negative of the positive class probabilities, so that segments with lower positive probability get higher weight in the final document prediction\n468:         positive_probs = segment_probs_grid[..., 1]  # shape [batch, max_segments]\n469:         valid_segment_mask = segment_mask.any(dim=-1)  # shape [batch, max_segments]\n470:         masked_positive_probs = positive_probs.masked_fill(~valid_segment_mask, torch.inf)  # treat invalid segments as having max positive probability\n471:         # we apply stop_gradient to the softmin weights\n472:         softmin_weights = torch.softmax((1 - masked_positive_probs) / self.temperature, dim=1).detach()  # shape [batch, max_segments]\n473:         \n474:         if not eval:\n475:             # random dropout of some valid segments during training for regularization (similar to DropBlock)\n476:             # the dropout probability is scaled by the softmin weights \n477:             # so that segments with lower positive probability are more likely to be dropped, encouraging the model to consider multiple segments rather than just the most negative one\n478:             doc_positive_prob = batch.get(\"positive_prob\")"
+    },
+    {
+      "name": "LCA trainer",
+      "start": 452,
+      "end": 465,
+      "url": "https://github.com/JiaTianyu20031016/MIL/blob/d8dc4593a95f8ed142d5c9166140e8843cb208fc/trl/trainer/mil_trainer.py",
+      "upstream_blob_sha": "671c864de7bb051cf72ea0e9858600c25f29d87f",
+      "content": "452:     def document_loss(outputs: MILModelOutput, document_target_prob: torch.Tensor) -> torch.Tensor:\n453:         '''\n454:         binary classification loss for document-level prediction.\n455:         '''\n456:         document_pred_probs = outputs.document_probs\n457:         if document_target_prob is None or document_pred_probs.size(0) == 0:\n458:             return None\n459:         \n460:         target = document_target_prob.to(document_pred_probs.device, dtype=document_pred_probs.dtype)\n461:         target = target.clamp(0.0, 1.0)\n462:         target_matrix = torch.stack([1.0 - target, target], dim=-1)\n463:         log_probs = torch.log(document_pred_probs.clamp_min(1e-8))\n464:         loss = -(target_matrix * log_probs).sum(dim=-1).mean()\n465:         return loss"
+    }
+  ],
+  "pinned_trl_blob_sha": "7c4e5d265bec323f7e8e1eb1657ae450fb4f5e4b",
+  "readme_evidence": [
+    {
+      "name": "PAPO",
+      "url": "https://github.com/tanzelin430/PAPO/blob/main/README.md",
+      "upstream_blob_sha": "a68f2ffb87b00f2e0a3f4d4d43292048c57c5336",
+      "characters": 4171
+    },
+    {
+      "name": "PROF README",
+      "url": "https://github.com/Chenluye99/PROF/blob/main/README.md",
+      "upstream_blob_sha": "a4cfba4ea4145ba8e6d6cbe23dbdc01852390b92",
+      "characters": 6295
+    },
+    {
+      "name": "DAPO README",
+      "url": "https://github.com/BytedTsinghua-SIA/DAPO/blob/main/README.md",
+      "upstream_blob_sha": "77c76aa632b597cc55edc968f1e291efb6012110",
+      "characters": 9625
+    },
+    {
+      "name": "SimpleRL README",
+      "url": "https://github.com/hkust-nlp/simpleRL-reason/blob/v1/README.md",
+      "upstream_blob_sha": "38ba16e42ffcb325d0105ece92beb51dbc99ec7b",
+      "characters": 15178
+    },
+    {
+      "name": "PRIME README",
+      "url": "https://github.com/PRIME-RL/PRIME/blob/main/README.md",
+      "upstream_blob_sha": "94e6a83491530686b82b854c24a444cc242df4a3",
+      "characters": 13371
+    },
+    {
+      "name": "EasyR1 README",
+      "url": "https://github.com/hiyouga/EasyR1/blob/main/README.md",
+      "upstream_blob_sha": "06bd66104b4705da7f6f0cf4bc7b0bc9bb2020c0",
+      "characters": 15406
+    },
+    {
+      "name": "LCA README",
+      "url": "https://github.com/JiaTianyu20031016/MIL/blob/camera-ready/README.md",
+      "upstream_blob_sha": "35f2c31f4cafc88848117f22d4062a3420c32ea4",
+      "characters": 6258
+    },
+    {
+      "name": "PURE verl README",
+      "url": "https://github.com/CJReinforce/PURE/blob/verl/README.md",
+      "upstream_blob_sha": "bc3c3d74e10494d4f08262db4989aef0456a3217",
+      "characters": 8326
+    },
+    {
+      "name": "PURE openrlhf README",
+      "url": "https://github.com/CJReinforce/PURE/blob/openrlhf/README.md",
+      "upstream_blob_sha": "87dab108e37db1d41ac9a6308306a367edc596e4",
+      "characters": 11319
+    },
+    {
+      "name": "understand r1 zero README",
+      "url": "https://github.com/sail-sg/understand-r1-zero/blob/main/README.md",
+      "upstream_blob_sha": "adacec94d7173e74c976bd4d3e19eaefe10a6519",
+      "characters": 10978
+    }
+  ]
+}

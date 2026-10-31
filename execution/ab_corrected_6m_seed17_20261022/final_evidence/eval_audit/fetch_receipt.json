@@ -1,0 +1,37 @@
+{
+  "client_utc": "2026-10-22T14:20:29.951009+00:00",
+  "files": {
+    "dispatch.json": {
+      "sha256": "ce4a48c8e2106a52433a4ea4c1080cf8452156bf0fb9de5d9c029923f20cfac9",
+      "bytes": 270
+    },
+    "process_result.json": {
+      "sha256": "92c42f69cbe1c611024c5b505d2c801392bdf162434146795bc8db10023a3083",
+      "bytes": 122
+    },
+    "stdout_stderr.log": {
+      "sha256": "d206450b441c407e80c2e11a5e8c75ba4bd123f5ff06db23d19bebb538e12720",
+      "bytes": 11996
+    },
+    "runner.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runner.py": {
+      "sha256": "db762877ae9ccdbea514d438fbbd9a5618d58e3fc88edc5b74c53e96227e3405",
+      "bytes": 608
+    },
+    "verified.json": {
+      "sha256": "f99a72e883f2a819b2984b6261182808514ce479b0b7cd34f6a06a49050c1d49",
+      "bytes": 121524
+    },
+    "sources/verify_completed_evaluations.py": {
+      "sha256": "194fdcaf1beaa0d42e50fa3f46dd0a5816bc53b9f3dde167ada001f2f0dfaefc",
+      "bytes": 22248
+    },
+    "sources/audit_completed_training.py": {
+      "sha256": "1ffb2ccc15d55e3c18a19fb44371f3bb6f5af2a426465d4dc209816faf14bd97",
+      "bytes": 22416
+    }
+  }
+}

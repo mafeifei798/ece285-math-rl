@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "checks": {
+    "P_VR": {
+      "nonempty_rows": 32,
+      "all_signal_tensors_bitwise_equal": true,
+      "token_positions_equal": true,
+      "whitening_calls": 1,
+      "logprob_gradient_max_difference": 0.0,
+      "empty_cases_stopped_before_rewards": [
+        "''",
+        "' \\r\\n\\t '",
+        "'\\n\\n'",
+        "'\\u2003'"
+      ]
+    },
+    "P_PRM": {
+      "nonempty_rows": 32,
+      "all_signal_tensors_bitwise_equal": true,
+      "token_positions_equal": true,
+      "whitening_calls": 1,
+      "logprob_gradient_max_difference": 0.0,
+      "empty_cases_stopped_before_rewards": [
+        "''",
+        "' \\r\\n\\t '",
+        "'\\n\\n'",
+        "'\\u2003'"
+      ]
+    }
+  },
+  "new_generations": 0,
+  "policy_model_loaded": false,
+  "optimizer_steps": 0,
+  "nonempty_nonanswers_are_not_filtered": true,
+  "boundary_rule": "same whole-batch stop in P_VR and P_PRM; no reward substitution or row dropping",
+  "formal_training_ready": false,
+  "PRM_semantic_vulnerability_fixed": false
+}

@@ -1,0 +1,65 @@
+{
+  "paired": {
+    "C_bounded minus A": {
+      "delta_pp": 2.6,
+      "wins": 29,
+      "losses": 16,
+      "paired_question_bootstrap95_pp": [
+        0.0,
+        5.2
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029,
+      "exact_mcnemar_two_sided_p": 0.07245426016254441
+    },
+    "C_bounded minus C_mix": {
+      "delta_pp": 1.2,
+      "wins": 25,
+      "losses": 19,
+      "paired_question_bootstrap95_pp": [
+        -1.4000000000000001,
+        3.8
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029,
+      "exact_mcnemar_two_sided_p": 0.4513808323961257
+    },
+    "C_bounded minus initial": {
+      "delta_pp": 0.8,
+      "wins": 22,
+      "losses": 18,
+      "paired_question_bootstrap95_pp": [
+        -1.6,
+        3.4000000000000004
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029,
+      "exact_mcnemar_two_sided_p": 0.6358280026288412
+    },
+    "C_mix minus A": {
+      "delta_pp": 1.4000000000000001,
+      "wins": 23,
+      "losses": 16,
+      "paired_question_bootstrap95_pp": [
+        -1.0,
+        3.8
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029,
+      "exact_mcnemar_two_sided_p": 0.3367836351899314
+    },
+    "A minus initial": {
+      "delta_pp": -1.7999999999999998,
+      "wins": 19,
+      "losses": 28,
+      "paired_question_bootstrap95_pp": [
+        -4.3999999999999995,
+        0.8
+      ],
+      "bootstrap_replicates": 10000,
+      "bootstrap_seed": 20261029,
+      "exact_mcnemar_two_sided_p": 0.24296021728332562
+    }
+  },
+  "limits": "Exact McNemar uses fixed saved predictions; question test only, no seed-level or multiple-comparison correction."
+}

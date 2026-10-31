@@ -1,0 +1,69 @@
+https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py
+Upstream blob: 1335ad64e158d471f365afc84a534d2c125484b0
+EXCERPT ONLY
+661:         action_masks = right_padding(action_masks, False)
+662:         num_data = solveds.numel()
+663: 
+664:         # calculate: PR - PR_baseline + coef * (VR - VR_baseline)
+665:         process_rewards = process_rewards.reshape(
+666:             -1, args.n_samples_per_prompt, process_rewards.size(1),
+667:         )
+668:         outcome_rewards = process_rewards.sum(-1)
+669: 
+670:         # check if outcome reward mathces the ground truth
+671:         outcome_rewards_info = outcome_rewards.flatten()
+672:         # outcome_reward > 0 means prediction is correct
+673:         # outcome_reward <= 0 means prediction is wrong
+674:         prediction = outcome_rewards_info.clone().sign()
+675:         prediction[prediction == -1] = 0
+676: 
+677:         match = torch.full_like(solveds, -1.0, dtype=torch.float)
+678:         match[have_answers] = (
+679:             prediction[have_answers] == solveds[have_answers]
+680:         ).float()
+681: 
+682:         # average reward per step as baseline
+683:         if args.reward_baseline == "step":
+684:             num_steps = num_steps.reshape(-1, args.n_samples_per_prompt)
+685:             reward_masks = reward_masks.reshape(
+686:                 -1, args.n_samples_per_prompt, reward_masks.size(1),
+687:             )
+688: 
+689:             average_process_reward = outcome_rewards / num_steps
+690:             process_reward_baseline = (
+691:                 average_process_reward.sum(-1, keepdim=True) - average_process_reward
+692:             ) / (args.n_samples_per_prompt - 1)
+693: 
+694:             process_rewards = (
+695:                 process_rewards - process_reward_baseline.unsqueeze(-1)
+696:             ).masked_fill(~reward_masks, 0)
+697:             process_rewards = process_rewards.reshape(num_data, -1)
+698:         # (avg. reward per token) * (num of tokens of corresponding step) as baseline
+699:         else:
+700:             response_lengths = response_lengths.reshape(-1, args.n_samples_per_prompt)
+701:             average_reward_per_token = (
+702:                 outcome_rewards.sum(-1, keepdim=True) - outcome_rewards
+703:             ) / (
+704:                 response_lengths.sum(-1, keepdim=True) - response_lengths
+705:             )
+706:             
+707:             process_rewards = process_rewards.reshape(num_data, -1)
+708:             average_reward_per_token = average_reward_per_token.flatten()
+709:             
+710:             for i in range(num_data):
+711:                 process_rewards[i, reward_masks[i]] -= average_reward_per_token[i] * \
+712:                     num_tokens_per_steps[i, score_masks[i]]
+713: 
+714:         if "VR" in args.reward_mode:
+715:             # verifier reward
+716:             verifier_reward = solveds - 1  # in {-1, 0}
+717:             verifier_reward = verifier_reward.reshape(-1, args.n_samples_per_prompt)
+718:             verifier_reward_baseline = (
+719:                 verifier_reward.sum(-1, keepdim=True) - verifier_reward
+720:             ) / (args.n_samples_per_prompt - 1)
+721:             verifier_reward = verifier_reward - verifier_reward_baseline
+722:             verifier_reward = verifier_reward.flatten()
+723: 
+724:             # add verifier reward to the last step
+725:             eos_indices = action_masks.size(1) - 1 - action_masks.long().fliplr().argmax(1)
+726:             process_rewards[torch.arange(num_data), eos_indices] += verifier_reward * args.verifiable_reward_coef

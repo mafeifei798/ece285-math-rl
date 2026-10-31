@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "results": {
+    "OPENRLHF_VR": {
+      "empty": {
+        "task_reward_sum": 0.0,
+        "process_peer_actual_length_baseline": 0.0,
+        "raw_terminal_before_boundary_mask": -0.5714285373687744,
+        "raw_first_before_boundary_mask": -0.5714285373687744,
+        "normalized_terminal": 0.0,
+        "normalized_first": 0.0,
+        "content_mean_normalized": null,
+        "content_positive_tokens": 0,
+        "content_negative_tokens": 0,
+        "content_tokens": 0,
+        "step_positions": [
+          0
+        ],
+        "num_tokens_per_step_excluding_boundaries": [
+          0
+        ],
+        "boundary_normalized_all_zero": true,
+        "response_tokens": 1
+      },
+      "oracle_raw_error": 3.405979698278827e-08
+    },
+    "OPENRLHF_PURE_NATIVE": {
+      "empty": {
+        "task_reward_sum": 0.7615941166877747,
+        "process_peer_actual_length_baseline": -0.02200557891714332,
+        "raw_terminal_before_boundary_mask": 0.7615941166877747,
+        "raw_first_before_boundary_mask": 0.7615941166877747,
+        "normalized_terminal": 0.0,
+        "normalized_first": 0.0,
+        "content_mean_normalized": null,
+        "content_positive_tokens": 0,
+        "content_negative_tokens": 0,
+        "content_tokens": 0,
+        "step_positions": [
+          0
+        ],
+        "num_tokens_per_step_excluding_boundaries": [
+          0
+        ],
+        "boundary_normalized_all_zero": true,
+        "response_tokens": 1
+      },
+      "oracle_raw_error": 3.926799019282612e-08
+    },
+    "OPENRLHF_PURE_RL_PROMPT": {
+      "empty": {
+        "task_reward_sum": 0.7615941166877747,
+        "process_peer_actual_length_baseline": -0.02200557891714332,
+        "raw_terminal_before_boundary_mask": 0.7615941166877747,
+        "raw_first_before_boundary_mask": 0.7615941166877747,
+        "normalized_terminal": 0.0,
+        "normalized_first": 0.0,
+        "content_mean_normalized": null,
+        "content_positive_tokens": 0,
+        "content_negative_tokens": 0,
+        "content_tokens": 0,
+        "step_positions": [
+          0
+        ],
+        "num_tokens_per_step_excluding_boundaries": [
+          0
+        ],
+        "boundary_normalized_all_zero": true,
+        "response_tokens": 1
+      },
+      "oracle_raw_error": 3.926799019282612e-08
+    }
+  }
+}

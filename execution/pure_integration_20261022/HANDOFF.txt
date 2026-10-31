@@ -1,0 +1,51 @@
+ECE285 PURE independent integration, 2026-10-22 PT
+
+Authorized scope: CPU replay and bounded real-model forward/backward only.
+Formal training, optimizer updates, new seeds, C/D, and larger training budgets
+were not started. Original A/B code and results remain protected.
+
+Implementation: experiments/pure_integration_20261022/
+  approved_plan.json: earlier approved protocol, preserved as historical input
+  vendor/pure_core.py: pinned unchanged official function definitions
+  alignment.py: raw byte-BPE spans; nonfinal separator token, final EOS/last token
+  prm.py: native Qwen all-response scoring, frozen 7B, CRLF view only
+  signals.py: signed soft-min task reward, KL reward, RLOO, one whitening, PPO loss
+  trainer.py: independent PURE integration; original GRPO paths and optimizer blocked
+  offline_check.py: CPU tensor/gradient checks, tokenizer edges and historical replay
+  no_update.py: bounded real-model acceptance; no optimizer creation or step
+  dispatch_no_update.py: idempotent dispatch; existing receipts prevent duplicates
+  release.json: implementation and reused dependency hashes
+
+Completed probes are stored under remote_evidence/runs/.
+Attempt 1 stopped before model loading because standalone pynvml was absent.
+Attempt 2 used vLLM's bundled NVML reader and completed generation plus backward.
+A final official-source comparison found 67 nonfinal rewards were assigned to
+the last content token rather than the step-separator token. Attempt 3 corrects
+this and reuses the exact attempt-2 generated IDs. It repeats native scoring,
+P-VR/P-PRM backward and whole-model parameter hashes without new sampling.
+No change to reward magnitudes, RLOO, whitening, PPO or the verifier was made.
+
+Real evidence verifier:
+  python3 execution/pure_integration_20261022/verify_real_evidence.py \
+    --run execution/pure_integration_20261022/remote_evidence/runs/PURE_no_update_20261022_v3
+This is CPU-only. It checks actual tensors and preservation receipts.
+
+Two distinct conclusions:
+1. Implementation gates: read acceptance_receipt.json / real_acceptance.json.
+2. Reward-quality gate: the fixed empty-response edge input scores about 0.999918
+   with Qwen PRM, yielding about +0.499918 task reward in the approved adapter.
+   This is observed score behavior, not an observed training collapse. No empty
+   response penalty, mask or outcome gate was introduced. Decide and version
+   that boundary protocol before formal P-PRM training. Do not call an added
+   reward constraint a restoration of the pinned official formula.
+
+Historical 8,960-row logs lack original sampled IDs. Reconstructed token lengths
+mismatch 286 rows; 11 rows cannot be reconstructed under the current rules.
+No fabricated scores or exact-history claim. The final real probe retains the
+actual emitted IDs. 256 historical scored responses are formula replay only.
+
+Hardware claims: one shared A100-SXM4-80GB; no-update working-set measurement,
+not an A100-40GB guarantee, optimizer/resume acceptance, or convergence result.
+Generation timing in attempt 3 references the actual attempt-2 generation; no
+new generation was dispatched in attempt 3. Do not sum timings as if the two
+attempts were one uninterrupted throughput benchmark.

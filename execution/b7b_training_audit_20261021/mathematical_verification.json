@@ -1,0 +1,38 @@
+{
+  "B02_distance": "13",
+  "B03_square": "4*x**2 - 12*x + 9",
+  "B04_roots": [
+    12,
+    20,
+    60
+  ],
+  "B04_each_satisfies": true,
+  "B04_sum": 92,
+  "B05_remainder_a2": "0",
+  "B05_polynomial_at1": 92,
+  "B06_roots": [
+    "-5/7",
+    "10/7"
+  ],
+  "B10_lower_bound": "B+2/B >= 2 sqrt(2), B>0; equality B=sqrt(2)",
+  "B11_mean": 10.0,
+  "B12_sum": 112,
+  "B14_false_36_mod8": 4,
+  "B14_false_80_mod16": 0,
+  "B14_gcd_witness_3_1": 8,
+  "B15_enumeration": 504,
+  "B17_possible_values": [
+    18,
+    53
+  ],
+  "B18_distinct_primes": [
+    3,
+    7,
+    13,
+    29,
+    31,
+    89
+  ],
+  "B19_distance": "sqrt(59)",
+  "B20_percent": "15"
+}

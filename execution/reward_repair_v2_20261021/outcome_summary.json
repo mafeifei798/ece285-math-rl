@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "rows": 9120,
+  "elapsed_seconds": 5.974373992998153,
+  "logged_label_differences": 0,
+  "logged_validity_differences": 0,
+  "logged_status_differences": 0,
+  "unit_label_changes": 11,
+  "newly_eligible": 0,
+  "scoring_rows": 3713,
+  "scoring_groups": 546
+}

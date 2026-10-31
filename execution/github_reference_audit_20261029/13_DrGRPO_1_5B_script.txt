@@ -1,0 +1,28 @@
+https://github.com/sail-sg/understand-r1-zero/blob/dfca49dd460ee7cc8e4a5a162c876a7fd6993b87/examples/qwen2.5-math-1.5b.sh
+Upstream blob: 0e1eca3af5e0959b23e99f443223745c77f93bff
+EXCERPT ONLY
+12: # See the License for the specific language governing permissions and
+13: # limitations under the License.
+14: 
+15: N_GPU=8
+16: N_SAMPLE=8
+17: 
+18: # R1 template
+19: python train_zero_math.py \
+20:     --critic_type drgrpo \
+21:     --gpus $N_GPU \
+22:     --enable_prefix_caching \
+23:     --collocate \
+24:     --vllm_sleep \
+25:     --vllm_gpu_ratio 0.35 \
+26:     --gradient-checkpointing \
+27:     --flash-attn \
+28:     --bf16 \
+29:     --rnd-seed \
+30:     --learning_rate 0.000001 \
+31:     --lr_scheduler constant \
+32:     --num_ppo_epochs 1 \
+33:     --beta 0 \
+34:     --oracle_type reward \
+35:     --oracle math \
+36:     --pretrain Qwen/Qwen2.5-Math-1.5B \

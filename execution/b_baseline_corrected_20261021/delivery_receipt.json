@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "selected_baseline": "corrected_only_B",
+  "method_changes": false,
+  "new_training": false,
+  "hashes": {
+    "protected_before.json": "639531d2d991928f682709218b20a9683e251fb66ac554f85676eb6a65f6a730",
+    "input_manifest.json": "a6753bdf08751caa29b985c848c6d439580237dbe36f5f1247ab99868b34e04d",
+    "review.html": "063f3b02d695d6d6dd0e00cd3374688ac14db4e0b1967fa6d21b63d7c4e937e8",
+    "local_QA.json": "932115127e53c71c06629309e4704f8e04e508af7e056c88028769b79fb89cba",
+    "complete.json": "2b8e1a5035fd10cc45588c6917a3dabb736b2a6059bd9b1398cce8b6a310a160",
+    "REPORT.txt": "ff9351719cf67fb9fb761cf289b36a000095ff51ff82f42ffd221af6e127223a",
+    "runtime_QA.json": "de314a2009963cd6dea82e444f0f5af9ed68bb31bde9de3e5089b0c0e5d97c1e",
+    "replay.log": "13791c8482659b555a5a75319f52d0738da9f5f6161712f61562a7a85f360335",
+    "loss_input_trace.csv": "65216e62b91431c78ec298fa38e17db09511d2e0dbe813832ada1c56c5216e74"
+  }
+}

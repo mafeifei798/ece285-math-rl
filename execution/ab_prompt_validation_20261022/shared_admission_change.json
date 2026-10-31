@@ -1,0 +1,12 @@
+{
+  "new_release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+  "previous_release_sha256": "1a5f57dcf2823f6fc91b2e37baf66bef96851ab809e09253fcb2d69fc1df3c84",
+  "evaluation_source_sha256": "8c1f09ad11e3cae3024315abd73baab194f7b914fad6c93ff405c37fcd8696fb",
+  "free_MiB_before_launch": 37955,
+  "minimum_free_MiB": 30000,
+  "protocol_sha256": "86c6fc1176b24e1baf01cd6fc8ff248be3dba69b39a922f3d0cdbf6f9aa2ffaf",
+  "only_change": "one operational memory-admission assertion",
+  "new_training": false,
+  "recorded_unix": 1792699965.2786791,
+  "controller_pid_at_launch": 224797
+}

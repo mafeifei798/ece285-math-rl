@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "pid": 224804,
+  "started_unix": 1792699967.7541943,
+  "heartbeat_unix": 1792727243.5268517,
+  "release_sha256": "2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72",
+  "training": false,
+  "completed_predictions": 3992,
+  "target_predictions": 3992,
+  "gpu": 1,
+  "protection_before": {
+    "passed": true,
+    "files": 210
+  },
+  "gpu_before": "37955, 81920, 100",
+  "existing_gpu_processes": "GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3397300, 14458 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3398229, 13878 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3399155, 17920 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 3609705, 1814 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 26328, 942 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 76625, 1152 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 150899, 1018 MiB\nGPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 150905, 1018 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 3618365, 1762 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 4101640, 32942 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 24619, 1076 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 24929, 942 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 26183, 942 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 26859, 1076 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 29107, 940 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 63658, 1152 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 70089, 1152 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 70889, 1152 MiB\n",
+  "cell": "A_final_only",
+  "question_offset": 992,
+  "last_batch_seconds": 34.66973042488098,
+  "generated_completion_tokens": 2176338,
+  "elapsed_seconds": 27274.30416750908,
+  "finished_unix": 1792727243.5268514,
+  "protection_after": {
+    "passed": true,
+    "files": 210
+  }
+}

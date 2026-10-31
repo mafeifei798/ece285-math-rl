@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "status": "completed_no_update",
+  "optimizer_steps": 0,
+  "actor_and_prm_parameters_unchanged": true,
+  "original_AB_preserved": true,
+  "generation": {
+    "seconds": 57.50328917475417,
+    "tokens": 26557
+  },
+  "prm_cost": {
+    "seconds": 7.985054747201502,
+    "scored_responses": 32,
+    "prm_input_tokens": 29698,
+    "prm_padded_tokens": 37414
+  },
+  "stages": {
+    "actor_and_vllm_load": {
+      "seconds": 35.76583911199123,
+      "peak_allocated_bytes": 28411149312,
+      "peak_reserved_bytes": 28787605504
+    },
+    "prm_load": {
+      "seconds": 23.74267173698172,
+      "peak_allocated_bytes": 42679186944,
+      "peak_reserved_bytes": 43130028032
+    },
+    "parameter_hash_before": {
+      "seconds": 29.510557984933257,
+      "peak_allocated_bytes": 42679186944,
+      "peak_reserved_bytes": 43130028032
+    },
+    "generation": {
+      "seconds": 57.9524010149762,
+      "peak_allocated_bytes": 42844826624,
+      "peak_reserved_bytes": 43354423296
+    },
+    "native_prm_scoring": {
+      "seconds": 7.986503520980477,
+      "peak_allocated_bytes": 43317151744,
+      "peak_reserved_bytes": 43952111616
+    },
+    "native_edge_forwards": {
+      "seconds": 0.12908789981156588,
+      "peak_allocated_bytes": 42693718528,
+      "peak_reserved_bytes": 43952111616
+    },
+    "old_and_reference_logps": {
+      "seconds": 6.612417538184673,
+      "peak_allocated_bytes": 45830928896,
+      "peak_reserved_bytes": 48494542848
+    },
+    "signals": {
+      "seconds": 1.1887859273701906,
+      "peak_allocated_bytes": 42688428032,
+      "peak_reserved_bytes": 48494542848
+    },
+    "P_VR_backward": {
+      "seconds": 15.495144576765597,
+      "peak_allocated_bytes": 46702531584,
+      "peak_reserved_bytes": 49847205888
+    },
+    "P_PRM_backward": {
+      "seconds": 16.55695687001571,
+      "peak_allocated_bytes": 46702261248,
+      "peak_reserved_bytes": 49847205888
+    },
+    "parameter_hash_after": {
+      "seconds": 28.828985172789544,
+      "peak_allocated_bytes": 42692425216,
+      "peak_reserved_bytes": 49847205888
+    }
+  },
+  "generation_tokens_per_second": 461.83445123099835,
+  "prm_input_tokens_per_second": 3719.1980443726034,
+  "total_seconds": 234.81565642356873,
+  "exact_token_alignment_rows": 32,
+  "exact_mapped_steps": 446,
+  "outcome_counts": {
+    "correct": 15.0,
+    "total": 32
+  },
+  "truncated": 5,
+  "scored_all_responses": true,
+  "outcome_independence_passed": true,
+  "arms": {
+    "P_VR": {
+      "arm": "P_VR",
+      "loss_calls": 32,
+      "valid_tokens": 26557,
+      "gradient_norm": 0.04785016473130229,
+      "nonzero_gradient_tensors": 196,
+      "trainable_tensors": 392,
+      "optimizer_steps": 0,
+      "whitening_calls": 1,
+      "advantage_passed_to_loss_unchanged": true
+    },
+    "P_PRM": {
+      "arm": "P_PRM",
+      "loss_calls": 32,
+      "valid_tokens": 26557,
+      "gradient_norm": 0.055861252844535476,
+      "nonzero_gradient_tensors": 196,
+      "trainable_tensors": 392,
+      "optimizer_steps": 0,
+      "whitening_calls": 1,
+      "advantage_passed_to_loss_unchanged": true
+    }
+  },
+  "limitations": [
+    "One batch at original base/zero LoRA; not training convergence or accuracy.",
+    "GPU shared with other processes; timings are observed shared-device measurements.",
+    "No optimizer state allocated; memory is no-update working set, not certified training peak.",
+    "P_VR measured while frozen PRM remains resident for matched validation; standalone P_VR uses less memory.",
+    "No checkpoint-resume or multi-update lifecycle acceptance was attempted."
+  ]
+}

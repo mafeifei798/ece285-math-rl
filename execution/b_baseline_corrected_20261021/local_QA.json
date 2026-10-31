@@ -1,0 +1,9 @@
+{
+  "source_pins_verified": 24,
+  "training_started": false,
+  "protected_original_files_unchanged": 1119,
+  "replayed_rows_verified": 9056,
+  "independent_numpy_max_error": 7.235649956083279e-06,
+  "negative_controls_verified": 4,
+  "passed": true
+}

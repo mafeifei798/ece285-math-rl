@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "execution/reward_repair_v3_20261021/variants/combined.jsonl": "f30a8e8e6bcfa9f8fc744c58bed49cd84d50e138c949ec370709fee55f4ef897",
+    "execution/reward_repair_v3_20261021/paired_scores.jsonl": "f50e63cc90c5e3e7efa742104671173be0bcd2c30238950c2303b7fd9f69b0d6",
+    "execution/reward_repair_v3_20261021/final_receipt.json": "d883602374fdc94ed76f2a3146d5201ebcd4ba2eab52d9e3b0dca8927477ffcc",
+    "execution/b7b_training_audit_20261021/inputs/runs/B_Qwen7B_seed17_6M/rollouts.jsonl": "a4f44bc233940c93532ab9c8df4529b95c8bea42b391a9b17409b074725d39bf",
+    "execution/b7b_training_audit_20261021/inputs/data/prepared/train.jsonl": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",
+    "execution/qwen7b_offline_20261021/review_summary.json": "0abe665787e8c2c5bce098dcafa67153ae7d46fc09319f9d7d60be65784121fb"
+  },
+  "script_sha256": "286e0bbd0c91c13058055f7c44177c3e57dbb6a246c7bb3bf953d4b74742433d",
+  "originals_preserved": true
+}

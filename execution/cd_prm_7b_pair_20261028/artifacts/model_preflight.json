@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "prm_id": "Qwen/Qwen2.5-Math-PRM-7B",
+  "revision": "0610740060112df12585d00a1c5f4624d2f59051",
+  "native_marker_id": [
+    151651
+  ],
+  "classification_head_names": [
+    "base_model.model.score.0.weight",
+    "base_model.model.score.0.bias",
+    "base_model.model.score.2.weight",
+    "base_model.model.score.2.bias"
+  ],
+  "classification_head_frozen": true,
+  "trainable_parameters": 20185088,
+  "initial_adapter_hash": "2aff88f512b8b41071d4523cafa9ba44a8f5b7f879c59e7252feb40fe54fbded",
+  "no_optimizer_update": true,
+  "peak_allocated_GiB": 13.865128993988037,
+  "loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [
+      "lm_head.weight"
+    ],
+    "mismatched_keys": [],
+    "error_msgs": []
+  }
+}

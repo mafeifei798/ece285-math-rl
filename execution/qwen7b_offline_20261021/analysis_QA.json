@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "fixed_review_steps_checked": 469,
+  "original_eight_partners_preserved": true,
+  "scores_match_review_step_counts": true,
+  "actual_installed_TRL_tensor_kernel_used": true,
+  "independent_reference_groups": 7980,
+  "max_independent_advantage_difference": 1.0065140616744017e-05,
+  "new_training": false
+}

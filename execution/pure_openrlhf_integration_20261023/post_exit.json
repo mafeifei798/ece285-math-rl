@@ -1,0 +1,8 @@
+{
+  "time": 1792744835.8329113,
+  "runner_pid_present": false,
+  "runner": "    PID     ELAPSED STAT COMMAND\n",
+  "runner_on_gpu": false,
+  "gpu": "0, 42607 MiB, 100 %\n1, 66618 MiB, 100 %\n",
+  "note": "Read-only release check after successful no-update run"
+}

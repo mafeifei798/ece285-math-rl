@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "local_release_files_verified": 19,
+  "downloaded_input_hashes_verified": true,
+  "archived_advantage_audit_batches": 1710,
+  "offline_rows": 9120,
+  "paired_scored_rows": 3713,
+  "score_positions_and_raw_spans_checked": 91671,
+  "regression_tests_passed": 17,
+  "local_original_sources_unchanged": true,
+  "server_originals_unchanged": true,
+  "new_training": false,
+  "B_resumed": false,
+  "new_rollouts": 0,
+  "model_updates": 0
+}

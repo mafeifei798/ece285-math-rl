@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "scope": "mock subprocess and GPU query only; no model, remote or training execution",
+  "tests": [
+    {
+      "mode": "normal",
+      "passed": true,
+      "calls": 11,
+      "status": "completed_pilot"
+    },
+    {
+      "mode": "collapse",
+      "passed": true,
+      "calls": 7,
+      "status": "completed_pilot"
+    },
+    {
+      "mode": "worker_failure",
+      "passed": true,
+      "calls": 1,
+      "status": "failed"
+    },
+    {
+      "mode": "mismatch",
+      "passed": true,
+      "calls": 2,
+      "status": "failed"
+    }
+  ]
+}

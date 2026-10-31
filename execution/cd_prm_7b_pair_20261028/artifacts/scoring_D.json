@@ -1,0 +1,12 @@
+{
+  "arm": "D",
+  "sha256": "ed6f787516c7ff62617255cd2b345c8ffe5b3bb9fc61b696c8a0b71040698c3d",
+  "rows": 728,
+  "input_tokens_this_invocation": 462750,
+  "elapsed_seconds_this_invocation": 194.20793104171753,
+  "peak_allocated_GiB": 13.993298530578613,
+  "native_scoring": true,
+  "normalize_crlf": true,
+  "actor_updates": 0,
+  "adapter_sha256": "ab3a1856c576779a9955854d697ecf754381032de933bfad39b47775d7a9a4ab"
+}

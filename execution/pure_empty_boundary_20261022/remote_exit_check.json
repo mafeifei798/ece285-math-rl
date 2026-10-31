@@ -1,0 +1,11 @@
+{
+  "status": {
+    "status": "completed",
+    "pid": 3173565,
+    "optimizer_steps": 0,
+    "new_generations": 0
+  },
+  "process_still_exists": false,
+  "original_release_hashes_unchanged": true,
+  "optimizer_steps": 0
+}

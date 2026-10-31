@@ -1,0 +1,35 @@
+{
+  "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "adapter": "/srv/research/ece285_math_rl_project/runs/A_seed17/final_adapter",
+  "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+  "greedy": true,
+  "started_unix": 1792549114.6398847,
+  "datasets": {
+    "math500": {
+      "count": 500,
+      "correct": 281.0,
+      "accuracy": 0.562,
+      "generated_tokens": 357104,
+      "truncated": 36,
+      "predictions_sha256": "97795da6d7c6360d7e314b1d7755e9542464c438143f7de0f2c363b339e3586d"
+    },
+    "gsm8k": {
+      "count": 1319,
+      "correct": 925.0,
+      "accuracy": 0.7012888551933283,
+      "generated_tokens": 497906,
+      "truncated": 25,
+      "predictions_sha256": "22091ebd7dc6055254a8087b6d78e6fa62cd63367526b60ea91c7d8a3e8d6349"
+    }
+  },
+  "limitation": "Exact normalized question audit only; unknown checkpoint pretraining exposure and paraphrases are not ruled out.",
+  "prm800k_known_question_overlap": {
+    "train": 6993,
+    "validation": 500,
+    "math500": 0,
+    "gsm8k": 0,
+    "processbench_unique_questions": 847
+  },
+  "finished_unix": 1792551527.3512902,
+  "elapsed_seconds": 2412.7114057540894
+}

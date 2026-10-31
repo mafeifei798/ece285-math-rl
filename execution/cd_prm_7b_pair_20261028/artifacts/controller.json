@@ -1,0 +1,27 @@
+{
+  "status": "failed",
+  "pid": 3237174,
+  "started_unix": 1793174084.3281112,
+  "release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
+  "gpu": 1,
+  "sharing_authorized": true,
+  "completed_stages": [
+    "prepare",
+    "generate",
+    "schedule",
+    "preflight",
+    "adapt_C",
+    "adapt_D"
+  ],
+  "active_child": {
+    "stage": "paired_wiring",
+    "pid": 3503363,
+    "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/paired_wiring.log"
+  },
+  "actor_optimizer_updates": 0,
+  "automatic_RL_launch": false,
+  "stage_started_unix": 1793181919.746665,
+  "failure": "paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log",
+  "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
+  "failed_unix": 1793181921.917148
+}

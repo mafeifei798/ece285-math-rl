@@ -1,0 +1,11 @@
+{
+  "model": "sail/ActPRM-X",
+  "official_source": "https://huggingface.co/sail/ActPRM-X",
+  "official_author_reported_ProcessBench": 76.0,
+  "base": "Qwen/Qwen2.5-Math-PRM-7B",
+  "benchmark_scope": "Authors reported benchmark, not measured on our rollouts or in RL.",
+  "weights_downloaded": false,
+  "loaded_or_scored_in_this_audit": false,
+  "decision": "A reasonable one-candidate offline comparison if remaining ranking errors justify it; no automatic model replacement or RL launch.",
+  "integration": "Official native inference output semantics require inspection; do not assume it is a drop-in logits replacement."
+}

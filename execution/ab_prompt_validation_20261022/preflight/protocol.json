@@ -1,0 +1,71 @@
+{
+  "created_utc": "2026-10-22T19:04:21.106049+00:00",
+  "experiment": "ab_prompt_validation_20261022",
+  "authorization": "User requested existing A/B checkpoint prompt comparison on independent validation data; inference only; original outputs and grading preserved.",
+  "design": "2x2: A/B adapters x original/final_only prompts; same questions, greedy settings and frozen verifier.",
+  "templates": {
+    "original": "Question: {problem}\n\nPlease reason step by step, and put your final answer within \\boxed{{}}.\nAnswer:",
+    "final_only": "Question: {problem}\n\nPlease reason step by step before giving the answer. Do not put an answer in a box while reasoning. At the end, state your final answer exactly once within \\boxed{{}}, consistent with your completed reasoning. Do not add any text after that final answer.\nAnswer:"
+  },
+  "adapter_sha256": {
+    "A": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
+    "B": "c98d03b3a4d67223cf36552cbd1c11bbcf17148b15843fbd1b26b373abfa957f"
+  },
+  "datasets": {
+    "math_validation": 498,
+    "gsm8k_validation": 500
+  },
+  "cells": [
+    "A_original",
+    "A_final_only",
+    "B_original",
+    "B_final_only"
+  ],
+  "generation": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": -1,
+    "max_tokens": 2048,
+    "seed": 285,
+    "max_model_len": 4096,
+    "max_num_seqs": 32,
+    "max_num_batched_tokens": 4096,
+    "gpu_memory_utilization": 0.25,
+    "dtype": "bfloat16",
+    "enforce_eager": true,
+    "max_loras": 2
+  },
+  "question_chunk_size": 16,
+  "cell_order": "Rotate order each question chunk to balance execution order; same fixed order in receipts.",
+  "max_completions": 3992,
+  "max_generated_completion_tokens": 8175616,
+  "training": false,
+  "prm_scoring": false,
+  "checkpoint_selection": false,
+  "prompt_search": false,
+  "primary_metrics": [
+    "Frozen official accuracy per dataset and cell",
+    "Paired B-A under each prompt; paired prompt effect per adapter; interaction (Bfinal-Boriginal)-(Afinal-Aoriginal)"
+  ],
+  "secondary_metrics": [
+    "Truncated and invalid-box counts",
+    "Exactly one final box with no substantive text after it",
+    "Early last box: ends within first25% characters and >=100 characters follow",
+    "Assistant blind qualitative consistency review of fixed random12 questions x4 cells"
+  ],
+  "semantic_review": {
+    "GSM_questions": 8,
+    "MATH_questions": 4,
+    "selection_seed": 2851701,
+    "blind_to_arm_prompt_reward_and_gold_first": true,
+    "not_a_new_grader": true
+  },
+  "analysis": "10000 paired question bootstrap draws seed285; retain all four cells in each draw. Report uncertainty, no post-hoc accuracy relabeling.",
+  "unit_metadata": "Apply frozen repaired_outcome implementation; new validation question units declared before generation from question/gold only. Old metadata entries unchanged.",
+  "limitations": [
+    "Question-hash and ID disjointness from current RL training and original test sets; paraphrase/pretraining exposure not ruled out.",
+    "All498 MATH validation questions appear in the known PRM800K question inventory; not a PRM-clean benchmark. No PRM is used in this inference comparison.",
+    "This isolates inference prompt sensitivity on fixed policies, not causal training-time PRM effects.",
+    "Small blind consistency sample is qualitative; full-set box-position compliance is not proof of mathematical consistency."
+  ]
+}

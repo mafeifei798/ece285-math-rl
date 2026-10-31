@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-23T04:59:26.526979+00:00",
+  "source_commit": "b174e508a4469663543cfcb366be78cf199d20bf",
+  "source_file_count": 19,
+  "numerical_checks_passed": true,
+  "old_evidence_files_unchanged": 7,
+  "training_started": false,
+  "new_model_inference": false,
+  "files": {
+    "official_branch.json": "e5afb417ab6fac3d07945d91ca83c254594642ee694bf4695a59ab0e658cd172",
+    "qwen_prm_config.json": "70d5ef2f21af53e6c95252d8838f4898fbac6c83708a67c9c7c3f83f75318bbe",
+    "review.html": "bd8eb2687c083fe7c2f176187d120a07d60c851f41109d9efaa8c438c0f4175c",
+    "source_manifest.json": "bb5429ac3c8b4c6b6cf6dcdda862e515b1e7d84c63412525670916d5d49a6ef7",
+    "official_tree.json": "9924ad7b713bcb11a9ad5ab6d6b19668a957f459a4639fc23fbc0c6dca0ff8e8",
+    "numerical_checks.json": "2342f8a46d5dd4c96529cc6696f98381589ec959883166bd8c28c7f7cd5089a2",
+    "baseline_plan.json": "ba95a96c69ef0e936e7d7c147f63d14d5ac761f3f29d27a914f1928ced771488",
+    "build_report.py": "c8f7edb28c69bb976494755da01a731a9b75984ffd013feb3072e19201ba60ff",
+    "remote_readonly_evidence.json": "43a778fe056a9d4430b4c3d3b4642f0d415e22bebcb8416bffd3695c6a66158f",
+    "prm_compatibility_sources.json": "ab3b7d0b800a91aa20316a46a87a4e127087cf22baf7cfaf103352e9d050fc7c",
+    "current_evidence_pins.json": "86a5b7d604bbe915a4fed0715b9fb78c2825781702f229ffc78acb58d7dd7c96",
+    "check_official_math.py": "e075717aaee8baff1704048ce9b86c4d9cce75602645bff89bffc4f998cbbe58",
+    "pure_prm_config.json": "e0cf3f76180e964b23c3751acca10ff49bfcdca33e075b867ba3d8962cb4978c"
+  }
+}

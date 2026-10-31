@@ -1,0 +1,34 @@
+{
+  "scope": "Mutually exclusive verifier/output categories on paired wins/losses, not a causal decomposition of mathematical ability.",
+  "data": {
+    "math500": {
+      "截断": {
+        "wins": 4,
+        "losses": 9
+      },
+      "无可靠可验答案": {
+        "wins": 1,
+        "losses": 1
+      },
+      "完整可解析但验答不通过": {
+        "wins": 18,
+        "losses": 9
+      }
+    },
+    "gsm8k": {
+      "截断": {
+        "wins": 7,
+        "losses": 3
+      },
+      "无可靠可验答案": {
+        "wins": 6,
+        "losses": 6
+      },
+      "完整可解析但验答不通过": {
+        "wins": 47,
+        "losses": 49
+      }
+    }
+  },
+  "official_scores_unchanged": true
+}

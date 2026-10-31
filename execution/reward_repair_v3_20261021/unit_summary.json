@@ -1,0 +1,1201 @@
+{
+  "A_train": {
+    "n": 8960,
+    "old_correct": 3725.0,
+    "new_correct": 3734.0,
+    "changes": [
+      {
+        "source_row": 2096,
+        "problem_id": "math/train/prealgebra/813",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 4822,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 5365,
+        "problem_id": "math/train/geometry/336",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "54\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "54\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "54",
+          "gold_in_requested_unit": "54"
+        }
+      },
+      {
+        "source_row": 8513,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8517,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8519,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8749,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8750,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8751,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      }
+    ]
+  },
+  "A_math500": {
+    "n": 500,
+    "old_correct": 281.0,
+    "new_correct": 281.0,
+    "changes": []
+  },
+  "A_gsm8k": {
+    "n": 1319,
+    "old_correct": 925.0,
+    "new_correct": 935.0,
+    "changes": [
+      {
+        "source_row": 14,
+        "problem_id": "gsm8k/test/14",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "60\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "60\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "60",
+          "gold_in_requested_unit": "60"
+        }
+      },
+      {
+        "source_row": 140,
+        "problem_id": "gsm8k/test/140",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 393,
+        "problem_id": "gsm8k/test/393",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 473,
+        "problem_id": "gsm8k/test/473",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "10\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "10\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "10",
+          "gold_in_requested_unit": "10"
+        }
+      },
+      {
+        "source_row": 772,
+        "problem_id": "gsm8k/test/772",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "50\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "50\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "50",
+          "gold_in_requested_unit": "50"
+        }
+      },
+      {
+        "source_row": 890,
+        "problem_id": "gsm8k/test/890",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 999,
+        "problem_id": "gsm8k/test/999",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 1079,
+        "problem_id": "gsm8k/test/1079",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "10\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "10\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "10",
+          "gold_in_requested_unit": "10"
+        }
+      },
+      {
+        "source_row": 1094,
+        "problem_id": "gsm8k/test/1094",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 1159,
+        "problem_id": "gsm8k/test/1159",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "50\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "50\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "50",
+          "gold_in_requested_unit": "50"
+        }
+      }
+    ]
+  },
+  "B_old_train": {
+    "n": 9120,
+    "old_correct": 3699.0,
+    "new_correct": 3710.0,
+    "changes": [
+      {
+        "source_row": 2098,
+        "problem_id": "math/train/prealgebra/813",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 4816,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 4819,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 4821,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 4822,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 5361,
+        "problem_id": "math/train/geometry/336",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "54\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "54\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "54",
+          "gold_in_requested_unit": "54"
+        }
+      },
+      {
+        "source_row": 5364,
+        "problem_id": "math/train/geometry/336",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "54\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "54\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "54",
+          "gold_in_requested_unit": "54"
+        }
+      },
+      {
+        "source_row": 8519,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8745,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8748,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8750,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      }
+    ]
+  },
+  "B_old_math500": {
+    "n": 500,
+    "old_correct": 255.0,
+    "new_correct": 255.0,
+    "changes": []
+  },
+  "B_old_gsm8k": {
+    "n": 1319,
+    "old_correct": 820.0,
+    "new_correct": 829.0,
+    "changes": [
+      {
+        "source_row": 14,
+        "problem_id": "gsm8k/test/14",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "60\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "60\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "60",
+          "gold_in_requested_unit": "60"
+        }
+      },
+      {
+        "source_row": 140,
+        "problem_id": "gsm8k/test/140",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 184,
+        "problem_id": "gsm8k/test/184",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 393,
+        "problem_id": "gsm8k/test/393",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 772,
+        "problem_id": "gsm8k/test/772",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "50\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "50\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "50",
+          "gold_in_requested_unit": "50"
+        }
+      },
+      {
+        "source_row": 890,
+        "problem_id": "gsm8k/test/890",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 999,
+        "problem_id": "gsm8k/test/999",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 1094,
+        "problem_id": "gsm8k/test/1094",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 1159,
+        "problem_id": "gsm8k/test/1159",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "50\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "50\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "50",
+          "gold_in_requested_unit": "50"
+        }
+      }
+    ]
+  },
+  "B7_train": {
+    "n": 9056,
+    "old_correct": 3690.0,
+    "new_correct": 3708.0,
+    "changes": [
+      {
+        "source_row": 2096,
+        "problem_id": "math/train/prealgebra/813",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 2098,
+        "problem_id": "math/train/prealgebra/813",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 2101,
+        "problem_id": "math/train/prealgebra/813",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 2102,
+        "problem_id": "math/train/prealgebra/813",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 4817,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 4818,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 4819,
+        "problem_id": "math/train/algebra/1503",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "64"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "64",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "64",
+          "gold_in_requested_unit": "64"
+        }
+      },
+      {
+        "source_row": 5362,
+        "problem_id": "math/train/geometry/336",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "54\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "54\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "54",
+          "gold_in_requested_unit": "54"
+        }
+      },
+      {
+        "source_row": 5363,
+        "problem_id": "math/train/geometry/336",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "54\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "54\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "54",
+          "gold_in_requested_unit": "54"
+        }
+      },
+      {
+        "source_row": 8514,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8515,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8517,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8518,
+        "problem_id": "math/train/number_theory/303",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 8744,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8745,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8746,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8747,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      },
+      {
+        "source_row": 8750,
+        "problem_id": "math/train/counting_and_probability/578",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "15\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "15\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "15",
+          "gold_in_requested_unit": "15"
+        }
+      }
+    ]
+  },
+  "B7_math500": {
+    "n": 500,
+    "old_correct": 276.0,
+    "new_correct": 276.0,
+    "changes": []
+  },
+  "B7_gsm8k": {
+    "n": 1319,
+    "old_correct": 894.0,
+    "new_correct": 904.0,
+    "changes": [
+      {
+        "source_row": 14,
+        "problem_id": "gsm8k/test/14",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "60\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "60\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "60",
+          "gold_in_requested_unit": "60"
+        }
+      },
+      {
+        "source_row": 140,
+        "problem_id": "gsm8k/test/140",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 393,
+        "problem_id": "gsm8k/test/393",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "20\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "20\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "20",
+          "gold_in_requested_unit": "20"
+        }
+      },
+      {
+        "source_row": 458,
+        "problem_id": "gsm8k/test/458",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "35\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "35\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "35",
+          "gold_in_requested_unit": "35"
+        }
+      },
+      {
+        "source_row": 473,
+        "problem_id": "gsm8k/test/473",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "10\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "10\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "10",
+          "gold_in_requested_unit": "10"
+        }
+      },
+      {
+        "source_row": 772,
+        "problem_id": "gsm8k/test/772",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "50\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "50\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "50",
+          "gold_in_requested_unit": "50"
+        }
+      },
+      {
+        "source_row": 890,
+        "problem_id": "gsm8k/test/890",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 999,
+        "problem_id": "gsm8k/test/999",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 1094,
+        "problem_id": "gsm8k/test/1094",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "25\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "25\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "25",
+          "gold_in_requested_unit": "25"
+        }
+      },
+      {
+        "source_row": 1159,
+        "problem_id": "gsm8k/test/1159",
+        "old": {
+          "reward": 0.0,
+          "status": "symbolic",
+          "answer": "50\\%"
+        },
+        "new": {
+          "reward": 1.0,
+          "status": "unit_exact",
+          "answer": "50\\%",
+          "answer_type": "percent_value",
+          "prediction_in_requested_unit": "50",
+          "gold_in_requested_unit": "50"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "checked_pt": "2026-10-21T03:20:15.161416-07:00",
+  "receipts": {
+    "B_controller": {
+      "status": "queued_after_A_training_and_evaluation",
+      "pid": 1898321,
+      "started_unix": 1792577694.9436934,
+      "scope": "Only B seed 17, pilot, 24M training and the three fixed milestone evaluations. No C/D or additional seeds.",
+      "target_completion_tokens": 24000000,
+      "A_sources_unchanged": true,
+      "replication_gate_executed": false,
+      "heartbeat_unix": 1792577994.9525769,
+      "child_pid": null,
+      "gpu": null
+    },
+    "B_assets": {
+      "status": "downloading",
+      "model_revision": "bc44d4a24bf1f7453fc3892dec25c4669e54ede5",
+      "finished_unix": null,
+      "error": null
+    },
+    "B_download": {
+      "status": "recovering_missing_ranges",
+      "file": "model.safetensors",
+      "completed_parts": 114,
+      "total_parts": 737,
+      "new_bytes_this_recovery": 75497472,
+      "new_bytes_per_second": 1196715.446593831,
+      "failed_parts": [],
+      "heartbeat_unix": 1792578014.7196524
+    },
+    "B_cpu_tests": {
+      "passed": true,
+      "exit_code": 0,
+      "stdout": "...........                                                              [100%]\n11 passed in 6.04s\n",
+      "stderr": "",
+      "time": 1792577558.5638776,
+      "actual_pinned_tokenizer_used": true
+    },
+    "B_boundary_audit": {
+      "passed": true,
+      "checked": 48,
+      "max_input_tokens": 2028
+    },
+    "A_progress": {
+      "generated_completion_tokens": 21992708,
+      "generated_completions": 31552,
+      "generated_groups": 3944,
+      "mixed_reward_groups": 3049,
+      "correct_completions": 14623,
+      "truncated_completions": 2034,
+      "reward_status_counts": {
+        "symbolic": 13919,
+        "truncated": 2034,
+        "exact": 13115,
+        "missing_or_invalid_box": 2170,
+        "unparseable": 314
+      },
+      "last_batch": {
+        "generated_completion_tokens": 22880,
+        "generated_completions": 32,
+        "generated_groups": 4,
+        "mixed_reward_groups": 4,
+        "correct_completions": 18,
+        "truncated_completions": 1
+      },
+      "global_step": 986,
+      "elapsed_seconds": 20025.635318021756,
+      "target_completion_tokens": 24000000,
+      "effective_completion_tokens_per_second": 797.6049072273756,
+      "torch_peak_allocated_GiB": 31.560503482818604,
+      "torch_peak_reserved_GiB": 32.41796875,
+      "resumed_from_global_step": 280,
+      "source_completion_tokens": 6020163,
+      "continuation_generated_completion_tokens": 15972545
+    }
+  },
+  "B_controller_alive": true,
+  "B_heartbeat_age_seconds": 20.209254026412964,
+  "A_heartbeat_age_seconds": 20.402991771697998,
+  "GPU": "GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 1459150, /srv/research/ece285_math_rl_project/.venv/bin/python, 33764 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1511394, /srv/research/rna_structure_autoencoder_20260905/env/bin/python, 7102 MiB\n",
+  "A_sources_unchanged": true
+}

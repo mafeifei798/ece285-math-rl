@@ -1,0 +1,62 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607458.3034203, "arm": "B", "completed": 4, "total": 284, "input_tokens": 302, "elapsed_seconds": 0.31967907724902034}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607458.8253949, "arm": "B", "completed": 20, "total": 284, "input_tokens": 2840, "elapsed_seconds": 0.8416765369474888}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607459.5260785, "arm": "B", "completed": 36, "total": 284, "input_tokens": 6679, "elapsed_seconds": 1.5423538503237069}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607460.3848283, "arm": "B", "completed": 52, "total": 284, "input_tokens": 11379, "elapsed_seconds": 2.401107461191714}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607461.3016348, "arm": "B", "completed": 68, "total": 284, "input_tokens": 16568, "elapsed_seconds": 3.317869076039642}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607462.274012, "arm": "B", "completed": 84, "total": 284, "input_tokens": 22259, "elapsed_seconds": 4.290295516140759}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607463.3275845, "arm": "B", "completed": 100, "total": 284, "input_tokens": 28287, "elapsed_seconds": 5.343856097199023}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607464.4945786, "arm": "B", "completed": 116, "total": 284, "input_tokens": 35087, "elapsed_seconds": 6.510856347158551}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607465.787084, "arm": "B", "completed": 132, "total": 284, "input_tokens": 42574, "elapsed_seconds": 7.8033642172813416}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607467.2355998, "arm": "B", "completed": 148, "total": 284, "input_tokens": 51302, "elapsed_seconds": 9.251880053896457}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607468.8366761, "arm": "B", "completed": 164, "total": 284, "input_tokens": 60825, "elapsed_seconds": 10.852955233305693}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607470.596004, "arm": "B", "completed": 180, "total": 284, "input_tokens": 71431, "elapsed_seconds": 12.612284854985774}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607472.6405394, "arm": "B", "completed": 196, "total": 284, "input_tokens": 83404, "elapsed_seconds": 14.656816744245589}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607475.1200998, "arm": "B", "completed": 212, "total": 284, "input_tokens": 97103, "elapsed_seconds": 17.1363802482374}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607477.7401497, "arm": "B", "completed": 228, "total": 284, "input_tokens": 113045, "elapsed_seconds": 19.756426703184843}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607480.7168388, "arm": "B", "completed": 244, "total": 284, "input_tokens": 130884, "elapsed_seconds": 22.73311735317111}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607484.0704975, "arm": "B", "completed": 260, "total": 284, "input_tokens": 151052, "elapsed_seconds": 26.0867802281864}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607488.354882, "arm": "B", "completed": 276, "total": 284, "input_tokens": 176538, "elapsed_seconds": 30.371159330941737}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607490.9767237, "arm": "B", "completed": 284, "total": 284, "input_tokens": 191929, "elapsed_seconds": 32.993007177021354}
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607497.0049427, "arm": "C", "completed": 4, "total": 284, "input_tokens": 302, "elapsed_seconds": 0.10002210782840848}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607497.5643346, "arm": "C", "completed": 20, "total": 284, "input_tokens": 2840, "elapsed_seconds": 0.6594146247953176}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607498.3383193, "arm": "C", "completed": 36, "total": 284, "input_tokens": 6679, "elapsed_seconds": 1.4333995529450476}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607499.2749515, "arm": "C", "completed": 52, "total": 284, "input_tokens": 11379, "elapsed_seconds": 2.3700314951129258}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607500.275068, "arm": "C", "completed": 68, "total": 284, "input_tokens": 16568, "elapsed_seconds": 3.3701365529559553}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607501.353499, "arm": "C", "completed": 84, "total": 284, "input_tokens": 22259, "elapsed_seconds": 4.448571310844272}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607502.4958704, "arm": "C", "completed": 100, "total": 284, "input_tokens": 28287, "elapsed_seconds": 5.590941964183003}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607503.7823555, "arm": "C", "completed": 116, "total": 284, "input_tokens": 35087, "elapsed_seconds": 6.877428689040244}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607505.1991787, "arm": "C", "completed": 132, "total": 284, "input_tokens": 42574, "elapsed_seconds": 8.29425305686891}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607506.762584, "arm": "C", "completed": 148, "total": 284, "input_tokens": 51302, "elapsed_seconds": 9.857658185064793}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607508.4978268, "arm": "C", "completed": 164, "total": 284, "input_tokens": 60825, "elapsed_seconds": 11.592904124874622}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607510.4262693, "arm": "C", "completed": 180, "total": 284, "input_tokens": 71431, "elapsed_seconds": 13.521337338723242}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607512.611994, "arm": "C", "completed": 196, "total": 284, "input_tokens": 83404, "elapsed_seconds": 15.707066836766899}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607515.0508294, "arm": "C", "completed": 212, "total": 284, "input_tokens": 97103, "elapsed_seconds": 18.14590414473787}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607517.8890066, "arm": "C", "completed": 228, "total": 284, "input_tokens": 113045, "elapsed_seconds": 20.984083862043917}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607521.1019428, "arm": "C", "completed": 244, "total": 284, "input_tokens": 130884, "elapsed_seconds": 24.197014892939478}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607524.7264285, "arm": "C", "completed": 260, "total": 284, "input_tokens": 151052, "elapsed_seconds": 27.821503093931824}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607529.3512652, "arm": "C", "completed": 276, "total": 284, "input_tokens": 176538, "elapsed_seconds": 32.44633894274011}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607532.1655014, "arm": "C", "completed": 284, "total": 284, "input_tokens": 191929, "elapsed_seconds": 35.26057901792228}
+You're using a Qwen2TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607538.4885707, "arm": "D", "completed": 4, "total": 284, "input_tokens": 302, "elapsed_seconds": 0.09826448792591691}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607539.0953643, "arm": "D", "completed": 20, "total": 284, "input_tokens": 2840, "elapsed_seconds": 0.7050651139579713}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607539.8635008, "arm": "D", "completed": 36, "total": 284, "input_tokens": 6679, "elapsed_seconds": 1.473205441609025}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607540.788631, "arm": "D", "completed": 52, "total": 284, "input_tokens": 11379, "elapsed_seconds": 2.3983345036394894}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607541.7826807, "arm": "D", "completed": 68, "total": 284, "input_tokens": 16568, "elapsed_seconds": 3.392383148893714}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607542.840325, "arm": "D", "completed": 84, "total": 284, "input_tokens": 22259, "elapsed_seconds": 4.450027152895927}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607543.9734063, "arm": "D", "completed": 100, "total": 284, "input_tokens": 28287, "elapsed_seconds": 5.583108705934137}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607545.2573776, "arm": "D", "completed": 116, "total": 284, "input_tokens": 35087, "elapsed_seconds": 6.8670742167159915}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607546.6670778, "arm": "D", "completed": 132, "total": 284, "input_tokens": 42574, "elapsed_seconds": 8.276779283769429}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607548.242085, "arm": "D", "completed": 148, "total": 284, "input_tokens": 51302, "elapsed_seconds": 9.851785469800234}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607549.9902143, "arm": "D", "completed": 164, "total": 284, "input_tokens": 60825, "elapsed_seconds": 11.599910837598145}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607551.9042015, "arm": "D", "completed": 180, "total": 284, "input_tokens": 71431, "elapsed_seconds": 13.513902624603361}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607554.081582, "arm": "D", "completed": 196, "total": 284, "input_tokens": 83404, "elapsed_seconds": 15.691284386906773}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607556.5417678, "arm": "D", "completed": 212, "total": 284, "input_tokens": 97103, "elapsed_seconds": 18.151466281618923}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607559.4017467, "arm": "D", "completed": 228, "total": 284, "input_tokens": 113045, "elapsed_seconds": 21.011446841992438}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607562.6247592, "arm": "D", "completed": 244, "total": 284, "input_tokens": 130884, "elapsed_seconds": 24.234462808817625}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607566.2526648, "arm": "D", "completed": 260, "total": 284, "input_tokens": 151052, "elapsed_seconds": 27.8623672099784}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607570.8717608, "arm": "D", "completed": 276, "total": 284, "input_tokens": 176538, "elapsed_seconds": 32.481459815986454}
+{"stage": "scoring", "pid": 2402205, "time_unix": 1792607573.6923919, "arm": "D", "completed": 284, "total": 284, "input_tokens": 191929, "elapsed_seconds": 35.302094243932515}
+{"stage": "checks_complete", "pid": 2402205, "time_unix": 1792607575.177367, "summary_path": "/srv/research/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/artifacts/summary.json", "processbench_scored": 96, "known_error_cases": 3, "actor_RL_started": false}

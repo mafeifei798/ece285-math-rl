@@ -1,0 +1,36 @@
+https://github.com/huggingface/trl/blob/v0.23.1/trl/trainer/grpo_trainer.py
+Upstream blob: 7c4e5d265bec323f7e8e1eb1657ae450fb4f5e4b
+EXCERPT ONLY
+1433:         # Calculate rewards for each reward function. rewards_per_func aggregates rewards across all processes. This is
+1434:         # important because rewards will be normalized per group, and completions are distributed. We will later slice
+1435:         # rewards_per_func to extract each process's subset.
+1436:         rewards_per_func = self._calculate_rewards(inputs, original_prompts, completions, completion_ids_list)
+1437: 
+1438:         # Apply weights to each reward function's output and sum
+1439:         rewards = (rewards_per_func * self.reward_weights.to(device).unsqueeze(0)).nansum(dim=1)
+1440: 
+1441:         # Compute grouped-wise rewards
+1442:         mean_grouped_rewards = rewards.view(-1, self.num_generations).mean(dim=1)
+1443: 
+1444:         # Normalize the rewards to compute the advantages
+1445:         mean_grouped_rewards = mean_grouped_rewards.repeat_interleave(self.num_generations, dim=0)
+1446:         advantages = rewards - mean_grouped_rewards
+1447: 
+1448:         if self.scale_rewards in ["group", "none"]:
+1449:             # If self.scale_rewards = "none", we'll still log group level std
+1450:             std_rewards = rewards.view(-1, self.num_generations).std(dim=1)
+1451:             std_rewards = std_rewards.repeat_interleave(self.num_generations, dim=0)
+1452:         elif self.scale_rewards == "batch":
+1453:             # Compute global std
+1454:             std_rewards = rewards.std().expand_as(rewards)
+1455:         else:
+1456:             raise ValueError(
+1457:                 f"Invalid value for scale_rewards: {self.scale_rewards}. Must be one of 'batch', 'group', or 'none'."
+1458:             )
+1459: 
+1460:         is_std_zero = torch.isclose(std_rewards, torch.zeros_like(std_rewards))
+1461:         if self.scale_rewards != "none":
+1462:             advantages = advantages / (std_rewards + 1e-4)
+1463: 
+1464:         # Slice to keep only the local part of the data
+1465:         process_slice = slice(

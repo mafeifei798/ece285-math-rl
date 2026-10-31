@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-23T04:26:57.029110+00:00",
+  "passed": true,
+  "downloaded_files_unchanged": 35,
+  "official_rows": 3992,
+  "official_counts_recomputed": true,
+  "all_998_prompt_pairs_match_frozen_templates": true,
+  "sealed_review_sha256": "579720d8d7069f1247ec639c60fb1aef30be7b7a61beb68504ca8f23a7697f80",
+  "old_AB_report_unchanged": true,
+  "old_AB_report_sha256": "5f78b5fe522608b6f46a33035d4cde2061a2f55d09729ac6878d638926c643ea",
+  "new_generation": false,
+  "new_training": false,
+  "new_grading_rule": false,
+  "outputs": {
+    "review.html": "d8dae71507952290368c8e4c9184311bed1f4042667ab2ee7b0327eb56bb4dc4",
+    "qualitative_cases.html": "aa2b7d5021e0fb5d56824d9c895a1e13d766c6970b1ec6511aad650b8ef7d073",
+    "final_analysis_summary.json": "6550a68a02b6876483fb279b1a73163a3220d620a07703d36177a9ebe7806ded",
+    "qualitative_review_unblinded.json": "44be248f247414e9adc548729e4e1e244dd7b9270d267f812a6360dfe44cebe7",
+    "supplementary_failure_analysis.json": "631ab810c56a028ef5a6757fe8a0c8c3769c6d1b5963a188150240b3ca28a7dd"
+  }
+}

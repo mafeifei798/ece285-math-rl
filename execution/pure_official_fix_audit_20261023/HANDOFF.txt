@@ -1,0 +1,9 @@
+PURE official boundary audit completed. No training authorized or launched.
+Primary recommendation: pair P-VR/P-PRM using complete pinned official OpenRLHF signal family 41f9363b.
+This is a separate official-branch baseline/resource adaptation, not a neutral veRL bug fix or paper-v3 end-to-end reproduction.
+All existing A/B and earlier PURE artifacts preserved by hash.
+Read review.html, openrlhf_signal_reference_summary.json and experiments/pure_official_fix_audit_20261023/protocol.json.
+CPU signal reference passed 256 saved reconstructed responses, 8 EOS-only empties.
+Official PRM raw empty signals remain positive; boundary mask makes their direct final advantages exactly zero.
+Do not claim semantic PRM reliability or learned accuracy improved. Nonempty junk and peer baseline contamination remain.
+No GPU/SSH was used this audit. Runtime integration, new generation, and training remain unexecuted.

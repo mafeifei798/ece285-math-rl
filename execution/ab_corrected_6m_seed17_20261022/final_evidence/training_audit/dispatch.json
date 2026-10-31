@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "pid": 3445421,
+  "started_unix": 1792678713.8553953,
+  "script_sha256": "1ffb2ccc15d55e3c18a19fb44371f3bb6f5af2a426465d4dc209816faf14bd97",
+  "arms": {
+    "A": {
+      "pid": 3445424,
+      "started_unix": 1792678713.8560305,
+      "command": [
+        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/audit_completed_training.py",
+        "--root",
+        "/srv/research/ece285_math_rl_project",
+        "--arm",
+        "A",
+        "--output",
+        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/training_final_20261022/A.json"
+      ],
+      "returncode": 0,
+      "finished_unix": 1792678714.7263978
+    },
+    "B": {
+      "pid": 3445426,
+      "started_unix": 1792678714.7274213,
+      "command": [
+        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/audit_completed_training.py",
+        "--root",
+        "/srv/research/ece285_math_rl_project",
+        "--arm",
+        "B",
+        "--output",
+        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/training_final_20261022/B.json"
+      ],
+      "returncode": 0,
+      "finished_unix": 1792678715.8994148
+    }
+  },
+  "finished_unix": 1792678715.8998647
+}

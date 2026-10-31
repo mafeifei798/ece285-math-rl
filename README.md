@@ -1,99 +1,91 @@
-# ECE285 — Mathematical Reasoning RL and Process Rewards
+# Mathematical Reasoning RL: Outcome and Process Rewards
 
-三人课程研究项目：**小模型数学推理 GRPO 中的过程奖励、失败诊断与结果门控**。
+ECE285 三人课程研究项目：使用 **Qwen2.5-Math-1.5B、GRPO 与 LoRA**，研究过程奖励的失败模式和有界过程偏好。成员：Hongyi Ding、Jasmine Jiang、Yang Zeng。主要硬件：一张共享 A100 80GB。此仓库是截至 **2026-10-31** 的脱敏代码与结果审阅快照。
 
-策略模型：Qwen2.5-Math-1.5B base；过程评分器：冻结的 Qwen2.5-Math-PRM-7B；主要硬件：A100 80GB。
+> **GPU 已按用户要求暂停，不自动恢复。** 新一轮约 6M 的三组续训尚未完成：A 保存至第 115 步（2,390,451 个生成 token），C-mix/C-bounded 保存至第 50 步。下表来自已完成的共同第 48 步评测，不能用暂停时不同步数的模型作公平比较。
 
-## 先看这三个地方
+## 先看这些
 
-1. [当前完整方案](docs/CURRENT_PLAN.txt)：研究问题、四组实验、预算、评测、分工与时间线。
-2. [纠错后的正式 A/B 结果](results/corrected_ab_seed17_6m.json)：已完成、单 seed、匹配生成 token 预算。
-3. [已纠错 A/B 的训练实现](experiments/ab_corrected_6m_seed17_20261022/train_arm.py) 与 [原 GRPO runner](training/train_baseline.py)。
+1. [当前方案与实验边界](docs/CURRENT_PLAN.txt) · [机器可读状态](results/current_status.json)
+2. [统一四模型评测报告](execution/final_four_eval_20261029/REPORT.txt) · [统计结果](results/unified_four_model_1m.json)
+3. [历史 6M A 的统一协议重评](execution/a6m_protocol_recheck_20261029/REPORT.txt) · [运行路径审计](execution/a6m_protocol_recheck_20261029/runtime_audit.json)
+4. [暂停与完整断点记录](execution/abc_seed17_resume6m_v1_20261030/pause_receipt.json)
 
-## 当前完成到哪里
+## 已完成结果
 
-| 部分 | 状态 |
-|---|---|
-| 结果奖励 A / 结果＋PRM 的 B | 各约 6M completion tokens、seed17 已完成；训练/信号/评测审计通过 |
-| 验答与分段修复 | 已实现并保留离线回放与版本记录 |
-| A/B 提示词 2×2 对照 | 已完成 3,992 次推理，未改善 B 的表现 |
-| 原 C/D 的 PRM 适配 | 仅小规模探索；没有支持扩大训练的正面证据 |
-| PURE OpenRLHF | 独立单卡 LoRA pilot 与官方信号源码核对；不是完整论文配置复现，进度快照不能当实时状态 |
-| **结果门控 G / 分数置换 S** | **方案与 CPU 算术可行性检查；尚未接入正式训练** |
+同一 V1 推理路径、冻结验答器、greedy decoding、输出上限 2,048 token；无投票或 PRM 重排。训练三组均为 seed17、第 48 步、相同题目顺序。`1M` 指约一百万个实际生成的 completion token，不是数据集大小。
 
-正式 A/B：greedy、同一冻结验答器、最多 2,048 tokens，无投票或 PRM 重排。
+| 模型 | 训练生成 token | MATH500 | GSM8K |
+|---|---:|---:|---:|
+| 初始模型 | 0 | 245/500 · 49.00% | 750/1319 · 56.86% |
+| A：结果奖励 | 1,005,003 | 247/500 · 49.40% | 752/1319 · 57.01% |
+| C-mix：结果＋过程奖励 | 1,001,853 | 250/500 · 50.00% | 764/1319 · 57.92% |
+| C-bounded：有界过程偏好 | 1,009,017 | 251/500 · 50.20% | 754/1319 · 57.16% |
 
-| 数据集 | A | B | B−A（95% 配对题目区间） |
-|---|---:|---:|---|
-| MATH500 | 54.00% | 53.80% | −0.20 pp [−4.00, +3.60] |
-| GSM8K | 67.02% | 64.97% | −2.05 pp [−4.25, +0.08] |
+C-bounded−A：MATH500 **+0.80 pp，95% 配对区间 [−1.80, +3.40]**；GSM8K **+0.15 pp，[−1.44, +1.74]**。尚未建立稳定的准确率收益；区间覆盖题目抽样，不覆盖训练 seed 的不确定性。
 
-只有一个训练 seed，两个区间均含零：尚未观察到 B 的收益，不能据此宣称 PRM 普遍有害、等效或非劣。
+![统一四模型准确率](execution/final_four_eval_20261029/accuracy.png)
 
-## 当前四组设计（计划）
+历史 6M A（6,022,435 token、第 284 步）本轮 V1 重评为 **MATH500 55.00%、GSM8K 68.69%**。旧 54.00%/67.02% 记录使用 V0，引擎、缓存和调度配置共同改变，未精确复现。历史 6M A 与当前 1M A 也来自不同训练轨迹，不能把全部差值归因于训练 token 数。
 
-令 `y` 是固定验答器的 0/1 结果，`m` 是原生步骤 PRM 正类概率的最小值。
+## 具体改动
 
-| 组 | reward | 比较作用 |
+`y` 是固定规则给出的终答 0/1 奖励，`m` 是同一冻结、经 C 适配的 7B PRM 给出的最低步骤概率。**验证规则/PRM 提供奖励，GRPO 利用信号更新策略。**
+
+| 组 | 训练信号 | 对照作用 |
 |---|---|---|
-| A | `y` | 纯结果奖励 |
-| B | `y + 0.2*m` | 现有混合奖励 |
-| G | `y*(1 + 0.2*m)` | 相对 B 只移除错误回答的过程项 |
-| S | 同 G，正确回答内部随机交换 `m` | 检验回答与评分的对应信息 |
+| A | 对 `y` 作普通组内标准化 | 结果奖励基线 |
+| C-mix | 对 `y + 0.2*m` 作组内标准化 | 检验直接混入过程分的行为 |
+| C-bounded | `A_out + 0.2*y*(m − mean_correct(m))`，合成后不再标准化 | 保留结果优势，仅在正确回答内部加入有界过程偏好 |
 
-GRPO 标准化、loss、KL、clipping 与原设置一致。G−A 是主要实际收益比较，G−B 看门控，G−S 看分数归属。门控思想已有先行工作，本项目不声称新的 RL 范式。
+精确定义见 [advantages.py](experiments/c_bounded_pilot_20261029_v2/advantages.py)。C-bounded 的过程项绝对值不超过 0.2；错答不会获得正优势，全错组为零。这是代数性质，**不等于已证明数学能力提升**。终答正确也不保证推导有效。我们不声称首创门控或新的 RL 范式。
 
-## 代码地图
+C-mix 的约 1M 训练记录中有 82 条错答得到正优势，A/C-bounded 为 0，后两者受其定义约束。诊断区分 PRM 排序、组类型、分段和实际送入 loss 的 advantage；系数统计不被当作梯度贡献或因果证明。
 
-目录保持原有层级，避免破坏跨版本依赖。
+## 工作状态与代码地图
 
-| 目录 | 内容 |
+| 内容 | 入口与状态 |
 |---|---|
-| `training/` | 初始 outcome-only GRPO、模型/数据准备、评测及 verifier 测试 |
-| `training_b/` | 历史 PRM 混合奖励基线 |
-| `experiments/ab_corrected_6m_seed17_20261022/` | 正式纠错 A/B 的独立版本与控制器 |
-| `experiments/reward_repair_v2_20261021/`、`reward_repair_v3_20261021/` | 验答/CRLF 分段修复；v2 的 `legacy_snapshot/` 是真实依赖 |
-| `experiments/pure_openrlhf_integration_20261023/` | 原始 token/步骤/EOS 对齐与官方 PURE 信号函数接入 |
-| `experiments/pure_openrlhf_pilot_20261023/` | 独立 P-VR/P-PRM pilot 的训练与阶段控制代码 |
-| `experiments/*` | 其余离线评分、历史方法试验与配对评测 |
-| `execution/*` | CPU 审计、回放、统计、报告构建代码及小型证据摘要 |
-| `operations/` | 历史续训、恢复和运行脚本；仅作为运行记录阅读 |
-| `proposal_neurips/` | 原 proposal 源文件；当前方向见 `docs/CURRENT_PLAN.txt` |
-| `results/` | 便于组员阅读的正式摘要入口 |
+| 初始 GRPO、PRM runner、验证规则 | `training/`、`training_b/` |
+| 独立分段/验答修复 | `experiments/reward_repair_*`；`legacy_snapshot/` 是真实依赖 |
+| 历史只纠错 A/B，约 6M | [实现](experiments/ab_corrected_6m_seed17_20261022/) · [原始摘要](results/corrected_ab_seed17_6m.json) |
+| A/B 提示词对照 | [已完成结果](results/prompt_comparison.json) |
+| PURE 官方核查与单卡 pilot | [实现](experiments/pure_openrlhf_pilot_20261023/)；非完整论文配置复现 |
+| 7B C/D 配对 PRM 适配 | [记录](execution/cd_prm_7b_pair_20261028/)；未进行 D 的完整 RL |
+| 当前三组约 1M 配对训练 | [实现](experiments/c_bounded_pilot_20261029_v2/) · [证据](execution/c_bounded_triplet_seed17_1m_20261029/) |
+| 初始模型和三组统一 V1 测试 | [完整报告与图表](execution/final_four_eval_20261029/) |
+| 历史 6M A 按 V1 重评 | [完整报告与运行审计](execution/a6m_protocol_recheck_20261029/) |
+| 当前三组约 6M 续训 | [独立版本](experiments/abc_seed17_resume6m_v1_20261030/)；**暂停、未完成** |
+| 多 seed 稳定收益、过程有效性提升 | **尚未证实** |
+| 原 proposal 与历史版本 | `proposal_neurips/`、`submission_snapshot_*`；当前状态以上方入口为准 |
+| 逐题评测记录（无正文/完整 CoT） | [compact_predictions](results/compact_predictions/)；可复核正确数和配对差 |
 
-`b_fix_integration_20261021` 曾探索改变 advantage 的方法，**不等于**正式“只纠错 B”。对照结论以 `ab_corrected_6m_seed17_20261022` 为准。
+目录保持原层级并保留失败/负结果。`execution/` 下包括配置、报告、审计、hash 和历史状态；较早记录不能作为实时状态。**不要直接执行历史 dispatch/controller/continuation。**
 
-## 环境与代码检查
+## 环境与复核
 
-训练环境见 [training/requirements.txt](training/requirements.txt)；完整历史环境锁在 `execution/baseline_seed17/requirements.lock.txt`。主要版本为 torch2.8.0、transformers4.56.2、TRL0.23.1、PEFT0.17.1、vLLM0.10.2。
+依赖见 [requirements.txt](training/requirements.txt)，历史环境锁见 [requirements.lock.txt](execution/baseline_seed17/requirements.lock.txt)。主要版本：torch 2.8.0、transformers 4.56.2、TRL 0.23.1、PEFT 0.17.1、vLLM 0.10.2。
 
-本分享包已做 Python 语法检查、文件哈希/体积检查和凭据模式扫描；不代表重新运行了所有训练或端到端复现。
-
-在具备依赖的环境可按需检查：
+无 GPU 的紧凑结果核对：
 
 ```bash
-python -m pytest training/test_reward.py training_b/test_b.py
-python experiments/pure_openrlhf_integration_20261023/cpu_checks.py
+python tools/check_compact_results.py
 ```
 
-这些测试是否在当前机器通过，应以实际运行记录为准。仓库没有开自动训练或 GPU 工作流。
+HTML 报告可在 clone 后用浏览器打开；GitHub 默认展示其源代码。原始重算脚本及出处已保留，但完整重算还需要原环境的数据、权重、rollout 和配置。
 
-## 分享范围与可复现性边界
+## 分享范围与边界
 
-- 这是公开的**脱敏代码审阅快照**。服务器地址替换为 `server.example.invalid`，本机路径替换为示例路径；修改只发生在分享副本。
-- 原始实验目录、代码和结果未修改。`SHARE_MANIFEST.json` 记录原始/分享文件哈希及是否脱敏；旧 release、receipt 中的哈希对应原实验环境，不能拿它们验证脱敏后的源码。
-- 权重、checkpoint、完整训练/评测 rollout、第三方原始数据和重复压缩包不进入 Git。读取这些文件的审计/绘图代码仍保留，重算需先取得对应输入。
-- 脚本保留历史阶段的运行入口，**clone 后不应直接执行 dispatch/controller/continuation**。复现实验需要准备数据与模型、配置本机路径，并重新冻结新环境的 release。
-- 不含 SSH 私钥、API token 或真实连接凭据。训练中所有失败和负结果仍属于项目证据，不以新方案覆盖。
+- 本次上传代码、配置、报告、图表、聚合审计和紧凑逐题结果，保留已有 Git 历史。**权重/优化器断点、完整 rollout/CoT、原始数据、缓存及重复压缩包不进入 Git**；原始文件留在原位置。
+- [SHARE_MANIFEST.json](SHARE_MANIFEST.json) 记录纳入/排除原因与原始/分享 hash。脱敏仅在分享副本进行；历史 release/receipt 的 hash 对应原实验文件，不能直接认证脱敏后的源码。
+- 服务器地址、SSH 目标和个人本机路径替换为示例值；不含密钥或访问令牌。仓库没有自动训练工作流。
+- 发布不恢复任何训练或推理。后续 GPU 使用、评测或预算扩展均需新的明确授权。
 
-## 相关工作
+## 相关方法与上游来源
 
 - [DeepSeekMath / GRPO](https://arxiv.org/abs/2402.03300)
-- [PAPO](https://arxiv.org/abs/2603.26535)：正确子集过程优势与门控先行工作。
-- [PROF-GRPO](https://arxiv.org/abs/2509.03403)：过程分筛选与混合奖励对照。
-- [PURE](https://arxiv.org/abs/2504.15275) / [官方代码](https://github.com/CJReinforce/PURE)：逐步骤信用分配；本仓库含带来源记录的核查快照与函数提取。
-- [ProcessBench](https://arxiv.org/abs/2412.06559)：过程错误定位评测。
+- [PURE](https://arxiv.org/abs/2504.15275) / [官方代码](https://github.com/CJReinforce/PURE)
+- [PAPO](https://arxiv.org/abs/2603.26535)：正确子集过程优势的相关先行工作。
+- [ProcessBench](https://arxiv.org/abs/2412.06559)
 
-第三方代码来源及许可边界见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。本快照没有为第三方代码追加统一开源许可。
-
-成员：Hongyi Ding、Jasmine Jiang、Yang Zeng。个人贡献以具体代码与实验记录为准。
+第三方来源与许可边界见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。个人贡献以实际代码与实验记录为准。

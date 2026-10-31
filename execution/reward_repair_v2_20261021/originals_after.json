@@ -1,0 +1,1773 @@
+{
+  "root": "/srv/research/ece285_math_rl_project",
+  "hashed": {
+    "data/prepared/manifest.json": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459",
+    "data/prepared/train.jsonl": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",
+    "operations/continuation_24m.json": "a47787eaa6775500945bf0d45750c5df085ad9d424d5193a936ac6136c175dc7",
+    "operations/continue_baseline.py": "b5c48eb6b85a801906acc054eb5e35dab7e15a7e926129c7b491639c8dfe46fe",
+    "operations/lora_preflight.py": "d98d21a085223fa3eaf3e2b482b04cba73befed6297b32a22f6a33945e09cdc2",
+    "operations/recover_B_assets.py": "1b3698bccccab35cba39812b2724013c4dc3cd5de04307a6964fbfccfb1af46a",
+    "operations/recover_evaluation.py": "eeba3a88770857bd5c2e877f17a0baf9a214cbbaff86e8776bc1bcba5aae681c",
+    "operations/run_continuation.py": "5b25a4ac5f1f28a52c94c5680f063f46c9f4b418196b2c8a293471c41b1c3d60",
+    "protocol_simple.json": "dc74c39321f2d563b48f619f870f80a2379e82d756a12b9b7edd50e31ef5d80c",
+    "receipts/B_prm_assets.json": "daebdbbad256152c2ce373af952ff04b31242af8756ff7f6ca8bef39b48d635b",
+    "runs/A_seed17/checkpoint-240/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/checkpoint-240/adapter_model.safetensors": "ddef5300b2559747bbac6601c31fe45e0ab4e1b5d0cdccf39480879bcb1e46b1",
+    "runs/A_seed17/checkpoint-240/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/checkpoint-240/completion_accounting.json": "49eea634f8cce026d753703c7d69d4c9aaa71e795556dc6b133e0b43bce1ddf7",
+    "runs/A_seed17/checkpoint-240/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17/checkpoint-240/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/checkpoint-240/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/checkpoint-240/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/checkpoint-240/trainer_state.json": "a0f2f5bb79508204557a108aa26b748fbb0c882bffab821fc17d416c3b5dc919",
+    "runs/A_seed17/checkpoint-240/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/checkpoint-260/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/checkpoint-260/adapter_model.safetensors": "63f2d74ff7c1a506f433cd3c515a89d7edf6695bf88741b7693c20913125c15f",
+    "runs/A_seed17/checkpoint-260/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/checkpoint-260/completion_accounting.json": "57b382d829f9e7aa4788a3715a606427eb04e18d4e722434330a0902d462b8d9",
+    "runs/A_seed17/checkpoint-260/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17/checkpoint-260/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/checkpoint-260/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/checkpoint-260/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/checkpoint-260/trainer_state.json": "de2c503ac4139f543748c8a4c212ff7ce603c1ff8c0777e15f4df4707b42fa83",
+    "runs/A_seed17/checkpoint-260/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/checkpoint-280/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/checkpoint-280/adapter_model.safetensors": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b",
+    "runs/A_seed17/checkpoint-280/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/checkpoint-280/completion_accounting.json": "7b8fecd746a146ee1210090411547531212fcf12ddd887ae06e45420f3bcb397",
+    "runs/A_seed17/checkpoint-280/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17/checkpoint-280/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/checkpoint-280/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/checkpoint-280/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/checkpoint-280/trainer_state.json": "2625191068b6e0def6fd35c9128c014530996df682982ea232b71ec2e70b76fa",
+    "runs/A_seed17/checkpoint-280/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/controller.json": "784dfb5fd72165a4b77d151ee4e9a000e3e1eb0758da67e98a14358970d6d830",
+    "runs/A_seed17/controller_before_evaluation_recovery.json": "930cc813cd2ab12505e0e3727add1c5f6b09fb222eff670ebe8dd6ba945dc41b",
+    "runs/A_seed17/evaluation/evaluation_config.json": "04e925bb3af5992acba32466a608ed65ecc08598e8e0f361aae0953994e0d9ff",
+    "runs/A_seed17/evaluation/evaluation_summary.json": "64d7ecb526c62110d3a3cbe555880ce4624540bf237017773e83ce41dd564af3",
+    "runs/A_seed17/evaluation/gsm8k.jsonl": "22091ebd7dc6055254a8087b6d78e6fa62cd63367526b60ea91c7d8a3e8d6349",
+    "runs/A_seed17/evaluation/math500.jsonl": "97795da6d7c6360d7e314b1d7755e9542464c438143f7de0f2c363b339e3586d",
+    "runs/A_seed17/evaluation/progress.json": "e6c8cca9ab7249dd67834c750cfe3c6915616ffd79272e51469da8d539f9f9b5",
+    "runs/A_seed17/evaluation_recovery.json": "d8a275ff9f074e0a9fe1689fc5e32cf66195bf60af5344b5aa4c76fa5d17e39f",
+    "runs/A_seed17/final_adapter/adapter_config.json": "6e4f91cada30aca42e29338c128c69f18213139a04726b69fe1a430b5dea98c0",
+    "runs/A_seed17/final_adapter/adapter_model.safetensors": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b",
+    "runs/A_seed17/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17/final_adapter/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17/metrics.jsonl": "8ff2d1907c0c66d6f98d40239431ac8e361cd4ccafafead5be4864f1d9280c4b",
+    "runs/A_seed17/progress.json": "6bf705bc1e29650462c42a8fb7a07b7c7becc01a99c8e3c6f5f78f29071399b8",
+    "runs/A_seed17/rollouts.jsonl": "fd82e1711388e4b4e30f44d0632ac9a25e9f7f73c26c1398b1b6ca225b247aaf",
+    "runs/A_seed17/run_config.json": "2203d5fe874be46933b18b2fefa82c426199cc80170ba1db554f838bac7ea1bb",
+    "runs/A_seed17/status.json": "445aa1b31d4f006f1a2a676bfd85e7fde2f5cf4008ed1486652cb0beccf910c6",
+    "runs/A_seed17/trainer_state.json": "f56c6700f384a5bbdce852e8c8869425820be2a74680a4b073b42f4d0863aefb",
+    "runs/A_seed17_24M/checkpoint-1040/adapter_config.json": "2014350288f04c6a4421199751d19cf649644c70fb8eec774366ed1942e205a3",
+    "runs/A_seed17_24M/checkpoint-1040/adapter_model.safetensors": "cda9e5635756cb01db05ec8dd68d9a69843ca19cd9185e46030c55ba8b39730e",
+    "runs/A_seed17_24M/checkpoint-1040/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17_24M/checkpoint-1040/completion_accounting.json": "a4408d461d53551e1dbb587deba89e73733741728231849c5d940e10df6a3288",
+    "runs/A_seed17_24M/checkpoint-1040/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17_24M/checkpoint-1040/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17_24M/checkpoint-1040/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17_24M/checkpoint-1040/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17_24M/checkpoint-1040/trainer_state.json": "aab96c6d86c728d82213762ecd6d6ddd1d188fc7bb0d88b84c1d8665091ff5df",
+    "runs/A_seed17_24M/checkpoint-1040/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17_24M/checkpoint-1060/adapter_config.json": "2014350288f04c6a4421199751d19cf649644c70fb8eec774366ed1942e205a3",
+    "runs/A_seed17_24M/checkpoint-1060/adapter_model.safetensors": "0586ce4088004ca940d978142051b4e3b7fad74b428ca4afda7be709ce54bf16",
+    "runs/A_seed17_24M/checkpoint-1060/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17_24M/checkpoint-1060/completion_accounting.json": "595ea24d8cde6b5d360e204b5be62f27a697df2ff2bdb84a512237c19e543a9b",
+    "runs/A_seed17_24M/checkpoint-1060/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17_24M/checkpoint-1060/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17_24M/checkpoint-1060/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17_24M/checkpoint-1060/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17_24M/checkpoint-1060/trainer_state.json": "86f42aa64c762dacba6da27266bcfbbf872e72d9f4fd257066feac6442069ec1",
+    "runs/A_seed17_24M/checkpoint-1060/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17_24M/checkpoint-1073/adapter_config.json": "2014350288f04c6a4421199751d19cf649644c70fb8eec774366ed1942e205a3",
+    "runs/A_seed17_24M/checkpoint-1073/adapter_model.safetensors": "be3d30f3ef9e11bfd23239336e962ba23ad6a96c1d86da4f8ca9945804436afe",
+    "runs/A_seed17_24M/checkpoint-1073/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17_24M/checkpoint-1073/completion_accounting.json": "74461fc66fed3083b2835ac8f71c12f5ed68eb2a2a2615688f1956be8be891c2",
+    "runs/A_seed17_24M/checkpoint-1073/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17_24M/checkpoint-1073/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17_24M/checkpoint-1073/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17_24M/checkpoint-1073/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17_24M/checkpoint-1073/trainer_state.json": "686f10fa40eea7f4206edc0d36346f8dfc948e7ebcac1c2e128a8c55899df40e",
+    "runs/A_seed17_24M/checkpoint-1073/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17_24M/continuation_plan.json": "b24391a416e7ca880a498dca4c21e60ec74225628670d7f88e26265c54d4c499",
+    "runs/A_seed17_24M/controller.json": "54e04170e3b58e82eee97857bea1aca8d44aa9dd9bcb65a3b661b8a810a4c985",
+    "runs/A_seed17_24M/execution_source_hashes.json": "76c926f9fef081148488d6c1391f3f1144ae497dc2ddd6f7534989d956b29182",
+    "runs/A_seed17_24M/final_adapter/adapter_config.json": "2014350288f04c6a4421199751d19cf649644c70fb8eec774366ed1942e205a3",
+    "runs/A_seed17_24M/final_adapter/adapter_model.safetensors": "be3d30f3ef9e11bfd23239336e962ba23ad6a96c1d86da4f8ca9945804436afe",
+    "runs/A_seed17_24M/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17_24M/final_adapter/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17_24M/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17_24M/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17_24M/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17_24M/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17_24M/metrics.jsonl": "ddaad4f22ad153426485695ce773163420ce5be9a7a1d4002a3dcd540a915741",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/adapter_config.json": "2014350288f04c6a4421199751d19cf649644c70fb8eec774366ed1942e205a3",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/adapter_model.safetensors": "2b2f3016e0a8e7c22a008042c644cbf1fd22d3921c3f135692c775bbc5ef8f0a",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/completion_accounting.json": "c4336dd4eefdf7cb43a426b338274b6507d672b698372659c8cd32c34ce15fa2",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/trainer_state.json": "232a4b424e59b03ab2f48ad2ae6d897cf4d0de43a9e073bc189e8c36961b6ef2",
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17_24M/milestones/12000000/evaluation/evaluation_config.json": "6e469603280054603ffc5123d1abd4a6b96ce9a137b13186037b5ff736d56d4d",
+    "runs/A_seed17_24M/milestones/12000000/evaluation/evaluation_summary.json": "44faa836b120a51a6ba1d87247f78a044fd360c3a9bfecea4871bb00e754793f",
+    "runs/A_seed17_24M/milestones/12000000/evaluation/gsm8k.jsonl": "6ca360e3e7f4cef37c6df21108c2cb22e54201bb0ffe6344c4b9ef54eb192124",
+    "runs/A_seed17_24M/milestones/12000000/evaluation/math500.jsonl": "7c006d86eb892cad1742f28625c493655e1049756dff5373ca7d9a13a0c574a9",
+    "runs/A_seed17_24M/milestones/12000000/evaluation/progress.json": "ba2f6889ddc292f15a898408aadb50000dd244ca7dc438f754f4bb308fabeb22",
+    "runs/A_seed17_24M/milestones/12000000/milestone.json": "0a94b94fdcc89d070dc5d1e1339d0a044487790f56b1edd098887b87c6453b73",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/adapter_config.json": "2014350288f04c6a4421199751d19cf649644c70fb8eec774366ed1942e205a3",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/adapter_model.safetensors": "be3d30f3ef9e11bfd23239336e962ba23ad6a96c1d86da4f8ca9945804436afe",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/completion_accounting.json": "74461fc66fed3083b2835ac8f71c12f5ed68eb2a2a2615688f1956be8be891c2",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/trainer_state.json": "686f10fa40eea7f4206edc0d36346f8dfc948e7ebcac1c2e128a8c55899df40e",
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/A_seed17_24M/milestones/24000000/evaluation/evaluation_config.json": "5374ae2abe551c82876148b1a76e09a9b1c729f9dd61ef685291ea6afe6d5d35",
+    "runs/A_seed17_24M/milestones/24000000/evaluation/evaluation_summary.json": "8b88a9a39b52dfac256f655c79dc647d69db787f962ccd4dbbb41c6d60014af2",
+    "runs/A_seed17_24M/milestones/24000000/evaluation/gsm8k.jsonl": "3cf6ab1fb0dda88ef88e003deede583f4996bc39c5001e9cd6cf4a653940c1f0",
+    "runs/A_seed17_24M/milestones/24000000/evaluation/math500.jsonl": "73733ed1512217cbe7c233216d5937194d128b187ed771b99f31f4130a80f78a",
+    "runs/A_seed17_24M/milestones/24000000/evaluation/progress.json": "4581fb0abc20601b88e223851ac489ec58a58bab30215accd9e7c0236efd8ae2",
+    "runs/A_seed17_24M/milestones/24000000/milestone.json": "9357bf9cc61c0fa159125b110cd81ea11137ff977e0bb9d5c4a5fc7871cc5429",
+    "runs/A_seed17_24M/milestones.json": "b2b31a99bed776bc34fa0a97dd3792d865a400a77844ececd1dc9fd28f7f7488",
+    "runs/A_seed17_24M/progress.json": "a9faab1d996c1d4aee717f10dbf4f7816ba4ed390ec2c708ee646273e7e3afc7",
+    "runs/A_seed17_24M/resume_audit.json": "9727f0a5db7be4dab7db3dfba6fe072ee74c3f4aad76a1559a706da99769f5cb",
+    "runs/A_seed17_24M/rollouts.jsonl": "57d5b78b08bee40aff3d013b2ba25a5287577754bfbc981b461f2bc172ea935f",
+    "runs/A_seed17_24M/run_config.json": "e7e2ce6d29d8eee0079f0e335db6336f67a28d1a65a65325233bc50a68625bf6",
+    "runs/A_seed17_24M/source_preservation.json": "ceee1e5e8988878e5b14fb0ed07e679290a52f5521ba4f1cabc5228c65c07cf9",
+    "runs/A_seed17_24M/status.json": "436fd82c64b2f1a33faa772cf9896ca02eeaa4d0c613d800b0869b49360c0b10",
+    "runs/A_seed17_24M/trainer_state.json": "9dd1d97800f628e19e797219f301d0dccfbab0da89c508624a4e2e01ed351be6",
+    "runs/B_seed17_24M/checkpoint-620/adapter_config.json": "8ca1eeda91ffad2eff56dcb8edc7ae37804a37685866f51e51f3178c67df016e",
+    "runs/B_seed17_24M/checkpoint-620/adapter_model.safetensors": "09c2c26dcee7240d7da3a45c823cdc0ebea7b3c13c20f351d1203802ac6fd9f1",
+    "runs/B_seed17_24M/checkpoint-620/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_24M/checkpoint-620/completion_accounting.json": "e652310c110f05d0863dbeac7aa383a1885b2595285ccb3a1e1bb616f4e5fcf2",
+    "runs/B_seed17_24M/checkpoint-620/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_24M/checkpoint-620/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_24M/checkpoint-620/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_24M/checkpoint-620/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_24M/checkpoint-620/trainer_state.json": "99e696da009ffdf5476984f58234efad5738140bc76b3ad5a6d57745cf321e71",
+    "runs/B_seed17_24M/checkpoint-620/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_24M/checkpoint-640/adapter_config.json": "8ca1eeda91ffad2eff56dcb8edc7ae37804a37685866f51e51f3178c67df016e",
+    "runs/B_seed17_24M/checkpoint-640/adapter_model.safetensors": "ac82458bf05d334a2746d762bbfae516512873f039451aaa78d104e1c2405a03",
+    "runs/B_seed17_24M/checkpoint-640/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_24M/checkpoint-640/completion_accounting.json": "abd72c0e7006ec0851dc30f0128ac3f3c0caf8807465a460c10533f933027f09",
+    "runs/B_seed17_24M/checkpoint-640/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_24M/checkpoint-640/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_24M/checkpoint-640/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_24M/checkpoint-640/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_24M/checkpoint-640/trainer_state.json": "6922003192c181814ba5ff19d8ca4cd726f84ee33c11056005bc2764507ea473",
+    "runs/B_seed17_24M/checkpoint-640/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_24M/checkpoint-660/adapter_config.json": "8ca1eeda91ffad2eff56dcb8edc7ae37804a37685866f51e51f3178c67df016e",
+    "runs/B_seed17_24M/checkpoint-660/adapter_model.safetensors": "a89f65b70dedde553886d693359896c26a86b2777af1ea708569744075cb025e",
+    "runs/B_seed17_24M/checkpoint-660/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_24M/checkpoint-660/completion_accounting.json": "a9e4e8f26432af3660fdb8aca1d51f48895fc32489bf796a08cdb9ce2d5580fc",
+    "runs/B_seed17_24M/checkpoint-660/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_24M/checkpoint-660/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_24M/checkpoint-660/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_24M/checkpoint-660/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_24M/checkpoint-660/trainer_state.json": "9c9205b683643fb32cb5360211554f549d569af7b25974143067802e9f1312db",
+    "runs/B_seed17_24M/checkpoint-660/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_24M/controller.json": "fc0ef962ba146ad1a75a4f2332ab56882e3e4cd67e5f9e378709af1dfcd1d8c8",
+    "runs/B_seed17_24M/execution_plan.json": "e411060f041374d37aef71115cb951868db96127369e5c972bdb70b5b7b3f9ec",
+    "runs/B_seed17_24M/execution_source_hashes.json": "cbd5d00452d3b23632bef8ab431e06c08640cde9eaa0367802994b09bbdc69e1",
+    "runs/B_seed17_24M/failure.json": "72f85d5218c3c481cc1603a5c9b71cbe9d8d51ea13c757e79fd21c4a016407f5",
+    "runs/B_seed17_24M/group_diagnostics.jsonl": "bc6ae029293fd9fa545edcae4c1c0835c28f63410d15e56fa48aeb8dec322e4e",
+    "runs/B_seed17_24M/metrics.jsonl": "59346a495961ad70edd940767664f6f0bb521b89bd9b677eb0814ab3459162aa",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/adapter_config.json": "8ca1eeda91ffad2eff56dcb8edc7ae37804a37685866f51e51f3178c67df016e",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/adapter_model.safetensors": "4e5b534d814b599b2dce39fce49aad9aca7063fd92f5a929812489bbaf8c3bbe",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/completion_accounting.json": "7c8a70d2264d740aa85cd78e1bb8cf798cd3c706675641a2fb5c71c2dee9d3b3",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/trainer_state.json": "90ade89a5b78480dd330ee62e9a1aff5979aecb98dc702e1e10b909098d7c4cd",
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_24M/milestones/12000000/milestone.json": "8044e01cce843d59d3c7055aca8fbb94bddda0dd45b8b4faef1abe451e6bf91c",
+    "runs/B_seed17_24M/milestones.json": "5b2734d242de041caaef9a30a74e12b515bba5431c5a42c6268174b0f02f4dd7",
+    "runs/B_seed17_24M/progress.json": "f80790e893e1a5156baae31054b3b4b995e5045b803a0968155a07c181660cdd",
+    "runs/B_seed17_24M/resume_audit.json": "f727f171b0c193da16ded568fdf5b5e7f2a0b3371cf278c1553269467855c7e0",
+    "runs/B_seed17_24M/rollouts.jsonl": "e7006d5e4af4ac0bf7f9b95e8b37017388289692c75537810d68d584af5a1b73",
+    "runs/B_seed17_24M/run_config.json": "00cde56b400e5d145f75efa8d395faf86c18732538cbad5e138a436133a9f9ce",
+    "runs/B_seed17_24M/stages.jsonl": "3f94a26d05e48992eba0ab4dddaa31aeffe7a0cff8f0a0493b9727a1d3ada8cb",
+    "runs/B_seed17_24M/status.json": "fe9fabdd5ea655fae5080bee82ab4ceefa0602df7e57fc1dafa0e85db46b6f79",
+    "runs/B_seed17_6M/checkpoint-260/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/checkpoint-260/adapter_model.safetensors": "70a1665beeffa1cc1c276e4119febc334d47868792c5cf45e9de720f4dd6ad7d",
+    "runs/B_seed17_6M/checkpoint-260/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/checkpoint-260/completion_accounting.json": "9ed45bcd27c65dd2bf471e8ce253db7c2aafd29d42362d585dd6491dd7e7cd25",
+    "runs/B_seed17_6M/checkpoint-260/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_6M/checkpoint-260/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/checkpoint-260/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/checkpoint-260/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/checkpoint-260/trainer_state.json": "856c260ea691ebd33ebbc08a24cd171e1c25aa44d8a5adfc976cbed7a5747b0c",
+    "runs/B_seed17_6M/checkpoint-260/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/checkpoint-280/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/checkpoint-280/adapter_model.safetensors": "2ed08cd06b71e8cb587f8fcbaae307259f6a1fe09f1cca458df1c5158d77722a",
+    "runs/B_seed17_6M/checkpoint-280/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/checkpoint-280/completion_accounting.json": "e1140456e14c61b54c24888f22ba4f56fe9e82f531b293de830e3964a36c4c3c",
+    "runs/B_seed17_6M/checkpoint-280/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_6M/checkpoint-280/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/checkpoint-280/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/checkpoint-280/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/checkpoint-280/trainer_state.json": "a42e7f968d037486239466e1adbfba9c40f2a210a1d8d05c882b61dc3ce3526c",
+    "runs/B_seed17_6M/checkpoint-280/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/checkpoint-285/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/checkpoint-285/adapter_model.safetensors": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed",
+    "runs/B_seed17_6M/checkpoint-285/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/checkpoint-285/completion_accounting.json": "582a72d767ec78e0a039b038e4a4058e83b6a9fbea720cce6b485c99b8c5414b",
+    "runs/B_seed17_6M/checkpoint-285/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_6M/checkpoint-285/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/checkpoint-285/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/checkpoint-285/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/checkpoint-285/trainer_state.json": "c70dce108e128b0d824034289875dfbc122462a1444f679fc83a4f8dde8e4f7e",
+    "runs/B_seed17_6M/checkpoint-285/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/final_adapter/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/final_adapter/adapter_model.safetensors": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed",
+    "runs/B_seed17_6M/final_adapter/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/final_adapter/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_6M/final_adapter/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/final_adapter/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/final_adapter/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/final_adapter/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/group_diagnostics.jsonl": "642b7845c56186dcc5a95c1a5dcfc433e47ab0b40b48c3171250475260cbcf62",
+    "runs/B_seed17_6M/metrics.jsonl": "0a4f8ebda1650617a78c846f89e9961d10466dbf333c7c9fe49b7b0c2e8a812c",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_config.json": "d16d0de306e281bba8968476c30eb4d3502891adc4e211e1405ea5b5752a79bc",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_model.safetensors": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/completion_accounting.json": "582a72d767ec78e0a039b038e4a4058e83b6a9fbea720cce6b485c99b8c5414b",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/special_tokens_map.json": "6676f091c8bc4d1b50146427cfde92073402866b87b6e39223227931b70083e9",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer.json": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer_config.json": "effa9d4aae117e8afeb91440585b4b02b42c5fb2bb496647799a11e38705b8e5",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/trainer_state.json": "c70dce108e128b0d824034289875dfbc122462a1444f679fc83a4f8dde8e4f7e",
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_config.json": "977f57f2180ef818fec1da75e5b6433e4b934641e67c8ab7b01055de32ecd499",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json": "6024fe8aac62d5f49f87f365944a5f3a179b52cf6954dc70aef971d650f1b614",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/gsm8k.jsonl": "423818082af5d5c756370e54074b1432cf01b35720cf9765b16c87726657bd4e",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/math500.jsonl": "ba7b53076d39033c6a64fa2f6bc7c27cbae6ed1eecfa309681f74e3a8850351c",
+    "runs/B_seed17_6M/milestones/6000000/evaluation/progress.json": "b48775bc026ed0edf2719fd7a0ca3d782cefa9792b30a1e52034876f5e4ac08a",
+    "runs/B_seed17_6M/milestones/6000000/milestone.json": "e77ef78333cd7c3dbd309afda5c39967c1708f16183483ca6c11ba73d497042b",
+    "runs/B_seed17_6M/milestones.json": "b888dfe0c504b6bb2bc5796c31642f04429372eda020f251ca39d0f6247874da",
+    "runs/B_seed17_6M/progress.json": "d7a7d0299132b5be02b4f9e09334a929ee2f9d97a79887764542215944aa662a",
+    "runs/B_seed17_6M/rollouts.jsonl": "2d5309f259bf454d9e446dea750a9bcbea6e3c1349ae483c9862e0beac540228",
+    "runs/B_seed17_6M/run_config.json": "82093c13c3d8e76cba367446fecc0b898bfa53d2674fa594ba09bbc7b305cca9",
+    "runs/B_seed17_6M/status.json": "fef5914b8ce2a6d884215237078a0921787df3bde89da18f043785dff7dd5f5a",
+    "runs/B_seed17_6M/trainer_state.json": "af8f99ebf2bb431587292b82f5572b333854db42183d6de445dd79bd1b021895",
+    "training/README.md": "4228bce17eaadbdaaf78575b9b99c6797be7bb57477a9b2344993c0f7beff16f",
+    "training/baseline_config.json": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
+    "training/check_pilot.py": "e5be6d9856d2956685bbfa012a2e5e5c9b9fcb3bc59f288713508d6b37b025bd",
+    "training/common.py": "d7b19e2cfff0db5097b5dc6d2df6b85d391e1718657dcb85bf042e4351a95174",
+    "training/evaluate_policy.py": "fd3eaf0a0d47c64907f73fb528d0dc21ab2534c16d82a7b170a3eabd6ce4b256",
+    "training/launch_pipeline.py": "3535ac0c2e2c0233087f4a6750cdb8f8e80181ae227ca657b5f493c289b3245a",
+    "training/prepare_assets.py": "ec5e2e879395f6fc8127a5b78c18def535073610e7fc591c4d9ba52ada10a42b",
+    "training/prepare_data.py": "0aba39d1a51451e57a3751f7490dae971982aa582d5708b00b1a1ae23ea16716",
+    "training/requirements.txt": "94dd94ece7eb817e0f31232eb7d10ff5a7bfea84d2f63ece52f849f7c3ee7422",
+    "training/reward.py": "4b9cf21a462733df3fc2068ebc8f06df1f579e1021683b7fc83e60f093a54805",
+    "training/run_baseline.py": "582bb18ee1c00695bc721a8c470a0a591ff968c3880137dade97f34418448ecc",
+    "training/setup_environment.py": "826c79dde8388185ef1310d7324e46b663c57d693facd96c1baaa39b3ab76b06",
+    "training/test_reward.py": "909ff78215df99e68b120f79f8838aa4447ff337c93e4f0d1240f46c2c7d174b",
+    "training/train_baseline.py": "407505f628f0731adb8c668f47f0ef691b761362d670e456823c7ec998be3cd5",
+    "training_b/README.md": "b455446745bd2d2a0fe11d0cbcb73dae6e8942c7857be5b61a97deea5d58d5c3",
+    "training_b/check_native_prm.py": "18eaca2107c9221c06b0196d897934a01fc35b0fda9c8e777dab443d5b9a2f23",
+    "training_b/config.json": "3d10e6f4bb1cbaf81b13f80642d59b94ad2c595b1919b6bbc30ef9a5b0bca291",
+    "training_b/prepare_prm.py": "36a379bc93d944691980ee2c0e475ca237f614521c31eaeb630402d686fb1860",
+    "training_b/prm_reward.py": "0da9a07f046d2aba064245e0046944833c6e6ddeca1aa0f01b518d456fe64078",
+    "training_b/run_b.py": "16b4e8f1f593ba16323d991f6bfd62c0192eae24612f0809c8957a854a177554",
+    "training_b/test_b.py": "f503ab2d3f2e9e1825cf4e3352e0cef54f3ad3afec42f83ed403c77edb42a771",
+    "training_b/train_b.py": "7c264e0b419effa7871a6b503c515a0353bfd7d48bc6a4d7ba5ff47805c483ac"
+  },
+  "result_file_inventory": {
+    "runs/B_seed17_24M/metrics.jsonl": {
+      "bytes": 378939,
+      "mtime_ns": 1792606811769571595
+    },
+    "runs/B_seed17_24M/group_diagnostics.jsonl": {
+      "bytes": 874006,
+      "mtime_ns": 1792606799285539131
+    },
+    "runs/B_seed17_24M/rollouts.jsonl": {
+      "bytes": 32983407,
+      "mtime_ns": 1792606826785611143
+    },
+    "runs/B_seed17_24M/README.md": {
+      "bytes": 1898,
+      "mtime_ns": 1792606305232690866
+    },
+    "runs/B_seed17_24M/execution_plan.json": {
+      "bytes": 1798,
+      "mtime_ns": 1792577694941516201
+    },
+    "runs/B_seed17_24M/controller.json": {
+      "bytes": 1078,
+      "mtime_ns": 1792606831493623653
+    },
+    "runs/B_seed17_24M/status.json": {
+      "bytes": 100,
+      "mtime_ns": 1792595581261355461
+    },
+    "runs/B_seed17_24M/failure.json": {
+      "bytes": 2765,
+      "mtime_ns": 1792606826789611154
+    },
+    "runs/B_seed17_24M/resume_audit.json": {
+      "bytes": 1080,
+      "mtime_ns": 1792595609257969531
+    },
+    "runs/B_seed17_24M/run_config.json": {
+      "bytes": 7502,
+      "mtime_ns": 1792595558076837664
+    },
+    "runs/B_seed17_24M/stages.jsonl": {
+      "bytes": 2095,
+      "mtime_ns": 1792606831489623642
+    },
+    "runs/B_seed17_24M/run.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792595557408822616
+    },
+    "runs/B_seed17_24M/milestones.json": {
+      "bytes": 2143,
+      "mtime_ns": 1792603276988503256
+    },
+    "runs/B_seed17_24M/progress.json": {
+      "bytes": 1705,
+      "mtime_ns": 1792606811769571595
+    },
+    "runs/B_seed17_24M/execution_source_hashes.json": {
+      "bytes": 1378,
+      "mtime_ns": 1792577694941516201
+    },
+    "runs/B_seed17_24M/checkpoint-660/completion_accounting.json": {
+      "bytes": 1319,
+      "mtime_ns": 1792606305836691183
+    },
+    "runs/B_seed17_24M/checkpoint-660/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792606305372690939
+    },
+    "runs/B_seed17_24M/checkpoint-660/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792606305356690931
+    },
+    "runs/B_seed17_24M/checkpoint-660/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792606305240690871
+    },
+    "runs/B_seed17_24M/checkpoint-660/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792606305356690931
+    },
+    "runs/B_seed17_24M/checkpoint-660/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792606305748691137
+    },
+    "runs/B_seed17_24M/checkpoint-660/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792606305492691002
+    },
+    "runs/B_seed17_24M/checkpoint-660/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792606305748691137
+    },
+    "runs/B_seed17_24M/checkpoint-660/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792606305748691137
+    },
+    "runs/B_seed17_24M/checkpoint-660/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792606305504691008
+    },
+    "runs/B_seed17_24M/checkpoint-660/trainer_state.json": {
+      "bytes": 753521,
+      "mtime_ns": 1792606305800691164
+    },
+    "runs/B_seed17_24M/checkpoint-660/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792606305356690931
+    },
+    "runs/B_seed17_24M/checkpoint-660/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792606305412690961
+    },
+    "runs/B_seed17_24M/checkpoint-660/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792606305356690931
+    },
+    "runs/B_seed17_24M/checkpoint-660/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792606305352690929
+    },
+    "runs/B_seed17_24M/checkpoint-660/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792606305356690931
+    },
+    "runs/B_seed17_24M/milestones/12000000/milestone.json": {
+      "bytes": 1932,
+      "mtime_ns": 1792603276988503256
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/completion_accounting.json": {
+      "bytes": 1316,
+      "mtime_ns": 1792603276432498167
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792603275944493701
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792603275928493555
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792603275792492311
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792603275928493555
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792603276356497472
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792603276072494872
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792603276352497435
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792603276352497435
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792603276084494982
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/trainer_state.json": {
+      "bytes": 645236,
+      "mtime_ns": 1792603276400497874
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792603275928493555
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792603275988494103
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792603275928493555
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792603275924493519
+    },
+    "runs/B_seed17_24M/milestones/12000000/checkpoint-565/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792603275928493555
+    },
+    "runs/B_seed17_24M/checkpoint-620/completion_accounting.json": {
+      "bytes": 1320,
+      "mtime_ns": 1792605100572305272
+    },
+    "runs/B_seed17_24M/checkpoint-620/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792605100088320404
+    },
+    "runs/B_seed17_24M/checkpoint-620/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792605100064321155
+    },
+    "runs/B_seed17_24M/checkpoint-620/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792605099952324660
+    },
+    "runs/B_seed17_24M/checkpoint-620/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792605100064321155
+    },
+    "runs/B_seed17_24M/checkpoint-620/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792605100488307899
+    },
+    "runs/B_seed17_24M/checkpoint-620/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792605100220316277
+    },
+    "runs/B_seed17_24M/checkpoint-620/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792605100488307899
+    },
+    "runs/B_seed17_24M/checkpoint-620/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792605100484308023
+    },
+    "runs/B_seed17_24M/checkpoint-620/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792605100232315902
+    },
+    "runs/B_seed17_24M/checkpoint-620/trainer_state.json": {
+      "bytes": 707899,
+      "mtime_ns": 1792605100536306398
+    },
+    "runs/B_seed17_24M/checkpoint-620/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792605100064321155
+    },
+    "runs/B_seed17_24M/checkpoint-620/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792605100132319028
+    },
+    "runs/B_seed17_24M/checkpoint-620/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792605100064321155
+    },
+    "runs/B_seed17_24M/checkpoint-620/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792605100060321279
+    },
+    "runs/B_seed17_24M/checkpoint-620/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792605100064321155
+    },
+    "runs/B_seed17_24M/checkpoint-640/completion_accounting.json": {
+      "bytes": 1319,
+      "mtime_ns": 1792605755573859710
+    },
+    "runs/B_seed17_24M/checkpoint-640/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792605755085862593
+    },
+    "runs/B_seed17_24M/checkpoint-640/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792605755061862735
+    },
+    "runs/B_seed17_24M/checkpoint-640/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792605754945863421
+    },
+    "runs/B_seed17_24M/checkpoint-640/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792605755061862735
+    },
+    "runs/B_seed17_24M/checkpoint-640/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792605755489860206
+    },
+    "runs/B_seed17_24M/checkpoint-640/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792605755209861860
+    },
+    "runs/B_seed17_24M/checkpoint-640/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792605755485860231
+    },
+    "runs/B_seed17_24M/checkpoint-640/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792605755485860231
+    },
+    "runs/B_seed17_24M/checkpoint-640/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792605755217861813
+    },
+    "runs/B_seed17_24M/checkpoint-640/trainer_state.json": {
+      "bytes": 730671,
+      "mtime_ns": 1792605755537859923
+    },
+    "runs/B_seed17_24M/checkpoint-640/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792605755057862758
+    },
+    "runs/B_seed17_24M/checkpoint-640/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792605755125862356
+    },
+    "runs/B_seed17_24M/checkpoint-640/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792605755061862735
+    },
+    "runs/B_seed17_24M/checkpoint-640/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792605755057862758
+    },
+    "runs/B_seed17_24M/checkpoint-640/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792605755061862735
+    },
+    "runs/A_seed17_24M/metrics.jsonl": {
+      "bytes": 708415,
+      "mtime_ns": 1792580535432867326
+    },
+    "runs/A_seed17_24M/rollouts.jsonl": {
+      "bytes": 60521311,
+      "mtime_ns": 1792580522036659930
+    },
+    "runs/A_seed17_24M/README.md": {
+      "bytes": 1898,
+      "mtime_ns": 1792580534248849097
+    },
+    "runs/A_seed17_24M/controller.json": {
+      "bytes": 574,
+      "mtime_ns": 1792584849574706566
+    },
+    "runs/A_seed17_24M/status.json": {
+      "bytes": 1525,
+      "mtime_ns": 1792580535972875635
+    },
+    "runs/A_seed17_24M/source_preservation.json": {
+      "bytes": 4337,
+      "mtime_ns": 1792557941273870664
+    },
+    "runs/A_seed17_24M/resume_audit.json": {
+      "bytes": 1034,
+      "mtime_ns": 1792557994675151242
+    },
+    "runs/A_seed17_24M/run_config.json": {
+      "bytes": 6061,
+      "mtime_ns": 1792557948018036677
+    },
+    "runs/A_seed17_24M/trainer_state.json": {
+      "bytes": 1143862,
+      "mtime_ns": 1792580535968875573
+    },
+    "runs/A_seed17_24M/controller.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792557940741857514
+    },
+    "runs/A_seed17_24M/continuation_plan.json": {
+      "bytes": 1396,
+      "mtime_ns": 1792557941273870664
+    },
+    "runs/A_seed17_24M/run.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792557947406021662
+    },
+    "runs/A_seed17_24M/milestones.json": {
+      "bytes": 9110,
+      "mtime_ns": 1792584849246705568
+    },
+    "runs/A_seed17_24M/progress.json": {
+      "bytes": 968,
+      "mtime_ns": 1792580534232848850
+    },
+    "runs/A_seed17_24M/execution_source_hashes.json": {
+      "bytes": 703,
+      "mtime_ns": 1792557941273870664
+    },
+    "runs/A_seed17_24M/checkpoint-1060/completion_accounting.json": {
+      "bytes": 579,
+      "mtime_ns": 1792580155794837627
+    },
+    "runs/A_seed17_24M/checkpoint-1060/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792580155282834241
+    },
+    "runs/A_seed17_24M/checkpoint-1060/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792580155254834055
+    },
+    "runs/A_seed17_24M/checkpoint-1060/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792580155142833314
+    },
+    "runs/A_seed17_24M/checkpoint-1060/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792580155254834055
+    },
+    "runs/A_seed17_24M/checkpoint-1060/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792580155674836833
+    },
+    "runs/A_seed17_24M/checkpoint-1060/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792580155414835114
+    },
+    "runs/A_seed17_24M/checkpoint-1060/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792580155674836833
+    },
+    "runs/A_seed17_24M/checkpoint-1060/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792580155674836833
+    },
+    "runs/A_seed17_24M/checkpoint-1060/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792580155426835193
+    },
+    "runs/A_seed17_24M/checkpoint-1060/trainer_state.json": {
+      "bytes": 1129738,
+      "mtime_ns": 1792580155758837389
+    },
+    "runs/A_seed17_24M/checkpoint-1060/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792580155254834055
+    },
+    "runs/A_seed17_24M/checkpoint-1060/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792580155338834611
+    },
+    "runs/A_seed17_24M/checkpoint-1060/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792580155254834055
+    },
+    "runs/A_seed17_24M/checkpoint-1060/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792580155254834055
+    },
+    "runs/A_seed17_24M/checkpoint-1060/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792580155254834055
+    },
+    "runs/A_seed17_24M/checkpoint-1040/completion_accounting.json": {
+      "bytes": 579,
+      "mtime_ns": 1792579570815017074
+    },
+    "runs/A_seed17_24M/checkpoint-1040/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792579570299013767
+    },
+    "runs/A_seed17_24M/checkpoint-1040/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792579570271013587
+    },
+    "runs/A_seed17_24M/checkpoint-1040/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792579570151012818
+    },
+    "runs/A_seed17_24M/checkpoint-1040/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792579570271013587
+    },
+    "runs/A_seed17_24M/checkpoint-1040/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792579570695016305
+    },
+    "runs/A_seed17_24M/checkpoint-1040/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792579570427014587
+    },
+    "runs/A_seed17_24M/checkpoint-1040/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792579570695016305
+    },
+    "runs/A_seed17_24M/checkpoint-1040/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792579570695016305
+    },
+    "runs/A_seed17_24M/checkpoint-1040/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792579570439014664
+    },
+    "runs/A_seed17_24M/checkpoint-1040/trainer_state.json": {
+      "bytes": 1108373,
+      "mtime_ns": 1792579570779016843
+    },
+    "runs/A_seed17_24M/checkpoint-1040/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792579570267013562
+    },
+    "runs/A_seed17_24M/checkpoint-1040/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792579570347014075
+    },
+    "runs/A_seed17_24M/checkpoint-1040/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792579570271013587
+    },
+    "runs/A_seed17_24M/checkpoint-1040/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792579570267013562
+    },
+    "runs/A_seed17_24M/checkpoint-1040/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792579570271013587
+    },
+    "runs/A_seed17_24M/final_adapter/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792580535732871942
+    },
+    "runs/A_seed17_24M/final_adapter/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792580535708871573
+    },
+    "runs/A_seed17_24M/final_adapter/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792580535452867634
+    },
+    "runs/A_seed17_24M/final_adapter/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792580535708871573
+    },
+    "runs/A_seed17_24M/final_adapter/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792580535868874035
+    },
+    "runs/A_seed17_24M/final_adapter/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792580535708871573
+    },
+    "runs/A_seed17_24M/final_adapter/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792580535552869172
+    },
+    "runs/A_seed17_24M/final_adapter/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792580535784872742
+    },
+    "runs/A_seed17_24M/final_adapter/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792580535708871573
+    },
+    "runs/A_seed17_24M/final_adapter/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792580535548869111
+    },
+    "runs/A_seed17_24M/final_adapter/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792580535708871573
+    },
+    "runs/A_seed17_24M/milestones/12000000/milestone.json": {
+      "bytes": 3212,
+      "mtime_ns": 1792583079254084709
+    },
+    "runs/A_seed17_24M/milestones/12000000/evaluation/evaluation.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792580546129031139
+    },
+    "runs/A_seed17_24M/milestones/12000000/evaluation/gsm8k.jsonl": {
+      "bytes": 2167062,
+      "mtime_ns": 1792583076334017655
+    },
+    "runs/A_seed17_24M/milestones/12000000/evaluation/evaluation_summary.json": {
+      "bytes": 1210,
+      "mtime_ns": 1792583076338017746
+    },
+    "runs/A_seed17_24M/milestones/12000000/evaluation/math500.jsonl": {
+      "bytes": 1227722,
+      "mtime_ns": 1792581338534413470
+    },
+    "runs/A_seed17_24M/milestones/12000000/evaluation/evaluation_config.json": {
+      "bytes": 428,
+      "mtime_ns": 1792580546193032115
+    },
+    "runs/A_seed17_24M/milestones/12000000/evaluation/progress.json": {
+      "bytes": 99,
+      "mtime_ns": 1792583076334017655
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/completion_accounting.json": {
+      "bytes": 575,
+      "mtime_ns": 1792565368099451860
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792565367651449553
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792565367623449408
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792565367471448626
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792565367623449408
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792565368023451468
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792565367763450129
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792565368023451468
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792565368023451468
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792565367775450192
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/trainer_state.json": {
+      "bytes": 580411,
+      "mtime_ns": 1792565368067451695
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792565367623449408
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792565367691449759
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792565367623449408
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792565367619449388
+    },
+    "runs/A_seed17_24M/milestones/12000000/checkpoint-545/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792565367623449408
+    },
+    "runs/A_seed17_24M/milestones/24000000/milestone.json": {
+      "bytes": 3216,
+      "mtime_ns": 1792584849246705568
+    },
+    "runs/A_seed17_24M/milestones/24000000/evaluation/evaluation.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792583084522205358
+    },
+    "runs/A_seed17_24M/milestones/24000000/evaluation/gsm8k.jsonl": {
+      "bytes": 2003771,
+      "mtime_ns": 1792584846434697093
+    },
+    "runs/A_seed17_24M/milestones/24000000/evaluation/evaluation_summary.json": {
+      "bytes": 1212,
+      "mtime_ns": 1792584846438697104
+    },
+    "runs/A_seed17_24M/milestones/24000000/evaluation/math500.jsonl": {
+      "bytes": 1077338,
+      "mtime_ns": 1792583830332566484
+    },
+    "runs/A_seed17_24M/milestones/24000000/evaluation/evaluation_config.json": {
+      "bytes": 428,
+      "mtime_ns": 1792583084586206822
+    },
+    "runs/A_seed17_24M/milestones/24000000/evaluation/progress.json": {
+      "bytes": 99,
+      "mtime_ns": 1792584846434697093
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/completion_accounting.json": {
+      "bytes": 579,
+      "mtime_ns": 1792580534872858707
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792580534396851375
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792580534256849220
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792580534756856920
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792580534512853162
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792580534756856920
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792580534756856920
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792580534520853286
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/trainer_state.json": {
+      "bytes": 1143611,
+      "mtime_ns": 1792580534844858276
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792580534372851006
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792580534440852053
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792580534372851006
+    },
+    "runs/A_seed17_24M/milestones/24000000/checkpoint-1073/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17_24M/checkpoint-1073/completion_accounting.json": {
+      "bytes": 579,
+      "mtime_ns": 1792580534872858707
+    },
+    "runs/A_seed17_24M/checkpoint-1073/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792580534396851375
+    },
+    "runs/A_seed17_24M/checkpoint-1073/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17_24M/checkpoint-1073/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792580534256849220
+    },
+    "runs/A_seed17_24M/checkpoint-1073/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17_24M/checkpoint-1073/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792580534756856920
+    },
+    "runs/A_seed17_24M/checkpoint-1073/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792580534512853162
+    },
+    "runs/A_seed17_24M/checkpoint-1073/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792580534756856920
+    },
+    "runs/A_seed17_24M/checkpoint-1073/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792580534756856920
+    },
+    "runs/A_seed17_24M/checkpoint-1073/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792580534520853286
+    },
+    "runs/A_seed17_24M/checkpoint-1073/trainer_state.json": {
+      "bytes": 1143611,
+      "mtime_ns": 1792580534844858276
+    },
+    "runs/A_seed17_24M/checkpoint-1073/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792580534372851006
+    },
+    "runs/A_seed17_24M/checkpoint-1073/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792580534440852053
+    },
+    "runs/A_seed17_24M/checkpoint-1073/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17_24M/checkpoint-1073/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792580534372851006
+    },
+    "runs/A_seed17_24M/checkpoint-1073/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792580534376851068
+    },
+    "runs/A_seed17/evaluation_recovery.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792549107169605217
+    },
+    "runs/A_seed17/metrics.jsonl": {
+      "bytes": 249144,
+      "mtime_ns": 1792547578666698996
+    },
+    "runs/A_seed17/rollouts.jsonl": {
+      "bytes": 20420898,
+      "mtime_ns": 1792547560666649748
+    },
+    "runs/A_seed17/README.md": {
+      "bytes": 1890,
+      "mtime_ns": 1792547578118697472
+    },
+    "runs/A_seed17/controller.json": {
+      "bytes": 624,
+      "mtime_ns": 1792551530476509366
+    },
+    "runs/A_seed17/status.json": {
+      "bytes": 1112,
+      "mtime_ns": 1792547579154700353
+    },
+    "runs/A_seed17/evaluation_recovery.json": {
+      "bytes": 498,
+      "mtime_ns": 1792551530476509366
+    },
+    "runs/A_seed17/controller_before_evaluation_recovery.json": {
+      "bytes": 333,
+      "mtime_ns": 1792549109389616761
+    },
+    "runs/A_seed17/run_config.json": {
+      "bytes": 3422,
+      "mtime_ns": 1792539779750930547
+    },
+    "runs/A_seed17/trainer_state.json": {
+      "bytes": 298433,
+      "mtime_ns": 1792547579102700209
+    },
+    "runs/A_seed17/controller.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792539774070784918
+    },
+    "runs/A_seed17/run.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792539779658928193
+    },
+    "runs/A_seed17/progress.json": {
+      "bytes": 821,
+      "mtime_ns": 1792547578082697372
+    },
+    "runs/A_seed17/checkpoint-240/completion_accounting.json": {
+      "bytes": 568,
+      "mtime_ns": 1792546426691638181
+    },
+    "runs/A_seed17/checkpoint-240/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792546426267634530
+    },
+    "runs/A_seed17/checkpoint-240/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792546426239634289
+    },
+    "runs/A_seed17/checkpoint-240/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792546426139633427
+    },
+    "runs/A_seed17/checkpoint-240/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792546426239634289
+    },
+    "runs/A_seed17/checkpoint-240/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792546426623637595
+    },
+    "runs/A_seed17/checkpoint-240/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792546426391635597
+    },
+    "runs/A_seed17/checkpoint-240/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792546426623637595
+    },
+    "runs/A_seed17/checkpoint-240/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792546426619637560
+    },
+    "runs/A_seed17/checkpoint-240/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792546426399635666
+    },
+    "runs/A_seed17/checkpoint-240/trainer_state.json": {
+      "bytes": 255603,
+      "mtime_ns": 1792546426643637767
+    },
+    "runs/A_seed17/checkpoint-240/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792546426239634289
+    },
+    "runs/A_seed17/checkpoint-240/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792546426311634908
+    },
+    "runs/A_seed17/checkpoint-240/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792546426239634289
+    },
+    "runs/A_seed17/checkpoint-240/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792546426239634289
+    },
+    "runs/A_seed17/checkpoint-240/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792546426239634289
+    },
+    "runs/A_seed17/checkpoint-280/completion_accounting.json": {
+      "bytes": 568,
+      "mtime_ns": 1792547578666698996
+    },
+    "runs/A_seed17/checkpoint-280/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792547578262697873
+    },
+    "runs/A_seed17/checkpoint-280/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792547578238697806
+    },
+    "runs/A_seed17/checkpoint-280/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792547578130697506
+    },
+    "runs/A_seed17/checkpoint-280/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792547578234697795
+    },
+    "runs/A_seed17/checkpoint-280/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792547578602698818
+    },
+    "runs/A_seed17/checkpoint-280/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792547578374698184
+    },
+    "runs/A_seed17/checkpoint-280/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792547578602698818
+    },
+    "runs/A_seed17/checkpoint-280/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792547578602698818
+    },
+    "runs/A_seed17/checkpoint-280/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792547578382698206
+    },
+    "runs/A_seed17/checkpoint-280/trainer_state.json": {
+      "bytes": 298185,
+      "mtime_ns": 1792547578626698884
+    },
+    "runs/A_seed17/checkpoint-280/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792547578234697795
+    },
+    "runs/A_seed17/checkpoint-280/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792547578302697984
+    },
+    "runs/A_seed17/checkpoint-280/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792547578238697806
+    },
+    "runs/A_seed17/checkpoint-280/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792547578234697795
+    },
+    "runs/A_seed17/checkpoint-280/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792547578238697806
+    },
+    "runs/A_seed17/evaluation/evaluation.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792547587722724387
+    },
+    "runs/A_seed17/evaluation/gsm8k.jsonl": {
+      "bytes": 2091028,
+      "mtime_ns": 1792551527344533616
+    },
+    "runs/A_seed17/evaluation/evaluation_summary.json": {
+      "bytes": 1186,
+      "mtime_ns": 1792551527348533586
+    },
+    "runs/A_seed17/evaluation/math500.jsonl": {
+      "bytes": 1187218,
+      "mtime_ns": 1792549922447986196
+    },
+    "runs/A_seed17/evaluation/evaluation_config.json": {
+      "bytes": 428,
+      "mtime_ns": 1792547587798724602
+    },
+    "runs/A_seed17/evaluation/progress.json": {
+      "bytes": 99,
+      "mtime_ns": 1792551527344533616
+    },
+    "runs/A_seed17/final_adapter/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792547578934699741
+    },
+    "runs/A_seed17/final_adapter/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792547578918699697
+    },
+    "runs/A_seed17/final_adapter/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792547578678699029
+    },
+    "runs/A_seed17/final_adapter/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792547578918699697
+    },
+    "runs/A_seed17/final_adapter/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792547579070700119
+    },
+    "runs/A_seed17/final_adapter/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792547578914699685
+    },
+    "runs/A_seed17/final_adapter/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792547578766699274
+    },
+    "runs/A_seed17/final_adapter/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792547578978699863
+    },
+    "runs/A_seed17/final_adapter/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792547578918699697
+    },
+    "runs/A_seed17/final_adapter/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792547578766699274
+    },
+    "runs/A_seed17/final_adapter/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792547578918699697
+    },
+    "runs/A_seed17/checkpoint-260/completion_accounting.json": {
+      "bytes": 569,
+      "mtime_ns": 1792546977915787980
+    },
+    "runs/A_seed17/checkpoint-260/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792546977499785162
+    },
+    "runs/A_seed17/checkpoint-260/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792546977471784972
+    },
+    "runs/A_seed17/checkpoint-260/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792546977375784323
+    },
+    "runs/A_seed17/checkpoint-260/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792546977471784972
+    },
+    "runs/A_seed17/checkpoint-260/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792546977855787573
+    },
+    "runs/A_seed17/checkpoint-260/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792546977627786029
+    },
+    "runs/A_seed17/checkpoint-260/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792546977855787573
+    },
+    "runs/A_seed17/checkpoint-260/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792546977855787573
+    },
+    "runs/A_seed17/checkpoint-260/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792546977635786083
+    },
+    "runs/A_seed17/checkpoint-260/trainer_state.json": {
+      "bytes": 276911,
+      "mtime_ns": 1792546977879787736
+    },
+    "runs/A_seed17/checkpoint-260/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792546977471784972
+    },
+    "runs/A_seed17/checkpoint-260/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792546977543785460
+    },
+    "runs/A_seed17/checkpoint-260/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792546977471784972
+    },
+    "runs/A_seed17/checkpoint-260/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792546977471784972
+    },
+    "runs/A_seed17/checkpoint-260/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792546977471784972
+    },
+    "runs/B_seed17_6M/metrics.jsonl": {
+      "bytes": 274092,
+      "mtime_ns": 1792592768953160854
+    },
+    "runs/B_seed17_6M/group_diagnostics.jsonl": {
+      "bytes": 632787,
+      "mtime_ns": 1792592756224976240
+    },
+    "runs/B_seed17_6M/rollouts.jsonl": {
+      "bytes": 24063002,
+      "mtime_ns": 1792592756220976182
+    },
+    "runs/B_seed17_6M/README.md": {
+      "bytes": 1896,
+      "mtime_ns": 1792592767841144820
+    },
+    "runs/B_seed17_6M/status.json": {
+      "bytes": 1934,
+      "mtime_ns": 1792592769441167882
+    },
+    "runs/B_seed17_6M/run_config.json": {
+      "bytes": 7424,
+      "mtime_ns": 1792585136376188465
+    },
+    "runs/B_seed17_6M/trainer_state.json": {
+      "bytes": 325956,
+      "mtime_ns": 1792592769425167652
+    },
+    "runs/B_seed17_6M/run.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792585135892185114
+    },
+    "runs/B_seed17_6M/milestones.json": {
+      "bytes": 3553,
+      "mtime_ns": 1792595549340640285
+    },
+    "runs/B_seed17_6M/progress.json": {
+      "bytes": 1560,
+      "mtime_ns": 1792592767829144647
+    },
+    "runs/B_seed17_6M/checkpoint-285/completion_accounting.json": {
+      "bytes": 1305,
+      "mtime_ns": 1792592768429153299
+    },
+    "runs/B_seed17_6M/checkpoint-285/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792592768005147187
+    },
+    "runs/B_seed17_6M/checkpoint-285/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/checkpoint-285/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792592767853144993
+    },
+    "runs/B_seed17_6M/checkpoint-285/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/checkpoint-285/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792592768373152492
+    },
+    "runs/B_seed17_6M/checkpoint-285/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792592768125148917
+    },
+    "runs/B_seed17_6M/checkpoint-285/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792592768373152492
+    },
+    "runs/B_seed17_6M/checkpoint-285/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792592768373152492
+    },
+    "runs/B_seed17_6M/checkpoint-285/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792592768133149032
+    },
+    "runs/B_seed17_6M/checkpoint-285/trainer_state.json": {
+      "bytes": 325708,
+      "mtime_ns": 1792592768397152838
+    },
+    "runs/B_seed17_6M/checkpoint-285/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/checkpoint-285/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792592768045147763
+    },
+    "runs/B_seed17_6M/checkpoint-285/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/checkpoint-285/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/checkpoint-285/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/checkpoint-280/completion_accounting.json": {
+      "bytes": 1306,
+      "mtime_ns": 1792592631499026762
+    },
+    "runs/B_seed17_6M/checkpoint-280/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792592630999018387
+    },
+    "runs/B_seed17_6M/checkpoint-280/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792592630971017917
+    },
+    "runs/B_seed17_6M/checkpoint-280/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792592630839015705
+    },
+    "runs/B_seed17_6M/checkpoint-280/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792592630971017917
+    },
+    "runs/B_seed17_6M/checkpoint-280/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792592631447025891
+    },
+    "runs/B_seed17_6M/checkpoint-280/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792592631119020397
+    },
+    "runs/B_seed17_6M/checkpoint-280/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792592631443025823
+    },
+    "runs/B_seed17_6M/checkpoint-280/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792592631443025823
+    },
+    "runs/B_seed17_6M/checkpoint-280/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792592631131020598
+    },
+    "runs/B_seed17_6M/checkpoint-280/trainer_state.json": {
+      "bytes": 319996,
+      "mtime_ns": 1792592631471026292
+    },
+    "runs/B_seed17_6M/checkpoint-280/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792592630971017917
+    },
+    "runs/B_seed17_6M/checkpoint-280/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792592631043019125
+    },
+    "runs/B_seed17_6M/checkpoint-280/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792592630971017917
+    },
+    "runs/B_seed17_6M/checkpoint-280/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792592630971017917
+    },
+    "runs/B_seed17_6M/checkpoint-280/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792592630971017917
+    },
+    "runs/B_seed17_6M/final_adapter/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792592769237164944
+    },
+    "runs/B_seed17_6M/final_adapter/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792592769217164656
+    },
+    "runs/B_seed17_6M/final_adapter/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792592768965161026
+    },
+    "runs/B_seed17_6M/final_adapter/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792592769217164656
+    },
+    "runs/B_seed17_6M/final_adapter/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792592769361166729
+    },
+    "runs/B_seed17_6M/final_adapter/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792592769217164656
+    },
+    "runs/B_seed17_6M/final_adapter/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792592769061162409
+    },
+    "runs/B_seed17_6M/final_adapter/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792592769281165578
+    },
+    "runs/B_seed17_6M/final_adapter/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792592769217164656
+    },
+    "runs/B_seed17_6M/final_adapter/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792592769061162409
+    },
+    "runs/B_seed17_6M/final_adapter/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792592769221164714
+    },
+    "runs/B_seed17_6M/milestones/6000000/milestone.json": {
+      "bytes": 3203,
+      "mtime_ns": 1792595549340640285
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/completion_accounting.json": {
+      "bytes": 1305,
+      "mtime_ns": 1792592768429153299
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792592768005147187
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792592767853144993
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792592768373152492
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792592768125148917
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792592768373152492
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792592768373152492
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792592768133149032
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/trainer_state.json": {
+      "bytes": 325708,
+      "mtime_ns": 1792592768397152838
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792592768045147763
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/milestones/6000000/checkpoint-285/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792592767985146899
+    },
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation.lock": {
+      "bytes": 0,
+      "mtime_ns": 1792592794185519783
+    },
+    "runs/B_seed17_6M/milestones/6000000/evaluation/gsm8k.jsonl": {
+      "bytes": 2237432,
+      "mtime_ns": 1792595527220134767
+    },
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_summary.json": {
+      "bytes": 1206,
+      "mtime_ns": 1792595527224134859
+    },
+    "runs/B_seed17_6M/milestones/6000000/evaluation/math500.jsonl": {
+      "bytes": 1210630,
+      "mtime_ns": 1792593590101865431
+    },
+    "runs/B_seed17_6M/milestones/6000000/evaluation/evaluation_config.json": {
+      "bytes": 428,
+      "mtime_ns": 1792592794249520681
+    },
+    "runs/B_seed17_6M/milestones/6000000/evaluation/progress.json": {
+      "bytes": 99,
+      "mtime_ns": 1792595527220134767
+    },
+    "runs/B_seed17_6M/checkpoint-260/completion_accounting.json": {
+      "bytes": 1305,
+      "mtime_ns": 1792592093990661346
+    },
+    "runs/B_seed17_6M/checkpoint-260/vocab.json": {
+      "bytes": 2776833,
+      "mtime_ns": 1792592093578659061
+    },
+    "runs/B_seed17_6M/checkpoint-260/tokenizer_config.json": {
+      "bytes": 4715,
+      "mtime_ns": 1792592093558658950
+    },
+    "runs/B_seed17_6M/checkpoint-260/README.md": {
+      "bytes": 5373,
+      "mtime_ns": 1792592093438658283
+    },
+    "runs/B_seed17_6M/checkpoint-260/chat_template.jinja": {
+      "bytes": 2513,
+      "mtime_ns": 1792592093558658950
+    },
+    "runs/B_seed17_6M/checkpoint-260/rng_state.pth": {
+      "bytes": 14581,
+      "mtime_ns": 1792592093938661057
+    },
+    "runs/B_seed17_6M/checkpoint-260/tokenizer.json": {
+      "bytes": 11422063,
+      "mtime_ns": 1792592093698659726
+    },
+    "runs/B_seed17_6M/checkpoint-260/scheduler.pt": {
+      "bytes": 1465,
+      "mtime_ns": 1792592093938661057
+    },
+    "runs/B_seed17_6M/checkpoint-260/optimizer.pt": {
+      "bytes": 148053627,
+      "mtime_ns": 1792592093938661057
+    },
+    "runs/B_seed17_6M/checkpoint-260/training_args.bin": {
+      "bytes": 7249,
+      "mtime_ns": 1792592093706659770
+    },
+    "runs/B_seed17_6M/checkpoint-260/trainer_state.json": {
+      "bytes": 297161,
+      "mtime_ns": 1792592093958661168
+    },
+    "runs/B_seed17_6M/checkpoint-260/adapter_config.json": {
+      "bytes": 1014,
+      "mtime_ns": 1792592093558658950
+    },
+    "runs/B_seed17_6M/checkpoint-260/merges.txt": {
+      "bytes": 1671853,
+      "mtime_ns": 1792592093618659282
+    },
+    "runs/B_seed17_6M/checkpoint-260/special_tokens_map.json": {
+      "bytes": 616,
+      "mtime_ns": 1792592093558658950
+    },
+    "runs/B_seed17_6M/checkpoint-260/adapter_model.safetensors": {
+      "bytes": 73911112,
+      "mtime_ns": 1792592093554658927
+    },
+    "runs/B_seed17_6M/checkpoint-260/added_tokens.json": {
+      "bytes": 605,
+      "mtime_ns": 1792592093558658950
+    }
+  },
+  "scope": "all original source/config files; A/B JSON/JSONL/text/log/CSV and adapters hashed; all A/B result-file sizes/mtimes inventoried",
+  "hashed_files_unchanged": true,
+  "result_inventory_unchanged": true,
+  "passed": true
+}

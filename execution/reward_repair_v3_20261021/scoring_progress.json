@@ -1,0 +1,12 @@
+{
+  "completed_microbatches": 668,
+  "total_microbatches": 668,
+  "paired_rows": 2580,
+  "costs": {
+    "forward_calls": 1342,
+    "unpadded_tokens": 4386178,
+    "padded_tokens": 6291218,
+    "repeat_calls": 6
+  },
+  "wall_seconds": 484.85663210088387
+}

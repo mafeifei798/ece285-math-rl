@@ -1,0 +1,57 @@
+{
+  "actor_and_vllm_load": {
+    "seconds": 28.327083757147193,
+    "peak_allocated_bytes": 28117548032,
+    "peak_reserved_bytes": 28494004224
+  },
+  "prm_load": {
+    "seconds": 8.556870764121413,
+    "peak_allocated_bytes": 42385585664,
+    "peak_reserved_bytes": 42836426752
+  },
+  "parameter_hash_before": {
+    "seconds": 29.515755044296384,
+    "peak_allocated_bytes": 42385585664,
+    "peak_reserved_bytes": 42836426752
+  },
+  "reuse_saved_generation": {
+    "seconds": 0.006762199103832245,
+    "peak_allocated_bytes": 42385585664,
+    "peak_reserved_bytes": 42836426752
+  },
+  "native_prm_scoring": {
+    "seconds": 8.155184066854417,
+    "peak_allocated_bytes": 43024239104,
+    "peak_reserved_bytes": 43662704640
+  },
+  "native_edge_forwards": {
+    "seconds": 0.13697009766474366,
+    "peak_allocated_bytes": 42400117248,
+    "peak_reserved_bytes": 43662704640
+  },
+  "old_and_reference_logps": {
+    "seconds": 6.387299982830882,
+    "peak_allocated_bytes": 45537327616,
+    "peak_reserved_bytes": 48205135872
+  },
+  "signals": {
+    "seconds": 1.204274460207671,
+    "peak_allocated_bytes": 42394826752,
+    "peak_reserved_bytes": 48205135872
+  },
+  "P_VR_backward": {
+    "seconds": 15.083248695824295,
+    "peak_allocated_bytes": 46408035328,
+    "peak_reserved_bytes": 49557798912
+  },
+  "P_PRM_backward": {
+    "seconds": 16.195935528725386,
+    "peak_allocated_bytes": 46408035328,
+    "peak_reserved_bytes": 49557798912
+  },
+  "parameter_hash_after": {
+    "seconds": 27.63029749225825,
+    "peak_allocated_bytes": 42398975488,
+    "peak_reserved_bytes": 49557798912
+  }
+}

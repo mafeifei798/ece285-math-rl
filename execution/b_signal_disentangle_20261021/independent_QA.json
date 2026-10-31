@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "exhaustive_binary_outcome_and_extreme_probability_groups": 65536,
+  "mixed_groups": 65024,
+  "mixed_outcome_sign_violations": 0,
+  "absolute_process_bound": 0.175,
+  "zero_coefficient_exactly_recovers_outcome_GRPO": true,
+  "fixed_rollout_rows": 9056,
+  "independent_FP64_max_difference": 2.1594374821631845e-07,
+  "invalid_inputs_rejected": 5,
+  "original_partners_preserved": true,
+  "manual_case_arithmetic_checks": true,
+  "no_model_loaded": true,
+  "no_training": true
+}

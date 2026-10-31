@@ -1,0 +1,13 @@
+https://github.com/tanzelin430/PAPO/blob/7d260f0a7a6e23d289e32bbc96f80408dddfa1d5/verl/verl/utils/reward_score/llm_process_reward.py
+Upstream blob: 1b68e6e41120cda2139e7396d1426e5316087421
+EXCERPT ONLY
+197: def normalize_imo_score(imo_score: float) -> float:
+198:     """Normalize score (0.0-7.0) to 0-1 range.
+199: 
+200:     Args:
+201:         imo_score: Raw score between 0.0 and 7.0
+202: 
+203:     Returns:
+204:         Normalized score between 0.0 and 1.0
+205:     """
+206:     return imo_score / 7.0

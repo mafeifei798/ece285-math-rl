@@ -1,0 +1,13 @@
+{
+  "model": "qwen7b",
+  "complete": false,
+  "completed_views": 8339,
+  "total_views": 8339,
+  "forward_seconds": 441.9993606964126,
+  "wall_seconds": 450.9315984621644,
+  "input_tokens": 6154647,
+  "padded_tokens": 6165132,
+  "forward_calls": 1043,
+  "allocated_peak_GiB": 16.189059257507324,
+  "reserved_peak_GiB": 78.69921875
+}
