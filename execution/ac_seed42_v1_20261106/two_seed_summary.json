@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "seed42_frozen_results_verified": true,
+  "full_training_advantage_CPU_replay": {
+    "A": {
+      "rows": 9216,
+      "groups": 1152,
+      "max_FP64_reference_error": 9.058772976189289e-08
+    },
+    "C_bounded": {
+      "rows": 9216,
+      "groups": 1152,
+      "max_FP64_reference_error": 1.0689939533570225e-07
+    }
+  },
+  "two_seed_means": {
+    "math500": {
+      "A": 0.529,
+      "C_bounded": 0.563,
+      "difference_pp": 3.399999999999992,
+      "aggregation": "simple arithmetic mean over seed17 and seed42; descriptive, not a seed-robust confidence interval"
+    },
+    "gsm8k": {
+      "A": 0.6717210007581501,
+      "C_bounded": 0.6865049279757391,
+      "difference_pp": 1.4783927217589032,
+      "aggregation": "simple arithmetic mean over seed17 and seed42; descriptive, not a seed-robust confidence interval"
+    }
+  },
+  "not_independent_duplicated_test_questions": true,
+  "new_training_started": false
+}

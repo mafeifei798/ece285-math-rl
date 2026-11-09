@@ -43,10 +43,10 @@
     },
     "model_id": "Qwen/Qwen2.5-Math-1.5B",
     "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-    "model_path": "/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+    "model_path": "/path/to/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
     "states": {
       "A_6M": {
-        "adapter": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+        "adapter": "/path/to/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
         "adapter_sha256": "3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862",
         "adapter_config_sha256": "ba647e824edff976ae8bf664ac421ce2146c955f9d8135a59480f13cff0744fc",
         "adapter_id": 1,
@@ -118,8 +118,8 @@
     "new_training": false,
     "new_PRM_inference": false
   },
-  "source": "/srv/research/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029",
-  "run": "/srv/research/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029",
-  "audit": "/srv/research/ece285_math_rl_project/audits/A6M_protocol_recheck_20261029",
+  "source": "/path/to/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029",
+  "run": "/path/to/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029",
+  "audit": "/path/to/ece285_math_rl_project/audits/A6M_protocol_recheck_20261029",
   "no_GPU_started": true
 }

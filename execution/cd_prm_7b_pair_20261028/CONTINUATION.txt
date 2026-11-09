@@ -1,7 +1,7 @@
 7B C/D paired PRM adaptation — authorized 2026-10-28
 
-Remote root MUST be /srv/research/ece285_math_rl_project.
-Do not use /home/researcher or another project directory. All new caches are under the
+Remote root MUST be /path/to/ece285_math_rl_project.
+Do not use /home/USER or another project directory. All new caches are under the
 math project cache directory. Original A/B code and results remain hash-guarded.
 
 Scope: frozen initial actor generates exactly 512 training questions x4;
@@ -51,7 +51,7 @@ Verifier-incorrect does not certify invalid derivation. No downstream C/D
 accuracy exists until a separately authorized policy training/evaluation.
 
 Local read-only inspector:
-python3 /home/researcher/Desktop/python/ece285_math_rl_project/execution/cd_prm_7b_pair_20261028/inspect_remote.py
+python3 /path/to/ece285_math_rl_project/execution/cd_prm_7b_pair_20261028/inspect_remote.py
 It needs SSH/network permission but does not launch remote work. No scheduled
 Codex automation was created. Existing cancelled automations remain cancelled.
 

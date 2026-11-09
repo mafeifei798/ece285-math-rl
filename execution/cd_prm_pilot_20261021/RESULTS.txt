@@ -57,7 +57,7 @@ B 最新完整检查点为 checkpoint-660（13,853,973 token）；适配器、op
 config.json；pipeline_status.json；B_incident.json；migration_record.json。
 artifacts/summary.json；independent_validation.json；group_advantages.json；scores_B/C/D.jsonl。
 artifacts/buffer_rollouts.jsonl；anchors.jsonl；batch_manifest.json；C/D/metrics.jsonl；C/D/completion.json。
-远程适配器保留：/srv/research/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/artifacts/{C,D}/adapter/。
+远程适配器保留：/path/to/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/artifacts/{C,D}/adapter/。
 
 公共来源
 https://huggingface.co/HuggingFaceH4/Qwen2.5-Math-1.5B-Instruct-PRM-0.2

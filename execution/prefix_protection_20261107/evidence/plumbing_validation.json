@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "variant": "bounded",
+      "shuffled_microbatch_loss_passed": true,
+      "inserted_second_normalization_rejected": true,
+      "optimizer_updates": 0,
+      "loss_sum": 9.365379810333252e-05
+    },
+    {
+      "variant": "uniform",
+      "shuffled_microbatch_loss_passed": true,
+      "inserted_second_normalization_rejected": true,
+      "optimizer_updates": 0,
+      "loss_sum": -0.009910047985613346
+    },
+    {
+      "variant": "prefix",
+      "shuffled_microbatch_loss_passed": true,
+      "inserted_second_normalization_rejected": true,
+      "optimizer_updates": 0,
+      "loss_sum": -0.00991004891693592
+    }
+  ]
+}

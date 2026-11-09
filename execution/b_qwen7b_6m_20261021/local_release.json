@@ -25,7 +25,7 @@
     "training_b/train_b.py": "7c264e0b419effa7871a6b503c515a0353bfd7d48bc6a4d7ba5ff47805c483ac"
   },
   "created_local_unix": 1792625646.679907,
-  "remote_run": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M",
+  "remote_run": "/path/to/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M",
   "authorization": "one Bprime seed17 run up to 6M generated completion tokens plus two-step engineering smoke test and fixed evaluation",
   "original_A_B_retained": true,
   "new_C_D_training": false

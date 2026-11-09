@@ -1,10 +1,14 @@
 {
-  "copied_original_files": 339,
-  "redacted_original_files": 21,
-  "python_files_syntax_checked": 235,
+  "created_utc": "2026-11-09T23:03:14.535931+00:00",
+  "snapshot_date": "2026-11-09",
+  "python_files_syntax_checked": 554,
+  "text_files_pattern_scanned": 2534,
+  "files_considered": 2550,
+  "snapshot_bytes": 68743788,
+  "source_copy_hashes_checked": 2369,
   "credential_pattern_findings": [],
   "syntax_errors": [],
-  "snapshot_bytes": 3410703,
-  "note": "No imports, model inference, optimizer update or network dispatch executed. Pattern scan is not a guarantee against every possible secret.",
-  "excluded_dataset_and_transient_evidence_files": 1158
+  "new_training_or_model_calls": false,
+  "note": "Static parsing, saved-label checks and pattern scanning only; not end-to-end training reproduction or a guarantee that every possible secret is detected.",
+  "passed": true
 }

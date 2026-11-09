@@ -1,0 +1,143 @@
+{
+  "scope": "Artificial-token CPU algebra checks only; not model/runtime acceptance.",
+  "passed": true,
+  "checks": {
+    "eight_leaves_topology": true,
+    "strong_prefix_advantage_is_point25": true,
+    "wrong_leaf_suffix_advantage_is_minus1point25": true,
+    "wrong_leaf_can_have_positive_shared_prefix_outcome_credit": true,
+    "wrong_leaf_never_gets_positive_prm_bonus": true,
+    "shared_prefix_has_no_prm_bonus": true,
+    "process_bonus_abs_at_most_point2": true,
+    "total_is_direct_sum_without_another_normalization": true,
+    "padding_advantages_are_zero": true,
+    "all_wrong_outcome_tree_credit_is_zero": true,
+    "all_wrong_combined_tree_and_prm_credit_is_zero": true,
+    "all_correct_outcome_tree_credit_is_zero": true,
+    "old_c_bounded_all_wrong_credit_is_also_zero": true,
+    "fork_prefix_excludes_selected_token": true,
+    "suffix_cap_is_total_cap_minus_prefix_length": true,
+    "progrs_all_wrong_centering_can_still_give_positive_bonus": true
+  },
+  "count": 16,
+  "mixed_fixture_node_credits": {
+    "prefix_a": {
+      "value": 0.75,
+      "global_advantage": 0.25,
+      "local_advantage": 0.25,
+      "descendant_leaves": 4,
+      "tree_advantage": 0.25
+    },
+    "prefix_b": {
+      "value": 0.25,
+      "global_advantage": -0.25,
+      "local_advantage": -0.25,
+      "descendant_leaves": 4,
+      "tree_advantage": -0.25
+    },
+    "leaf_0": {
+      "value": 1,
+      "global_advantage": 0.5,
+      "local_advantage": 0.25,
+      "descendant_leaves": 1,
+      "tree_advantage": 0.75
+    },
+    "leaf_1": {
+      "value": 1,
+      "global_advantage": 0.5,
+      "local_advantage": 0.25,
+      "descendant_leaves": 1,
+      "tree_advantage": 0.75
+    },
+    "leaf_2": {
+      "value": 1,
+      "global_advantage": 0.5,
+      "local_advantage": 0.25,
+      "descendant_leaves": 1,
+      "tree_advantage": 0.75
+    },
+    "leaf_3": {
+      "value": 0,
+      "global_advantage": -0.5,
+      "local_advantage": -0.75,
+      "descendant_leaves": 1,
+      "tree_advantage": -1.25
+    },
+    "leaf_4": {
+      "value": 1,
+      "global_advantage": 0.5,
+      "local_advantage": 0.75,
+      "descendant_leaves": 1,
+      "tree_advantage": 1.25
+    },
+    "leaf_5": {
+      "value": 0,
+      "global_advantage": -0.5,
+      "local_advantage": -0.25,
+      "descendant_leaves": 1,
+      "tree_advantage": -0.75
+    },
+    "leaf_6": {
+      "value": 0,
+      "global_advantage": -0.5,
+      "local_advantage": -0.25,
+      "descendant_leaves": 1,
+      "tree_advantage": -0.75
+    },
+    "leaf_7": {
+      "value": 0,
+      "global_advantage": -0.5,
+      "local_advantage": -0.25,
+      "descendant_leaves": 1,
+      "tree_advantage": -0.75
+    }
+  },
+  "wrong_leaf_example": {
+    "leaf": "leaf_3",
+    "outcome": 0,
+    "token_ids": [
+      11,
+      12,
+      13,
+      103,
+      999
+    ],
+    "tree": [
+      0.25,
+      0.25,
+      0.25,
+      -1.25,
+      -1.25
+    ],
+    "process": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "total": [
+      0.25,
+      0.25,
+      0.25,
+      -1.25,
+      -1.25
+    ],
+    "mask": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "no_policy_update": true,
+  "gpu_used": false,
+  "limitations": [
+    "Whole-trajectory PRM minimum may come from a shared prefix; suffix-only bonus is unvalidated.",
+    "Official code also has RLOO preprocessing and selected-leaf accounting; this is a paper-formula reference, not a full reproduction.",
+    "All-wrong outcome/process policy advantages are zero; KL regularization can still update parameters.",
+    "Inverse-sqrt weighting reduces repeated-prefix weight; it does not deduplicate forward/backward compute."
+  ],
+  "script_sha256": "0e114a8b605b85d4aeaf17df066b1a5481057aa787cfdf7f0cc24e0c895e2b9a"
+}

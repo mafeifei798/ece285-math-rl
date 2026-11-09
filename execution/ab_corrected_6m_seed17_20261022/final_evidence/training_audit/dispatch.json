@@ -8,15 +8,15 @@
       "pid": 3445424,
       "started_unix": 1792678713.8560305,
       "command": [
-        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
         "-B",
-        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/audit_completed_training.py",
+        "/path/to/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/audit_completed_training.py",
         "--root",
-        "/srv/research/ece285_math_rl_project",
+        "/path/to/ece285_math_rl_project",
         "--arm",
         "A",
         "--output",
-        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/training_final_20261022/A.json"
+        "/path/to/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/training_final_20261022/A.json"
       ],
       "returncode": 0,
       "finished_unix": 1792678714.7263978
@@ -25,15 +25,15 @@
       "pid": 3445426,
       "started_unix": 1792678714.7274213,
       "command": [
-        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
         "-B",
-        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/audit_completed_training.py",
+        "/path/to/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/audit_completed_training.py",
         "--root",
-        "/srv/research/ece285_math_rl_project",
+        "/path/to/ece285_math_rl_project",
         "--arm",
         "B",
         "--output",
-        "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/training_final_20261022/B.json"
+        "/path/to/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/training_final_20261022/B.json"
       ],
       "returncode": 0,
       "finished_unix": 1792678715.8994148

@@ -1,0 +1,1 @@
+{"gpu": "0, NVIDIA A100-SXM4-80GB, 81920 MiB, 81152 MiB, 0 %\n", "model_directories": ["H4-PRM-1.5B-0.2", "Qwen2.5-Math-1.5B", "pure_official_prm_7b", "qwen25_math_prm_7b"], "our_gpu_processes": ""}

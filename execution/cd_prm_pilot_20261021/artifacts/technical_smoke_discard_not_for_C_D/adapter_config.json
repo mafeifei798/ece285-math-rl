@@ -4,7 +4,7 @@
     "base_model_class": "Qwen2ForTokenClassification",
     "parent_library": "transformers.models.qwen2.modeling_qwen2"
   },
-  "base_model_name_or_path": "/srv/research/ece285_math_rl_project/models/H4-PRM-1.5B-0.2/bc44d4a24bf1f7453fc3892dec25c4669e54ede5",
+  "base_model_name_or_path": "/path/to/ece285_math_rl_project/models/H4-PRM-1.5B-0.2/bc44d4a24bf1f7453fc3892dec25c4669e54ede5",
   "bias": "none",
   "corda_config": null,
   "eva_config": null,

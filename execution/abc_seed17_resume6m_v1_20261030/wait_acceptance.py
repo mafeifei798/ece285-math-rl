@@ -4,7 +4,7 @@ import subprocess
 remote=r'''
 from pathlib import Path
 import json,time,os
-p=Path('/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030');last=None
+p=Path('/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030');last=None
 def read(f):return json.loads(f.read_text()) if f.exists() else {}
 for _ in range(720):
  c=read(p/'controller.json');gate=read(p/'acceptance_gate.json');steps={a:read(p/a/'progress.json').get('global_step',48) for a in ['A','C_mix','C_bounded']}
@@ -17,4 +17,4 @@ for _ in range(720):
  if c.get('stage')=='complete':print('COMPLETE',flush=True);break
  time.sleep(20)
 '''
-subprocess.run(SSH+['/srv/research/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,check=True)
+subprocess.run(SSH+['/path/to/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,check=True)

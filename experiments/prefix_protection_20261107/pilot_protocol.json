@@ -1,0 +1,71 @@
+{
+  "status": "planned_not_dispatched",
+  "purpose": "Test whether localizing negative policy updates helps beyond uniformly weakening them",
+  "seed": 17,
+  "source_checkpoint": "runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+  "variants": [
+    "bounded",
+    "uniform",
+    "prefix"
+  ],
+  "source_global_step": 288,
+  "additional_updates_per_variant": 48,
+  "target_global_step": 336,
+  "approximate_additional_generation_tokens_per_variant": 1000000,
+  "budget_basis": "Equal new optimizer steps and question order; actual generated tokens and PRM scoring cost recorded separately",
+  "sampling": "One shared, validated native-LoRA runtime for all variants; no per-arm runtime changes",
+  "sampling_runtime_gate": "Full generation/reward/token-signal/loss integration and adapter synchronization validation",
+  "restore": [
+    "same_adapter",
+    "same_optimizer",
+    "same_scheduler",
+    "same_torch_rng_state",
+    "same_question_position"
+  ],
+  "question_schedule": "audits/ABC_seed17_resumed_V1_20261104/preflight.json:first_epoch_question_groups[288:336]",
+  "num_generations": 8,
+  "questions_per_update": 4,
+  "max_completion_length": 2048,
+  "learning_rate_config": 5e-06,
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "beta": 0.04,
+  "first_low_score_threshold": 0.8,
+  "PRM": "Frozen existing Qwen2.5-Math-PRM-7B C adapter",
+  "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "wrong_positive_policy_advantage_allowed": false,
+  "all_wrong_group_policy_signal": "unchanged_zero",
+  "post_combination_advantage_normalization": false,
+  "response_length_denominator": "original_full_effective_response_length",
+  "evaluation_dataset": "data/prepared/validation.jsonl",
+  "evaluation_models": [
+    "source_checkpoint",
+    "bounded",
+    "uniform",
+    "prefix"
+  ],
+  "evaluation": "Same V1 native-LoRA greedy protocol, unchanged prompts and reward-repair-v3 verifier, 2048-token cap",
+  "screening_metrics": [
+    "paired_validation_accuracy",
+    "truncation",
+    "invalid_or_missing_box",
+    "short_wrong",
+    "empty",
+    "tokens",
+    "PRM_time",
+    "protected_prefix_coverage"
+  ],
+  "interpretation": "Prefix versus uniform tests localization; prefix versus bounded alone cannot distinguish localization from weaker negative updates",
+  "limitations": [
+    "Single-seed continuation pilot",
+    "Approximately 7M cumulative generation tokens, not a from-scratch 6M comparison",
+    "Validation has previously been used; not a pristine held-out test",
+    "No guaranteed accuracy benefit",
+    "PRM low score is not ground-truth first error"
+  ],
+  "automatic_expansion": false,
+  "new_seeds": false,
+  "test_set_tuning": false,
+  "enforce_eager": true
+}

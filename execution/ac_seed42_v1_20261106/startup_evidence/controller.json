@@ -1,0 +1,11 @@
+{
+  "stage": "A_resume_to144",
+  "pid": 1486797,
+  "unix": 1793992583.2635705,
+  "child_pid": 1493206,
+  "child_create_time": 1793992582.78,
+  "log": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106/logs/A_resume_to144.log",
+  "started_unix": 1793992583.2622073,
+  "deadline_unix": 1794165026.2213194,
+  "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac"
+}

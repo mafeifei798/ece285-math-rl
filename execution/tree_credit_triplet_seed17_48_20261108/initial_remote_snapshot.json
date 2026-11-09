@@ -1,0 +1,34 @@
+{
+  "unix": 1794138775.810223,
+  "gpus": "0, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, NVIDIA A100-SXM4-80GB, 81920 MiB, 0 MiB, 0 %\n",
+  "gpu_processes": "",
+  "active_project_controllers": [],
+  "checkpoint": {
+    "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+    "contract": {
+      "arm": "C_bounded",
+      "global_step": 288,
+      "actor_adapter_digest": "1734da9cf0b9642e1be2cfef5ca36072dc07ef568a893dca9100b015975bdebf",
+      "accounting_sha256": "9339b84925e2273021946245b98c9b5a5e9c9176725a6a7b044412375a8a2802",
+      "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba",
+      "complete_generation_boundary": true,
+      "files_sha256": {
+        "adapter_model.safetensors": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+        "optimizer.pt": "5acce471a2c25e49d90ca4f4a3ab4448a4a8f8779207038c58139be031adac24",
+        "scheduler.pt": "206c97a06f7e8c8e8410cfc838fd897e9765af302b84c1f4b89868f0858fbc6e",
+        "rng_state.pth": "d3941657086b1a12c98f2665bf21b6ecf3d9e36f313467439b068d1d5bfcc700",
+        "trainer_state.json": "b677a4fb39b048f152f412b12018f153b84af5a57436ef94b4cb4e70ad65d49f"
+      }
+    },
+    "hashes": {
+      "adapter_model.safetensors": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+      "optimizer.pt": "5acce471a2c25e49d90ca4f4a3ab4448a4a8f8779207038c58139be031adac24",
+      "scheduler.pt": "206c97a06f7e8c8e8410cfc838fd897e9765af302b84c1f4b89868f0858fbc6e",
+      "rng_state.pth": "d3941657086b1a12c98f2665bf21b6ecf3d9e36f313467439b068d1d5bfcc700",
+      "trainer_state.json": "b677a4fb39b048f152f412b12018f153b84af5a57436ef94b4cb4e70ad65d49f"
+    },
+    "all_match": true
+  },
+  "free_GiB": 1014.0287055969238,
+  "new_run_exists": false
+}

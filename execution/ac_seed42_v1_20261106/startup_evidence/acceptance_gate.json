@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "common_update": 2,
+  "same_fresh_initialization": true,
+  "same_training_settings": true,
+  "actual_optimizer_updates_both_arms": true,
+  "no_reward_loss_change": true,
+  "unix": 1793992583.2065945
+}

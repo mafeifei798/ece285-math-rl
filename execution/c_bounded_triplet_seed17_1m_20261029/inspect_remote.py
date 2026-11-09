@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent
 REMOTE=r'''
 from pathlib import Path
 import json,subprocess,time,os
-r=Path('/srv/research/ece285_math_rl_project');p=r/'runs/C_bounded_triplet_seed17_1M_20261029_v2';a=r/'audits/C_bounded_triplet_seed17_1M_20261029_v2'
+r=Path('/path/to/ece285_math_rl_project');p=r/'runs/C_bounded_triplet_seed17_1M_20261029_v2';a=r/'audits/C_bounded_triplet_seed17_1M_20261029_v2'
 def load(f):return json.loads(f.read_text()) if f.exists() else None
 def alive(pid):
  try:os.kill(int(pid),0);return True
@@ -29,8 +29,8 @@ print(json.dumps(out,ensure_ascii=False,allow_nan=False))
 '''
 
 def main():
-    cmd=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
-        'researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -B -']
+    cmd=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
+        'USER@GPU_HOST','/path/to/ece285_math_rl_project/.venv/bin/python -B -']
     r=subprocess.run(cmd,input=REMOTE,text=True,capture_output=True,check=True)
     d=json.loads(r.stdout);(HERE/'latest_snapshot.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
     if d['dispatch']:(HERE/'dispatch.json').write_text(json.dumps(d['dispatch'],ensure_ascii=False,indent=2)+'\n')

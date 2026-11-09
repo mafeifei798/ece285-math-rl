@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "summary": {
+    "source": {
+      "n": 500,
+      "correct": 320.0,
+      "accuracy": 0.64,
+      "tokens": 314364,
+      "truncated": 27,
+      "missing_or_invalid_box": 22,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.044,
+      "status_counts": {
+        "exact": 293,
+        "symbolic": 153,
+        "missing_or_invalid_box": 22,
+        "truncated": 27,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 712.1447136467323,
+      "predictions_sha256": "b8401f515448f265a506a8a140c013c2d9fc2be7f97ef4fb2af3a3f689920a6a"
+    },
+    "chain_cb": {
+      "n": 500,
+      "correct": 328.0,
+      "accuracy": 0.656,
+      "tokens": 312228,
+      "truncated": 27,
+      "missing_or_invalid_box": 20,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.04,
+      "status_counts": {
+        "exact": 302,
+        "symbolic": 147,
+        "missing_or_invalid_box": 20,
+        "truncated": 27,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 723.3143298979849,
+      "predictions_sha256": "de0cf7c5d3037de7775d27d43fc02c7b1fba9af726e9de56d938c73d4703228e"
+    },
+    "tree_vr": {
+      "n": 500,
+      "correct": 316.0,
+      "accuracy": 0.632,
+      "tokens": 314864,
+      "truncated": 26,
+      "missing_or_invalid_box": 20,
+      "truncation_rate": 0.052,
+      "missing_or_invalid_box_rate": 0.04,
+      "status_counts": {
+        "exact": 292,
+        "symbolic": 157,
+        "missing_or_invalid_box": 20,
+        "truncated": 26,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 722.8700605016202,
+      "predictions_sha256": "b95a70abbfb58a4f9969ad5e4720989b2349f70073c4a736ad8416ea97fa1fce"
+    },
+    "tree_cb": {
+      "n": 500,
+      "correct": 319.0,
+      "accuracy": 0.638,
+      "tokens": 318570,
+      "truncated": 28,
+      "missing_or_invalid_box": 17,
+      "truncation_rate": 0.056,
+      "missing_or_invalid_box_rate": 0.034,
+      "status_counts": {
+        "exact": 294,
+        "symbolic": 157,
+        "missing_or_invalid_box": 17,
+        "truncated": 28,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 723.0419318666682,
+      "predictions_sha256": "d939b18920d09766aa5ae41267c39a4344cf27f29aba34afdee82378e319f54d"
+    }
+  },
+  "seconds": 2885.719923019409,
+  "contract_sha256": "cba75bbab043dfbecc53c6f9ae509501ab9b006d1672eaa336e4f06230a74050",
+  "test_sets_evaluated": false,
+  "PRM_at_evaluation": false
+}

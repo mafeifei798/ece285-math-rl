@@ -1,0 +1,1154 @@
+{
+  "checked_at": "2026-11-07T22:37:55.092944-08:00",
+  "method": "Official public dashboard guest.ListNodeInfo; cross-checked with Kubernetes node labels",
+  "A100_nodes": 40,
+  "A10080_nodes": 32,
+  "A10080_total_capacity": 247.0,
+  "A10080_current_free_all_nodes": 110.0,
+  "nominal_candidates_count": 1,
+  "nominal_candidates_GPU_free": 1.0,
+  "A100_nodes_details": [
+    {
+      "Name": "emporia.gp-argo.greatplains.net",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "1",
+      "CPUAvailableFloat": 8,
+      "MemoryAvailable": 4795441152,
+      "EphemeralAvailable": 19312322543616,
+      "Region": "us-central",
+      "Zone": "kanren",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gp-argo.usd.edu",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "1",
+      "CPUAvailableFloat": 49,
+      "MemoryAvailable": 367451750400,
+      "EphemeralAvailable": 19838456037376,
+      "Region": "us-central",
+      "Zone": "usd",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gp-engine.beocat.ksu.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 68,
+      "MemoryAvailable": 539344019456,
+      "EphemeralAvailable": 1350844809216,
+      "Region": "us-central",
+      "Zone": "ksu",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gp-engine.hpc.okstate.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 78,
+      "MemoryAvailable": 542608990208,
+      "EphemeralAvailable": 1391623299072,
+      "Region": "us-central",
+      "Zone": "osu",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.2",
+      "GPUDriver": "595.91",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gp-engine.usd.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 33,
+      "MemoryAvailable": 269101879296,
+      "EphemeralAvailable": 745254420480,
+      "Region": "us-central",
+      "Zone": "usd",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpengine-uams.areon.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 80,
+      "MemoryAvailable": 588201369600,
+      "EphemeralAvailable": 384477167616,
+      "Region": "us-central",
+      "Zone": "uams",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpengine-uark.areon.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "3",
+      "CPUAvailableFloat": 79,
+      "MemoryAvailable": 571384373248,
+      "EphemeralAvailable": 886938341248,
+      "Region": "us-central",
+      "Zone": "uark",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpn-fiona-mizzou-1.rnet.missouri.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 216,
+      "MemoryAvailable": 680809574400,
+      "EphemeralAvailable": 1170456182784,
+      "Region": "us-central",
+      "Zone": "mizzou",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "mizzou",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpn-fiona-mizzou-2.rnet.missouri.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 233,
+      "MemoryAvailable": 784425623552,
+      "EphemeralAvailable": 1170456182784,
+      "Region": "us-central",
+      "Zone": "mizzou",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "mizzou",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpn-fiona-mizzou-3.rnet.missouri.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 19,
+      "MemoryAvailable": 261513326592,
+      "EphemeralAvailable": 1362655969280,
+      "Region": "us-central",
+      "Zone": "mizzou",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.2",
+      "GPUDriver": "595.91",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpn-fiona-mizzou-4.rnet.missouri.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 101,
+      "MemoryAvailable": 597489717248,
+      "EphemeralAvailable": 1595657945088,
+      "Region": "us-central",
+      "Zone": "mizzou",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpn-fiona-mizzou-5.rnet.missouri.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 108,
+      "MemoryAvailable": 646252515328,
+      "EphemeralAvailable": 1488283762688,
+      "Region": "us-central",
+      "Zone": "mizzou",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.2",
+      "GPUDriver": "595.112",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "gpn-fiona-mizzou-6.rnet.missouri.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 105,
+      "MemoryAvailable": 586857152512,
+      "EphemeralAvailable": 1058787033088,
+      "Region": "us-central",
+      "Zone": "mizzou",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "hcc-gpengine-shor-c5303.unl.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 27,
+      "MemoryAvailable": 118168825856,
+      "EphemeralAvailable": 1557003239424,
+      "Region": "us-central",
+      "Zone": "unl",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "hcc-gpn-argo-1.unl.edu",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "1",
+      "CPUAvailableFloat": 44,
+      "MemoryAvailable": 401549991936,
+      "EphemeralAvailable": 8001029144576,
+      "Region": "us-central",
+      "Zone": "unl",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.2",
+      "GPUDriver": "595.91",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "k8s-a100-01.suncorridor.org",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "2",
+      "CPUAvailableFloat": 5,
+      "MemoryAvailable": 110387630080,
+      "EphemeralAvailable": 696424333312,
+      "Region": "us-west",
+      "Zone": "suncorridor",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "nautilus-it-gpu07.fullerton.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 17,
+      "MemoryAvailable": 557883572224,
+      "EphemeralAvailable": 1055719018496,
+      "Region": "us-west",
+      "Zone": "fullerton",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "nautilus-it-gpu08.fullerton.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 29,
+      "MemoryAvailable": 444723036160,
+      "EphemeralAvailable": 571464101888,
+      "Region": "us-west",
+      "Zone": "fullerton",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "node-1-1.sdsc.optiputer.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 75,
+      "MemoryAvailable": 135290961920,
+      "EphemeralAvailable": 2747151679488,
+      "Region": "us-west",
+      "Zone": "ucsd-nrp",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "node-1-2.sdsc.optiputer.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 102,
+      "MemoryAvailable": 324778143744,
+      "EphemeralAvailable": 3840220856320,
+      "Region": "us-west",
+      "Zone": "ucsd-nrp",
+      "Taints": [
+        {
+          "key": "nautilus.io/hardware",
+          "value": "large-gpu",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "node-1-3.sdsc.optiputer.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 72,
+      "MemoryAvailable": 94758281216,
+      "EphemeralAvailable": 2721381875712,
+      "Region": "us-west",
+      "Zone": "ucsd-nrp",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "node-1-4.sdsc.optiputer.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 7,
+      "MemoryAvailable": 116233547776,
+      "EphemeralAvailable": 3292612526080,
+      "Region": "us-west",
+      "Zone": "ucsd-nrp",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "node-2-2.sdsc.optiputer.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "1",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 47,
+      "MemoryAvailable": 442918809600,
+      "EphemeralAvailable": 3303349944320,
+      "Region": "us-west",
+      "Zone": "ucsd-nrp",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": true
+    },
+    {
+      "Name": "node-2-3.sdsc.optiputer.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 50,
+      "MemoryAvailable": 164484452352,
+      "EphemeralAvailable": 3013439651840,
+      "Region": "us-west",
+      "Zone": "ucsd-nrp",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "node-2-4.sdsc.optiputer.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 102,
+      "MemoryAvailable": 104896995328,
+      "EphemeralAvailable": 3840220856320,
+      "Region": "us-west",
+      "Zone": "ucsd-nrp",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        },
+        {
+          "key": "nautilus.io/hardware",
+          "value": "large-gpu",
+          "effect": "NoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "oru.gp-argo.greatplains.net",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "1",
+      "CPUAvailableFloat": 21,
+      "MemoryAvailable": 50232123392,
+      "EphemeralAvailable": 19752556691456,
+      "Region": "us-central",
+      "Zone": "oru",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "true",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "pas.macc.net.internet2.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "8",
+      "CPUAvailableFloat": 83,
+      "MemoryAvailable": 540819767296,
+      "EphemeralAvailable": 1919910023168,
+      "Region": "us-east",
+      "Zone": "ann-arbor",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "nrp-llm",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-01.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe-MIG-1g.10gb",
+      "GPUMem": 10200547328,
+      "GPUAvailable": "28",
+      "GPUCapacity": "28",
+      "CPUAvailableFloat": 56,
+      "MemoryAvailable": 516991975424,
+      "EphemeralAvailable": 1919959433216,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "sdsuinstruction",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "9728",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-02.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe-MIG-1g.10gb",
+      "GPUMem": 10200547328,
+      "GPUAvailable": "28",
+      "GPUCapacity": "28",
+      "CPUAvailableFloat": 54,
+      "MemoryAvailable": 512688619520,
+      "EphemeralAvailable": 1919959433216,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "sdsuinstruction",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "9728",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-03.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe-MIG-1g.10gb",
+      "GPUMem": 10200547328,
+      "GPUAvailable": "21",
+      "GPUCapacity": "21",
+      "CPUAvailableFloat": 56,
+      "MemoryAvailable": 516983578624,
+      "EphemeralAvailable": 1919959433216,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "sdsuinstruction",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "9728",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-04.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe-MIG-1g.10gb",
+      "GPUMem": 10200547328,
+      "GPUAvailable": "28",
+      "GPUCapacity": "28",
+      "CPUAvailableFloat": 56,
+      "MemoryAvailable": 516983562240,
+      "EphemeralAvailable": 1919959433216,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "sdsuinstruction",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "9728",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-05.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 13,
+      "MemoryAvailable": 235260542976,
+      "EphemeralAvailable": 1329132994560,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-06.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "4",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 53,
+      "MemoryAvailable": 512688619520,
+      "EphemeralAvailable": 1919959433216,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "csu-tide",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-07.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 25,
+      "MemoryAvailable": 105740455936,
+      "EphemeralAvailable": 1919959433216,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "csu-tide",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "rci-nrp-gpu-08.sdsu.edu",
+      "GPUType": "NVIDIA-A100-80GB-PCIe",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 42,
+      "MemoryAvailable": 474033901568,
+      "EphemeralAvailable": 1919959433216,
+      "Region": "us-west",
+      "Zone": "sdsu-rci",
+      "Taints": [
+        {
+          "key": "nautilus.io/reservation",
+          "value": "csu-tide",
+          "effect": "NoSchedule"
+        },
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": false,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "ren-gp-argo-01.madren.org",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "1",
+      "CPUAvailableFloat": 49,
+      "MemoryAvailable": 78290587648,
+      "EphemeralAvailable": 19731081854976,
+      "Region": "us-central",
+      "Zone": "dsu",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "sdsmt.gp-argo.greatplains.net",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "1",
+      "CPUAvailableFloat": 39,
+      "MemoryAvailable": 165051387904,
+      "EphemeralAvailable": 19978042474496,
+      "Region": "us-central",
+      "Zone": "sdsmt",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.2",
+      "GPUDriver": "595.91",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "sdsu.gp-argo.greatplains.net",
+      "GPUType": "NVIDIA-A100-PCIE-40GB",
+      "GPUMem": 42949672960,
+      "GPUAvailable": "0",
+      "GPUCapacity": "1",
+      "CPUAvailableFloat": 49,
+      "MemoryAvailable": 67340955648,
+      "EphemeralAvailable": 19785832202240,
+      "Region": "us-central",
+      "Zone": "sdstate",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "40960",
+      "no_hard_taint": true,
+      "is_80GiB": false,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "sphinx.sdstate.edu",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "3",
+      "CPUAvailableFloat": 84,
+      "MemoryAvailable": 367813767168,
+      "EphemeralAvailable": 1535528402944,
+      "Region": "us-central",
+      "Zone": "sdstate",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    },
+    {
+      "Name": "tu.gp-engine.greatplains.net",
+      "GPUType": "NVIDIA-A100-SXM4-80GB",
+      "GPUMem": 85899345920,
+      "GPUAvailable": "0",
+      "GPUCapacity": "4",
+      "CPUAvailableFloat": 86,
+      "MemoryAvailable": 423860572160,
+      "EphemeralAvailable": 416689422336,
+      "Region": "us-central",
+      "Zone": "university-of-tulsa",
+      "Taints": [
+        {
+          "key": "nvidia.com/gpu",
+          "value": "Exists",
+          "effect": "PreferNoSchedule"
+        }
+      ],
+      "IsUnschedulable": false,
+      "CUDA": "13.4",
+      "GPUDriver": "615.71",
+      "k8s_ready": "True",
+      "memory_label_MiB": "81920",
+      "no_hard_taint": true,
+      "is_80GiB": true,
+      "meets_nominal_requests": false
+    }
+  ],
+  "new_resources_created": false,
+  "limits": "Dashboard snapshot only, not a reservation or scheduler admission guarantee. CPU, RAM, scratch are unallocated-request estimates, not a benchmark."
+}

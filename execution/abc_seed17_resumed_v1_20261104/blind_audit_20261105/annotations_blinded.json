@@ -1,0 +1,325 @@
+{
+  "reviewer": "assistant, model identity and stored outcome labels blinded; not human panel",
+  "annotations": [
+    {
+      "case_id": "R01",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": false,
+      "verdict": "invalid",
+      "reason": "The asserted equality 7(sqrt(5)-1)/2 = 14/3 is false. The presented quadratic does not support the boxed answer. Figure is absent from supplied problem; geometry cannot be fully checked."
+    },
+    {
+      "case_id": "R01",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "uncertain_geometry",
+      "reason": "14(sqrt(2)-1) is not the reference answer. Its geometric assumptions cannot be verified without the missing figure."
+    },
+    {
+      "case_id": "R02",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid",
+      "reason": "57 needed, 48 available; needs9, not48-8=40. Confuses available chairs with required chairs."
+    },
+    {
+      "case_id": "R02",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid_body_answer_conflict",
+      "reason": "57-(8+5*8)=9 correctly derived; leading box105 conflicts with correct final box9."
+    },
+    {
+      "case_id": "R03",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": true,
+      "verdict": "correct_core_unfinished",
+      "reason": "A42, E30, difference12. Repeated misleading qualifications and opening37; ends in repetition without completed answer."
+    },
+    {
+      "case_id": "R03",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid_body_answer_conflict",
+      "reason": "Correct chain30→35→42 and difference12. Invents a reference37 and gives conflicting boxes, but ends12."
+    },
+    {
+      "case_id": "R04",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid",
+      "reason": "Halves52 instead of the26 female performers, yielding29 rather than16."
+    },
+    {
+      "case_id": "R04",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid_body_answer_conflict",
+      "reason": "52/2/2+3=16. Opening26 is incorrect, final16 matches derivation."
+    },
+    {
+      "case_id": "R05",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": true,
+      "verdict": "valid_unboxed",
+      "reason": "50*11/4=137.5; correct prose conclusion1371/2 but lacks required answer box."
+    },
+    {
+      "case_id": "R05",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "Correct conversion11/4, product275/2 and mixed1371/2, boxed."
+    },
+    {
+      "case_id": "R06",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid_repetition",
+      "reason": "Derives tan2 correctly but repeatedly insists1/2 and ends mid-sentence."
+    },
+    {
+      "case_id": "R06",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "Divide sinA=2cosA by nonzero cosA to obtain tanA=2."
+    },
+    {
+      "case_id": "R07",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "31/11111=279/99999=0.overline(00279), period5; prime-length block is not a repetition of one digit."
+    },
+    {
+      "case_id": "R07",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid",
+      "reason": "11111=41*271 is not prime. Even for prime denominator p-1 is only a possible maximal period, not a guaranteed period."
+    },
+    {
+      "case_id": "R08",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "10+2*10=30, boxed."
+    },
+    {
+      "case_id": "R08",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": true,
+      "verdict": "valid_unboxed",
+      "reason": "Correct10+20=30, but only empty opening box and unboxed conclusion."
+    },
+    {
+      "case_id": "R09",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "Two paid scoops cost3 and give3 total;6 buys2 bundles=6 scoops. Distinguishes4 paid from6 received."
+    },
+    {
+      "case_id": "R09",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid_final_override",
+      "reason": "Derives6 total, then final box4 without justification. Under benchmark total-received reading, final wrong; paid-scoop wording is noted."
+    },
+    {
+      "case_id": "R10",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "Reflect center(0,0) to(8,2), radius5; coefficients1,-16,-4,43. Initial symbolic box is a placeholder."
+    },
+    {
+      "case_id": "R10",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid_final_override",
+      "reason": "Correct reflected circle in body then invents given coefficients and overrides with(1,10,-24,40)."
+    },
+    {
+      "case_id": "R11",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": true,
+      "verdict": "valid_core_imprecise_labels_unboxed",
+      "reason": "10000-2000-5000-1000=2000; text mistakenly calls8000 steps before jog instead of after, but intended subtraction and prose answer correct; no valid box."
+    },
+    {
+      "case_id": "R11",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "self_corrected_imprecise_labels",
+      "reason": "Initially says4000 then explicitly corrects to8000-6000=2000. Still misnames8000 as before jog; final2000 valid. Not a clean error-free derivation."
+    },
+    {
+      "case_id": "R12",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "First4+2, second2+8, total16."
+    },
+    {
+      "case_id": "R12",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid_repetition",
+      "reason": "Correct total16 repeatedly overridden by invented reference18; opening18 and unfinished repetition."
+    },
+    {
+      "case_id": "R13",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": true,
+      "verdict": "valid_unboxed",
+      "reason": "Marcus26-5=21; Leo2*21=42. Empty opening box, correct prose final42."
+    },
+    {
+      "case_id": "R13",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid_body_answer_conflict",
+      "reason": "Correct42 derived; invents supplied52 and contradicts opening52, but final42."
+    },
+    {
+      "case_id": "R14",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "Using benchmark72-foot start,72*(2/3)^2=32."
+    },
+    {
+      "case_id": "R14",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid",
+      "reason": "Computes32 second bounce then incorrectly applies third decay to21.33; opening16 also contradictory."
+    },
+    {
+      "case_id": "R15",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": true,
+      "verdict": "valid_unboxed",
+      "reason": "2^8=2^(2x) gives4, correctly in prose/code. Only empty box; no valid answer box."
+    },
+    {
+      "case_id": "R15",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "2x=8 gives boxed4."
+    },
+    {
+      "case_id": "R16",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": false,
+      "verdict": "invalid_case_exclusion",
+      "reason": "Incorrectly excludes omega1 as zero denominator; denominators actually2. All roots still give1, but completeness argument is invalid."
+    },
+    {
+      "case_id": "R16",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid",
+      "reason": "Same false exclusion of omega1; derives1 and even reports numeric1, then asserts1/2."
+    },
+    {
+      "case_id": "R17",
+      "output": "X",
+      "expected_outcome": 0,
+      "correct_math_core": true,
+      "verdict": "valid_unboxed",
+      "reason": "20-5*2=10, correct prose answer; empty box only."
+    },
+    {
+      "case_id": "R17",
+      "output": "Y",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "20-10=10, boxed."
+    },
+    {
+      "case_id": "R18",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": false,
+      "verdict": "invalid_incomplete_proof",
+      "reason": "Wrong sign in y derivative and erroneous cross term in x simplification. Restricting to x=-y and axes does not prove a global bound, despite correct final1/4. Opening1/12 conflicts."
+    },
+    {
+      "case_id": "R18",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid",
+      "reason": "Wrong derivative/algebra, then fabricates output1/12 contradicting its own f(1,-1)=1/4 lower bound."
+    },
+    {
+      "case_id": "R19",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid_body_answer_conflict",
+      "reason": "7*10*(21/30)=49 correct; initial7/9 conflicts with final49."
+    },
+    {
+      "case_id": "R19",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid_repetition",
+      "reason": "Calculates49 then invents required2 and repeats without completed correct box."
+    },
+    {
+      "case_id": "R20",
+      "output": "X",
+      "expected_outcome": 1,
+      "correct_math_core": true,
+      "verdict": "valid",
+      "reason": "(4*6*1) mod7=3, correct boxed answer."
+    },
+    {
+      "case_id": "R20",
+      "output": "Y",
+      "expected_outcome": 0,
+      "correct_math_core": false,
+      "verdict": "invalid_final_override",
+      "reason": "Derives3 but gives final0, unsupported override."
+    }
+  ]
+}

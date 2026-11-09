@@ -4,7 +4,7 @@
   "model_calls": 0,
   "optimizer_updates": 0,
   "training_dispatched": false,
-  "remote_analysis": "/srv/research/ece285_math_rl_project/audits/cd_repair_analysis_20261029",
+  "remote_analysis": "/path/to/ece285_math_rl_project/audits/cd_repair_analysis_20261029",
   "same_frozen_inputs_verified": true,
   "CPU_group_replays": 402,
   "protected_original_files_unchanged": 89,

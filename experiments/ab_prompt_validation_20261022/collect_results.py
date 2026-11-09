@@ -16,13 +16,13 @@ import traceback
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'execution/ab_prompt_validation_20261022'
-REMOTE = '/srv/research/ece285_math_rl_project/runs/AB_prompt_validation_20261022'
-PYTHON = '/srv/research/ece285_math_rl_project/.venv/bin/python'
+REMOTE = '/path/to/ece285_math_rl_project/runs/AB_prompt_validation_20261022'
+PYTHON = '/path/to/ece285_math_rl_project/.venv/bin/python'
 RELEASE = '2a0e7781f0c9c31b10edd94ee84ec00eb135c9682ca64dd4eded4318d8853d72'
-SSH = ['ssh', '-p', '11032', '-i', '/home/researcher/.ssh/research_server_ed25519',
+SSH = ['ssh', '-p', '11032', '-i', '/home/USER/.ssh/fym_125_76_110_84_ed25519',
        '-o', 'BatchMode=yes', '-o', 'IdentitiesOnly=yes', '-o', 'StrictHostKeyChecking=yes',
        '-o', 'ConnectTimeout=12', '-o', 'ServerAliveInterval=15', '-o', 'ServerAliveCountMax=2',
-       'researcher@server.example.invalid']
+       'USER@GPU_HOST']
 
 
 def sha(path):

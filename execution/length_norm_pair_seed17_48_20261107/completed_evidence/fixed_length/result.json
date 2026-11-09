@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "arm": "fixed_length",
+  "global_step": 336,
+  "additional_updates": 48,
+  "loss_rows": 1536,
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107/fixed_length/checkpoint-336",
+  "adapter_sha256": "f0e4421e13dc36bc2b7ce0b915cc6db15d05e2215a2d5c8ded205951f68568df",
+  "source_checkpoint_unchanged": true,
+  "actor_base_unchanged": true,
+  "PRM_frozen": true,
+  "seconds": 4970.02010846138,
+  "progress": {
+    "arm": "fixed_length",
+    "global_step": 336,
+    "additional_updates": 48,
+    "target_step": 336,
+    "generated_tokens": 990114,
+    "loss_rows": 1536,
+    "elapsed_seconds": 4939.081367911771,
+    "pid": 3312711,
+    "unix": 1794133205.7756293,
+    "latest_generation": {
+      "step_before_update": 335,
+      "question_ids": [
+        "math/train/number_theory/719",
+        "math/train/prealgebra/580",
+        "math/train/counting_and_probability/604",
+        "math/train/intermediate_algebra/28"
+      ],
+      "tokens": 28650,
+      "rows": 32,
+      "seconds": 87.7764160213992,
+      "statuses": {
+        "correct_unchanged": 18,
+        "prefix_protected": 5,
+        "first_step_unchanged": 1,
+        "all_wrong_unchanged": 8
+      },
+      "protected_tokens": 2140,
+      "correct": 18.0,
+      "empty": 0,
+      "short_wrong": 0,
+      "truncated": 0,
+      "answer_statuses": {
+        "exact": 18,
+        "symbolic": 6,
+        "unit_symbolic": 8
+      },
+      "group_types": {
+        "mixed": 2,
+        "all_wrong": 1,
+        "all_correct": 1
+      },
+      "PRM_cost": {
+        "prm_forward_seconds": 3.8677937919273973,
+        "prm_input_tokens": 32855,
+        "prm_padded_tokens": 32855,
+        "prm_scored_completions": 32
+      },
+      "wrong_positive_tokens": 0,
+      "post_scalar_normalizations": 0,
+      "arm": "fixed_length",
+      "loss_type": "dr_grpo"
+    },
+    "peak_allocated_GiB": 35.433146476745605
+  },
+  "metrics": {
+    "train_runtime": 4938.6557,
+    "train_samples_per_second": 129.59,
+    "train_steps_per_second": 4.05,
+    "total_flos": 0.0,
+    "train_loss": 0.0024192723453563218
+  }
+}

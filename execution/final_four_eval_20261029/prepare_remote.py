@@ -14,7 +14,7 @@ payload=base64.b64encode(zlib.compress(json.dumps(files).encode())).decode()
 REMOTE=r'''
 from pathlib import Path
 import json,zlib,base64,subprocess,os,time
-r=Path('/srv/research/ece285_math_rl_project')
+r=Path('/path/to/ece285_math_rl_project')
 s=r/'experiments/final_four_eval_20261029';run=r/'runs/Final_four_eval_seed17_1M_20261029';a=r/'audits/Final_four_eval_seed17_1M_20261029'
 assert not s.exists() and not run.exists() and not a.exists(),'Existing attempt: inspect receipts/locks; never overwrite or duplicate dispatch'
 files=json.loads(zlib.decompress(base64.b64decode(PAYLOAD)))
@@ -29,9 +29,9 @@ result=subprocess.run([str(r/'.venv/bin/python'),'-B',str(s/'preflight.py')],cap
 assert result.returncode==0,{'returncode':result.returncode,'stderr':result.stderr[-4000:],'stdout':result.stdout[-4000:]}
 print(json.dumps({'preflight':json.loads((a/'preflight.json').read_text()),'contract':json.loads((run/'contract.json').read_text()),'source':str(s),'run':str(run),'audit':str(a),'no_GPU_started':True}))
 '''.replace('PAYLOAD',repr(payload))
-command=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519',
+command=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519',
  '-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
- 'researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -B -']
+ 'USER@GPU_HOST','/path/to/ece285_math_rl_project/.venv/bin/python -B -']
 r=subprocess.run(command,input=REMOTE,text=True,capture_output=True)
 assert r.returncode==0,(r.stdout[-5000:],r.stderr[-5000:])
 d=json.loads(r.stdout);(HERE/'admission.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')

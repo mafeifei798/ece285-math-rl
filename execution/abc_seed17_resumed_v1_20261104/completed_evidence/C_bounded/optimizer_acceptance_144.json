@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "start_step": 50,
+  "trainable_parameters": 18464768,
+  "PRM_in_optimizer": false,
+  "resume": {
+    "adapter_exact": true,
+    "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/milestones/checkpoint-50",
+    "source_step": 50,
+    "optimizer_exact": true,
+    "scheduler_exact": true
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "arm": "grpo",
+  "global_step": 336,
+  "additional_updates": 48,
+  "target_step": 336,
+  "generated_tokens": 1033644,
+  "loss_rows": 1536,
+  "elapsed_seconds": 5251.692390313372,
+  "pid": 3242362,
+  "unix": 1794128225.826964,
+  "latest_generation": {
+    "step_before_update": 335,
+    "question_ids": [
+      "math/train/number_theory/719",
+      "math/train/prealgebra/580",
+      "math/train/counting_and_probability/604",
+      "math/train/intermediate_algebra/28"
+    ],
+    "tokens": 27631,
+    "rows": 32,
+    "seconds": 99.87513510044664,
+    "statuses": {
+      "correct_unchanged": 20,
+      "all_wrong_unchanged": 8,
+      "prefix_protected": 1,
+      "first_step_unchanged": 3
+    },
+    "protected_tokens": 428,
+    "correct": 20.0,
+    "empty": 0,
+    "short_wrong": 0,
+    "truncated": 1,
+    "answer_statuses": {
+      "exact": 20,
+      "unit_symbolic": 7,
+      "truncated": 1,
+      "symbolic": 4
+    },
+    "group_types": {
+      "all_correct": 1,
+      "all_wrong": 1,
+      "mixed": 2
+    },
+    "PRM_cost": {
+      "prm_forward_seconds": 3.506886526942253,
+      "prm_input_tokens": 29513,
+      "prm_padded_tokens": 29513,
+      "prm_scored_completions": 31
+    },
+    "wrong_positive_tokens": 0,
+    "post_scalar_normalizations": 0,
+    "arm": "grpo",
+    "loss_type": "grpo"
+  },
+  "peak_allocated_GiB": 35.43276834487915
+}

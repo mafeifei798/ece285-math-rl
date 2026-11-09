@@ -1,0 +1,13 @@
+{
+  "arm": "fixed_length",
+  "global_step": 336,
+  "loss_rows": 1536,
+  "files_sha256": {
+    "adapter_model.safetensors": "f0e4421e13dc36bc2b7ce0b915cc6db15d05e2215a2d5c8ded205951f68568df",
+    "optimizer.pt": "e01aba906f8c23a5d30a4168ad32244571763d3b9cac28c2907b054f468e7cb1",
+    "scheduler.pt": "0070d40a1c3a96d11bd6ee55235c4bda5954b399cb3860cc99e7db5de8519713",
+    "rng_state.pth": "b88bebcdbb0bd8c3468b21e9cdd34e9b5e9d88fb59e4f1f88e271a49913f8e33",
+    "trainer_state.json": "efb7b27cfa7ec65aa4f3a5697b99c08cd88fa5c90466a130b87cba891e0ccc6f"
+  },
+  "source_release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150"
+}

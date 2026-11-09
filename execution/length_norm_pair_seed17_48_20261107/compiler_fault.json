@@ -1,0 +1,74 @@
+{
+  "compiler_errors": [
+    {
+      "line": 34,
+      "context": [
+        "INFO 11-08 15:22:26 [default_loader.py:268] Loading weights took 0.54 seconds",
+        "INFO 11-08 15:22:26 [punica_selector.py:19] Using PunicaWrapperGPU.",
+        "INFO 11-08 15:22:26 [gpu_model_runner.py:2392] Model loading took 2.9143 GiB and 0.699772 seconds",
+        "/tmp/tmpna7_4hjj/__triton_launcher.c:4:10: fatal error: Python.h: No such file or directory",
+        "    4 | #include <Python.h>",
+        "      |          ^~~~~~~~~~",
+        "compilation terminated."
+      ]
+    },
+    {
+      "line": 35,
+      "context": [
+        "INFO 11-08 15:22:26 [punica_selector.py:19] Using PunicaWrapperGPU.",
+        "INFO 11-08 15:22:26 [gpu_model_runner.py:2392] Model loading took 2.9143 GiB and 0.699772 seconds",
+        "/tmp/tmpna7_4hjj/__triton_launcher.c:4:10: fatal error: Python.h: No such file or directory",
+        "    4 | #include <Python.h>",
+        "      |          ^~~~~~~~~~",
+        "compilation terminated.",
+        "[rank0]: Traceback (most recent call last):"
+      ]
+    },
+    {
+      "line": 175,
+      "context": [
+        "[rank0]:     subprocess.check_call(cc_cmd, stdout=subprocess.DEVNULL)",
+        "[rank0]:   File \"/usr/lib/python3.11/subprocess.py\", line 413, in check_call",
+        "[rank0]:     raise CalledProcessError(retcode, cmd)",
+        "[rank0]: subprocess.CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpna7_4hjj/__triton_launcher.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpna7_4hjj/__triton_launcher.cpython-311-x86_64-linux-gnu.so', '-lcuda', '-L/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-L/lib/i386-linux-gnu', '-I/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpna7_4hjj', '-I/usr/include/python3.11']' returned non-zero exit status 1.",
+        "[rank0]:[W1108 15:22:28.116709739 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())"
+      ]
+    }
+  ],
+  "project_runtime_paths": [],
+  "include_dirs": {
+    "/usr/include/python3.11/Python.h": false,
+    "/usr/local/include/python3.11/Python.h": false,
+    "/path/to/ece285_math_rl_project/.runtime/include/python3.11/Python.h": false
+  },
+  "prior_launch": {
+    "pid": 2722088,
+    "unix": 1794084386.5324533,
+    "release_sha256": "c836587c30f1a12c50fac5a0c76dd1f6f66f4088a4b890739935c68496fa7767"
+  },
+  "allowed_env": {
+    "CPATH": null,
+    "C_INCLUDE_PATH": null,
+    "CPLUS_INCLUDE_PATH": null,
+    "LIBRARY_PATH": null,
+    "LD_LIBRARY_PATH": null,
+    "TRITON_LIBCUDA_PATH": null
+  },
+  "gpu": "",
+  "verified_pre_update_state": {
+    "grpo": {
+      "intent": false,
+      "updates": 0,
+      "raw_count": 0,
+      "checkpoint_count": 0
+    },
+    "fixed_length": {
+      "intent": false,
+      "updates": 0,
+      "raw_count": 0,
+      "checkpoint_count": 0
+    }
+  },
+  "no_update_generated_raw_count": 0,
+  "no_update_rollouts_exist": false
+}

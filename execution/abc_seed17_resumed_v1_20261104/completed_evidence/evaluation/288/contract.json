@@ -1,0 +1,46 @@
+{
+  "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba",
+  "step": 288,
+  "engine": "V1",
+  "seed": 285,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": -1,
+  "cap": 2048,
+  "max_model_len": 4096,
+  "batch_size": 64,
+  "max_num_seqs": 64,
+  "max_num_batched_tokens": 4096,
+  "gpu_memory_utilization": 0.15,
+  "max_loras": 1,
+  "max_cpu_loras": 3,
+  "max_lora_rank": 16,
+  "dtype": "bfloat16",
+  "enforce_eager": true,
+  "VLLM_ENABLE_V1_MULTIPROCESSING": "1",
+  "prompt": "unchanged prepared prompts",
+  "verifier": "reward-repair-v3-20261021",
+  "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+  "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "dataset_sha256": {
+    "math500": "578a5e2586488a9800bfa823fdaf4ee16dfb8bba12ad1ef99f3be523c81fade1",
+    "gsm8k": "babb3c674b069f021cab4ad72d6be0b8249f070ac11f8984e6dea3f96547ee04"
+  },
+  "adapters": {
+    "A": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/A/milestones/checkpoint-288",
+      "sha256": "7d29cbba57f77772ffc8f0ba014c0fdaf69bd6fa6d9f810f2b88ca6b30396274",
+      "id": 1
+    },
+    "C_mix": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_mix/milestones/checkpoint-288",
+      "sha256": "3945679af7830ef09a867024dd12a9be9ba8bb6e16b9e56642325061533de4b9",
+      "id": 2
+    },
+    "C_bounded": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/milestones/checkpoint-288",
+      "sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+      "id": 3
+    }
+  }
+}

@@ -29,5 +29,5 @@
   "retained_unique_native_inputs": 2035,
   "old_unique_native_inputs": 2042,
   "replaced_or_added_native_inputs": 13,
-  "ps": "    PID    PPID STAT     ELAPSED COMMAND\n3237174       1 TNs        17:14 /srv/research/ece285_math_rl_project/.venv/bin/python -B -u /srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\n3238739 3237174 SNl        16:54 /srv/research/ece285_math_rl_project/.venv/bin/python -B -u /srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/generate.py\n"
+  "ps": "    PID    PPID STAT     ELAPSED COMMAND\n3237174       1 TNs        17:14 /path/to/ece285_math_rl_project/.venv/bin/python -B -u /path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\n3238739 3237174 SNl        16:54 /path/to/ece285_math_rl_project/.venv/bin/python -B -u /path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/generate.py\n"
 }

@@ -37,7 +37,7 @@
         "empty_rows": 0,
         "short_wrong_rows": 0
       },
-      "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+      "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
       "adapter_changed": true,
       "PRM_frozen": true,
       "originals_preserved": true,
@@ -81,7 +81,7 @@
         "empty_rows": 0,
         "short_wrong_rows": 0
       },
-      "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+      "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
       "adapter_changed": true,
       "PRM_frozen": true,
       "originals_preserved": true,
@@ -125,7 +125,7 @@
         "empty_rows": 0,
         "short_wrong_rows": 0
       },
-      "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+      "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
       "adapter_changed": true,
       "PRM_frozen": true,
       "originals_preserved": true,

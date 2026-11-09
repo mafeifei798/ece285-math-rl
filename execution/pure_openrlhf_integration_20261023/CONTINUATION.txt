@@ -1,8 +1,8 @@
 PURE OpenRLHF independent no-update integration — completed 2026-10-23
 
 Authorized scope: independent P-VR/P-PRM, exact-token forward/backward probe, no optimizer/no formal training, preserve original A/B and veRL.
-Remote root: /srv/research/ece285_math_rl_project
-SSH: port 11032, researcher@server.example.invalid, identity /home/researcher/.ssh/research_server_ed25519, IdentitiesOnly=yes.
+Remote root: /path/to/ece285_math_rl_project
+SSH: port 11032, USER@GPU_HOST, identity /home/USER/.ssh/fym_125_76_110_84_ed25519, IdentitiesOnly=yes.
 Code: experiments/pure_openrlhf_integration_20261023
 Run: runs/PURE_OpenRLHF_no_update_20261023_v1
 Audit: audits/PURE_OpenRLHF_integration_20261023

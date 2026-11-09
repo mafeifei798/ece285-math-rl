@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "arm": "uniform",
+  "global_step": 336,
+  "additional_updates": 48,
+  "loss_rows": 1536,
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/uniform/checkpoint-336",
+  "adapter_sha256": "28592f49e6ad4e1bdd71d314dd81cec631b7c1c63df625f289f1e79eb5f1f9c8",
+  "source_checkpoint_unchanged": true,
+  "actor_base_unchanged": true,
+  "PRM_frozen": true,
+  "seconds": 4992.311950206757,
+  "progress": {
+    "arm": "uniform",
+    "global_step": 336,
+    "additional_updates": 48,
+    "target_step": 336,
+    "generated_tokens": 1037167,
+    "loss_rows": 1536,
+    "elapsed_seconds": 4962.006325509399,
+    "pid": 2802471,
+    "unix": 1794095145.725878,
+    "latest_generation": {
+      "step_before_update": 335,
+      "question_ids": [
+        "math/train/number_theory/719",
+        "math/train/prealgebra/580",
+        "math/train/counting_and_probability/604",
+        "math/train/intermediate_algebra/28"
+      ],
+      "tokens": 24418,
+      "rows": 32,
+      "seconds": 102.6435434287414,
+      "statuses": {
+        "correct_unchanged": 22,
+        "invalid_fallback": 1,
+        "all_wrong_unchanged": 8,
+        "prefix_protected": 1
+      },
+      "protected_tokens": 315,
+      "correct": 22.0,
+      "empty": 0,
+      "short_wrong": 0,
+      "truncated": 1,
+      "answer_statuses": {
+        "exact": 22,
+        "truncated": 1,
+        "unit_symbolic": 8,
+        "symbolic": 1
+      },
+      "group_types": {
+        "mixed": 2,
+        "all_wrong": 1,
+        "all_correct": 1
+      },
+      "PRM_cost": {
+        "prm_forward_seconds": 3.231054613366723,
+        "prm_input_tokens": 26405,
+        "prm_padded_tokens": 26405,
+        "prm_scored_completions": 31
+      },
+      "wrong_positive_tokens": 0,
+      "post_scalar_normalizations": 0,
+      "cached_first_batch": false,
+      "pre_failure_PRM_seconds_unavailable": false
+    },
+    "peak_allocated_GiB": 35.43276834487915
+  },
+  "metrics": {
+    "train_runtime": 4961.6309,
+    "train_samples_per_second": 128.99,
+    "train_steps_per_second": 4.031,
+    "total_flos": 0.0,
+    "train_loss": -0.00620705483204022
+  },
+  "cached_first_batch_recovery": true,
+  "sampling_rng_after_fault_bitwise_preserved": false
+}

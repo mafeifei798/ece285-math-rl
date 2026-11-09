@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "arm": "prefix",
+  "global_step": 336,
+  "additional_updates": 48,
+  "loss_rows": 1536,
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/prefix/checkpoint-336",
+  "adapter_sha256": "0245e4f16f429e7adaf3b32383035d756e473e0a569cdbe415e73b530016ea49",
+  "source_checkpoint_unchanged": true,
+  "actor_base_unchanged": true,
+  "PRM_frozen": true,
+  "seconds": 5194.414664030075,
+  "progress": {
+    "arm": "prefix",
+    "global_step": 336,
+    "additional_updates": 48,
+    "target_step": 336,
+    "generated_tokens": 1032677,
+    "loss_rows": 1536,
+    "elapsed_seconds": 5162.619416177273,
+    "pid": 2871342,
+    "unix": 1794100349.899614,
+    "latest_generation": {
+      "step_before_update": 335,
+      "question_ids": [
+        "math/train/number_theory/719",
+        "math/train/prealgebra/580",
+        "math/train/counting_and_probability/604",
+        "math/train/intermediate_algebra/28"
+      ],
+      "tokens": 23226,
+      "rows": 32,
+      "seconds": 101.60304300952703,
+      "statuses": {
+        "correct_unchanged": 22,
+        "prefix_protected": 1,
+        "all_wrong_unchanged": 8,
+        "first_step_unchanged": 1
+      },
+      "protected_tokens": 326,
+      "correct": 22.0,
+      "empty": 0,
+      "short_wrong": 0,
+      "truncated": 1,
+      "answer_statuses": {
+        "exact": 22,
+        "symbolic": 2,
+        "unit_symbolic": 7,
+        "truncated": 1
+      },
+      "group_types": {
+        "mixed": 2,
+        "all_wrong": 1,
+        "all_correct": 1
+      },
+      "PRM_cost": {
+        "prm_forward_seconds": 3.061282617971301,
+        "prm_input_tokens": 25025,
+        "prm_padded_tokens": 25025,
+        "prm_scored_completions": 31
+      },
+      "wrong_positive_tokens": 0,
+      "post_scalar_normalizations": 0,
+      "cached_first_batch": false,
+      "pre_failure_PRM_seconds_unavailable": false
+    },
+    "peak_allocated_GiB": 35.43276834487915
+  },
+  "metrics": {
+    "train_runtime": 5162.175,
+    "train_samples_per_second": 123.979,
+    "train_steps_per_second": 3.874,
+    "total_flos": 0.0,
+    "train_loss": -0.006769622517107824
+  },
+  "cached_first_batch_recovery": false,
+  "sampling_rng_after_fault_bitwise_preserved": null
+}

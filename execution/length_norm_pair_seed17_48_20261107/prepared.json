@@ -1,0 +1,10 @@
+{
+  "prepared": true,
+  "GPU_started": false,
+  "source": "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107",
+  "run": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107",
+  "audit": "/path/to/ece285_math_rl_project/audits/Length_norm_pair_seed17_48_20261107",
+  "files": 11,
+  "protected_files": 2093,
+  "release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150"
+}

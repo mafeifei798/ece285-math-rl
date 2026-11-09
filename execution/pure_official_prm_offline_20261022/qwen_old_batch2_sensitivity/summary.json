@@ -27,7 +27,7 @@
     }
   ],
   "provenance": {
-    "inputs": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
+    "inputs": "/path/to/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
     "input_sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d",
     "qwen_scored_sha256": "422ecbcebb5df0160182e3780f0dd0beeeb0f8192784758bfcb02452e9127f74",
     "pure_scored_sha256": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5",

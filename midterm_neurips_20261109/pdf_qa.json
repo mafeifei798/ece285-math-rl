@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-11-09T22:40:27.550418+00:00",
+  "passed": true,
+  "body_pages": 5,
+  "reference_pages": 1,
+  "total_pages": 6,
+  "official_style_unchanged": true,
+  "all_fonts_embedded": true,
+  "tex_warnings": [],
+  "unresolved_citations": 0,
+  "references": 9,
+  "authors": [
+    "Hongyi Ding",
+    "Yang Zeng",
+    "Jasmine Jiang"
+  ],
+  "visual_review": {
+    "page1_author_order_reinspected": true,
+    "remaining_five_pages_text_unchanged": true,
+    "previous_full_report_visual_review_retained": true,
+    "overlap_or_clipping": false
+  },
+  "GPU_used": false,
+  "submitted_anything": false,
+  "compiler": "Tectonic 0.17.0",
+  "source_sha256": "0eb32069393a7f326f01063888abcdb1d8e57339994236a22cb9e8354d6b033f",
+  "pdf_sha256": "8f50702fefdbaba3d95dba6ded8c65308bc8cd5870ae0f0991cf931b43d559e0"
+}

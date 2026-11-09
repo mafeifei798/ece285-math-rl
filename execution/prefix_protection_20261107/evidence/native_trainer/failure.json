@@ -1,0 +1,5 @@
+{
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_protection_20261107/native_trainer_no_update.py\", line 109, in <module>\n    try:main()\n        ^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_protection_20261107/native_trainer_no_update.py\", line 95, in main\n    assert difference==0\n           ^^^^^^^^^^^^^\nAssertionError\n",
+  "optimizer_steps": 0
+}

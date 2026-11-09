@@ -1,6 +1,6 @@
 {
   "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-  "adapter": "/srv/research/ece285_math_rl_project/runs/A_seed17/final_adapter",
+  "adapter": "/path/to/ece285_math_rl_project/runs/A_seed17/final_adapter",
   "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
   "greedy": true,
   "started_unix": 1792549114.6398847,

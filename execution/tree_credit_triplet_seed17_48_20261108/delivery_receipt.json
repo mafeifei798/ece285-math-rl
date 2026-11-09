@@ -1,0 +1,49 @@
+{
+  "generated_at_utc": "2026-11-08T18:56:11.581323+00:00",
+  "files": {
+    "REPORT.txt": {
+      "bytes": 6903,
+      "sha256": "4d11fc8d84bf404ae1bbaa1b5d917dc3ec321a2fbef57c6992ca48674f8f5baf"
+    },
+    "result_summary.json": {
+      "bytes": 14857,
+      "sha256": "77a81b3170eae18db3fd54b70018d345b747a9951087190ed02bcaf417a81c01"
+    },
+    "review.html": {
+      "bytes": 9088,
+      "sha256": "f41f0a9b9173a33d8864631e65149fdd65d20b8cc338a44ed0e7356b24142398"
+    },
+    "completion_verification.json": {
+      "bytes": 1231,
+      "sha256": "70d168545eb164186e29687d5a7cb0127c5d8bf91e353e9992f17d992fdbc3a2"
+    },
+    "analysis_plan.json": {
+      "bytes": 1379,
+      "sha256": "544dec6db75e3a03e1bc3f74c4a1edb10614276282fa33382e707e433d8f002a"
+    },
+    "completed_manifest.json": {
+      "bytes": 16260,
+      "sha256": "f5ec4830ad4683dd449595f972ab9f30e9d1040578f535dc66ab7bea40971bc1"
+    },
+    "interpretation.json": {
+      "bytes": 6212,
+      "sha256": "8321e5bfd5641da2692ce24bbd5b233551c499f72365970b2e56150f2fd8510f"
+    },
+    "runtime_closeout.json": {
+      "bytes": 1696,
+      "sha256": "39a1a12e9f132a5217130f404aedf2854863bc88953a4dafbf3c0f5f67c3f8ce"
+    }
+  },
+  "analysis_code_sha256": {
+    "independent_cpu_verify.py": "c46c95c5df4a7fc2dc78be4e457b14639c9ef76d184d34dc1f3a851c1d2d048a",
+    "mechanism_diagnostics.py": "c025010d1dc6853ebed1d1424acecd259517f7769b25689a951c266bda86cee6",
+    "verifier_replay.py": "fbd438b93ad25b6fd198d5dec72fd474ecb59695f78505d33a1c8446ea33a905",
+    "verify_local_completed.py": "db3045f8d499de226355a937aec2016d8f262fafd64daa1feb8d7e9b89bab920",
+    "interpret_completed.py": "5c44b0b36c861577c5cf2a9baec987e6c9cd584b7094904c1b347b79c47daf83",
+    "runtime_closeout.py": "fe05ff407be007e4c1e4fd683911eec311cc71f66f6aef92b826115efc540d57",
+    "render_final.py": "797165340c45d0747912751c6c4ff8b98c09fbbfc34031dc2777036ef50d520f"
+  },
+  "training_release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78",
+  "training_complete": true,
+  "independent_acceptance_complete": true
+}

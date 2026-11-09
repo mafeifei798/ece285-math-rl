@@ -22,7 +22,7 @@ def tensor_sha(tensor):
 
 torch.set_num_threads(1)
 assert not torch.cuda.is_initialized()
-root = Path('/srv/research/ece285_math_rl_project')
+root = Path('/path/to/ece285_math_rl_project')
 checkpoint = root / 'runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0001'
 meta = json.loads((checkpoint / 'checkpoint.json').read_text())
 assert meta['batch_step'] == meta['optimizer_steps'] == 1

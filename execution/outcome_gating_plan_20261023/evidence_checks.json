@@ -27,10 +27,10 @@
     "A random permutation can be identity and does not isolate mathematics from length/format correlations."
   ],
   "source_sha256": {
-    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json": "891b34d4206ae3dd8de98ac8855a9c8a291276c008317bf3a48297e15fe9ea9c",
-    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/A.json": "349499cb60cd50d89c5e46d7cf6d6f62485d603193dfdcb2db24954ce9d08dff",
-    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/B.json": "49080a483822eec80b5fd623168095267bdc9fd09115c9465de352ece25aa399",
-    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/rollouts.jsonl": "adfc269057091108f0c84274b78164d1795d19b85856297f9876d60e191ff304",
-    "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_prompt_validation_20261022/final_analysis_summary.json": "6550a68a02b6876483fb279b1a73163a3220d620a07703d36177a9ebe7806ded"
+    "/path/to/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json": "891b34d4206ae3dd8de98ac8855a9c8a291276c008317bf3a48297e15fe9ea9c",
+    "/path/to/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/A.json": "349499cb60cd50d89c5e46d7cf6d6f62485d603193dfdcb2db24954ce9d08dff",
+    "/path/to/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/B.json": "49080a483822eec80b5fd623168095267bdc9fd09115c9465de352ece25aa399",
+    "/path/to/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/rollouts.jsonl": "adfc269057091108f0c84274b78164d1795d19b85856297f9876d60e191ff304",
+    "/path/to/ece285_math_rl_project/execution/ab_prompt_validation_20261022/final_analysis_summary.json": "6550a68a02b6876483fb279b1a73163a3220d620a07703d36177a9ebe7806ded"
   }
 }

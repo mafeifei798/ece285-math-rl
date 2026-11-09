@@ -1,0 +1,29 @@
+{
+  "written_at_utc": "2026-11-08T12:37:17.128069+00:00",
+  "primary_comparison": "tree_cb_minus_chain_cb",
+  "secondary_comparisons": [
+    "tree_vr_minus_chain_cb",
+    "tree_cb_minus_tree_vr"
+  ],
+  "primary_metric": "previously used validation500 single-greedy answer accuracy; same common evaluation",
+  "intervals": "paired question bootstrap95%; secondary comparisons exploratory and unadjusted",
+  "costs": [
+    "same48 updates and question schedule",
+    "actual unique generated tokens",
+    "expanded leaf training tokens",
+    "rollout prefill tokens",
+    "PRM input tokens",
+    "wall-clock",
+    "sampled peak GPU memory"
+  ],
+  "mechanisms": [
+    "fallback roots and eligibility",
+    "wrong positive shared-prefix outcome credit",
+    "wrong positive exclusive-suffix/PRM forbidden",
+    "correct positive outcome credit reversed by PRM",
+    "whole-PRM minimum in shared/exclusive regions",
+    "flat-credit cosine; does not identify causal component"
+  ],
+  "interpretation": "This tests whole tree-credit package and PRM incremental value; cannot isolate sampling vs credit vs removal of outcome standard deviation. No claim of full official reproduction, step correctness, multi-seed confirmation or pristine test performance.",
+  "extension": "No automatic3M/6M or extra seeds. Give recommendation only after actual results and independent acceptance."
+}

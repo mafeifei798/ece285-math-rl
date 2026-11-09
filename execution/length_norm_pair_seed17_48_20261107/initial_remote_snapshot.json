@@ -1,0 +1,118 @@
+{
+  "gpu": "0, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, NVIDIA A100-SXM4-80GB, 81920 MiB, 0 MiB, 0 %\n",
+  "gpu_processes": "",
+  "project_processes": [],
+  "checkpoint": {
+    "adapter_model.safetensors": {
+      "exists": true,
+      "bytes": 73911112,
+      "sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073"
+    },
+    "adapter_config.json": {
+      "exists": true,
+      "bytes": 1014,
+      "sha256": "70b1304df4bfa63981ab6619946a60004191e572ece95d8ec729e3258e341232"
+    },
+    "optimizer.pt": {
+      "exists": true,
+      "bytes": 148053627,
+      "sha256": "5acce471a2c25e49d90ca4f4a3ab4448a4a8f8779207038c58139be031adac24"
+    },
+    "scheduler.pt": {
+      "exists": true,
+      "bytes": 1465,
+      "sha256": "206c97a06f7e8c8e8410cfc838fd897e9765af302b84c1f4b89868f0858fbc6e"
+    },
+    "rng_state.pth": {
+      "exists": true,
+      "bytes": 14581,
+      "sha256": "d3941657086b1a12c98f2665bf21b6ecf3d9e36f313467439b068d1d5bfcc700"
+    },
+    "trainer_state.json": {
+      "exists": true,
+      "bytes": 286758,
+      "sha256": "b677a4fb39b048f152f412b12018f153b84af5a57436ef94b4cb4e70ad65d49f"
+    },
+    "training_args.bin": {
+      "exists": true,
+      "bytes": 7313,
+      "sha256": "6ffe6fcde2bc47a3b5aa534be8d188dc2f9c4f7f25340c57e8e52303dfabdd6f"
+    },
+    "pilot_checkpoint.json": {
+      "exists": true,
+      "bytes": 851,
+      "sha256": "427822e0cf3ff1bf7ec42bb0080ea31596245fce35322fa06cbc3548b3443603"
+    }
+  },
+  "prior_controller": {
+    "stage": "complete",
+    "pid": 2802466,
+    "unix": 1794103421.8606782,
+    "active_child": null,
+    "children": [
+      {
+        "stage": "recover_uniform",
+        "pid": 2802471,
+        "started_unix": 1794090153.3592982,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_recovery_20261107/train_arm.py",
+          "--arm",
+          "uniform"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794095154.0040278
+      },
+      {
+        "stage": "train_prefix_recovered_gate",
+        "pid": 2871342,
+        "started_unix": 1794095154.084492,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_recovery_20261107/train_arm.py",
+          "--arm",
+          "prefix"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794100357.0818071
+      },
+      {
+        "stage": "validation",
+        "pid": 2938778,
+        "started_unix": 1794100357.1644323,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/evaluate.py"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794103406.565499
+      },
+      {
+        "stage": "analysis",
+        "pid": 2979201,
+        "started_unix": 1794103406.5693839,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/analyze.py"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794103421.8588696
+      }
+    ],
+    "recovery": true,
+    "comparison": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/comparison.json"
+  },
+  "new_paths": {
+    "experiments/length_norm_pair_seed17_48_20261107": false,
+    "runs/Length_norm_pair_seed17_48_20261107": false,
+    "audits/Length_norm_pair_seed17_48_20261107": false
+  }
+}

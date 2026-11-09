@@ -1,0 +1,68 @@
+LATEST USER SCOPE — 2026-11-07 America/Los_Angeles
+User requests the completed seed17 A/C_mix/C_bounded approx6M experiment as the
+main project evidence. No further training or additional seed is requested.
+Seed42 has already completed; retain all its original evidence as supplementary
+archive, rather than making the two-seed mean the primary report focus.
+State single-seed scope for the main comparison; do not claim robust multi-seed gains.
+See execution/project_scope_20261107.json for current reporting scope.
+Older waiting/launch recommendations below are historical, not current instructions.
+
+COMPLETE — verified2026-11-07 America/Los_Angeles
+Seed42 A and C_bounded both step288; controller complete, no remaining project process.
+A6,308,962 tokens, MATH50052.80%, GSM8K67.47536%.
+C_bounded6,229,129 tokens, MATH50054.80%, GSM8K67.93025%.
+Difference+2.00/+0.45489pp; question bootstrap95% both include0.
+Retrieved55 files; locally checked4,638 predictions and18,432 training signals;
+remote frozen-verifier regraded3,638 final predictions and protected3,380 files.
+See RESULTS.txt, review.html, independent_acceptance.json, two_seed_summary.json.
+No new training is authorized by this completion. Do not dispatch/restart the finished run.
+Historical launch notes below are retained; pending/running phrases are obsolete.
+
+VERIFIED REAL TRAINING — snapshot 2026-11-06T19:18:33.658670+00:00
+A step4 /84,680 completion tokens; C_bounded step2 /46,571 tokens.
+Both fresh first optimizer updates passed; common2 gate passed.
+A restored checkpoint2 exactly and completed real update3 (now4).
+Controller PID1486797 creation1793992225.67; current A child1493206 creation1793992582.78.
+Independent CPU verification:128 real rollout rows, maxadvantageerror9.06e-8,
+zero wrong-positive rows, identical first32 generated token sequences across arms.
+See startup_acceptance.json, launch_verified.json, STARTUP_REPORT.txt.
+Training/evaluation remain in progress; do NOT dispatch or restart again.
+
+ECE285 seed42 A/C-bounded — 2026-11-06
+
+LATEST AUTHORIZATION: user explicitly requested launch through trusted thread delegation,
+superseding the earlier waiting instruction. See AUTHORIZATION.json.
+Only A and C_bounded, fresh common Qwen2.5-Math-1.5B + seed42 LoRA, 288 total
+updates each, about6M generated completion tokens. No seed17 policy weights loaded.
+Keep reward/loss, prompt, verifier, frozen C-adapted7B PRM, data and sampling settings.
+
+Remote root: /path/to/ece285_math_rl_project
+Remote source: experiments/ac_seed42_v1_20261106
+Remote run: runs/AC_seed42_V1_20261106
+Remote audit: audits/AC_seed42_V1_20261106
+SSH: USER@GPU_HOST port11032, identity /home/USER/.ssh/fym_125_76_110_84_ed25519
+Python: /path/to/ece285_math_rl_project/.venv/bin/python
+GPU0 UUID GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, A10080GB; sharing previously authorized.
+Never touch other jobs or use the insufficient24GB course GPU for this configuration.
+
+PIPELINE: A0→2, C_bounded0→2, verify real updates/common initialization and settings;
+A2→144, C_bounded2→144; common validation500; C_bounded144→288, A144→288;
+common greedy MATH500500/GSM8K1319 and independent frozen-verifier CPU acceptance.
+The initial2 steps count toward288. Identical question schedule and update counts
+are primary controls; actual token counts can differ. Training/data seed42;
+vLLM training engine retains TRL default seed0; evaluation seed285, V1.
+No adaptive test-based choice, no new PRM adaptation, no additional arm/seed/budget.
+
+DISPATCHED: controller PID 1486797, creation time 1793992225.67. Source release SHA256 285cba59327cbb17ccd6cfb825083952d00d480d6003b51803fd605ae2c63a81. Real optimizer acceptance still pending at this write; inspect live status. Do not dispatch again.
+Check status_remote.py, admission.json, dispatch.json and live_status.json.
+NEVER repeat prepare_remote.py or dispatch.py once their intent/admission exists.
+Finite controller:48h pipeline,18h stage/wait cap, checkpoint every5 updates plus2/144/288.
+No automatic retries. Preserve raw generated batches and failure/checkpoint receipts;
+inspect PID+creation time, locks and accounting before any recovery. Never resample
+committed batches or restart from scratch once any update exists.
+Shared lock: receipts/abc_seed17_resume_v1_gpu1.lock (historical filename intentional).
+
+Old seed17 sources/results remain protected. Blinded audit found no new scoring
+implementation mismatch, but unboxed correct reasoning and correct answers with
+invalid derivations remain known limitations. Six conflicting anchor-label pairs
+remain in frozen C PRM; do not silently replace or retrain it.

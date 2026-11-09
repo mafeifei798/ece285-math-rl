@@ -1,38 +1,15 @@
-ECE285 当前方案与状态（公开审阅快照，2026-10-31）
+ECE285 当前状态：2026-11-09 公开代码快照
 
-研究问题：小模型数学推理中，直接混入过程奖励为什么可能没有收益？保留结果优势，仅对答对回答加入有界过程偏好，能否改善？重心是可复核的对照、机制诊断与完整交付，不宣称新RL范式。
+成员：Hongyi Ding、Yang Zeng、Jasmine Jiang。
+主线：GRPO 与直接 PRM 混合的对照及失败分析；C-bounded 为初步后续结果。
+报告：midterm_neurips_20261109/ece285_midterm_report_20261109.pdf（5页正文、1页引用）。
 
-方法：Qwen2.5-Math-1.5B，LoRA16，GRPO，seed17；两种过程组使用同一冻结C适配Qwen2.5-Math-PRM-7B。
-A：y组内标准化。
-C-mix：y+0.2*m组内标准化。
-C-bounded：A_out+0.2*y*(m-mean_correct(m))，合成后不再归一化。
-具体定义见experiments/c_bounded_pilot_20261029_v2/advantages.py。
-验证规则/PRM提供奖励，GRPO利用信号更新策略。错答无正优势是代数约束，不是数学能力提升证明。
+已完成：历史纠错 A/B 各约6M、seed17；V1下 A/C-mix/C-bounded seed17 各288更新；A/C-bounded seed42 各288更新。详见 README 两张独立结果表，不能混用 V0/V1 或未适配/已适配 PRM。
+C-bounded 两seed方向一致，但seed42两个区间含零。全错组无正reward advantage是公式约束，不能代替过程有效性评估。
+均匀减罚、前缀保护、长度归一化和树状短试均未给出清晰替换主线的证据；仅作为探索。
 
-控制：三组同题目顺序、更新次数、超参数与V1路径；每更新4题、每题8回答。生成token指输出token，PRM评分成本另报。共享卡墙钟不是隔离吞吐。
+GPU按用户要求停止，不自动恢复。更大预算续训：A完整step432，9,321,966 token；C-bounded完整step365，7,845,984 token，日志到368。没有共同9M/12M评测结果，不宣称续训提升。
+来源：execution/ac_status_cpu_20261109/summary.json，以及保存的USER_STOP记录。本次同步没有重新探测GPU或启动训练/推理。
 
-已完成：
-1. 历史A/B、分段/验答修复、提示词对照、PURE单卡pilot核查。
-2. 7B C/D小规模配对PRM适配与诊断；没有D的完整RL结果。
-3. 共同第48步约1M，四模型统一评测（初始/A/C-mix/C-bounded）：
-   MATH500：49.00 / 49.40 / 50.00 / 50.20。
-   GSM8K：56.86 / 57.01 / 57.92 / 57.16。
-   C-bounded-A的两个配对区间均含0，未建立稳定收益。
-4. 历史6M A统一V1重评：MATH50055.00、GSM8K68.69。
-   旧历史为V0，未精确复现54.00/67.02；缓存和调度等共同变动，未作单因素因果归因。
-   历史6M与当前1M是不同训练轨迹，不是严格的训练时长消融。
-
-暂停状态（最新指令优先）：
-三组向共同144/288步续跑的计划未完成。GPU已释放，不自动恢复。
-A：完整checkpoint115，2,390,451生成token。
-C-mix：完整checkpoint50，1,034,873生成token。
-C-bounded：完整checkpoint50，1,038,895生成token。
-断点包含adapter/optimizer/scheduler/RNG/TrainerState。没有未保存的已完成更新。
-当前三组不同步数，不能据此作公平比较；尚无新的3M验证和6M共同测试结果。
-恢复需用户新授权，且先查pause_receipt、实际PID/锁和完整断点；不重复dispatch、不从头重训。
-
-阅读：README.md；results/current_status.json；execution/final_four_eval_20261029/REPORT.txt；execution/a6m_protocol_recheck_20261029/REPORT.txt；execution/abc_seed17_resume6m_v1_20261030/pause_receipt.json。
-旧方案留在docs/history/CURRENT_PLAN_20261023.txt，仅作历史，不授权执行。
-
-边界：单seed的题目配对区间不覆盖seed鲁棒性；终答正确不保证推导有效；PRM对终答的排序不是过程有效性标签；系数不是梯度贡献。保留原实验代码与结果。
-分享副本脱敏、无权重/完整rollout/原始数据。SHARE_MANIFEST记录来源和排除原因。发布不启动训练或评测。
+后续尚缺：独立过程有效性审查、关键评测重复性、幅度匹配/打乱排序消融、更广的训练seed验证。它们是研究计划，不是自动排队或运行授权。
+所有历史控制器、dispatch、CONTINUATION均按档案阅读。原始实验和Git历史保留。权重、数据、完整CoT不随代码上传。

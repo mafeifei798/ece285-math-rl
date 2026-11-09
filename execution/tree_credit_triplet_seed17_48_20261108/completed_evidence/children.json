@@ -1,0 +1,99 @@
+[
+  {
+    "stage": "preflight",
+    "pid": 3466408,
+    "started_unix": 1794139626.0609229,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/preflight.py"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794139633.8613596
+  },
+  {
+    "stage": "no_update",
+    "pid": 3466462,
+    "started_unix": 1794139633.9450672,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/smoke_no_update.py"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794139840.9979355
+  },
+  {
+    "stage": "train_chain_cb",
+    "pid": 3469096,
+    "started_unix": 1794139841.04116,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/train_arm.py",
+      "--arm",
+      "chain_cb"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794144888.8647835
+  },
+  {
+    "stage": "train_tree_vr",
+    "pid": 3534578,
+    "started_unix": 1794144888.9487948,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/train_arm.py",
+      "--arm",
+      "tree_vr"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794153144.9601498
+  },
+  {
+    "stage": "train_tree_cb",
+    "pid": 3640213,
+    "started_unix": 1794153145.0448627,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/train_arm.py",
+      "--arm",
+      "tree_cb"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794160804.1192956
+  },
+  {
+    "stage": "validation",
+    "pid": 3746620,
+    "started_unix": 1794160804.1828578,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/evaluate.py"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794163710.3076603
+  },
+  {
+    "stage": "analysis",
+    "pid": 3783375,
+    "started_unix": 1794163710.3130867,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/analyze.py"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794163721.9132621
+  }
+]

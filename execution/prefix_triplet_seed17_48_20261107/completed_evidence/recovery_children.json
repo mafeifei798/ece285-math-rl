@@ -1,0 +1,58 @@
+[
+  {
+    "stage": "recover_uniform",
+    "pid": 2802471,
+    "started_unix": 1794090153.3592982,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/prefix_triplet_recovery_20261107/train_arm.py",
+      "--arm",
+      "uniform"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794095154.0040278
+  },
+  {
+    "stage": "train_prefix_recovered_gate",
+    "pid": 2871342,
+    "started_unix": 1794095154.084492,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/prefix_triplet_recovery_20261107/train_arm.py",
+      "--arm",
+      "prefix"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794100357.0818071
+  },
+  {
+    "stage": "validation",
+    "pid": 2938778,
+    "started_unix": 1794100357.1644323,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/evaluate.py"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794103406.565499
+  },
+  {
+    "stage": "analysis",
+    "pid": 2979201,
+    "started_unix": 1794103406.5693839,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/analyze.py"
+    ],
+    "exit_code": 0,
+    "finished_unix": 1794103421.8588696
+  }
+]

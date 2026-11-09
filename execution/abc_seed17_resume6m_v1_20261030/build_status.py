@@ -22,7 +22,7 @@ body+='<table><tr>'+''.join('<th>'+s+'</th>' for s in ['组别','累计更新','
 body+='<h2>控制器执行顺序</h2><ol><li>三组48→50，真实续跑、保存和恢复验收，计入总预算。</li><li>三组50→144；保留完整144步断点，在固定500题验证集上评测，不据测试调参。</li><li>三组144→288；保留完整终点，统一greedy评测MATH500和GSM8K，再CPU重算验答、检查题目顺序和hash。</li></ol>'
 body+='<p>预计新增约15M训练回答token。按此前吞吐先估计约15–25小时（含评测），共享负载变化时以真实进度更新；这不是完成保证。有限控制器48小时预算，故障保存证据后停止，不自动重试、不从头训练、不扩预算。</p>'
 body+='<p>GPU1共享；每次GPU阶段前核对显存，不停止其他作业。三组相同题目顺序、相同更新数、相同重启关口。vLLM采样RNG会在进程重启时重建，不能声称与不间断运行逐位一致。</p>'
-body+='<h2>版本与证据</h2><p>远端：<code>/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030</code></p><p><a href="admission.json">CPU预检</a> · <a href="dispatch.json">唯一派发记录</a> · <a href="latest_snapshot.json">最近状态与原始receipt</a> · <a href="CONTINUATION.txt">执行范围和恢复说明</a> · <a href="../../experiments/abc_seed17_resume6m_v1_20261030/protocol.json">固定协议</a>。</p>'
+body+='<h2>版本与证据</h2><p>远端：<code>/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030</code></p><p><a href="admission.json">CPU预检</a> · <a href="dispatch.json">唯一派发记录</a> · <a href="latest_snapshot.json">最近状态与原始receipt</a> · <a href="CONTINUATION.txt">执行范围和恢复说明</a> · <a href="../../experiments/abc_seed17_resume6m_v1_20261030/protocol.json">固定协议</a>。</p>'
 if pause.get('paused_by_user'):
  body='<div class="note"><strong>已按用户要求暂停。训练进程和调度器均已退出，GPU已释放，不会自动恢复。</strong></div>'+body
  body=body.replace('控制器执行顺序','原计划（已暂停，未继续执行）')

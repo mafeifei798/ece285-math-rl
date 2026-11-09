@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-11-07T22:39:12.691879-08:00",
+  "node": "node-2-2.sdsc.optiputer.net",
+  "read_only": true,
+  "new_resources_created": false,
+  "error": "Error from server (Forbidden): pods is forbidden: User \"http://cilogon.org/serverE/users/606118\" cannot list resource \"pods\" in API group \"\" at the cluster scope\n"
+}

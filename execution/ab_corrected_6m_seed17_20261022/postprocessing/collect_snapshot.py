@@ -5,13 +5,13 @@ import json
 from pathlib import Path
 import subprocess
 
-SSH = ['ssh', '-p', '11032', '-i', '/home/researcher/.ssh/research_server_ed25519',
+SSH = ['ssh', '-p', '11032', '-i', '/home/USER/.ssh/fym_125_76_110_84_ed25519',
        '-o', 'BatchMode=yes', '-o', 'IdentitiesOnly=yes', '-o', 'StrictHostKeyChecking=yes',
-       '-o', 'ConnectTimeout=12', 'researcher@server.example.invalid',
-       '/srv/research/ece285_math_rl_project/.venv/bin/python -']
+       '-o', 'ConnectTimeout=12', 'USER@GPU_HOST',
+       '/path/to/ece285_math_rl_project/.venv/bin/python -']
 REMOTE = r'''
 import json,pathlib,subprocess,time
-root=pathlib.Path('/srv/research/ece285_math_rl_project')
+root=pathlib.Path('/path/to/ece285_math_rl_project')
 out={'observed_unix':time.time(),'files':{},'missing':[]}
 names=['runs/AB_corrected_seed17_6M_20261022/'+x for x in
        ['controller.json','comparison.json','pilot_gate.json','stages.jsonl']]

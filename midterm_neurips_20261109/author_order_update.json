@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-09T22:40:27.550418+00:00",
+  "requested_author_order": [
+    "Hongyi Ding",
+    "Yang Zeng",
+    "Jasmine Jiang"
+  ],
+  "PDF_metadata_order_verified": true,
+  "first_page_visual_inspection_passed": true,
+  "all_body_and_reference_text_unchanged": true,
+  "body_pages": 5,
+  "reference_pages": 1,
+  "previous_source_sha256": "d74eea2ff4f970d72e4d2d9559fed5767553ec25584c238dc176ee3531bfc69f",
+  "source_sha256": "0eb32069393a7f326f01063888abcdb1d8e57339994236a22cb9e8354d6b033f",
+  "previous_pdf_sha256": "e0c070e45cebb36379f0b65f93d1197478661bd1574347f7d5715458af2b50d3",
+  "pdf_sha256": "8f50702fefdbaba3d95dba6ded8c65308bc8cd5870ae0f0991cf931b43d559e0"
+}

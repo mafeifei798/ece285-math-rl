@@ -1,0 +1,19 @@
+{
+  "status": "CPU_only_existing_rollout_replay",
+  "training_started": false,
+  "training_source_modified": false,
+  "rows": 9216,
+  "groups": 1152,
+  "PRM_scored_responses_original": 7639,
+  "PRM_scored_responses_needed": 3813,
+  "skipped_fraction": 0.5008508967142296,
+  "max_formula_difference": 0.0,
+  "max_recorded_FP32_advantage_error": 1.1782691355932684e-07,
+  "limits": [
+    "Not a new RL reward or loss.",
+    "PRM call count is not total wall-time reduction.",
+    "Resident PRM model memory is not removed.",
+    "Live scorer and loss plumbing still require no-update validation before deployment.",
+    "Does not establish increased mathematical accuracy."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "pid": 3240355,
+  "unix": 1794122820.035454,
+  "initial_release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150",
+  "change": "Restore previously validated project-local CPATH only",
+  "prior_training_updates": 0,
+  "prior_generated_training_batches": 0,
+  "settings_and_budget_unchanged": true
+}

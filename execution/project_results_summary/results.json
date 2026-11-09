@@ -1,0 +1,325 @@
+{
+  "generated_at": "2026-11-07T20:23:39.281256-08:00",
+  "scope": "Frozen main test results and exploratory validation pilot; local summary only.",
+  "source_files": {
+    "seed17": {
+      "path": "execution/abc_seed17_resumed_v1_20261104/completed_evidence/comparison.json",
+      "sha256": "17402d9d5ba9285d13ff36d442090aa5a6bb3aebb82370dd3a6ca974fca96097"
+    },
+    "seed42": {
+      "path": "execution/ac_seed42_v1_20261106/completed_evidence/comparison.json",
+      "sha256": "431b05b0531db577af070d193820b2b629bb9c67cfc3897c3002f9ed9069f7dc"
+    },
+    "two_seed": {
+      "path": "execution/ac_seed42_v1_20261106/two_seed_summary.json",
+      "sha256": "1a7dc66cc605186b532309b042b0bbd34e09188966038a47f1aade23cf24a928"
+    },
+    "short": {
+      "path": "execution/prefix_triplet_seed17_48_20261107/completed_evidence/comparison.json",
+      "sha256": "0cd5d6ee0917dcd657119c0ac24e00f1b467920d300a89e256b1a81005b08ba7"
+    },
+    "uniform": {
+      "path": "execution/prefix_triplet_seed17_48_20261107/uniform_followup_assessment.json",
+      "sha256": "7d4e771a87eb393db47ba723f9752d35d4d4ac35ee84f551f7fe13703c9b2141"
+    },
+    "short_check": {
+      "path": "execution/prefix_triplet_seed17_48_20261107/completion_verification.json",
+      "sha256": "4b7f8df88cd572236516b0c485514869e71e58abfd08e298bd5d29db836b233c"
+    },
+    "case_audit": {
+      "path": "execution/abc_seed17_resumed_v1_20261104/blind_audit_20261105/audit_summary.json",
+      "sha256": "86be489b8af24681d00eec5b8ea3d653b434d6b42f59a69a8bee34bf5d1640c2"
+    },
+    "data_manifest": {
+      "path": "execution/final_four_eval_20261029/evidence/data/prepared/manifest.json",
+      "sha256": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459"
+    },
+    "assets": {
+      "path": "execution/final_four_eval_20261029/evidence/receipts/assets.json",
+      "sha256": "34724eedd77820c8b02d4dd4c4fd7cb7f52aad907b3546d7f9c0806379958239"
+    }
+  },
+  "prediction_files_verified": [
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/math500.jsonl",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/gsm8k.jsonl",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_mix/math500.jsonl",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_mix/gsm8k.jsonl",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/math500.jsonl",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/math500.jsonl",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/gsm8k.jsonl",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/math500.jsonl",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl",
+    "execution/prefix_triplet_seed17_48_20261107/completed_evidence/evaluation/source/predictions.jsonl",
+    "execution/prefix_triplet_seed17_48_20261107/completed_evidence/evaluation/bounded/predictions.jsonl",
+    "execution/prefix_triplet_seed17_48_20261107/completed_evidence/evaluation/uniform/predictions.jsonl",
+    "execution/prefix_triplet_seed17_48_20261107/completed_evidence/evaluation/prefix/predictions.jsonl"
+  ],
+  "prediction_rows_verified": 11095,
+  "main_test_rows": [
+    [
+      17,
+      "A",
+      "53.00%",
+      "66.87%",
+      "6,155,438",
+      288
+    ],
+    [
+      17,
+      "C_mix",
+      "54.00%",
+      "67.70%",
+      "6,114,465",
+      288
+    ],
+    [
+      17,
+      "C_bounded",
+      "57.80%",
+      "69.37%",
+      "6,167,374",
+      288
+    ],
+    [
+      42,
+      "A",
+      "52.80%",
+      "67.48%",
+      "6,308,962",
+      288
+    ],
+    [
+      42,
+      "C_bounded",
+      "54.80%",
+      "67.93%",
+      "6,229,129",
+      288
+    ]
+  ],
+  "two_seed_means": [
+    [
+      "math500",
+      "52.90%",
+      "56.30%",
+      "+3.40"
+    ],
+    [
+      "gsm8k",
+      "67.17%",
+      "68.65%",
+      "+1.48"
+    ]
+  ],
+  "main_paired_intervals": [
+    [
+      17,
+      "math500",
+      "+4.80",
+      "[+1.40, +8.40]",
+      54,
+      30
+    ],
+    [
+      17,
+      "gsm8k",
+      "+2.50",
+      "[+0.45, +4.55]",
+      111,
+      78
+    ],
+    [
+      42,
+      "math500",
+      "+2.00",
+      "[-1.00, +5.00]",
+      35,
+      25
+    ],
+    [
+      42,
+      "gsm8k",
+      "+0.45",
+      "[-1.52, +2.43]",
+      91,
+      85
+    ]
+  ],
+  "main_training_cost_rows": [
+    [
+      17,
+      "A",
+      "6,155,438",
+      "3.68h",
+      "11/4之后续跑段，非完整历史成本"
+    ],
+    [
+      17,
+      "C_mix",
+      "6,114,465",
+      "4.92h",
+      "11/4之后续跑段，非完整历史成本"
+    ],
+    [
+      17,
+      "C_bounded",
+      "6,167,374",
+      "6.31h",
+      "11/4之后续跑段，非完整历史成本"
+    ],
+    [
+      42,
+      "A",
+      "6,308,962",
+      "2.28h",
+      "已记录训练段合计"
+    ],
+    [
+      42,
+      "C_bounded",
+      "6,229,129",
+      "2.50h",
+      "已记录训练段合计"
+    ]
+  ],
+  "short_validation_rows": [
+    [
+      "共同起点 C-bounded / step288",
+      "317/500",
+      "63.40%",
+      33,
+      0,
+      0
+    ],
+    [
+      "C-bounded 续跑",
+      "319/500",
+      "63.80%",
+      32,
+      0,
+      0
+    ],
+    [
+      "均匀减罚",
+      "327/500",
+      "65.40%",
+      25,
+      0,
+      1
+    ],
+    [
+      "前缀保护",
+      "328/500",
+      "65.60%",
+      25,
+      0,
+      0
+    ]
+  ],
+  "short_intervals": [
+    [
+      "均匀减罚 − C-bounded续跑",
+      "+1.60",
+      "[-1.00, +4.20]",
+      27,
+      19
+    ],
+    [
+      "前缀保护 − C-bounded续跑",
+      "+1.80",
+      "[-0.60, +4.20]",
+      23,
+      14
+    ],
+    [
+      "前缀保护 − 均匀减罚（预定主比较）",
+      "+0.20",
+      "[-2.00, +2.60]",
+      18,
+      17
+    ]
+  ],
+  "short_training_cost_rows": [
+    [
+      "C-bounded 续跑",
+      48,
+      "1,021,112",
+      "1.44h",
+      "40.06GiB"
+    ],
+    [
+      "均匀减罚",
+      48,
+      "1,037,167",
+      "1.41h",
+      "39.18GiB"
+    ],
+    [
+      "前缀保护",
+      48,
+      "1,032,677",
+      "1.44h",
+      "38.06GiB"
+    ]
+  ],
+  "wrong_positive_advantage_rows": [
+    [
+      17,
+      "A",
+      9216,
+      0
+    ],
+    [
+      17,
+      "C_mix",
+      9216,
+      526
+    ],
+    [
+      17,
+      "C_bounded",
+      9216,
+      0
+    ]
+  ],
+  "uniform_discordance": [
+    [
+      "symbolic",
+      19,
+      16,
+      3
+    ],
+    [
+      "truncated",
+      7,
+      2,
+      5
+    ],
+    [
+      "missing_or_invalid_box",
+      1,
+      1,
+      0
+    ]
+  ],
+  "findings": [
+    "主结果：C-bounded相对纯结果奖励A，在seed17和seed42的MATH500/GSM8K上均呈正向变化；两seed平均为+3.40和+1.48个百分点，幅度随seed变化。",
+    "机制：seed17的9216条训练回答中，C-mix有526条错答得到正优势，C-bounded为0。直接混合过程分的风险在日志中得到量化，但这不是准确率提升的单因素因果证明。",
+    "短试：均匀减罚65.4%，前缀保护65.6%；两者仅差1题，位置特有收益没有得到支持。两者对原C-bounded续跑的区间也均包含零。",
+    "当前定位：以C-bounded的已完成主实验收尾；将均匀减罚与前缀保护列为探索性消融，不替换主方法、不宣称已证实新提升。"
+  ],
+  "limitations": [
+    "测试集主实验与500题验证短试是两组不同数据，不能直接比较53%与65%。短试是从已完成约6M训练的C-bounded继续训练，并非从初始模型开始。",
+    "两个seed均值仅为描述性平均；相同测试题在两个seed上重复使用，不能当成独立翻倍样本。题目bootstrap区间不衡量训练seed方差，seed42的两项区间均包含零。",
+    "seed17因用户暂停存在不对称重启历史。起点、优化器、题序与更新数已核对，但vLLM采样随机状态在重启时重建，不能声称逐位连续复现。seed42两组重启边界匹配。",
+    "短试uniform首个更新前曾被过严的随机输出逐字一致检查拦住；复用了保存的32条合法on-policy样本，没有重采样或重跑bounded；故障后的采样随机状态未逐位恢复。失败尝试时间已计入成本。",
+    "旧训练的LoRA合并/反合并与BF16采样行为另有数值审计；新短试统一改用已核验的原生LoRA/eager。三个短试组共享该设置，历史主实验与短试不能只按训练token数量拼成一条学习曲线。",
+    "验证集已多次用于研究，且其500道题全部出现在审计过的PRM800K问题集合中；这不等同于证明它们进入本项目实际锚点子集，但该验证集不属于对PRM全新且未见的测验。MATH500/GSM8K的已知精确问题重合审计为0，不能排除未知预训练与改写暴露。",
+    "C-mix到C-bounded同时涉及正确答案门控、过程项幅度和组合后的归一化方式；现有结果不能把收益全部归因于其中一个改动。",
+    "错答没有正策略优势是已验证的训练信号约束；它不能单独证明数学能力提升。最终答案准确率也不等同于整段推导有效性。",
+    "共享GPU和不完整历史成本使墙钟时间不适合作为算法加速证据。seed17列出的时间只覆盖11/4之后的续跑，不包含完整旧阶段、暂停和全部故障修复。"
+  ],
+  "new_training_started": false,
+  "server_state_polled": false
+}

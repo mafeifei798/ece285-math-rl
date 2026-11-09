@@ -1,0 +1,8 @@
+{
+  "same_initial_checkpoint": true,
+  "same_questions": true,
+  "same_engine_seed": 0,
+  "token_identical_responses": 16,
+  "outcome_identical_responses": 29,
+  "note": "Identical stochastic draws are descriptive, not an execution gate. Native LoRA/eager and all sampling settings are shared."
+}

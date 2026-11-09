@@ -47,7 +47,7 @@
     "No training launch, learned quality improvement, or explanation of the old A/B accuracy gap follows from this CPU reference."
   ],
   "report_review": {
-    "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/review.html",
+    "path": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/review.html",
     "sha256": "cced36b2bd31b36df9e6ef9f7fdc5ec4e9c7b952de266a413458227a6fbbc8bc",
     "blocking_findings": [],
     "verified_wording": [

@@ -1,0 +1,333 @@
+{
+  "scope": "Previously inspected ProcessBench MATH diagnostic subset; descriptive audit, not untouched threshold-selection holdout",
+  "arms": {
+    "B": {
+      "source_sha256": "639f61e50e73204dc490d7351d25016d4fc2e61332ebc6e559ccbe6d63042dfa",
+      "n": 192,
+      "table": [
+        {
+          "subset": "all_flawed",
+          "threshold": 0.3,
+          "n": 128,
+          "undetected": 23,
+          "exact": 84,
+          "protect_prefix": 86,
+          "protect_prefix_includes_error": 11,
+          "early": 10,
+          "late": 11
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.5,
+          "n": 128,
+          "undetected": 16,
+          "exact": 87,
+          "protect_prefix": 88,
+          "protect_prefix_includes_error": 8,
+          "early": 17,
+          "late": 8
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.7,
+          "n": 128,
+          "exact": 90,
+          "protect_prefix": 90,
+          "protect_prefix_includes_error": 6,
+          "early": 25,
+          "undetected": 7,
+          "late": 6
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.8,
+          "n": 128,
+          "exact": 92,
+          "protect_prefix": 88,
+          "protect_prefix_includes_error": 4,
+          "early": 27,
+          "undetected": 5,
+          "late": 4
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.9,
+          "n": 128,
+          "exact": 88,
+          "protect_prefix": 83,
+          "protect_prefix_includes_error": 3,
+          "early": 33,
+          "undetected": 4,
+          "late": 3
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.3,
+          "n": 64,
+          "undetected": 10,
+          "exact": 45,
+          "protect_prefix": 44,
+          "protect_prefix_includes_error": 7,
+          "late": 7,
+          "early": 2
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.5,
+          "n": 64,
+          "late": 6,
+          "protect_prefix": 46,
+          "protect_prefix_includes_error": 6,
+          "undetected": 5,
+          "exact": 44,
+          "early": 9
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.7,
+          "n": 64,
+          "exact": 43,
+          "protect_prefix": 45,
+          "protect_prefix_includes_error": 4,
+          "undetected": 2,
+          "late": 4,
+          "early": 15
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.8,
+          "n": 64,
+          "exact": 45,
+          "protect_prefix": 42,
+          "protect_prefix_includes_error": 2,
+          "undetected": 1,
+          "late": 2,
+          "early": 16
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.9,
+          "n": 64,
+          "exact": 44,
+          "protect_prefix": 38,
+          "protect_prefix_includes_error": 1,
+          "undetected": 1,
+          "late": 1,
+          "early": 18
+        }
+      ]
+    },
+    "C": {
+      "source_sha256": "b75a7c173c0ea7f492dec832730973d6da7cda64be1d4c77245d3d7ca369c02e",
+      "n": 192,
+      "table": [
+        {
+          "subset": "all_flawed",
+          "threshold": 0.3,
+          "n": 128,
+          "undetected": 14,
+          "early": 15,
+          "protect_prefix": 90,
+          "protect_prefix_includes_error": 9,
+          "exact": 90,
+          "late": 9
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.5,
+          "n": 128,
+          "undetected": 8,
+          "early": 22,
+          "protect_prefix": 91,
+          "protect_prefix_includes_error": 4,
+          "exact": 94,
+          "late": 4
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.7,
+          "n": 128,
+          "exact": 91,
+          "protect_prefix": 89,
+          "protect_prefix_includes_error": 4,
+          "early": 28,
+          "undetected": 5,
+          "late": 4
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.8,
+          "n": 128,
+          "exact": 88,
+          "protect_prefix": 84,
+          "protect_prefix_includes_error": 4,
+          "early": 31,
+          "undetected": 5,
+          "late": 4
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.9,
+          "n": 128,
+          "exact": 82,
+          "protect_prefix": 81,
+          "protect_prefix_includes_error": 2,
+          "early": 40,
+          "undetected": 4,
+          "late": 2
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.3,
+          "n": 64,
+          "late": 8,
+          "protect_prefix": 46,
+          "protect_prefix_includes_error": 8,
+          "undetected": 6,
+          "exact": 44,
+          "early": 6
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.5,
+          "n": 64,
+          "exact": 47,
+          "protect_prefix": 46,
+          "protect_prefix_includes_error": 3,
+          "undetected": 2,
+          "late": 3,
+          "early": 12
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.7,
+          "n": 64,
+          "exact": 45,
+          "protect_prefix": 43,
+          "protect_prefix_includes_error": 2,
+          "undetected": 1,
+          "late": 2,
+          "early": 16
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.8,
+          "n": 64,
+          "exact": 44,
+          "protect_prefix": 40,
+          "protect_prefix_includes_error": 2,
+          "undetected": 1,
+          "late": 2,
+          "early": 17
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.9,
+          "n": 64,
+          "exact": 42,
+          "protect_prefix": 36,
+          "protect_prefix_includes_error": 0,
+          "undetected": 1,
+          "early": 21
+        }
+      ]
+    },
+    "D": {
+      "source_sha256": "ed6f787516c7ff62617255cd2b345c8ffe5b3bb9fc61b696c8a0b71040698c3d",
+      "n": 192,
+      "table": [
+        {
+          "subset": "all_flawed",
+          "threshold": 0.3,
+          "n": 128,
+          "early": 80,
+          "protect_prefix": 56,
+          "protect_prefix_includes_error": 0,
+          "undetected": 1,
+          "exact": 47
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.5,
+          "n": 128,
+          "early": 83,
+          "protect_prefix": 52,
+          "protect_prefix_includes_error": 0,
+          "exact": 45
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.7,
+          "n": 128,
+          "early": 87,
+          "protect_prefix": 47,
+          "protect_prefix_includes_error": 0,
+          "exact": 41
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.8,
+          "n": 128,
+          "early": 90,
+          "protect_prefix": 43,
+          "protect_prefix_includes_error": 0,
+          "exact": 38
+        },
+        {
+          "subset": "all_flawed",
+          "threshold": 0.9,
+          "n": 128,
+          "early": 90,
+          "protect_prefix": 38,
+          "protect_prefix_includes_error": 0,
+          "exact": 38
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.3,
+          "n": 64,
+          "early": 39,
+          "exact": 25,
+          "protect_prefix": 23,
+          "protect_prefix_includes_error": 0
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.5,
+          "n": 64,
+          "early": 40,
+          "exact": 24,
+          "protect_prefix": 20,
+          "protect_prefix_includes_error": 0
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.7,
+          "n": 64,
+          "early": 41,
+          "exact": 23,
+          "protect_prefix": 19,
+          "protect_prefix_includes_error": 0
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.8,
+          "n": 64,
+          "early": 43,
+          "exact": 21,
+          "protect_prefix": 17,
+          "protect_prefix_includes_error": 0
+        },
+        {
+          "subset": "answer_wrong_flawed",
+          "threshold": 0.9,
+          "n": 64,
+          "early": 43,
+          "exact": 21,
+          "protect_prefix": 16,
+          "protect_prefix_includes_error": 0
+        }
+      ]
+    }
+  }
+}

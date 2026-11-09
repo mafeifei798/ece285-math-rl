@@ -1,5 +1,5 @@
 {
-  "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
   "postprocess_status": "complete",
   "buffer_counts": {
     "0": {

@@ -3,9 +3,9 @@
   "dispatch": {
     "pid": 1748802,
     "unix": 1793266676.1781566,
-    "run": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2",
-    "source": "/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2",
-    "log": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/header_recovery_controller.log",
+    "run": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2",
+    "source": "/path/to/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2",
+    "log": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/header_recovery_controller.log",
     "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
     "authorized_arms": [
       "A",
@@ -16,9 +16,9 @@
     "seed": 17,
     "sharing_GPU1": true,
     "D_adaptation": false,
-    "recovery_evidence": "/srv/research/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/recovery_evidence.json",
+    "recovery_evidence": "/path/to/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/recovery_evidence.json",
     "previous_controller_pid": 1696326,
-    "recovery_source": "/srv/research/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/resume_after_header_repair.py",
+    "recovery_source": "/path/to/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/resume_after_header_repair.py",
     "recovery_source_sha256": "dddd3cb07395d726c4159da7bac1789676ade287e731b46c597a5f5179aa4291",
     "zero_updates_environment_recovery": false,
     "resume_from_saved_checkpoint": true
@@ -27,14 +27,14 @@
     "stage": "complete",
     "pid": 1748802,
     "unix": 1793280544.5933266,
-    "comparison": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/comparison.json",
+    "comparison": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/comparison.json",
     "no_6M_started": true,
     "D_adaptation": false
   },
   "child": {
     "pid": 2283120,
     "stage": "paired_analysis",
-    "log": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/logs/paired_analysis.log",
+    "log": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/logs/paired_analysis.log",
     "unix": 1793280543.094178
   },
   "smoke_gate": {
@@ -76,7 +76,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 0
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
         "adapter_changed": true,
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -120,7 +120,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 0
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
         "adapter_changed": true,
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -164,7 +164,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 0
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
         "adapter_changed": true,
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -361,8 +361,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 5003,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
         "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -414,8 +414,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 1853,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
         "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -467,8 +467,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 9017,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
         "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -533,8 +533,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 5003,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
         "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -638,7 +638,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 0
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
         "adapter_changed": true,
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -649,7 +649,7 @@
       },
       "resume_loaded": {
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "source": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
         "source_step": 2,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -659,7 +659,7 @@
       "resume_acceptance": {
         "passed": true,
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
+        "source": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/smoke_checkpoint",
         "source_step": 2,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -709,8 +709,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 5003,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
         "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -725,13 +725,13 @@
         }
       },
       "failure": {
-        "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpa100qrcp/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpa100qrcp/cuda_utils.cpython-311-x86_64-linux-gnu.so', '-lcuda', '-L/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-L/lib/i386-linux-gnu', '-I/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpa100qrcp', '-I/usr/include/python3.11']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n",
-        "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/train_arm.py\", line 86, in main\n    t,tok=build(a.arm,run,accounting)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/runtime.py\", line 177, in build\n    trainer=trainer_class()(model=model,processing_class=tok,args=args,train_dataset=Dataset.from_list(rows(ROOT/'data/prepared/train.jsonl')),\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/runtime.py\", line 151, in __init__\n    super().__init__(*args,**kw);self.initialize_pilot(pilot_arm,pilot_ledger,pilot_run,pilot_accounting)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/trainer/grpo_trainer.py\", line 525, in __init__\n    self.llm = LLM(\n               ^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/entrypoints/llm.py\", line 282, in __init__\n    self.llm_engine = LLMEngine.from_engine_args(\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py\", line 493, in from_engine_args\n    return engine_cls.from_vllm_config(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py\", line 134, in from_vllm_config\n    return cls(vllm_config=vllm_config,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py\", line 111, in __init__\n    self.engine_core = EngineCoreClient.make_client(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core_client.py\", line 82, in make_client\n    return InprocClient(vllm_config, executor_class, log_stats)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core_client.py\", line 245, in __init__\n    self.engine_core = EngineCore(*args, **kwargs)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core.py\", line 91, in __init__\n    self._initialize_kv_caches(vllm_config)\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core.py\", line 183, in _initialize_kv_caches\n    self.model_executor.determine_available_memory())\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/executor/abstract.py\", line 121, in determine_available_memory\n    memory = super().determine_available_memory()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/executor/abstract.py\", line 84, in determine_available_memory\n    return self.collective_rpc(\"determine_available_memory\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py\", line 58, in collective_rpc\n    answer = run_method(self.driver_worker, method, args, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/utils/__init__.py\", line 3060, in run_method\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py\", line 263, in determine_available_memory\n    self.model_runner.profile_run()\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py\", line 3031, in profile_run\n    = self._dummy_run(self.max_num_tokens, is_profile=True)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py\", line 2809, in _dummy_run\n    outputs = self.model(\n              ^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1773, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1784, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py\", line 506, in forward\n    hidden_states = self.model(input_ids, positions, intermediate_tensors,\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/compilation/decorators.py\", line 305, in __call__\n    output = self.compiled_callable(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py\", line 749, in compile_wrapper\n    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 923, in _compile_fx_inner\n    raise InductorError(e, currentframe()).with_traceback(\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 907, in _compile_fx_inner\n    mb_compiled_graph = fx_codegen_and_compile(\n                        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 1578, in fx_codegen_and_compile\n    return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 1456, in codegen_and_compile\n    compiled_module = graph.compile_to_module()\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2293, in compile_to_module\n    return self._compile_to_module()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2299, in _compile_to_module\n    self.codegen_with_cpp_wrapper() if self.cpp_wrapper else self.codegen()\n                                                             ^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2238, in codegen\n    self.scheduler.codegen()\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/scheduler.py\", line 4598, in codegen\n    else self._codegen(self.nodes)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/scheduler.py\", line 4750, in _codegen\n    self.get_backend(device).codegen_node(node)\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/cuda_combined_scheduling.py\", line 107, in codegen_node\n    return self._triton_scheduling.codegen_node(node)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/simd.py\", line 1371, in codegen_node\n    return self.codegen_node_schedule(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/simd.py\", line 1424, in codegen_node_schedule\n    src_code = kernel.codegen_kernel()\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/triton.py\", line 3677, in codegen_kernel\n    **self.inductor_meta_common(),\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/triton.py\", line 3501, in inductor_meta_common\n    \"backend_hash\": torch.utils._triton.triton_hash_with_backend(),\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_triton.py\", line 165, in triton_hash_with_backend\n    backend = triton_backend()\n              ^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_triton.py\", line 157, in triton_backend\n    target = driver.active.get_current_target()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 30, in __getattr__\n    return getattr(self._initialize_obj(), name)\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 26, in _initialize_obj\n    self._obj = self._init_fn()\n                ^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 12, in _create_driver\n    return active_drivers[0]()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/driver.py\", line 715, in __init__\n    self.utils = CudaUtils()  # TODO: make static\n                 ^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/driver.py\", line 62, in __init__\n    mod = compile_module_from_src(\n          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/build.py\", line 88, in compile_module_from_src\n    so = _build(name, src_path, tmpdir, library_dirs or [], include_dirs or [], libraries or [])\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/build.py\", line 51, in _build\n    subprocess.check_call(cc_cmd, stdout=subprocess.DEVNULL)\n  File \"/usr/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\ntorch._inductor.exc.InductorError: CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpa100qrcp/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpa100qrcp/cuda_utils.cpython-311-x86_64-linux-gnu.so', '-lcuda', '-L/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-L/lib/i386-linux-gnu', '-I/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpa100qrcp', '-I/usr/include/python3.11']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n\n",
+        "error": "CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpa100qrcp/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpa100qrcp/cuda_utils.cpython-311-x86_64-linux-gnu.so', '-lcuda', '-L/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-L/lib/i386-linux-gnu', '-I/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpa100qrcp', '-I/usr/include/python3.11']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n",
+        "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/train_arm.py\", line 86, in main\n    t,tok=build(a.arm,run,accounting)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/runtime.py\", line 177, in build\n    trainer=trainer_class()(model=model,processing_class=tok,args=args,train_dataset=Dataset.from_list(rows(ROOT/'data/prepared/train.jsonl')),\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2/runtime.py\", line 151, in __init__\n    super().__init__(*args,**kw);self.initialize_pilot(pilot_arm,pilot_ledger,pilot_run,pilot_accounting)\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/trainer/grpo_trainer.py\", line 525, in __init__\n    self.llm = LLM(\n               ^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/entrypoints/llm.py\", line 282, in __init__\n    self.llm_engine = LLMEngine.from_engine_args(\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/engine/llm_engine.py\", line 493, in from_engine_args\n    return engine_cls.from_vllm_config(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py\", line 134, in from_vllm_config\n    return cls(vllm_config=vllm_config,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py\", line 111, in __init__\n    self.engine_core = EngineCoreClient.make_client(\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core_client.py\", line 82, in make_client\n    return InprocClient(vllm_config, executor_class, log_stats)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core_client.py\", line 245, in __init__\n    self.engine_core = EngineCore(*args, **kwargs)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core.py\", line 91, in __init__\n    self._initialize_kv_caches(vllm_config)\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/engine/core.py\", line 183, in _initialize_kv_caches\n    self.model_executor.determine_available_memory())\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/executor/abstract.py\", line 121, in determine_available_memory\n    memory = super().determine_available_memory()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/executor/abstract.py\", line 84, in determine_available_memory\n    return self.collective_rpc(\"determine_available_memory\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/executor/uniproc_executor.py\", line 58, in collective_rpc\n    answer = run_method(self.driver_worker, method, args, kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/utils/__init__.py\", line 3060, in run_method\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py\", line 263, in determine_available_memory\n    self.model_runner.profile_run()\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py\", line 3031, in profile_run\n    = self._dummy_run(self.max_num_tokens, is_profile=True)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py\", line 2809, in _dummy_run\n    outputs = self.model(\n              ^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1773, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/nn/modules/module.py\", line 1784, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py\", line 506, in forward\n    hidden_states = self.model(input_ids, positions, intermediate_tensors,\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/compilation/decorators.py\", line 305, in __call__\n    output = self.compiled_callable(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py\", line 749, in compile_wrapper\n    raise e.remove_dynamo_frames() from None  # see TORCHDYNAMO_VERBOSE=1\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 923, in _compile_fx_inner\n    raise InductorError(e, currentframe()).with_traceback(\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 907, in _compile_fx_inner\n    mb_compiled_graph = fx_codegen_and_compile(\n                        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 1578, in fx_codegen_and_compile\n    return scheme.codegen_and_compile(gm, example_inputs, inputs_to_check, graph_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/compile_fx.py\", line 1456, in codegen_and_compile\n    compiled_module = graph.compile_to_module()\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2293, in compile_to_module\n    return self._compile_to_module()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2299, in _compile_to_module\n    self.codegen_with_cpp_wrapper() if self.cpp_wrapper else self.codegen()\n                                                             ^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/graph.py\", line 2238, in codegen\n    self.scheduler.codegen()\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/scheduler.py\", line 4598, in codegen\n    else self._codegen(self.nodes)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/scheduler.py\", line 4750, in _codegen\n    self.get_backend(device).codegen_node(node)\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/cuda_combined_scheduling.py\", line 107, in codegen_node\n    return self._triton_scheduling.codegen_node(node)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/simd.py\", line 1371, in codegen_node\n    return self.codegen_node_schedule(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/simd.py\", line 1424, in codegen_node_schedule\n    src_code = kernel.codegen_kernel()\n               ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/triton.py\", line 3677, in codegen_kernel\n    **self.inductor_meta_common(),\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/_inductor/codegen/triton.py\", line 3501, in inductor_meta_common\n    \"backend_hash\": torch.utils._triton.triton_hash_with_backend(),\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_triton.py\", line 165, in triton_hash_with_backend\n    backend = triton_backend()\n              ^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/torch/utils/_triton.py\", line 157, in triton_backend\n    target = driver.active.get_current_target()\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 30, in __getattr__\n    return getattr(self._initialize_obj(), name)\n                   ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 26, in _initialize_obj\n    self._obj = self._init_fn()\n                ^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/driver.py\", line 12, in _create_driver\n    return active_drivers[0]()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/driver.py\", line 715, in __init__\n    self.utils = CudaUtils()  # TODO: make static\n                 ^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/driver.py\", line 62, in __init__\n    mod = compile_module_from_src(\n          ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/build.py\", line 88, in compile_module_from_src\n    so = _build(name, src_path, tmpdir, library_dirs or [], include_dirs or [], libraries or [])\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/runtime/build.py\", line 51, in _build\n    subprocess.check_call(cc_cmd, stdout=subprocess.DEVNULL)\n  File \"/usr/lib/python3.11/subprocess.py\", line 413, in check_call\n    raise CalledProcessError(retcode, cmd)\ntorch._inductor.exc.InductorError: CalledProcessError: Command '['/usr/bin/gcc', '/tmp/tmpa100qrcp/cuda_utils.c', '-O3', '-shared', '-fPIC', '-Wno-psabi', '-o', '/tmp/tmpa100qrcp/cuda_utils.cpython-311-x86_64-linux-gnu.so', '-lcuda', '-L/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/lib', '-L/lib/x86_64-linux-gnu', '-L/lib/i386-linux-gnu', '-I/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/triton/backends/nvidia/include', '-I/tmp/tmpa100qrcp', '-I/usr/include/python3.11']' returned non-zero exit status 1.\n\nSet TORCHDYNAMO_VERBOSE=1 for the internal stack trace (please do this especially if you're reporting a bug to PyTorch). For even more developer context, set TORCH_LOGS=\"+dynamo\"\n\n",
         "unix": 1793265309.8502614,
         "phase": "smoke"
       },
       "last_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "path": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
         "global_step": 48,
         "checkpoint_contract_sha256": "f3560ddd1b366359f6001c8f659989410bd05b958dbbc51696e9880a7903841d"
       }
@@ -778,8 +778,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 1853,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
         "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -883,7 +883,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 0
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
         "adapter_changed": true,
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -894,7 +894,7 @@
       },
       "resume_loaded": {
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "source": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
         "source_step": 2,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -904,7 +904,7 @@
       "resume_acceptance": {
         "passed": true,
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
+        "source": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/smoke_checkpoint",
         "source_step": 2,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -954,8 +954,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 1853,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
         "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -971,7 +971,7 @@
       },
       "failure": null,
       "last_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "path": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
         "global_step": 48,
         "checkpoint_contract_sha256": "ee9ca47c420e36ce441c51ccc0ece2aee2bc310997709032082e6ee469ef0178"
       }
@@ -1018,8 +1018,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 9017,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
         "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -1123,7 +1123,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 0
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
         "adapter_changed": true,
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -1134,7 +1134,7 @@
       },
       "resume_loaded": {
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "source": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
         "source_step": 2,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -1144,7 +1144,7 @@
       "resume_acceptance": {
         "passed": true,
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
+        "source": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/smoke_checkpoint",
         "source_step": 2,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -1194,8 +1194,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 9017,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
         "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -1211,7 +1211,7 @@
       },
       "failure": null,
       "last_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "path": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
         "global_step": 48,
         "checkpoint_contract_sha256": "a7503d6eed6a8a6ad74d971cb30bd3528c1eaa5a6ed311855d650af497302d65"
       }

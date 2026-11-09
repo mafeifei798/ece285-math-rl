@@ -1,0 +1,8 @@
+{
+  "ASSESSMENT.txt": "5774dc5572a7db180d19fdd6792d1ae30622213b7e1bad4dbbbea651e28b7731",
+  "audit_processbench.py": "320cb82aab05e8b0e84e8f694be19c89b353a8cbf11696b036f83efcfaa3c6d4",
+  "inspect_cpu_remote.py": "a9f4d1798895c487b42a6e767ea95ce972be6059f071b31aace83a022af3cd21",
+  "installed_trl_source.json": "82885f9b50500dac7b186508d19b2c7ed3b20e26015d8fdd8d8e9f3e8fac50a6",
+  "processbench_audit.json": "6e92045d122fecb702d9f24e552b6bd552f2e991f3a1c447f0aa53515ca3b22b",
+  "remote_cpu_audit.json": "8787bd3d2efc715eadb49b0a9910b5809b9398be8cbda7d753e601bb1fa0624f"
+}

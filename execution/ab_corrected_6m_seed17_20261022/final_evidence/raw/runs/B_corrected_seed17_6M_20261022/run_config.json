@@ -32,12 +32,12 @@
   },
   "argument_changes": {
     "output_dir": [
-      "/srv/research/ece285_math_rl_project/runs/A_seed17",
-      "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022"
+      "/path/to/ece285_math_rl_project/runs/A_seed17",
+      "/path/to/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022"
     ],
     "logging_dir": [
-      "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
-      "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/tensorboard"
+      "/path/to/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+      "/path/to/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/tensorboard"
     ]
   },
   "target_completion_tokens": 6000000,

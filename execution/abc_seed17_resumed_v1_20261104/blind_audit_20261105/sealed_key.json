@@ -1,0 +1,402 @@
+[
+  {
+    "case_id": "R01",
+    "dataset": "math500",
+    "direction": "loss",
+    "problem_id": "math500/400",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R02",
+    "dataset": "gsm8k",
+    "direction": "loss",
+    "problem_id": "gsm8k/test/694",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R03",
+    "dataset": "gsm8k",
+    "direction": "win",
+    "problem_id": "gsm8k/test/399",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "truncated",
+        "finish_reason": "length"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R04",
+    "dataset": "gsm8k",
+    "direction": "loss",
+    "problem_id": "gsm8k/test/385",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R05",
+    "dataset": "math500",
+    "direction": "win",
+    "problem_id": "math500/472",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "missing_or_invalid_box",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R06",
+    "dataset": "math500",
+    "direction": "win",
+    "problem_id": "math500/45",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "truncated",
+        "finish_reason": "length"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R07",
+    "dataset": "math500",
+    "direction": "loss",
+    "problem_id": "math500/302",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R08",
+    "dataset": "gsm8k",
+    "direction": "loss",
+    "problem_id": "gsm8k/test/1308",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "missing_or_invalid_box",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R09",
+    "dataset": "gsm8k",
+    "direction": "win",
+    "problem_id": "gsm8k/test/711",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R10",
+    "dataset": "math500",
+    "direction": "win",
+    "problem_id": "math500/364",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R11",
+    "dataset": "gsm8k",
+    "direction": "loss",
+    "problem_id": "gsm8k/test/407",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "missing_or_invalid_box",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R12",
+    "dataset": "gsm8k",
+    "direction": "win",
+    "problem_id": "gsm8k/test/1175",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "truncated",
+        "finish_reason": "length"
+      }
+    }
+  },
+  {
+    "case_id": "R13",
+    "dataset": "gsm8k",
+    "direction": "loss",
+    "problem_id": "gsm8k/test/949",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "missing_or_invalid_box",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R14",
+    "dataset": "gsm8k",
+    "direction": "win",
+    "problem_id": "gsm8k/test/1089",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R15",
+    "dataset": "math500",
+    "direction": "loss",
+    "problem_id": "math500/77",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "missing_or_invalid_box",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R16",
+    "dataset": "math500",
+    "direction": "win",
+    "problem_id": "math500/480",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R17",
+    "dataset": "gsm8k",
+    "direction": "win",
+    "problem_id": "gsm8k/test/194",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "missing_or_invalid_box",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R18",
+    "dataset": "math500",
+    "direction": "loss",
+    "problem_id": "math500/194",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  },
+  {
+    "case_id": "R19",
+    "dataset": "math500",
+    "direction": "loss",
+    "problem_id": "math500/310",
+    "outputs": {
+      "X": {
+        "arm": "A",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "C_bounded",
+        "reward": 0.0,
+        "status": "truncated",
+        "finish_reason": "length"
+      }
+    }
+  },
+  {
+    "case_id": "R20",
+    "dataset": "math500",
+    "direction": "win",
+    "problem_id": "math500/35",
+    "outputs": {
+      "X": {
+        "arm": "C_bounded",
+        "reward": 1.0,
+        "status": "exact",
+        "finish_reason": "stop"
+      },
+      "Y": {
+        "arm": "A",
+        "reward": 0.0,
+        "status": "symbolic",
+        "finish_reason": "stop"
+      }
+    }
+  }
+]

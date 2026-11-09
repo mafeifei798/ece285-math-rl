@@ -1,0 +1,10 @@
+{
+  "adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "C_steps": 512,
+  "frozen": true,
+  "no_new_PRM_adaptation": true,
+  "canonical_CRLF_adapter_used": true,
+  "native_marker_id": [
+    151651
+  ]
+}

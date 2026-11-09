@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "arms": {
+    "grpo": {
+      "rows": 1536,
+      "raw_batches": 48,
+      "max_original_bounded_advantage_error": 1.0590598464865764e-07,
+      "raw_tokens_and_masks_match_JSON": true,
+      "wrong_positive_tokens": 0,
+      "padding_advantage_zero": true
+    },
+    "fixed_length": {
+      "rows": 1536,
+      "raw_batches": 48,
+      "max_original_bounded_advantage_error": 1.1335656524558146e-07,
+      "raw_tokens_and_masks_match_JSON": true,
+      "wrong_positive_tokens": 0,
+      "padding_advantage_zero": true
+    }
+  },
+  "CUDA_initialized": false,
+  "GPU_work": false,
+  "source_checkpoint_files_verified": 8,
+  "all_source_checkpoint_files_unchanged": true,
+  "recovery_controller_unchanged": true,
+  "scope": "Independent float64 bounded-advantage recomputation and raw emitted token/mask check. No regrading or model calls."
+}

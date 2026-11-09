@@ -5,7 +5,7 @@
     "pid": 3319102,
     "unix": 1793344944.0529747,
     "child_pid": 3334407,
-    "log": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/logs/A_to144.log",
+    "log": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/logs/A_to144.log",
     "started_unix": 1793344944.0523853,
     "deadline_unix": 1793517108.8133893
   },
@@ -53,7 +53,7 @@
           "empty_rows": 1,
           "short_wrong_rows": 18
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
         "adapter_sha256": "90d9797ddfc6001688861d124e62383f004baffe4bc481755fe580880fcff5c3",
         "PRM_frozen": true,
         "engine": "V1",
@@ -104,7 +104,7 @@
           "empty_rows": 2,
           "short_wrong_rows": 21
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
         "adapter_sha256": "e2167ff479aa1a49a6f14533a2f9e7a66728f83bd626e09f58ee9d429da35dfb",
         "PRM_frozen": true,
         "engine": "V1",
@@ -155,7 +155,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 20
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
         "adapter_sha256": "4426fad6b3e832906708f7bf593a8a5a489e91e0436e0041e9e427a28c55fc98",
         "PRM_frozen": true,
         "engine": "V1",
@@ -178,7 +178,7 @@
       "resume48_to50": {
         "passed": true,
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-48",
+        "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-48",
         "source_step": 48,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -197,7 +197,7 @@
         "PRM_in_optimizer": false,
         "resume": {
           "adapter_exact": true,
-          "source": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-48",
+          "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-48",
           "source_step": 48,
           "optimizer_exact": true,
           "scheduler_exact": true
@@ -209,7 +209,7 @@
         "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
         "protocol_sha256": "690b12287a926ef005182e1c7cc623a0218bdf1d59d2db413e0e57c4fcae78e3",
         "settings": {
-          "output_dir": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A",
+          "output_dir": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A",
           "overwrite_output_dir": false,
           "do_train": false,
           "do_eval": false,
@@ -239,7 +239,7 @@
           "log_level": "passive",
           "log_level_replica": "warning",
           "log_on_each_node": true,
-          "logging_dir": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/tensorboard",
+          "logging_dir": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/tensorboard",
           "logging_strategy": "steps",
           "logging_first_step": true,
           "logging_steps": 1,
@@ -443,7 +443,7 @@
           "empty_rows": 1,
           "short_wrong_rows": 18
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
         "adapter_sha256": "90d9797ddfc6001688861d124e62383f004baffe4bc481755fe580880fcff5c3",
         "PRM_frozen": true,
         "engine": "V1",
@@ -517,7 +517,7 @@
       "resume50_to144": {
         "passed": true,
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
+        "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
         "source_step": 50,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -535,7 +535,7 @@
       "resume48_to50": {
         "passed": true,
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-48",
+        "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-48",
         "source_step": 48,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -554,7 +554,7 @@
         "PRM_in_optimizer": false,
         "resume": {
           "adapter_exact": true,
-          "source": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-48",
+          "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-48",
           "source_step": 48,
           "optimizer_exact": true,
           "scheduler_exact": true
@@ -566,7 +566,7 @@
         "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
         "protocol_sha256": "690b12287a926ef005182e1c7cc623a0218bdf1d59d2db413e0e57c4fcae78e3",
         "settings": {
-          "output_dir": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix",
+          "output_dir": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix",
           "overwrite_output_dir": false,
           "do_train": false,
           "do_eval": false,
@@ -596,7 +596,7 @@
           "log_level": "passive",
           "log_level_replica": "warning",
           "log_on_each_node": true,
-          "logging_dir": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/tensorboard",
+          "logging_dir": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/tensorboard",
           "logging_strategy": "steps",
           "logging_first_step": true,
           "logging_steps": 1,
@@ -800,7 +800,7 @@
           "empty_rows": 2,
           "short_wrong_rows": 21
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
         "adapter_sha256": "e2167ff479aa1a49a6f14533a2f9e7a66728f83bd626e09f58ee9d429da35dfb",
         "PRM_frozen": true,
         "engine": "V1",
@@ -878,7 +878,7 @@
       "resume48_to50": {
         "passed": true,
         "adapter_exact": true,
-        "source": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-48",
+        "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-48",
         "source_step": 48,
         "optimizer_exact": true,
         "scheduler_exact": true,
@@ -897,7 +897,7 @@
         "PRM_in_optimizer": false,
         "resume": {
           "adapter_exact": true,
-          "source": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-48",
+          "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-48",
           "source_step": 48,
           "optimizer_exact": true,
           "scheduler_exact": true
@@ -909,7 +909,7 @@
         "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
         "protocol_sha256": "690b12287a926ef005182e1c7cc623a0218bdf1d59d2db413e0e57c4fcae78e3",
         "settings": {
-          "output_dir": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded",
+          "output_dir": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded",
           "overwrite_output_dir": false,
           "do_train": false,
           "do_eval": false,
@@ -939,7 +939,7 @@
           "log_level": "passive",
           "log_level_replica": "warning",
           "log_on_each_node": true,
-          "logging_dir": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/tensorboard",
+          "logging_dir": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/tensorboard",
           "logging_strategy": "steps",
           "logging_first_step": true,
           "logging_steps": 1,
@@ -1143,7 +1143,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 20
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
         "adapter_sha256": "4426fad6b3e832906708f7bf593a8a5a489e91e0436e0041e9e427a28c55fc98",
         "PRM_frozen": true,
         "engine": "V1",

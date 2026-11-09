@@ -5,13 +5,13 @@
     "dispatch": {
       "pid": 3173527,
       "unix": 1793338815.6237192,
-      "source": "/srv/research/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029",
-      "run": "/srv/research/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029",
+      "source": "/path/to/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029",
+      "run": "/path/to/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029",
       "command": [
-        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
         "-B",
         "-u",
-        "/srv/research/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029/controller.py"
+        "/path/to/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029/controller.py"
       ],
       "GPU": 1,
       "GPU_free_MiB_before": 62508,
@@ -20,7 +20,7 @@
       "generations": 1819,
       "new_training": false,
       "new_PRM_inference": false,
-      "environment_only_project_cache": "/srv/research/ece285_math_rl_project/cache/a6m_protocol_recheck_20261029",
+      "environment_only_project_cache": "/path/to/ece285_math_rl_project/cache/a6m_protocol_recheck_20261029",
       "no_automatic_retry": true
     },
     "controller": {
@@ -28,7 +28,7 @@
       "stage": "complete",
       "unix": 1793341262.0968494,
       "training": false,
-      "comparison": "/srv/research/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029/comparison.json"
+      "comparison": "/path/to/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029/comparison.json"
     },
     "progress": {
       "done": 1819,
@@ -441,12 +441,12 @@
     "stage": "complete",
     "unix": 1793325027.1155524,
     "training": false,
-    "comparison": "/srv/research/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029/comparison.json"
+    "comparison": "/path/to/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029/comparison.json"
   },
   "historical_A_receipt": null,
   "historical_eval": {
     "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-    "adapter": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+    "adapter": "/path/to/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
     "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
     "greedy": true,
     "verifier_version": "reward-repair-v3-20261021",

@@ -1,0 +1,56 @@
+STOPPED BY USER — latest instruction: 释放了，别再跑了. No new GPU jobs, no automatic restart, no resume, no evaluations. Existing controller and watcher have exited; locks free. Original ACTIVE instructions below are superseded. Preserve checkpoints/results. A432 complete; C observed368 but latest durable checkpoint365. Pipeline and common9M/12M evaluations are incomplete. Read USER_STOP.json and USER_STOP_remote_snapshot.json.
+
+ACTIVE — 2026-11-08 user authorized budget-only seed17 A/C-bounded continuation, source288(~6M) ->432(~9M) ->576(~12M), same question schedule/updates. No teacher/new rewards/new PRM adaptation. Latest user requested fixed frozen-PRM counterfactual check, format monitoring, repeated evaluation and predeclared seed42 followup. Preserve all original A/B/C/D/PURE/tree/prefix/length results.
+
+Remote root /path/to/ece285_math_rl_project (all remote artifacts below this path).
+Source experiments/budget_extension_seed17_12m_20261108
+Run runs/Budget_extension_seed17_12M_20261108
+Audit audits/Budget_extension_seed17_12M_20261108
+SSH constant from execution/ac_seed42_v1_20261106/inspect_remote.py; port11032,USER@GPU_HOST,identity /home/USER/.ssh/fym_125_76_110_84_ed25519.
+Remote Python .venv/bin/python. GPU0 A10080GB UUID GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac. Last preflight GPU empty, sourceCP hashes correct,974GiB disk free, no project controllers alive. Do not infer current state from that snapshot.
+
+Important state: ALREADY DISPATCHED. Read launch_receipt/controller/PID creation time/locks/checkpoint BEFORE ANY DISPATCH. Never rerun prepare_remote.py or launch_remote.py. No restart from scratch, no silent batch resampling. On failure preserve logs/raw tensors and inspect actual saved checkpoint; fix only verified runtime errors preserving science. Do not kill healthy processes or other jobs.
+
+Plan/source protocol.json is frozen. Learning rate5e-6 constant, num_iterations1, beta.04, GRPO per-response loss,4questions/update,8responses/question,scalar C-bounded correct-only process term. Source each arm's ORIGINAL ABC_seed17_resumed_V1_20261104/<arm>/checkpoint-288, not any short-trial checkpoint. Restore LoRA/optimizer/scheduler/TorchRNG exactly; vLLM samplingRNG recreated. Runtime uses previously validated native-LoRA V1/eager, no merge/unmerge. Scalar reward/advantage source is unchanged legacy runtime/advantages; CPU preflight compares native derivative scalar-loss AST with installed original pinned TRL. Disclose controlled numerical restart, not bitwise uninterrupted historical replay.
+
+Pipeline: CPUpreflight -> A/C actual model no-optimizer forward/backward smoke -> baseline6M validation2 fresh engine repeats -> A288->432,C288->432 -> common9M validation2repeats -> C432->576,A432->576 -> final12M validation2repeats -> freeze seed42 eligibility USING VALIDATION ONLY -> common endpoint6M/12M MATH5002repeats(all4 CPs together) -> GSM8K1repeat(all4) -> CPU acceptance/comparison. Fixed contiguous batch64, maxseq64, batched4096, length2048, engineV1, nativeLoRA, greedy, seed285, .15 GPUutil. Repeats averaged per question, never treat1000 as independent. 9M monitoring only, no small-effect adaptive stop. At most72h pipeline/18h pertrainstage saves incomplete without retry. Common updates prioritized over exact token equality.
+Seed42 eligibility predeclared: finalmean C-A gap positive and >=baseline mean gap; C12M mean>=C6M; C wins both12M repeats; correctness/hash gates pass. This is a resource eligibility rule, not significance. Current pipeline DOES NOT automatically dispatch seed42; only seed17 budget authorized here. No test-triggered choice.
+
+Frozen PRM diagnostic already COMPLETE, no optimizer or policy generation: audit/placeholder_diagnostic/result.json,dispatchPID4009514 now exited. 200 C6M answer-correct placeholder-leading MATH500 outputs: original-vs-exact-placeholder-span-deletion; preserve math text. Mean minscore(original-deleted)=-.0044494643,CI[-.008901736,-.000089718],39positive/159negative/2ties. Not evidence that adding placeholder is systematically rewarded. Additional20 targeted genuine training groups:4 correct-process-rank changes,0advantage-sign changes,maxadvchange.04824841. 528scoredversions,277038PRM inputtokens,~48.4sec,peak13.76GiB. Keep causal/selection/segmentation limits. Fetch scores/selection/log/hash receipts for final report; never change training based on diagnostic.
+User123missing GSM boxes confirmed CURRENT C6M:123/1319,122 begin with placeholder and have no nonplaceholder completebox. A:83missing,all83same structure. All123 C cases lack a nonplaceholder completebox. This is fixed-rule format failure, not evidence all could otherwise be solved correctly.
+
+Continuation required: follow EXISTING controller through smoke and actual first optimizer acceptance (dispatch alone is not training). Monitor current finite task, no app automation. When allresults complete, fetch evidence/predictions, independently verify source8+historical3556hashes, actual update/question counts and scalar advantages, repeatability, paired question stats, format metrics, diagnostic mechanism, actual training+eval cost. Save complete report/local hashes, PID/GPU release check, and deliver clear budget-effect/seed42-eligibility conclusion. Do not stop at a progress-only response and do not manufacture work while waiting.
+
+LAUNCH RECEIPT
+{
+  "pid": 4021805,
+  "create_time": 1794182515.0,
+  "unix": 1794182515.4834418,
+  "command": [
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py"
+  ],
+  "release_sha256": "55b3eba70d0d08fb0cc0d68c1ce07be4d71fb8522eee3677bc16c990ec23b908",
+  "seed": 17,
+  "arms": [
+    "A",
+    "C_bounded"
+  ],
+  "source_step": 288,
+  "final_step": 576,
+  "zero_update_gate": true,
+  "automatic_seed42_dispatch": false
+}
+
+CURRENT FINITE READ-ONLY WATCHER: local exec session87410 runs monitor.py, checks existingcontroller every55s, refreshes status.json/review.html, emits stages/24-update milestones/first-update receipts. Resume it using write_stdin, do not launchanotherwatcher unless exited. Controller4021805 creation1794182515.0,release55b3eba70d0d08fb0cc0d68c1ce07be4d71fb8522eee3677bc16c990ec23b908,prepared3556protectedfiles/94dependencies. CPUpreflightpassed inclscalar-loss AST equality; A/Czero-update realmodel forward/backward bothpassed, nooptimizerconstructed. Current baseline_validation_repeat0; formaloptimizersteps notyetstarted. Continue existingpipeline.
+Actual C replacement advantages are saved in raw_signals_step-<globalstep>.pt and actual_signals.jsonl. Legacy raw_generation_step-...pt is saved BEFORE replacing provisionalmixed advantages; do not misinterpret it as final C-bounded loss input or a second-normalization error. Actual loss uses unchanged scalar PilotMixin fingerprint checks.
+Prepared post-completionCPU helpers: independent_acceptance.py verifies576newbatches/18432responses, raw masks/IDs/EOS/tags/F64advantages,source states,3556historicalfiles and15276evaluationpredictions through originalverifier. It explicitlyreports samplingcorrectioninactive/no cachedoldlogps, nofake ratio reconstruction. finish_cpu.py onlyruns after controllercomplete underCPUlock; collect_completed.py onlycollectsafterindependentacceptancepasses. Needfinish localstat/cost/report/HTML/PIDrelease scripts while waiting, then executeactualcloseout afterresults. No appautomation.
+
+POSTPROCESSING FULLY READY (syntaxchecked; doNOTexecuteuntilcontrollercomplete): finish_cpu.py -> collect_completed.py -> verify_local.py -> runtime_closeout.py -> render_final.py. Detailedcommands/scriptSHA inpostprocessing_plan.json. Firsthelperindependent_acceptance.py runsCPUonly onremote,576newbatches/18432newresponses,15276regradedpredictions,source/checkpointhashes,3556historicalfiles,pretestseed42gate-logtiming. RetrievecompressedJSON/JSONL/logs+sourceaccounting+prepareddata;raw.pt/modelweightsstayremote withhashreceipts. Localverifyindependentlyrecomputesmeans,gateand6primaryendpointpaired20kbootstrapcomparisons. Reportpreservesnearly-zeroMCboundarycaution,sourcehistoricalasymmetricrestartlimitation,conditionalformatdecompositionwithoutcausalclaims. FinalruntimecheckonlyownPIDs;donotkillotherjobs. OnlymarkCOMPLETEafteractualallgates/report/linkhashQA.
+PRMextra cached_signal_check.json verified20 selectedgroups:94 correctcachedPRMminimaexactlymatchneworiginalrescore(maxdifference0),160historicaladvantagesreproduced(max5.96e-8). 197/200outputs have1586exactunchanged-stepmatches;meanper-outputunchangedstep(original-deleted)=-.00101828. It supportscontrolledreplay,notcausalpolicy-hacking inference. Allinlocalplaceholder_diagnostic/,fulloriginalgroupssaved;noextraGPUcalls.
+
+LIVE FOLLOWUP: finite monitor session87410 is currently being drained by functions.exec cell g4:131 (2000 bounded <=55s read waits, yields each iteration). Resume functions.wait on that cell while live; do not duplicate watcher/controller. If cell ends but monitor remains, resume session87410 directly. Actual A first optimizer step289 PASSED: exact LoRA/optimizer/scheduler/Torch CPU+CUDA RNG restoration, question-order and loss-input advantage fingerprints accepted. Last observed A step408, existing controller healthy. Baseline validation repeats completed: A55.2/55.0%; C64.0/65.0%. These are validation, not MATH500 test. No training settings or frozen source changed.
+
+ACTUAL STAGE: A432 result receipt present and source restore accepted. Existing controller now train_C_bounded_432; same settings, no new dispatch. Common9M validation is still pending until C432 completes. Read latest status.json for current step, first-update and accounting evidence. Continue functions.wait cell g4:131 / monitor session87410.

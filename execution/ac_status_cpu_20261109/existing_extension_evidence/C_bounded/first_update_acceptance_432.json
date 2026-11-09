@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "adapter_exact": true,
+  "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "source_step": 288,
+  "optimizer_exact": true,
+  "scheduler_exact": true,
+  "torch_cpu_rng_exact": true,
+  "torch_cuda_rng_exact": true,
+  "first_optimizer_step": 289,
+  "question_order_checked": true,
+  "advantage_fingerprint_at_loss": true,
+  "vllm_sampling_RNG_recreated_not_bitwise_restored": true
+}

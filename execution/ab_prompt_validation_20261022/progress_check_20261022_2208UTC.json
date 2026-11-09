@@ -11,7 +11,7 @@
     "completed_stages": [],
     "master_port": "52667",
     "child_pid": 224804,
-    "log": "/srv/research/ece285_math_rl_project/runs/AB_prompt_validation_20261022/evaluate.log"
+    "log": "/path/to/ece285_math_rl_project/runs/AB_prompt_validation_20261022/evaluate.log"
   },
   "state.json": {
     "status": "generating",
@@ -40,12 +40,12 @@
   "controller_process": {
     "pid": 224797,
     "exists": true,
-    "cmdline": "/srv/research/ece285_math_rl_project/.venv/bin/python -B /srv/research/ece285_math_rl_project/experiments/ab_prompt_validation_20261022/launch.py "
+    "cmdline": "/path/to/ece285_math_rl_project/.venv/bin/python -B /path/to/ece285_math_rl_project/experiments/ab_prompt_validation_20261022/launch.py "
   },
   "evaluator_process": {
     "pid": 224804,
     "exists": true,
-    "cmdline": "/srv/research/ece285_math_rl_project/.venv/bin/python -B /srv/research/ece285_math_rl_project/experiments/ab_prompt_validation_20261022/evaluate.py "
+    "cmdline": "/path/to/ece285_math_rl_project/.venv/bin/python -B /path/to/ece285_math_rl_project/experiments/ab_prompt_validation_20261022/evaluate.py "
   },
   "completed_batches": [
     {

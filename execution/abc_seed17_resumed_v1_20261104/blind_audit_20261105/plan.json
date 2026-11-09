@@ -1,0 +1,22 @@
+{
+  "fixed_sample_seed": 20261105,
+  "pairs": 20,
+  "responses": 40,
+  "sampling": "5 C_bounded wins and 5 losses per dataset; cases and X/Y assignments shuffled.",
+  "not_population_estimate": true,
+  "reviewer": "assistant; model identity and stored verifier labels hidden, not independent human reviewers",
+  "assess": [
+    "independently solve problem",
+    "check mathematical validity of both outputs",
+    "check final answer against body",
+    "flag suspected verifier/format issues; uncertain stays uncertain"
+  ],
+  "gate": "Do not launch seed42 if material unexplained grading/data/code problems are found. Freeze annotations before unblinding. Known output format failures are reported under unchanged verifier. Sampling cannot prove absence of all problems.",
+  "source_sha256": {
+    "A/math500": "f937529b292edbcfc39bd5ee1fa0525666aa9c161f6acd5b339156e74312b71a",
+    "C_bounded/math500": "7bd8fa1e0d162c9e99c5a25e90612427849a2f8ed3b85cdda2915d1f6f53f971",
+    "A/gsm8k": "05c1a8707547722edd00f6f24bc2565995e28d6d320f3466b9aad498edbc2437",
+    "C_bounded/gsm8k": "2c9f1f078c766b1ca23247e34161423388ff27c7e92d6a056da0a2c7d106318b"
+  },
+  "key_sha256": "e34d7de505b1292c2d1b48f1b992c4835de1da1c42452b18f3c6c1232c232463"
+}

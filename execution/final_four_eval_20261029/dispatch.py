@@ -5,7 +5,7 @@ HERE=Path(__file__).resolve().parent
 REMOTE=r'''
 from pathlib import Path
 import json,subprocess,os,time,hashlib,fcntl
-r=Path('/srv/research/ece285_math_rl_project');s=r/'experiments/final_four_eval_20261029';p=r/'runs/Final_four_eval_seed17_1M_20261029';a=r/'audits/Final_four_eval_seed17_1M_20261029'
+r=Path('/path/to/ece285_math_rl_project');s=r/'experiments/final_four_eval_20261029';p=r/'runs/Final_four_eval_seed17_1M_20261029';a=r/'audits/Final_four_eval_seed17_1M_20261029'
 lock=(p/'dispatch.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
 assert json.loads((a/'preflight.json').read_text())['passed']
 assert not (p/'dispatch.json').exists() and not (p/'dispatch_intent.json').exists(),'Already dispatched or ambiguous prior outcome; inspect only'
@@ -27,6 +27,6 @@ d={'pid':child.pid,'unix':time.time(),'source':str(s),'run':str(p),'command':com
 with (p/'dispatch.json').open('x') as f:json.dump(d,f,indent=2)
 print(json.dumps(d))
 '''
-cmd=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -B -']
+cmd=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','USER@GPU_HOST','/path/to/ece285_math_rl_project/.venv/bin/python -B -']
 r=subprocess.run(cmd,input=REMOTE,text=True,capture_output=True);assert r.returncode==0,(r.stdout,r.stderr)
 d=json.loads(r.stdout);(HERE/'dispatch.json').write_text(json.dumps(d,indent=2)+'\n');print(json.dumps(d,indent=2))

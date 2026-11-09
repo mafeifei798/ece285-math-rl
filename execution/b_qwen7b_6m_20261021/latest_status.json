@@ -1,6 +1,6 @@
 {
   "observed_remote_unix": 1792625811.6883652,
-  "remote_run": "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M",
+  "remote_run": "/path/to/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M",
   "controller.json": {
     "status": "training_6M",
     "pid": 2608261,
@@ -11,7 +11,7 @@
     "heartbeat_unix": 1792625805.4658818,
     "child_pid": 2609578,
     "gpu": 0,
-    "log": "/srv/research/ece285_math_rl_project/logs/B_Qwen7B_seed17_6M_training_6M.log",
+    "log": "/path/to/ece285_math_rl_project/logs/B_Qwen7B_seed17_6M_training_6M.log",
     "last_child_exit_code": 0
   },
   "run_config.json": {
@@ -102,12 +102,12 @@
     "prm_revision": "0610740060112df12585d00a1c5f4624d2f59051",
     "argument_changes": {
       "output_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17",
-        "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M"
+        "/path/to/ece285_math_rl_project/runs/A_seed17",
+        "/path/to/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M"
       ],
       "logging_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
-        "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/tensorboard"
+        "/path/to/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+        "/path/to/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/tensorboard"
       ]
     },
     "source_checkpoint": null,
@@ -119,7 +119,7 @@
     "cuda_visible_devices": "0",
     "pid": 2609578,
     "started_unix": 1792625719.0630105,
-    "trusted_args_source": "/srv/research/ece285_math_rl_project/runs/A_seed17/checkpoint-280/training_args.bin"
+    "trusted_args_source": "/path/to/ece285_math_rl_project/runs/A_seed17/checkpoint-280/training_args.bin"
   },
   "status.json": {
     "status": "training",
@@ -197,12 +197,12 @@
     "single_gpu": true,
     "argument_changes": {
       "output_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17",
-        "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M"
+        "/path/to/ece285_math_rl_project/runs/A_seed17",
+        "/path/to/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M"
       ],
       "logging_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
-        "/srv/research/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/tensorboard"
+        "/path/to/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+        "/path/to/ece285_math_rl_project/runs/B_Qwen7B_seed17_6M/tensorboard"
       ]
     }
   },

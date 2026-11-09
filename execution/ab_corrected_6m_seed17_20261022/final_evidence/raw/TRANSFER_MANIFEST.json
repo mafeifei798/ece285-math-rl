@@ -1,5 +1,5 @@
 {
-  "source_root": "/srv/research/ece285_math_rl_project",
+  "source_root": "/path/to/ece285_math_rl_project",
   "observed_unix": 1792678754.7708397,
   "files": {
     "data/prepared/train.jsonl": {

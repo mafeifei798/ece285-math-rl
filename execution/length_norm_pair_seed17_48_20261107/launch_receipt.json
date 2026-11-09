@@ -1,0 +1,17 @@
+{
+  "pid": 3236854,
+  "create_time": 1794122517.1,
+  "unix": 1794122517.5904586,
+  "command": [
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/controller.py"
+  ],
+  "release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150",
+  "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+  "authorized_updates_per_arm": 48,
+  "seed": 17,
+  "CPU_and_real_model_no_update_gates_required": true,
+  "automatic_expansion": false
+}

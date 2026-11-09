@@ -8,7 +8,7 @@ LOCAL = Path(__file__).resolve().parent
 REMOTE = r'''
 from pathlib import Path
 import os,json,subprocess,time
-root=Path('/srv/research/ece285_math_rl_project')
+root=Path('/path/to/ece285_math_rl_project')
 out=root/'runs/CD_PRM7B_pair_seed17_20261028'
 d={'checked_unix':time.time(),'remote_run':str(out)}
 for name in ['controller.json','dispatch.json','progress.json','cpu_checks.json','selection.json','anchor_manifest.json','buffer_manifest.json','model_preflight.json','paired_wiring.json']:
@@ -56,8 +56,8 @@ print(json.dumps(d,ensure_ascii=False,allow_nan=False))
 '''
 
 if __name__=='__main__':
-    command=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
-             'researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -']
+    command=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
+             'USER@GPU_HOST','/path/to/ece285_math_rl_project/.venv/bin/python -']
     result=subprocess.run(command,input=REMOTE,text=True,capture_output=True,timeout=90)
     if result.returncode:raise RuntimeError(result.stderr[-1500:])
     data=json.loads(result.stdout);LOCAL.mkdir(exist_ok=True)

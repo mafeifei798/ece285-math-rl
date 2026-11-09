@@ -1,0 +1,482 @@
+{
+  "rows": [
+    {
+      "row": 0,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        363,
+        363
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 1,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        411,
+        411
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 2,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        376,
+        376
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 3,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        334,
+        334
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 4,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        383,
+        383
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 5,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        423,
+        423
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 6,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        401,
+        401
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 7,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        317,
+        317
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 8,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        142,
+        142
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 9,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        157,
+        157
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 10,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        314,
+        314
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 11,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        416,
+        416
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 12,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 446,
+      "lengths": [
+        522,
+        527
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 13,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 67,
+      "lengths": [
+        630,
+        445
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 14,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        151,
+        151
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 15,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        239,
+        239
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 16,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        119,
+        119
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 17,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        136,
+        136
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 18,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        98,
+        98
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 19,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        211,
+        211
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 20,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        435,
+        435
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 21,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 449,
+      "lengths": [
+        467,
+        470
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 22,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 481,
+      "lengths": [
+        552,
+        557
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 23,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        502,
+        502
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 24,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 83,
+      "lengths": [
+        548,
+        554
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 25,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 451,
+      "lengths": [
+        1081,
+        544
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 26,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 452,
+      "lengths": [
+        519,
+        518
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 27,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 258,
+      "lengths": [
+        562,
+        649
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 28,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 472,
+      "lengths": [
+        598,
+        572
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 29,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 361,
+      "lengths": [
+        618,
+        1119
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "row": 30,
+      "same_question": true,
+      "same_ids": false,
+      "first_difference": 476,
+      "lengths": [
+        1224,
+        478
+      ],
+      "outcomes": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "row": 31,
+      "same_question": true,
+      "same_ids": true,
+      "first_difference": null,
+      "lengths": [
+        395,
+        395
+      ],
+      "outcomes": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "same_rows": 21,
+  "settings_differences": {
+    "output_dir": [
+      "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/bounded",
+      "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/uniform"
+    ],
+    "logging_dir": [
+      "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/bounded/logs",
+      "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/uniform/logs"
+    ]
+  },
+  "snapshots": {
+    "bounded": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+    "uniform": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073"
+  },
+  "uniform_generated_tokens": 12756,
+  "raw_keys": [
+    "prompt_ids",
+    "prompt_mask",
+    "completion_ids",
+    "completion_mask",
+    "advantages",
+    "num_items_in_batch",
+    "ref_per_token_logps",
+    "signal_trace_id"
+  ],
+  "raw_sha256": "7c65e094eda28e2312db1de5fe87b8e9e7a7cc01430b9f6d01b78a47769f26c5",
+  "uniform_checkpoints": [],
+  "gpu_processes": "",
+  "controller_alive": false
+}

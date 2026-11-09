@@ -1,6 +1,6 @@
 {
   "checked_unix": 1793256944.758878,
-  "remote_run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "remote_run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
   "controller.json": {
     "status": "failed",
     "pid": 3237174,
@@ -19,21 +19,21 @@
     "active_child": {
       "stage": "paired_wiring",
       "pid": 3503363,
-      "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/paired_wiring.log"
+      "log": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/paired_wiring.log"
     },
     "actor_optimizer_updates": 0,
     "automatic_RL_launch": false,
     "stage_started_unix": 1793181919.746665,
     "failure": "paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log",
-    "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
+    "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
     "failed_unix": 1793181921.917148
   },
   "dispatch.json": {
     "pid": 3237174,
     "started_unix": 1793174084.2960937,
-    "cwd": "/srv/research/ece285_math_rl_project",
-    "source": "/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
-    "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+    "cwd": "/path/to/ece285_math_rl_project",
+    "source": "/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
+    "run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
     "source_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
     "gpu": 1,
     "gpu_sharing_authorized": true,
@@ -352,8 +352,8 @@
   "postprocess_child_alive": true,
   "postprocess_log_tail": "7459564209}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256827.3342216, \"arm\": \"D\", \"done\": 128, \"total\": 728, \"elapsed_seconds\": 30.52345585823059}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256835.0907352, \"arm\": \"D\", \"done\": 160, \"total\": 728, \"elapsed_seconds\": 38.27996516227722}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256843.6267912, \"arm\": \"D\", \"done\": 192, \"total\": 728, \"elapsed_seconds\": 46.81601667404175}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256853.6200643, \"arm\": \"D\", \"done\": 224, \"total\": 728, \"elapsed_seconds\": 56.80929350852966}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256866.148206, \"arm\": \"D\", \"done\": 256, \"total\": 728, \"elapsed_seconds\": 69.33743691444397}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256874.3241696, \"arm\": \"D\", \"done\": 288, \"total\": 728, \"elapsed_seconds\": 77.51340770721436}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256881.186444, \"arm\": \"D\", \"done\": 320, \"total\": 728, \"elapsed_seconds\": 84.37568497657776}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256892.36827, \"arm\": \"D\", \"done\": 352, \"total\": 728, \"elapsed_seconds\": 95.55750346183777}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256900.5956697, \"arm\": \"D\", \"done\": 384, \"total\": 728, \"elapsed_seconds\": 103.78490924835205}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256908.38086, \"arm\": \"D\", \"done\": 416, \"total\": 728, \"elapsed_seconds\": 111.57010054588318}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256917.2344239, \"arm\": \"D\", \"done\": 448, \"total\": 728, \"elapsed_seconds\": 120.42365503311157}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256924.9868786, \"arm\": \"D\", \"done\": 480, \"total\": 728, \"elapsed_seconds\": 128.17611956596375}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256931.3184428, \"arm\": \"D\", \"done\": 512, \"total\": 728, \"elapsed_seconds\": 134.50768446922302}\n{\"stage\": \"scoring\", \"pid\": 1124489, \"unix\": 1793256940.1644936, \"arm\": \"D\", \"done\": 544, \"total\": 728, \"elapsed_seconds\": 143.35373163223267}\n",
   "child_alive": false,
-  "child_log_tail": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 128, in <module>\n    elif a.mode=='wiring':wiring()\n                          ^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 121, in wiring\n    assert ok,err\n           ^^\nAssertionError: 0.0006128824315965176\n",
-  "controller_log_tail": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 47, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
+  "child_log_tail": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 128, in <module>\n    elif a.mode=='wiring':wiring()\n                          ^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 121, in wiring\n    assert ok,err\n           ^^\nAssertionError: 0.0006128824315965176\n",
+  "controller_log_tail": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 47, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
   "scoring_B.json": {
     "arm": "B",
     "sha256": "639f61e50e73204dc490d7351d25016d4fc2e61332ebc6e559ccbe6d63042dfa",

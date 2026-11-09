@@ -96,16 +96,16 @@
         "label": "P_VR_stage_2",
         "pid": 464133,
         "command": [
-          "/srv/research/ece285_math_rl_project/.venv/bin/python",
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
           "-B",
           "-u",
-          "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
+          "/path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
           "--arm",
           "P_VR",
           "--target-step",
           "2"
         ],
-        "log": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_VR_stage_2.log",
+        "log": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_VR_stage_2.log",
         "started_unix": 1792746389.6146405,
         "exit_code": 0,
         "finished_unix": 1792747247.7638037
@@ -114,16 +114,16 @@
         "label": "P_PRM_stage_2",
         "pid": 619386,
         "command": [
-          "/srv/research/ece285_math_rl_project/.venv/bin/python",
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
           "-B",
           "-u",
-          "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
+          "/path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
           "--arm",
           "P_PRM",
           "--target-step",
           "2"
         ],
-        "log": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_PRM_stage_2.log",
+        "log": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_PRM_stage_2.log",
         "started_unix": 1792747247.940949,
         "exit_code": 0,
         "finished_unix": 1792748168.0732837
@@ -132,16 +132,16 @@
         "label": "P_VR_stage_10",
         "pid": 785537,
         "command": [
-          "/srv/research/ece285_math_rl_project/.venv/bin/python",
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
           "-B",
           "-u",
-          "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
+          "/path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
           "--arm",
           "P_VR",
           "--target-step",
           "10"
         ],
-        "log": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_VR_stage_10.log",
+        "log": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_VR_stage_10.log",
         "started_unix": 1792748168.2360117,
         "exit_code": 0,
         "finished_unix": 1792750082.7027147
@@ -150,16 +150,16 @@
         "label": "P_PRM_stage_10",
         "pid": 1150920,
         "command": [
-          "/srv/research/ece285_math_rl_project/.venv/bin/python",
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
           "-B",
           "-u",
-          "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
+          "/path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
           "--arm",
           "P_PRM",
           "--target-step",
           "10"
         ],
-        "log": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_PRM_stage_10.log",
+        "log": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_PRM_stage_10.log",
         "started_unix": 1792750082.874368,
         "exit_code": null
       }
@@ -179,16 +179,16 @@
       "label": "P_PRM_stage_10",
       "pid": 1150920,
       "command": [
-        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
         "-B",
         "-u",
-        "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
+        "/path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py",
         "--arm",
         "P_PRM",
         "--target-step",
         "10"
       ],
-      "log": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_PRM_stage_10.log",
+      "log": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/P_PRM_stage_10.log",
       "started_unix": 1792750082.874368,
       "exit_code": null
     },
@@ -239,11 +239,11 @@
         "time": 1792750079.7645566,
         "stage": "done",
         "tokens": 208822,
-        "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
+        "latest_checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
         "collapsed": false
       },
       "latest": {
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
         "checkpoint_receipt_sha256": "c625a4847091b5de28afb24dcf2631c54391c9003eeefe2334e2258d0f8f74c3",
         "batch_step": 10
       },
@@ -254,8 +254,8 @@
           "optimizer_steps": 10,
           "tokens": 208822,
           "actual_generated_tokens": 208822,
-          "checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
-          "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
+          "checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
+          "latest_checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0010",
           "initial_samples_sha256": "3e2da481981a747cb28493850b5306e1bd16c1095dce39022ccc55b1390fdf4e",
           "initial_adapter_sha256": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7",
           "adapter_sha256": "a4ee1dde4eed33fa3f62e8f572360dd548ea47234aaef1f29432270ce4ecaf31",
@@ -306,8 +306,8 @@
           "optimizer_steps": 2,
           "tokens": 52911,
           "actual_generated_tokens": 52911,
-          "checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0002",
-          "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0002",
+          "checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0002",
+          "latest_checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0002",
           "initial_samples_sha256": "3e2da481981a747cb28493850b5306e1bd16c1095dce39022ccc55b1390fdf4e",
           "initial_adapter_sha256": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7",
           "adapter_sha256": "ade0027403049e5438f4376ed1f5a1bb19f054a18bd93e2df48b4a83d8ebce26",
@@ -13713,10 +13713,10 @@
         "time": 1792751102.83247,
         "stage": "backward_update",
         "tokens": 120763,
-        "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0006"
+        "latest_checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0006"
       },
       "latest": {
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0006",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0006",
         "checkpoint_receipt_sha256": "61902f04dd26db4079c3b4ea24befd7776c77260518ac56af843a5460e0827be",
         "batch_step": 6
       },
@@ -13727,8 +13727,8 @@
           "optimizer_steps": 2,
           "tokens": 48778,
           "actual_generated_tokens": 48778,
-          "checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0002",
-          "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0002",
+          "checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0002",
+          "latest_checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0002",
           "initial_samples_sha256": "3e2da481981a747cb28493850b5306e1bd16c1095dce39022ccc55b1390fdf4e",
           "initial_adapter_sha256": "c634db8e3d4f356f71e8cbea2b4b79b90d9d7c0a58073b5046841d26da44f7f7",
           "adapter_sha256": "c0344ab3a4d836b6aaab7f0bb1d7eaaf8d1a9251ac93ac1c414ac55269f29236",
@@ -22698,7 +22698,7 @@
     "P_VR_stage_10.log": "ing takes 1.28 seconds\nINFO 10-23 17:36:38 [worker.py:290] the current vLLM instance can use total_gpu_memory (79.25GiB) x gpu_memory_utilization (0.30) = 23.77GiB\nINFO 10-23 17:36:38 [worker.py:290] model weights take 2.88GiB; non_torch_memory takes 0.10GiB; PyTorch activation peak memory takes 0.26GiB; the rest of the memory reserved for KV Cache is 20.53GiB.\nINFO 10-23 17:36:39 [executor_base.py:114] # cuda blocks: 48060, # CPU blocks: 9362\nINFO 10-23 17:36:39 [executor_base.py:119] Maximum concurrency for 4096 tokens per request: 187.73x\nINFO 10-23 17:36:41 [model_runner.py:1355] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.\n\nCapturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]\nCapturing CUDA graph shapes:  14%|█▍        | 1/7 [00:01<00:07,  1.20s/it]\nCapturing CUDA graph shapes:  29%|██▊       | 2/7 [00:02<00:05,  1.16s/it]\nCapturing CUDA graph shapes:  43%|████▎     | 3/7 [00:02<00:03,  1.08it/s]\nCapturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:03<00:02,  1.18it/s]\nCapturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:04<00:01,  1.31it/s]\nCapturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:04<00:00,  1.38it/s]\nCapturing CUDA graph shapes: 100%|██████████| 7/7 [00:05<00:00,  1.40it/s]\nCapturing CUDA graph shapes: 100%|██████████| 7/7 [00:05<00:00,  1.24it/s]\nINFO 10-23 17:36:47 [model_runner.py:1507] Graph capturing finished in 6 secs, took 0.06 GiB\nINFO 10-23 17:36:47 [worker.py:467] Free memory on device (59.49/79.25 GiB) on startup. Desired GPU memory utilization is (0.3, 23.77 GiB). Actual usage is 2.88 GiB for weight, 0.26 GiB for peak activation, 0.1 GiB for non-torch memory, and 0.06 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=21827610214` to fit into requested memory, or `--kv-cache-memory=60172304384` to fully utilize gpu memory. Current kv cache memory in use is 22047811174 bytes.\nINFO 10-23 17:36:47 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 9.70 seconds\nINFO 10-23 17:36:47 [llm.py:295] Supported_tasks: ['generate']\nINFO 10-23 17:36:47 [__init__.py:36] No IOProcessor plugins requested by the model\nP_VR batch 3/10: 78351 tokens, outcome 9.0/32, grad 0.033163\nP_VR batch 4/10: 97923 tokens, outcome 9.0/32, grad 0.055829\nP_VR batch 5/10: 112010 tokens, outcome 22.0/32, grad 0.1619\nP_VR batch 6/10: 123364 tokens, outcome 13.0/32, grad 0.14125\nP_VR batch 7/10: 140621 tokens, outcome 9.0/32, grad 0.062122\nP_VR batch 8/10: 159270 tokens, outcome 14.0/32, grad 0.060335\nP_VR batch 9/10: 183460 tokens, outcome 12.0/32, grad 0.17079\nP_VR batch 10/10: 208822 tokens, outcome 6.0/32, grad 0.052485\n",
     "P_PRM_stage_2.log": ".63s/it]\n\nINFO 10-23 17:21:19 [default_loader.py:268] Loading weights took 2.82 seconds\nINFO 10-23 17:21:20 [model_runner.py:1083] Model loading took 2.8798 GiB and 9.214239 seconds\nINFO 10-23 17:21:22 [worker.py:290] Memory profiling takes 1.40 seconds\nINFO 10-23 17:21:22 [worker.py:290] the current vLLM instance can use total_gpu_memory (79.25GiB) x gpu_memory_utilization (0.30) = 23.77GiB\nINFO 10-23 17:21:22 [worker.py:290] model weights take 2.88GiB; non_torch_memory takes -0.07GiB; PyTorch activation peak memory takes 0.26GiB; the rest of the memory reserved for KV Cache is 20.71GiB.\nINFO 10-23 17:21:22 [executor_base.py:114] # cuda blocks: 48471, # CPU blocks: 9362\nINFO 10-23 17:21:22 [executor_base.py:119] Maximum concurrency for 4096 tokens per request: 189.34x\nINFO 10-23 17:21:24 [model_runner.py:1355] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.\n\nCapturing CUDA graph shapes:   0%|          | 0/7 [00:00<?, ?it/s]\nCapturing CUDA graph shapes:  14%|█▍        | 1/7 [00:00<00:04,  1.45it/s]\nCapturing CUDA graph shapes:  29%|██▊       | 2/7 [00:01<00:03,  1.48it/s]\nCapturing CUDA graph shapes:  43%|████▎     | 3/7 [00:02<00:02,  1.50it/s]\nCapturing CUDA graph shapes:  57%|█████▋    | 4/7 [00:02<00:01,  1.53it/s]\nCapturing CUDA graph shapes:  71%|███████▏  | 5/7 [00:03<00:01,  1.55it/s]\nCapturing CUDA graph shapes:  86%|████████▌ | 6/7 [00:03<00:00,  1.53it/s]\nCapturing CUDA graph shapes: 100%|██████████| 7/7 [00:04<00:00,  1.51it/s]\nCapturing CUDA graph shapes: 100%|██████████| 7/7 [00:04<00:00,  1.51it/s]\nINFO 10-23 17:21:29 [model_runner.py:1507] Graph capturing finished in 5 secs, took 0.12 GiB\nINFO 10-23 17:21:29 [worker.py:467] Free memory on device (58.76/79.25 GiB) on startup. Desired GPU memory utilization is (0.3, 23.77 GiB). Actual usage is 2.88 GiB for weight, 0.26 GiB for peak activation, -0.07 GiB for non-torch memory, and 0.12 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=21945050726` to fit into requested memory, or `--kv-cache-memory=59510915072` to fully utilize gpu memory. Current kv cache memory in use is 22236554854 bytes.\nINFO 10-23 17:21:29 [llm_engine.py:420] init engine (profile, create kv cache, warmup model) took 8.75 seconds\nINFO 10-23 17:21:30 [llm.py:295] Supported_tasks: ['generate']\nINFO 10-23 17:21:30 [__init__.py:36] No IOProcessor plugins requested by the model\n\nLoading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00, 76.57it/s]\nP_PRM batch 1/2: 23885 tokens, outcome 10.0/32, grad 0.07953\nP_PRM batch 2/2: 48778 tokens, outcome 11.0/32, grad 0.16744\n"
   },
-  "processes": "    PID    PPID STAT     ELAPSED     TIME %CPU COMMAND\n 464098       1 Ss      01:18:37 00:00:00  0.0 /srv/research/ece285_math_rl_project/.venv/bin/python -B -u /srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/controller.py --authorized-pilot\n1150920  464098 Rl         17:03 00:19:21  113 /srv/research/ece285_math_rl_project/.venv/bin/python -B -u /srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py --arm P_PRM --target-step 10\n",
+  "processes": "    PID    PPID STAT     ELAPSED     TIME %CPU COMMAND\n 464098       1 Ss      01:18:37 00:00:00  0.0 /path/to/ece285_math_rl_project/.venv/bin/python -B -u /path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/controller.py --authorized-pilot\n1150920  464098 Rl         17:03 00:19:21  113 /path/to/ece285_math_rl_project/.venv/bin/python -B -u /path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/train_arm.py --arm P_PRM --target-step 10\n",
   "gpu": "0, 81920, 25151, 56002, 100\n1, 81920, 60009, 21143, 100\n",
   "gpu_processes": "3399155, 17920 MiB\n3609705, 1814 MiB\n2394579, 1256 MiB\n858762, 1072 MiB\n1053306, 1150 MiB\n1312200, 1148 MiB\n1326399, 744 MiB\n3618365, 2066 MiB\n2394540, 1480 MiB\n3144012, 1310 MiB\n3145332, 1356 MiB\n3292698, 940 MiB\n3299142, 1072 MiB\n3300327, 936 MiB\n3318521, 938 MiB\n3334960, 938 MiB\n1150920, 48134 MiB\n1326400, 744 MiB\n"
 }

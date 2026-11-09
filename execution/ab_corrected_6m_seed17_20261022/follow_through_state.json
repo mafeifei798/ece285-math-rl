@@ -1,5 +1,5 @@
 {
-  "snapshot": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/snapshots/20261022T141700664265Z.json",
+  "snapshot": "/path/to/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/snapshots/20261022T141700664265Z.json",
   "observed_unix": 1792678620.204678,
   "A_training_completed": true,
   "A_tokens": 6022435,
@@ -28,7 +28,7 @@
   "A_evaluation_completed": true,
   "A_evaluation_summary": {
     "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-    "adapter": "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
+    "adapter": "/path/to/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/checkpoint-284",
     "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
     "greedy": true,
     "verifier_version": "reward-repair-v3-20261021",
@@ -72,7 +72,7 @@
   "B_evaluation_completed": true,
   "B_evaluation_summary": {
     "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-    "adapter": "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
+    "adapter": "/path/to/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
     "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
     "greedy": true,
     "verifier_version": "reward-repair-v3-20261021",
@@ -137,8 +137,8 @@
     "evaluation": "passed",
     "signals": "passed"
   },
-  "final_report": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/review.html",
-  "results_summary": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json",
+  "final_report": "/path/to/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/review.html",
+  "results_summary": "/path/to/ece285_math_rl_project/execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json",
   "posthoc_semantic_reviews": {
     "B_loss_stratum": {
       "body_correct_stale_box": 31,

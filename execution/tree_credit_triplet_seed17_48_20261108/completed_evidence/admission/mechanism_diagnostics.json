@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "CUDA_initialized": false,
+  "arms": {
+    "chain_cb": {
+      "group_counts": {
+        "mixed": 150,
+        "all_wrong": 27,
+        "all_correct": 15
+      },
+      "by_group_type": {
+        "mixed": {
+          "groups": 150,
+          "correct_leaves": 659.0,
+          "leaves": 1200,
+          "wrong_positive_shared_prefix_tokens": 0,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 640851.6477050781,
+          "process_advantage_abs_mass": 13199.953482091427,
+          "tree_vs_flat_2center_dot": 671499.3867246583,
+          "tree_square_mass": 736136.3222594163,
+          "flat_2center_square_mass": 627778.0625,
+          "cosine_with_flat_2center_outcome_credit": 0.9877872795445908
+        },
+        "all_correct": {
+          "groups": 15,
+          "correct_leaves": 120.0,
+          "leaves": 120,
+          "wrong_positive_shared_prefix_tokens": 0,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 1633.4152545928955,
+          "process_advantage_abs_mass": 1633.4152545928955,
+          "tree_vs_flat_2center_dot": 0.0,
+          "tree_square_mass": 0.0,
+          "flat_2center_square_mass": 0.0,
+          "cosine_with_flat_2center_outcome_credit": null
+        },
+        "all_wrong": {
+          "groups": 27,
+          "correct_leaves": 0.0,
+          "leaves": 216,
+          "wrong_positive_shared_prefix_tokens": 0,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 0.0,
+          "process_advantage_abs_mass": 0.0,
+          "tree_vs_flat_2center_dot": 0.0,
+          "tree_square_mass": 0.0,
+          "flat_2center_square_mass": 0.0,
+          "cosine_with_flat_2center_outcome_credit": null
+        }
+      },
+      "wall_time_breakdown": {
+        "sampler_and_branch_assembly_seconds": 4191.928404595703,
+        "all_generation_and_scoring_seconds": 4433.283955217339,
+        "PRM_forward_seconds": 120.96051540225744,
+        "other_generation_work_seconds": 120.39503521937877,
+        "updates_loading_saving_and_other_seconds": 606.0692528476939,
+        "note": "Wall-clock accounting, not FLOPs or isolated GPU kernel time. Other generation work includes HF old/reference probabilities and answer verification."
+      },
+      "fork_root_counts": {},
+      "fork_prefix_token_quantiles": null,
+      "wrong_positive_total_credit_location": {
+        "shared_prefix_tokens": 0
+      },
+      "correct_leaf_PRM_minimum_location": {},
+      "note": "PRM minimum location is structural, not a human correctness label; exact minima tied across regions are ambiguous. Root-cause categories overlap. Raw tree-credit scale differs from standardized GRPO; fixed0.2 may outweigh a small positive tree signal on a correct suffix. Count these reversals rather than claiming unchanged outcome dominance."
+    },
+    "tree_vr": {
+      "group_counts": {
+        "mixed": 147,
+        "all_wrong": 31,
+        "all_correct": 14
+      },
+      "by_group_type": {
+        "mixed": {
+          "groups": 147,
+          "correct_leaves": 670.0,
+          "leaves": 1176,
+          "wrong_positive_shared_prefix_tokens": 4804,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 552363.25,
+          "process_advantage_abs_mass": 0.0,
+          "tree_vs_flat_2center_dot": 565039.75,
+          "tree_square_mass": 553526.78125,
+          "flat_2center_square_mass": 608432.75,
+          "cosine_with_flat_2center_outcome_credit": 0.9736511713356297
+        },
+        "all_correct": {
+          "groups": 14,
+          "correct_leaves": 112.0,
+          "leaves": 112,
+          "wrong_positive_shared_prefix_tokens": 0,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 0.0,
+          "process_advantage_abs_mass": 0.0,
+          "tree_vs_flat_2center_dot": 0.0,
+          "tree_square_mass": 0.0,
+          "flat_2center_square_mass": 0.0,
+          "cosine_with_flat_2center_outcome_credit": null
+        },
+        "all_wrong": {
+          "groups": 31,
+          "correct_leaves": 0.0,
+          "leaves": 248,
+          "wrong_positive_shared_prefix_tokens": 0,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 0.0,
+          "process_advantage_abs_mass": 0.0,
+          "tree_vs_flat_2center_dot": 0.0,
+          "tree_square_mass": 0.0,
+          "flat_2center_square_mass": 0.0,
+          "cosine_with_flat_2center_outcome_credit": null
+        }
+      },
+      "wall_time_breakdown": {
+        "sampler_and_branch_assembly_seconds": 7523.03450300917,
+        "all_generation_and_scoring_seconds": 7646.314656036906,
+        "PRM_forward_seconds": 0.0,
+        "other_generation_work_seconds": 123.28015302773565,
+        "updates_loading_saving_and_other_seconds": 601.6853024782613,
+        "note": "Wall-clock accounting, not FLOPs or isolated GPU kernel time. Other generation work includes HF old/reference probabilities and answer verification."
+      },
+      "fork_root_counts": {
+        "no_eligible_prefix": 277,
+        "answer_marker_within_first_two_tokens": 277,
+        "nonempty_fork": 107,
+        "nonempty_fork_at_least32_tokens": 60,
+        "nonempty_fork_at_most16_tokens": 40
+      },
+      "fork_prefix_token_quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1358.0
+      ],
+      "wrong_positive_total_credit_location": {
+        "shared_prefix_tokens": 4804
+      },
+      "correct_leaf_PRM_minimum_location": {},
+      "note": "PRM minimum location is structural, not a human correctness label; exact minima tied across regions are ambiguous. Root-cause categories overlap. Raw tree-credit scale differs from standardized GRPO; fixed0.2 may outweigh a small positive tree signal on a correct suffix. Count these reversals rather than claiming unchanged outcome dominance."
+    },
+    "tree_cb": {
+      "group_counts": {
+        "all_correct": 21,
+        "mixed": 145,
+        "all_wrong": 26
+      },
+      "by_group_type": {
+        "mixed": {
+          "groups": 145,
+          "correct_leaves": 655.0,
+          "leaves": 1160,
+          "wrong_positive_shared_prefix_tokens": 3163,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 378,
+          "total_policy_advantage_abs_mass": 542231.527053833,
+          "process_advantage_abs_mass": 12345.207541659474,
+          "tree_vs_flat_2center_dot": 555137.59375,
+          "tree_square_mass": 543206.328125,
+          "flat_2center_square_mass": 593450.875,
+          "cosine_with_flat_2center_outcome_credit": 0.9777455342567583
+        },
+        "all_correct": {
+          "groups": 21,
+          "correct_leaves": 168.0,
+          "leaves": 168,
+          "wrong_positive_shared_prefix_tokens": 0,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 2543.4927788972855,
+          "process_advantage_abs_mass": 2543.4927788972855,
+          "tree_vs_flat_2center_dot": 0.0,
+          "tree_square_mass": 0.0,
+          "flat_2center_square_mass": 0.0,
+          "cosine_with_flat_2center_outcome_credit": null
+        },
+        "all_wrong": {
+          "groups": 26,
+          "correct_leaves": 0.0,
+          "leaves": 208,
+          "wrong_positive_shared_prefix_tokens": 0,
+          "correct_tokens_reversed_from_positive_outcome_to_negative_total": 0,
+          "total_policy_advantage_abs_mass": 0.0,
+          "process_advantage_abs_mass": 0.0,
+          "tree_vs_flat_2center_dot": 0.0,
+          "tree_square_mass": 0.0,
+          "flat_2center_square_mass": 0.0,
+          "cosine_with_flat_2center_outcome_credit": null
+        }
+      },
+      "wall_time_breakdown": {
+        "sampler_and_branch_assembly_seconds": 6796.388930337504,
+        "all_generation_and_scoring_seconds": 7041.793202208355,
+        "PRM_forward_seconds": 127.14799786172807,
+        "other_generation_work_seconds": 118.25627400912344,
+        "updates_loading_saving_and_other_seconds": 609.3545989524573,
+        "note": "Wall-clock accounting, not FLOPs or isolated GPU kernel time. Other generation work includes HF old/reference probabilities and answer verification."
+      },
+      "fork_root_counts": {
+        "no_eligible_prefix": 264,
+        "answer_marker_within_first_two_tokens": 264,
+        "nonempty_fork": 120,
+        "nonempty_fork_at_least32_tokens": 73,
+        "nonempty_fork_at_most16_tokens": 42
+      },
+      "fork_prefix_token_quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1615.0
+      ],
+      "wrong_positive_total_credit_location": {
+        "shared_prefix_tokens": 3163
+      },
+      "correct_leaf_PRM_minimum_location": {
+        "exclusive_suffix": 728,
+        "crosses_fork": 64,
+        "shared_prefix": 30,
+        "minimum_tied_across_regions": 1
+      },
+      "note": "PRM minimum location is structural, not a human correctness label; exact minima tied across regions are ambiguous. Root-cause categories overlap. Raw tree-credit scale differs from standardized GRPO; fixed0.2 may outweigh a small positive tree signal on a correct suffix. Count these reversals rather than claiming unchanged outcome dominance."
+    }
+  }
+}

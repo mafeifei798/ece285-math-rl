@@ -14,7 +14,7 @@
     ],
     "heartbeat_unix": 1792654810.3474047,
     "child_pid": 3045344,
-    "log": "/srv/research/ece285_math_rl_project/logs/ab_corrected_6m_seed17_20261022_train_A.log",
+    "log": "/path/to/ece285_math_rl_project/logs/ab_corrected_6m_seed17_20261022_train_A.log",
     "stage_started_unix": 1792654585.337165,
     "last_child_exit_code": 0,
     "pilot_gate_passed": true
@@ -59,14 +59,14 @@
     "passed": true,
     "pid": 3044481,
     "started_unix": 1792654553.0507472,
-    "adapter": "/srv/research/ece285_math_rl_project/runs/pilot_B_corrected_seed17_20261022/final_adapter",
+    "adapter": "/path/to/ece285_math_rl_project/runs/pilot_B_corrected_seed17_20261022/final_adapter",
     "cuda_visible_devices": "1",
     "purpose": "compiler and LoRA inference plumbing only; no accuracy selection",
     "header_receipt_sha256": "27a323af35cb1581643f32adbf311fa3faf1125cf760e013b0a4be843bbd4317",
     "fresh_header_compile_passed": true,
     "include_paths": [
-      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
-      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
+      "/path/to/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
+      "/path/to/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
     ],
     "adapter_sha256": "112cbe8d0bbfc82a2e3fbce6cc2ced35a8d035067c7969fa9cd3f50eff6968a6",
     "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
@@ -138,7 +138,7 @@
           "train_loss": 6.722286343574524e-06
         },
         "finished_unix": 1792654435.3677685,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/pilot_A_corrected_seed17_20261022/checkpoint-2",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/pilot_A_corrected_seed17_20261022/checkpoint-2",
         "checkpoint_sha256": {
           "completion_accounting.json": "957040bf9ca6e1895bc4bb5738ef907756a0e3d429910ae788e9f7df2fd2a295",
           "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
@@ -259,12 +259,12 @@
         },
         "argument_changes": {
           "output_dir": [
-            "/srv/research/ece285_math_rl_project/runs/A_seed17",
-            "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022"
+            "/path/to/ece285_math_rl_project/runs/A_seed17",
+            "/path/to/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022"
           ],
           "logging_dir": [
-            "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
-            "/srv/research/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/tensorboard"
+            "/path/to/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+            "/path/to/ece285_math_rl_project/runs/A_corrected_seed17_6M_20261022/tensorboard"
           ]
         },
         "target_completion_tokens": 6000000,
@@ -529,7 +529,7 @@
           "train_loss": 5.598179996013641e-06
         },
         "finished_unix": 1792654544.8063736,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/pilot_B_corrected_seed17_20261022/checkpoint-2",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/pilot_B_corrected_seed17_20261022/checkpoint-2",
         "checkpoint_sha256": {
           "completion_accounting.json": "f6c81011090d4d066c86f64428ee4f0f4a6c27e5e0392af0ff329c692158b949",
           "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",

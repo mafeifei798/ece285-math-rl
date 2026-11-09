@@ -1,0 +1,40 @@
+{
+  "cohort": "baseline",
+  "repeat": 0,
+  "dataset": "validation",
+  "dataset_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+  "settings": {
+    "seed": 285,
+    "temperature": 0,
+    "top_p": 1,
+    "top_k": -1,
+    "max_tokens": 2048,
+    "max_model_len": 4096,
+    "batch_size": 64,
+    "max_num_seqs": 64,
+    "max_num_batched_tokens": 4096,
+    "gpu_memory_utilization": 0.15,
+    "dtype": "bfloat16",
+    "enable_lora": true,
+    "enforce_eager": true,
+    "validation_repeats": 2,
+    "endpoint_math500_repeats": 2,
+    "endpoint_gsm8k_repeats": 1,
+    "order": "Fixed contiguous question batches, rotating first model by block; each repeat is a fresh engine process."
+  },
+  "verifier_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+  "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "release_sha256": "55b3eba70d0d08fb0cc0d68c1ce07be4d71fb8522eee3677bc16c990ec23b908",
+  "models": {
+    "A": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/A/checkpoint-288",
+      "sha256": "7d29cbba57f77772ffc8f0ba014c0fdaf69bd6fa6d9f810f2b88ca6b30396274",
+      "lora_id": 1
+    },
+    "C_bounded": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+      "sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+      "lora_id": 2
+    }
+  }
+}

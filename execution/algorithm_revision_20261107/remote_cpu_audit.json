@@ -1,0 +1,262 @@
+{
+  "scope": "read-only CPU audit, no model forwards or optimizer updates",
+  "rollouts": {
+    "A": {
+      "sha256": "e600b907007173aa4afab96859e44d100b28001f9b8c0c21cf868fb187b17857",
+      "rows": 9216,
+      "groups": {
+        "mixed": 906,
+        "all_wrong": 224,
+        "all_correct": 22
+      },
+      "wrong_counts": {
+        "wrong": 5497,
+        "wrong_unscored": 5497,
+        "unscored_truncated": 547,
+        "unscored_symbolic": 3816,
+        "unscored_missing_or_invalid_box": 1022,
+        "unscored_unparseable": 99,
+        "unscored_unit_symbolic": 13
+      },
+      "thresholds": {
+        "0.3": {},
+        "0.5": {},
+        "0.7": {},
+        "0.8": {},
+        "0.9": {}
+      }
+    },
+    "C_mix": {
+      "sha256": "11bd64c104edaa58ea0ae4bd7a92bbd28123aac1f594fcd3135995cd71a4d385",
+      "rows": 9216,
+      "groups": {
+        "mixed": 903,
+        "all_wrong": 212,
+        "all_correct": 37
+      },
+      "wrong_counts": {
+        "wrong": 5341,
+        "wrong_unscored": 1553,
+        "unscored_truncated": 524,
+        "wrong_scored": 3788,
+        "wrong_scored_mixed": 2465,
+        "unscored_missing_or_invalid_box": 910,
+        "unscored_unparseable": 119,
+        "wrong_scored_all_wrong": 1323
+      },
+      "thresholds": {
+        "0.3": {
+          "after_first": 2340,
+          "mixed_after_first": 1506,
+          "first_step": 1149,
+          "mixed_first_step": 722,
+          "all_wrong_first_step": 427,
+          "all_wrong_after_first": 834,
+          "undetected": 299,
+          "mixed_undetected": 237,
+          "all_wrong_undetected": 62
+        },
+        "0.5": {
+          "after_first": 2088,
+          "mixed_after_first": 1359,
+          "first_step": 1512,
+          "mixed_first_step": 954,
+          "all_wrong_first_step": 558,
+          "all_wrong_after_first": 729,
+          "undetected": 188,
+          "mixed_undetected": 152,
+          "all_wrong_undetected": 36
+        },
+        "0.7": {
+          "after_first": 1807,
+          "mixed_after_first": 1191,
+          "first_step": 1868,
+          "mixed_first_step": 1180,
+          "all_wrong_first_step": 688,
+          "all_wrong_after_first": 616,
+          "undetected": 113,
+          "mixed_undetected": 94,
+          "all_wrong_undetected": 19
+        },
+        "0.8": {
+          "after_first": 1589,
+          "mixed_after_first": 1068,
+          "first_step": 2111,
+          "mixed_first_step": 1326,
+          "all_wrong_first_step": 785,
+          "all_wrong_after_first": 521,
+          "undetected": 88,
+          "mixed_undetected": 71,
+          "all_wrong_undetected": 17
+        },
+        "0.9": {
+          "first_step": 2498,
+          "mixed_first_step": 1558,
+          "after_first": 1237,
+          "mixed_after_first": 863,
+          "all_wrong_first_step": 940,
+          "all_wrong_after_first": 374,
+          "undetected": 53,
+          "mixed_undetected": 44,
+          "all_wrong_undetected": 9
+        }
+      }
+    },
+    "C_bounded": {
+      "sha256": "5401b22b05f30e4770bc3c4bae1bd1b15e05af79b195af1cee50d168f938873f",
+      "rows": 9216,
+      "groups": {
+        "mixed": 893,
+        "all_wrong": 218,
+        "all_correct": 41
+      },
+      "wrong_counts": {
+        "wrong": 5296,
+        "wrong_unscored": 1577,
+        "unscored_truncated": 546,
+        "wrong_scored": 3719,
+        "wrong_scored_mixed": 2395,
+        "unscored_missing_or_invalid_box": 908,
+        "unscored_unparseable": 123,
+        "wrong_scored_all_wrong": 1324
+      },
+      "thresholds": {
+        "0.3": {
+          "after_first": 2289,
+          "mixed_after_first": 1456,
+          "first_step": 1124,
+          "mixed_first_step": 684,
+          "all_wrong_first_step": 440,
+          "all_wrong_after_first": 833,
+          "undetected": 306,
+          "mixed_undetected": 255,
+          "all_wrong_undetected": 51
+        },
+        "0.5": {
+          "after_first": 2087,
+          "mixed_after_first": 1346,
+          "first_step": 1434,
+          "mixed_first_step": 887,
+          "all_wrong_first_step": 547,
+          "all_wrong_after_first": 741,
+          "undetected": 198,
+          "mixed_undetected": 162,
+          "all_wrong_undetected": 36
+        },
+        "0.7": {
+          "after_first": 1834,
+          "mixed_after_first": 1197,
+          "first_step": 1767,
+          "mixed_first_step": 1100,
+          "all_wrong_first_step": 667,
+          "all_wrong_after_first": 637,
+          "undetected": 118,
+          "mixed_undetected": 98,
+          "all_wrong_undetected": 20
+        },
+        "0.8": {
+          "after_first": 1618,
+          "mixed_after_first": 1076,
+          "first_step": 2013,
+          "mixed_first_step": 1248,
+          "all_wrong_first_step": 765,
+          "all_wrong_after_first": 542,
+          "undetected": 88,
+          "mixed_undetected": 71,
+          "all_wrong_undetected": 17
+        },
+        "0.9": {
+          "first_step": 2395,
+          "mixed_first_step": 1484,
+          "after_first": 1277,
+          "mixed_after_first": 873,
+          "all_wrong_first_step": 911,
+          "all_wrong_after_first": 404,
+          "undetected": 47,
+          "mixed_undetected": 38,
+          "all_wrong_undetected": 9
+        }
+      }
+    }
+  },
+  "merge_cpu_replay": {
+    "note": "One merge/unmerge on original frozen base plus final checkpoint; not reconstruction of historical GPU weights or logits. CPU FP32 delta GEMM may differ from GPU arithmetic.",
+    "layers": [
+      {
+        "arm": "A",
+        "layer": "model.layers.0.self_attn.q_proj",
+        "base_dtype": "torch.bfloat16",
+        "adapter_dtype": "torch.float32",
+        "adapter_sha256": "7d29cbba57f77772ffc8f0ba014c0fdaf69bd6fa6d9f810f2b88ca6b30396274",
+        "numel": 2359296,
+        "delta_rms": 1.1186378287675325e-05,
+        "merged_delta_rms": 6.410945843526861e-06,
+        "relative_merge_error_rms": 0.910674396053255,
+        "nonzero_delta_rounded_to_zero_fraction": 0.9308704733848572,
+        "roundtrip_changed_fraction": 0.0011622110614553094,
+        "roundtrip_drift_rms": 6.361784130604065e-07,
+        "roundtrip_drift_relative_to_delta": 0.05687081168722148
+      },
+      {
+        "arm": "A",
+        "layer": "model.layers.0.mlp.gate_proj",
+        "base_dtype": "torch.bfloat16",
+        "adapter_dtype": "torch.float32",
+        "adapter_sha256": "7d29cbba57f77772ffc8f0ba014c0fdaf69bd6fa6d9f810f2b88ca6b30396274",
+        "numel": 13762560,
+        "delta_rms": 1.3312975170265418e-05,
+        "merged_delta_rms": 7.340376214415301e-06,
+        "relative_merge_error_rms": 0.9191575684576566,
+        "nonzero_delta_rounded_to_zero_fraction": 0.9202598929405212,
+        "roundtrip_changed_fraction": 0.0013551984447985888,
+        "roundtrip_drift_rms": 7.805926429682586e-07,
+        "roundtrip_drift_relative_to_delta": 0.05863397422326118
+      },
+      {
+        "arm": "C_bounded",
+        "layer": "model.layers.0.self_attn.q_proj",
+        "base_dtype": "torch.bfloat16",
+        "adapter_dtype": "torch.float32",
+        "adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+        "numel": 2359296,
+        "delta_rms": 1.4468687368207611e-05,
+        "merged_delta_rms": 8.665509085403755e-06,
+        "relative_merge_error_rms": 0.9024207200054813,
+        "nonzero_delta_rounded_to_zero_fraction": 0.9112832546234131,
+        "roundtrip_changed_fraction": 0.0015364752616733313,
+        "roundtrip_drift_rms": 9.171067176794168e-07,
+        "roundtrip_drift_relative_to_delta": 0.06338561987969946
+      },
+      {
+        "arm": "C_bounded",
+        "layer": "model.layers.0.mlp.gate_proj",
+        "base_dtype": "torch.bfloat16",
+        "adapter_dtype": "torch.float32",
+        "adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+        "numel": 13762560,
+        "delta_rms": 1.928865458467044e-05,
+        "merged_delta_rms": 1.259779674001038e-05,
+        "relative_merge_error_rms": 0.8823868239021884,
+        "nonzero_delta_rounded_to_zero_fraction": 0.885945200920105,
+        "roundtrip_changed_fraction": 0.0019656952936202288,
+        "roundtrip_drift_rms": 1.3235609230832779e-06,
+        "roundtrip_drift_relative_to_delta": 0.06861862330901873
+      }
+    ]
+  },
+  "data": {
+    "prepared_train_keys": [
+      "problem_id",
+      "problem",
+      "answer",
+      "subject",
+      "level",
+      "question_sha256",
+      "prompt",
+      "prompt_tokens"
+    ],
+    "raw_files": [
+      "data/raw/processbench_math.json"
+    ]
+  }
+}

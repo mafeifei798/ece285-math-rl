@@ -1,5 +1,5 @@
 {
-  "root": "/srv/research/ece285_math_rl_project",
+  "root": "/path/to/ece285_math_rl_project",
   "hashed": {
     "data/prepared/manifest.json": "7efe2833ba0d0d0df322fbb96f0ee377003783aead450d6c09585efa24ca7459",
     "data/prepared/train.jsonl": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",

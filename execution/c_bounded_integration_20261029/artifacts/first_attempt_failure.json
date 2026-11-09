@@ -1,5 +1,5 @@
 {
   "error": "",
-  "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/c_bounded_integration_20261029/no_update.py\", line 109, in main\n    assert max(diffs,default=0)<.002\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/c_bounded_integration_20261029/no_update.py\", line 109, in main\n    assert max(diffs,default=0)<.002\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
   "time": 1793260927.6604033
 }

@@ -1,0 +1,385 @@
+{
+  "passed": true,
+  "validation_summary": {
+    "source": {
+      "n": 500,
+      "correct": 320.0,
+      "accuracy": 0.64,
+      "tokens": 314364,
+      "truncated": 27,
+      "missing_or_invalid_box": 22,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.044,
+      "status_counts": {
+        "exact": 293,
+        "symbolic": 153,
+        "missing_or_invalid_box": 22,
+        "truncated": 27,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 712.1447136467323,
+      "predictions_sha256": "b8401f515448f265a506a8a140c013c2d9fc2be7f97ef4fb2af3a3f689920a6a"
+    },
+    "chain_cb": {
+      "n": 500,
+      "correct": 328.0,
+      "accuracy": 0.656,
+      "tokens": 312228,
+      "truncated": 27,
+      "missing_or_invalid_box": 20,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.04,
+      "status_counts": {
+        "exact": 302,
+        "symbolic": 147,
+        "missing_or_invalid_box": 20,
+        "truncated": 27,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 723.3143298979849,
+      "predictions_sha256": "de0cf7c5d3037de7775d27d43fc02c7b1fba9af726e9de56d938c73d4703228e"
+    },
+    "tree_vr": {
+      "n": 500,
+      "correct": 316.0,
+      "accuracy": 0.632,
+      "tokens": 314864,
+      "truncated": 26,
+      "missing_or_invalid_box": 20,
+      "truncation_rate": 0.052,
+      "missing_or_invalid_box_rate": 0.04,
+      "status_counts": {
+        "exact": 292,
+        "symbolic": 157,
+        "missing_or_invalid_box": 20,
+        "truncated": 26,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 722.8700605016202,
+      "predictions_sha256": "b95a70abbfb58a4f9969ad5e4720989b2349f70073c4a736ad8416ea97fa1fce"
+    },
+    "tree_cb": {
+      "n": 500,
+      "correct": 319.0,
+      "accuracy": 0.638,
+      "tokens": 318570,
+      "truncated": 28,
+      "missing_or_invalid_box": 17,
+      "truncation_rate": 0.056,
+      "missing_or_invalid_box_rate": 0.034,
+      "status_counts": {
+        "exact": 294,
+        "symbolic": 157,
+        "missing_or_invalid_box": 17,
+        "truncated": 28,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 723.0419318666682,
+      "predictions_sha256": "d939b18920d09766aa5ae41267c39a4344cf27f29aba34afdee82378e319f54d"
+    }
+  },
+  "paired_comparisons": {
+    "tree_cb_minus_chain_cb": {
+      "difference_percentage_points": -1.7999999999999998,
+      "paired_bootstrap_95CI_pp": [
+        -4.3999999999999995,
+        0.8
+      ],
+      "wins": 17,
+      "losses": 26,
+      "both_correct": 302,
+      "both_wrong": 155,
+      "mcnemar_exact_two_sided_p": 0.2220528201560228,
+      "n": 500
+    },
+    "tree_vr_minus_chain_cb": {
+      "difference_percentage_points": -2.4,
+      "paired_bootstrap_95CI_pp": [
+        -4.8,
+        -0.2
+      ],
+      "wins": 12,
+      "losses": 24,
+      "both_correct": 304,
+      "both_wrong": 160,
+      "mcnemar_exact_two_sided_p": 0.06524533522315325,
+      "n": 500
+    },
+    "tree_cb_minus_tree_vr": {
+      "difference_percentage_points": 0.6,
+      "paired_bootstrap_95CI_pp": [
+        -2.0,
+        3.2
+      ],
+      "wins": 23,
+      "losses": 20,
+      "both_correct": 296,
+      "both_wrong": 161,
+      "mcnemar_exact_two_sided_p": 0.7607916425613439,
+      "n": 500
+    },
+    "chain_cb_minus_source": {
+      "difference_percentage_points": 1.6,
+      "paired_bootstrap_95CI_pp": [
+        -0.6,
+        3.8
+      ],
+      "wins": 20,
+      "losses": 12,
+      "both_correct": 308,
+      "both_wrong": 160,
+      "mcnemar_exact_two_sided_p": 0.21532714972272515,
+      "n": 500
+    },
+    "tree_vr_minus_source": {
+      "difference_percentage_points": -0.8,
+      "paired_bootstrap_95CI_pp": [
+        -3.2,
+        1.6
+      ],
+      "wins": 18,
+      "losses": 22,
+      "both_correct": 298,
+      "both_wrong": 162,
+      "mcnemar_exact_two_sided_p": 0.6358280026288412,
+      "n": 500
+    },
+    "tree_cb_minus_source": {
+      "difference_percentage_points": -0.2,
+      "paired_bootstrap_95CI_pp": [
+        -2.8000000000000003,
+        2.4
+      ],
+      "wins": 22,
+      "losses": 23,
+      "both_correct": 297,
+      "both_wrong": 158,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "n": 500
+    }
+  },
+  "training_costs": {
+    "chain_cb": {
+      "new_updates": 48,
+      "leaf_responses": 1536,
+      "unique_generation_tokens": 1033392,
+      "expanded_leaf_training_tokens": 1033392,
+      "PRM_input_tokens": 948949,
+      "PRM_seconds": 120.96051540225744,
+      "seconds": 5039.353208065033,
+      "peak_sampled_GPU_GiB": 38.064453125,
+      "empty": 0,
+      "short_wrong": 3,
+      "truncated": 97,
+      "statuses": {
+        "exact": 703,
+        "symbolic": 598,
+        "truncated": 97,
+        "missing_or_invalid_box": 95,
+        "unit_exact": 14,
+        "unit_symbolic": 16,
+        "unparseable": 13
+      },
+      "group_types": {
+        "mixed": 150,
+        "all_wrong": 27,
+        "all_correct": 15
+      },
+      "wrong_positive_total_tokens": 0,
+      "wrong_positive_prm_tokens": 0,
+      "fork_fallbacks": 0
+    },
+    "tree_vr": {
+      "new_updates": 48,
+      "leaf_responses": 1536,
+      "unique_generation_tokens": 980089,
+      "expanded_leaf_training_tokens": 1034557,
+      "PRM_input_tokens": 0,
+      "PRM_seconds": 0.0,
+      "seconds": 8247.999958515167,
+      "peak_sampled_GPU_GiB": 28.015625,
+      "empty": 0,
+      "short_wrong": 4,
+      "truncated": 93,
+      "statuses": {
+        "exact": 714,
+        "symbolic": 591,
+        "missing_or_invalid_box": 95,
+        "truncated": 93,
+        "unit_symbolic": 19,
+        "unit_exact": 10,
+        "unparseable": 14
+      },
+      "group_types": {
+        "mixed": 147,
+        "all_wrong": 31,
+        "all_correct": 14
+      },
+      "wrong_positive_total_tokens": 4804,
+      "wrong_positive_prm_tokens": 0,
+      "fork_fallbacks": 277
+    },
+    "tree_cb": {
+      "new_updates": 48,
+      "leaf_responses": 1536,
+      "unique_generation_tokens": 960821,
+      "expanded_leaf_training_tokens": 1026155,
+      "PRM_input_tokens": 1005493,
+      "PRM_seconds": 127.14799786172807,
+      "seconds": 7651.147801160812,
+      "peak_sampled_GPU_GiB": 40.1875,
+      "empty": 0,
+      "short_wrong": 1,
+      "truncated": 68,
+      "statuses": {
+        "exact": 737,
+        "symbolic": 596,
+        "missing_or_invalid_box": 96,
+        "truncated": 68,
+        "unit_exact": 9,
+        "unit_symbolic": 17,
+        "unparseable": 13
+      },
+      "group_types": {
+        "all_correct": 21,
+        "mixed": 145,
+        "all_wrong": 26
+      },
+      "wrong_positive_total_tokens": 3163,
+      "wrong_positive_prm_tokens": 0,
+      "fork_fallbacks": 264
+    }
+  },
+  "same_source_checkpoint_and_optimizer": true,
+  "same_question_order": true,
+  "same_update_count": true,
+  "same_actor_settings": true,
+  "historical_files_verified": 1535,
+  "additional_historical_files_verified": 2190,
+  "no_update_gate": {
+    "passed": true,
+    "optimizer_steps": 0,
+    "optimizer_constructed": false,
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+    "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+    "actor_base_unchanged": true,
+    "actor_adapter_unchanged": true,
+    "PRM_frozen": true,
+    "generations": [
+      {
+        "mode": "chain_cb",
+        "rows": 32,
+        "unique_generation_tokens": 14949,
+        "expanded_leaf_tokens": 14949,
+        "seconds": 96.6970431311056,
+        "PRM_cost": {
+          "prm_forward_seconds": 2.018712405115366,
+          "prm_input_tokens": 14469,
+          "prm_padded_tokens": 14469,
+          "prm_scored_completions": 28
+        },
+        "fallback_roots": 0,
+        "raw_ID_mask_logprob_provenance_exact": true
+      },
+      {
+        "mode": "tree_cb",
+        "rows": 32,
+        "unique_generation_tokens": 9127,
+        "expanded_leaf_tokens": 13348,
+        "seconds": 62.96377750299871,
+        "PRM_cost": {
+          "prm_forward_seconds": 2.222907747142017,
+          "prm_input_tokens": 15745,
+          "prm_padded_tokens": 15745,
+          "prm_scored_completions": 32
+        },
+        "fallback_roots": 4,
+        "raw_ID_mask_logprob_provenance_exact": true
+      }
+    ],
+    "loss_checks": [
+      {
+        "variant": "chain_cb",
+        "row": 11,
+        "outcome": 0.0,
+        "length": 2048,
+        "loss": 0.011046696454286575,
+        "gradient_L2": 0.0012452196376207363,
+        "advantages_and_components_unchanged_at_loss": true,
+        "post_construction_normalizations": 0
+      },
+      {
+        "variant": "chain_cb",
+        "row": 18,
+        "outcome": 1.0,
+        "length": 98,
+        "loss": -0.012545944191515446,
+        "gradient_L2": 0.004738827257669574,
+        "advantages_and_components_unchanged_at_loss": true,
+        "post_construction_normalizations": 0
+      },
+      {
+        "variant": "tree_vr",
+        "row": 18,
+        "outcome": 1.0,
+        "length": 116,
+        "loss": -0.007807738613337278,
+        "gradient_L2": 0.0041227437723891465,
+        "advantages_and_components_unchanged_at_loss": true,
+        "post_construction_normalizations": 0
+      },
+      {
+        "variant": "tree_vr",
+        "row": 25,
+        "outcome": 1.0,
+        "length": 706,
+        "loss": -0.0039062013383954763,
+        "gradient_L2": 0.0005537532667143172,
+        "advantages_and_components_unchanged_at_loss": true,
+        "post_construction_normalizations": 0
+      },
+      {
+        "variant": "tree_cb",
+        "row": 18,
+        "outcome": 1.0,
+        "length": 116,
+        "loss": -0.003655383363366127,
+        "gradient_L2": 0.0019373845367163824,
+        "advantages_and_components_unchanged_at_loss": true,
+        "post_construction_normalizations": 0
+      },
+      {
+        "variant": "tree_cb",
+        "row": 25,
+        "outcome": 1.0,
+        "length": 706,
+        "loss": -0.003944504540413618,
+        "gradient_L2": 0.000559752540087197,
+        "advantages_and_components_unchanged_at_loss": true,
+        "post_construction_normalizations": 0
+      }
+    ],
+    "max_torch_allocated_GiB": 32.25543260574341,
+    "seconds": 198.45685648918152,
+    "post_construction_normalizations": 0,
+    "scope": "Actual chain and tree batches; tree_vr/tree_cb compared on identical tree leaves. Smoke loaded C PRM; formal tree_vr will not load/score a PRM."
+  },
+  "seed": 17,
+  "test_sets_used": false,
+  "limits": [
+    "48-step continuation from C-bounded, not from-initial A/TreeRL reproduction.",
+    "Leaf count and updates matched; unique generation tokens and wall time are measured, not forced equal.",
+    "Paper-formula TreeRL-style credit with all8 leaves; no upstream RLOO preprocessing/selected-leaf resampling.",
+    "Wrong shared prefixes may have positive outcome credit; wrong PRM and exclusive-suffix positives are forbidden.",
+    "Question bootstrap excludes training-seed and numerical evaluation-repeatability variance.",
+    "Whole-trajectory PRM minimum projected onto an exclusive suffix remains a heuristic."
+  ]
+}

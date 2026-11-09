@@ -29,6 +29,6 @@
     "idle": false
   },
   "superseded_unix": 1792699800.3927186,
-  "replacement_script": "/srv/research/ece285_math_rl_project/experiments/ab_prompt_validation_20261022/dispatch_shared.py",
+  "replacement_script": "/path/to/ece285_math_rl_project/experiments/ab_prompt_validation_20261022/dispatch_shared.py",
   "original_receipt": "dispatch_before_shared.json"
 }

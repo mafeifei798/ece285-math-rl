@@ -1,6 +1,6 @@
 {
   "mode": "CPU-only, two saved first-layer tensors; no model instantiation or GPU access",
-  "checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0001",
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0001",
   "checkpoint_receipt_sha256": "357b1987fa76356b8d6588acd1d5c6438ce04710eac446fa0e9808398fe3ef29",
   "adapter_file_sha256": "cc624eb68d6371058c2fa7e17a803db57081caeb575d8acdb74f995f96099063",
   "batch_step": 1,

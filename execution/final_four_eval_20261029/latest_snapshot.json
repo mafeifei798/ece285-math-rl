@@ -2,13 +2,13 @@
   "dispatch": {
     "pid": 2723445,
     "unix": 1793315774.3910975,
-    "source": "/srv/research/ece285_math_rl_project/experiments/final_four_eval_20261029",
-    "run": "/srv/research/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029",
+    "source": "/path/to/ece285_math_rl_project/experiments/final_four_eval_20261029",
+    "run": "/path/to/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029",
     "command": [
-      "/srv/research/ece285_math_rl_project/.venv/bin/python",
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
       "-B",
       "-u",
-      "/srv/research/ece285_math_rl_project/experiments/final_four_eval_20261029/controller.py"
+      "/path/to/ece285_math_rl_project/experiments/final_four_eval_20261029/controller.py"
     ],
     "GPU": 1,
     "GPU_free_MiB_before": 30710,
@@ -17,7 +17,7 @@
     "generations": 7276,
     "new_training": false,
     "new_PRM_inference": false,
-    "environment_only_project_cache": "/srv/research/ece285_math_rl_project/cache/final_four_eval_20261029",
+    "environment_only_project_cache": "/path/to/ece285_math_rl_project/cache/final_four_eval_20261029",
     "no_automatic_retry": true
   },
   "controller": {
@@ -25,14 +25,14 @@
     "stage": "complete",
     "unix": 1793325027.1155524,
     "training": false,
-    "comparison": "/srv/research/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029/comparison.json"
+    "comparison": "/path/to/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029/comparison.json"
   },
   "status": {
     "stage": "CPU_audit_complete",
     "pid": 2830949,
     "unix": 1793325026.6060526,
     "training": false,
-    "comparison": "/srv/research/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029/comparison.json"
+    "comparison": "/path/to/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029/comparison.json"
   },
   "progress": {
     "done": 7276,

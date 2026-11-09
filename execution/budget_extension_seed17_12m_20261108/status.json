@@ -1,0 +1,580 @@
+{
+  "unix": 1794213559.1792018,
+  "controller": {
+    "stage": "failed",
+    "pid": 4021805,
+    "unix": 1794213521.7667634,
+    "children": [
+      {
+        "stage": "preflight",
+        "pid": 4021806,
+        "started_unix": 1794182515.5214474,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/preflight.py"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794182532.5419216
+      },
+      {
+        "stage": "no_update_A",
+        "pid": 4022010,
+        "started_unix": 1794182533.031061,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/smoke.py",
+          "--arm",
+          "A"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794182659.0939705
+      },
+      {
+        "stage": "no_update_C_bounded",
+        "pid": 4024248,
+        "started_unix": 1794182659.2100852,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/smoke.py",
+          "--arm",
+          "C_bounded"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794182795.8586328
+      },
+      {
+        "stage": "baseline_validation_repeat0",
+        "pid": 4026592,
+        "started_unix": 1794182795.9408238,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/evaluate.py",
+          "--cohort",
+          "baseline",
+          "--repeat",
+          "0"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794184243.292549
+      },
+      {
+        "stage": "baseline_validation_repeat1",
+        "pid": 4053217,
+        "started_unix": 1794184243.6074805,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/evaluate.py",
+          "--cohort",
+          "baseline",
+          "--repeat",
+          "1"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794185713.276395
+      },
+      {
+        "stage": "train_A_432",
+        "pid": 4078957,
+        "started_unix": 1794185713.8498254,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/train_arm.py",
+          "--arm",
+          "A",
+          "--target",
+          "432"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794202099.2522001
+      },
+      {
+        "stage": "train_C_bounded_432",
+        "pid": 770050,
+        "started_unix": 1794202099.3782265,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/train_arm.py",
+          "--arm",
+          "C_bounded",
+          "--target",
+          "432"
+        ],
+        "exit_code": -15,
+        "finished_unix": 1794213521.7642114
+      }
+    ],
+    "error": "train_C_bounded_432 failed; preserve evidence, no automatic retry",
+    "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py\", line 34, in main\n    for arm in ARMS:child('train_'+arm+'_432','train_arm.py',['--arm',arm,'--target','432'])\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py\", line 26, in child\n    if rc:raise RuntimeError(label+' failed; preserve evidence, no automatic retry')\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: train_C_bounded_432 failed; preserve evidence, no automatic retry\n",
+    "automatic_retry": false
+  },
+  "launch": {
+    "pid": 4021805,
+    "create_time": 1794182515.0,
+    "unix": 1794182515.4834418,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py"
+    ],
+    "release_sha256": "55b3eba70d0d08fb0cc0d68c1ce07be4d71fb8522eee3677bc16c990ec23b908",
+    "seed": 17,
+    "arms": [
+      "A",
+      "C_bounded"
+    ],
+    "source_step": 288,
+    "final_step": 576,
+    "zero_update_gate": true,
+    "automatic_seed42_dispatch": false
+  },
+  "controller_alive": false,
+  "preflight": true,
+  "arms": {
+    "A": {
+      "progress": {
+        "arm": "A",
+        "global_step": 432,
+        "stage_target": 432,
+        "stage_start": 288,
+        "stage_new_updates": 144,
+        "target_total_updates": 576,
+        "accounting": {
+          "generated_completion_tokens": 9321966,
+          "generated_completions": 13824,
+          "generated_groups": 1728,
+          "correct_completions": 5947,
+          "truncated_completions": 826,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 1355,
+            "all_wrong": 312,
+            "all_correct": 61
+          },
+          "status_counts": {
+            "truncated": 826,
+            "symbolic": 6098,
+            "exact": 5341,
+            "missing_or_invalid_box": 1307,
+            "unparseable": 161,
+            "unit_symbolic": 44,
+            "unit_exact": 47
+          },
+          "loss_rows": 13824,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 8758.999463558197,
+          "positive_advantage_rows": 5459,
+          "empty_rows": 6,
+          "short_wrong_rows": 111
+        },
+        "seconds": 16342.001705475152,
+        "unix": 1794202076.7801676,
+        "pid": 4078957,
+        "latest_generation": {
+          "step_before_update": 431,
+          "rows": 32,
+          "tokens": 23527,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.0,
+          "max_abs_process": 0.0,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/prealgebra/443",
+            "math/train/number_theory/420",
+            "math/train/geometry/592",
+            "math/train/number_theory/618"
+          ]
+        }
+      },
+      "smoke": {
+        "passed": true,
+        "arm": "A",
+        "optimizer_constructed": false,
+        "optimizer_updates": 0,
+        "actor_adapter_unchanged": true,
+        "actor_base_unchanged": true,
+        "source_checkpoint_unchanged": true,
+        "rows": 32,
+        "backward_probes": [
+          {
+            "row": 5,
+            "loss": 0.07731814682483673,
+            "gradient_L2": 0.009023213553698912
+          },
+          {
+            "row": 20,
+            "loss": -0.01687132939696312,
+            "gradient_L2": 0.013317527131181273
+          }
+        ],
+        "peak_allocated_GiB": 16.51305341720581,
+        "seconds": 118.14158129692078
+      },
+      "smoke_build": true,
+      "first_update_432": {
+        "passed": true,
+        "adapter_exact": true,
+        "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/A/checkpoint-288",
+        "source_step": 288,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "first_optimizer_step": 289,
+        "question_order_checked": true,
+        "advantage_fingerprint_at_loss": true,
+        "vllm_sampling_RNG_recreated_not_bitwise_restored": true
+      },
+      "result_432": {
+        "passed": true,
+        "arm": "A",
+        "start_step": 288,
+        "global_step": 432,
+        "accounting": {
+          "generated_completion_tokens": 9321966,
+          "generated_completions": 13824,
+          "generated_groups": 1728,
+          "correct_completions": 5947,
+          "truncated_completions": 826,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 1355,
+            "all_wrong": 312,
+            "all_correct": 61
+          },
+          "status_counts": {
+            "truncated": 826,
+            "symbolic": 6098,
+            "exact": 5341,
+            "missing_or_invalid_box": 1307,
+            "unparseable": 161,
+            "unit_symbolic": 44,
+            "unit_exact": 47
+          },
+          "loss_rows": 13824,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 8758.999463558197,
+          "positive_advantage_rows": 5459,
+          "empty_rows": 6,
+          "short_wrong_rows": 111
+        },
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/A/milestones/checkpoint-432",
+        "adapter_sha256": "82adb5b92c976c833d0ebe34247c5ea4a3aa52c2d5c9c7d26b44eaed88adbf8e",
+        "actor_base_unchanged": true,
+        "PRM_frozen": true,
+        "seconds": 16376.667058229446,
+        "metrics": {
+          "train_runtime": 16341.7121,
+          "train_samples_per_second": 39.164,
+          "train_steps_per_second": 1.224,
+          "total_flos": 0.0,
+          "train_loss": 4.122548803361833e-05
+        }
+      },
+      "failure_432": null,
+      "first_update_576": null,
+      "result_576": null,
+      "failure_576": null
+    },
+    "C_bounded": {
+      "progress": {
+        "arm": "C_bounded",
+        "global_step": 368,
+        "stage_target": 432,
+        "stage_start": 288,
+        "stage_new_updates": 80,
+        "target_total_updates": 576,
+        "accounting": {
+          "generated_completion_tokens": 7909112,
+          "generated_completions": 11776,
+          "generated_groups": 1472,
+          "correct_completions": 5239,
+          "truncated_completions": 691,
+          "prm_input_tokens": 7176762,
+          "prm_padded_tokens": 7176762,
+          "prm_scored_completions": 9876,
+          "prm_forward_seconds": 2608.836422340013,
+          "outcome_group_counts": {
+            "mixed": 1141,
+            "all_wrong": 262,
+            "all_correct": 69
+          },
+          "status_counts": {
+            "truncated": 691,
+            "symbolic": 5092,
+            "exact": 4702,
+            "missing_or_invalid_box": 1059,
+            "unparseable": 150,
+            "unit_symbolic": 29,
+            "unit_exact": 53
+          },
+          "loss_rows": 11776,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 5105,
+          "process_abs_sum": 208.59461569786072,
+          "outcome_abs_sum": 7440.007999420166,
+          "positive_advantage_rows": 5059,
+          "empty_rows": 4,
+          "short_wrong_rows": 109
+        },
+        "seconds": 11332.036766958423,
+        "unix": 1794213489.8862524,
+        "pid": 770050,
+        "latest_generation": {
+          "step_before_update": 367,
+          "rows": 32,
+          "tokens": 21748,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.009341324679553509,
+          "max_abs_process": 0.13183096051216125,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/prealgebra/717",
+            "math/train/precalculus/553",
+            "math/train/geometry/674",
+            "math/train/prealgebra/815"
+          ]
+        }
+      },
+      "smoke": {
+        "passed": true,
+        "arm": "C_bounded",
+        "optimizer_constructed": false,
+        "optimizer_updates": 0,
+        "actor_adapter_unchanged": true,
+        "actor_base_unchanged": true,
+        "source_checkpoint_unchanged": true,
+        "rows": 32,
+        "backward_probes": [
+          {
+            "row": 11,
+            "loss": 0.011046728119254112,
+            "gradient_L2": 0.0012624397744302328
+          },
+          {
+            "row": 18,
+            "loss": -0.012388504110276699,
+            "gradient_L2": 0.0047137814109346025
+          }
+        ],
+        "peak_allocated_GiB": 29.877493858337402,
+        "seconds": 128.47015118598938
+      },
+      "smoke_build": true,
+      "first_update_432": {
+        "passed": true,
+        "adapter_exact": true,
+        "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+        "source_step": 288,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "first_optimizer_step": 289,
+        "question_order_checked": true,
+        "advantage_fingerprint_at_loss": true,
+        "vllm_sampling_RNG_recreated_not_bitwise_restored": true
+      },
+      "result_432": null,
+      "failure_432": null,
+      "first_update_576": null,
+      "result_576": null,
+      "failure_576": null
+    }
+  },
+  "evaluations": {
+    "baseline": {
+      "0": {
+        "progress": {
+          "done": 1000,
+          "total": 1000,
+          "model": "A",
+          "seconds": 1426.3528926372528,
+          "pid": 4026592,
+          "unix": 1794184240.1725883
+        },
+        "summary": {
+          "passed": true,
+          "summary": {
+            "A": {
+              "n": 500,
+              "correct": 276.0,
+              "accuracy": 0.552,
+              "tokens": 363425,
+              "status_counts": {
+                "exact": 254,
+                "symbolic": 177,
+                "truncated": 49,
+                "missing_or_invalid_box": 14,
+                "unparseable": 6
+              },
+              "format_counts": {
+                "has_marker": 496,
+                "first_marker_in_first10pct": 473,
+                "first_marker_in_first20nonwhitechars": 471,
+                "first_box_incomplete": 0,
+                "first_box_placeholder": 164,
+                "first_box_nonplaceholder": 332,
+                "first_box_followed_by_at_least100_nonwhitechars": 474,
+                "leading_placeholder_box_with_body": 164,
+                "leading_nonplaceholder_box_with_body": 307,
+                "early10pct_nonplaceholder_box_with_body": 309,
+                "first_last_nonplaceholder_box_text_equal": 165,
+                "two_or_more_nonplaceholder_boxes": 261,
+                "no_nonplaceholder_complete_box": 22
+              },
+              "truncated": 49,
+              "predictions_sha256": "00914cf2c845b02d274f48e502a6958d2a6101c5bcac4d1c9b8a6bcd06148669"
+            },
+            "C_bounded": {
+              "n": 500,
+              "correct": 320.0,
+              "accuracy": 0.64,
+              "tokens": 318553,
+              "status_counts": {
+                "exact": 293,
+                "symbolic": 150,
+                "missing_or_invalid_box": 22,
+                "truncated": 30,
+                "unparseable": 5
+              },
+              "format_counts": {
+                "has_marker": 497,
+                "first_marker_in_first10pct": 458,
+                "first_marker_in_first20nonwhitechars": 455,
+                "first_box_incomplete": 1,
+                "first_box_placeholder": 315,
+                "first_box_nonplaceholder": 181,
+                "first_box_followed_by_at_least100_nonwhitechars": 466,
+                "leading_placeholder_box_with_body": 315,
+                "leading_nonplaceholder_box_with_body": 139,
+                "early10pct_nonplaceholder_box_with_body": 142,
+                "first_last_nonplaceholder_box_text_equal": 76,
+                "two_or_more_nonplaceholder_boxes": 120,
+                "no_nonplaceholder_complete_box": 30
+              },
+              "truncated": 30,
+              "predictions_sha256": "07d47489ad66fbf05495fd4ff49eb5fa8a4ae5bff333124186daa669baea9bad"
+            }
+          },
+          "seconds": 1426.9288606643677,
+          "contract_sha256": "d7c8d4ce194ab0fa1507a42c19455b1a7254080f5f4ebf9360bd8a6821d7ed96",
+          "no_PRM_at_evaluation": true,
+          "no_optimizer_updates": true
+        }
+      },
+      "1": {
+        "progress": {
+          "done": 1000,
+          "total": 1000,
+          "model": "A",
+          "seconds": 1448.8207759857178,
+          "pid": 4053217,
+          "unix": 1794185710.5307446
+        },
+        "summary": {
+          "passed": true,
+          "summary": {
+            "A": {
+              "n": 500,
+              "correct": 275.0,
+              "accuracy": 0.55,
+              "tokens": 374681,
+              "status_counts": {
+                "exact": 255,
+                "symbolic": 167,
+                "truncated": 57,
+                "missing_or_invalid_box": 15,
+                "unparseable": 6
+              },
+              "format_counts": {
+                "has_marker": 494,
+                "first_marker_in_first10pct": 472,
+                "first_marker_in_first20nonwhitechars": 470,
+                "first_box_incomplete": 0,
+                "first_box_placeholder": 164,
+                "first_box_nonplaceholder": 330,
+                "first_box_followed_by_at_least100_nonwhitechars": 474,
+                "leading_placeholder_box_with_body": 164,
+                "leading_nonplaceholder_box_with_body": 306,
+                "early10pct_nonplaceholder_box_with_body": 308,
+                "first_last_nonplaceholder_box_text_equal": 163,
+                "two_or_more_nonplaceholder_boxes": 256,
+                "no_nonplaceholder_complete_box": 24
+              },
+              "truncated": 57,
+              "predictions_sha256": "994e4d4f7d5792facf0b07e1b11e429980108043db8885f59be0a73f51089f3b"
+            },
+            "C_bounded": {
+              "n": 500,
+              "correct": 325.0,
+              "accuracy": 0.65,
+              "tokens": 315890,
+              "status_counts": {
+                "exact": 294,
+                "symbolic": 155,
+                "missing_or_invalid_box": 19,
+                "truncated": 27,
+                "unparseable": 5
+              },
+              "format_counts": {
+                "has_marker": 498,
+                "first_marker_in_first10pct": 459,
+                "first_marker_in_first20nonwhitechars": 457,
+                "first_box_incomplete": 1,
+                "first_box_placeholder": 316,
+                "first_box_nonplaceholder": 181,
+                "first_box_followed_by_at_least100_nonwhitechars": 465,
+                "leading_placeholder_box_with_body": 316,
+                "leading_nonplaceholder_box_with_body": 140,
+                "early10pct_nonplaceholder_box_with_body": 142,
+                "first_last_nonplaceholder_box_text_equal": 77,
+                "two_or_more_nonplaceholder_boxes": 124,
+                "no_nonplaceholder_complete_box": 28
+              },
+              "truncated": 27,
+              "predictions_sha256": "8483eda1c3306587af678817b55657a8060d52b9c94f267eb6c45d2bd1f0b2e9"
+            }
+          },
+          "seconds": 1449.432508945465,
+          "contract_sha256": "604718d863a830d8f05c5efb1ec8ebd42e13625f2f4c3d5d7f102864c3a8d556",
+          "no_PRM_at_evaluation": true,
+          "no_optimizer_updates": true
+        }
+      }
+    },
+    "nine": {},
+    "final": {},
+    "endpoints_math": {},
+    "endpoints_gsm": {}
+  },
+  "seed42_eligibility": null,
+  "comparison_passed": null,
+  "gpu": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 12872 MiB, 100 %\n",
+  "controller_log_tail": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py\", line 46, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py\", line 34, in main\n    for arm in ARMS:child('train_'+arm+'_432','train_arm.py',['--arm',arm,'--target','432'])\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py\", line 26, in child\n    if rc:raise RuntimeError(label+' failed; preserve evidence, no automatic retry')\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: train_C_bounded_432 failed; preserve evidence, no automatic retry\n",
+  "last_child_log_tail": "819579}\n{'loss': 0.0001, 'grad_norm': 0.030592503026127815, 'learning_rate': 5e-06, 'num_tokens': 8930667.0, 'completions/mean_length': 831.65625, 'completions/min_length': 240.0, 'completions/max_length': 2048.0, 'completions/clipped_ratio': 0.125, 'completions/mean_terminated_length': 657.8928833007812, 'completions/min_terminated_length': 240.0, 'completions/max_terminated_length': 1780.0, 'rewards/outcome_and_process/mean': 0.4434545636177063, 'rewards/outcome_and_process/std': 0.5573153495788574, 'reward': 0.4434545636177063, 'reward_std': 0.4404071867465973, 'frac_reward_zero_std': 0.0, 'kl': 0.002613393779938633, 'entropy': 0.3173976375255734, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.20823798627002288}\nINFO 11-09 16:29:03 [block_pool.py:292] Successfully reset prefix cache\nWARNING 11-09 16:29:03 [tokenizer.py:286] No tokenizer found in /path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/C_bounded/sampling_adapters/step_000364, using base model tokenizer instead. (Exception: <class 'transformers.models.sam.configuration_sam.SamConfig'>)\n{\"event\": \"update\", \"arm\": \"C_bounded\", \"step\": 365, \"target\": 432, \"tokens\": 7845984}\n{'loss': 0.0002, 'grad_norm': 0.041862357407808304, 'learning_rate': 5e-06, 'num_tokens': 8958896.0, 'completions/mean_length': 825.15625, 'completions/min_length': 152.0, 'completions/max_length': 2048.0, 'completions/clipped_ratio': 0.09375, 'completions/mean_terminated_length': 698.6551513671875, 'completions/min_terminated_length': 152.0, 'completions/max_terminated_length': 1935.0, 'rewards/outcome_and_process/mean': 0.5612105131149292, 'rewards/outcome_and_process/std': 0.542026937007904, 'reward': 0.5612105131149292, 'reward_std': 0.48444923758506775, 'frac_reward_zero_std': 0.0, 'kl': 0.0039299561894949875, 'entropy': 0.22922452038619667, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.20881006864988558}\nUsing the `WANDB_DISABLED` environment variable is deprecated and will be removed in v5. Use the --report_to flag to control the integrations used for logging result (for instance --report_to none).\nINFO 11-09 16:31:40 [block_pool.py:292] Successfully reset prefix cache\nWARNING 11-09 16:31:40 [tokenizer.py:286] No tokenizer found in /path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/C_bounded/sampling_adapters/step_000365, using base model tokenizer instead. (Exception: <class 'transformers.models.sam.configuration_sam.SamConfig'>)\n{\"event\": \"update\", \"arm\": \"C_bounded\", \"step\": 366, \"target\": 432, \"tokens\": 7864667}\n{'loss': 0.0001, 'grad_norm': 0.023489980027079582, 'learning_rate': 5e-06, 'num_tokens': 8979747.0, 'completions/mean_length': 583.84375, 'completions/min_length': 212.0, 'completions/max_length': 1257.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 583.84375, 'completions/min_terminated_length': 212.0, 'completions/max_terminated_length': 1257.0, 'rewards/outcome_and_process/mean': 0.9863957166671753, 'rewards/outcome_and_process/std': 0.3815684914588928, 'reward': 0.9863957166671753, 'reward_std': 0.2876982092857361, 'frac_reward_zero_std': 0.0, 'kl': 0.0031326638936661766, 'entropy': 0.2125274771824479, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.20938215102974828}\nINFO 11-09 16:33:24 [block_pool.py:292] Successfully reset prefix cache\nWARNING 11-09 16:33:24 [tokenizer.py:286] No tokenizer found in /path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/C_bounded/sampling_adapters/step_000366, using base model tokenizer instead. (Exception: <class 'transformers.models.sam.configuration_sam.SamConfig'>)\n{\"event\": \"update\", \"arm\": \"C_bounded\", \"step\": 367, \"target\": 432, \"tokens\": 7887364}\n{'loss': 0.0002, 'grad_norm': 0.035171180963516235, 'learning_rate': 5e-06, 'num_tokens': 9004628.0, 'completions/mean_length': 709.28125, 'completions/min_length': 152.0, 'completions/max_length': 2048.0, 'completions/clipped_ratio': 0.0625, 'completions/mean_terminated_length': 620.0333862304688, 'completions/min_terminated_length': 152.0, 'completions/max_terminated_length': 1651.0, 'rewards/outcome_and_process/mean': 0.5711974501609802, 'rewards/outcome_and_process/std': 0.5776618123054504, 'reward': 0.5711974501609802, 'reward_std': 0.39313197135925293, 'frac_reward_zero_std': 0.0, 'kl': 0.0037825374438398285, 'entropy': 0.4714694833382964, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.20995423340961097}\nINFO 11-09 16:35:58 [block_pool.py:292] Successfully reset prefix cache\nWARNING 11-09 16:35:58 [tokenizer.py:286] No tokenizer found in /path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/C_bounded/sampling_adapters/step_000367, using base model tokenizer instead. (Exception: <class 'transformers.models.sam.configuration_sam.SamConfig'>)\n{\"event\": \"update\", \"arm\": \"C_bounded\", \"step\": 368, \"target\": 432, \"tokens\": 7909112}\n{'loss': 0.0001, 'grad_norm': 0.03361259028315544, 'learning_rate': 5e-06, 'num_tokens': 9030280.0, 'completions/mean_length': 679.625, 'completions/min_length': 293.0, 'completions/max_length': 1678.0, 'completions/clipped_ratio': 0.0, 'completions/mean_terminated_length': 679.625, 'completions/min_terminated_length': 293.0, 'completions/max_terminated_length': 1678.0, 'rewards/outcome_and_process/mean': 0.6153373122215271, 'rewards/outcome_and_process/std': 0.5658984780311584, 'reward': 0.6153373122215271, 'reward_std': 0.4714285135269165, 'frac_reward_zero_std': 0.0, 'kl': 0.0015603178280798602, 'entropy': 0.18730732006952167, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.21052631578947367}\nINFO 11-09 16:38:10 [block_pool.py:292] Successfully reset prefix cache\nWARNING 11-09 16:38:10 [tokenizer.py:286] No tokenizer found in /path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/C_bounded/sampling_adapters/step_000368, using base model tokenizer instead. (Exception: <class 'transformers.models.sam.configuration_sam.SamConfig'>)\n"
+}

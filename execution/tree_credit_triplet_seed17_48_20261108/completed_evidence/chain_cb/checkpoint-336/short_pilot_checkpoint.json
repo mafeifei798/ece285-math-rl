@@ -1,0 +1,13 @@
+{
+  "arm": "chain_cb",
+  "global_step": 336,
+  "loss_rows": 1536,
+  "files_sha256": {
+    "adapter_model.safetensors": "96929a85f472fe099a4c5f2ca1277d2085309c86370ede10dda0ea765bec29f3",
+    "optimizer.pt": "95062f00db5f54d6baaa599cac98dd1a6d3cd2a7c938fd825025046ef7293fd0",
+    "scheduler.pt": "0070d40a1c3a96d11bd6ee55235c4bda5954b399cb3860cc99e7db5de8519713",
+    "rng_state.pth": "1c7fa5f13a99b810362a68dccd4dd32eabea926bfb63ae1667389efad1b1efcb",
+    "trainer_state.json": "315bbce8c4a636ae8e172e8ec266f82ffe3d115533739a8dddcaa99e260a6d91"
+  },
+  "source_release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78"
+}

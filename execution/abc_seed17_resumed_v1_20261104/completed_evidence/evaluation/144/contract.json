@@ -1,0 +1,45 @@
+{
+  "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba",
+  "step": 144,
+  "engine": "V1",
+  "seed": 285,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": -1,
+  "cap": 2048,
+  "max_model_len": 4096,
+  "batch_size": 64,
+  "max_num_seqs": 64,
+  "max_num_batched_tokens": 4096,
+  "gpu_memory_utilization": 0.15,
+  "max_loras": 1,
+  "max_cpu_loras": 3,
+  "max_lora_rank": 16,
+  "dtype": "bfloat16",
+  "enforce_eager": true,
+  "VLLM_ENABLE_V1_MULTIPROCESSING": "1",
+  "prompt": "unchanged prepared prompts",
+  "verifier": "reward-repair-v3-20261021",
+  "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+  "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "dataset_sha256": {
+    "validation": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053"
+  },
+  "adapters": {
+    "A": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/A/milestones/checkpoint-144",
+      "sha256": "df04b809a2b91b49b50ad7de2746a8ab67990fbf28e6e586bc2c13d0108f9be8",
+      "id": 1
+    },
+    "C_mix": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_mix/milestones/checkpoint-144",
+      "sha256": "910c77f610141654522f851e6266f69d0c243e78f7d9da4aa520e39010ea4b9d",
+      "id": 2
+    },
+    "C_bounded": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/milestones/checkpoint-144",
+      "sha256": "1b190895dabbe7fdf4455a50d2827eabb6df417401c399a4415cb79bf835b3a0",
+      "id": 3
+    }
+  }
+}

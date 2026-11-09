@@ -1,7 +1,7 @@
 {
   "status": "INDEPENDENT_V3_CPU_ACCEPTED",
   "source_release_sha256": "76c3f84797db5994570821ecc3190d012323f52d384d252d5bee4ea6e1d6c6a9",
-  "remote_source": "/srv/research/ece285_math_rl_project/experiments/process_signal_v3_20261029",
+  "remote_source": "/path/to/ece285_math_rl_project/experiments/process_signal_v3_20261029",
   "active_triplet_modified": false,
   "new_PAPO_training_started": false,
   "new_training_tokens_allocated": 0,

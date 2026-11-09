@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "algebra_and_mock_sampler_checks": 3083,
+  "all_256_binary_patterns_checked": true,
+  "historical_torch_control_checked": true,
+  "CUDA_initialized": false,
+  "scope": "CPU math and mocked sampler only; actual models checked separately."
+}

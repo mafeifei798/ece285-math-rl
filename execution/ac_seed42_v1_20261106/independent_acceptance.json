@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "prediction_rows_recounted": 4638,
+  "training_signal_rows_checked": 18432,
+  "same_question_order_and_updates": true,
+  "same_eval_protocol": true,
+  "prediction_hashes_and_recorded_adapter_hashes_verified": true,
+  "remote_frozen_verifier_regraded_final_rows": 3638,
+  "local_scope": "Recount, signal audits, receipt/hash verification and independent paired calculations. Verifier regrading is the separate saved remote CPU audit; no new mathematical labels.",
+  "signals": {
+    "A": {
+      "strata": {
+        "mixed": {
+          "groups": 899,
+          "rows": 7192,
+          "wrong": 3885,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        },
+        "all_wrong": {
+          "groups": 215,
+          "rows": 1720,
+          "wrong": 1720,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        },
+        "all_correct": {
+          "groups": 38,
+          "rows": 304,
+          "wrong": 0,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        }
+      },
+      "maximum_absolute_process_adjustment": 0.0,
+      "max_observed_process_GPU_GiB_since_resume": 21.21484375,
+      "common144_to288_training_hours": 1.0924782238403956
+    },
+    "C_bounded": {
+      "strata": {
+        "mixed": {
+          "groups": 907,
+          "rows": 7256,
+          "wrong": 3867,
+          "wrong_positive": 0,
+          "process_abs_sum": 134.83327777683735
+        },
+        "all_wrong": {
+          "groups": 206,
+          "rows": 1648,
+          "wrong": 1648,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        },
+        "all_correct": {
+          "groups": 39,
+          "rows": 312,
+          "wrong": 0,
+          "wrong_positive": 0,
+          "process_abs_sum": 11.3044942588931
+        }
+      },
+      "maximum_absolute_process_adjustment": 0.16970287263393402,
+      "max_observed_process_GPU_GiB_since_resume": 34.630859375,
+      "common144_to288_training_hours": 1.1785025511185327
+    }
+  },
+  "paired": {
+    "math500": {
+      "C_bounded minus A": {
+        "delta_pp": 2.0,
+        "wins": 35,
+        "losses": 25,
+        "CI95_pp": [
+          -1.0,
+          5.0
+        ],
+        "exact_mcnemar_p": 0.2450608330229457
+      }
+    },
+    "gsm8k": {
+      "C_bounded minus A": {
+        "delta_pp": 0.45489006823351025,
+        "wins": 91,
+        "losses": 85,
+        "CI95_pp": [
+          -1.5163002274450341,
+          2.427975739196333
+        ],
+        "exact_mcnemar_p": 0.7063708402623414
+      }
+    }
+  },
+  "error_status_decomposition": {
+    "math500": {
+      "C_bounded minus A": {
+        "wins_incorrect_side_status": {
+          "symbolic": 23,
+          "truncated": 9,
+          "missing_or_invalid_box": 2,
+          "unparseable": 1
+        },
+        "losses_incorrect_side_status": {
+          "truncated": 5,
+          "symbolic": 15,
+          "missing_or_invalid_box": 4,
+          "unparseable": 1
+        },
+        "both_finish_normally": {
+          "n": 440,
+          "net_correct_difference": 6.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      }
+    },
+    "gsm8k": {
+      "C_bounded minus A": {
+        "wins_incorrect_side_status": {
+          "symbolic": 71,
+          "missing_or_invalid_box": 4,
+          "truncated": 13,
+          "unparseable": 1,
+          "unit_symbolic": 2
+        },
+        "losses_incorrect_side_status": {
+          "symbolic": 40,
+          "missing_or_invalid_box": 33,
+          "truncated": 8,
+          "unparseable": 3,
+          "unit_symbolic": 1
+        },
+        "both_finish_normally": {
+          "n": 1267,
+          "net_correct_difference": 1.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      }
+    }
+  },
+  "new_training": false,
+  "new_generation": false,
+  "limitations": [
+    "One training seed; intervals cover questions only, not training-seed variation.",
+    "3M/6M labels are approximate token equivalents; all arms have identical prompt schedule and update count.",
+    "V1 sampling RNG restarts with the same TRL default seed0. Both arms share restart boundaries2/144 and prompt permutation seed42.",
+    "Short wrong output is a diagnostic, not proof of hacking; correct final answers do not certify valid derivations.",
+    "No test-based checkpoint, prompt, reward or coefficient selection.",
+    "Shared-GPU timing does not measure isolated algorithm efficiency.",
+    "Question-level intervals are unadjusted for multiple comparisons.",
+    "Known C PRM adaptation anchors have six conflicting-label input groups; kept fixed for this comparison.",
+    "No independent proof that answer-correct reasoning is valid; no cause attribution from advantage sign constraints alone."
+  ]
+}

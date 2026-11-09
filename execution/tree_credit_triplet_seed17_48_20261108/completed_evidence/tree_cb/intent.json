@@ -1,0 +1,8 @@
+{
+  "pid": 3640213,
+  "unix": 1794153150.8688705,
+  "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "start": 288,
+  "target": 336,
+  "release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78"
+}

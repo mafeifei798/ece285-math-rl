@@ -1,15 +1,15 @@
 {
   "pid": 3055076,
-  "run": "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v3",
-  "log": "/srv/research/ece285_math_rl_project/audits/PURE_integration_20261022_dispatch_v3/runner.log",
+  "run": "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v3",
+  "log": "/path/to/ece285_math_rl_project/audits/PURE_integration_20261022_dispatch_v3/runner.log",
   "command": [
-    "/srv/research/ece285_math_rl_project/.venv/bin/python",
-    "/srv/research/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py",
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "/path/to/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py",
     "--run",
-    "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v3",
+    "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v3",
     "--i-understand-no-updates",
     "--reuse-exact-rollouts",
-    "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v2/generated_exact_ids.jsonl"
+    "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v2/generated_exact_ids.jsonl"
   ],
   "launched": 1792733793.6962376,
   "gpu_snapshot": "0, 81920, 23710, 100\n1, 81920, 75219, 100\n",

@@ -1,0 +1,33 @@
+{
+  "generated_completion_tokens": 9321966,
+  "generated_completions": 13824,
+  "generated_groups": 1728,
+  "correct_completions": 5947,
+  "truncated_completions": 826,
+  "prm_input_tokens": 0,
+  "prm_padded_tokens": 0,
+  "prm_scored_completions": 0,
+  "prm_forward_seconds": 0.0,
+  "outcome_group_counts": {
+    "mixed": 1355,
+    "all_wrong": 312,
+    "all_correct": 61
+  },
+  "status_counts": {
+    "truncated": 826,
+    "symbolic": 6098,
+    "exact": 5341,
+    "missing_or_invalid_box": 1307,
+    "unparseable": 161,
+    "unit_symbolic": 44,
+    "unit_exact": 47
+  },
+  "loss_rows": 13824,
+  "loss_wrong_positive": 0,
+  "process_nonzero_rows": 0,
+  "process_abs_sum": 0.0,
+  "outcome_abs_sum": 8758.999463558197,
+  "positive_advantage_rows": 5459,
+  "empty_rows": 6,
+  "short_wrong_rows": 111
+}

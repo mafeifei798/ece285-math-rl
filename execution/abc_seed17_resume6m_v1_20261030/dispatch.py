@@ -4,7 +4,7 @@ import subprocess,json
 remote=r'''
 from pathlib import Path
 import os,json,time,fcntl,subprocess,hashlib
-r=Path('/srv/research/ece285_math_rl_project');s=r/'experiments/abc_seed17_resume6m_v1_20261030';p=r/'runs/ABC_seed17_resume6M_V1_20261030';a=r/'audits/ABC_seed17_resume6M_V1_20261030'
+r=Path('/path/to/ece285_math_rl_project');s=r/'experiments/abc_seed17_resume6m_v1_20261030';p=r/'runs/ABC_seed17_resume6M_V1_20261030';a=r/'audits/ABC_seed17_resume6M_V1_20261030'
 lock=(p/'dispatch.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
 assert json.loads((a/'preflight.json').read_text())['passed']
 assert not (p/'dispatch.json').exists() and not (p/'dispatch_intent.json').exists(),'Already attempted; inspect only'
@@ -18,6 +18,6 @@ d={'pid':child.pid,'unix':time.time(),'command':command,'run':str(p),'source':st
 with (p/'dispatch.json').open('x') as f:json.dump(d,f,indent=2)
 print(json.dumps(d))
 '''
-r=subprocess.run(SSH+['/srv/research/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,capture_output=True)
+r=subprocess.run(SSH+['/path/to/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,capture_output=True)
 assert r.returncode==0,(r.stdout,r.stderr)
 d=json.loads(r.stdout);(HERE/'dispatch.json').write_text(json.dumps(d,indent=2)+'\n');print(json.dumps(d,indent=2))

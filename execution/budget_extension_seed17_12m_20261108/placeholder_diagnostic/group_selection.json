@@ -1,0 +1,28 @@
+{
+  "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/rollouts.jsonl",
+  "sha256": "5401b22b05f30e4770bc3c4bae1bd1b15e05af79b195af1cee50d168f938873f",
+  "eligible_groups": 451,
+  "selected_offsets": [
+    408,
+    1088,
+    1672,
+    1896,
+    2784,
+    3344,
+    4360,
+    4552,
+    5024,
+    6040,
+    6304,
+    6680,
+    6792,
+    7264,
+    7640,
+    7696,
+    7984,
+    8368,
+    8648,
+    8768
+  ],
+  "selection": "targeted20 groups with>=2 correct, both placeholder/nonplaceholder among correct; not a population estimate"
+}

@@ -8,7 +8,7 @@ from pathlib import Path
 import json, hashlib, collections, datetime
 import numpy as np
 
-root=Path('/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2')
+root=Path('/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2')
 out={'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
      'read_only_remote':True,'model_calls':0,'optimizer_steps':0,'arms':{},'paired':{}}
 pred={}; contracts={}
@@ -60,9 +60,9 @@ print(json.dumps(out,ensure_ascii=False))
 '''
 
 if __name__ == '__main__':
-    command=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519',
+    command=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519',
        '-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
-       'researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -B -']
+       'USER@GPU_HOST','/path/to/ece285_math_rl_project/.venv/bin/python -B -']
     result=subprocess.run(command,input=REMOTE,text=True,capture_output=True,check=True)
     data=json.loads(result.stdout)
     path=Path(__file__).with_name('completed_pilot_independent_check.json')

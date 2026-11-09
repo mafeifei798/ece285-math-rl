@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "CPU_only": true,
+  "prediction_records_checked": 9095,
+  "original_inputs_unchanged": true,
+  "optimizer_updates": 0,
+  "model_or_PRM_calls": 0,
+  "files": {
+    "audit.py": "ef9575c13b616a9d948ff681a61104bd42d33889e973f91748809eb5cf5e283a",
+    "analysis_spec.json": "a88580118557dadf951b30570f5ca853ee5e399e24241917df2933003db892a9",
+    "results.json": "5899860a5449820782762914832f85f954d70aacd8ba25a2483561ca3d7b9e2b",
+    "REPORT.txt": "f28464a959fe0dc759ee1d3decf66b2647adf02e03926e62c8633c2ac081ad75"
+  }
+}

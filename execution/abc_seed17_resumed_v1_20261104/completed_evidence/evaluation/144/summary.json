@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "step": 144,
+  "summary": {
+    "A": {
+      "validation": {
+        "n": 500,
+        "correct": 272.0,
+        "accuracy": 0.544,
+        "generated_tokens": 373556,
+        "truncated": 58,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "941f1dcd7ab01eba7b6e71ebd09b99cf3e5fae1fb6ee4ef27462d224ad958c4c",
+        "inference_seconds": 809.9663360118866
+      }
+    },
+    "C_mix": {
+      "validation": {
+        "n": 500,
+        "correct": 282.0,
+        "accuracy": 0.564,
+        "generated_tokens": 366002,
+        "truncated": 55,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "7667368b03b7db94576b98e2fbfddbcdeb6663d5476444a731ac04dc184107a8",
+        "inference_seconds": 809.0555739402771
+      }
+    },
+    "C_bounded": {
+      "validation": {
+        "n": 500,
+        "correct": 278.0,
+        "accuracy": 0.556,
+        "generated_tokens": 363142,
+        "truncated": 48,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "051d50a1fea9fc6e60f2dbd4c2e870744fddfa2668266e6168b06d77da7b074f",
+        "inference_seconds": 811.4783434867859
+      }
+    }
+  },
+  "contract_sha256": "124897aa7f7a5aa31d774fbc064e7d225fa732d8984519935fcca68a76e7d2b4",
+  "seconds": 2470.8373081684113,
+  "new_training": false,
+  "new_PRM_calls": 0
+}

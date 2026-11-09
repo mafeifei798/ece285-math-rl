@@ -1,0 +1,292 @@
+{
+  "passed": true,
+  "prediction_rows_recounted": 6957,
+  "training_signal_rows_checked": 27648,
+  "same_question_order_and_updates": true,
+  "same_eval_protocol": true,
+  "prediction_hashes_and_recorded_adapter_hashes_verified": true,
+  "remote_frozen_verifier_regraded_final_rows": 5457,
+  "local_scope": "Recount, signal audits, receipt/hash verification and independent paired calculations. Verifier regrading is the separate saved remote CPU audit; no new mathematical labels.",
+  "signals": {
+    "A": {
+      "strata": {
+        "mixed": {
+          "groups": 906,
+          "rows": 7248,
+          "wrong": 3705,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        },
+        "all_wrong": {
+          "groups": 224,
+          "rows": 1792,
+          "wrong": 1792,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        },
+        "all_correct": {
+          "groups": 22,
+          "rows": 176,
+          "wrong": 0,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        }
+      },
+      "maximum_absolute_process_adjustment": 0.0,
+      "max_observed_process_GPU_GiB_since_resume": 25.615234375,
+      "common144_to288_training_hours": 3.1101024216413498
+    },
+    "C_mix": {
+      "strata": {
+        "mixed": {
+          "groups": 903,
+          "rows": 7224,
+          "wrong": 3645,
+          "wrong_positive": 2,
+          "process_abs_sum": 366.8579404056072
+        },
+        "all_wrong": {
+          "groups": 212,
+          "rows": 1696,
+          "wrong": 1696,
+          "wrong_positive": 524,
+          "process_abs_sum": 1186.0675588543527
+        },
+        "all_correct": {
+          "groups": 37,
+          "rows": 296,
+          "wrong": 0,
+          "wrong_positive": 0,
+          "process_abs_sum": 216.63591505016666
+        }
+      },
+      "maximum_absolute_process_adjustment": 2.4708218574523926,
+      "max_observed_process_GPU_GiB_since_resume": 34.7109375,
+      "common144_to288_training_hours": 3.674085365931193
+    },
+    "C_bounded": {
+      "strata": {
+        "mixed": {
+          "groups": 893,
+          "rows": 7144,
+          "wrong": 3552,
+          "wrong_positive": 0,
+          "process_abs_sum": 148.0479437559843
+        },
+        "all_wrong": {
+          "groups": 218,
+          "rows": 1744,
+          "wrong": 1744,
+          "wrong_positive": 0,
+          "process_abs_sum": 0.0
+        },
+        "all_correct": {
+          "groups": 41,
+          "rows": 328,
+          "wrong": 0,
+          "wrong_positive": 0,
+          "process_abs_sum": 13.431952370042382
+        }
+      },
+      "maximum_absolute_process_adjustment": 0.16875053942203522,
+      "max_observed_process_GPU_GiB_since_resume": 34.7109375,
+      "common144_to288_training_hours": 3.610227639277776
+    }
+  },
+  "paired": {
+    "math500": {
+      "C_mix minus A": {
+        "delta_pp": 1.0,
+        "wins": 37,
+        "losses": 32,
+        "CI95_pp": [
+          -2.1999999999999997,
+          4.2
+        ],
+        "exact_mcnemar_p": 0.630456491786798
+      },
+      "C_bounded minus A": {
+        "delta_pp": 4.8,
+        "wins": 54,
+        "losses": 30,
+        "CI95_pp": [
+          1.4000000000000001,
+          8.4
+        ],
+        "exact_mcnemar_p": 0.011634454119925829
+      },
+      "C_bounded minus C_mix": {
+        "delta_pp": 3.8,
+        "wins": 51,
+        "losses": 32,
+        "CI95_pp": [
+          0.39500000000000457,
+          7.3999999999999995
+        ],
+        "exact_mcnemar_p": 0.04752488925653181
+      }
+    },
+    "gsm8k": {
+      "C_mix minus A": {
+        "delta_pp": 0.8339651250947688,
+        "wins": 72,
+        "losses": 61,
+        "CI95_pp": [
+          -0.9097801364670205,
+          2.577710386656558
+        ],
+        "exact_mcnemar_p": 0.38595875434107846
+      },
+      "C_bounded minus A": {
+        "delta_pp": 2.501895375284306,
+        "wins": 111,
+        "losses": 78,
+        "CI95_pp": [
+          0.45489006823351025,
+          4.548900682335103
+        ],
+        "exact_mcnemar_p": 0.01968834560535602
+      },
+      "C_bounded minus C_mix": {
+        "delta_pp": 1.6679302501895377,
+        "wins": 100,
+        "losses": 78,
+        "CI95_pp": [
+          -0.3032600454890068,
+          3.639120545868082
+        ],
+        "exact_mcnemar_p": 0.11523195131755455
+      }
+    }
+  },
+  "error_status_decomposition": {
+    "math500": {
+      "C_mix minus A": {
+        "wins_incorrect_side_status": {
+          "missing_or_invalid_box": 4,
+          "symbolic": 23,
+          "truncated": 8,
+          "unparseable": 2
+        },
+        "losses_incorrect_side_status": {
+          "truncated": 7,
+          "missing_or_invalid_box": 7,
+          "symbolic": 18
+        },
+        "both_finish_normally": {
+          "n": 445,
+          "net_correct_difference": 4.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      },
+      "C_bounded minus A": {
+        "wins_incorrect_side_status": {
+          "truncated": 6,
+          "symbolic": 45,
+          "missing_or_invalid_box": 3
+        },
+        "losses_incorrect_side_status": {
+          "symbolic": 19,
+          "missing_or_invalid_box": 6,
+          "truncated": 5
+        },
+        "both_finish_normally": {
+          "n": 447,
+          "net_correct_difference": 23.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      },
+      "C_bounded minus C_mix": {
+        "wins_incorrect_side_status": {
+          "truncated": 9,
+          "symbolic": 37,
+          "missing_or_invalid_box": 5
+        },
+        "losses_incorrect_side_status": {
+          "missing_or_invalid_box": 7,
+          "symbolic": 20,
+          "truncated": 5
+        },
+        "both_finish_normally": {
+          "n": 439,
+          "net_correct_difference": 15.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      }
+    },
+    "gsm8k": {
+      "C_mix minus A": {
+        "wins_incorrect_side_status": {
+          "missing_or_invalid_box": 21,
+          "symbolic": 42,
+          "unparseable": 2,
+          "truncated": 7
+        },
+        "losses_incorrect_side_status": {
+          "symbolic": 46,
+          "unparseable": 3,
+          "truncated": 4,
+          "missing_or_invalid_box": 7,
+          "unit_symbolic": 1
+        },
+        "both_finish_normally": {
+          "n": 1271,
+          "net_correct_difference": 8.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      },
+      "C_bounded minus A": {
+        "wins_incorrect_side_status": {
+          "missing_or_invalid_box": 16,
+          "symbolic": 82,
+          "unparseable": 3,
+          "truncated": 10
+        },
+        "losses_incorrect_side_status": {
+          "missing_or_invalid_box": 36,
+          "symbolic": 40,
+          "unparseable": 1,
+          "unit_symbolic": 1
+        },
+        "both_finish_normally": {
+          "n": 1282,
+          "net_correct_difference": 23.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      },
+      "C_bounded minus C_mix": {
+        "wins_incorrect_side_status": {
+          "symbolic": 82,
+          "truncated": 9,
+          "missing_or_invalid_box": 6,
+          "unit_symbolic": 1,
+          "unparseable": 2
+        },
+        "losses_incorrect_side_status": {
+          "missing_or_invalid_box": 40,
+          "symbolic": 36,
+          "unparseable": 1,
+          "unit_symbolic": 1
+        },
+        "both_finish_normally": {
+          "n": 1285,
+          "net_correct_difference": 13.0,
+          "note": "Post-hoc conditional description; not an unbiased treatment-effect estimate."
+        }
+      }
+    }
+  },
+  "new_training": false,
+  "new_generation": false,
+  "limitations": [
+    "One training seed; intervals cover questions only, not training-seed variation.",
+    "3M/6M labels are approximate token equivalents; all arms have identical prompt schedule and update count.",
+    "V1 sampling RNG is recreated on process restart. User pause adds a restart at A step115 while C arms start at50; common prompt/update controls hold, but restart history is asymmetric.",
+    "Short wrong output is a diagnostic, not proof of hacking; correct final answers do not certify valid derivations.",
+    "No test-based checkpoint, prompt, reward or coefficient selection.",
+    "Shared-GPU timing does not measure isolated algorithm efficiency.",
+    "Question-level intervals are unadjusted for multiple comparisons.",
+    "Known C PRM adaptation anchors have six conflicting-label input groups; kept fixed for this comparison.",
+    "No independent proof that answer-correct reasoning is valid; no cause attribution from advantage sign constraints alone."
+  ]
+}

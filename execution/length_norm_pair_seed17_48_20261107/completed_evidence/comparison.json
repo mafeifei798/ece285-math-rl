@@ -1,0 +1,244 @@
+{
+  "passed": true,
+  "validation_summary": {
+    "source": {
+      "n": 500,
+      "correct": 319.0,
+      "accuracy": 0.638,
+      "tokens": 313068,
+      "truncated": 27,
+      "missing_or_invalid_box": 21,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.042,
+      "status_counts": {
+        "exact": 290,
+        "symbolic": 157,
+        "missing_or_invalid_box": 21,
+        "truncated": 27,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 729.764995040372,
+      "predictions_sha256": "cee4a66ba754bb95cb609bb48c86bcd81b6cd2b6cf68f5fae164f30c8a07b4d1"
+    },
+    "grpo": {
+      "n": 500,
+      "correct": 321.0,
+      "accuracy": 0.642,
+      "tokens": 317412,
+      "truncated": 28,
+      "missing_or_invalid_box": 18,
+      "truncation_rate": 0.056,
+      "missing_or_invalid_box_rate": 0.036,
+      "status_counts": {
+        "exact": 296,
+        "symbolic": 154,
+        "missing_or_invalid_box": 18,
+        "truncated": 28,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 701.8999666227028,
+      "predictions_sha256": "a313b00f1b0ffb9679215f9e029fae1eb3703ef987a14eb9a322d63b75f0145a"
+    },
+    "fixed_length": {
+      "n": 500,
+      "correct": 318.0,
+      "accuracy": 0.636,
+      "tokens": 334344,
+      "truncated": 39,
+      "missing_or_invalid_box": 18,
+      "truncation_rate": 0.078,
+      "missing_or_invalid_box_rate": 0.036,
+      "status_counts": {
+        "exact": 290,
+        "symbolic": 150,
+        "truncated": 39,
+        "missing_or_invalid_box": 18,
+        "unparseable": 3
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 731.8908186685294,
+      "predictions_sha256": "89648016cb62cd48c952a31f021e01e33d26c7aa5d7a5233e47fd235a80d6eed"
+    }
+  },
+  "training_costs": {
+    "grpo": {
+      "new_updates": 48,
+      "new_training_responses": 1536,
+      "new_generation_tokens": 1033644,
+      "PRM_input_tokens": 942291,
+      "PRM_seconds": 120.89426177646965,
+      "total_seconds": 5284.265957355499,
+      "peak_sampled_GPU_GiB": 41.126953125,
+      "protected_tokens_if_prefix": 54145,
+      "signal_statuses": {
+        "symbolic": 584,
+        "exact": 706,
+        "missing_or_invalid_box": 106,
+        "truncated": 97,
+        "unparseable": 16,
+        "unit_exact": 10,
+        "unit_symbolic": 17
+      },
+      "group_types": {
+        "mixed": 153,
+        "all_correct": 15,
+        "all_wrong": 24
+      },
+      "empty": 0,
+      "short_wrong": 2,
+      "truncated": 97,
+      "truncation_rate": 0.06315104166666667,
+      "missing_or_invalid_box": 106,
+      "missing_or_invalid_box_rate": 0.06901041666666667,
+      "loss_type": "grpo"
+    },
+    "fixed_length": {
+      "new_updates": 48,
+      "new_training_responses": 1536,
+      "new_generation_tokens": 990114,
+      "PRM_input_tokens": 966794,
+      "PRM_seconds": 122.4978944575414,
+      "total_seconds": 4970.02010846138,
+      "peak_sampled_GPU_GiB": 39.220703125,
+      "protected_tokens_if_prefix": 60644,
+      "signal_statuses": {
+        "symbolic": 595,
+        "exact": 716,
+        "missing_or_invalid_box": 114,
+        "unparseable": 22,
+        "truncated": 62,
+        "unit_symbolic": 18,
+        "unit_exact": 9
+      },
+      "group_types": {
+        "mixed": 149,
+        "all_wrong": 28,
+        "all_correct": 15
+      },
+      "empty": 0,
+      "short_wrong": 4,
+      "truncated": 62,
+      "truncation_rate": 0.040364583333333336,
+      "missing_or_invalid_box": 114,
+      "missing_or_invalid_box_rate": 0.07421875,
+      "loss_type": "dr_grpo"
+    }
+  },
+  "paired_comparisons": {
+    "fixed_length_minus_grpo": {
+      "difference_percentage_points": -0.6,
+      "paired_bootstrap_95CI_pp": [
+        -3.2,
+        2.0
+      ],
+      "wins": 22,
+      "losses": 25,
+      "both_correct": 296,
+      "both_wrong": 157,
+      "mcnemar_exact_two_sided_p": 0.7708669945730263,
+      "n": 500
+    },
+    "grpo_minus_source": {
+      "difference_percentage_points": 0.4,
+      "paired_bootstrap_95CI_pp": [
+        -2.1999999999999997,
+        2.8000000000000003
+      ],
+      "wins": 21,
+      "losses": 19,
+      "both_correct": 300,
+      "both_wrong": 160,
+      "mcnemar_exact_two_sided_p": 0.8746293123804207,
+      "n": 500
+    },
+    "fixed_length_minus_source": {
+      "difference_percentage_points": -0.2,
+      "paired_bootstrap_95CI_pp": [
+        -2.6,
+        2.1999999999999997
+      ],
+      "wins": 20,
+      "losses": 21,
+      "both_correct": 298,
+      "both_wrong": 161,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "n": 500
+    }
+  },
+  "main_conclusion": "inconclusive",
+  "same_question_order": true,
+  "same_update_count": true,
+  "same_settings_except_loss_type": true,
+  "same_bounded_advantage_formula": true,
+  "source_checkpoint_unchanged": true,
+  "old_protected_files_verified": 1535,
+  "additional_historical_files_verified": 2093,
+  "single_seed": 17,
+  "validation_previously_used": true,
+  "test_sets_used": false,
+  "no_update_gate": {
+    "passed": true,
+    "optimizer_steps": 0,
+    "same_actual_batch_for_both_reductions": true,
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+    "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+    "actor_base_unchanged": true,
+    "actor_adapter_unchanged": true,
+    "PRM_frozen": true,
+    "rows": 32,
+    "generated_tokens": 13462,
+    "generation_and_PRM_seconds": 74.19052868615836,
+    "loss_checks": [
+      {
+        "row": 18,
+        "length": 98,
+        "outcome": 1.0,
+        "expected_reduction_factor": 0.0478515625,
+        "observed_gradient_norm_ratio": 0.0475570563689374,
+        "results": {
+          "grpo": {
+            "loss": -0.012393763288855553,
+            "gradient_L2": 0.004742846349653719
+          },
+          "fixed_length": {
+            "loss": -0.0005930609186179936,
+            "gradient_L2": 0.00022555581119969092
+          }
+        },
+        "advantage_unchanged": true
+      },
+      {
+        "row": 29,
+        "length": 1368,
+        "outcome": 0.0,
+        "expected_reduction_factor": 0.66796875,
+        "observed_gradient_norm_ratio": 0.6671990367173145,
+        "results": {
+          "grpo": {
+            "loss": 0.016873683780431747,
+            "gradient_L2": 0.0033413370745090038
+          },
+          "fixed_length": {
+            "loss": 0.011271093040704727,
+            "gradient_L2": 0.002229336877460257
+          }
+        },
+        "advantage_unchanged": true
+      }
+    ],
+    "normalizations_after_scalar": 0,
+    "wrong_positive_tokens": 0,
+    "gradient_accumulation_steps": 32,
+    "max_completion_length": 2048,
+    "seconds": 113.63353037834167,
+    "max_torch_allocated_GiB": 31.614280700683594,
+    "claim": "Finite loss/backward with unchanged model parameters. No optimizer constructed, no training update."
+  },
+  "loss_change": "Per-response effective length denominator -> constant2048 only. Group reward std, PRM, KL and LR unchanged.",
+  "limits": "Question bootstrap does not measure training-seed variance. Small short-pilot differences can be inconclusive. No automatic budget expansion."
+}

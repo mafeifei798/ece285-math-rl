@@ -63,7 +63,7 @@ def event(stage, **kw):
 
 
 def assert_root():
-    assert ROOT.resolve().is_relative_to(Path('/srv/research')), ROOT
+    assert ROOT.resolve().is_relative_to(Path('/path/to/project_parent')), ROOT
     assert os.environ.get('CUDA_VISIBLE_DEVICES') == '1'
     assert CFG['actor_optimizer_updates'] == 0 and not CFG['automatic_RL_launch']
 

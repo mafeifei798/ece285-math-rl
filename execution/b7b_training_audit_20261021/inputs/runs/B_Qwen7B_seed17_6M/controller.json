@@ -8,7 +8,7 @@
   "heartbeat_unix": 1792637093.577337,
   "child_pid": null,
   "gpu": 0,
-  "log": "/srv/research/ece285_math_rl_project/logs/B_Qwen7B_seed17_6M_evaluation_6M.log",
+  "log": "/path/to/ece285_math_rl_project/logs/B_Qwen7B_seed17_6M_evaluation_6M.log",
   "last_child_exit_code": 0,
   "finished_unix": 1792637093.5773356,
   "preservation": {

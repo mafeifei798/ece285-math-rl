@@ -1,0 +1,668 @@
+{
+  "passed": true,
+  "seed": 17,
+  "global_step": 288,
+  "summary": {
+    "A": {
+      "math500": {
+        "n": 500,
+        "correct": 265.0,
+        "accuracy": 0.53,
+        "generated_tokens": 356993,
+        "truncated": 32,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "f937529b292edbcfc39bd5ee1fa0525666aa9c161f6acd5b339156e74312b71a",
+        "inference_seconds": 872.9686288833618
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 882.0,
+        "accuracy": 0.66868840030326,
+        "generated_tokens": 511458,
+        "truncated": 33,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "05c1a8707547722edd00f6f24bc2565995e28d6d320f3466b9aad498edbc2437",
+        "inference_seconds": 2017.862897157669
+      }
+    },
+    "C_mix": {
+      "math500": {
+        "n": 500,
+        "correct": 270.0,
+        "accuracy": 0.54,
+        "generated_tokens": 355220,
+        "truncated": 39,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "bd747d501d1f89b32b2ae12edbc990589086777eb1add7fc11acb05034c8bdcc",
+        "inference_seconds": 878.4089210033417
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 893.0,
+        "accuracy": 0.6770280515542078,
+        "generated_tokens": 499308,
+        "truncated": 28,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "f01eb457c6abb21ac2972e922d3f37c57b45d21f9091ed3a468afed4001d47e7",
+        "inference_seconds": 1920.058369398117
+      }
+    },
+    "C_bounded": {
+      "math500": {
+        "n": 500,
+        "correct": 289.0,
+        "accuracy": 0.578,
+        "generated_tokens": 335230,
+        "truncated": 34,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "7bd8fa1e0d162c9e99c5a25e90612427849a2f8ed3b85cdda2915d1f6f53f971",
+        "inference_seconds": 883.3014581203461
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 915.0,
+        "accuracy": 0.6937073540561031,
+        "generated_tokens": 451740,
+        "truncated": 10,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "2c9f1f078c766b1ca23247e34161423388ff27c7e92d6a056da0a2c7d106318b",
+        "inference_seconds": 1527.852046251297
+      }
+    }
+  },
+  "paired": {
+    "math500": {
+      "C_mix minus A": {
+        "delta_pp": 1.0,
+        "wins": 37,
+        "losses": 32,
+        "paired_question_bootstrap95_pp": [
+          -2.1999999999999997,
+          4.2
+        ],
+        "bootstrap_replicates": 10000,
+        "seed": 285,
+        "exact_mcnemar_two_sided_p": 0.630456491786798
+      },
+      "C_bounded minus A": {
+        "delta_pp": 4.8,
+        "wins": 54,
+        "losses": 30,
+        "paired_question_bootstrap95_pp": [
+          1.4000000000000001,
+          8.4
+        ],
+        "bootstrap_replicates": 10000,
+        "seed": 285,
+        "exact_mcnemar_two_sided_p": 0.011634454119925829
+      },
+      "C_bounded minus C_mix": {
+        "delta_pp": 3.8,
+        "wins": 51,
+        "losses": 32,
+        "paired_question_bootstrap95_pp": [
+          0.39500000000000457,
+          7.3999999999999995
+        ],
+        "bootstrap_replicates": 10000,
+        "seed": 285,
+        "exact_mcnemar_two_sided_p": 0.04752488925653181
+      }
+    },
+    "gsm8k": {
+      "C_mix minus A": {
+        "delta_pp": 0.8339651250947688,
+        "wins": 72,
+        "losses": 61,
+        "paired_question_bootstrap95_pp": [
+          -0.9097801364670205,
+          2.577710386656558
+        ],
+        "bootstrap_replicates": 10000,
+        "seed": 285,
+        "exact_mcnemar_two_sided_p": 0.38595875434107846
+      },
+      "C_bounded minus A": {
+        "delta_pp": 2.501895375284306,
+        "wins": 111,
+        "losses": 78,
+        "paired_question_bootstrap95_pp": [
+          0.45489006823351025,
+          4.548900682335103
+        ],
+        "bootstrap_replicates": 10000,
+        "seed": 285,
+        "exact_mcnemar_two_sided_p": 0.01968834560535602
+      },
+      "C_bounded minus C_mix": {
+        "delta_pp": 1.6679302501895377,
+        "wins": 100,
+        "losses": 78,
+        "paired_question_bootstrap95_pp": [
+          -0.3032600454890068,
+          3.639120545868082
+        ],
+        "bootstrap_replicates": 10000,
+        "seed": 285,
+        "exact_mcnemar_two_sided_p": 0.11523195131755455
+      }
+    }
+  },
+  "validation_144": {
+    "passed": true,
+    "step": 144,
+    "summary": {
+      "A": {
+        "validation": {
+          "n": 500,
+          "correct": 272.0,
+          "accuracy": 0.544,
+          "generated_tokens": 373556,
+          "truncated": 58,
+          "empty": 0,
+          "short_wrong": 0,
+          "predictions_sha256": "941f1dcd7ab01eba7b6e71ebd09b99cf3e5fae1fb6ee4ef27462d224ad958c4c",
+          "inference_seconds": 809.9663360118866
+        }
+      },
+      "C_mix": {
+        "validation": {
+          "n": 500,
+          "correct": 282.0,
+          "accuracy": 0.564,
+          "generated_tokens": 366002,
+          "truncated": 55,
+          "empty": 0,
+          "short_wrong": 0,
+          "predictions_sha256": "7667368b03b7db94576b98e2fbfddbcdeb6663d5476444a731ac04dc184107a8",
+          "inference_seconds": 809.0555739402771
+        }
+      },
+      "C_bounded": {
+        "validation": {
+          "n": 500,
+          "correct": 278.0,
+          "accuracy": 0.556,
+          "generated_tokens": 363142,
+          "truncated": 48,
+          "empty": 0,
+          "short_wrong": 0,
+          "predictions_sha256": "051d50a1fea9fc6e60f2dbd4c2e870744fddfa2668266e6168b06d77da7b074f",
+          "inference_seconds": 811.4783434867859
+        }
+      }
+    },
+    "contract_sha256": "124897aa7f7a5aa31d774fbc064e7d225fa732d8984519935fcca68a76e7d2b4",
+    "seconds": 2470.8373081684113,
+    "new_training": false,
+    "new_PRM_calls": 0
+  },
+  "accounting": {
+    "A": {
+      "generated_completion_tokens": 6155438,
+      "generated_completions": 9216,
+      "generated_groups": 1152,
+      "correct_completions": 3719,
+      "truncated_completions": 547,
+      "prm_input_tokens": 0,
+      "prm_padded_tokens": 0,
+      "prm_scored_completions": 0,
+      "prm_forward_seconds": 0.0,
+      "outcome_group_counts": {
+        "mixed": 906,
+        "all_wrong": 224,
+        "all_correct": 22
+      },
+      "status_counts": {
+        "truncated": 547,
+        "symbolic": 4179,
+        "exact": 3332,
+        "missing_or_invalid_box": 1022,
+        "unparseable": 99,
+        "unit_symbolic": 16,
+        "unit_exact": 21
+      },
+      "loss_rows": 9216,
+      "loss_wrong_positive": 0,
+      "process_nonzero_rows": 0,
+      "process_abs_sum": 0.0,
+      "outcome_abs_sum": 5901.771565914154,
+      "positive_advantage_rows": 3543,
+      "empty_rows": 6,
+      "short_wrong_rows": 99
+    },
+    "C_mix": {
+      "generated_completion_tokens": 6114465,
+      "generated_completions": 9216,
+      "generated_groups": 1152,
+      "correct_completions": 3875,
+      "truncated_completions": 524,
+      "prm_input_tokens": 5534256,
+      "prm_padded_tokens": 5534256,
+      "prm_scored_completions": 7663,
+      "prm_forward_seconds": 1680.6834829617292,
+      "outcome_group_counts": {
+        "mixed": 903,
+        "all_wrong": 212,
+        "all_correct": 37
+      },
+      "status_counts": {
+        "truncated": 524,
+        "symbolic": 4184,
+        "exact": 3444,
+        "missing_or_invalid_box": 910,
+        "unparseable": 119,
+        "unit_exact": 22,
+        "unit_symbolic": 13
+      },
+      "loss_rows": 9216,
+      "loss_wrong_positive": 526,
+      "process_nonzero_rows": 9208,
+      "process_abs_sum": 1769.5614123344421,
+      "outcome_abs_sum": 5910.978623867035,
+      "positive_advantage_rows": 4303,
+      "empty_rows": 5,
+      "short_wrong_rows": 116
+    },
+    "C_bounded": {
+      "generated_completion_tokens": 6167374,
+      "generated_completions": 9216,
+      "generated_groups": 1152,
+      "correct_completions": 3920,
+      "truncated_completions": 546,
+      "prm_input_tokens": 5544633,
+      "prm_padded_tokens": 5544633,
+      "prm_scored_completions": 7639,
+      "prm_forward_seconds": 2070.6050775479525,
+      "outcome_group_counts": {
+        "mixed": 893,
+        "all_wrong": 218,
+        "all_correct": 41
+      },
+      "status_counts": {
+        "truncated": 546,
+        "symbolic": 4087,
+        "exact": 3519,
+        "missing_or_invalid_box": 908,
+        "unparseable": 123,
+        "unit_symbolic": 9,
+        "unit_exact": 24
+      },
+      "loss_rows": 9216,
+      "loss_wrong_positive": 0,
+      "process_nonzero_rows": 3813,
+      "process_abs_sum": 161.4798964560032,
+      "outcome_abs_sum": 5845.489600658417,
+      "positive_advantage_rows": 3813,
+      "empty_rows": 4,
+      "short_wrong_rows": 104
+    }
+  },
+  "resumed_training_seconds_since_20261104": {
+    "A": 13240.206614732742,
+    "C_mix": 17713.668737649918,
+    "C_bounded": 22700.117034196854
+  },
+  "prior_cost_evidence": {
+    "A": {
+      "original_1M_result": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_result.json",
+      "previous_stage50_result": {
+        "passed": true,
+        "arm": "A",
+        "start_step": 48,
+        "global_step": 50,
+        "accounting": {
+          "generated_completion_tokens": 1033494,
+          "generated_completions": 1600,
+          "generated_groups": 200,
+          "correct_completions": 666,
+          "truncated_completions": 90,
+          "prm_input_tokens": 0,
+          "prm_padded_tokens": 0,
+          "prm_scored_completions": 0,
+          "prm_forward_seconds": 0.0,
+          "outcome_group_counts": {
+            "mixed": 160,
+            "all_wrong": 33,
+            "all_correct": 7
+          },
+          "status_counts": {
+            "truncated": 90,
+            "symbolic": 676,
+            "exact": 617,
+            "missing_or_invalid_box": 198,
+            "unparseable": 19
+          },
+          "loss_rows": 1600,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 0,
+          "process_abs_sum": 0.0,
+          "outcome_abs_sum": 1069.9852905273438,
+          "positive_advantage_rows": 610,
+          "empty_rows": 1,
+          "short_wrong_rows": 18
+        },
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
+        "adapter_sha256": "90d9797ddfc6001688861d124e62383f004baffe4bc481755fe580880fcff5c3",
+        "PRM_frozen": true,
+        "engine": "V1",
+        "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
+        "seconds": 149.07139921188354,
+        "peak_reserved_GiB": 18.3671875,
+        "metrics": {
+          "train_runtime": 91.6301,
+          "train_samples_per_second": 6984.606,
+          "train_steps_per_second": 218.269,
+          "total_flos": 0.0,
+          "train_loss": 4.081428050994873e-07
+        }
+      },
+      "previous_last_progress": {
+        "arm": "A",
+        "stage_target": 144,
+        "global_step": 115,
+        "generated_completion_tokens": 2390451,
+        "generated_completions": 3680,
+        "generated_groups": 460,
+        "correct_completions": 1452,
+        "truncated_completions": 210,
+        "prm_input_tokens": 0,
+        "prm_padded_tokens": 0,
+        "prm_scored_completions": 0,
+        "prm_forward_seconds": 0.0,
+        "outcome_group_counts": {
+          "mixed": 357,
+          "all_wrong": 93,
+          "all_correct": 10
+        },
+        "status_counts": {
+          "truncated": 210,
+          "symbolic": 1627,
+          "exact": 1334,
+          "missing_or_invalid_box": 462,
+          "unparseable": 39,
+          "unit_symbolic": 4,
+          "unit_exact": 4
+        },
+        "loss_rows": 3680,
+        "loss_wrong_positive": 0,
+        "process_nonzero_rows": 0,
+        "process_abs_sum": 0.0,
+        "outcome_abs_sum": 2316.6501727104187,
+        "positive_advantage_rows": 1372,
+        "empty_rows": 4,
+        "short_wrong_rows": 52,
+        "elapsed_seconds": 4787.113315049093,
+        "peak_allocated_GiB": 19.757328987121582,
+        "peak_reserved_GiB": 20.716796875,
+        "latest_generation": {
+          "step_before_update": 114,
+          "rows": 32,
+          "tokens": 22034,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.0,
+          "max_abs_process": 0.0,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/geometry/258",
+            "math/train/intermediate_algebra/1282",
+            "math/train/precalculus/456",
+            "math/train/counting_and_probability/108"
+          ]
+        },
+        "stop_reason": null,
+        "unix": 1793349771.3822873,
+        "pid": 3334407,
+        "engine": "V1"
+      },
+      "note": "Historical wall times are retained separately; resumed stage times do not include pre-pause work or idle days."
+    },
+    "C_mix": {
+      "original_1M_result": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_result.json",
+      "previous_stage50_result": {
+        "passed": true,
+        "arm": "C_mix",
+        "start_step": 48,
+        "global_step": 50,
+        "accounting": {
+          "generated_completion_tokens": 1034873,
+          "generated_completions": 1600,
+          "generated_groups": 200,
+          "correct_completions": 662,
+          "truncated_completions": 83,
+          "prm_input_tokens": 914237,
+          "prm_padded_tokens": 914237,
+          "prm_scored_completions": 1284,
+          "prm_forward_seconds": 195.3641937300563,
+          "outcome_group_counts": {
+            "mixed": 164,
+            "all_wrong": 33,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 83,
+            "symbolic": 681,
+            "exact": 603,
+            "missing_or_invalid_box": 216,
+            "unparseable": 17
+          },
+          "loss_rows": 1600,
+          "loss_wrong_positive": 89,
+          "process_nonzero_rows": 1600,
+          "process_abs_sum": 271.07601046562195,
+          "outcome_abs_sum": 1095.3731303215027,
+          "positive_advantage_rows": 743,
+          "empty_rows": 2,
+          "short_wrong_rows": 21
+        },
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
+        "adapter_sha256": "e2167ff479aa1a49a6f14533a2f9e7a66728f83bd626e09f58ee9d429da35dfb",
+        "PRM_frozen": true,
+        "engine": "V1",
+        "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
+        "seconds": 217.83704495429993,
+        "peak_reserved_GiB": 34.0390625,
+        "metrics": {
+          "train_runtime": 123.4613,
+          "train_samples_per_second": 5183.81,
+          "train_steps_per_second": 161.994,
+          "total_flos": 0.0,
+          "train_loss": 4.4232234358787536e-07
+        }
+      },
+      "previous_last_progress": {
+        "arm": "C_mix",
+        "stage_target": 50,
+        "global_step": 50,
+        "generated_completion_tokens": 1034873,
+        "generated_completions": 1600,
+        "generated_groups": 200,
+        "correct_completions": 662,
+        "truncated_completions": 83,
+        "prm_input_tokens": 914237,
+        "prm_padded_tokens": 914237,
+        "prm_scored_completions": 1284,
+        "prm_forward_seconds": 195.3641937300563,
+        "outcome_group_counts": {
+          "mixed": 164,
+          "all_wrong": 33,
+          "all_correct": 3
+        },
+        "status_counts": {
+          "truncated": 83,
+          "symbolic": 681,
+          "exact": 603,
+          "missing_or_invalid_box": 216,
+          "unparseable": 17
+        },
+        "loss_rows": 1600,
+        "loss_wrong_positive": 89,
+        "process_nonzero_rows": 1600,
+        "process_abs_sum": 271.07601046562195,
+        "outcome_abs_sum": 1095.3731303215027,
+        "positive_advantage_rows": 743,
+        "empty_rows": 2,
+        "short_wrong_rows": 21,
+        "elapsed_seconds": 125.26111601991579,
+        "peak_allocated_GiB": 33.022522926330566,
+        "peak_reserved_GiB": 34.0390625,
+        "latest_generation": {
+          "step_before_update": 49,
+          "rows": 32,
+          "tokens": 11146,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.0517711266875267,
+          "max_abs_process": 0.22095827758312225,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/geometry/44",
+            "math/train/algebra/441",
+            "math/train/precalculus/300",
+            "math/train/algebra/1702"
+          ]
+        },
+        "stop_reason": "common_update_target_reached",
+        "unix": 1793344673.677969,
+        "pid": 3323391,
+        "engine": "V1"
+      },
+      "note": "Historical wall times are retained separately; resumed stage times do not include pre-pause work or idle days."
+    },
+    "C_bounded": {
+      "original_1M_result": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_result.json",
+      "previous_stage50_result": {
+        "passed": true,
+        "arm": "C_bounded",
+        "start_step": 48,
+        "global_step": 50,
+        "accounting": {
+          "generated_completion_tokens": 1038895,
+          "generated_completions": 1600,
+          "generated_groups": 200,
+          "correct_completions": 657,
+          "truncated_completions": 102,
+          "prm_input_tokens": 908315,
+          "prm_padded_tokens": 908315,
+          "prm_scored_completions": 1305,
+          "prm_forward_seconds": 207.5570221375674,
+          "outcome_group_counts": {
+            "mixed": 160,
+            "all_wrong": 37,
+            "all_correct": 3
+          },
+          "status_counts": {
+            "truncated": 102,
+            "symbolic": 696,
+            "exact": 609,
+            "missing_or_invalid_box": 181,
+            "unparseable": 12
+          },
+          "loss_rows": 1600,
+          "loss_wrong_positive": 0,
+          "process_nonzero_rows": 637,
+          "process_abs_sum": 26.824664264917374,
+          "outcome_abs_sum": 1052.7255673408508,
+          "positive_advantage_rows": 651,
+          "empty_rows": 0,
+          "short_wrong_rows": 20
+        },
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
+        "adapter_sha256": "4426fad6b3e832906708f7bf593a8a5a489e91e0436e0041e9e427a28c55fc98",
+        "PRM_frozen": true,
+        "engine": "V1",
+        "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
+        "seconds": 210.3666729927063,
+        "peak_reserved_GiB": 34.0390625,
+        "metrics": {
+          "train_runtime": 116.9729,
+          "train_samples_per_second": 5471.354,
+          "train_steps_per_second": 170.98,
+          "total_flos": 0.0,
+          "train_loss": 4.772841930389404e-07
+        }
+      },
+      "previous_last_progress": {
+        "arm": "C_bounded",
+        "stage_target": 50,
+        "global_step": 50,
+        "generated_completion_tokens": 1038895,
+        "generated_completions": 1600,
+        "generated_groups": 200,
+        "correct_completions": 657,
+        "truncated_completions": 102,
+        "prm_input_tokens": 908315,
+        "prm_padded_tokens": 908315,
+        "prm_scored_completions": 1305,
+        "prm_forward_seconds": 207.5570221375674,
+        "outcome_group_counts": {
+          "mixed": 160,
+          "all_wrong": 37,
+          "all_correct": 3
+        },
+        "status_counts": {
+          "truncated": 102,
+          "symbolic": 696,
+          "exact": 609,
+          "missing_or_invalid_box": 181,
+          "unparseable": 12
+        },
+        "loss_rows": 1600,
+        "loss_wrong_positive": 0,
+        "process_nonzero_rows": 637,
+        "process_abs_sum": 26.824664264917374,
+        "outcome_abs_sum": 1052.7255673408508,
+        "positive_advantage_rows": 651,
+        "empty_rows": 0,
+        "short_wrong_rows": 20,
+        "elapsed_seconds": 119.20054784975946,
+        "peak_allocated_GiB": 33.02238941192627,
+        "peak_reserved_GiB": 34.0390625,
+        "latest_generation": {
+          "step_before_update": 49,
+          "rows": 32,
+          "tokens": 10227,
+          "wrong_positive": 0,
+          "mean_abs_process": 0.017796900123357773,
+          "max_abs_process": 0.10417014360427856,
+          "second_normalizations": 0,
+          "prompt_groups": [
+            "math/train/geometry/44",
+            "math/train/algebra/441",
+            "math/train/precalculus/300",
+            "math/train/algebra/1702"
+          ]
+        },
+        "stop_reason": "common_update_target_reached",
+        "unix": 1793344903.5046177,
+        "pid": 3329025,
+        "engine": "V1"
+      },
+      "note": "Historical wall times are retained separately; resumed stage times do not include pre-pause work or idle days."
+    }
+  },
+  "acceptance": {
+    "passed": true,
+    "step": 288,
+    "regraded": 5457,
+    "same_prompt_order_and_update_counts": true,
+    "raw_tokens_and_adapter_hashes_checked": true,
+    "protected_files_unchanged": 1535,
+    "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba"
+  },
+  "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba",
+  "limitations": [
+    "One training seed; intervals cover questions only, not training-seed variation.",
+    "3M/6M labels are approximate token equivalents; all arms have identical prompt schedule and update count.",
+    "V1 sampling RNG is recreated on process restart. User pause adds a restart at A step115 while C arms start at50; common prompt/update controls hold, but restart history is asymmetric.",
+    "Short wrong output is a diagnostic, not proof of hacking; correct final answers do not certify valid derivations.",
+    "No test-based checkpoint, prompt, reward or coefficient selection.",
+    "Shared-GPU timing does not measure isolated algorithm efficiency."
+  ],
+  "finished_unix": 1793926298.9133167
+}

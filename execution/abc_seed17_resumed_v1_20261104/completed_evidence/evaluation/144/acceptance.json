@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "step": 144,
+  "regraded": 1500,
+  "same_prompt_order_and_update_counts": true,
+  "raw_tokens_and_adapter_hashes_checked": true,
+  "protected_files_unchanged": 1535,
+  "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba"
+}

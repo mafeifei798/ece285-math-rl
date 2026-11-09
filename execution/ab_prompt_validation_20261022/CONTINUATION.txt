@@ -1,8 +1,8 @@
 ECE285 prompt comparison — new user authorization on2026-10-22, after the earlier09:00PT follow-through closed.
 AUTHORIZATION: Use the existing corrected A/B seed17 final checkpoints for a fixed2x2 prompt comparison on independent validation questions; preserve historical results, do not change grading rules, no training. No C/D, PRM scoring, new model, new seed, prompt search or expansion beyond the frozen3992 generations.
-LOCAL: /home/researcher/Desktop/python/ece285_math_rl_project
-REMOTE: /srv/research/ece285_math_rl_project
-SSH: ssh -p11032 -i /home/researcher/.ssh/research_server_ed25519 -oBatchMode=yes -oIdentitiesOnly=yes -oStrictHostKeyChecking=yes -oConnectTimeout=12 researcher@server.example.invalid
+LOCAL: /path/to/ece285_math_rl_project
+REMOTE: /path/to/ece285_math_rl_project
+SSH: ssh -p11032 -i /home/USER/.ssh/fym_125_76_110_84_ed25519 -oBatchMode=yes -oIdentitiesOnly=yes -oStrictHostKeyChecking=yes -oConnectTimeout=12 USER@GPU_HOST
 NEW CODE: experiments/ab_prompt_validation_20261022
 NEW RUN: runs/AB_prompt_validation_20261022
 LOCAL EVIDENCE: execution/ab_prompt_validation_20261022

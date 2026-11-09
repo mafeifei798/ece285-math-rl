@@ -1,0 +1,30 @@
+{
+  "generated_completion_tokens": 45960,
+  "generated_completions": 64,
+  "generated_groups": 8,
+  "correct_completions": 24,
+  "truncated_completions": 6,
+  "prm_input_tokens": 0,
+  "prm_padded_tokens": 0,
+  "prm_scored_completions": 0,
+  "prm_forward_seconds": 0.0,
+  "outcome_group_counts": {
+    "mixed": 6,
+    "all_wrong": 2
+  },
+  "status_counts": {
+    "exact": 24,
+    "symbolic": 22,
+    "missing_or_invalid_box": 5,
+    "unparseable": 7,
+    "truncated": 6
+  },
+  "loss_rows": 64,
+  "loss_wrong_positive": 0,
+  "process_nonzero_rows": 0,
+  "process_abs_sum": 0.0,
+  "outcome_abs_sum": 39.349103927612305,
+  "positive_advantage_rows": 24,
+  "empty_rows": 0,
+  "short_wrong_rows": 1
+}

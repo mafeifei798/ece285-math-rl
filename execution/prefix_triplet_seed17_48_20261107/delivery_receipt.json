@@ -1,0 +1,19 @@
+{
+  "html_table_column_counts": [
+    6,
+    6,
+    5,
+    3
+  ],
+  "links_checked": [
+    "completed_evidence/comparison.json",
+    "completion_verification.json",
+    "REPORT.txt"
+  ],
+  "sha256": {
+    "review.html": "197d5c0bf817d0135a8f9ed8ed1cfed10c47b8058a3462b410b6e23a0ae63dee",
+    "REPORT.txt": "cac17a6129784b77075e1c1c966a80b9fc2e29b854aec053eed0e0c37adad54c",
+    "completion_verification.json": "4b7f8df88cd572236516b0c485514869e71e58abfd08e298bd5d29db836b233c",
+    "completed_manifest.json": "3f670047e3fda9f774b0f0dbfb703fa5052a4cb75cd2d5572812df2673f3101d"
+  }
+}

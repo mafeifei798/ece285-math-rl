@@ -16,7 +16,7 @@ C_bounded: same frozen C PRM, audited correct-only bounded process advantage.
 The bounded rule is an algorithm change; C_mix remains the original mixed baseline.
 No D retention adaptation, extra seeds, 6M expansion, PRM updates, new prompts or verifier rules.
 
-All new remote code, logs, optimizer states and checkpoints live under /srv/research/ece285_math_rl_project.
+All new remote code, logs, optimizer states and checkpoints live under /path/to/ece285_math_rl_project.
 Old A/B/C/D source and result hashes are verified before/after each stage.
 All arms first execute2 real optimizer updates, save complete state, and continue from
 that checkpoint only after all smoke gates pass. These tokens count toward1M.

@@ -16,7 +16,7 @@
   ],
   "heartbeat_unix": 1792678106.319189,
   "child_pid": null,
-  "log": "/srv/research/ece285_math_rl_project/logs/ab_corrected_6m_seed17_20261022_eval_B.log",
+  "log": "/path/to/ece285_math_rl_project/logs/ab_corrected_6m_seed17_20261022_eval_B.log",
   "stage_started_unix": 1792675298.4031496,
   "last_child_exit_code": 0,
   "pilot_gate_passed": true,

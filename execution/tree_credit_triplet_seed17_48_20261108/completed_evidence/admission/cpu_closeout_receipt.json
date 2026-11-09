@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "GPU_started": false,
+  "receipts": [
+    {
+      "name": "independent_cpu_verify.py",
+      "sha256": "c46c95c5df4a7fc2dc78be4e457b14639c9ef76d184d34dc1f3a851c1d2d048a",
+      "started_unix": 1794163775.0651324,
+      "seconds": 5.098039865493774,
+      "exit_code": 0
+    },
+    {
+      "name": "mechanism_diagnostics.py",
+      "sha256": "c025010d1dc6853ebed1d1424acecd259517f7769b25689a951c266bda86cee6",
+      "started_unix": 1794163780.163548,
+      "seconds": 8.291069030761719,
+      "exit_code": 0
+    },
+    {
+      "name": "verifier_replay.py",
+      "sha256": "fbd438b93ad25b6fd198d5dec72fd474ecb59695f78505d33a1c8446ea33a905",
+      "started_unix": 1794163788.4549,
+      "seconds": 3.7269160747528076,
+      "exit_code": 0
+    }
+  ]
+}

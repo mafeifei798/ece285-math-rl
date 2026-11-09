@@ -1,0 +1,402 @@
+{
+  "passed": true,
+  "arm": "tree_cb",
+  "global_step": 336,
+  "additional_updates": 48,
+  "loss_rows": 1536,
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/Tree_credit_triplet_seed17_48_20261108/tree_cb/checkpoint-336",
+  "adapter_sha256": "e058ccfe2b1f334c923c987fa1cfbbc2bdf428fe6b1cce39515e82286b665bb3",
+  "source_checkpoint_unchanged": true,
+  "actor_base_unchanged": true,
+  "PRM_frozen": true,
+  "seconds": 7651.147801160812,
+  "progress": {
+    "arm": "tree_cb",
+    "global_step": 336,
+    "additional_updates": 48,
+    "target_step": 336,
+    "generated_tokens": 960821,
+    "expanded_leaf_tokens": 1026155,
+    "loss_rows": 1536,
+    "elapsed_seconds": 7619.867539121769,
+    "pid": 3640213,
+    "unix": 1794160796.3556328,
+    "latest_generation": {
+      "step_before_update": 335,
+      "question_ids": [
+        "math/train/number_theory/719",
+        "math/train/prealgebra/580",
+        "math/train/counting_and_probability/604",
+        "math/train/intermediate_algebra/28"
+      ],
+      "rows": 32,
+      "tokens": 24834,
+      "unique_generation_tokens": 24822,
+      "seconds": 140.36973858624697,
+      "correct": 20.0,
+      "empty": 0,
+      "short_wrong": 0,
+      "truncated": 0,
+      "answer_statuses": {
+        "exact": 19,
+        "symbolic": 5,
+        "unit_symbolic": 7,
+        "unit_exact": 1
+      },
+      "group_types": {
+        "mixed": 3,
+        "all_correct": 1
+      },
+      "PRM_cost": {
+        "prm_forward_seconds": 3.485362496227026,
+        "prm_input_tokens": 28996,
+        "prm_padded_tokens": 28996,
+        "prm_scored_completions": 32
+      },
+      "signal_checks": {
+        "wrong_positive_total_tokens": 0,
+        "wrong_positive_prm_tokens": 0,
+        "wrong_positive_exclusive_suffix_tokens": 0,
+        "post_construction_normalizations": 0,
+        "advantage_RMS": 0.6800314784049988,
+        "fallback_roots": 7,
+        "coefficients": [
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 1.0,
+            "process_bonus": 0.05434413552284241,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 1.0,
+            "process_bonus": -0.02121824622154236,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.0,
+            "process_bonus": -0.0,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 1.0,
+            "process_bonus": -0.08034644722938539,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 1.0,
+            "process_bonus": 0.04722055792808533,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.0,
+            "process_bonus": -0.0,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.0,
+            "process_bonus": -0.0,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.0,
+            "process_bonus": -0.0,
+            "root_value": 0.5,
+            "parent_value": 0.5,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -0.25,
+            "process_bonus": -0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -0.25,
+            "process_bonus": -0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -0.25,
+            "process_bonus": -0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -0.25,
+            "process_bonus": -0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -0.25,
+            "process_bonus": -0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -0.25,
+            "process_bonus": -0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -0.25,
+            "process_bonus": -0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 1.75,
+            "process_bonus": 0.0,
+            "root_value": 0.125,
+            "parent_value": 0.125,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.25,
+            "process_bonus": 0.05169177055358887,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.25,
+            "process_bonus": 0.03034580945968628,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.25,
+            "process_bonus": -0.08773172497749329,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.25,
+            "process_bonus": 0.02705594301223755,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 4,
+            "prefix_credit": -0.125,
+            "suffix_credit": 0.375,
+            "process_bonus": -0.11651816964149475,
+            "root_value": 0.875,
+            "parent_value": 0.75,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 4,
+            "prefix_credit": -0.125,
+            "suffix_credit": -1.625,
+            "process_bonus": -0.0,
+            "root_value": 0.875,
+            "parent_value": 0.75,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 4,
+            "prefix_credit": -0.125,
+            "suffix_credit": 0.375,
+            "process_bonus": 0.04247562885284424,
+            "root_value": 0.875,
+            "parent_value": 0.75,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 4,
+            "prefix_credit": -0.125,
+            "suffix_credit": 0.375,
+            "process_bonus": 0.05268074274063111,
+            "root_value": 0.875,
+            "parent_value": 0.75,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": -0.005811994243413211,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": -0.03228292809799314,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.030203221272677185,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": -0.023343073297291995,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0055324892513453966,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": -0.033486664015799764,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.003770620655268431,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.05541832847520709,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          }
+        ],
+        "max_path_tokens": 1748
+      },
+      "wrong_positive_tokens": 0,
+      "wrong_positive_prm_tokens": 0,
+      "post_scalar_normalizations": 0,
+      "arm": "tree_cb",
+      "loss_type": "grpo"
+    },
+    "peak_allocated_GiB": 35.43325662612915
+  },
+  "metrics": {
+    "train_runtime": 7619.4067,
+    "train_samples_per_second": 83.996,
+    "train_steps_per_second": 2.625,
+    "total_flos": 0.0,
+    "train_loss": 0.00012205401841518844
+  }
+}

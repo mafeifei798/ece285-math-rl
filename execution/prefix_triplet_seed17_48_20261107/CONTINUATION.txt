@@ -1,0 +1,64 @@
+Active user instruction: run the three short trials from the SAME existing
+C-bounded checkpoint, seed17 only, 48 additional updates per arm, same question
+order and runtime, preserve old results; evaluate validation only and compare
+prefix protection with uniformly weakening punishment. Continue until the
+finite controller/evaluation/analysis completes, then retrieve evidence and
+report the real results. No automation, no new seeds or budget extension.
+
+Local root: /path/to/ece285_math_rl_project
+Remote root: /path/to/ece285_math_rl_project
+SSH parameters are imported by inspect_remote.py from execution/ac_seed42_v1_20261106/inspect_remote.py.
+Use project .venv/bin/python remotely (system python lacks psutil).
+
+Read-only status command:
+python3 execution/prefix_triplet_seed17_48_20261107/inspect_remote.py
+It saves status.json and prints a compact snapshot. Check controller/PID/GPU,
+existing intents, raw generations, checkpoints and failures BEFORE any action.
+Never dispatch twice or restart from scratch. Do not interrupt a healthy job.
+
+Remote source: experiments/prefix_triplet_seed17_48_20261107
+Remote run: runs/Prefix_triplet_seed17_48_20261107
+Remote admission: audits/Prefix_triplet_seed17_48_20261107/preflight.json
+Controller original PID: 2722088 (must verify current PID/status).
+Initial release hash: c836587c30f1a12c50fac5a0c76dd1f6f66f4088a4b890739935c68496fa7767
+launch_receipt.json and controller.json provide actual evidence, not completion.
+
+Source checkpoint: runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288
+Adapter SHA256: a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073
+Arms: bounded, uniform, prefix. Each goes step288 ->336; four questions/update,
+eight responses/question. Existing optimizer, scheduler and torch RNG restored.
+vLLM new engine seed0 per arm; historical vLLM RNG is NOT bitwise resumed.
+First generated batch must match across arms before their first update.
+All use validated native LoRA/eager, cap2048, LR config5e-6, beta.04, rank16.
+Runtime is slower than old merged/CUDA-graph path. Report actual tokens and costs.
+Frozen C PRM unchanged. Existing validated modules under
+experiments/prefix_protection_20261107 must remain immutable.
+
+Controller: preflight -> bounded48 -> uniform48 -> prefix48 -> common validation
+of source plus three finals (500 questions each) -> CPU paired analysis.
+GPU0 UUID GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, A10080GB, idle at admission.
+It stops on failures; no automatic retries. Each stage checks GPU occupancy;
+if another job takes the GPU, preserve completed stages and inspect safely.
+Never modify rewards/loss/threshold/settings mid-run to obtain better numbers.
+
+At completion verify first-update receipts, 48 updates each, same prompt groups
+and settings, checkpoints and predictions hashes, unchanged source checkpoint,
+original protected files. Main comparison is prefix minus uniform, with paired
+bootstrap CI and discordant counts; single seed and reused validation are limits.
+Uniform vs bounded isolates weakened punishment. Test sets must not be accessed
+for method selection. No automatic expansion regardless of result.
+
+Save reports/evidence in this local execution directory. Current task should
+wait/monitor and follow through; do not set up an app automation.
+
+Current-turn monitor: local exec session15427 is running a read-only snapshot loop every30s. It saves status.json and emits changes every4 updates/stage. Use write_stdin to consume it; do not start a second monitor unnecessarily. First bounded optimizer-update gate passed (adapter/optimizer/scheduler/torch RNG exact). Actual TrainerState restore retains its saved checkpoint interval; final336 is explicitly saved. Initial observed training mean about106s/update; about5h overall is a rough estimate, not a deadline. Local collect_completed.py and render_report.py are prepared for when controller stage is complete; do not run collection early.
+
+FAULT UPDATE: bounded completed48 updates,1,021,112 tokens,5185.8s, final checkpoint336. uniform stopped BEFORE ANY UPDATE at an overstrict first-generation exact-token equality assertion. Its 32 real responses and raw_step_288.pt are saved; do NOT resample them. Local first_generation_investigation.json shows all model snapshot hashes identical, settings differ only output/log dirs, question order identical,21/32 token-identical and32/32 outcome-identical. No uniform checkpoint exists. Controller2722088 stopped; monitor15427 ended. Need safe recovery of cached uniform first on-policy batch, retaining old failure; do not rerun bounded. Post-generation RNG was not saved, so exact sampling RNG restoration after the fault cannot be claimed. User authorization is unchanged48 updates, seed17, no extra seeds.
+
+RECOVERY ADMITTED AND DISPATCHED: new controllerPID2802466, same run directory, recovery source experiments/prefix_triplet_recovery_20261107, release c773146de60e9bf573f1a4d65069e27068300f1ca54ae76813b2725624a88d84. Original files unchanged; uniform old failure retained failure_initial.json/failed_first_attempt. Cache firstbatch rawsha7c65e094... validated CPU; zero prior updates. Uniform cached firstbatch reused, no new generation for that batch; remaining47 on-policy. Exact post-fault sampling RNG unavailable, disclosed. Prefix normal48 uses same initial policy, config and order; first token identity now descriptive. Same loss/advantages modules unchanged. New controller skips bounded, then final validation and original analyzer; adds recovery/cost limitation to comparison.json. Never dispatch/retry again without inspecting existing state.
+
+Recovery uniform FIRST ACTUAL UPDATE PASSED: cached first batch consumed once, exact source adapter/optimizer/scheduler/Torch initial RNG restored; correct question order, loss input/fingerprint exact; no first-batch regeneration. Controller2802466 running, new read-only monitor exec session37021. Old session15427 ended. Continue monitoring37021/status.json to completion; do not stop at launch. Report renderer updated to disclose recovery and missing first-batch PRM timing.
+
+ALL TRAINING FINISHED: bounded/uniform/prefix each48 new updates,1536responses,global336; allsource/base/PRM guards passed. New tokens 1021112/1037167/1032677; train wall seconds 5185.817/4992.312/5194.415 (uniform additionally92.257 failed-attempt overhead recorded). Prefix finaladapterSHA0245e4f16f429e7adaf3b32383035d756e473e0a569cdbe415e73b530016ea49. Controller2802466 nowvalidation. Continue monitor37021; do not stop before validation+analysis+evidence collection. Local renderer now clarifies per-response coefficient matching, PRM proxy error position, coverage and validation-not-MATH500. No remote code changed.
+
+COMPLETE AND DELIVERED: Controller2802466 exited after all3x48 updates and4x500validation predictions. GPU empty atcollection.91evidence files(48,029,878bytes)retrieved andhashed;1,535original protectedfilesverifiedunchanged. Validation source317/50063.4%,bounded319/50063.8%,uniform327/50065.4%,prefix328/50065.6%. Primary prefix-uniform+0.2pp,CI[-2.0,+2.6],18wins17losses,p=1.0. No establishedlocation-specificbenefit; no budget expansion. completion_verification.json confirms matchingquestion/updatecounts,wrong-positive0,extra-normalizations0;prefixonebytealignmentfallbackleftunchanged. Fourqualitativecases included,notblindprocessaudit. Report:review.html andREPORT.txt;delivery_receipt.json hashes. localmonitor37021 finished;collector84926finished. No moreactivejobs orautomations created. Do notreruncompletedexperiments.

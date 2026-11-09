@@ -8,7 +8,7 @@ max completion2048, saved GRPOConfig and initial seed17 are retained.
 Only numerical checking uses the already-tested same-device audit; actual TRL advantages are untouched.
 Semantic v2 repairs (percent verifier, CRLF normalization, data quarantine) are OFF in this matched comparison.
 
-Remote project: /srv/research/ece285_math_rl_project
+Remote project: /path/to/ece285_math_rl_project
 Formal run: runs/B_Qwen7B_seed17_6M
 Smoke run: runs/pilot_B_Qwen7B_seed17_6M (2 optimizer steps; extra cost recorded)
 Controller: experiments/b_qwen7b_6m_20261021/launch.py

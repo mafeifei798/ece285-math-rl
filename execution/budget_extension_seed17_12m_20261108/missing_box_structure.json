@@ -1,0 +1,18 @@
+{
+  "A": {
+    "missing_or_invalid_box": 83,
+    "first_box_is_placeholder": 83,
+    "no_nonplaceholder_complete_box": 83,
+    "source_sha256": "05c1a8707547722edd00f6f24bc2565995e28d6d320f3466b9aad498edbc2437",
+    "note": "Fixed-rule format failures; mathematical correctness without a valid box not established.",
+    "placeholder_start_within20_nonwhite_prefix_chars": 83
+  },
+  "C_bounded": {
+    "missing_or_invalid_box": 123,
+    "first_box_is_placeholder": 122,
+    "no_nonplaceholder_complete_box": 123,
+    "source_sha256": "2c9f1f078c766b1ca23247e34161423388ff27c7e92d6a056da0a2c7d106318b",
+    "note": "Fixed-rule format failures; mathematical correctness without a valid box not established.",
+    "placeholder_start_within20_nonwhite_prefix_chars": 122
+  }
+}

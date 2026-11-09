@@ -54,7 +54,7 @@
     "train_loss": 4.000649677696596e-05
   },
   "finished_unix": 1792672594.5406113,
-  "checkpoint": "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
   "checkpoint_sha256": {
     "completion_accounting.json": "b4b7ae8aaecfe0279cae6b8252ea11006450d918b32b75377cde67c4aad0c5a2",
     "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",

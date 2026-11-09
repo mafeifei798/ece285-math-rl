@@ -1,0 +1,22 @@
+{
+  "pid": 3466405,
+  "create_time": 1794139625.5,
+  "unix": 1794139625.983511,
+  "command": [
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/controller.py"
+  ],
+  "release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78",
+  "authorized_arms": [
+    "chain_cb",
+    "tree_vr",
+    "tree_cb"
+  ],
+  "updates_per_arm": 48,
+  "seed": 17,
+  "zero_update_gate_required": true,
+  "automatic_expansion": false,
+  "header_receipt_sha256": "7610da3c7376ccc15a81c56bd52f459277c1e3d4b603f6a1cce216c4a92c9d4d"
+}

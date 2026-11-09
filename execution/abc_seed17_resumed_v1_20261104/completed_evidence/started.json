@@ -1,0 +1,70 @@
+{
+  "pid": 3061487,
+  "create_time": 1793861776.62,
+  "unix": 1793861777.232082,
+  "deadline_unix": 1794034577.2312095,
+  "protocol": {
+    "authorization": "User explicitly resumed paused project on2026-11-04; same seed17 arms, reward/loss, common144/288 targets and evaluation protocol; no extra budget",
+    "arms": [
+      "A",
+      "C_mix",
+      "C_bounded"
+    ],
+    "seed": 17,
+    "origin_updates": 48,
+    "resume_acceptance_updates": 50,
+    "validation_updates": 144,
+    "final_updates": 288,
+    "group_size": 8,
+    "questions_per_update": 4,
+    "generated_rows_per_update": 32,
+    "approx_tokens_validation": 3000000,
+    "approx_tokens_final": 6000000,
+    "budget_rule": "Common update counts and prompt schedule are primary. 3M/6M are approximate labels; actual emitted tokens reported separately. No additional seed or adaptive extension.",
+    "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+    "VLLM_USE_V1": "1",
+    "VLLM_ENABLE_V1_MULTIPROCESSING": "1",
+    "learning_rate": 5e-06,
+    "beta": 0.04,
+    "temperature": 1.0,
+    "max_completion_length": 2048,
+    "coefficient": 0.2,
+    "gpu": 0,
+    "sharing_authorized": true,
+    "restart_boundaries": {
+      "A": [
+        48,
+        50,
+        115,
+        144,
+        288
+      ],
+      "C_mix": [
+        48,
+        50,
+        144,
+        288
+      ],
+      "C_bounded": [
+        48,
+        50,
+        144,
+        288
+      ]
+    },
+    "resume_limitation": "Optimizer/adapter/scheduler/CPU+CUDA RNG/dataset skip restored exactly; vLLM sampling RNG is recreated on restart. User pause introduced extra A115 restart; no claim of identical uninterrupted sampling or fully matched restart history.",
+    "reward_loss_changed": false,
+    "new_PRM_adaptation": false,
+    "extra_seeds": false,
+    "maximum_pipeline_hours": 48,
+    "resume_from_user_pause": true,
+    "start_steps": {
+      "A": 115,
+      "C_mix": 50,
+      "C_bounded": 50
+    },
+    "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+    "gpu_reindexed": true
+  },
+  "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba"
+}

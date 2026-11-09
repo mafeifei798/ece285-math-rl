@@ -1,0 +1,285 @@
+{
+  "source_comparison_sha256": "0cd5d6ee0917dcd657119c0ac24e00f1b467920d300a89e256b1a81005b08ba7",
+  "primary_uniform_minus_bounded": {
+    "difference_percentage_points": 1.6,
+    "paired_bootstrap_95CI_pp": [
+      -1.0,
+      4.2
+    ],
+    "wins": 27,
+    "losses": 19,
+    "both_correct": 300,
+    "both_wrong": 154,
+    "mcnemar_exact_two_sided_p": 0.3019956131896606,
+    "n": 500
+  },
+  "descriptive_discordance_decomposition": [
+    {
+      "loser_status": "symbolic",
+      "uniform_wins": 19,
+      "uniform_losses": 16,
+      "net_correct": 3
+    },
+    {
+      "loser_status": "truncated",
+      "uniform_wins": 7,
+      "uniform_losses": 2,
+      "net_correct": 5
+    },
+    {
+      "loser_status": "missing_or_invalid_box",
+      "uniform_wins": 1,
+      "uniform_losses": 1,
+      "net_correct": 0
+    }
+  ],
+  "caution": "Post-treatment failure-type decomposition is descriptive, not causal. Symbolic status does not certify valid reasoning.",
+  "intervention": {
+    "eligible_responses": 209,
+    "total_responses": 1536,
+    "wrong_responses": 740,
+    "mean_negative_multiplier_on_eligible": 0.6372984559195533,
+    "median_negative_multiplier_on_eligible": 0.6959619952494062,
+    "still_uses_PRM_error_position": true,
+    "not_global_constant_scaling_of_all_wrong_answers": true
+  },
+  "cost_extrapolation": {
+    "two_48_update_arms_hours": 2.8528849375247955,
+    "three_500_question_validation_models_hours": 0.6270891190509105,
+    "caution": "Estimate from completed run, not a shared-GPU runtime guarantee."
+  },
+  "decision": "Keep C-bounded as project mainline. Uniform is a follow-up candidate, not confirmed. If extra budget is approved, prefer one paired seed42 48-update check from its existing C-bounded checkpoint over extending seed17. No new training launched.",
+  "cases": [
+    {
+      "problem_id": "math/train/precalculus/97",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/815",
+      "winner": "uniform",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/number_theory/843",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/655",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/precalculus/687",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/449",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/393",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/499",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/prealgebra/409",
+      "winner": "uniform",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/number_theory/315",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/prealgebra/1197",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/1499",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/346",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/1003",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/number_theory/658",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/geometry/807",
+      "winner": "uniform",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/152",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/precalculus/406",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/317",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/485",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/geometry/62",
+      "winner": "bounded",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/geometry/601",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/prealgebra/804",
+      "winner": "bounded",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/542",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/geometry/613",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/459",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/precalculus/508",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/number_theory/258",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/precalculus/142",
+      "winner": "uniform",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/precalculus/34",
+      "winner": "uniform",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/562",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/1184",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/549",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/1095",
+      "winner": "uniform",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/number_theory/405",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/1009",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/number_theory/170",
+      "winner": "uniform",
+      "loser_status": "missing_or_invalid_box"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/712",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/intermediate_algebra/917",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/number_theory/428",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/prealgebra/546",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/algebra/164",
+      "winner": "uniform",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/counting_and_probability/140",
+      "winner": "bounded",
+      "loser_status": "missing_or_invalid_box"
+    },
+    {
+      "problem_id": "math/train/precalculus/743",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    },
+    {
+      "problem_id": "math/train/precalculus/502",
+      "winner": "uniform",
+      "loser_status": "truncated"
+    },
+    {
+      "problem_id": "math/train/precalculus/692",
+      "winner": "bounded",
+      "loser_status": "symbolic"
+    }
+  ],
+  "new_training_started": false
+}

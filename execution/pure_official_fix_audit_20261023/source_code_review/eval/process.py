@@ -1,7 +1,7 @@
 import json
 # from utils import set_seed, load_jsonl, save_jsonl, construct_prompt
 from tqdm import tqdm
-input_data_path = "/home/researcher/Desktop/ppo-long-cot/math-eval/new_data/math_level1to5_data.json"
+input_data_path = "/Users/bytedance/Desktop/ppo-long-cot/math-eval/new_data/math_level1to5_data.json"
 # from parser import *
 from utils import PROMPT_TEMPLATES
 

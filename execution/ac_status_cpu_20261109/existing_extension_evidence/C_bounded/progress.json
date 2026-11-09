@@ -1,0 +1,59 @@
+{
+  "arm": "C_bounded",
+  "global_step": 368,
+  "stage_target": 432,
+  "stage_start": 288,
+  "stage_new_updates": 80,
+  "target_total_updates": 576,
+  "accounting": {
+    "generated_completion_tokens": 7909112,
+    "generated_completions": 11776,
+    "generated_groups": 1472,
+    "correct_completions": 5239,
+    "truncated_completions": 691,
+    "prm_input_tokens": 7176762,
+    "prm_padded_tokens": 7176762,
+    "prm_scored_completions": 9876,
+    "prm_forward_seconds": 2608.836422340013,
+    "outcome_group_counts": {
+      "mixed": 1141,
+      "all_wrong": 262,
+      "all_correct": 69
+    },
+    "status_counts": {
+      "truncated": 691,
+      "symbolic": 5092,
+      "exact": 4702,
+      "missing_or_invalid_box": 1059,
+      "unparseable": 150,
+      "unit_symbolic": 29,
+      "unit_exact": 53
+    },
+    "loss_rows": 11776,
+    "loss_wrong_positive": 0,
+    "process_nonzero_rows": 5105,
+    "process_abs_sum": 208.59461569786072,
+    "outcome_abs_sum": 7440.007999420166,
+    "positive_advantage_rows": 5059,
+    "empty_rows": 4,
+    "short_wrong_rows": 109
+  },
+  "seconds": 11332.036766958423,
+  "unix": 1794213489.8862524,
+  "pid": 770050,
+  "latest_generation": {
+    "step_before_update": 367,
+    "rows": 32,
+    "tokens": 21748,
+    "wrong_positive": 0,
+    "mean_abs_process": 0.009341324679553509,
+    "max_abs_process": 0.13183096051216125,
+    "second_normalizations": 0,
+    "prompt_groups": [
+      "math/train/prealgebra/717",
+      "math/train/precalculus/553",
+      "math/train/geometry/674",
+      "math/train/prealgebra/815"
+    ]
+  }
+}

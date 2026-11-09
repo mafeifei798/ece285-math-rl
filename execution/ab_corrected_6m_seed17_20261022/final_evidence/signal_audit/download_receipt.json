@@ -1,5 +1,5 @@
 {
-  "remote_directory": "/srv/research/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/signal_audit_final_20261022T141800Z",
+  "remote_directory": "/path/to/ece285_math_rl_project/audits/ab_corrected_postprocessing_20261022/signal_audit_final_20261022T141800Z",
   "files": {
     "analysis.json": "6055698d9bbc7b035110229b65a97f621b90834d3f81224af3841e0e5ef53b8b",
     "stdout.log": "b7907b099c5b3bb5a715cfdd2406187d3ae32bf022ae5d51e03d5bdb55a3a10c",

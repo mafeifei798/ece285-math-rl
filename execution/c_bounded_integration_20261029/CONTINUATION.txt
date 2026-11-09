@@ -1,6 +1,6 @@
 C bounded correct-only process advantage integration — authorized2026-10-29
 
-Remote root MUST be /srv/research/ece285_math_rl_project.
+Remote root MUST be /path/to/ece285_math_rl_project.
 Source experiments/c_bounded_integration_20261029; run runs/C_bounded_no_update_20261029.
 Dispatch audits/C_bounded_integration_20261029_dispatch/dispatch.json and runner.log.
 Read dispatch/PID/status/result before intervention. No duplicate dispatch or

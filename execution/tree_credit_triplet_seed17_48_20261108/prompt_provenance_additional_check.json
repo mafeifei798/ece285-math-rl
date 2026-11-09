@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "scope": "Actual no-update tree32 HF prompt IDs match sampled vLLM prompt IDs including fallback roots",
+  "rows": 32,
+  "GPU_used": false
+}

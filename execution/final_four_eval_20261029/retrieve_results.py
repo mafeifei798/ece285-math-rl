@@ -2,16 +2,16 @@
 from pathlib import Path
 import subprocess,json,tarfile,shutil,hashlib
 HERE=Path(__file__).resolve().parent
-SSH=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','researcher@server.example.invalid']
+SSH=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','USER@GPU_HOST']
 REMOTE=r'''
 from pathlib import Path
 import json
-r=Path('/srv/research/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029')
+r=Path('/path/to/ece285_math_rl_project/runs/Final_four_eval_seed17_1M_20261029')
 assert json.loads((r/'controller.json').read_text())['stage']=='complete'
 assert json.loads((r/'acceptance.json').read_text())['passed']
 print('READY')
 '''
-r=subprocess.run(SSH+['/srv/research/ece285_math_rl_project/.venv/bin/python -B -'],input=REMOTE,text=True,capture_output=True,check=True)
+r=subprocess.run(SSH+['/path/to/ece285_math_rl_project/.venv/bin/python -B -'],input=REMOTE,text=True,capture_output=True,check=True)
 assert r.stdout.strip()=='READY'
 archive=HERE/'completed_evidence.tar.gz';assert not archive.exists(),'Preserve prior downloaded evidence'
 paths=['experiments/final_four_eval_20261029','audits/Final_four_eval_seed17_1M_20261029',
@@ -26,7 +26,7 @@ for arm in ['A','C_mix','C_bounded']:
   suffix='final_adapter/'+filename if filename.startswith('adapter_') else filename
   paths.append('runs/C_bounded_triplet_seed17_1M_20261029_v2/'+arm+'/'+suffix)
 with archive.open('wb') as f:
- r=subprocess.run(SSH+['tar -C /srv/research/ece285_math_rl_project -czf - '+' '.join(paths)],stdout=f,stderr=subprocess.PIPE)
+ r=subprocess.run(SSH+['tar -C /path/to/ece285_math_rl_project -czf - '+' '.join(paths)],stdout=f,stderr=subprocess.PIPE)
 assert r.returncode==0,r.stderr.decode(errors='replace')
 dest=HERE/'evidence';dest.mkdir(exist_ok=False)
 with tarfile.open(archive,'r:gz') as tf:

@@ -1,0 +1,50 @@
+{
+  "sources": {
+    "qwen3_report": {
+      "url": "https://arxiv.org/html/2505.09388v1",
+      "finding": "Uses off-policy response distillation followed by on-policy logit distillation; its approximately tenfold cost comparison is Qwen3-8B under its own setup, not a cost forecast for this project."
+    },
+    "sequential_paper": {
+      "url": "https://arxiv.org/html/2609.04108v1",
+      "finding": "Supports OPD followed by RL as an established baseline; Qwen3-1.7B-Base and Qwen3-8B, DeepMath, different contexts and budgets."
+    },
+    "compatibility_paper": {
+      "url": "https://arxiv.org/html/2609.31900v1",
+      "finding": "Teacher-student compatibility matters; stronger RL initialization can regress under subsequent OPD, so a stronger teacher or smaller KL is not sufficient."
+    },
+    "lora_study": {
+      "url": "https://thinkingmachines.ai/blog/lora/",
+      "finding": "Observed roughly tenfold LoRA-to-full-finetuning optimal LR ratio in its experiments; does not imply multiplying the current project's existing LoRA LR by ten."
+    },
+    "tml_opd": {
+      "url": "https://thinkingmachines.ai/blog/on-policy-distillation/",
+      "finding": "Sampled-token teacher minus old-student log probabilities; immediate token signal with discount factor zero."
+    },
+    "qwen_official": {
+      "url": "https://github.com/QwenLM/Qwen2.5-Math",
+      "blob_sha": "dd199775f19b71e80d07daf57825b8be302d44f1",
+      "finding": "Official CoT chat rendering and publicly released 1.5B/7B math instruct models."
+    },
+    "tml_code": {
+      "url": "https://github.com/thinking-machines-lab/tinker-cookbook/blob/main/tinker_cookbook/distillation/train_on_policy.py",
+      "blob_sha": "4365139901f6bcede8703e1b3cd53719b7e80e7c",
+      "source_read": true
+    },
+    "trl_gkd_v0231": {
+      "url": "https://github.com/huggingface/trl/blob/v0.23.1/trl/trainer/gkd_trainer.py",
+      "blob_sha": "0db55700df97f9ace005cbbe59bfe251d2302ae3",
+      "source_read": true
+    },
+    "sequential_readme": {
+      "url": "https://github.com/StringNLPLAB/opd-rlvr/blob/main/README.md",
+      "blob_sha": "5db8a664548e10ae63f66f9b963e8620a2c25ebd",
+      "source_read": true
+    },
+    "sequential_estimators": {
+      "url": "https://github.com/StringNLPLAB/opd-rlvr/blob/main/methods/estimators.py",
+      "blob_sha": "fb5e85bbdedc923c032bff733d8bdb8471b81318",
+      "source_read": true
+    }
+  },
+  "new_training_started": false
+}

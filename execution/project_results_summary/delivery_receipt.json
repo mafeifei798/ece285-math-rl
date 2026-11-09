@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "prediction_files_verified": 14,
+  "prediction_rows_verified": 11095,
+  "source_hashes_unchanged": true,
+  "html_table_column_counts": [
+    2,
+    6,
+    4,
+    6,
+    4,
+    6,
+    5,
+    4,
+    5,
+    5
+  ],
+  "local_links_verified": 7,
+  "files": {
+    "review.html": {
+      "bytes": 12308,
+      "sha256": "fbed6db7e77fe86803ce8f7624da91baeb740f379cedc85c62e8105b0c4395ae"
+    },
+    "REPORT.txt": {
+      "bytes": 5575,
+      "sha256": "0575a542f6e5450484fa7b96bd92f78ebf4fd38634034376532904a1abd6c806"
+    },
+    "results.json": {
+      "bytes": 9572,
+      "sha256": "f17203277fe6594a1b5745b123c0a9e8edafa24be19677a29d2192a91cb00ea3"
+    },
+    "main_test_results.csv": {
+      "bytes": 279,
+      "sha256": "0823521f13bc0515d4799fcac634f4ace02f1eeaa4a241c7f3a700692df5ebf4"
+    },
+    "short_validation_results.csv": {
+      "bytes": 239,
+      "sha256": "b0f97fe6ffdddba0876a686f73ec5978d3c89e3a02bcb4077508410a45c1ef05"
+    },
+    "two_seed_means.csv": {
+      "bytes": 96,
+      "sha256": "f4468891185589b4ef9ec5293ca706276af2c16bafec503a0f7d1e0d1d63254d"
+    },
+    "build_summary.py": {
+      "bytes": 17903,
+      "sha256": "af1c3ff4f68011699a6376c93257ef2139d30231c072387bc5caaaa7fd392b5a"
+    }
+  },
+  "new_training_started": false
+}

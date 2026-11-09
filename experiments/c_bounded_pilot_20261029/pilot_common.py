@@ -27,7 +27,7 @@ def verify():
     for n,h in r['dependencies'].items():assert sha(ROOT/n)==h,('Changed dependency',n)
     return sha(HERE/'release.json')
 def guard():
-    assert ROOT.resolve().is_relative_to(Path('/srv/research'))
+    assert ROOT.resolve().is_relative_to(Path('/path/to/project_parent'))
     assert os.environ.get('CUDA_VISIBLE_DEVICES')=='1'
 def adapter_digest(model):
     import torch

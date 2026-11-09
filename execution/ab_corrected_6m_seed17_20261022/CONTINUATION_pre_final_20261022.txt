@@ -5,10 +5,10 @@ AUTHORIZATION AND SCOPE
 User authorized the existing corrected-only A/B experiment, seed17, 6M generated completion tokens each, then common greedy MATH500/GSM8K evaluation, and continued project work until the deadline. Engineering fixes only: percentage-unit verification, CRLF canonicalization in the PRM view, valid unit verification statuses. Original rewards, group-normalized GRPO, model, data, and loss remain fixed. No C/D, new PRM, bounded advantages, extra seeds, tuning, or budget extension. Preserve all historical code and results. Do not interrupt healthy jobs or change source-pinned code. Fix operational failures only after diagnosis; resume complete checkpoints rather than duplicate dispatch or start over. SSH disconnect is not a failed run.
 
 PATHS AND ACCESS
-Local project: /home/researcher/Desktop/python/ece285_math_rl_project
-Remote project: /srv/research/ece285_math_rl_project
-SSH: ssh -p 11032 -i /home/researcher/.ssh/research_server_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 researcher@server.example.invalid
-Remote Python: /srv/research/ece285_math_rl_project/.venv/bin/python
+Local project: /path/to/ece285_math_rl_project
+Remote project: /path/to/ece285_math_rl_project
+SSH: ssh -p 11032 -i /home/USER/.ssh/fym_125_76_110_84_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 USER@GPU_HOST
+Remote Python: /path/to/ece285_math_rl_project/.venv/bin/python
 Independent pinned code: experiments/ab_corrected_6m_seed17_20261022
 Release SHA256: 9eac99ad38cf0ebb389f295655024eff1a09ff530ca05462bd2d9bcfcdbe6907
 Controller: runs/AB_corrected_seed17_6M_20261022/controller.json

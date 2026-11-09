@@ -14,6 +14,6 @@
   "status": "completed",
   "updated_unix": 1792607576.1114824,
   "child_pid": null,
-  "summary": "/srv/research/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/artifacts/summary.json",
+  "summary": "/path/to/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/artifacts/summary.json",
   "C_D_RL_started": false
 }

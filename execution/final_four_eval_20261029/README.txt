@@ -7,7 +7,7 @@ ECE285 四模型统一评测与完整报告
 
 当前项目路径绑定的可复现快照（不是通用安装包）
 本地源码：../../experiments/final_four_eval_20261029/
-远端项目：/srv/research/ece285_math_rl_project
+远端项目：/path/to/ece285_math_rl_project
 远端评测源码：experiments/final_four_eval_20261029
 远端结果：runs/Final_four_eval_seed17_1M_20261029
 唯一派发：dispatch.json（已有任务，不要重新运行dispatch.py或prepare_remote.py）

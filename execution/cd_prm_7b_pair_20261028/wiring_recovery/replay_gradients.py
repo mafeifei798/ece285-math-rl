@@ -6,7 +6,7 @@ import json
 import hashlib
 import time
 
-ROOT = Path('/srv/research/ece285_math_rl_project')
+ROOT = Path('/path/to/ece285_math_rl_project')
 SOURCE = ROOT / 'experiments/cd_prm_7b_pair_20261028'
 OUT = ROOT / 'runs/CD_PRM7B_pair_seed17_20261028/wiring_recovery'
 sys.path.insert(0, str(SOURCE))

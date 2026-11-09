@@ -1,0 +1,6 @@
+{
+  "error": "'LLMEngine' object has no attribute 'model_executor'",
+  "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_protection_20261107/no_update.py\", line 170, in <module>\n    try:main()\n        ^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_protection_20261107/no_update.py\", line 142, in main\n    engine_model=llm.llm_engine.model_executor.driver_worker.model_runner.model\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'LLMEngine' object has no attribute 'model_executor'\n",
+  "unix": 1794053565.4541516,
+  "optimizer_steps": 0
+}

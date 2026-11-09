@@ -1,0 +1,6 @@
+{
+  "error": "'types.SimpleNamespace' object has no attribute 'report_to'",
+  "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_protection_20261107/no_update.py\", line 170, in <module>\n    try:main()\n        ^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_protection_20261107/no_update.py\", line 100, in main\n    old_lp,_=h._get_per_token_logps_and_entropies(model,full,ones,len(ids))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/extras/profiling.py\", line 97, in wrapper\n    with profiling_context(self, func.__name__):\n  File \"/usr/lib/python3.11/contextlib.py\", line 144, in __exit__\n    next(self.gen)\n  File \"/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/trl/extras/profiling.py\", line 64, in profiling_context\n    if \"wandb\" in trainer.args.report_to and wandb.run is not None and trainer.accelerator.is_main_process:\n                  ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'types.SimpleNamespace' object has no attribute 'report_to'\n",
+  "unix": 1794053419.9133935,
+  "optimizer_steps": 0
+}

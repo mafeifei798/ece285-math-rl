@@ -1,0 +1,71 @@
+{
+  "status": "CPU_REFERENCE_AND_SOURCE_AUDIT_ONLY",
+  "training_started": false,
+  "gpu_used": false,
+  "auto_dispatch": false,
+  "recommendation": "One bounded tree-credit extension; preserve completed C-bounded as main empirical foundation.",
+  "proposed_question": "Does outcome-derived tree credit improve the current policy, and does the fixed correct-only bounded PRM term add value beyond that credit?",
+  "proposed_scope": "Independent implementation; TreeRL-inspired rollout and advantage within existing clipped TRL loss, not a claim of full official TreeRL reproduction.",
+  "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+  "tree_shape": {
+    "M": 2,
+    "N": 1,
+    "L": 1,
+    "T": 3,
+    "leaves_per_question": 8,
+    "meaning": "2 independent initial responses; 1 eligible fork per response; retain original suffix plus 3 new suffixes"
+  },
+  "fixed": {
+    "policy": "Qwen2.5-Math-1.5B base",
+    "prm": "existing C-adapted Qwen2.5-Math-PRM-7B",
+    "seed": 17,
+    "questions_per_update": 4,
+    "leaf_responses_per_update": 32,
+    "completion_path_cap": 2048,
+    "policy_lora_rank": 16,
+    "learning_rate": 0.000005,
+    "reference_kl_beta": 0.04,
+    "prm_coefficient": 0.2,
+    "loss_type": "grpo",
+    "new_prm_training": false,
+    "new_teacher": false
+  },
+  "recommended_later_pilot": {
+    "not_started": true,
+    "updates_per_arm": 48,
+    "arms": [
+      "chain_cb",
+      "tree_vr",
+      "tree_cb"
+    ],
+    "same_start_and_optimizer_state": true,
+    "same_question_order": true,
+    "leaf_count_and_update_count_matched": true,
+    "generated_tokens_exactly_matched": false,
+    "evaluation": "Same current validation500 protocol in one common run; original verifier and prompt unchanged; no test-guided tuning.",
+    "interpretation": "Local continuation screening only, not full from-initial comparison."
+  },
+  "no_update_acceptance": [
+    "Frozen policy throughout both generation rounds",
+    "Prefix = raw tokens strictly before fork token; branch log probabilities copied/concatenated with provenance",
+    "Total prefix+suffix <=2048 with correct EOS/finish_reason",
+    "Descendant counts and selected-leaf multiplicities correct; prefix reweight exactly once",
+    "Detached float32 per-token advantage; no post-construction recentering/standardization",
+    "Wrong leaves: zero PRM component; nonpositive exclusive-suffix outcome credit; shared-prefix outcome positives are permitted and separately reported",
+    "Record whole-trajectory PRM minimum location: shared prefix vs exclusive suffix",
+    "Finite loss with no optimizer construction/update; adapter/base/PRM hashes unchanged",
+    "Measure actual peak GPU memory, unique generation tokens, full leaf training tokens, PRM input tokens and wall time"
+  ],
+  "unresolved": [
+    "Official code has RLOO preprocessing and selected-leaf accounting; port needs explicit parity audit",
+    "Suffix-only whole-answer PRM bonus is a heuristic; minimum may lie in shared prefix",
+    "Actual tree sampler/old-log-probability/EOS integration and GPU throughput untested",
+    "Current runtime wrongly assumes every wrong-answer token must be nonpositive for tree credit; requires an independent runtime class",
+    "Greedy evaluation repeatability drift remains unresolved; do not overinterpret 1-2 point changes"
+  ],
+  "expansion_rule": "Do not dispatch 3M/6M or extra seed automatically. Reassess after actual no-update runtime acceptance and a separately authorized short pilot.",
+  "remote_path_requirement": "Every future remote source/run/cache stays below /path/to/ece285_math_rl_project",
+  "historical_results": "Read-only; do not overwrite or relabel any A/B/C/D, PURE, prefix or length-loss runs."
+}
+

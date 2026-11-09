@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "optimizer_steps": 0,
+  "same_actual_batch_for_both_reductions": true,
+  "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+  "actor_base_unchanged": true,
+  "actor_adapter_unchanged": true,
+  "PRM_frozen": true,
+  "rows": 32,
+  "generated_tokens": 13462,
+  "generation_and_PRM_seconds": 74.19052868615836,
+  "loss_checks": [
+    {
+      "row": 18,
+      "length": 98,
+      "outcome": 1.0,
+      "expected_reduction_factor": 0.0478515625,
+      "observed_gradient_norm_ratio": 0.0475570563689374,
+      "results": {
+        "grpo": {
+          "loss": -0.012393763288855553,
+          "gradient_L2": 0.004742846349653719
+        },
+        "fixed_length": {
+          "loss": -0.0005930609186179936,
+          "gradient_L2": 0.00022555581119969092
+        }
+      },
+      "advantage_unchanged": true
+    },
+    {
+      "row": 29,
+      "length": 1368,
+      "outcome": 0.0,
+      "expected_reduction_factor": 0.66796875,
+      "observed_gradient_norm_ratio": 0.6671990367173145,
+      "results": {
+        "grpo": {
+          "loss": 0.016873683780431747,
+          "gradient_L2": 0.0033413370745090038
+        },
+        "fixed_length": {
+          "loss": 0.011271093040704727,
+          "gradient_L2": 0.002229336877460257
+        }
+      },
+      "advantage_unchanged": true
+    }
+  ],
+  "normalizations_after_scalar": 0,
+  "wrong_positive_tokens": 0,
+  "gradient_accumulation_steps": 32,
+  "max_completion_length": 2048,
+  "seconds": 113.63353037834167,
+  "max_torch_allocated_GiB": 31.614280700683594,
+  "claim": "Finite loss/backward with unchanged model parameters. No optimizer constructed, no training update."
+}

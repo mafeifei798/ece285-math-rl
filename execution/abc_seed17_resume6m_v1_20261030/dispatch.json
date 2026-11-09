@@ -2,13 +2,13 @@
   "pid": 3319102,
   "unix": 1793344308.7806535,
   "command": [
-    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
     "-B",
     "-u",
-    "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/controller.py"
+    "/path/to/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/controller.py"
   ],
-  "run": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030",
-  "source": "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030",
+  "run": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030",
+  "source": "/path/to/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030",
   "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
   "seed": 17,
   "arms": [

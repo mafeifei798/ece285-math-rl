@@ -1,0 +1,66 @@
+C-bounded 前缀保护：独立实现与真实模型无更新验收
+2026-11-07｜本阶段完成；正式训练尚未启动
+
+这次已经把改动接到真实 TRL 入口，完成现有数据回放、真实生成、PRM 评分和反向传播。全程 optimizer step=0。原 A/B/C/D 结果保留，没有新的准确率结果。
+
+我们具体改什么
+同一道题既有正确回答又有错误回答时，错误回答原本整条承受负的结果优势。新版本用已有 C PRM 的步骤分数、固定阈值 0.8 找第一个低分步骤；只把此前 token 的负 policy advantage 置零，错误步骤及后续保留原负值。正确回答保持 C-bounded 不变，全错组保持零 policy advantage。KL 仍保留，不能把前缀称为“完全不更新”。
+首步就低分、找不到低分、截断、无有效答案或对齐失败，都回退原 C-bounded。没有添加全错组固定负奖励，没有参考解提示，没有改验答规则或学习率。所谓“前缀”只是 PRM 的估计，不是已核实的正确数学推导。
+
+三组已经实现
+bounded：原 C-bounded，广播成 token 矩阵。
+uniform：对同一条符合条件的错答，整条负优势等比例减弱。
+prefix：只撤掉前缀的负优势，保留后缀负优势。
+uniform 与 prefix 匹配每条回答优势系数绝对值之和，但不强行匹配实际梯度范数。如果 prefix 只胜 bounded、不胜 uniform，就不能说首错定位有独立收益。
+三组均保留原完整回答长度分母、EOS/padding、clipping、KL 和冻结 C PRM；不对最终 token 优势再归一化。
+
+现有数据 CPU 回放
+完整检查 9,216 条已有 C-bounded 回答。1,076 条会保护非空前缀，涉及 238,476 个 token；这是全部回答的 11.68%，不等于这些前缀都被人工证明正确。
+wrong-positive token=0。与保存的原标量优势最大偏差 1.19e-7。uniform/prefix 系数绝对值总量最大差 9.77e-4，为 FP32 求和误差并在既定容差内。
+原 TRL 标量 loss 与广播矩阵版的 loss、log-probability 梯度在三种裁剪区间测试中逐位一致。Unicode/CRLF、原 token 字节边界、错误文本对齐回退通过。
+打乱微批次后仍能核验 signal 与 token 一致；主动插入第二次归一化会被运行时断言拒绝。
+
+LoRA 同步发现与修复
+实际安装的 TRL 0.23.1 旧同步路径在 actor 的 BF16 基座上 merge/unmerge LoRA。真实 GPU 测试确认：一次合并拆除后，内存基座 hash 不再相同；磁盘原 checkpoint 没有被改动，诊断进程中的基座已从备份恢复。
+在 2,520 个固定 teacher-forced token 上，HF 原生 LoRA 与 vLLM 原生 LoRA 的平均绝对 logprob 差为 0.00519；HF 原生与 vLLM 合并权重为 0.00879。三个 64-token 贪心探针中，原生与合并输出有两个不同。探针很少，不能用它解释旧准确率差距，也不能否定既有实验结果。
+独立新版本直接给 vLLM 传 LoRARequest，不再在 actor 基座上原地加减。原安装库完全未改；独立 TRL 衍生文件只改采样配置和 adapter 请求，loss 单独保留可核对的最小差异。
+
+重复性检查没有被掩盖
+第一次完整联调在“同权重、不同 adapter ID 的 logprob 必须逐位一致”处失败，日志保留。
+第二次补同 ID 重复对照：换 ID 的那一次差为零，但同 ID 重复仍出现最大约 0.0799 的 logprob 差。因此不能把第一次失败简单归因于 adapter 加载错误，也不能只凭第二次 passed=true 就宣称所有重复性问题解决。
+随后单独关闭 CUDA graph，使用 eager 执行。固定探针的同 ID 两次重复、换新 ID、再切回旧 ID，四项最大差均为零；两个 adapter 快照 hash 相同。这个结论只覆盖已测探针，不是任意输入、任意 GPU 上逐位确定性的保证。
+
+最终真实模型联调
+使用现有 1.5B 策略 checkpoint-288 和冻结的 7B C PRM，在 A100 80GB 上生成下一批原定训练题：4 题，每题 8 条，共 32 条、16,064 个生成 token。
+18 条正确回答信号不变；8 条位于全错组、policy 信号不变；5 条触发前缀保护；1 条无效输出回退原信号。三种 loss 都做了真实反传，没有 optimizer 更新；错答无正优势，进入 loss 的 token 优势未被改写。
+对同一条实际触发保护的回答，bounded/uniform/prefix 的梯度 L2 分别约 0.00689/0.00487/0.00614。这只确认 uniform 与 prefix 的梯度确实不同，不代表哪个方向更有利于数学准确率。
+actor 基座、actor adapter 的内存 hash 均未变，原 checkpoint hash 未变，PRM 保持冻结。
+
+资源实测与预算修正
+最终联调峰值 PyTorch allocated memory 为 32.26 GiB；这不是整卡 NVML 峰值，也未包含正式训练 optimizer 的额外显存。观察到的进程显存约 34 GiB。
+一批生成、评分及计算旧策略概率约 98.7 秒；其中 PRM forward 约 2.22 秒。含加载和诊断反传总计约 141.6 秒。
+CUDA-graph 的另一批同题生成与评分约 20.0 秒，但输出 token 数不同，不能把二者写成严格配对的吞吐提升倍数。eager 明显较慢，不能沿用旧路径的短训耗时估计。
+若只用当前一批时间粗算，三组各 48 次新增更新，生成/评分部分约 4 小时，尚不包含完整 32 条反传、保存和共同验证；题目长度和共享负载都会改变耗时。这是成本估计，不是已跑出的训练时长。
+
+下一步固定试验范围
+同一个 seed17 C-bounded checkpoint-288 分出 bounded/uniform/prefix，各新增 48 次更新，目标 step336，题目顺序一致。每组约 1M 新生成 token，实际 token 和奖励评分成本单独记账；不能同时声称 token 精确相等。
+所有臂使用同一套已验收的原生 LoRA/eager 运行方式，恢复同一 adapter、optimizer、scheduler 和题序。该试验比较继续训练的增益，不能称作从初始模型重新跑的 6M 对照。
+只用原 validation.jsonl 筛选，连同起点 checkpoint 一起按统一 greedy 协议评估。验证集此前已使用过，不包装成全新盲测。旧 MATH500/GSM8K 结果不用于选阈值或采样实现。
+本次只准备了训练器组件和固定 protocol；尚未新增正式训练入口/控制器或 dispatch 三组训练。pilot_protocol.json 的状态明确为 planned_not_dispatched。
+
+保存与验收
+所有远端新工作都在 /path/to/ece285_math_rl_project 下的独立目录。
+原实验 release 校验通过，原保护清单 1,535 个文件 hash 校验通过。原数据、代码和结果没有被覆盖。GPU 联调进程均已自然退出，取回证据时没有剩余 GPU 作业。
+63 个小型证据文件已按 SHA-256 原样取回本目录 evidence/，包括失败尝试、实际输出和最终结果；没有把临时 3GB 合并模型复制到本地。
+
+主要入口
+代码：../../experiments/prefix_protection_20261107/README.txt
+最终联调：evidence/native_trainer_eager/result.json
+重复性原始分数：evidence/native_trainer_eager/hot_reload_probe.json
+CPU 回放：evidence/cpu_validation.json
+真实 merged/native 数值比较：evidence/no_update_result.json
+源码差异及原文件保护：source_and_preservation_audit.json
+证据哈希：evidence_manifest.json
+
+最终判断
+前缀保护这一小改动已经可以正确地进入真实模型的 policy loss，且保留了能区分“局部定位”和“整体少罚”的对照。现在缺的是短程配对训练后的验证准确率，不是继续改奖励定义。现阶段不声称已提高数学能力。

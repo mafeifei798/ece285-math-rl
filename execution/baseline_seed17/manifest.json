@@ -68,7 +68,7 @@
   },
   "prm800k_audit": {
     "commit": "7ecc794703b2877f63226f2477a49b34f9b25163",
-    "path": "/srv/research/ece285_math_rl_project/data/raw/prm800k_train_questions.jsonl",
+    "path": "/path/to/ece285_math_rl_project/data/raw/prm800k_train_questions.jsonl",
     "sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076",
     "lfs_sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076",
     "question_count": 12000

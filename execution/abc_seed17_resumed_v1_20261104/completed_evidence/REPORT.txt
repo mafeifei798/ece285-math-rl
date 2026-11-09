@@ -1,0 +1,12 @@
+Seed17 A/C-mix/C-bounded checkpoint continuation complete.
+All arms: step288, V1, unchanged reward/loss, common prompt order.
+A training tokens=6155438 {"math500": 0.53, "gsm8k": 0.66868840030326}
+C_mix training tokens=6114465 {"math500": 0.54, "gsm8k": 0.6770280515542078}
+C_bounded training tokens=6167374 {"math500": 0.578, "gsm8k": 0.6937073540561031}
+{"math500": {"C_mix minus A": {"delta_pp": 1.0, "wins": 37, "losses": 32, "paired_question_bootstrap95_pp": [-2.1999999999999997, 4.2], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.630456491786798}, "C_bounded minus A": {"delta_pp": 4.8, "wins": 54, "losses": 30, "paired_question_bootstrap95_pp": [1.4000000000000001, 8.4], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.011634454119925829}, "C_bounded minus C_mix": {"delta_pp": 3.8, "wins": 51, "losses": 32, "paired_question_bootstrap95_pp": [0.39500000000000457, 7.3999999999999995], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.04752488925653181}}, "gsm8k": {"C_mix minus A": {"delta_pp": 0.8339651250947688, "wins": 72, "losses": 61, "paired_question_bootstrap95_pp": [-0.9097801364670205, 2.577710386656558], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.38595875434107846}, "C_bounded minus A": {"delta_pp": 2.501895375284306, "wins": 111, "losses": 78, "paired_question_bootstrap95_pp": [0.45489006823351025, 4.548900682335103], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.01968834560535602}, "C_bounded minus C_mix": {"delta_pp": 1.6679302501895377, "wins": 100, "losses": 78, "paired_question_bootstrap95_pp": [-0.3032600454890068, 3.639120545868082], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.11523195131755455}}}
+One training seed; intervals cover questions only, not training-seed variation.
+3M/6M labels are approximate token equivalents; all arms have identical prompt schedule and update count.
+V1 sampling RNG is recreated on process restart. User pause adds a restart at A step115 while C arms start at50; common prompt/update controls hold, but restart history is asymmetric.
+Short wrong output is a diagnostic, not proof of hacking; correct final answers do not certify valid derivations.
+No test-based checkpoint, prompt, reward or coefficient selection.
+Shared-GPU timing does not measure isolated algorithm efficiency.

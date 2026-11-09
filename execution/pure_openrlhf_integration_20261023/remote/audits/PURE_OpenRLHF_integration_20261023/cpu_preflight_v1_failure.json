@@ -51,5 +51,5 @@
   ],
   "optimizer_steps": 0,
   "models_loaded": false,
-  "source_snapshot": "/srv/research/ece285_math_rl_project/audits/PURE_OpenRLHF_integration_20261023/deployment_v1_source"
+  "source_snapshot": "/path/to/ece285_math_rl_project/audits/PURE_OpenRLHF_integration_20261023/deployment_v1_source"
 }

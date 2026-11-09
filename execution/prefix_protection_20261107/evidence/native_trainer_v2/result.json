@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "optimizer_steps": 0,
+  "formal_training_started": false,
+  "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "source_checkpoint_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+  "native_adapter_ids": [
+    289,
+    290
+  ],
+  "identical_weight_hot_reload_max_logprob_difference": 0.0,
+  "full_generation_reward_signal_loss_path": true,
+  "actor_base_unchanged": true,
+  "actor_adapter_unchanged": true,
+  "frozen_PRM": true,
+  "rows": 32,
+  "generation_tokens": 19034,
+  "generation_and_PRM_seconds": 19.97619342803955,
+  "status_counts": {
+    "correct_unchanged": 20,
+    "invalid_fallback": 2,
+    "all_wrong_unchanged": 8,
+    "prefix_protected": 2
+  },
+  "loss_checks": [
+    {
+      "variant": "bounded",
+      "loss": 0.07732038199901581,
+      "gradient_L2": 0.029063397157300334,
+      "selected_row": 22,
+      "selected_status": "prefix_protected",
+      "advantage_unchanged": true
+    },
+    {
+      "variant": "uniform",
+      "loss": 0.05931742489337921,
+      "gradient_L2": 0.022164174682676095,
+      "selected_row": 22,
+      "selected_status": "prefix_protected",
+      "advantage_unchanged": true
+    },
+    {
+      "variant": "prefix",
+      "loss": 0.05931742861866951,
+      "gradient_L2": 0.027904362837878328,
+      "selected_row": 22,
+      "selected_status": "prefix_protected",
+      "advantage_unchanged": true
+    }
+  ],
+  "PRM_cost": {
+    "prm_forward_seconds": 2.2534799203276634,
+    "prm_input_tokens": 16677,
+    "prm_padded_tokens": 16677,
+    "prm_scored_completions": 29
+  },
+  "seconds": 73.21565437316895,
+  "max_torch_allocated_GiB": 32.2716064453125,
+  "wrong_positive_tokens": 0,
+  "normalizations_after_scalar": 0,
+  "scope": "One no-update native-LoRA TRL batch. No accuracy evaluation or optimizer step."
+}

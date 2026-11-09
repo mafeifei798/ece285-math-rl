@@ -1,0 +1,23 @@
+{
+  "status": "stopped_at_user_request",
+  "user_instruction": "释放了，别再跑了",
+  "recorded_at_utc": "2026-11-09T08:41:18.136965+00:00",
+  "automatic_resume_allowed": false,
+  "new_training_allowed": false,
+  "new_GPU_evaluation_allowed": false,
+  "own_live_processes": [],
+  "locks": {
+    "controller.lock": "free",
+    "A/run.lock": "free",
+    "C_bounded/run.lock": "free"
+  },
+  "controller_stage_at_stop": "failed",
+  "A_last_saved_step": 432,
+  "C_bounded_last_observed_step": 368,
+  "C_bounded_last_saved_step": 365,
+  "pipeline_complete": false,
+  "common_9M_and_12M_evaluation_complete": false,
+  "old_code_and_results_preserved": true,
+  "monitor_session87410": "exited",
+  "monitor_exec_cell_g4_131": "completed"
+}

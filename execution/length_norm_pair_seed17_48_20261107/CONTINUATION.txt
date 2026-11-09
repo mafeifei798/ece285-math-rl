@@ -1,0 +1,122 @@
+Active user authorization: two short branches from SAME existing C-bounded checkpoint,
+48 additional updates each, seed17 only. Original grpo reduction vs constant2048 dr_grpo
+reduction only. Same question order and settings; retain old results. Run real-model
+zero-update integration first; only on success train, then compare validation accuracy,
+truncation and missing/invalid-box status rates. No additional training budget or seeds.
+
+Remote root /path/to/ece285_math_rl_project.
+Local root /path/to/ece285_math_rl_project.
+Read-only status: python3 execution/length_norm_pair_seed17_48_20261107/inspect_remote.py
+SSH imported from execution/ac_seed42_v1_20261106/inspect_remote.py.
+Use remote .venv/bin/python -B; system python misses project packages.
+
+Existing controller PID3236854, create_time1794122517.1; verify live PID identity,
+controller.json/launch_receipt.json/locks/intent/checkpoints BEFORE any action.
+DO NOT dispatch again or start over. Healthy processes must not be interrupted.
+Remote source experiments/length_norm_pair_seed17_48_20261107
+Remote run runs/Length_norm_pair_seed17_48_20261107
+Remote audits audits/Length_norm_pair_seed17_48_20261107
+Initial release hash8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150.
+Source CP runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288,
+adapterSHA a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073.
+Both arms step288->336,32responses/update,1536responses each, approx1M newtokens each.
+Restore same optimizer/scheduler/TorchRNG. NativeLoRA/eager, cap2048, LR5e-6,
+beta.04, C PRM frozen. Historical vLLM RNG is not bitwise restored; each newengine
+seed0. First draw token identity is descriptive (known nondeterminism), not a gate.
+Underlying validated modules remain immutable; no repeated BF16 merge/unmerge.
+
+Finite controller: preflight(CPU passed) -> no_update -> grpo48 -> fixed_length48
+-> common greedy validation of source+both finals(3x500) -> CPU paired analysis.
+CPU gate checks actual frozen token loss gradients/gradientaccumulation, padding,
+and9216historical scalar advantages. Realmodel gate uses same actual32responsebatch,
+both loss forms on shortest/longest nonzero-signal rows; analytic lossfactorL/2048,
+BF16 realgradientnorm tolerance5% predefined, no optimizer and unchanged weights.
+No training arm starts unless no_update/result.json passes.
+GPU0 A10080GB UUID GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, idle at admission.
+2,093historical files protected before upload, plus earlier baseline protection.
+
+Failure policy: controller stops, no automatic retry. Preserve failure, emittedrawbatch
+and checkpoint. Only repair operational faults that do not alter experiment semantics;
+never silently resample a failed emittedbatch or restart completedupdates.
+
+Local collector prepared: collect_completed.py; run only once comparison is complete.
+Validate manifest, source/optimizer state,48updatecounts, actualquestionorder, settings
+differ ONLY loss_type/outputpaths, zero wrongpositive/extraadvnormalizations, final
+checkpoint hashes, and old files unchanged. Save clear report and actual pairedCI,
+accuracy/truncation/missingbox rates and costs. Remain validation only; no test tuning.
+Question bootstrap is not seed variance. No automatic expansion regardless of result.
+Follow through in active task; do not create an app automation.
+
+HEADER ENVIRONMENT RECOVERY: Initial controller3236854 failed during vLLM profile
+compilation because the launcher omitted the pre-existing project-local CPATH.
+CPU gate passed; BOTH ARMS had zero intent/updates/checkpoints/raw batches, and
+no-update had emitted no batch. Original controller/children snapshots and
+no_update.log are retained; prior audit moved to no_update_initial_header_failure.
+New recovery controller PID3240355, create_time1794122819.27; same immutable experiment
+release8a967857..., same48stepbudget. Only existing verified CPATH restored; no
+package/model/reward/loss settings changed. Recovery source experiments/length_norm_header_recovery_20261107.
+Status inspector now prefers recovery_launch_receipt.json identity. Initial
+monitor55232 exited on failure; new monitor is recorded in active tool session.
+Do not launch again. Resume receipt/firstactualupdate required before claiming training.
+
+REAL-MODEL NO-UPDATE PASSED: original loss and fixed-length loss exercised
+on same actual32responses; actor base/adapter and frozenPRM unchanged, optimizer
+not constructed, padding/rawtokens/advantage checks passed. Controller3240355
+now training grpo first. Read-only monitor unifiedexec session49870 is active;
+consume it using write_stdin, do not create duplicate monitors. Fullpipeline
+remains48updates each then3x500validation. Firstactualupdate not yet captured
+at this note. Continue through result collection/independent verification/report.
+
+FIRST ACTUAL UPDATE PASSED: grpo reachedglobal289(1/48),14,272newtokens.
+Exactsourceadapter/optimizer/scheduler/TorchRNG restored, questionorder and
+advantage-at-loss fingerprints passed. Snapshotfirst_actual_update_grpo.json.
+Botharms usebounded signal; archivedannotations may mention prefix/uniform
+candidates computed bysharedfrozenhelper, butactualtensor is asserted identical
+to made[bounded] and neither prefix nor uniform intervention is applied.
+Remain activethroughboth48steps and validation+CPUverification.
+
+GRPO BRANCH COMPLETE:48updates,1,033,644newtokens, checkpoint336 saved;
+result.passed with source/actorbase/PRM guards. Controller3240355 nowtrain_fixed_length
+(starting fromsource288, neverfromgrpo336). Monitor49870active. Do notrerungrpo.
+FinalvalidationandCPUcomparisonstillpending; do notclaimcompletedcomparison.
+
+FIXED_LENGTH FIRST ACTUAL UPDATE PASSED: sourceadapter/optimizer/scheduler/
+TorchRNG and questionorder exact, advantage-at-loss unchanged. Receipt saved
+infirst_actual_update_fixed_length.json. Loss typeisdr_grpo, bothsignalvariant
+remainsbounded. Controller3240355healthy; monitor49870stillactive.
+Completioncommands once controllerstagecomplete:
+1 collect_completed.py(network read-only; retrieve allreceipts,predictions,rollouts).
+2 run independent_tensor_verify.py remotely via projectpython -B - withstdin
+andCUDA_VISIBLE_DEVICES empty; savestdout asindependent_tensor_acceptance.json.
+3 run verify_completed.py(localCPU), then render_report.py(localCPU), inspect
+delivery_receipt hashes and finalstatus. Neither verifierstartsGPU/modelcalls.
+Do notstopat trainingcompletion; commonvalidation+CPUverification/reportpending.
+
+CompletionremoteCPUcommand is nowpython3 execution/length_norm_pair_seed17_48_20261107/verify_remote_completed.py
+It injects all8pre-run source checkpoint hashes frominitial_remote_snapshot.json
+and executesindependent_tensor_verify.py viastdin; checks originaltraining_args
+aswell asadapter/optimizer/scheduler/RNG/state/contract, and recoverycontroller
+sourcehash. Do NOTrunindependent_tensor_verify.py standalonewithout thosehashes.
+No GPUcalls orremote writes. Runaftercontrollercomplete, beforelocalreport.
+
+BOTH TRAINING ARMS COMPLETE:grpo48steps1,033,644tokens; fixed_length48steps
+990,114tokens. Bothsource/base/PRM guards passed and checkpoint336 saved.
+Controller3240355nowvalidation(source+grpo+fixed_length,3x500greedy).
+Monitor49870active. Do NOTrestarttraining. Awaitvalidation+analysiscomplete
+then collectandverify/reportusingpreparedscripts. No GPUtrainingremains.
+
+COMPLETE AND VERIFIED: both48updates and common3x500validation completed.
+Controller3240355andmonitor49870exited; no moreGPUworkauthorizedorqueued.
+81evidencefiles33,961,043bytescollectedandhashed. IndependentCPUFP64replay
+verified3072responses/96batches; maxadvantageerror1.134e-7, rawtokens/masks
+matchJSON, wrongpositive0, extra-normalizations0. All8sourcecheckpointfiles
+unchanged, original1535andnew2093historical-filechecklistspassed.
+Validation:source319/50063.8%(27trunc21missingbox); grpo321/50064.2%
+(28trunc18missingbox); fixed_length318/50063.6%(39trunc18missingbox).
+Fixed-minus-grpo-0.6pp,CI[-3.2,+2.0],22wins25losses; inconclusiveaccuracy,
+noevidenceofbenefit. Trainingtrunc6.32%->4.04%,validation5.6%->7.8%.
+Do notexpandthisvariantautomatically. ReportREPORT.txt/review.html; verified
+delivery_receipt.json. Oldsourcecomparison317vsnew319has20binaryoutcome
+disagreementsdespitesameadapter/commoncontract; switchingsequence3vs4differs,
+concretecausenotestablished. Recordedinevaluation_repeatability.json; do not
+attributecross-run0.4ppdrifttotraining. Currentprimaryusesonecommonnewrun.

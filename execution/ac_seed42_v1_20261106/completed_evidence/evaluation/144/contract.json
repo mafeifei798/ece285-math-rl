@@ -1,0 +1,40 @@
+{
+  "source_release_sha256": "285cba59327cbb17ccd6cfb825083952d00d480d6003b51803fd605ae2c63a81",
+  "step": 144,
+  "engine": "V1",
+  "seed": 285,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": -1,
+  "cap": 2048,
+  "max_model_len": 4096,
+  "batch_size": 64,
+  "max_num_seqs": 64,
+  "max_num_batched_tokens": 4096,
+  "gpu_memory_utilization": 0.15,
+  "max_loras": 1,
+  "max_cpu_loras": 3,
+  "max_lora_rank": 16,
+  "dtype": "bfloat16",
+  "enforce_eager": true,
+  "VLLM_ENABLE_V1_MULTIPROCESSING": "1",
+  "prompt": "unchanged prepared prompts",
+  "verifier": "reward-repair-v3-20261021",
+  "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+  "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "dataset_sha256": {
+    "validation": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053"
+  },
+  "adapters": {
+    "A": {
+      "path": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106/A/milestones/checkpoint-144",
+      "sha256": "1f116388b8c7ceac8ccec85a6c558a90ebe63be800278b2276cf01ef358cf216",
+      "id": 1
+    },
+    "C_bounded": {
+      "path": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106/C_bounded/milestones/checkpoint-144",
+      "sha256": "f34c4b8b11d84a867202e5b936c26f5c0ad02a94927b2ba49eb38aaa341a6710",
+      "id": 2
+    }
+  }
+}

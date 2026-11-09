@@ -1,0 +1,722 @@
+{
+  "models": {
+    "Qwen/Qwen2.5-Math-1.5B": {
+      "revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "directory": "/path/to/ece285_math_rl_project/execution/teacher_distillation_review_20261107/model_metadata/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+      "files": {
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/resolve/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/config.json",
+          "sha256": "81d1dc3c9d4797466a24bfc140776894d15ac4ccce58a0220462b2106f2f4831",
+          "bytes": 676
+        },
+        "generation_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/resolve/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/generation_config.json",
+          "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+          "bytes": 138
+        },
+        "tokenizer_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/resolve/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/tokenizer_config.json",
+          "sha256": "a668be4b083078aca7c38853dd929184e81534d72525a9c1ddb84ea6fd1de6f8",
+          "bytes": 7318
+        },
+        "vocab.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/resolve/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/vocab.json",
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "bytes": 2776833
+        },
+        "merges.txt": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B/resolve/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2/merges.txt",
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "bytes": 1671839
+        }
+      },
+      "config": {
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "hidden_size": 1536,
+        "vocab_size": 151936,
+        "eos_token_id": 151643,
+        "bos_token_id": 151643,
+        "torch_dtype": "bfloat16",
+        "tie_word_embeddings": true
+      },
+      "generation": {
+        "eos_token_id": 151643,
+        "pad_token_id": null,
+        "bos_token_id": 151643
+      },
+      "tokenizer": {
+        "eos_token": "<|endoftext|>",
+        "pad_token": "<|endoftext|>",
+        "bos_token": null,
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'Please reason step by step, and put your final answer within \\\\boxed{}.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nPlease reason step by step, and put your final answer within \\\\boxed{}.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n"
+      },
+      "added_tokens_decoder": {
+        "151643": {
+          "content": "<|endoftext|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151644": {
+          "content": "<|im_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151645": {
+          "content": "<|im_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151646": {
+          "content": "<|object_ref_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151647": {
+          "content": "<|object_ref_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151648": {
+          "content": "<|box_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151649": {
+          "content": "<|box_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151650": {
+          "content": "<|quad_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151651": {
+          "content": "<|quad_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151652": {
+          "content": "<|vision_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151653": {
+          "content": "<|vision_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151654": {
+          "content": "<|vision_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151655": {
+          "content": "<|image_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151656": {
+          "content": "<|video_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151657": {
+          "content": "<tool_call>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151658": {
+          "content": "</tool_call>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151659": {
+          "content": "<|fim_prefix|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151660": {
+          "content": "<|fim_middle|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151661": {
+          "content": "<|fim_suffix|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151662": {
+          "content": "<|fim_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151663": {
+          "content": "<|repo_name|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151664": {
+          "content": "<|file_sep|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        }
+      }
+    },
+    "Qwen/Qwen2.5-Math-7B-Instruct": {
+      "revision": "ef9926d75ab1d54532f6a30dd5e760355eb9aa4d",
+      "directory": "/path/to/ece285_math_rl_project/execution/teacher_distillation_review_20261107/model_metadata/Qwen2.5-Math-7B-Instruct/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d",
+      "files": {
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-7B-Instruct/resolve/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d/config.json",
+          "sha256": "3a6dd7a4b3e6dd81c05ec943d837166508ceb953e1ce2baa57c84611d4765ef0",
+          "bytes": 658
+        },
+        "generation_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-7B-Instruct/resolve/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d/generation_config.json",
+          "sha256": "071d157e94ad482562138f323df1ac3355d8bde9efce56f0a82ac2c333ee6525",
+          "bytes": 161
+        },
+        "tokenizer_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-7B-Instruct/resolve/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d/tokenizer_config.json",
+          "sha256": "d743761ff02297cc5cdf38a612b0f78d5cdf5ceb3f251ab1d25ad353d24b1887",
+          "bytes": 7315
+        },
+        "vocab.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-7B-Instruct/resolve/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d/vocab.json",
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "bytes": 2776833
+        },
+        "merges.txt": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-7B-Instruct/resolve/ef9926d75ab1d54532f6a30dd5e760355eb9aa4d/merges.txt",
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "bytes": 1671839
+        }
+      },
+      "config": {
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "hidden_size": 3584,
+        "vocab_size": 152064,
+        "eos_token_id": 151645,
+        "bos_token_id": 151643,
+        "torch_dtype": "bfloat16",
+        "tie_word_embeddings": false
+      },
+      "generation": {
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "bos_token_id": 151643
+      },
+      "tokenizer": {
+        "eos_token": "<|im_end|>",
+        "pad_token": "<|endoftext|>",
+        "bos_token": null,
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'Please reason step by step, and put your final answer within \\\\boxed{}.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nPlease reason step by step, and put your final answer within \\\\boxed{}.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n"
+      },
+      "added_tokens_decoder": {
+        "151643": {
+          "content": "<|endoftext|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151644": {
+          "content": "<|im_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151645": {
+          "content": "<|im_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151646": {
+          "content": "<|object_ref_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151647": {
+          "content": "<|object_ref_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151648": {
+          "content": "<|box_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151649": {
+          "content": "<|box_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151650": {
+          "content": "<|quad_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151651": {
+          "content": "<|quad_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151652": {
+          "content": "<|vision_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151653": {
+          "content": "<|vision_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151654": {
+          "content": "<|vision_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151655": {
+          "content": "<|image_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151656": {
+          "content": "<|video_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151657": {
+          "content": "<tool_call>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151658": {
+          "content": "</tool_call>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151659": {
+          "content": "<|fim_prefix|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151660": {
+          "content": "<|fim_middle|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151661": {
+          "content": "<|fim_suffix|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151662": {
+          "content": "<|fim_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151663": {
+          "content": "<|repo_name|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151664": {
+          "content": "<|file_sep|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        }
+      }
+    },
+    "Qwen/Qwen2.5-Math-1.5B-Instruct": {
+      "revision": "aafeb0fc6f22cbf0eaeed126eff8be45b0360a35",
+      "directory": "/path/to/ece285_math_rl_project/execution/teacher_distillation_review_20261107/model_metadata/Qwen2.5-Math-1.5B-Instruct/aafeb0fc6f22cbf0eaeed126eff8be45b0360a35",
+      "files": {
+        "config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B-Instruct/resolve/aafeb0fc6f22cbf0eaeed126eff8be45b0360a35/config.json",
+          "sha256": "a48e6ab280ad87a25f06da604d486aa819b9c1bc467dae7c25fe5d05c57f5511",
+          "bytes": 656
+        },
+        "generation_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B-Instruct/resolve/aafeb0fc6f22cbf0eaeed126eff8be45b0360a35/generation_config.json",
+          "sha256": "6cdbb935125f725b568855b396e182b00c9c736fdfab1ef3970087f4ee5cac3f",
+          "bytes": 160
+        },
+        "tokenizer_config.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B-Instruct/resolve/aafeb0fc6f22cbf0eaeed126eff8be45b0360a35/tokenizer_config.json",
+          "sha256": "d743761ff02297cc5cdf38a612b0f78d5cdf5ceb3f251ab1d25ad353d24b1887",
+          "bytes": 7315
+        },
+        "vocab.json": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B-Instruct/resolve/aafeb0fc6f22cbf0eaeed126eff8be45b0360a35/vocab.json",
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "bytes": 2776833
+        },
+        "merges.txt": {
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Math-1.5B-Instruct/resolve/aafeb0fc6f22cbf0eaeed126eff8be45b0360a35/merges.txt",
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "bytes": 1671839
+        }
+      },
+      "config": {
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "hidden_size": 1536,
+        "vocab_size": 151936,
+        "eos_token_id": 151645,
+        "bos_token_id": 151643,
+        "torch_dtype": "bfloat16",
+        "tie_word_embeddings": true
+      },
+      "generation": {
+        "eos_token_id": [
+          151645,
+          151643
+        ],
+        "pad_token_id": 151643,
+        "bos_token_id": 151643
+      },
+      "tokenizer": {
+        "eos_token": "<|im_end|>",
+        "pad_token": "<|endoftext|>",
+        "bos_token": null,
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'Please reason step by step, and put your final answer within \\\\boxed{}.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nPlease reason step by step, and put your final answer within \\\\boxed{}.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n"
+      },
+      "added_tokens_decoder": {
+        "151643": {
+          "content": "<|endoftext|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151644": {
+          "content": "<|im_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151645": {
+          "content": "<|im_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151646": {
+          "content": "<|object_ref_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151647": {
+          "content": "<|object_ref_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151648": {
+          "content": "<|box_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151649": {
+          "content": "<|box_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151650": {
+          "content": "<|quad_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151651": {
+          "content": "<|quad_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151652": {
+          "content": "<|vision_start|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151653": {
+          "content": "<|vision_end|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151654": {
+          "content": "<|vision_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151655": {
+          "content": "<|image_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151656": {
+          "content": "<|video_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": true
+        },
+        "151657": {
+          "content": "<tool_call>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151658": {
+          "content": "</tool_call>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151659": {
+          "content": "<|fim_prefix|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151660": {
+          "content": "<|fim_middle|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151661": {
+          "content": "<|fim_suffix|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151662": {
+          "content": "<|fim_pad|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151663": {
+          "content": "<|repo_name|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        },
+        "151664": {
+          "content": "<|file_sep|>",
+          "lstrip": false,
+          "normalized": false,
+          "rstrip": false,
+          "single_word": false,
+          "special": false
+        }
+      }
+    }
+  },
+  "errors": {},
+  "comparisons_to_base_student": {
+    "Qwen/Qwen2.5-Math-7B-Instruct": {
+      "same_vocab_json_bytes": true,
+      "same_merges_txt_bytes": true,
+      "same_added_token_mapping": true,
+      "same_tokenizer_eos": false,
+      "same_model_vocab_size": false
+    },
+    "Qwen/Qwen2.5-Math-1.5B-Instruct": {
+      "same_vocab_json_bytes": true,
+      "same_merges_txt_bytes": true,
+      "same_added_token_mapping": true,
+      "same_tokenizer_eos": false,
+      "same_model_vocab_size": true
+    }
+  },
+  "model_weights_downloaded": false,
+  "GPU_used": false
+}

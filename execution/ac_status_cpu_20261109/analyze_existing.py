@@ -1,0 +1,362 @@
+"""CPU-only consolidation of frozen predictions, signals and stop receipts."""
+from pathlib import Path
+from collections import Counter
+from datetime import datetime
+from zoneinfo import ZoneInfo
+import csv
+import hashlib
+import html
+import json
+import math
+import sys
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+E = HERE / "existing_extension_evidence"
+MANIFEST = {}
+
+
+def remember(path):
+    raw = path.read_bytes()
+    MANIFEST[str(path.relative_to(ROOT))] = {
+        "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)}
+    return raw
+
+
+def read(path):
+    return json.loads(remember(path))
+
+
+def rows(path):
+    return [json.loads(line) for line in remember(path).splitlines() if line.strip()]
+
+
+def key(row):
+    return row["problem_id"], row["question_sha256"], row["gold"]
+
+
+def paired(a, c):
+    assert list(map(key, a)) == list(map(key, c))
+    wins = sum(x["reward"] == 0 and y["reward"] == 1 for x, y in zip(a, c))
+    losses = sum(x["reward"] == 1 and y["reward"] == 0 for x, y in zip(a, c))
+    n = wins + losses
+    p = min(1., 2 * sum(math.comb(n, k) for k in range(min(wins, losses) + 1)) / 2**n) if n else 1.
+    normal = [(x, y) for x, y in zip(a, c) if x["finish_reason"] == y["finish_reason"] == "stop"]
+    return {"wins": wins, "losses": losses, "difference_pp": 100 * (wins-losses)/len(a),
+            "exact_mcnemar_two_sided_p": p,
+            "both_terminated": {"n": len(normal), "net_correct": sum(y["reward"]-x["reward"] for x, y in normal)},
+            "C_losses_statuses": dict(Counter(y["status"] for x, y in zip(a, c) if x["reward"] > y["reward"]))}
+
+
+def replay(ys, minima, actual, arm):
+    assert len(ys) == len(minima) == len(actual) and len(ys) % 8 == 0
+    maximum = 0.
+    process_abs = 0.
+    outcome_abs = 0.
+    group_counts = Counter()
+    wrong_positive = 0
+    max_process = 0.
+    for start in range(0, len(ys), 8):
+        y, m = ys[start:start+8], minima[start:start+8]
+        count = sum(y)
+        assert all(v in (0, 1) for v in y)
+        assert all(0 <= v <= 1 for v in m)
+        mean = count/8
+        std = math.sqrt(sum((v-mean)**2 for v in y)/7)
+        mean_correct = sum(v*s for v, s in zip(y, m))/max(1, count)
+        group_counts["all_wrong" if count == 0 else "all_correct" if count == 8 else "mixed"] += 1
+        for offset, (v, s) in enumerate(zip(y, m)):
+            outcome = (v-mean)/(std+1e-4)
+            process = .2*v*(s-mean_correct) if arm == "C_bounded" else 0.
+            observed = actual[start+offset]
+            maximum = max(maximum, abs(observed-outcome-process))
+            wrong_positive += int(v == 0 and observed > 0)
+            process_abs += abs(process)
+            outcome_abs += abs(outcome)
+            max_process = max(max_process, abs(process))
+    assert maximum < 2e-6 and wrong_positive == 0
+    return {"rows": len(ys), "groups": len(ys)//8, "max_FP64_formula_error": maximum,
+            "wrong_positive": wrong_positive, "maximum_absolute_process_adjustment": max_process,
+            "process_abs_over_outcome_abs": process_abs/outcome_abs if outcome_abs else None,
+            "group_counts": dict(group_counts)}
+
+
+def main():
+    assert "torch" not in sys.modules and "vllm" not in sys.modules
+    retrieval = read(HERE/"retrieval_receipt.json")
+    remember(HERE/"fetch_existing.py")
+    for name, entry in retrieval["files"].items():
+        raw = remember(E/name)
+        assert len(raw) == entry["bytes"] and hashlib.sha256(raw).hexdigest() == entry["sha256"]
+    assert {arm: value["step"] for arm, value in retrieval["checkpoint_checks"].items()} == {"A": 432, "C_bounded": 365}
+    old17 = ROOT / "execution/abc_seed17_resumed_v1_20261104/completed_evidence"
+    old42 = ROOT / "execution/ac_seed42_v1_20261106/completed_evidence"
+    initial_dir = ROOT / "execution/final_four_eval_20261029/evidence/runs/Final_four_eval_seed17_1M_20261029/initial"
+    bases = {17: old17, 42: old42}
+    comparisons = {seed: read(base/"comparison.json") for seed, base in bases.items()}
+    initial_comparison = read(ROOT / "execution/final_four_eval_20261029/comparison.json")
+    test_table, pairs, signals, formats, initial = [], {}, {}, {}, {}
+    prediction_count = 0
+    for dataset in ["math500", "gsm8k"]:
+        rr = rows(initial_dir/f"{dataset}.jsonl")
+        exp = initial_comparison["summary"]["initial"][dataset]
+        assert hashlib.sha256((initial_dir/f"{dataset}.jsonl").read_bytes()).hexdigest() == exp["predictions_sha256"]
+        assert sum(r["reward"] for r in rr) == exp["correct"]
+        initial[dataset] = {"correct": int(exp["correct"]), "n": len(rr), "accuracy": exp["accuracy"]}
+        prediction_count += len(rr)
+    for seed, base in bases.items():
+        pairs[str(seed)] = {}
+        arm_rows = {}
+        for arm in ["A", "C_bounded"]:
+            arm_rows[arm] = {}
+            for dataset in ["math500", "gsm8k"]:
+                path = base/f"evaluation/288/{arm}/{dataset}.jsonl"
+                rr = rows(path)
+                exp = comparisons[seed]["summary"][arm][dataset]
+                assert hashlib.sha256(path.read_bytes()).hexdigest() == exp["predictions_sha256"]
+                assert len(rr) == exp["n"] and sum(r["reward"] for r in rr) == exp["correct"]
+                assert all(len(r["completion_token_ids"]) == r["generated_tokens"] and r["reward"] in (0, 1) for r in rr)
+                arm_rows[arm][dataset] = rr
+                prediction_count += len(rr)
+                test_table.append({"seed": seed, "arm": arm, "dataset": dataset,
+                    "correct": int(exp["correct"]), "n": len(rr), "accuracy": exp["accuracy"],
+                    "generated_training_tokens": comparisons[seed]["accounting"][arm]["generated_completion_tokens"]})
+                formats[f"{seed}/{arm}/{dataset}"] = {"n": len(rr),
+                    "status_counts": dict(Counter(r["status"] for r in rr)),
+                    "truncated": sum(r["finish_reason"] != "stop" for r in rr),
+                    "empty": sum(not r["completion"].strip() for r in rr),
+                    "short_wrong_le32": sum(r["generated_tokens"] <= 32 and not r["reward"] for r in rr)}
+            sr = rows(base/arm/"compact_signals.jsonl")
+            assert len(sr) == 288*32
+            assert [r["tag"] for r in sr] == list(range(288*32))
+            for offset in range(0, len(sr), 8):
+                assert len({r["problem_id"] for r in sr[offset:offset+8]}) == 1
+            signals[f"{seed}/{arm}"] = replay([r["outcome_reward"] for r in sr],
+                [r["min_score"] for r in sr], [r["advantage"] for r in sr], arm)
+        for dataset in ["math500", "gsm8k"]:
+            pair = paired(arm_rows["A"][dataset], arm_rows["C_bounded"][dataset])
+            stored = comparisons[seed]["paired"][dataset]["C_bounded minus A"]
+            assert pair["wins"] == stored["wins"] and pair["losses"] == stored["losses"]
+            assert abs(pair["difference_pp"]-stored["delta_pp"]) < 1e-10
+            assert abs(pair["exact_mcnemar_two_sided_p"]-stored["exact_mcnemar_two_sided_p"]) < 1e-10
+            pair["stored_paired_question_bootstrap95_pp"] = stored["paired_question_bootstrap95_pp"]
+            pair["CI_scope"] = "Frozen original 10000-replicate question bootstrap; excludes training-seed and runtime-repeat uncertainty; unadjusted."
+            pairs[str(seed)][dataset] = pair
+    means = {}
+    for dataset in ["math500", "gsm8k"]:
+        means[dataset] = {arm: sum(comparisons[s]["summary"][arm][dataset]["accuracy"] for s in [17, 42])/2 for arm in ["A", "C_bounded"]}
+        means[dataset]["difference_pp"] = 100*(means[dataset]["C_bounded"]-means[dataset]["A"])
+        means[dataset]["scope"] = "Descriptive average of two training seeds on the same test questions; no seed-robust CI."
+
+    repeated, repeat_rows = {}, {}
+    for repeat in [0, 1]:
+        d = E/f"evaluation/baseline/repeat_{repeat}"
+        summary, contract = read(d/"summary.json"), read(d/"contract.json")
+        assert hashlib.sha256((d/"contract.json").read_bytes()).hexdigest() == summary["contract_sha256"]
+        repeat_rows[repeat] = {}
+        for arm in ["A", "C_bounded"]:
+            path = d/arm/"predictions.jsonl"
+            rr = rows(path)
+            expected = summary["summary"][arm]
+            assert hashlib.sha256(path.read_bytes()).hexdigest() == expected["predictions_sha256"]
+            assert len(rr) == 500 and sum(r["reward"] for r in rr) == expected["correct"]
+            repeat_rows[repeat][arm] = rr
+            prediction_count += len(rr)
+    for arm in ["A", "C_bounded"]:
+        a, b = repeat_rows[0][arm], repeat_rows[1][arm]
+        assert list(map(key, a)) == list(map(key, b))
+        acc = [sum(r["reward"] for r in rr)/500 for rr in [a, b]]
+        repeated[arm] = {"n_questions": 500, "repeats": 2, "accuracy": acc, "mean_accuracy": sum(acc)/2,
+            "binary_result_flips": sum(x["reward"] != y["reward"] for x, y in zip(a, b)),
+            "text_differences": sum(x["completion"] != y["completion"] for x, y in zip(a, b))}
+
+    stopbase = ROOT / "execution/budget_extension_seed17_12m_20261108"
+    stopped = read(stopbase/"USER_STOP.json")
+    assert not stopped["automatic_resume_allowed"]
+    controller = read(E/"controller.json")
+    assert controller["stage"] == "failed"
+    progress, extension_signals, schedules = {}, {}, {}
+    for arm, saved_step in [("A", 432), ("C_bounded", 365)]:
+        saved = read(E/arm/f"checkpoint-{saved_step}/completion_accounting.json")
+        cp_contract = read(E/arm/f"checkpoint-{saved_step}/pilot_checkpoint.json")
+        assert cp_contract["global_step"] == saved_step and cp_contract["complete_generation_boundary"]
+        assert hashlib.sha256((E/arm/f"checkpoint-{saved_step}/completion_accounting.json").read_bytes()).hexdigest() == cp_contract["accounting_sha256"]
+        current = read(E/arm/"progress.json")
+        check = read(E/arm/"first_update_acceptance_432.json")
+        assert check["passed"] and check["optimizer_exact"] and check["advantage_fingerprint_at_loss"]
+        audits = rows(E/arm/"update_audits.jsonl")
+        ss = rows(E/arm/"actual_signals.jsonl")
+        gg = rows(E/arm/"generation_checks.jsonl")
+        count = current["global_step"]-288
+        assert [r["global_step"] for r in audits] == list(range(289, current["global_step"]+1))
+        committed = [r for r in ss if r["step"] < current["global_step"]]
+        assert [r["step"] for r in committed] == list(range(288, current["global_step"]))
+        assert len(gg) >= count
+        schedules[arm] = [r["prompt_groups"] for r in gg[:count]]
+        ys, mm, aa = [], [], []
+        for row in committed:
+            assert len(row["outcomes"]) == len(row["minima"]) == len(row["advantages"]) == 32
+            assert row["post_construction_normalizations"] == 0
+            ys.extend(row["outcomes"]); mm.extend(row["minima"]); aa.extend(row["advantages"])
+        extension_signals[arm] = replay(ys, mm, aa, arm)
+        child = next(r for r in controller["children"] if r["stage"] == f"train_{arm}_432")
+        progress[arm] = {"saved_step": saved_step, "saved_generated_tokens": saved["generated_completion_tokens"],
+            "last_observed_update": current["global_step"],
+            "last_observed_generated_tokens": current["accounting"]["generated_completion_tokens"],
+            "new_updates_observed": count, "stage_wall_hours": (child["finished_unix"]-child["started_unix"])/3600,
+            "stage_exit_code": child["exit_code"], "saved_checkpoint": str(read(E/arm/"last_checkpoint.json")["path"]),
+            "common_9M_evaluation": False, "common_12M_evaluation": False}
+    common = min(map(len, schedules.values()))
+    assert schedules["A"][:common] == schedules["C_bounded"][:common]
+
+    diagnostic = read(stopbase/"placeholder_diagnostic/result.json")
+    missing = read(stopbase/"missing_box_structure.json")
+    order = read(ROOT/"execution/answer_order_audit_20261108/results.json")
+    blind = read(ROOT/"execution/abc_seed17_resumed_v1_20261104/blind_audit_20261105/audit_summary.json")
+    blind_plan = read(ROOT/"execution/abc_seed17_resumed_v1_20261104/blind_audit_20261105/plan.json")
+    ancillary = {}
+    prefix = read(ROOT/"execution/prefix_triplet_seed17_48_20261107/completed_evidence/comparison.json")
+    ancillary["uniform_minus_same_run_bounded"] = prefix["paired_comparisons"]["uniform_minus_bounded"]
+    ancillary["prefix_minus_uniform"] = prefix["paired_comparisons"]["prefix_minus_uniform"]
+    ancillary["length_normalization"] = read(ROOT/"execution/length_norm_pair_seed17_48_20261107/result_summary.json")["primary_comparison"]
+    ancillary["tree_minus_same_run_chain"] = read(ROOT/"execution/tree_credit_triplet_seed17_48_20261108/result_summary.json")["primary_comparison"]
+    independent42 = read(ROOT/"execution/ac_seed42_v1_20261106/independent_acceptance.json")
+    independent17 = read(ROOT/"execution/abc_seed17_resumed_v1_20261104/independent_acceptance.json")
+    costs42 = {"training_seconds": comparisons[42]["training_seconds"],
+        "notes": "Observed shared-GPU timing; excludes PRM adaptation; not isolated algorithm efficiency."}
+    costs42["C_extra_wall_fraction"] = costs42["training_seconds"]["C_bounded"]/costs42["training_seconds"]["A"]-1
+    costs42["PRM_input_tokens"] = comparisons[42]["accounting"]["C_bounded"]["prm_input_tokens"]
+    costs42["PRM_forward_seconds"] = comparisons[42]["accounting"]["C_bounded"]["prm_forward_seconds"]
+    costs42["sampled_peak_process_GPU_GiB"] = {arm: independent42["signals"][arm]["max_observed_process_GPU_GiB_since_resume"] for arm in ["A", "C_bounded"]}
+    remaining = [
+        {"item": "Independent process-validity review", "GPU_needed": False,
+         "required_for_claim": "Improved mathematical derivation validity", "status": "Targeted assistant review only; representative independent review absent"},
+        {"item": "Critical same-checkpoint test repeatability", "GPU_needed": True,
+         "required_for_claim": "Precise reproducible small test gains", "status": "Validation repeats done; MATH500/GSM8K key-test repeats not done; remains stopped"},
+        {"item": "Common9M/12M continuation endpoints", "GPU_needed": True,
+         "required_for_claim": "Benefit of increasing the training budget and C-A gap at larger budgets", "status": "Incomplete; not necessary to report the completed6M experiment honestly"},
+        {"item": "Magnitude-matched or shuffled-ranking controls", "GPU_needed": True,
+         "required_for_claim": "Causal mechanism or distinct algorithm-component contribution", "status": "Not done; not automatically queued"},
+        {"item": "Additional independent training seeds or preregistered benchmarks", "GPU_needed": True,
+         "required_for_claim": "Broad stable superiority", "status": "Only two6M training seeds; no automatic launch"},
+    ]
+    report = {"as_of_date_Los_Angeles": "2026-11-09", "GPU_calls_in_this_task": 0, "new_training": False,
+        "new_model_or_PRM_calls": 0, "evaluation_labels_recomputed": False,
+        "initial_model": initial, "six_M_tests": test_table, "six_M_paired": pairs,
+        "two_seed_descriptive_means": means, "historical_signal_FP64_replay": signals,
+        "six_M_output_format": formats, "six_M_validation_repeatability": repeated,
+        "extension_progress": progress, "extension_completed_update_JSON_replay": extension_signals,
+        "same_new_question_order_verified_updates": common,
+        "extension_raw_tensor_token_independent_acceptance": "Not rerun; incomplete pipeline. JSON formula replay and previously saved runtime checks only.",
+        "seed42_12M_eligibility": "not_evaluable; seed17 common12M validation absent; no automatic launch",
+        "placeholder_counterfactual": diagnostic, "missing_box_structure": missing,
+        "blind_review": {"cases": blind["cases"], "responses": blind["responses"],
+            "outcome_agreements": blind["outcome_agreements"], "invalid_process_with_correct_answer_cases": len(blind["answer_correct_invalid_process"]),
+            "reviewer": blind_plan["reviewer"], "population_validity_rate_established": False},
+        "short_trial_comparisons_validation_only": ancillary, "seed42_costs": costs42,
+        "remaining_verifications_by_claim": remaining,
+        "previous_CPU_acceptance_passed": {"seed17": independent17["passed"], "seed42": independent42["passed"]},
+        "current_cpu_audit": {"prediction_rows_recounted": prediction_count,
+            "historical_training_rows_FP64_replayed": sum(x["rows"] for x in signals.values()),
+            "extension_training_rows_FP64_replayed": sum(x["rows"] for x in extension_signals.values()),
+            "new_mathematical_judgments": 0, "GPU_or_model_libraries_imported": False}}
+    (HERE/"summary.json").write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n")
+    with (HERE/"six_M_results.csv").open("w", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(test_table[0])); writer.writeheader(); writer.writerows(test_table)
+
+    lines = ["A / C-bounded 当前结果与进度（2026-11-09，America/Los_Angeles）",
+        "本次只同步已有文件并做CPU重数/公式复核；GPU、训练、生成、PRM调用均为0。沿用已有数学判分标签，没有修改验答器。",
+        "判断：6M两seed都观察到C-bounded准确率更高，但seed42收益明显缩小；当前是有限的正向证据，尚未证明跨seed稳定提升、推导有效性改善或12M更好。",
+        "", "一、固定方法与主对照",
+        "策略Qwen2.5-Math-1.5B，LoRA rank16；C使用冻结且已适配的7B PRM。A只用二值终答结果；C-bounded在原结果优势上叠加答对子集内居中的过程项。",
+        "y为终答是否正确，m为最低步骤PRM分，g为同题8条回答：A_out=(y-mean_g(y))/(sample_std_g(y)+1e-4)；A_C=A_out+0.2*y*(m-mean_correct_g(m))。",
+        "组合后不再标准差归一化，过程调整绝对值≤0.2；错答不会拿到正的奖励优势。全错组奖励优势仍为0，KL项仍可能有梯度。",
+        "学习率实际为5e-6 constant，num_iterations=1，KL beta0.04，原GRPO按回答长度reduction、2048输出上限均不变。不是默认1e-6学习率问题。",
+        "两组各288次更新、9216条回答，同seed题序相同；实际生成token略有不同，未宣称等FLOPs/等总评分成本。seed17只接触1152/6993道不同训练题（16.47%）；这个覆盖率不证明继续训练必然提高准确率。",
+        "seed17的A在115步多一次恢复，历史重启不对称；seed42采用对称恢复边界。历史vLLM采样随机状态没有逐位恢复，因此seed17与seed42的差异不能全部归因于训练seed。固定C PRM锚点存在已知6组冲突标签，仍是PRM适配结论的限制。",
+        "", "二、已完成约6M测试（保持原结果）"]
+    for seed in [17, 42]:
+        for arm in ["A", "C_bounded"]:
+            a = comparisons[seed]["summary"][arm]
+            tok = comparisons[seed]["accounting"][arm]["generated_completion_tokens"]
+            lines.append(f"seed{seed}/{arm}: {tok:,}训练生成token；MATH500 {a['math500']['correct']:.0f}/500={a['math500']['accuracy']*100:.2f}%；GSM8K {a['gsm8k']['correct']:.0f}/1319={a['gsm8k']['accuracy']*100:.2f}%。")
+        for dataset in ["math500", "gsm8k"]:
+            z = pairs[str(seed)][dataset]; lo, hi = z["stored_paired_question_bootstrap95_pp"]
+            lines.append(f"seed{seed}/{dataset} C−A: {z['difference_pp']:+.2f}pp，95%题目bootstrap [{lo:+.2f},{hi:+.2f}]；{z['wins']}胜/{z['losses']}负。")
+    for dataset, z in means.items():
+        lines.append(f"两seed简单均值/{dataset}: A {z['A']*100:.2f}%，C {z['C_bounded']*100:.2f}%，差{z['difference_pp']:+.2f}pp。")
+    lines += ["seed17的区间不跨0，seed42两个区间均跨0。区间未作多重比较校正，只覆盖题目抽样；不包含训练seed及运行间波动。同一测试集重复用于两个seed，不能当成新增独立题目。",
+        f"共同初始模型为MATH500 {initial['math500']['accuracy']*100:.2f}% / GSM8K {initial['gsm8k']['accuracy']*100:.2f}%。C相对初始模型的全部增益不能归给过程项，额外价值应看C−A。",
+        "", "三、可以确认的机制与尚未证实的解释",
+        "A/C两seed合计36864条历史训练信号，本次用独立FP64公式重算通过，错答正优势0。C过程项绝对值总和约为结果项的2.76%(seed17)、2.51%(seed42)，这不是梯度贡献占比，也不证明它导致了小增益。",
+        "seed17直接混合C-mix只有54.00%/67.70%，弱于C-bounded的57.80%/69.37%；原C-mix训练有526条错答正优势，其中524来自全错组。它支持有界构造的研究动机，不能单独证明准确率提升由哪个组件造成。",
+        "终答正确不认证推导正确。此前20道胜负题、40份回答的检查由assistant完成，遮蔽了模型身份和存储标签，不是独立人类审查；有3份终答正确但过程有缺陷。定向抽样不能估计总体过程有效率。",
+        "两seed最终A/C测试均无空答、无≤32token短错答，但训练仍有短错答；不能宣称已杜绝所有奖励投机。",
+        "收益不全来自少截断：双方均正常结束子集中，seed17 MATH/GSM净赢23/23题，seed42净赢6/1题。该事后条件子集有选择偏差，不是数学能力的因果估计。",
+        "", "四、格式漂移与冻结PRM反事实检查",
+        "MATH500占位首框+后续正文比例：初始8.2%；seed17 A30.0%、C63.2%；seed42 A25.6%、C37.4%。占位框不等于已提前给出数学答案，不能称为先答后证的证据。",
+        "旧seed17 GSM8K固定规则下，A有83条缺少有效框，C有123条；C中122条以占位框开头，123条均无非占位完整框。不能假定这些都属于本来能答对的数学题。",
+        f"200条答对且占位开头的C回答，原文−删除占位框最低PRM分均差{diagnostic['mean_min_original_minus_deleted']:+.6f}，95%配对区间{diagnostic['paired_mean_bootstrap95CI']}。39升/159降/2近似持平；没有支持加占位框能系统性抬分的直接解释。",
+        "20个定向真实训练组，4组正确子集排序变化、0个优势符号翻转；这只是该文本编辑的打分敏感性。选样条件、分段变化仍是限制，既不能证明PRM诱发格式漂移，也不能排除其他间接效应。该诊断未改变训练。",
+        "", "五、6M验证复测（不是MATH500测试）"]
+    for arm, z in repeated.items():
+        lines.append(f"{arm}: 两次{z['accuracy'][0]*100:.1f}%/{z['accuracy'][1]*100:.1f}%，均值{z['mean_accuracy']*100:.1f}%；同题正误翻转{z['binary_result_flips']}/500，文本变化{z['text_differences']}/500。")
+    lines += ["固定64题批次、两次新引擎、同一源checkpoint仍有上述差异；原因尚未定位，不能直接归因于某个vLLM机制。两次只量到本次波动，不定义普遍1pp噪声阈值。按500道题聚合重复，不能当作1000道独立题。",
+        "64%–65%是验证集，C的57.8%是MATH500测试集；不能混起来画学习曲线或用复测最高值替换主结果。",
+        "", "六、这轮6M→12M续训已经停止，不能比较未完成端点"]
+    for arm, z in progress.items():
+        lines.append(f"{arm}: 完整checkpoint-{z['saved_step']}，已保存累计{z['saved_generated_tokens']:,}token；最后日志到{z['last_observed_update']}步/{z['last_observed_generated_tokens']:,}token。本阶段观测耗时{z['stage_wall_hours']:.2f}小时。")
+    lines += ["A完成288→432的144次新更新；C完成到368的80次新更新后收到SIGTERM（exit -15），用户随即明确要求释放、别再跑。C最后完整训练状态在365；366–368的更新日志不等于完整可恢复checkpoint。",
+        "本次只读校验A432与C365各自checkpoint合同中的权重/优化器/调度器/RNG/Trainer状态文件哈希及accounting；均通过。没有恢复、重采样或启动任何工作。",
+        "新阶段JSON信号A4608条/C2560条FP64重算通过；共同前80次更新题序一致。此处没有重新做未完成管线的全量原始tensor/token独立验收，不能冒称12M验收完成。",
+        "本轮沿用已验证的native-LoRA V1/eager运行时，标量reward/advantage/loss定义保持不变；源LoRA/优化器/调度器/Torch RNG恢复验收通过，vLLM采样RNG重建。不声称整段训练与历史不中断运行逐位相同。",
+        "两组没有共同9M准确率，12M没有完成；现在不能判断多训是否有效、A会不会追上C、差距会不会维持。seed42的12M跟进条件也还无法计算，不能写成已通过或已失败。所有后续GPU工作继续停止。",
+        "", "七、已做短试：都不足以替代主线（同轮对照、验证集、单seed48步）",
+        "均匀减罚−同轮C：+1.6pp，区间[-1.0,+4.2]；前缀保护−均匀减罚：+0.2pp，[-2.0,+2.6]。未证实首错定位优于单纯减罚。",
+        "只改固定长度分母−同轮原GRPO：−0.6pp，[-3.2,+2.0]。训练截断减少没有转为验证收益。",
+        "树状+有界PRM−同轮链式C：−1.8pp，[-4.4,+0.8]；当前实现回退率约69%–72%、耗时约1.5–1.6倍。不能据此否定所有树方法。",
+        "这些短试的对照续训也在变化；不同轮源checkpoint复测有波动，不能跨轮取最高分来选赢家；未触发正式新方案。",
+        "", "八、资源成本与效用",
+        f"seed42完整6M成功训练阶段：A{costs42['training_seconds']['A']/3600:.2f}小时，C{costs42['training_seconds']['C_bounded']/3600:.2f}小时，C多{costs42['C_extra_wall_fraction']*100:.1f}%。",
+        "已存资源采样峰值A约21.21GiB、C约34.63GiB；C另需冻结7B PRM。共享GPU时间不是隔离的算法效率实验；不含前期PRM适配成本。",
+        f"C在seed42额外打分输入{costs42['PRM_input_tokens']:,}token，PRM前向{costs42['PRM_forward_seconds']/60:.2f}分钟。生成token预算不包含PRM评分token和评测成本。",
+        "本轮部分续训A/C完成更新数不一致，因此4.55小时/3.17小时不能直接当方法速度比较。",
+        "", "九、还缺哪些验证（未执行，不自动排队）",
+        "现在可继续CPU完成：统一报告/CSV/证据哈希；核对历史逐题错误、题目配对与公式；将已有案例整理给组员做独立身份盲审。本报告已完成数据重数和信号回放，但没有新增人工标签。",
+        "如以后恢复GPU，先处理共同9M/12M预算端点及关键测试复测。当前不需要重开选题、扫描权重或直接补更多seed；A432不能与C365当作等预算结论。是否续到12M需另行授权。",
+        "若要声称数学推导更有效：需要预先固定、随机抽样的独立过程有效性审查，记录不确定性/标注一致性；20道定向assistant检查不足以支撑总体结论。",
+        "若要声称算法机制/论文增量：需要幅度匹配或打乱PRM排序等控制，分开正确子集门控、居中/有界与PRM排序信息的作用；当前A/C只验证组合效果。",
+        "若要声称稳定、广泛优于GRPO：需要更多独立训练seed和/或额外预先固定基准；两个seed的描述性均值不是稳定性证明。这个要求高于提交一份诚实课程实证报告的最低需要。",
+        "按现有6M范围完成课程项目，不必等12M；把更大预算写成未完成扩展，主结论限定为观察到的组合效果与训练信号约束。上述追加验证按想主张的结论决定，不是都必须追加训练。",
+        "", "十、当前最稳妥的对外结论",
+        "在固定小模型和约6M生成预算下，有界、仅作用于答对样本的过程偏好消除了该实现中的错答正优势，并在两个seed上观察到准确率增益；seed42增益较弱且区间跨0，额外PRM有成本，过程有效性和更大训练预算收益仍未证实。",
+        "不写：稳定大幅提升、SOTA、已提升推导忠实性、12M已验证、评测完全确定、完全没有奖励投机。",
+        "", f"本次CPU复核：{prediction_count}条已有预测；36864条历史A/C信号；7168条新阶段已完成更新信号。没有重新给数学答案打新标签；所有源文件按只读处理。"]
+    (HERE/"REPORT.txt").write_text("\n".join(lines)+"\n")
+    page = '<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A/C-bounded 结果与进度</title><style>body{font:16px/1.85 -apple-system,"PingFang SC",sans-serif;background:#f3f6fa;color:#20334b}main{max-width:1080px;padding:34px;margin:30px auto;background:#fff;border-radius:14px}aside{background:#edf5ff;border-left:4px solid #4677b9;padding:18px}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}th,td{padding:11px;text-align:left;border-bottom:1px solid #dde4ed}th{background:#f4f7fb}pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere;background:#f8fafc;padding:20px}a{color:#245eac}.muted{color:#596b7d}</style><main><h1>A / C-bounded：结果与进度</h1><p class="muted">2026-11-09 · CPU整理；显卡工作继续停止</p><aside>6M两seed均观察到正增益，但seed42更弱、区间跨0。9M/12M共同评测未完成，不能判断续训收益或方法差距是否维持。</aside><h2>已完成6M测试</h2><table><tr><th>训练seed</th><th>组别</th><th>生成训练token</th><th>MATH500</th><th>GSM8K</th></tr>'
+    for seed in [17, 42]:
+        for arm in ["A", "C_bounded"]:
+            s = comparisons[seed]["summary"][arm]
+            page += f'<tr><td>{seed}</td><td>{arm}</td><td>{comparisons[seed]["accounting"][arm]["generated_completion_tokens"]:,}</td><td>{s["math500"]["accuracy"]*100:.2f}%</td><td>{s["gsm8k"]["accuracy"]*100:.2f}%</td></tr>'
+    page += '</table><p>两seed描述均值：MATH500 52.90%→56.30%（+3.40pp）；GSM8K 67.17%→68.65%（+1.48pp）。不是训练seed置信区间。</p><h2>续训停止位置</h2><table><tr><th>组别</th><th>完整保存</th><th>最后日志</th><th>共同预算评测</th></tr>'
+    for arm, z in progress.items():
+        page += f'<tr><td>{arm}</td><td>第{z["saved_step"]}步 · {z["saved_generated_tokens"]:,} token</td><td>第{z["last_observed_update"]}步</td><td>9M、12M均未完成</td></tr>'
+    page += '</table><h2>完整分析与证据边界</h2><pre>'+html.escape("\n".join(lines))+'</pre><p><a href="REPORT.txt">完整报告</a> · <a href="summary.json">结构化结果</a> · <a href="six_M_results.csv">6M结果CSV</a> · <a href="audit_receipt.json">CPU验收与源文件哈希</a> · <a href="retrieval_receipt.json">只读同步记录</a></p></main></html>'
+    (HERE/"review.html").write_text(page)
+    outputs = ["summary.json", "REPORT.txt", "review.html", "six_M_results.csv"]
+    receipt = {"passed": True, "generated_at_Los_Angeles": datetime.now(ZoneInfo("America/Los_Angeles")).isoformat(),
+        "scope": "CPU-only recount, pairing and formula replay of already saved data; no regrading/model/GPU/training",
+        "source_manifest": MANIFEST,
+        "output_hashes": {n: hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in outputs},
+        "analysis_code_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "new_GPU_calls": 0, "new_training": False, "source_files_unchanged": all(hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == v["sha256"] for name, v in MANIFEST.items())}
+    assert receipt["source_files_unchanged"]
+    (HERE/"audit_receipt.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2)+"\n")
+    print(json.dumps({"passed": True, "predictions_recounted": prediction_count,
+        "historical_rows_replayed": report["current_cpu_audit"]["historical_training_rows_FP64_replayed"],
+        "extension_rows_replayed": report["current_cpu_audit"]["extension_training_rows_FP64_replayed"],
+        "progress": progress, "repeatability": repeated, "GPU_calls": 0}, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

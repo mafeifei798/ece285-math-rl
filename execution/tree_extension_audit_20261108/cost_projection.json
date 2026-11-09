@@ -1,0 +1,58 @@
+{
+  "measured_chain_hours_per_million": 1.396791823710107,
+  "measured_runs": [
+    {
+      "arm": "grpo",
+      "seconds": 5284.265957355499,
+      "tokens": 1033644
+    },
+    {
+      "arm": "fixed_length",
+      "seconds": 4970.02010846138,
+      "tokens": 990114
+    },
+    {
+      "arm": "bounded",
+      "seconds": 5185.8169758319855,
+      "tokens": 1021112
+    },
+    {
+      "arm": "uniform",
+      "seconds": 5084.568799257278,
+      "tokens": 1037167
+    },
+    {
+      "arm": "prefix",
+      "seconds": 5194.414664030075,
+      "tokens": 1032677
+    }
+  ],
+  "sources": [
+    {
+      "path": "execution/length_norm_pair_seed17_48_20261107/completed_evidence/comparison.json",
+      "sha256": "fff8cdceafa6bad5cdc8422784bc433c9bbfdfd3903a39fd3aedc0831c48d97c"
+    },
+    {
+      "path": "execution/prefix_triplet_seed17_48_20261107/completed_evidence/comparison.json",
+      "sha256": "0cd5d6ee0917dcd657119c0ac24e00f1b467920d300a89e256b1a81005b08ba7"
+    }
+  ],
+  "projections": [
+    {
+      "case": "Two 3M screens plus two arms x two seeds x fresh 6M confirmation",
+      "million_tokens": 30,
+      "chain_equivalent_hours": 41.90375471130321
+    },
+    {
+      "case": "Same two arms, resume both seed17 screens 3M->6M and fresh two seed42 6M",
+      "million_tokens": 24,
+      "chain_equivalent_hours": 33.52300376904257
+    },
+    {
+      "case": "Two 3M screens, then selected arm seed17 3M->6M and selected arm seed42 6M",
+      "million_tokens": 15,
+      "chain_equivalent_hours": 20.951877355651604
+    }
+  ],
+  "warning": "Historical chain-runtime extrapolation only; not a TreeRL throughput benchmark. Excludes evaluation, GPU queueing and engineering. Tree training/PRM input tokens must be measured separately."
+}

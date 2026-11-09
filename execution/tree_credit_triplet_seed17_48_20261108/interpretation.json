@@ -1,0 +1,92 @@
+{
+  "post_hoc_descriptive_only": true,
+  "no_training_or_regeneration": true,
+  "arms": {
+    "tree_vr": {
+      "roots": 384,
+      "fallback_roots": 277,
+      "fallback_rate": 0.7213541666666666,
+      "nonempty_forks": 107,
+      "forks_at_least32_tokens": 60,
+      "forks_at_least32_tokens_fraction_of_all_roots": 0.15625,
+      "unique_vs_expanded_token_saving_fraction": 0.05264862158392436,
+      "walltime_ratio_to_chain": 1.6367179711306965,
+      "counts": {
+        "answer_correct_leaves": 782,
+        "answer_correct_leaves_empty_prefix": 591,
+        "answer_correct_leaves_nonempty_prefix": 191,
+        "answer_correct_leaves_prefix_at_least32_tokens": 122
+      },
+      "fallback_examples": [
+        {
+          "problem_id": "math/train/geometry/672",
+          "prefix_length": 0,
+          "first_answer_marker_token_position": 1,
+          "root_total_tokens": 259,
+          "completion_start": " \\boxed{(6,1)}\n\nTo find the coordinates of the point where the diagonals of a parallelogram intersect, we can use the fact that the diagonals of a parallelogram bisect each other. This means the intersection point is the midpoint of both diagonals.\n\nGiven the opposite vertices of the parallelogram \\((1, -5)\\) and \\((11, 7)\\), we can calculate the midpoint using the midpoint formula:\n\n\\[\n\\text{Midpoint} = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_"
+        },
+        {
+          "problem_id": "math/train/number_theory/377",
+          "prefix_length": 0,
+          "first_answer_marker_token_position": 1,
+          "root_total_tokens": 382,
+          "completion_start": " \\boxed{.}\n\nLet's identify and sum up all the two-digit prime numbers less than 50 that are palindromic. Palindromic primes less than 50 are: 11, 13, 17, 31, 37.\n\nApproach:\n1. Identify all two-digit prime numbers less than 50.\n2. Check which of these prime numbers are palindromic.\n3. Filter out the numbers that are greater than or equal to 50 if not to sum up only the ones less than 50.\n\nLet's use Python to determine the sum of all such palindrom"
+        },
+        {
+          "problem_id": "math/train/number_theory/377",
+          "prefix_length": 0,
+          "first_answer_marker_token_position": 1,
+          "root_total_tokens": 171,
+          "completion_start": " \\boxed{} Palindromic primes are two-digit prime numbers such that the number formed when the digits are reversed is also prime. The only primes with the characteristics of palindrome primes less than 50 are: {11, 13, 17, 31, 37, 71, 73, 79, 97}\nNow, we take out the numbers not prime, we get: 11, 13, 17, 31, 71, 73\nAmong the final 6 numbers, we note that 71 is a palindromic prime because 71 and 17 are prime. Then, by adding the remaining numbers,"
+        }
+      ]
+    },
+    "tree_cb": {
+      "roots": 384,
+      "fallback_roots": 264,
+      "fallback_rate": 0.6875,
+      "nonempty_forks": 120,
+      "forks_at_least32_tokens": 73,
+      "forks_at_least32_tokens_fraction_of_all_roots": 0.19010416666666666,
+      "unique_vs_expanded_token_saving_fraction": 0.06366874400066269,
+      "walltime_ratio_to_chain": 1.518279724651139,
+      "counts": {
+        "answer_correct_leaves": 823,
+        "answer_correct_leaves_empty_prefix": 579,
+        "answer_correct_leaves_nonempty_prefix": 244,
+        "answer_correct_leaves_prefix_at_least32_tokens": 146,
+        "answer_correct_leaves_positive_outcome_reversed_by_process": 1,
+        "reversed_suffix_tokens": 378
+      },
+      "fallback_examples": [
+        {
+          "problem_id": "math/train/geometry/672",
+          "prefix_length": 0,
+          "first_answer_marker_token_position": 1,
+          "root_total_tokens": 259,
+          "completion_start": " \\boxed{(6,1)}\n\nTo find the coordinates of the point where the diagonals of a parallelogram intersect, we can use the fact that the diagonals of a parallelogram bisect each other. This means the intersection point is the midpoint of both diagonals.\n\nGiven the opposite vertices of the parallelogram \\((1, -5)\\) and \\((11, 7)\\), we can calculate the midpoint using the midpoint formula:\n\n\\[\n\\text{Midpoint} = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_"
+        },
+        {
+          "problem_id": "math/train/number_theory/377",
+          "prefix_length": 0,
+          "first_answer_marker_token_position": 1,
+          "root_total_tokens": 808,
+          "completion_start": " \\boxed{.}\n\nLet's identify and sum up all the two-digit prime numbers less than 50 that are palindromic. Palindromic primes less than 50 are: 11, 13, 17, 31, 37.\n\nApproach:\n1. Identify all two-digit prime numbers less than 50.\n2. Check which of these prime numbers are palindromic.\n3. Filter out the numbers that are greater than or equal to 50 if not to sum up only the ones less than 50.\n\nLet's use Python to determine the sum of all such palindrom"
+        },
+        {
+          "problem_id": "math/train/number_theory/377",
+          "prefix_length": 0,
+          "first_answer_marker_token_position": 1,
+          "root_total_tokens": 171,
+          "completion_start": " \\boxed{} Palindromic primes are two-digit prime numbers such that the number formed when the digits are reversed is also prime. The only primes with the characteristics of palindrome primes less than 50 are: {11, 13, 17, 31, 37, 71, 73, 79, 97}\nNow, we take out the numbers not prime, we get: 11, 13, 17, 31, 71, 73\nAmong the final 6 numbers, we note that 71 is a palindromic prime because 71 and 17 are prime. Then, by adding the remaining numbers,"
+        }
+      ]
+    }
+  },
+  "interpretation_limits": [
+    "A32-token prefix is a coverage descriptor, not a mathematical-validity label or tuned branch threshold.",
+    "First boxed output can precede substantial reasoning; masking at its first token prevents meaningful later forks in this fixed protocol.",
+    "Tree changes sampling, dependency structure and credit scale; coverage/cost statistics do not establish the cause of accuracy differences.",
+    "Original NumPy20k secondary tree_vr interval ends at-0.2pp; independent stdlib20k ends at0.0pp. Exact McNemar p0.065; do not claim a robust significant loss from that boundary."
+  ]
+}

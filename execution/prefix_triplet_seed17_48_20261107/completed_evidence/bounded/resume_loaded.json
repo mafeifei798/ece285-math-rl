@@ -1,0 +1,6 @@
+{
+  "adapter_exact": true,
+  "source_step": 288,
+  "optimizer_exact": true,
+  "scheduler_exact": true
+}

@@ -4,7 +4,7 @@
 初始模型与当前1M A复用execution/final_four_eval_20261029的已验收预测。
 无训练、PRM打分、提示或验答修改、checkpoint选择、额外seed或自动任务。
 
-远端项目：/srv/research/ece285_math_rl_project
+远端项目：/path/to/ece285_math_rl_project
 源代码：experiments/a6m_protocol_recheck_20261029
 运行：runs/A6M_protocol_recheck_20261029
 审计：audits/A6M_protocol_recheck_20261029

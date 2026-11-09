@@ -1,0 +1,48 @@
+{
+  "source_release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78",
+  "dataset": "validation",
+  "dataset_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+  "seed": 285,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": -1,
+  "max_tokens": 2048,
+  "max_model_len": 4096,
+  "batch_size": 64,
+  "max_num_seqs": 64,
+  "max_num_batched_tokens": 4096,
+  "gpu_memory_utilization": 0.15,
+  "dtype": "bfloat16",
+  "enable_lora": true,
+  "max_lora_rank": 16,
+  "max_loras": 1,
+  "max_cpu_loras": 4,
+  "enforce_eager": true,
+  "engine": "V1",
+  "prompt": "unchanged prepared prompt",
+  "verifier": "reward-repair-v3-20261021",
+  "repair_sha256": "df8ac0198652a81a90e70979a6b48b5111dc15ba19edc041411d776657020da3",
+  "unit_metadata_sha256": "1eba61aa8a4b8a48644469d05a242e4862072c6a4b5e21b7c5b80a1023c2fb9e",
+  "adapters": {
+    "source": {
+      "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+      "sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+      "id": 1
+    },
+    "chain_cb": {
+      "path": "/path/to/ece285_math_rl_project/runs/Tree_credit_triplet_seed17_48_20261108/chain_cb/checkpoint-336",
+      "sha256": "96929a85f472fe099a4c5f2ca1277d2085309c86370ede10dda0ea765bec29f3",
+      "id": 2
+    },
+    "tree_vr": {
+      "path": "/path/to/ece285_math_rl_project/runs/Tree_credit_triplet_seed17_48_20261108/tree_vr/checkpoint-336",
+      "sha256": "09df15f168afe85af0d79cb797dc102be5d17948ca3aafb8efd29f1ff6e8ce04",
+      "id": 3
+    },
+    "tree_cb": {
+      "path": "/path/to/ece285_math_rl_project/runs/Tree_credit_triplet_seed17_48_20261108/tree_cb/checkpoint-336",
+      "sha256": "e058ccfe2b1f334c923c987fa1cfbbc2bdf428fe6b1cce39515e82286b665bb3",
+      "id": 4
+    }
+  }
+}

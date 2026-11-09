@@ -2,7 +2,7 @@
   "version": "2.6-importance-and-prespecified-replication-gate",
   "date": "2026-10-20",
   "status": "Document-only amendment; A/17 continuation was previously launched, live status not refreshed; no B/C/D runs or PRM adaptation launched in this review",
-  "execution_root": "/srv/research/ece285_math_rl_project",
+  "execution_root": "/path/to/ece285_math_rl_project",
   "execution_contract": "Immutable original training/baseline_config.json plus explicit operations/continuation_24m.json; continuation receipts under runs/A_seed17_24M",
   "supersedes_execution_scope": "protocol.json version 1.0 online adaptation",
   "title": "Asymmetric Offline Process-Reward Adaptation for Mathematical RL",

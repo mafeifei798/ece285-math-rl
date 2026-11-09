@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "source_files_verified": 14,
+  "training_rows": 36864,
+  "test_prediction_rows": 7276,
+  "twenty_selected_samples_exact": true,
+  "distinct_sampled_questions": 19,
+  "qualitative_categories": {
+    "off_question_continuation": 8,
+    "on_question_failed_or_unfinished": 9,
+    "literal_loop": 3
+  },
+  "remote_writes": false,
+  "GPU_work": false,
+  "source_hashes_unchanged": true,
+  "scope": "CPU descriptive audit only; no model update, new scoring, or claimed counterfactual accuracy gain.",
+  "files": {
+    "audit.json": "781129a49c842b69965d2e80cc9a1055485f87dc3a60efb7c6237bbf98b4a3c2",
+    "fetch_samples.py": "600f928580db063f624d7d91dac2d63bb290459bab3ddb69e53d8d1896362ccf",
+    "audit_existing.py": "a52c63ce4128bf2002778fff33e1dbb1bd1847d4cc76f2bcc9543cc163a89390",
+    "REPORT.txt": "e2948dd028147bb6555e2fb08f2cad40ec687e9559d8d227cf3b918d2364640d",
+    "training_samples.json": "514ec8db0d1407e3ac67190a36cc14961ddeaf602fec823cd34bbcf70903bb3b",
+    "qualitative_annotations.json": "f0bc46cba60f8e130661784d0a4865d5bf4cbf7b710d2c2309cf64b3cd83f1cd",
+    "sample_retrieval_receipt.json": "8453cd9ad95b81a65621ad5f40775ca746090ee7ed87b606c297b6d512302aa6"
+  }
+}

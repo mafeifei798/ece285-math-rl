@@ -1,0 +1,5 @@
+{
+  "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/A/checkpoint-288",
+  "global_step": 288,
+  "checkpoint_contract_sha256": "d5674fc1dd152fa8c4bae0d220593d2dae251021477088698b74c1dc59414544"
+}

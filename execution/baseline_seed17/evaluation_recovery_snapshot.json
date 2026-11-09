@@ -1,6 +1,6 @@
 {
   "checked_utc": "2026-10-21T02:21:51.100686+00:00",
-  "remote_root": "/srv/research/ece285_math_rl_project",
+  "remote_root": "/path/to/ece285_math_rl_project",
   "training": {
     "status": "completed",
     "pid": 1145046,
@@ -61,13 +61,13 @@
     "source": "https://www.python.org/ftp/python/3.11.11/Python-3.11.11.tar.xz",
     "source_sha256": "2a9920c7a0cd236de33644ed980a13cbbc21058bfdc528febb6081575ed73be3",
     "include_paths": [
-      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
-      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
+      "/path/to/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
+      "/path/to/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
     ],
     "configure_only_no_make_or_install": true,
     "runtime_and_python_packages_changed": false,
     "created_unix": 1792548973.5872772,
-    "configure_log": "/srv/research/ece285_math_rl_project/logs/python_headers_configure.log",
+    "configure_log": "/path/to/ece285_math_rl_project/logs/python_headers_configure.log",
     "prior_apt_download": "404; no package installed"
   },
   "initial_evaluation": {

@@ -5,9 +5,9 @@
   "headers_version": "3.11.18",
   "runtime_version": "3.11.11 (main, Dec  4 2024, 08:55:07) [GCC 11.4.0]",
   "ABI": "CPython3.11; header-only extension compile/load probe passed",
-  "CPATH": "/srv/research/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include/python3.11:/srv/research/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include",
+  "CPATH": "/path/to/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include/python3.11:/path/to/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include",
   "system_python_or_packages_changed": false,
   "only_extracted_into_project": true,
-  "probe": "HEADER_VERSION_HEX 0x30b12f0\nPROBE_BINARY /srv/research/ece285_math_rl_project/cache/pilot_v2/triton/VCI3VT47H2THYHFU6OOM5I7YLEIAH5FQ6I5UTUQYCBXY66VWA5DA/ece285_py311_header_probe.cpython-311-x86_64-linux-gnu.so\n",
+  "probe": "HEADER_VERSION_HEX 0x30b12f0\nPROBE_BINARY /path/to/ece285_math_rl_project/cache/pilot_v2/triton/VCI3VT47H2THYHFU6OOM5I7YLEIAH5FQ6I5UTUQYCBXY66VWA5DA/ece285_py311_header_probe.cpython-311-x86_64-linux-gnu.so\n",
   "unix": 1793266583.7860487
 }

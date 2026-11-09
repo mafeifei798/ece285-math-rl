@@ -4,7 +4,7 @@
   "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
   "protocol_sha256": "f8137b55c60b95613ef09bf36e749a871b305dad674013c38896a4801fed72c4",
   "settings": {
-    "output_dir": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix",
+    "output_dir": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix",
     "overwrite_output_dir": false,
     "do_train": false,
     "do_eval": false,
@@ -34,7 +34,7 @@
     "log_level": "passive",
     "log_level_replica": "warning",
     "log_on_each_node": true,
-    "logging_dir": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/tensorboard",
+    "logging_dir": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/tensorboard",
     "logging_strategy": "steps",
     "logging_first_step": true,
     "logging_steps": 1,

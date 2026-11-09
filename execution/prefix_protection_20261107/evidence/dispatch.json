@@ -1,0 +1,10 @@
+{
+  "pid": 2326885,
+  "create_time": 1794053940.18,
+  "unix": 1794053940.6708918,
+  "gpu": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 81152",
+  "scope": "two_phase_no_update_validation",
+  "optimizer_steps": 0,
+  "attempt": 4,
+  "previous_failure_preserved": "/path/to/ece285_math_rl_project/audits/prefix_protection_20261107/attempt3"
+}

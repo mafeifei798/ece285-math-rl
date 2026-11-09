@@ -1,14 +1,14 @@
 {
   "pid": 464098,
-  "controller": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023",
+  "controller": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_pair_pilot_seed17_20261023",
   "command": [
-    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
     "-B",
     "-u",
-    "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/controller.py",
+    "/path/to/ece285_math_rl_project/experiments/pure_openrlhf_pilot_20261023/controller.py",
     "--authorized-pilot"
   ],
-  "log": "/srv/research/ece285_math_rl_project/audits/PURE_OpenRLHF_pilot_20261023/controller.log",
+  "log": "/path/to/ece285_math_rl_project/audits/PURE_OpenRLHF_pilot_20261023/controller.log",
   "launched_unix": 1792746389.4718363,
   "release_sha256": "4c1a34c885dfe108bf6e155025a7a853a74bcb32336937e043196b287b0c01f4",
   "pilot_preflight_sha256": "00301c23060cd228b876649617c53d2f5472bca8fd03a12f39baa16fb48aaf8b",

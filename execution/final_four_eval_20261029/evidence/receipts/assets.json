@@ -1,7 +1,7 @@
 {
   "model_id": "Qwen/Qwen2.5-Math-1.5B",
   "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-  "model_path": "/srv/research/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
+  "model_path": "/path/to/ece285_math_rl_project/models/Qwen2.5-Math-1.5B/4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
   "download_endpoint": "https://hf-mirror.com",
   "started_unix": 1792536369.4881895,
   "files": {
@@ -57,7 +57,7 @@
   },
   "prm800k_audit": {
     "commit": "7ecc794703b2877f63226f2477a49b34f9b25163",
-    "path": "/srv/research/ece285_math_rl_project/data/raw/prm800k_train_questions.jsonl",
+    "path": "/path/to/ece285_math_rl_project/data/raw/prm800k_train_questions.jsonl",
     "sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076",
     "lfs_sha256": "90d96daeac3fe343ebb1e22ce93dd99690f75983e957f88de42f87cffe1e8076",
     "question_count": 12000

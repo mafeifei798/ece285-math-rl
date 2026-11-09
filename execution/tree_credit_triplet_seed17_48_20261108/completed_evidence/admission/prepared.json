@@ -1,0 +1,10 @@
+{
+  "prepared": true,
+  "GPU_started": false,
+  "source": "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108",
+  "run": "/path/to/ece285_math_rl_project/runs/Tree_credit_triplet_seed17_48_20261108",
+  "audit": "/path/to/ece285_math_rl_project/audits/Tree_credit_triplet_seed17_48_20261108",
+  "files": 15,
+  "protected_files": 2190,
+  "release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78"
+}

@@ -1,0 +1,112 @@
+数学推理 RL 算法改进评估｜2026-11-07
+本次只做原始论文阅读、源代码核对、现有数据的 CPU 分析和保存权重的 CPU 数值回放。
+没有启动训练、模型生成、GPU 任务；没有修改原 A/B/C/D 的代码、奖励、loss 或结果。
+
+结论
+继续以 C-bounded 为主线。唯一优先试验：混合组错误回答的前缀保护。
+先验证 LoRA 同步数值一致性，再实现独立 token-advantage 版本；不要同时做学习率扫、全错负奖励和提示重采样。
+这是一项有文献根据的小改动，不宣称首错定位是新算法，也不预设准确率上涨。
+
+已核实的现状
+seed17 各 288 次更新：A MATH500 53.0%、GSM8K 66.87%；C-mix 54.0%、67.70%；C-bounded 57.8%、69.37%。
+这对应约 6M 生成 token，不是精确相等的 token 数。主比较仍按既定 seed17；已有 seed42 保留为补充，不因本建议追加 seed。
+实际 LoRA rank16、alpha32、LR=5e-6、KL beta=.04；不是默认 1e-6。
+PRPO 的 61.2% 是不同训练设置下的结果，不能作为本实验训练不足的直接证据。其原文为 batch128、8 H200、beta=.001、LR1e-6 等设置。
+当前 C-bounded：A_out=(y-mean(y))/(sample_std(y)+1e-4)，A_proc=.2*y*(m-mean_correct(m))，A=A_out+A_proc。
+全错组 outcome/process 优势都是零，但 KL 项仍可产生梯度，不能说完全没有训练梯度。
+
+现有 rollout 的真实统计（每臂 9216 回答，1152 题组）
+                混合组       全错组       全对组
+A               906          224          22
+C-mix           903          212          37
+C-bounded       893          218          41
+C-bounded：77.52% 混合、18.92% 全错、3.56% 全对。
+5296 条错误回答中，3719 条有 PRM 步骤分数，1577 条未评分：截断546、缺失/无效答案框908、不可解析123。
+未评分不等于 PRM 判断每一步为零，也不能据此定位数学首错。
+固定阈值 .8（取自 VPPO，而不是根据本次准确率挑选）下：
+  有评分错答：首步低分2013；首个低分在后续步骤1618；没有低分88。
+  混合组有评分错答2395条，其中1076条（44.93%）可改变前缀信号，1248条首步即低分，71条无低分。
+1076条占全部9216条回答的11.68%；这不是1076条人工确认的正确前缀。
+
+首错判断可靠性（已有 ProcessBench MATH 诊断子集，非新盲测）
+192条包含64条过程有效、64条答对但过程错误、64条答错且过程错误。
+在后面64条答错样本上，C PRM、阈值.8：准确定位44、过早17、偏晚2、未检出1。
+40条会得到非空受保护前缀，其中2条含真实错误（5%）；样本很小、且此前已看过，不能外推为在线真实错误率。
+在全部128条过程错误样本上：准确88、过早31、偏晚4、未检出5。
+这里只复核机制；不把此前使用过的子集包装成阈值调优后的独立测试集。
+
+必须先处理的数值核验
+实际安装的 TRL 0.23.1 _move_model_to_vllm 会在 actor 上 merge_adapter、将权重交给 vLLM、再 unmerge_adapter。
+actor 基座是 BF16，保存的 LoRA A/B 是 FP32；最终评测则使用 vLLM LoRARequest。
+CPU 用原始基座和最终 checkpoint，对 A/C-bounded 各两个矩阵（第0层q_proj、gate_proj）各做一次同样的加减：
+非零 delta 在合并后变为零的元素比例88.6%–93.1%；合并 delta 相对误差 RMS .88–.92；拆除后约.116%–.197%基座元素与原值不同。
+这不是“训练梯度丢了90%”，也不是实际logits误差或历次训练基座漂移的测量。CPU矩阵乘法与GPU也可能不同。
+它确认舍入存在，尚未确认准确率影响。不能据此撤销已有结果，也不该通过盲目调大学习率掩盖。
+建议下一步：独立无更新联调，固定同一checkpoint/输入/token，比较HF原生LoRA、训练现有merged采样路径、vLLM原生LoRA的token logprob与行为；同步前后校验基座hash。
+若需改变同步路径，优先避免修改actor基座，并用原生LoRA传递增量；只用FP32算完再转BF16仍不能消除最终合并舍入。
+若新路径改变实际训练行为，新方法必须和同路径C-bounded配对；旧结果保留历史基线，不能单臂修复后直接作因果对比。
+
+推荐的唯一首轮算法：C-bounded + prefix protection
+1. 正确回答：C-bounded 完全不变。
+2. 混合组中的错误回答：仅对完整且已有合法PRM评分的回答，用固定.8寻找首个低分步骤。
+3. 找到第k步：第k步之前的token policy advantage置零，第k步及以后保留原负outcome advantage。
+4. 首步低分、没找到低分、截断、缺答案框或分段/token对齐失败：回退原C-bounded，不猜“最后一步出错”。
+5. 全错组：保持原零policy advantage，不新增固定-c。KL保留。
+6. 不对token advantage再做均值/标准差归一化，不改变clipping、KL、原响应长度分母和padding/EOS mask。
+7. 分段必须使用当前修复过CRLF的规则；对原始生成token建立严格边界映射，不能通过另一次重新编码伪装原token位置。
+8. 所有失败回退明确计数；protected prefix是PRM估计，不写成verified mathematical prefix。
+数学目标：减少最终错答对正确早期推理的负向更新，同时保留错误后缀的负向更新。它改变credit assignment，不增加外部题目/参考解/采样量。
+不承诺无投机：较长免罚前缀可能稀释按长度平均后的惩罚，错误定位也会保护真实错误。没有正优势不意味着每个token概率一定下降（共享参数和KL也影响参数更新）。
+
+重要机制对照
+仅比较前缀保护与C-bounded，不能分清“定位正确”与“总惩罚变弱”。
+增加一个必要对照：对同一条将被mask的错答，把整条负优势均匀乘以“保留后缀token数/总有效token数”。
+这个对照保留相同的逐样本优势绝对值总量，但不使用局部位置。它匹配的是系数质量，不是实际梯度向量。
+先做CPU回放和无更新对齐；训练阶段三臂为原C-bounded、均匀减弱、前缀保护，除该项外一致。
+若前缀保护只胜原C-bounded却不胜均匀减弱，不能声称数学首错定位带来独立收益。
+
+全错组固定-c暂不纳入
+它是在添加新的、没有组内正确参照的负训练目标，不是原GRPO的直接等价形式；并且缺少“最后一步就是首错”的依据。
+它可能有用，但同时做会无法解释收益来自保护前缀还是新增负样本目标。
+.2作为现有正确样本过程项上限，也不是全错样本负优势取-.2的理论依据。
+
+为什么暂不同时做参考前缀重采样
+QuestA/Scaf-GRPO提供了实证根据，是合理备选，但不是少量代码就能与旧基线无条件公平比较。
+现有prepared/train.jsonl没有参考解全文，需要重新关联原训练解答并审计来源；不能直接取测试答案做hint。
+额外采样必须计成本：若保持题序/更新次数会多花token；若严格固定总token则会少做更新，不能同时声称两者都匹配。
+只改带提示的条件分布也不保证无提示泛化；测试必须保持无提示。
+QuestA v1用固定50%提示；v4用50%到25%阶段，并包含难题筛选、动态过滤、较长生成和不同基础模型。用户材料混用了旧结果与较新流程。
+在当前已明确约77.5%混合组的情况下，优先测试现有PRM的信用分配，不同时引入数据/探索的新变量。
+
+执行与成本边界
+本次尚未写入训练runtime，尚未启动任何新训练。
+第一步是已完成的CPU核查；下一步是无更新数值/对齐联调，而不是三个学习率×两条路线×两个seed铺开训练。
+若同步路径保持不变，旧基线可作共同协议下参考；若同步路径需修复，至少重做匹配的C-bounded短对照，不能声称完全不用重跑baseline。
+节省预算的设计是从同一个已保存C-bounded checkpoint分叉，做相同新增更新次数的三臂；这测试后续继续训练的增益，不能称为从初始模型的完整6M算法比较。
+每臂先设48次新增更新（约1M，实际token另计），只看既有验证集；机制和验证指标没有一致改善就停止扩展。选定方案才考虑更长对照。
+筛选增加噪声风险，单seed短试不能证明稳定收益。不要把MATH500反复用于挑阈值或学习率，也不要把已多次查看的测试集称为最终首次测试。
+预算采用实测吞吐：已有seed42约6M训练A2.28h、C-bounded2.50h，整体含评测约6.59h；共享负载与不同阶段可显著增加耗时。
+15–20 GPU小时不是本次实测总预算承诺；无更新联调后再根据当前共享负载估算。
+
+文献核对（原始来源）
+VPPO: Save the Good Prefix, https://arxiv.org/html/2601.18984v1
+  同样Qwen2.5-Math-PRM-7B首错阈值.8，但会给错误轨迹的前缀正奖励；已专门研究step inflation及shorten-prefix，不能说只是future work。
+Cliff: https://arxiv.org/html/2609.02817v1
+  使用更强LLM教师，先验证教师参考解，再定位错误；不是直接证明现有小判别式PRM达到同样可靠性。
+SCOPE (Step-wise Correction for On-Policy Exploration): https://arxiv.org/abs/2602.24110
+  除定位之外还做off-policy步骤修复，不是仅把全错组变成负信号；与多个同名SCOPE工作区分。
+GTPO (Simoni et al.): https://arxiv.org/abs/2508.03772
+  对齐不同回答的冲突token、关闭负向并强化正向更新；冲突token不是经验证的数学首错。
+QuestA v4: https://arxiv.org/html/2507.13266v4
+  官方代码 https://github.com/foreverlasting1202/QuestA
+Scaf-GRPO: https://arxiv.org/abs/2510.19807
+  官方代码 https://github.com/JIA-Lab-research/Scaf-GRPO
+PRPO: https://arxiv.org/html/2601.07182v3
+TRL现有同步代码: https://github.com/huggingface/trl/blob/v0.23.1/trl/trainer/grpo_trainer.py
+
+证据与复现
+remote_cpu_audit.json：现有完整rollout的SHA256、分组、首低分覆盖、4个权重矩阵CPU回放。
+inspect_cpu_remote.py：只读远端CPU脚本，CUDA_VISIBLE_DEVICES为空，无训练或生成；stdout保存为上面的JSON。
+installed_trl_source.json：本次读取的远端实际TRL源文件hash与完整同步函数。
+processbench_audit.json、audit_processbench.py：已有步骤分数与人工首错标签的CPU重算。
+所有新文件仅放在本独立目录；旧实验不动。

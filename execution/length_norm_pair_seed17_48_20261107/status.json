@@ -1,0 +1,1217 @@
+{
+  "unix": 1794135823.9228153,
+  "controller": {
+    "stage": "complete",
+    "pid": 3240355,
+    "unix": 1794135414.2299023,
+    "active_child": null,
+    "children": [
+      {
+        "stage": "no_update_header_recovered",
+        "pid": 3240362,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/smoke_no_update.py"
+        ],
+        "started_unix": 1794122820.1199105,
+        "exit_code": 0,
+        "finished_unix": 1794122941.6098342
+      },
+      {
+        "stage": "train_grpo",
+        "pid": 3242362,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/train_arm.py",
+          "--arm",
+          "grpo"
+        ],
+        "started_unix": 1794122941.6568184,
+        "exit_code": 0,
+        "finished_unix": 1794128234.7949321
+      },
+      {
+        "stage": "train_fixed_length",
+        "pid": 3312711,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/train_arm.py",
+          "--arm",
+          "fixed_length"
+        ],
+        "started_unix": 1794128235.2347143,
+        "exit_code": 0,
+        "finished_unix": 1794133213.6370695
+      },
+      {
+        "stage": "validation",
+        "pid": 3380033,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/evaluate.py"
+        ],
+        "started_unix": 1794133213.9323206,
+        "exit_code": 0,
+        "finished_unix": 1794135402.4786057
+      },
+      {
+        "stage": "analysis",
+        "pid": 3407015,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/analyze.py"
+        ],
+        "started_unix": 1794135402.4829144,
+        "exit_code": 0,
+        "finished_unix": 1794135414.2289402
+      }
+    ],
+    "header_environment_recovery": true,
+    "comparison": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107/comparison.json"
+  },
+  "launch": {
+    "pid": 3236854,
+    "create_time": 1794122517.1,
+    "unix": 1794122517.5904586,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/controller.py"
+    ],
+    "release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150",
+    "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+    "authorized_updates_per_arm": 48,
+    "seed": 17,
+    "CPU_and_real_model_no_update_gates_required": true,
+    "automatic_expansion": false
+  },
+  "recovery_launch": {
+    "pid": 3240355,
+    "create_time": 1794122819.27,
+    "unix": 1794122819.758167,
+    "command": [
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
+      "-B",
+      "-u",
+      "/path/to/ece285_math_rl_project/experiments/length_norm_header_recovery_20261107/controller.py"
+    ],
+    "change": "Add existing verified project-local CPATH only",
+    "prior_training_updates": 0,
+    "prior_emitted_training_batches": 0,
+    "initial_release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150",
+    "recovery_controller_sha256": "9363dff56c5766a950a19cc5681265bc179f717c1103e85626e5972a5138ec87",
+    "original_failure_preserved": true,
+    "same48_updates_per_arm": true,
+    "same_model_reward_loss_seed_budget": true
+  },
+  "preflight": {
+    "passed": true,
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+    "source_contract": {
+      "arm": "C_bounded",
+      "global_step": 288,
+      "actor_adapter_digest": "1734da9cf0b9642e1be2cfef5ca36072dc07ef568a893dca9100b015975bdebf",
+      "accounting_sha256": "9339b84925e2273021946245b98c9b5a5e9c9176725a6a7b044412375a8a2802",
+      "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba",
+      "complete_generation_boundary": true,
+      "files_sha256": {
+        "adapter_model.safetensors": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+        "optimizer.pt": "5acce471a2c25e49d90ca4f4a3ab4448a4a8f8779207038c58139be031adac24",
+        "scheduler.pt": "206c97a06f7e8c8e8410cfc838fd897e9765af302b84c1f4b89868f0858fbc6e",
+        "rng_state.pth": "d3941657086b1a12c98f2665bf21b6ecf3d9e36f313467439b068d1d5bfcc700",
+        "trainer_state.json": "b677a4fb39b048f152f412b12018f153b84af5a57436ef94b4cb4e70ad65d49f"
+      }
+    },
+    "question_groups": [
+      [
+        "math/train/geometry/672",
+        "math/train/number_theory/377",
+        "math/train/algebra/395",
+        "math/train/precalculus/533"
+      ],
+      [
+        "math/train/intermediate_algebra/796",
+        "math/train/prealgebra/250",
+        "math/train/geometry/483",
+        "math/train/algebra/788"
+      ],
+      [
+        "math/train/precalculus/362",
+        "math/train/prealgebra/156",
+        "math/train/algebra/1612",
+        "math/train/intermediate_algebra/166"
+      ],
+      [
+        "math/train/algebra/1269",
+        "math/train/number_theory/743",
+        "math/train/geometry/279",
+        "math/train/geometry/700"
+      ],
+      [
+        "math/train/number_theory/735",
+        "math/train/prealgebra/770",
+        "math/train/geometry/821",
+        "math/train/intermediate_algebra/977"
+      ],
+      [
+        "math/train/geometry/346",
+        "math/train/precalculus/317",
+        "math/train/number_theory/793",
+        "math/train/geometry/490"
+      ],
+      [
+        "math/train/counting_and_probability/754",
+        "math/train/precalculus/636",
+        "math/train/precalculus/573",
+        "math/train/geometry/847"
+      ],
+      [
+        "math/train/geometry/66",
+        "math/train/number_theory/445",
+        "math/train/precalculus/744",
+        "math/train/algebra/634"
+      ],
+      [
+        "math/train/algebra/678",
+        "math/train/prealgebra/455",
+        "math/train/precalculus/171",
+        "math/train/prealgebra/126"
+      ],
+      [
+        "math/train/number_theory/667",
+        "math/train/precalculus/737",
+        "math/train/algebra/1632",
+        "math/train/intermediate_algebra/571"
+      ],
+      [
+        "math/train/geometry/825",
+        "math/train/prealgebra/269",
+        "math/train/intermediate_algebra/988",
+        "math/train/algebra/557"
+      ],
+      [
+        "math/train/intermediate_algebra/397",
+        "math/train/prealgebra/45",
+        "math/train/number_theory/406",
+        "math/train/geometry/154"
+      ],
+      [
+        "math/train/intermediate_algebra/1072",
+        "math/train/geometry/495",
+        "math/train/intermediate_algebra/1160",
+        "math/train/geometry/428"
+      ],
+      [
+        "math/train/algebra/904",
+        "math/train/geometry/222",
+        "math/train/number_theory/447",
+        "math/train/number_theory/733"
+      ],
+      [
+        "math/train/intermediate_algebra/740",
+        "math/train/counting_and_probability/100",
+        "math/train/intermediate_algebra/801",
+        "math/train/precalculus/281"
+      ],
+      [
+        "math/train/algebra/538",
+        "math/train/counting_and_probability/469",
+        "math/train/number_theory/472",
+        "math/train/algebra/1460"
+      ],
+      [
+        "math/train/precalculus/179",
+        "math/train/algebra/173",
+        "math/train/prealgebra/762",
+        "math/train/prealgebra/283"
+      ],
+      [
+        "math/train/prealgebra/403",
+        "math/train/number_theory/494",
+        "math/train/intermediate_algebra/1208",
+        "math/train/algebra/105"
+      ],
+      [
+        "math/train/algebra/6",
+        "math/train/intermediate_algebra/866",
+        "math/train/algebra/99",
+        "math/train/intermediate_algebra/349"
+      ],
+      [
+        "math/train/algebra/939",
+        "math/train/algebra/1551",
+        "math/train/prealgebra/1024",
+        "math/train/algebra/456"
+      ],
+      [
+        "math/train/intermediate_algebra/1028",
+        "math/train/precalculus/244",
+        "math/train/counting_and_probability/634",
+        "math/train/geometry/221"
+      ],
+      [
+        "math/train/counting_and_probability/619",
+        "math/train/number_theory/68",
+        "math/train/prealgebra/401",
+        "math/train/intermediate_algebra/1289"
+      ],
+      [
+        "math/train/counting_and_probability/569",
+        "math/train/algebra/553",
+        "math/train/number_theory/500",
+        "math/train/algebra/1147"
+      ],
+      [
+        "math/train/algebra/87",
+        "math/train/intermediate_algebra/1125",
+        "math/train/geometry/518",
+        "math/train/geometry/319"
+      ],
+      [
+        "math/train/intermediate_algebra/1083",
+        "math/train/algebra/1138",
+        "math/train/algebra/1265",
+        "math/train/geometry/347"
+      ],
+      [
+        "math/train/intermediate_algebra/181",
+        "math/train/precalculus/515",
+        "math/train/number_theory/550",
+        "math/train/algebra/1489"
+      ],
+      [
+        "math/train/geometry/331",
+        "math/train/precalculus/690",
+        "math/train/prealgebra/426",
+        "math/train/intermediate_algebra/1156"
+      ],
+      [
+        "math/train/precalculus/704",
+        "math/train/geometry/30",
+        "math/train/geometry/366",
+        "math/train/prealgebra/649"
+      ],
+      [
+        "math/train/geometry/298",
+        "math/train/algebra/150",
+        "math/train/number_theory/462",
+        "math/train/intermediate_algebra/1207"
+      ],
+      [
+        "math/train/intermediate_algebra/50",
+        "math/train/counting_and_probability/361",
+        "math/train/prealgebra/241",
+        "math/train/prealgebra/733"
+      ],
+      [
+        "math/train/number_theory/343",
+        "math/train/prealgebra/1189",
+        "math/train/precalculus/504",
+        "math/train/intermediate_algebra/971"
+      ],
+      [
+        "math/train/intermediate_algebra/232",
+        "math/train/algebra/286",
+        "math/train/number_theory/518",
+        "math/train/algebra/591"
+      ],
+      [
+        "math/train/prealgebra/273",
+        "math/train/algebra/777",
+        "math/train/number_theory/71",
+        "math/train/prealgebra/21"
+      ],
+      [
+        "math/train/algebra/763",
+        "math/train/algebra/575",
+        "math/train/number_theory/259",
+        "math/train/algebra/565"
+      ],
+      [
+        "math/train/intermediate_algebra/990",
+        "math/train/number_theory/329",
+        "math/train/prealgebra/573",
+        "math/train/intermediate_algebra/991"
+      ],
+      [
+        "math/train/geometry/39",
+        "math/train/intermediate_algebra/428",
+        "math/train/algebra/716",
+        "math/train/number_theory/183"
+      ],
+      [
+        "math/train/precalculus/379",
+        "math/train/prealgebra/498",
+        "math/train/geometry/96",
+        "math/train/counting_and_probability/35"
+      ],
+      [
+        "math/train/prealgebra/685",
+        "math/train/geometry/223",
+        "math/train/algebra/474",
+        "math/train/algebra/1596"
+      ],
+      [
+        "math/train/prealgebra/145",
+        "math/train/geometry/535",
+        "math/train/prealgebra/262",
+        "math/train/algebra/430"
+      ],
+      [
+        "math/train/number_theory/437",
+        "math/train/algebra/969",
+        "math/train/geometry/374",
+        "math/train/prealgebra/808"
+      ],
+      [
+        "math/train/prealgebra/1178",
+        "math/train/prealgebra/60",
+        "math/train/algebra/1713",
+        "math/train/geometry/219"
+      ],
+      [
+        "math/train/precalculus/279",
+        "math/train/precalculus/287",
+        "math/train/geometry/142",
+        "math/train/number_theory/474"
+      ],
+      [
+        "math/train/algebra/1013",
+        "math/train/geometry/41",
+        "math/train/prealgebra/1035",
+        "math/train/precalculus/422"
+      ],
+      [
+        "math/train/algebra/1146",
+        "math/train/prealgebra/188",
+        "math/train/intermediate_algebra/845",
+        "math/train/prealgebra/707"
+      ],
+      [
+        "math/train/algebra/86",
+        "math/train/algebra/742",
+        "math/train/intermediate_algebra/1260",
+        "math/train/precalculus/455"
+      ],
+      [
+        "math/train/number_theory/146",
+        "math/train/geometry/216",
+        "math/train/intermediate_algebra/460",
+        "math/train/algebra/942"
+      ],
+      [
+        "math/train/prealgebra/1167",
+        "math/train/precalculus/24",
+        "math/train/algebra/179",
+        "math/train/precalculus/397"
+      ],
+      [
+        "math/train/number_theory/719",
+        "math/train/prealgebra/580",
+        "math/train/counting_and_probability/604",
+        "math/train/intermediate_algebra/28"
+      ]
+    ],
+    "train_sha256": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",
+    "validation_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+    "source_release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150",
+    "validated_acceptance_sha256": "176bbf0c01e3c4bf60b0b65e350106e03048d55dc0b4aab6119724d6e41f71a2",
+    "seed": 17,
+    "variants": [
+      "grpo",
+      "fixed_length"
+    ],
+    "start_step": 288,
+    "target_step": 336,
+    "updates_per_arm": 48,
+    "evaluations": [
+      "validation"
+    ],
+    "versions": {
+      "torch": "2.8.0",
+      "transformers": "4.56.2",
+      "trl": "0.23.1",
+      "peft": "0.17.1",
+      "vllm": "0.10.2"
+    },
+    "live_sampler_matches_frozen_schedule": true,
+    "paired_statistics_identity_check": true,
+    "same_optimizer_and_scheduler_source": true,
+    "vllm_rng_note": "Each arm starts a new V1 engine with seed0; historical vLLM RNG is not resumed bitwise."
+  },
+  "cpu_check": {
+    "passed": true,
+    "loss_gradient_checks": [
+      {
+        "lengths": [
+          3,
+          5
+        ],
+        "log_ratio": -0.5,
+        "per_row_gradient_factor_exact": true,
+        "padding_zero": true
+      },
+      {
+        "lengths": [
+          3,
+          5
+        ],
+        "log_ratio": 0.0,
+        "per_row_gradient_factor_exact": true,
+        "padding_zero": true
+      },
+      {
+        "lengths": [
+          3,
+          5
+        ],
+        "log_ratio": 0.5,
+        "per_row_gradient_factor_exact": true,
+        "padding_zero": true
+      },
+      {
+        "lengths": [
+          2,
+          2048
+        ],
+        "log_ratio": -0.5,
+        "per_row_gradient_factor_exact": true,
+        "padding_zero": true
+      },
+      {
+        "lengths": [
+          2,
+          2048
+        ],
+        "log_ratio": 0.0,
+        "per_row_gradient_factor_exact": true,
+        "padding_zero": true
+      },
+      {
+        "lengths": [
+          2,
+          2048
+        ],
+        "log_ratio": 0.5,
+        "per_row_gradient_factor_exact": true,
+        "padding_zero": true
+      }
+    ],
+    "historical_rows": 9216,
+    "max_advantage_error": 1.1920928955078125e-07,
+    "wrong_positive": 0,
+    "post_scalar_normalizations": 0,
+    "CUDA_initialized": false,
+    "claim": "Actual frozen token loss differs only by the expected effective_length/2048 per-row derivative factor, including gradient accumulation."
+  },
+  "no_update": {
+    "progress": {
+      "stage": "generate_real_batch",
+      "pid": 3240362,
+      "unix": 1794122858.5602684,
+      "optimizer_steps": 0
+    },
+    "result": {
+      "passed": true,
+      "optimizer_steps": 0,
+      "same_actual_batch_for_both_reductions": true,
+      "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+      "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+      "actor_base_unchanged": true,
+      "actor_adapter_unchanged": true,
+      "PRM_frozen": true,
+      "rows": 32,
+      "generated_tokens": 13462,
+      "generation_and_PRM_seconds": 74.19052868615836,
+      "loss_checks": [
+        {
+          "row": 18,
+          "length": 98,
+          "outcome": 1.0,
+          "expected_reduction_factor": 0.0478515625,
+          "observed_gradient_norm_ratio": 0.0475570563689374,
+          "results": {
+            "grpo": {
+              "loss": -0.012393763288855553,
+              "gradient_L2": 0.004742846349653719
+            },
+            "fixed_length": {
+              "loss": -0.0005930609186179936,
+              "gradient_L2": 0.00022555581119969092
+            }
+          },
+          "advantage_unchanged": true
+        },
+        {
+          "row": 29,
+          "length": 1368,
+          "outcome": 0.0,
+          "expected_reduction_factor": 0.66796875,
+          "observed_gradient_norm_ratio": 0.6671990367173145,
+          "results": {
+            "grpo": {
+              "loss": 0.016873683780431747,
+              "gradient_L2": 0.0033413370745090038
+            },
+            "fixed_length": {
+              "loss": 0.011271093040704727,
+              "gradient_L2": 0.002229336877460257
+            }
+          },
+          "advantage_unchanged": true
+        }
+      ],
+      "normalizations_after_scalar": 0,
+      "wrong_positive_tokens": 0,
+      "gradient_accumulation_steps": 32,
+      "max_completion_length": 2048,
+      "seconds": 113.63353037834167,
+      "max_torch_allocated_GiB": 31.614280700683594,
+      "claim": "Finite loss/backward with unchanged model parameters. No optimizer constructed, no training update."
+    },
+    "failure": null
+  },
+  "arms": {
+    "grpo": {
+      "progress": {
+        "arm": "grpo",
+        "global_step": 336,
+        "additional_updates": 48,
+        "target_step": 336,
+        "generated_tokens": 1033644,
+        "loss_rows": 1536,
+        "elapsed_seconds": 5251.692390313372,
+        "pid": 3242362,
+        "unix": 1794128225.826964,
+        "latest_generation": {
+          "step_before_update": 335,
+          "question_ids": [
+            "math/train/number_theory/719",
+            "math/train/prealgebra/580",
+            "math/train/counting_and_probability/604",
+            "math/train/intermediate_algebra/28"
+          ],
+          "tokens": 27631,
+          "rows": 32,
+          "seconds": 99.87513510044664,
+          "statuses": {
+            "correct_unchanged": 20,
+            "all_wrong_unchanged": 8,
+            "prefix_protected": 1,
+            "first_step_unchanged": 3
+          },
+          "protected_tokens": 428,
+          "correct": 20.0,
+          "empty": 0,
+          "short_wrong": 0,
+          "truncated": 1,
+          "answer_statuses": {
+            "exact": 20,
+            "unit_symbolic": 7,
+            "truncated": 1,
+            "symbolic": 4
+          },
+          "group_types": {
+            "all_correct": 1,
+            "all_wrong": 1,
+            "mixed": 2
+          },
+          "PRM_cost": {
+            "prm_forward_seconds": 3.506886526942253,
+            "prm_input_tokens": 29513,
+            "prm_padded_tokens": 29513,
+            "prm_scored_completions": 31
+          },
+          "wrong_positive_tokens": 0,
+          "post_scalar_normalizations": 0,
+          "arm": "grpo",
+          "loss_type": "grpo"
+        },
+        "peak_allocated_GiB": 35.43276834487915
+      },
+      "first_update_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source_step": 288,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "correct_question_order": true,
+        "advantage_exact_at_loss": true,
+        "actual_optimizer_update": true,
+        "vllm_engine_seed": 0,
+        "no_historical_vllm_rng_exact_claim": true
+      },
+      "result": {
+        "passed": true,
+        "arm": "grpo",
+        "global_step": 336,
+        "additional_updates": 48,
+        "loss_rows": 1536,
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107/grpo/checkpoint-336",
+        "adapter_sha256": "4264731a623abbcd712107208cfc062352b80254bda58bc26e54289383316449",
+        "source_checkpoint_unchanged": true,
+        "actor_base_unchanged": true,
+        "PRM_frozen": true,
+        "seconds": 5284.265957355499,
+        "progress": {
+          "arm": "grpo",
+          "global_step": 336,
+          "additional_updates": 48,
+          "target_step": 336,
+          "generated_tokens": 1033644,
+          "loss_rows": 1536,
+          "elapsed_seconds": 5251.692390313372,
+          "pid": 3242362,
+          "unix": 1794128225.826964,
+          "latest_generation": {
+            "step_before_update": 335,
+            "question_ids": [
+              "math/train/number_theory/719",
+              "math/train/prealgebra/580",
+              "math/train/counting_and_probability/604",
+              "math/train/intermediate_algebra/28"
+            ],
+            "tokens": 27631,
+            "rows": 32,
+            "seconds": 99.87513510044664,
+            "statuses": {
+              "correct_unchanged": 20,
+              "all_wrong_unchanged": 8,
+              "prefix_protected": 1,
+              "first_step_unchanged": 3
+            },
+            "protected_tokens": 428,
+            "correct": 20.0,
+            "empty": 0,
+            "short_wrong": 0,
+            "truncated": 1,
+            "answer_statuses": {
+              "exact": 20,
+              "unit_symbolic": 7,
+              "truncated": 1,
+              "symbolic": 4
+            },
+            "group_types": {
+              "all_correct": 1,
+              "all_wrong": 1,
+              "mixed": 2
+            },
+            "PRM_cost": {
+              "prm_forward_seconds": 3.506886526942253,
+              "prm_input_tokens": 29513,
+              "prm_padded_tokens": 29513,
+              "prm_scored_completions": 31
+            },
+            "wrong_positive_tokens": 0,
+            "post_scalar_normalizations": 0,
+            "arm": "grpo",
+            "loss_type": "grpo"
+          },
+          "peak_allocated_GiB": 35.43276834487915
+        },
+        "metrics": {
+          "train_runtime": 5251.1189,
+          "train_samples_per_second": 121.879,
+          "train_steps_per_second": 3.809,
+          "total_flos": 0.0,
+          "train_loss": 2.325188595586085e-05
+        }
+      },
+      "failure": null,
+      "last_checkpoint": {
+        "path": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107/grpo/checkpoint-336",
+        "global_step": 336
+      }
+    },
+    "fixed_length": {
+      "progress": {
+        "arm": "fixed_length",
+        "global_step": 336,
+        "additional_updates": 48,
+        "target_step": 336,
+        "generated_tokens": 990114,
+        "loss_rows": 1536,
+        "elapsed_seconds": 4939.081367911771,
+        "pid": 3312711,
+        "unix": 1794133205.7756293,
+        "latest_generation": {
+          "step_before_update": 335,
+          "question_ids": [
+            "math/train/number_theory/719",
+            "math/train/prealgebra/580",
+            "math/train/counting_and_probability/604",
+            "math/train/intermediate_algebra/28"
+          ],
+          "tokens": 28650,
+          "rows": 32,
+          "seconds": 87.7764160213992,
+          "statuses": {
+            "correct_unchanged": 18,
+            "prefix_protected": 5,
+            "first_step_unchanged": 1,
+            "all_wrong_unchanged": 8
+          },
+          "protected_tokens": 2140,
+          "correct": 18.0,
+          "empty": 0,
+          "short_wrong": 0,
+          "truncated": 0,
+          "answer_statuses": {
+            "exact": 18,
+            "symbolic": 6,
+            "unit_symbolic": 8
+          },
+          "group_types": {
+            "mixed": 2,
+            "all_wrong": 1,
+            "all_correct": 1
+          },
+          "PRM_cost": {
+            "prm_forward_seconds": 3.8677937919273973,
+            "prm_input_tokens": 32855,
+            "prm_padded_tokens": 32855,
+            "prm_scored_completions": 32
+          },
+          "wrong_positive_tokens": 0,
+          "post_scalar_normalizations": 0,
+          "arm": "fixed_length",
+          "loss_type": "dr_grpo"
+        },
+        "peak_allocated_GiB": 35.433146476745605
+      },
+      "first_update_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source_step": 288,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "correct_question_order": true,
+        "advantage_exact_at_loss": true,
+        "actual_optimizer_update": true,
+        "vllm_engine_seed": 0,
+        "no_historical_vllm_rng_exact_claim": true
+      },
+      "result": {
+        "passed": true,
+        "arm": "fixed_length",
+        "global_step": 336,
+        "additional_updates": 48,
+        "loss_rows": 1536,
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107/fixed_length/checkpoint-336",
+        "adapter_sha256": "f0e4421e13dc36bc2b7ce0b915cc6db15d05e2215a2d5c8ded205951f68568df",
+        "source_checkpoint_unchanged": true,
+        "actor_base_unchanged": true,
+        "PRM_frozen": true,
+        "seconds": 4970.02010846138,
+        "progress": {
+          "arm": "fixed_length",
+          "global_step": 336,
+          "additional_updates": 48,
+          "target_step": 336,
+          "generated_tokens": 990114,
+          "loss_rows": 1536,
+          "elapsed_seconds": 4939.081367911771,
+          "pid": 3312711,
+          "unix": 1794133205.7756293,
+          "latest_generation": {
+            "step_before_update": 335,
+            "question_ids": [
+              "math/train/number_theory/719",
+              "math/train/prealgebra/580",
+              "math/train/counting_and_probability/604",
+              "math/train/intermediate_algebra/28"
+            ],
+            "tokens": 28650,
+            "rows": 32,
+            "seconds": 87.7764160213992,
+            "statuses": {
+              "correct_unchanged": 18,
+              "prefix_protected": 5,
+              "first_step_unchanged": 1,
+              "all_wrong_unchanged": 8
+            },
+            "protected_tokens": 2140,
+            "correct": 18.0,
+            "empty": 0,
+            "short_wrong": 0,
+            "truncated": 0,
+            "answer_statuses": {
+              "exact": 18,
+              "symbolic": 6,
+              "unit_symbolic": 8
+            },
+            "group_types": {
+              "mixed": 2,
+              "all_wrong": 1,
+              "all_correct": 1
+            },
+            "PRM_cost": {
+              "prm_forward_seconds": 3.8677937919273973,
+              "prm_input_tokens": 32855,
+              "prm_padded_tokens": 32855,
+              "prm_scored_completions": 32
+            },
+            "wrong_positive_tokens": 0,
+            "post_scalar_normalizations": 0,
+            "arm": "fixed_length",
+            "loss_type": "dr_grpo"
+          },
+          "peak_allocated_GiB": 35.433146476745605
+        },
+        "metrics": {
+          "train_runtime": 4938.6557,
+          "train_samples_per_second": 129.59,
+          "train_steps_per_second": 4.05,
+          "total_flos": 0.0,
+          "train_loss": 0.0024192723453563218
+        }
+      },
+      "failure": null,
+      "last_checkpoint": {
+        "path": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107/fixed_length/checkpoint-336",
+        "global_step": 336
+      }
+    }
+  },
+  "evaluation": {
+    "done": 1500,
+    "total": 1500,
+    "arm": "source",
+    "seconds": 2167.08229470253,
+    "unix": 1794135399.8037188,
+    "pid": 3380033
+  },
+  "evaluation_summary": {
+    "passed": true,
+    "summary": {
+      "source": {
+        "n": 500,
+        "correct": 319.0,
+        "accuracy": 0.638,
+        "tokens": 313068,
+        "truncated": 27,
+        "missing_or_invalid_box": 21,
+        "truncation_rate": 0.054,
+        "missing_or_invalid_box_rate": 0.042,
+        "status_counts": {
+          "exact": 290,
+          "symbolic": 157,
+          "missing_or_invalid_box": 21,
+          "truncated": 27,
+          "unparseable": 5
+        },
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 729.764995040372,
+        "predictions_sha256": "cee4a66ba754bb95cb609bb48c86bcd81b6cd2b6cf68f5fae164f30c8a07b4d1"
+      },
+      "grpo": {
+        "n": 500,
+        "correct": 321.0,
+        "accuracy": 0.642,
+        "tokens": 317412,
+        "truncated": 28,
+        "missing_or_invalid_box": 18,
+        "truncation_rate": 0.056,
+        "missing_or_invalid_box_rate": 0.036,
+        "status_counts": {
+          "exact": 296,
+          "symbolic": 154,
+          "missing_or_invalid_box": 18,
+          "truncated": 28,
+          "unparseable": 4
+        },
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 701.8999666227028,
+        "predictions_sha256": "a313b00f1b0ffb9679215f9e029fae1eb3703ef987a14eb9a322d63b75f0145a"
+      },
+      "fixed_length": {
+        "n": 500,
+        "correct": 318.0,
+        "accuracy": 0.636,
+        "tokens": 334344,
+        "truncated": 39,
+        "missing_or_invalid_box": 18,
+        "truncation_rate": 0.078,
+        "missing_or_invalid_box_rate": 0.036,
+        "status_counts": {
+          "exact": 290,
+          "symbolic": 150,
+          "truncated": 39,
+          "missing_or_invalid_box": 18,
+          "unparseable": 3
+        },
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 731.8908186685294,
+        "predictions_sha256": "89648016cb62cd48c952a31f021e01e33d26c7aa5d7a5233e47fd235a80d6eed"
+      }
+    },
+    "seconds": 2167.49528837204,
+    "contract_sha256": "6531d9c72752dccc1804060d0cc146e8cc694e078ccf42efad9697a904704285",
+    "test_sets_evaluated": false,
+    "PRM_at_evaluation": false
+  },
+  "comparison": {
+    "passed": true,
+    "validation_summary": {
+      "source": {
+        "n": 500,
+        "correct": 319.0,
+        "accuracy": 0.638,
+        "tokens": 313068,
+        "truncated": 27,
+        "missing_or_invalid_box": 21,
+        "truncation_rate": 0.054,
+        "missing_or_invalid_box_rate": 0.042,
+        "status_counts": {
+          "exact": 290,
+          "symbolic": 157,
+          "missing_or_invalid_box": 21,
+          "truncated": 27,
+          "unparseable": 5
+        },
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 729.764995040372,
+        "predictions_sha256": "cee4a66ba754bb95cb609bb48c86bcd81b6cd2b6cf68f5fae164f30c8a07b4d1"
+      },
+      "grpo": {
+        "n": 500,
+        "correct": 321.0,
+        "accuracy": 0.642,
+        "tokens": 317412,
+        "truncated": 28,
+        "missing_or_invalid_box": 18,
+        "truncation_rate": 0.056,
+        "missing_or_invalid_box_rate": 0.036,
+        "status_counts": {
+          "exact": 296,
+          "symbolic": 154,
+          "missing_or_invalid_box": 18,
+          "truncated": 28,
+          "unparseable": 4
+        },
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 701.8999666227028,
+        "predictions_sha256": "a313b00f1b0ffb9679215f9e029fae1eb3703ef987a14eb9a322d63b75f0145a"
+      },
+      "fixed_length": {
+        "n": 500,
+        "correct": 318.0,
+        "accuracy": 0.636,
+        "tokens": 334344,
+        "truncated": 39,
+        "missing_or_invalid_box": 18,
+        "truncation_rate": 0.078,
+        "missing_or_invalid_box_rate": 0.036,
+        "status_counts": {
+          "exact": 290,
+          "symbolic": 150,
+          "truncated": 39,
+          "missing_or_invalid_box": 18,
+          "unparseable": 3
+        },
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 731.8908186685294,
+        "predictions_sha256": "89648016cb62cd48c952a31f021e01e33d26c7aa5d7a5233e47fd235a80d6eed"
+      }
+    },
+    "training_costs": {
+      "grpo": {
+        "new_updates": 48,
+        "new_training_responses": 1536,
+        "new_generation_tokens": 1033644,
+        "PRM_input_tokens": 942291,
+        "PRM_seconds": 120.89426177646965,
+        "total_seconds": 5284.265957355499,
+        "peak_sampled_GPU_GiB": 41.126953125,
+        "protected_tokens_if_prefix": 54145,
+        "signal_statuses": {
+          "symbolic": 584,
+          "exact": 706,
+          "missing_or_invalid_box": 106,
+          "truncated": 97,
+          "unparseable": 16,
+          "unit_exact": 10,
+          "unit_symbolic": 17
+        },
+        "group_types": {
+          "mixed": 153,
+          "all_correct": 15,
+          "all_wrong": 24
+        },
+        "empty": 0,
+        "short_wrong": 2,
+        "truncated": 97,
+        "truncation_rate": 0.06315104166666667,
+        "missing_or_invalid_box": 106,
+        "missing_or_invalid_box_rate": 0.06901041666666667,
+        "loss_type": "grpo"
+      },
+      "fixed_length": {
+        "new_updates": 48,
+        "new_training_responses": 1536,
+        "new_generation_tokens": 990114,
+        "PRM_input_tokens": 966794,
+        "PRM_seconds": 122.4978944575414,
+        "total_seconds": 4970.02010846138,
+        "peak_sampled_GPU_GiB": 39.220703125,
+        "protected_tokens_if_prefix": 60644,
+        "signal_statuses": {
+          "symbolic": 595,
+          "exact": 716,
+          "missing_or_invalid_box": 114,
+          "unparseable": 22,
+          "truncated": 62,
+          "unit_symbolic": 18,
+          "unit_exact": 9
+        },
+        "group_types": {
+          "mixed": 149,
+          "all_wrong": 28,
+          "all_correct": 15
+        },
+        "empty": 0,
+        "short_wrong": 4,
+        "truncated": 62,
+        "truncation_rate": 0.040364583333333336,
+        "missing_or_invalid_box": 114,
+        "missing_or_invalid_box_rate": 0.07421875,
+        "loss_type": "dr_grpo"
+      }
+    },
+    "paired_comparisons": {
+      "fixed_length_minus_grpo": {
+        "difference_percentage_points": -0.6,
+        "paired_bootstrap_95CI_pp": [
+          -3.2,
+          2.0
+        ],
+        "wins": 22,
+        "losses": 25,
+        "both_correct": 296,
+        "both_wrong": 157,
+        "mcnemar_exact_two_sided_p": 0.7708669945730263,
+        "n": 500
+      },
+      "grpo_minus_source": {
+        "difference_percentage_points": 0.4,
+        "paired_bootstrap_95CI_pp": [
+          -2.1999999999999997,
+          2.8000000000000003
+        ],
+        "wins": 21,
+        "losses": 19,
+        "both_correct": 300,
+        "both_wrong": 160,
+        "mcnemar_exact_two_sided_p": 0.8746293123804207,
+        "n": 500
+      },
+      "fixed_length_minus_source": {
+        "difference_percentage_points": -0.2,
+        "paired_bootstrap_95CI_pp": [
+          -2.6,
+          2.1999999999999997
+        ],
+        "wins": 20,
+        "losses": 21,
+        "both_correct": 298,
+        "both_wrong": 161,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "n": 500
+      }
+    },
+    "main_conclusion": "inconclusive",
+    "same_question_order": true,
+    "same_update_count": true,
+    "same_settings_except_loss_type": true,
+    "same_bounded_advantage_formula": true,
+    "source_checkpoint_unchanged": true,
+    "old_protected_files_verified": 1535,
+    "additional_historical_files_verified": 2093,
+    "single_seed": 17,
+    "validation_previously_used": true,
+    "test_sets_used": false,
+    "no_update_gate": {
+      "passed": true,
+      "optimizer_steps": 0,
+      "same_actual_batch_for_both_reductions": true,
+      "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+      "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+      "actor_base_unchanged": true,
+      "actor_adapter_unchanged": true,
+      "PRM_frozen": true,
+      "rows": 32,
+      "generated_tokens": 13462,
+      "generation_and_PRM_seconds": 74.19052868615836,
+      "loss_checks": [
+        {
+          "row": 18,
+          "length": 98,
+          "outcome": 1.0,
+          "expected_reduction_factor": 0.0478515625,
+          "observed_gradient_norm_ratio": 0.0475570563689374,
+          "results": {
+            "grpo": {
+              "loss": -0.012393763288855553,
+              "gradient_L2": 0.004742846349653719
+            },
+            "fixed_length": {
+              "loss": -0.0005930609186179936,
+              "gradient_L2": 0.00022555581119969092
+            }
+          },
+          "advantage_unchanged": true
+        },
+        {
+          "row": 29,
+          "length": 1368,
+          "outcome": 0.0,
+          "expected_reduction_factor": 0.66796875,
+          "observed_gradient_norm_ratio": 0.6671990367173145,
+          "results": {
+            "grpo": {
+              "loss": 0.016873683780431747,
+              "gradient_L2": 0.0033413370745090038
+            },
+            "fixed_length": {
+              "loss": 0.011271093040704727,
+              "gradient_L2": 0.002229336877460257
+            }
+          },
+          "advantage_unchanged": true
+        }
+      ],
+      "normalizations_after_scalar": 0,
+      "wrong_positive_tokens": 0,
+      "gradient_accumulation_steps": 32,
+      "max_completion_length": 2048,
+      "seconds": 113.63353037834167,
+      "max_torch_allocated_GiB": 31.614280700683594,
+      "claim": "Finite loss/backward with unchanged model parameters. No optimizer constructed, no training update."
+    },
+    "loss_change": "Per-response effective length denominator -> constant2048 only. Group reward std, PRM, KL and LR unchanged.",
+    "limits": "Question bootstrap does not measure training-seed variance. Small short-pilot differences can be inconclusive. No automatic budget expansion."
+  },
+  "controller_alive": false,
+  "gpu": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 0 MiB, 0 %\n"
+}

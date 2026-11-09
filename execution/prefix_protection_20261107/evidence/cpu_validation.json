@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "rows": 9216,
+  "statuses": {
+    "invalid_fallback": 1157,
+    "prefix_protected": 1076,
+    "first_step_unchanged": 1248,
+    "correct_unchanged": 3920,
+    "all_wrong_unchanged": 1744,
+    "no_low_score_fallback": 71
+  },
+  "protected_tokens": 238476,
+  "max_recorded_scalar_advantage_error": 1.1920928955078125e-07,
+  "max_uniform_prefix_absolute_mass_error": 0.0009765625,
+  "wrong_positive_tokens": 0,
+  "normalizations_after_scalar": 0,
+  "tests": [
+    {
+      "test": "byte_boundary_unicode_crlf",
+      "protected": 5
+    },
+    {
+      "test": "byte_boundary_unicode_crlf",
+      "protected": 9
+    },
+    {
+      "test": "byte_boundary_unicode_crlf",
+      "protected": 5
+    },
+    {
+      "test": "mismatch_rejected"
+    },
+    {
+      "test": "original_TRL_scalar_vs_matrix_loss_and_gradient",
+      "shift": -0.5,
+      "exact": true
+    },
+    {
+      "test": "original_TRL_scalar_vs_matrix_loss_and_gradient",
+      "shift": 0.0,
+      "exact": true
+    },
+    {
+      "test": "original_TRL_scalar_vs_matrix_loss_and_gradient",
+      "shift": 0.5,
+      "exact": true
+    }
+  ],
+  "selected_groups": 3,
+  "training_started": false
+}

@@ -1,0 +1,11 @@
+{
+  "saved": {
+    "experiments/prefix_protection_20261107/README.txt": "d7226e4ce2879ea5d8a4f7887c0e25f711355f7b7bbde040b7570048ee96abc5",
+    "experiments/prefix_protection_20261107/pilot_protocol.json": "ab6f87418ce9ec935f1f843d8830594bf71e8117243bd4873ba915265e2ac071",
+    "audits/prefix_protection_20261107/REPORT.txt": "2af9d8538a2b8e979c7f8463277abba63934f2f591f2c076d77382b14b146932",
+    "audits/prefix_protection_20261107/ACCEPTANCE.json": "176bbf0c01e3c4bf60b0b65e350106e03048d55dc0b4aab6119724d6e41f71a2",
+    "audits/prefix_protection_20261107/source_and_preservation_audit.json": "1b16e068b2ff8daae5ac95e06a162c3e7be1288238dc25ff80fca658697778be"
+  },
+  "all_source_hashes_match": true,
+  "gpu_processes": ""
+}

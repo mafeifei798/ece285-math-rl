@@ -6,12 +6,12 @@ HERE=Path(__file__).resolve().parent
 remote=r'''
 from pathlib import Path
 import json
-p=Path('/srv/research/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029')
+p=Path('/path/to/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029')
 assert json.loads((p/'controller.json').read_text())['stage']=='complete'
 assert json.loads((p/'acceptance.json').read_text())['passed']
 print('READY')
 '''
-s=subprocess.run(SSH+['/srv/research/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,capture_output=True,check=True)
+s=subprocess.run(SSH+['/path/to/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,capture_output=True,check=True)
 assert s.stdout.strip()=='READY'
 archive=HERE/'completed_evidence.tar.gz';assert not archive.exists(),'Do not overwrite downloaded evidence'
 paths=['experiments/a6m_protocol_recheck_20261029','runs/A6M_protocol_recheck_20261029','audits/A6M_protocol_recheck_20261029',
@@ -28,7 +28,7 @@ paths+=['runs/A_corrected_seed17_6M_20261022/checkpoint-284/completion_accountin
     'runs/A_corrected_seed17_6M_20261022/checkpoint-284/trainer_state.json',
     'runs/C_bounded_triplet_seed17_1M_20261029_v2/A/run_config.json']
 with archive.open('wb') as f:
- s=subprocess.run(SSH+['tar -C /srv/research/ece285_math_rl_project -czf - '+' '.join(paths)],stdout=f,stderr=subprocess.PIPE)
+ s=subprocess.run(SSH+['tar -C /path/to/ece285_math_rl_project -czf - '+' '.join(paths)],stdout=f,stderr=subprocess.PIPE)
 assert s.returncode==0,s.stderr.decode(errors='replace')
 dest=HERE/'evidence';dest.mkdir(exist_ok=False)
 with tarfile.open(archive,'r:gz') as tf:

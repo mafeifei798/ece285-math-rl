@@ -1,0 +1,12 @@
+{
+  "written_at_utc": "2026-11-09T00:19:34.925361+00:00",
+  "primary_endpoint": "MATH500 C12M-minus-A12M in common endpoint scoring; both repeated and averaged per question",
+  "secondary": "Within-arm12M-minus6M budget effects; GSM8K; validation curves; all reported, no method/checkpoint selection by tests",
+  "intervals": "Paired20k question bootstrap. Repeated outputs stay grouped by question. Independent stdlib Monte Carlo reports endpoint sensitivity; near-zero boundary never treated as robust significance.",
+  "repeatability": "Two fresh process repeats at baseline6M/9M/12M validation and endpoint MATH500; one GSM8K repeat. Report flips and accuracy difference, do not infer determinism or universal1pp noise floor.",
+  "format": "Fixed definitions copied from CPUaudit, no new reward. Protocol-eligible coverage times conditional answer accuracy is descriptive only; selection bias remains.",
+  "seed42": "Eligibility from protocol-fixed validation rule before test scoring; no automatic seed42dispatch in this run.",
+  "PRM_diagnostic": "Counterfactual edit sensitivity, not proof of training-induced hacking. Full-group replay supplements absolute minima. Diagnostic does not alter training.",
+  "scope": "Original per-arm6M CP288, not any48-stepvariant. Native-LoRA V1/eager follows validated current runtime; source state and scalar loss exact, historical sampling RNG not bitwise resumed.",
+  "cost": "Actual additional tokens, matched updates/questions, stage walltime, PRM cost and sampled GPU peak; shared time not matched FLOPs."
+}

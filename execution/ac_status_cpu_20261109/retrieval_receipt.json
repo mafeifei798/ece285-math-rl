@@ -1,0 +1,172 @@
+{
+  "retrieved_unix": 1794214112.4338515,
+  "checkpoint_checks": {
+    "A": {
+      "step": 432,
+      "path": "/path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/A/checkpoint-432",
+      "files": {
+        "adapter_model.safetensors": "82adb5b92c976c833d0ebe34247c5ea4a3aa52c2d5c9c7d26b44eaed88adbf8e",
+        "optimizer.pt": "ffa01f557f04d61f2dc3c9846c5b949e24cefa63db64b5a6ad9289186d2093f0",
+        "scheduler.pt": "16c0f822588e4564fe82d59edcc2f94c49ced88a89732c3ca0b6166691893813",
+        "rng_state.pth": "d91abba5b570c88375cec0573a033abe43b4b2c857e31e7ba8b21406f4a147ac",
+        "trainer_state.json": "b85ef8653ddc71844d595fb97b1abfe6f8118ff724bc44f9f382282e88067f58"
+      },
+      "accounting_verified": true
+    },
+    "C_bounded": {
+      "step": 365,
+      "path": "/path/to/ece285_math_rl_project/runs/Budget_extension_seed17_12M_20261108/C_bounded/checkpoint-365",
+      "files": {
+        "adapter_model.safetensors": "9d885503829d0cb19646d1321664f4cc3edb34f840f3738476ccb449df8fd525",
+        "optimizer.pt": "6fa9c3739169ffeeb974cb9a172952a2be15f750b69a11365fb6d7f301944723",
+        "scheduler.pt": "10d7129dcf36910ec84bc03b5277fd2676f8ac5ad63b3faec2bebae04add28ad",
+        "rng_state.pth": "2b5b23b7feb1b011d38f2bbdae3515ee9b836458afd3ef349ab160d38c4b2fef",
+        "trainer_state.json": "191b63c912589e641fae5f9ee078947b3457bb7dc18c03ac4b51f39119f8a1a3"
+      },
+      "accounting_verified": true
+    }
+  },
+  "scope": "Existing files and file hashes only; no model load, GPU query, generation, optimizer or remote write.",
+  "files": {
+    "evaluation/baseline/repeat_0/summary.json": {
+      "sha256": "c0633c252610ba8feccd062c9278431e8780d8321104f99dd0fdc26417d7316a",
+      "bytes": 2310
+    },
+    "evaluation/baseline/repeat_0/contract.json": {
+      "sha256": "d7c8d4ce194ab0fa1507a42c19455b1a7254080f5f4ebf9360bd8a6821d7ed96",
+      "bytes": 1476
+    },
+    "evaluation/baseline/repeat_0/A/predictions.jsonl": {
+      "sha256": "00914cf2c845b02d274f48e502a6958d2a6101c5bcac4d1c9b8a6bcd06148669",
+      "bytes": 3513346
+    },
+    "evaluation/baseline/repeat_0/C_bounded/predictions.jsonl": {
+      "sha256": "07d47489ad66fbf05495fd4ff49eb5fa8a4ae5bff333124186daa669baea9bad",
+      "bytes": 3151375
+    },
+    "evaluation/baseline/repeat_1/summary.json": {
+      "sha256": "6915fddc5f532fbf08b072fe4bb3c4152bc13a95b93db45f3c28f287f44c18ad",
+      "bytes": 2308
+    },
+    "evaluation/baseline/repeat_1/contract.json": {
+      "sha256": "604718d863a830d8f05c5efb1ec8ebd42e13625f2f4c3d5d7f102864c3a8d556",
+      "bytes": 1476
+    },
+    "evaluation/baseline/repeat_1/A/predictions.jsonl": {
+      "sha256": "994e4d4f7d5792facf0b07e1b11e429980108043db8885f59be0a73f51089f3b",
+      "bytes": 3602603
+    },
+    "evaluation/baseline/repeat_1/C_bounded/predictions.jsonl": {
+      "sha256": "8483eda1c3306587af678817b55657a8060d52b9c94f267eb6c45d2bd1f0b2e9",
+      "bytes": 3117789
+    },
+    "A/progress.json": {
+      "sha256": "4f28f8cc5bd042d3659195522d957131f0c52b599b87a58a912f2608e81906bf",
+      "bytes": 1488
+    },
+    "A/last_checkpoint.json": {
+      "sha256": "43eb2dd4a2c9b41d472888ebd08d62cd8c338aae9ea22750d3d7361d5b1aad36",
+      "bytes": 135
+    },
+    "A/generation_checks.jsonl": {
+      "sha256": "4102901058c91d358ec0c194f8d03fd15e00c2f465c9fd8064f93d3d4ff7fe92",
+      "bytes": 43048
+    },
+    "A/actual_signals.jsonl": {
+      "sha256": "b354530d9e4466cce400141ff835e464021703c5f4c15121041a4d25a11cc98e",
+      "bytes": 172196
+    },
+    "A/update_audits.jsonl": {
+      "sha256": "4c1e59bb3c55f627dc37fd813918e61aa1dd618945fc3f445c091debcb31a468",
+      "bytes": 179783
+    },
+    "A/resources.jsonl": {
+      "sha256": "db499db77fa465623b9eb4396b3963597e962e4937b82fbf5d79f7e2a290101b",
+      "bytes": 54640
+    },
+    "A/format_monitoring.jsonl": {
+      "sha256": "df6bbffd19fbe36a4bbd2a59e5d00efba63657d8117b2ed477bf52433228aeca",
+      "bytes": 70773
+    },
+    "A/first_update_acceptance_432.json": {
+      "sha256": "be78584a017824808c842bd679afaa979bb2250636704716c61c2fab2b6488b4",
+      "bytes": 457
+    },
+    "A/checkpoint-432/pilot_checkpoint.json": {
+      "sha256": "f1c691f8ef7dd276ec1c28fcc250dd9dff4ef9add5168967c7d8b927e23f2f7d",
+      "bytes": 843
+    },
+    "A/checkpoint-432/completion_accounting.json": {
+      "sha256": "1292b61fefe7623962e9308f85d7bda194e2e3cf25d329d2512a6f7ea1111ba7",
+      "bytes": 799
+    },
+    "A/checkpoint-432/trainer_state.json": {
+      "sha256": "b85ef8653ddc71844d595fb97b1abfe6f8118ff724bc44f9f382282e88067f58",
+      "bytes": 413778
+    },
+    "A/checkpoint-432/adapter_config.json": {
+      "sha256": "9cb3b661701d2f756727bc88cdc4a915514e72aa5d8d411d7024e798de538f7e",
+      "bytes": 1014
+    },
+    "C_bounded/progress.json": {
+      "sha256": "e145d032aa3e2a10a8150d8194c82896e24f88ddffa38448e100015afd1e7091",
+      "bytes": 1569
+    },
+    "C_bounded/last_checkpoint.json": {
+      "sha256": "963bacaaf50238a09d92abcb7d8364aee0f9824bf91dd94eccd6773e9fe09ab9",
+      "bytes": 143
+    },
+    "C_bounded/generation_checks.jsonl": {
+      "sha256": "8d00aca9bf85c3983cb405eca92aa99a585a68cf0328c1fe036efa4b65e50309",
+      "bytes": 26520
+    },
+    "C_bounded/actual_signals.jsonl": {
+      "sha256": "d92ef4986b9dba2ab883aad7a729b65a8a1cb1499cb53ba1c739abe6a2328ef2",
+      "bytes": 132218
+    },
+    "C_bounded/update_audits.jsonl": {
+      "sha256": "0b656c2e6f1048117b64d889d4f78fb518191309ee58d894c31b959c32289c1f",
+      "bytes": 106672
+    },
+    "C_bounded/resources.jsonl": {
+      "sha256": "8457281fefcb6ec870ec16b6fda2e0c860e151fa498d802ec1766544e9199d3d",
+      "bytes": 38192
+    },
+    "C_bounded/format_monitoring.jsonl": {
+      "sha256": "f8360c02035683c8e481f77aa99b20c90a1835c6c3e291ade2deefeacb4f2afb",
+      "bytes": 39264
+    },
+    "C_bounded/first_update_acceptance_432.json": {
+      "sha256": "b0c773a7ec2e98553d645cffedee0ce7cf87be22a89a01fcae929a7de7a4a811",
+      "bytes": 465
+    },
+    "C_bounded/checkpoint-365/pilot_checkpoint.json": {
+      "sha256": "ecad4dca387cb7337083b993e55f098e22e607d62fce358948626d6b0e4a6f6c",
+      "bytes": 851
+    },
+    "C_bounded/checkpoint-365/completion_accounting.json": {
+      "sha256": "c02a9830f6ddaa1bf3a27619d72b40a283a86e907c93d29dabf339ec36304cee",
+      "bytes": 845
+    },
+    "C_bounded/checkpoint-365/trainer_state.json": {
+      "sha256": "191b63c912589e641fae5f9ee078947b3457bb7dc18c03ac4b51f39119f8a1a3",
+      "bytes": 363447
+    },
+    "C_bounded/checkpoint-365/adapter_config.json": {
+      "sha256": "93abce2fa5ccf2a8fc21f3d280adb3a12740080fd168510826c9929c3498fac8",
+      "bytes": 1014
+    },
+    "controller.json": {
+      "sha256": "b85172d1f677159dc565ebe6a1e1f2ca8aeac52e3e43e009ccd945ce23b49fcc",
+      "bytes": 4166
+    },
+    "children.json": {
+      "sha256": "d92215aebd8856c5c9a43e6fb5e002e10567dabd60d0abfd718367280c3dc7e1",
+      "bytes": 2988
+    },
+    "A/stage_432_result.json": {
+      "sha256": "7eaad221564510b1531fa3287377d1cd13647dc4e27438a5e0a8370a2185df56",
+      "bytes": 1453
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "loss_gradient_checks": [
+    {
+      "lengths": [
+        3,
+        5
+      ],
+      "log_ratio": -0.5,
+      "per_row_gradient_factor_exact": true,
+      "padding_zero": true
+    },
+    {
+      "lengths": [
+        3,
+        5
+      ],
+      "log_ratio": 0.0,
+      "per_row_gradient_factor_exact": true,
+      "padding_zero": true
+    },
+    {
+      "lengths": [
+        3,
+        5
+      ],
+      "log_ratio": 0.5,
+      "per_row_gradient_factor_exact": true,
+      "padding_zero": true
+    },
+    {
+      "lengths": [
+        2,
+        2048
+      ],
+      "log_ratio": -0.5,
+      "per_row_gradient_factor_exact": true,
+      "padding_zero": true
+    },
+    {
+      "lengths": [
+        2,
+        2048
+      ],
+      "log_ratio": 0.0,
+      "per_row_gradient_factor_exact": true,
+      "padding_zero": true
+    },
+    {
+      "lengths": [
+        2,
+        2048
+      ],
+      "log_ratio": 0.5,
+      "per_row_gradient_factor_exact": true,
+      "padding_zero": true
+    }
+  ],
+  "historical_rows": 9216,
+  "max_advantage_error": 1.1920928955078125e-07,
+  "wrong_positive": 0,
+  "post_scalar_normalizations": 0,
+  "CUDA_initialized": false,
+  "claim": "Actual frozen token loss differs only by the expected effective_length/2048 per-row derivative factor, including gradient accumulation."
+}

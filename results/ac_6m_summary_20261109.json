@@ -1,0 +1,293 @@
+{
+  "as_of_date_Los_Angeles": "2026-11-09",
+  "initial_model": {
+    "math500": {
+      "correct": 245,
+      "n": 500,
+      "accuracy": 0.49
+    },
+    "gsm8k": {
+      "correct": 750,
+      "n": 1319,
+      "accuracy": 0.5686125852918877
+    }
+  },
+  "six_M_tests": [
+    {
+      "seed": 17,
+      "arm": "A",
+      "dataset": "math500",
+      "correct": 265,
+      "n": 500,
+      "accuracy": 0.53,
+      "generated_training_tokens": 6155438
+    },
+    {
+      "seed": 17,
+      "arm": "A",
+      "dataset": "gsm8k",
+      "correct": 882,
+      "n": 1319,
+      "accuracy": 0.66868840030326,
+      "generated_training_tokens": 6155438
+    },
+    {
+      "seed": 17,
+      "arm": "C_bounded",
+      "dataset": "math500",
+      "correct": 289,
+      "n": 500,
+      "accuracy": 0.578,
+      "generated_training_tokens": 6167374
+    },
+    {
+      "seed": 17,
+      "arm": "C_bounded",
+      "dataset": "gsm8k",
+      "correct": 915,
+      "n": 1319,
+      "accuracy": 0.6937073540561031,
+      "generated_training_tokens": 6167374
+    },
+    {
+      "seed": 42,
+      "arm": "A",
+      "dataset": "math500",
+      "correct": 264,
+      "n": 500,
+      "accuracy": 0.528,
+      "generated_training_tokens": 6308962
+    },
+    {
+      "seed": 42,
+      "arm": "A",
+      "dataset": "gsm8k",
+      "correct": 890,
+      "n": 1319,
+      "accuracy": 0.6747536012130402,
+      "generated_training_tokens": 6308962
+    },
+    {
+      "seed": 42,
+      "arm": "C_bounded",
+      "dataset": "math500",
+      "correct": 274,
+      "n": 500,
+      "accuracy": 0.548,
+      "generated_training_tokens": 6229129
+    },
+    {
+      "seed": 42,
+      "arm": "C_bounded",
+      "dataset": "gsm8k",
+      "correct": 896,
+      "n": 1319,
+      "accuracy": 0.6793025018953753,
+      "generated_training_tokens": 6229129
+    }
+  ],
+  "six_M_paired": {
+    "17": {
+      "math500": {
+        "wins": 54,
+        "losses": 30,
+        "difference_pp": 4.8,
+        "exact_mcnemar_two_sided_p": 0.011634454119925829,
+        "both_terminated": {
+          "n": 447,
+          "net_correct": 23.0
+        },
+        "C_losses_statuses": {
+          "symbolic": 19,
+          "missing_or_invalid_box": 6,
+          "truncated": 5
+        },
+        "stored_paired_question_bootstrap95_pp": [
+          1.4000000000000001,
+          8.4
+        ],
+        "CI_scope": "Frozen original 10000-replicate question bootstrap; excludes training-seed and runtime-repeat uncertainty; unadjusted."
+      },
+      "gsm8k": {
+        "wins": 111,
+        "losses": 78,
+        "difference_pp": 2.5018953752843065,
+        "exact_mcnemar_two_sided_p": 0.01968834560535602,
+        "both_terminated": {
+          "n": 1282,
+          "net_correct": 23.0
+        },
+        "C_losses_statuses": {
+          "missing_or_invalid_box": 36,
+          "symbolic": 40,
+          "unparseable": 1,
+          "unit_symbolic": 1
+        },
+        "stored_paired_question_bootstrap95_pp": [
+          0.45489006823351025,
+          4.548900682335103
+        ],
+        "CI_scope": "Frozen original 10000-replicate question bootstrap; excludes training-seed and runtime-repeat uncertainty; unadjusted."
+      }
+    },
+    "42": {
+      "math500": {
+        "wins": 35,
+        "losses": 25,
+        "difference_pp": 2.0,
+        "exact_mcnemar_two_sided_p": 0.2450608330229457,
+        "both_terminated": {
+          "n": 440,
+          "net_correct": 6.0
+        },
+        "C_losses_statuses": {
+          "truncated": 5,
+          "symbolic": 15,
+          "missing_or_invalid_box": 4,
+          "unparseable": 1
+        },
+        "stored_paired_question_bootstrap95_pp": [
+          -1.0,
+          5.0
+        ],
+        "CI_scope": "Frozen original 10000-replicate question bootstrap; excludes training-seed and runtime-repeat uncertainty; unadjusted."
+      },
+      "gsm8k": {
+        "wins": 91,
+        "losses": 85,
+        "difference_pp": 0.45489006823351025,
+        "exact_mcnemar_two_sided_p": 0.7063708402623414,
+        "both_terminated": {
+          "n": 1267,
+          "net_correct": 1.0
+        },
+        "C_losses_statuses": {
+          "symbolic": 40,
+          "missing_or_invalid_box": 33,
+          "truncated": 8,
+          "unparseable": 3,
+          "unit_symbolic": 1
+        },
+        "stored_paired_question_bootstrap95_pp": [
+          -1.5163002274450341,
+          2.427975739196333
+        ],
+        "CI_scope": "Frozen original 10000-replicate question bootstrap; excludes training-seed and runtime-repeat uncertainty; unadjusted."
+      }
+    }
+  },
+  "two_seed_descriptive_means": {
+    "math500": {
+      "A": 0.529,
+      "C_bounded": 0.563,
+      "difference_pp": 3.399999999999992,
+      "scope": "Descriptive average of two training seeds on the same test questions; no seed-robust CI."
+    },
+    "gsm8k": {
+      "A": 0.6717210007581501,
+      "C_bounded": 0.6865049279757391,
+      "difference_pp": 1.4783927217589032,
+      "scope": "Descriptive average of two training seeds on the same test questions; no seed-robust CI."
+    }
+  },
+  "seed42_costs": {
+    "training_seconds": {
+      "A": 8223.716998577118,
+      "C_bounded": 8994.148386955261
+    },
+    "notes": "Observed shared-GPU timing; excludes PRM adaptation; not isolated algorithm efficiency.",
+    "C_extra_wall_fraction": 0.09368408330581479,
+    "PRM_input_tokens": 5594827,
+    "PRM_forward_seconds": 749.3566333074123,
+    "sampled_peak_process_GPU_GiB": {
+      "A": 21.21484375,
+      "C_bounded": 34.630859375
+    }
+  },
+  "short_trial_comparisons_validation_only": {
+    "uniform_minus_same_run_bounded": {
+      "difference_percentage_points": 1.6,
+      "paired_bootstrap_95CI_pp": [
+        -1.0,
+        4.2
+      ],
+      "wins": 27,
+      "losses": 19,
+      "both_correct": 300,
+      "both_wrong": 154,
+      "mcnemar_exact_two_sided_p": 0.3019956131896606,
+      "n": 500
+    },
+    "prefix_minus_uniform": {
+      "difference_percentage_points": 0.2,
+      "paired_bootstrap_95CI_pp": [
+        -2.0,
+        2.6
+      ],
+      "wins": 18,
+      "losses": 17,
+      "both_correct": 310,
+      "both_wrong": 155,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "n": 500
+    },
+    "length_normalization": {
+      "difference_percentage_points": -0.6,
+      "paired_bootstrap_95CI_pp": [
+        -3.2,
+        2.0
+      ],
+      "wins": 22,
+      "losses": 25,
+      "both_correct": 296,
+      "both_wrong": 157,
+      "mcnemar_exact_two_sided_p": 0.7708669945730263,
+      "n": 500
+    },
+    "tree_minus_same_run_chain": {
+      "difference_percentage_points": -1.7999999999999998,
+      "paired_bootstrap_95CI_pp": [
+        -4.3999999999999995,
+        0.8
+      ],
+      "wins": 17,
+      "losses": 26,
+      "both_correct": 302,
+      "both_wrong": 155,
+      "mcnemar_exact_two_sided_p": 0.2220528201560228,
+      "n": 500
+    }
+  },
+  "remaining_verifications_by_claim": [
+    {
+      "item": "Independent process-validity review",
+      "GPU_needed": false,
+      "required_for_claim": "Improved mathematical derivation validity",
+      "status": "Targeted assistant review only; representative independent review absent"
+    },
+    {
+      "item": "Critical same-checkpoint test repeatability",
+      "GPU_needed": true,
+      "required_for_claim": "Precise reproducible small test gains",
+      "status": "Validation repeats done; MATH500/GSM8K key-test repeats not done; remains stopped"
+    },
+    {
+      "item": "Common9M/12M continuation endpoints",
+      "GPU_needed": true,
+      "required_for_claim": "Benefit of increasing the training budget and C-A gap at larger budgets",
+      "status": "Incomplete; not necessary to report the completed6M experiment honestly"
+    },
+    {
+      "item": "Magnitude-matched or shuffled-ranking controls",
+      "GPU_needed": true,
+      "required_for_claim": "Causal mechanism or distinct algorithm-component contribution",
+      "status": "Not done; not automatically queued"
+    },
+    {
+      "item": "Additional independent training seeds or preregistered benchmarks",
+      "GPU_needed": true,
+      "required_for_claim": "Broad stable superiority",
+      "status": "Only two6M training seeds; no automatic launch"
+    }
+  ]
+}

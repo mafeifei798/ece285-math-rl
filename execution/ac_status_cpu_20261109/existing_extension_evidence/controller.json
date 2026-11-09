@@ -1,0 +1,121 @@
+{
+  "stage": "failed",
+  "pid": 4021805,
+  "unix": 1794213521.7667634,
+  "children": [
+    {
+      "stage": "preflight",
+      "pid": 4021806,
+      "started_unix": 1794182515.5214474,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/preflight.py"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794182532.5419216
+    },
+    {
+      "stage": "no_update_A",
+      "pid": 4022010,
+      "started_unix": 1794182533.031061,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/smoke.py",
+        "--arm",
+        "A"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794182659.0939705
+    },
+    {
+      "stage": "no_update_C_bounded",
+      "pid": 4024248,
+      "started_unix": 1794182659.2100852,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/smoke.py",
+        "--arm",
+        "C_bounded"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794182795.8586328
+    },
+    {
+      "stage": "baseline_validation_repeat0",
+      "pid": 4026592,
+      "started_unix": 1794182795.9408238,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/evaluate.py",
+        "--cohort",
+        "baseline",
+        "--repeat",
+        "0"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794184243.292549
+    },
+    {
+      "stage": "baseline_validation_repeat1",
+      "pid": 4053217,
+      "started_unix": 1794184243.6074805,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/evaluate.py",
+        "--cohort",
+        "baseline",
+        "--repeat",
+        "1"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794185713.276395
+    },
+    {
+      "stage": "train_A_432",
+      "pid": 4078957,
+      "started_unix": 1794185713.8498254,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/train_arm.py",
+        "--arm",
+        "A",
+        "--target",
+        "432"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794202099.2522001
+    },
+    {
+      "stage": "train_C_bounded_432",
+      "pid": 770050,
+      "started_unix": 1794202099.3782265,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/train_arm.py",
+        "--arm",
+        "C_bounded",
+        "--target",
+        "432"
+      ],
+      "exit_code": -15,
+      "finished_unix": 1794213521.7642114
+    }
+  ],
+  "error": "train_C_bounded_432 failed; preserve evidence, no automatic retry",
+  "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py\", line 34, in main\n    for arm in ARMS:child('train_'+arm+'_432','train_arm.py',['--arm',arm,'--target','432'])\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py\", line 26, in child\n    if rc:raise RuntimeError(label+' failed; preserve evidence, no automatic retry')\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: train_C_bounded_432 failed; preserve evidence, no automatic retry\n",
+  "automatic_retry": false
+}

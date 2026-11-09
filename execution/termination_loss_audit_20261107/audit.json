@@ -1,0 +1,710 @@
+{
+  "generated_at": "2026-11-08T07:05:04.614845+00:00",
+  "scope": "Offline only; no reward/loss changes, GPU work, or remote writes.",
+  "source_sha256": {
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/A/compact_signals.jsonl": "8a5cb542316afb90b7088a3c1c000770ea48922875d5977da0b42e2b75611d32",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/math500.jsonl": "f937529b292edbcfc39bd5ee1fa0525666aa9c161f6acd5b339156e74312b71a",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/gsm8k.jsonl": "05c1a8707547722edd00f6f24bc2565995e28d6d320f3466b9aad498edbc2437",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/C_bounded/compact_signals.jsonl": "6d6b6c6ec36568e98662c85a1cdd11545561aaa0244f8c4d32e00e9a06b7d12e",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/math500.jsonl": "7bd8fa1e0d162c9e99c5a25e90612427849a2f8ed3b85cdda2915d1f6f53f971",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl": "2c9f1f078c766b1ca23247e34161423388ff27c7e92d6a056da0a2c7d106318b",
+    "execution/ac_seed42_v1_20261106/completed_evidence/A/compact_signals.jsonl": "bef67237b0cfbc976865bcdd6fc34f9debb776076fb32122638976d4c82495a1",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/math500.jsonl": "50c7692d2ab20cdb82ced657f45f7d2d43524f6feda7c04a22a80166e3827cd3",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/gsm8k.jsonl": "39baf12538fd2e9afa2c31b66a498286c544ce810d3a969585bdca62b23b9d7f",
+    "execution/ac_seed42_v1_20261106/completed_evidence/C_bounded/compact_signals.jsonl": "5080e1428e03e32a3b08afc48bf179df226837c96e45863bfac8bda4f4870ff5",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/math500.jsonl": "314685d0a18fd7dff74deea97c2bd1567aa479886689682ab9d0fc034c98496b",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl": "5b26f21b5a408fc3c2ae8dd173d59b33e1c24b4569cc00f9b60a875b419d8434",
+    "experiments/prefix_protection_20261107/token_loss.py": "661a384303db2967210a4b08ea6f8394b8da94fcd116788a929078935c44a3e7",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/C_bounded/resume_build_288.json": "628a86e6257375631468f60118ab600887e13a254b56d8e1008c28342e0a1e57"
+  },
+  "current_settings": {
+    "loss_type": "grpo",
+    "max_completion_length": 2048,
+    "learning_rate": 5e-06,
+    "beta": 0.04,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 32,
+    "mask_truncated_completions": false
+  },
+  "training": [
+    {
+      "seed": 17,
+      "arm": "A",
+      "n": 9216,
+      "tokens": 6155438,
+      "mean_tokens": 667.9077690972222,
+      "correct": 3719,
+      "mean_correct_tokens": 485.62032804517344,
+      "mean_wrong_tokens": 791.2344915408405,
+      "truncated": 547,
+      "truncated_fraction": 0.05935329861111111,
+      "truncated_tokens": 1120256,
+      "truncated_token_fraction": 0.181994522566875,
+      "status_counts": {
+        "truncated": 547,
+        "symbolic": 4179,
+        "exact": 3332,
+        "missing_or_invalid_box": 1022,
+        "unparseable": 99,
+        "unit_symbolic": 16,
+        "unit_exact": 21
+      },
+      "correct_length_percentiles": {
+        "0.5": 423,
+        "0.9": 851,
+        "0.95": 1069,
+        "0.99": 1617
+      },
+      "max_correct_length": 2040,
+      "shorter_cap_correct_exceedances": {
+        "1024": {
+          "n": 215,
+          "fraction": 0.0578112395805324
+        },
+        "1536": {
+          "n": 46,
+          "fraction": 0.012368916375369724
+        },
+        "1664": {
+          "n": 32,
+          "fraction": 0.00860446356547459
+        },
+        "1792": {
+          "n": 20,
+          "fraction": 0.005377789728421619
+        }
+      },
+      "first_48": {
+        "n": 1536,
+        "tokens": 1005003,
+        "mean_tokens": 654.298828125,
+        "correct": 641,
+        "mean_correct_tokens": 486.69422776911074,
+        "mean_wrong_tokens": 774.3374301675977,
+        "truncated": 90,
+        "truncated_fraction": 0.05859375,
+        "truncated_tokens": 184320,
+        "truncated_token_fraction": 0.18340243760466388
+      },
+      "final_48": {
+        "n": 1536,
+        "tokens": 1119056,
+        "mean_tokens": 728.5520833333334,
+        "correct": 610,
+        "mean_correct_tokens": 494.3786885245902,
+        "mean_wrong_tokens": 882.8131749460043,
+        "truncated": 118,
+        "truncated_fraction": 0.07682291666666667,
+        "truncated_tokens": 241664,
+        "truncated_token_fraction": 0.21595344647631576
+      },
+      "truncated_advantage_signs": {
+        "negative": 305,
+        "zero": 242
+      },
+      "truncated_old_absolute_coefficient_fraction": 0.043251576274962865,
+      "constant_length_to_old_absolute_policy_coefficient_ratio": 0.2907189624709121,
+      "proposed_extra_minus_half_on_truncated_abs_coefficient": 273.5,
+      "existing_truncated_abs_coefficient": 255.26092395186424,
+      "coefficient_replay_assumptions": "Policy-only surrogate at ratio=1, without clipping, importance correction, or KL. Not an autograd replay.",
+      "caveat": "Coefficient mass is not a parameter-gradient norm and cannot predict updated accuracy."
+    },
+    {
+      "seed": 17,
+      "arm": "C_bounded",
+      "n": 9216,
+      "tokens": 6167374,
+      "mean_tokens": 669.2029079861111,
+      "correct": 3920,
+      "mean_correct_tokens": 492.59132653061226,
+      "mean_wrong_tokens": 799.9274924471299,
+      "truncated": 546,
+      "truncated_fraction": 0.059244791666666664,
+      "truncated_tokens": 1118208,
+      "truncated_token_fraction": 0.18131023025358928,
+      "status_counts": {
+        "truncated": 546,
+        "symbolic": 4087,
+        "exact": 3519,
+        "missing_or_invalid_box": 908,
+        "unparseable": 123,
+        "unit_symbolic": 9,
+        "unit_exact": 24
+      },
+      "correct_length_percentiles": {
+        "0.5": 430,
+        "0.9": 860,
+        "0.95": 1079,
+        "0.99": 1560
+      },
+      "max_correct_length": 2023,
+      "shorter_cap_correct_exceedances": {
+        "1024": {
+          "n": 232,
+          "fraction": 0.05918367346938776
+        },
+        "1536": {
+          "n": 44,
+          "fraction": 0.011224489795918367
+        },
+        "1664": {
+          "n": 24,
+          "fraction": 0.006122448979591836
+        },
+        "1792": {
+          "n": 12,
+          "fraction": 0.003061224489795918
+        }
+      },
+      "first_48": {
+        "n": 1536,
+        "tokens": 1009017,
+        "mean_tokens": 656.912109375,
+        "correct": 633,
+        "mean_correct_tokens": 479.56240126382306,
+        "mean_wrong_tokens": 781.2336655592469,
+        "truncated": 99,
+        "truncated_fraction": 0.064453125,
+        "truncated_tokens": 202752,
+        "truncated_token_fraction": 0.20094012291170515
+      },
+      "final_48": {
+        "n": 1536,
+        "tokens": 1081934,
+        "mean_tokens": 704.3841145833334,
+        "correct": 678,
+        "mean_correct_tokens": 504.5014749262537,
+        "mean_wrong_tokens": 862.3333333333334,
+        "truncated": 96,
+        "truncated_fraction": 0.0625,
+        "truncated_tokens": 196608,
+        "truncated_token_fraction": 0.18171903276909682
+      },
+      "truncated_advantage_signs": {
+        "negative": 310,
+        "zero": 236
+      },
+      "truncated_old_absolute_coefficient_fraction": 0.046617507867555884,
+      "constant_length_to_old_absolute_policy_coefficient_ratio": 0.295482947634274,
+      "proposed_extra_minus_half_on_truncated_abs_coefficient": 273.0,
+      "existing_truncated_abs_coefficient": 273.1283221542835,
+      "coefficient_replay_assumptions": "Policy-only surrogate at ratio=1, without clipping, importance correction, or KL. Not an autograd replay.",
+      "caveat": "Coefficient mass is not a parameter-gradient norm and cannot predict updated accuracy."
+    },
+    {
+      "seed": 42,
+      "arm": "A",
+      "n": 9216,
+      "tokens": 6308962,
+      "mean_tokens": 684.5661892361111,
+      "correct": 3611,
+      "mean_correct_tokens": 499.13375796178343,
+      "mean_wrong_tokens": 804.0303300624442,
+      "truncated": 572,
+      "truncated_fraction": 0.062065972222222224,
+      "truncated_tokens": 1171456,
+      "truncated_token_fraction": 0.18568125786777603,
+      "status_counts": {
+        "exact": 3211,
+        "symbolic": 4324,
+        "missing_or_invalid_box": 949,
+        "unparseable": 139,
+        "truncated": 572,
+        "unit_symbolic": 17,
+        "unit_exact": 4
+      },
+      "correct_length_percentiles": {
+        "0.5": 427,
+        "0.9": 905,
+        "0.95": 1135,
+        "0.99": 1588
+      },
+      "max_correct_length": 1995,
+      "shorter_cap_correct_exceedances": {
+        "1024": {
+          "n": 251,
+          "fraction": 0.06950983107172529
+        },
+        "1536": {
+          "n": 43,
+          "fraction": 0.011908058709498754
+        },
+        "1664": {
+          "n": 26,
+          "fraction": 0.007200221545278316
+        },
+        "1792": {
+          "n": 16,
+          "fraction": 0.004430905566325118
+        }
+      },
+      "first_48": {
+        "n": 1536,
+        "tokens": 1022558,
+        "mean_tokens": 665.7278645833334,
+        "correct": 557,
+        "mean_correct_tokens": 486.40754039497307,
+        "mean_wrong_tokens": 767.7517875383044,
+        "truncated": 85,
+        "truncated_fraction": 0.055338541666666664,
+        "truncated_tokens": 174080,
+        "truncated_token_fraction": 0.17023973212277446
+      },
+      "final_48": {
+        "n": 1536,
+        "tokens": 1102304,
+        "mean_tokens": 717.6458333333334,
+        "correct": 659,
+        "mean_correct_tokens": 498.03945371775416,
+        "mean_wrong_tokens": 882.6636259977195,
+        "truncated": 117,
+        "truncated_fraction": 0.076171875,
+        "truncated_tokens": 239616,
+        "truncated_token_fraction": 0.21737742038493918
+      },
+      "truncated_advantage_signs": {
+        "zero": 208,
+        "negative": 364
+      },
+      "truncated_old_absolute_coefficient_fraction": 0.048770900584159366,
+      "constant_length_to_old_absolute_policy_coefficient_ratio": 0.30391698492535546,
+      "proposed_extra_minus_half_on_truncated_abs_coefficient": 286.0,
+      "existing_truncated_abs_coefficient": 281.83449029922485,
+      "coefficient_replay_assumptions": "Policy-only surrogate at ratio=1, without clipping, importance correction, or KL. Not an autograd replay.",
+      "caveat": "Coefficient mass is not a parameter-gradient norm and cannot predict updated accuracy."
+    },
+    {
+      "seed": 42,
+      "arm": "C_bounded",
+      "n": 9216,
+      "tokens": 6229129,
+      "mean_tokens": 675.9037543402778,
+      "correct": 3701,
+      "mean_correct_tokens": 495.4982437179141,
+      "mean_wrong_tokens": 796.9700815956483,
+      "truncated": 536,
+      "truncated_fraction": 0.058159722222222224,
+      "truncated_tokens": 1097728,
+      "truncated_token_fraction": 0.17622495857767595,
+      "status_counts": {
+        "exact": 3279,
+        "symbolic": 4289,
+        "missing_or_invalid_box": 964,
+        "unparseable": 130,
+        "truncated": 536,
+        "unit_symbolic": 11,
+        "unit_exact": 7
+      },
+      "correct_length_percentiles": {
+        "0.5": 417,
+        "0.9": 905,
+        "0.95": 1114,
+        "0.99": 1601
+      },
+      "max_correct_length": 2028,
+      "shorter_cap_correct_exceedances": {
+        "1024": {
+          "n": 251,
+          "fraction": 0.06781950824101594
+        },
+        "1536": {
+          "n": 49,
+          "fraction": 0.013239664955417455
+        },
+        "1664": {
+          "n": 29,
+          "fraction": 0.007835720075655228
+        },
+        "1792": {
+          "n": 19,
+          "fraction": 0.005133747635774115
+        }
+      },
+      "first_48": {
+        "n": 1536,
+        "tokens": 1028113,
+        "mean_tokens": 669.3444010416666,
+        "correct": 558,
+        "mean_correct_tokens": 495.5824372759857,
+        "mean_wrong_tokens": 768.4846625766871,
+        "truncated": 96,
+        "truncated_fraction": 0.0625,
+        "truncated_tokens": 196608,
+        "truncated_token_fraction": 0.19123189766105478
+      },
+      "final_48": {
+        "n": 1536,
+        "tokens": 1076811,
+        "mean_tokens": 701.048828125,
+        "correct": 700,
+        "mean_correct_tokens": 502.6328571428571,
+        "mean_wrong_tokens": 867.1866028708134,
+        "truncated": 103,
+        "truncated_fraction": 0.06705729166666667,
+        "truncated_tokens": 210944,
+        "truncated_token_fraction": 0.19589695870491663
+      },
+      "truncated_advantage_signs": {
+        "zero": 192,
+        "negative": 344
+      },
+      "truncated_old_absolute_coefficient_fraction": 0.047783940220347695,
+      "constant_length_to_old_absolute_policy_coefficient_ratio": 0.30615476077204645,
+      "proposed_extra_minus_half_on_truncated_abs_coefficient": 268.0,
+      "existing_truncated_abs_coefficient": 279.2149215936661,
+      "coefficient_replay_assumptions": "Policy-only surrogate at ratio=1, without clipping, importance correction, or KL. Not an autograd replay.",
+      "caveat": "Coefficient mass is not a parameter-gradient norm and cannot predict updated accuracy."
+    }
+  ],
+  "testing": [
+    {
+      "seed": 17,
+      "arm": "A",
+      "dataset": "math500",
+      "n": 500,
+      "correct": 265,
+      "wrong": 235,
+      "accuracy": 0.53,
+      "wrong_status_counts": {
+        "truncated": 32,
+        "missing_or_invalid_box": 14,
+        "symbolic": 184,
+        "unparseable": 5
+      },
+      "truncated_or_invalid_box_wrong": 46,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.19574468085106383,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    },
+    {
+      "seed": 17,
+      "arm": "A",
+      "dataset": "gsm8k",
+      "n": 1319,
+      "correct": 882,
+      "wrong": 437,
+      "accuracy": 0.66868840030326,
+      "wrong_status_counts": {
+        "missing_or_invalid_box": 83,
+        "symbolic": 309,
+        "truncated": 33,
+        "unparseable": 7,
+        "unit_symbolic": 5
+      },
+      "truncated_or_invalid_box_wrong": 116,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.2654462242562929,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    },
+    {
+      "seed": 17,
+      "arm": "C_bounded",
+      "dataset": "math500",
+      "n": 500,
+      "correct": 289,
+      "wrong": 211,
+      "accuracy": 0.578,
+      "wrong_status_counts": {
+        "missing_or_invalid_box": 25,
+        "symbolic": 149,
+        "truncated": 34,
+        "unparseable": 3
+      },
+      "truncated_or_invalid_box_wrong": 59,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.2796208530805687,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    },
+    {
+      "seed": 17,
+      "arm": "C_bounded",
+      "dataset": "gsm8k",
+      "n": 1319,
+      "correct": 915,
+      "wrong": 404,
+      "accuracy": 0.6937073540561031,
+      "wrong_status_counts": {
+        "symbolic": 264,
+        "missing_or_invalid_box": 123,
+        "truncated": 10,
+        "unit_symbolic": 5,
+        "unparseable": 2
+      },
+      "truncated_or_invalid_box_wrong": 133,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.3292079207920792,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    },
+    {
+      "seed": 42,
+      "arm": "A",
+      "dataset": "math500",
+      "n": 500,
+      "correct": 264,
+      "wrong": 236,
+      "accuracy": 0.528,
+      "wrong_status_counts": {
+        "missing_or_invalid_box": 15,
+        "truncated": 42,
+        "symbolic": 176,
+        "unparseable": 3
+      },
+      "truncated_or_invalid_box_wrong": 57,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.24152542372881355,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    },
+    {
+      "seed": 42,
+      "arm": "A",
+      "dataset": "gsm8k",
+      "n": 1319,
+      "correct": 890,
+      "wrong": 429,
+      "accuracy": 0.6747536012130402,
+      "wrong_status_counts": {
+        "symbolic": 337,
+        "truncated": 35,
+        "missing_or_invalid_box": 42,
+        "unparseable": 6,
+        "unit_symbolic": 9
+      },
+      "truncated_or_invalid_box_wrong": 77,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.1794871794871795,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    },
+    {
+      "seed": 42,
+      "arm": "C_bounded",
+      "dataset": "math500",
+      "n": 500,
+      "correct": 274,
+      "wrong": 226,
+      "accuracy": 0.548,
+      "wrong_status_counts": {
+        "truncated": 36,
+        "missing_or_invalid_box": 17,
+        "symbolic": 170,
+        "unparseable": 3
+      },
+      "truncated_or_invalid_box_wrong": 53,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.2345132743362832,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    },
+    {
+      "seed": 42,
+      "arm": "C_bounded",
+      "dataset": "gsm8k",
+      "n": 1319,
+      "correct": 896,
+      "wrong": 423,
+      "accuracy": 0.6793025018953753,
+      "wrong_status_counts": {
+        "symbolic": 299,
+        "missing_or_invalid_box": 87,
+        "truncated": 24,
+        "unparseable": 6,
+        "unit_symbolic": 7
+      },
+      "truncated_or_invalid_box_wrong": 111,
+      "truncated_or_invalid_box_fraction_of_wrong": 0.2624113475177305,
+      "caveat": "Disjoint evaluator statuses; not all invalid boxes hide a correct derivation."
+    }
+  ],
+  "paired_completion": [
+    {
+      "seed": 17,
+      "dataset": "math500",
+      "n": 500,
+      "both_ended": 447,
+      "at_least_one_not_ended": 53,
+      "caveat": "A union across two policies is not either policy's recoverable-error count."
+    },
+    {
+      "seed": 17,
+      "dataset": "gsm8k",
+      "n": 1319,
+      "both_ended": 1282,
+      "at_least_one_not_ended": 37,
+      "caveat": "A union across two policies is not either policy's recoverable-error count."
+    },
+    {
+      "seed": 42,
+      "dataset": "math500",
+      "n": 500,
+      "both_ended": 440,
+      "at_least_one_not_ended": 60,
+      "caveat": "A union across two policies is not either policy's recoverable-error count."
+    },
+    {
+      "seed": 42,
+      "dataset": "gsm8k",
+      "n": 1319,
+      "both_ended": 1267,
+      "at_least_one_not_ended": 52,
+      "caveat": "A union across two policies is not either policy's recoverable-error count."
+    }
+  ],
+  "sampled_training_truncations": [
+    {
+      "sample_id": "A-00",
+      "seed": 17,
+      "arm": "A",
+      "step": 214,
+      "tag": 6854,
+      "problem_id": "math/train/prealgebra/348"
+    },
+    {
+      "sample_id": "A-01",
+      "seed": 17,
+      "arm": "A",
+      "step": 248,
+      "tag": 7942,
+      "problem_id": "math/train/precalculus/722"
+    },
+    {
+      "sample_id": "A-02",
+      "seed": 17,
+      "arm": "A",
+      "step": 17,
+      "tag": 557,
+      "problem_id": "math/train/number_theory/562"
+    },
+    {
+      "sample_id": "A-03",
+      "seed": 17,
+      "arm": "A",
+      "step": 87,
+      "tag": 2812,
+      "problem_id": "math/train/algebra/37"
+    },
+    {
+      "sample_id": "A-04",
+      "seed": 17,
+      "arm": "A",
+      "step": 180,
+      "tag": 5784,
+      "problem_id": "math/train/intermediate_algebra/665"
+    },
+    {
+      "sample_id": "A-05",
+      "seed": 17,
+      "arm": "A",
+      "step": 138,
+      "tag": 4423,
+      "problem_id": "math/train/algebra/396"
+    },
+    {
+      "sample_id": "A-06",
+      "seed": 17,
+      "arm": "A",
+      "step": 120,
+      "tag": 3844,
+      "problem_id": "math/train/intermediate_algebra/1114"
+    },
+    {
+      "sample_id": "A-07",
+      "seed": 17,
+      "arm": "A",
+      "step": 38,
+      "tag": 1236,
+      "problem_id": "math/train/algebra/1046"
+    },
+    {
+      "sample_id": "A-08",
+      "seed": 17,
+      "arm": "A",
+      "step": 179,
+      "tag": 5757,
+      "problem_id": "math/train/precalculus/608"
+    },
+    {
+      "sample_id": "A-09",
+      "seed": 17,
+      "arm": "A",
+      "step": 32,
+      "tag": 1037,
+      "problem_id": "math/train/prealgebra/721"
+    },
+    {
+      "sample_id": "C_bounded-00",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 178,
+      "tag": 5711,
+      "problem_id": "math/train/counting_and_probability/384"
+    },
+    {
+      "sample_id": "C_bounded-01",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 245,
+      "tag": 7850,
+      "problem_id": "math/train/counting_and_probability/739"
+    },
+    {
+      "sample_id": "C_bounded-02",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 118,
+      "tag": 3790,
+      "problem_id": "math/train/intermediate_algebra/333"
+    },
+    {
+      "sample_id": "C_bounded-03",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 156,
+      "tag": 5014,
+      "problem_id": "math/train/number_theory/821"
+    },
+    {
+      "sample_id": "C_bounded-04",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 214,
+      "tag": 6867,
+      "problem_id": "math/train/geometry/521"
+    },
+    {
+      "sample_id": "C_bounded-05",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 7,
+      "tag": 241,
+      "problem_id": "math/train/prealgebra/756"
+    },
+    {
+      "sample_id": "C_bounded-06",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 232,
+      "tag": 7449,
+      "problem_id": "math/train/precalculus/470"
+    },
+    {
+      "sample_id": "C_bounded-07",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 39,
+      "tag": 1270,
+      "problem_id": "math/train/intermediate_algebra/69"
+    },
+    {
+      "sample_id": "C_bounded-08",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 232,
+      "tag": 7448,
+      "problem_id": "math/train/precalculus/470"
+    },
+    {
+      "sample_id": "C_bounded-09",
+      "seed": 17,
+      "arm": "C_bounded",
+      "step": 54,
+      "tag": 1747,
+      "problem_id": "math/train/number_theory/255"
+    }
+  ],
+  "limitations": [
+    "No counterfactual accuracy gain estimated.",
+    "Correct-only length quantiles are censored and survivor-biased.",
+    "Same test sets have already been examined; they are not sealed."
+  ]
+}

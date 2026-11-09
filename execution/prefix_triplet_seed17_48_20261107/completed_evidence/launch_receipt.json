@@ -1,0 +1,16 @@
+{
+  "pid": 2722088,
+  "unix": 1794084386.476224,
+  "source_release_sha256": "c836587c30f1a12c50fac5a0c76dd1f6f66f4088a4b890739935c68496fa7767",
+  "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "variants": [
+    "bounded",
+    "uniform",
+    "prefix"
+  ],
+  "additional_updates_per_arm": 48,
+  "seed": 17,
+  "validation_only": true,
+  "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+  "no_automatic_retries": true
+}

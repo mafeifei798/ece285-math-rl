@@ -27,7 +27,7 @@ def verify_release():
     for n,h in r['dependencies'].items():assert sha(ROOT/n)==h,n
     return sha(HERE/'release.json')
 def guard_root():
-    assert ROOT.resolve().is_relative_to(Path('/srv/research')),ROOT
+    assert ROOT.resolve().is_relative_to(Path('/path/to/project_parent')),ROOT
     assert os.environ.get('CUDA_VISIBLE_DEVICES')=='1'
 def protect():
     protected=read(CD/'protected_originals.json')

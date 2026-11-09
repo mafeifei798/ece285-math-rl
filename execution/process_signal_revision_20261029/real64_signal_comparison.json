@@ -1,6 +1,6 @@
 {
   "scope": "counterfactual signal-only replay of the SAME stored responses, not four trained policies",
-  "input": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/process_signal_revision_20261029/saved_C_bounded_smoke/rollouts.jsonl",
+  "input": "/path/to/ece285_math_rl_project/execution/process_signal_revision_20261029/saved_C_bounded_smoke/rollouts.jsonl",
   "input_sha256": "f1c1f5c0f59ddf12e7e7f6a55670e22e14c13c57f63662ca66b6817e2fbc973a",
   "scorer_C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
   "rows": 64,

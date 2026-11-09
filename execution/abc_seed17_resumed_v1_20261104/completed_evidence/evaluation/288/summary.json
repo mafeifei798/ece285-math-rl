@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "step": 288,
+  "summary": {
+    "A": {
+      "math500": {
+        "n": 500,
+        "correct": 265.0,
+        "accuracy": 0.53,
+        "generated_tokens": 356993,
+        "truncated": 32,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "f937529b292edbcfc39bd5ee1fa0525666aa9c161f6acd5b339156e74312b71a",
+        "inference_seconds": 872.9686288833618
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 882.0,
+        "accuracy": 0.66868840030326,
+        "generated_tokens": 511458,
+        "truncated": 33,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "05c1a8707547722edd00f6f24bc2565995e28d6d320f3466b9aad498edbc2437",
+        "inference_seconds": 2017.862897157669
+      }
+    },
+    "C_mix": {
+      "math500": {
+        "n": 500,
+        "correct": 270.0,
+        "accuracy": 0.54,
+        "generated_tokens": 355220,
+        "truncated": 39,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "bd747d501d1f89b32b2ae12edbc990589086777eb1add7fc11acb05034c8bdcc",
+        "inference_seconds": 878.4089210033417
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 893.0,
+        "accuracy": 0.6770280515542078,
+        "generated_tokens": 499308,
+        "truncated": 28,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "f01eb457c6abb21ac2972e922d3f37c57b45d21f9091ed3a468afed4001d47e7",
+        "inference_seconds": 1920.058369398117
+      }
+    },
+    "C_bounded": {
+      "math500": {
+        "n": 500,
+        "correct": 289.0,
+        "accuracy": 0.578,
+        "generated_tokens": 335230,
+        "truncated": 34,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "7bd8fa1e0d162c9e99c5a25e90612427849a2f8ed3b85cdda2915d1f6f53f971",
+        "inference_seconds": 883.3014581203461
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 915.0,
+        "accuracy": 0.6937073540561031,
+        "generated_tokens": 451740,
+        "truncated": 10,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "2c9f1f078c766b1ca23247e34161423388ff27c7e92d6a056da0a2c7d106318b",
+        "inference_seconds": 1527.852046251297
+      }
+    }
+  },
+  "contract_sha256": "0470d02f0bdca3a8147149a3560e60de8aa9368ba1ef908dcb9cfbb02b05d6f3",
+  "seconds": 8142.406752824783,
+  "new_training": false,
+  "new_PRM_calls": 0
+}

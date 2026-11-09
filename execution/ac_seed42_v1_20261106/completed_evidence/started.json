@@ -1,0 +1,61 @@
+{
+  "pid": 1486797,
+  "create_time": 1793992225.67,
+  "unix": 1793992226.2226322,
+  "deadline_unix": 1794165026.2213194,
+  "protocol": {
+    "authorization": "User explicitly authorized seed42 A/C-bounded from common initial model on 2026-11-06, superseding previous wait. No new reward/loss, extra arm, or adaptive budget.",
+    "arms": [
+      "A",
+      "C_bounded"
+    ],
+    "seed": 42,
+    "origin_updates": 0,
+    "resume_acceptance_updates": 2,
+    "validation_updates": 144,
+    "final_updates": 288,
+    "group_size": 8,
+    "questions_per_update": 4,
+    "generated_rows_per_update": 32,
+    "approx_tokens_validation": 3000000,
+    "approx_tokens_final": 6000000,
+    "budget_rule": "Common update counts and prompt schedule are primary. 3M/6M are approximate labels; actual emitted tokens reported separately. No additional seed or adaptive extension.",
+    "C_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+    "VLLM_USE_V1": "1",
+    "VLLM_ENABLE_V1_MULTIPROCESSING": "1",
+    "learning_rate": 5e-06,
+    "beta": 0.04,
+    "temperature": 1.0,
+    "max_completion_length": 2048,
+    "coefficient": 0.2,
+    "gpu": 0,
+    "sharing_authorized": true,
+    "restart_boundaries": {
+      "A": [
+        2,
+        144,
+        288
+      ],
+      "C_bounded": [
+        2,
+        144,
+        288
+      ]
+    },
+    "resume_limitation": "Same restart boundaries for both arms. Optimizer/adapter/scheduler/CPU+CUDA RNG restored exactly; vLLM engine sampling RNG restarts with unchanged TRL default seed0. Training and prompt permutation use seed42.",
+    "reward_loss_changed": false,
+    "new_PRM_adaptation": false,
+    "extra_seeds": false,
+    "maximum_pipeline_hours": 48,
+    "resume_from_user_pause": false,
+    "start_steps": {
+      "A": 0,
+      "C_bounded": 0
+    },
+    "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+    "gpu_reindexed": true,
+    "requested_new_seed": true,
+    "sampling_engine_seed": 0
+  },
+  "source_release_sha256": "285cba59327cbb17ccd6cfb825083952d00d480d6003b51803fd605ae2c63a81"
+}

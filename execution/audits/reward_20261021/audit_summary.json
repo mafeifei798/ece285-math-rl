@@ -12,12 +12,12 @@
     "prompt_order_identical_on_common_prefix": true,
     "saved_training_args_difference": {
       "logging_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
-        "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/tensorboard"
+        "/path/to/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+        "/path/to/ece285_math_rl_project/runs/B_seed17_6M/tensorboard"
       ],
       "output_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17",
-        "/srv/research/ece285_math_rl_project/runs/B_seed17_6M"
+        "/path/to/ece285_math_rl_project/runs/A_seed17",
+        "/path/to/ece285_math_rl_project/runs/B_seed17_6M"
       ]
     },
     "forward_cases": 10,
@@ -143,7 +143,7 @@
     },
     "process_cmdlines": {
       "1898321": ".venv/bin/python training_b/run_b.py ",
-      "2220917": "/srv/research/ece285_math_rl_project/.venv/bin/python training_b/train_b.py --run-dir /srv/research/ece285_math_rl_project/runs/B_seed17_24M --target 24000000 --resume /srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285 --prior-run /srv/research/ece285_math_rl_project/runs/B_seed17_6M "
+      "2220917": "/path/to/ece285_math_rl_project/.venv/bin/python training_b/train_b.py --run-dir /path/to/ece285_math_rl_project/runs/B_seed17_24M --target 24000000 --resume /path/to/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285 --prior-run /path/to/ece285_math_rl_project/runs/B_seed17_6M "
     },
     "failure_file_present": false,
     "recent_metrics_nonfinite": [],

@@ -1,7 +1,7 @@
 {
   "passed": true,
   "scope": "Formula-only FP64 transcription on fixed scores; not official code execution, training, or accuracy comparison",
-  "source": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/cd_prm_7b_pair_20261028/artifacts/group_advantages.jsonl",
+  "source": "/path/to/ece285_math_rl_project/execution/cd_prm_7b_pair_20261028/artifacts/group_advantages.jsonl",
   "source_sha256": "5717dc66f578d4d5fb28cd9bbea83229ca294ed5509524458d04b7e228ea3383",
   "group_count": 67,
   "response_count": 536,

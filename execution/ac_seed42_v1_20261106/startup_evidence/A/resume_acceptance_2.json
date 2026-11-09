@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source_step": 0,
+  "source": "initial_base_model_plus_seed42_LoRA",
+  "seed": 42,
+  "policy_checkpoint_loaded": false,
+  "fresh_optimizer": true,
+  "common_initial_model": true,
+  "first_new_optimizer_step": 1,
+  "prompt_order_checked": true,
+  "loss_input_exact": true,
+  "actor_updated": true,
+  "vllm_sampling_RNG_not_bitwise_resumed": true
+}

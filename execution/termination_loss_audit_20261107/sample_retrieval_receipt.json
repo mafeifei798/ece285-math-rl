@@ -1,0 +1,7 @@
+{
+  "rows": 20,
+  "remote_writes": false,
+  "GPU_work": false,
+  "samples_sha256": "514ec8db0d1407e3ac67190a36cc14961ddeaf602fec823cd34bbcf70903bb3b",
+  "selection_sha256": "264a60de5c473893947877a457f834ef34bd470e8961db01c978278a5afd0545"
+}

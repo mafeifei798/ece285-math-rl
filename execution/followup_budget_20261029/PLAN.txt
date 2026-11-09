@@ -79,7 +79,7 @@ C-bounded：原结果优势 + 0.2*y*(m-答对子集的平均m)，合成后不再
 模型Qwen2.5-Math-1.5B、LoRA16、组大小8、每次更新4题/32回答、lr=5e-6、
 beta=0.04、temperature=1、2048回答上限、固定训练数据、提示和reward-repair-v3验答。
 两过程奖励臂继续用同一个冻结C及同一分段/评分接入；不更改λ、loss、PRM或提示。
-全部结果保存在/srv/research/ece285_math_rl_project的新版本目录，旧文件做hash保护。
+全部结果保存在/path/to/ece285_math_rl_project的新版本目录，旧文件做hash保护。
 resume时vLLM采样RNG重建的限制需沿用披露，不能称为与不间断运行逐位相同。
 新seed需真正改变seed/data_seed并核验组间配对，不能只改目录名。
 完整官方PAPO含不同评分器与较大硬件配方，不把当前小模型移植声称为官方复现。

@@ -1,12 +1,12 @@
 {
   "pid": 2982696,
-  "run": "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v1",
-  "log": "/srv/research/ece285_math_rl_project/audits/PURE_integration_20261022_dispatch/runner.log",
+  "run": "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v1",
+  "log": "/path/to/ece285_math_rl_project/audits/PURE_integration_20261022_dispatch/runner.log",
   "command": [
-    "/srv/research/ece285_math_rl_project/.venv/bin/python",
-    "/srv/research/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py",
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "/path/to/ece285_math_rl_project/experiments/pure_integration_20261022/no_update.py",
     "--run",
-    "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v1",
+    "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v1",
     "--i-understand-no-updates"
   ],
   "launched": 1792732807.2131827,

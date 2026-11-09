@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "policy_generation_calls": 0,
+  "optimizer_updates": 0,
+  "PRM_frozen": true,
+  "PRM_adapter_sha256": "4917be38966c8438f58e283eb06c7fa818fed2bb13b726152078c19af013c356",
+  "paired_test_responses": 200,
+  "mean_min_original_minus_deleted": -0.00444946426898241,
+  "paired_mean_bootstrap95CI": [
+    -0.008901735742110757,
+    -8.971784124150939e-05
+  ],
+  "positive_gt1e6": 39,
+  "negative_lt_minus1e6": 159,
+  "near_ties": 2,
+  "training_groups_replayed": 20,
+  "groups_with_correct_process_rank_change": 4,
+  "advantage_sign_changes": 0,
+  "maximum_abs_advantage_change": 0.04824841022491455,
+  "scored_versions": 528,
+  "seconds": 48.43506574630737,
+  "PRM_input_tokens": 277038,
+  "PRM_forward_seconds": 38.122985172085464,
+  "peak_torch_allocated_GiB": 13.757879257202148,
+  "limits": [
+    "Conditional200 correct-placeholder MATH500 outputs and targeted20 training groups, not overall prevalence.",
+    "Paired score sensitivity isolates this text edit, not causal evidence that PRM training induced the policy format.",
+    "Deleting a placeholder can change segmentation; unchanged-step matches are reported separately.",
+    "No diagnostic result changes continuation reward/loss or selects checkpoints."
+  ]
+}

@@ -23,7 +23,7 @@
         "time": 1792756011.3066442,
         "stage": "done",
         "tokens": 843243,
-        "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0040",
+        "latest_checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/checkpoints/step_0040",
         "collapsed": false
       }
     },
@@ -38,7 +38,7 @@
         "time": 1792757258.1809628,
         "stage": "generation",
         "tokens": 772581,
-        "latest_checkpoint": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0036",
+        "latest_checkpoint": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_PPRM_pilot_seed17_20261023/checkpoints/step_0036",
         "error": "Token ID is outside the actor tokenizer vocabulary"
       }
     }

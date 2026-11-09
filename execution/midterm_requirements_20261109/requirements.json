@@ -1,0 +1,21 @@
+{
+  "source_url": "https://piazza.com/class/muwwwlp9vfi76w/post/61",
+  "source_title": "Project mid-term report",
+  "post_author": "Ruiyi Zhang",
+  "verified_using": "Authenticated Safari UI, original post and instructor followup",
+  "verified_date_America_Los_Angeles": "2026-11-09",
+  "deadline_local": "2026-11-09 23:59 America/Los_Angeles",
+  "submission_destination": "Gradescope",
+  "length": "around 5 pages, excluding references",
+  "required_contents": [
+    "Revised project proposal content",
+    "Detailed methods: mathematical setup, model, algorithm, theoretical analysis if any",
+    "Discussion of proposed method: novelty, advantages, limitations"
+  ],
+  "experimental_results_required": false,
+  "clarification_author": "Pengtao Xie",
+  "clarification_quote": "It's ok to not include results in the mid-term report.",
+  "specific_layout_template_stated_in_this_post": false,
+  "submitted_anything": false,
+  "started_GPU_jobs": false
+}

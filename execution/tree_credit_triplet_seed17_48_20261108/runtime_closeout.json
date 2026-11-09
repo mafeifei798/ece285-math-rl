@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "unix": 1794164052.3268697,
+  "controller_stage": "complete",
+  "our_live_controller_or_children": [],
+  "GPU_apps_after_closeout": "",
+  "CUDA_initialized_by_check": false,
+  "sampling_correction_coverage": {
+    "chain_cb": {
+      "vllm_sampling_correction_enabled": false,
+      "batches": 48,
+      "old_logps_absent": 48,
+      "sampling_ratio_absent": 48,
+      "sampling_ratio_reconstructions_applicable": 0,
+      "note": "Optional ratio branch in the prior independent verifier was not applicable; its max-error0 is not evidence of reconstructed sampling ratios. Current single-iteration loss uses detached current log-probabilities when cached old log-probabilities are absent."
+    },
+    "tree_vr": {
+      "vllm_sampling_correction_enabled": false,
+      "batches": 48,
+      "old_logps_absent": 48,
+      "sampling_ratio_absent": 48,
+      "sampling_ratio_reconstructions_applicable": 0,
+      "note": "Optional ratio branch in the prior independent verifier was not applicable; its max-error0 is not evidence of reconstructed sampling ratios. Current single-iteration loss uses detached current log-probabilities when cached old log-probabilities are absent."
+    },
+    "tree_cb": {
+      "vllm_sampling_correction_enabled": false,
+      "batches": 48,
+      "old_logps_absent": 48,
+      "sampling_ratio_absent": 48,
+      "sampling_ratio_reconstructions_applicable": 0,
+      "note": "Optional ratio branch in the prior independent verifier was not applicable; its max-error0 is not evidence of reconstructed sampling ratios. Current single-iteration loss uses detached current log-probabilities when cached old log-probabilities are absent."
+    }
+  }
+}

@@ -5,6 +5,6 @@
   "B_source_hashes_unchanged": true,
   "C_D_RL_started": false,
   "C_D_RL_run_dirs": [],
-  "GPU_processes": "1511394, /srv/research/rna_structure_autoencoder_20260905/env/bin/python, 7124 MiB\n",
+  "GPU_processes": "1511394, /path/to/project_parent/rna_structure_autoencoder_20260905/env/bin/python, 7124 MiB\n",
   "remote_unix": 1792607786.9363427
 }

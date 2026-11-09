@@ -2,7 +2,7 @@
 from pathlib import Path
 import sys,os,fcntl,time,traceback,json
 
-ROOT=Path('/srv/research/ece285_math_rl_project')
+ROOT=Path('/path/to/ece285_math_rl_project')
 SOURCE=ROOT/'experiments/c_bounded_pilot_20261029_v2'
 sys.path.insert(0,str(SOURCE))
 from pilot_common import *

@@ -1,1 +1,1 @@
-{"unix": 1793338815.6225648, "command": ["/srv/research/ece285_math_rl_project/.venv/bin/python", "-B", "-u", "/srv/research/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029/controller.py"], "training": false}
+{"unix": 1793338815.6225648, "command": ["/path/to/ece285_math_rl_project/.venv/bin/python", "-B", "-u", "/path/to/ece285_math_rl_project/experiments/a6m_protocol_recheck_20261029/controller.py"], "training": false}

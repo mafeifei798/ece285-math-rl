@@ -1,0 +1,401 @@
+{
+  "passed": true,
+  "arm": "tree_vr",
+  "global_step": 336,
+  "additional_updates": 48,
+  "loss_rows": 1536,
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/Tree_credit_triplet_seed17_48_20261108/tree_vr/checkpoint-336",
+  "adapter_sha256": "09df15f168afe85af0d79cb797dc102be5d17948ca3aafb8efd29f1ff6e8ce04",
+  "source_checkpoint_unchanged": true,
+  "actor_base_unchanged": true,
+  "PRM_frozen": true,
+  "seconds": 8247.999958515167,
+  "progress": {
+    "arm": "tree_vr",
+    "global_step": 336,
+    "additional_updates": 48,
+    "target_step": 336,
+    "generated_tokens": 980089,
+    "expanded_leaf_tokens": 1034557,
+    "loss_rows": 1536,
+    "elapsed_seconds": 8228.441768876277,
+    "pid": 3534578,
+    "unix": 1794153137.2696667,
+    "latest_generation": {
+      "step_before_update": 335,
+      "question_ids": [
+        "math/train/number_theory/719",
+        "math/train/prealgebra/580",
+        "math/train/counting_and_probability/604",
+        "math/train/intermediate_algebra/28"
+      ],
+      "rows": 32,
+      "tokens": 26591,
+      "unique_generation_tokens": 26003,
+      "seconds": 170.84004607517272,
+      "correct": 20.0,
+      "empty": 0,
+      "short_wrong": 0,
+      "truncated": 0,
+      "answer_statuses": {
+        "exact": 19,
+        "symbolic": 5,
+        "unit_symbolic": 8
+      },
+      "group_types": {
+        "mixed": 2,
+        "all_wrong": 1,
+        "all_correct": 1
+      },
+      "PRM_cost": {
+        "prm_input_tokens": 0,
+        "prm_forward_seconds": 0.0,
+        "prm_model_loaded": false
+      },
+      "signal_checks": {
+        "wrong_positive_total_tokens": 0,
+        "wrong_positive_prm_tokens": 0,
+        "wrong_positive_exclusive_suffix_tokens": 0,
+        "post_construction_normalizations": 0,
+        "advantage_RMS": 0.6263030767440796,
+        "fallback_roots": 7,
+        "coefficients": [
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.75,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.75,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.75,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.25,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.75,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.25,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.75,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.25,
+            "process_bonus": 0.0,
+            "root_value": 0.625,
+            "parent_value": 0.625,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 0.0,
+            "parent_value": 0.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": -1.75,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.25,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.25,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.25,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 0.875,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 196,
+            "prefix_credit": 0.125,
+            "suffix_credit": 0.125,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 1.0,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 196,
+            "prefix_credit": 0.125,
+            "suffix_credit": 0.125,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 1.0,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 196,
+            "prefix_credit": 0.125,
+            "suffix_credit": 0.125,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 1.0,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 196,
+            "prefix_credit": 0.125,
+            "suffix_credit": 0.125,
+            "process_bonus": 0.0,
+            "root_value": 0.875,
+            "parent_value": 1.0,
+            "shared_descendant_count": 4,
+            "reweight_factor": 0.5
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          },
+          {
+            "prefix_length": 0,
+            "prefix_credit": 0.0,
+            "suffix_credit": 0.0,
+            "process_bonus": 0.0,
+            "root_value": 1.0,
+            "parent_value": 1.0,
+            "shared_descendant_count": 1,
+            "reweight_factor": 1.0
+          }
+        ],
+        "max_path_tokens": 1921
+      },
+      "wrong_positive_tokens": 0,
+      "wrong_positive_prm_tokens": 0,
+      "post_scalar_normalizations": 0,
+      "arm": "tree_vr",
+      "loss_type": "grpo"
+    },
+    "peak_allocated_GiB": 22.04266119003296
+  },
+  "metrics": {
+    "train_runtime": 8228.0485,
+    "train_samples_per_second": 77.783,
+    "train_steps_per_second": 2.431,
+    "total_flos": 0.0,
+    "train_loss": 0.0005562614781714122
+  }
+}

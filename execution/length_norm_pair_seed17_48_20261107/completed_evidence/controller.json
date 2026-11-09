@@ -1,0 +1,79 @@
+{
+  "stage": "complete",
+  "pid": 3240355,
+  "unix": 1794135414.2299023,
+  "active_child": null,
+  "children": [
+    {
+      "stage": "no_update_header_recovered",
+      "pid": 3240362,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/smoke_no_update.py"
+      ],
+      "started_unix": 1794122820.1199105,
+      "exit_code": 0,
+      "finished_unix": 1794122941.6098342
+    },
+    {
+      "stage": "train_grpo",
+      "pid": 3242362,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/train_arm.py",
+        "--arm",
+        "grpo"
+      ],
+      "started_unix": 1794122941.6568184,
+      "exit_code": 0,
+      "finished_unix": 1794128234.7949321
+    },
+    {
+      "stage": "train_fixed_length",
+      "pid": 3312711,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/train_arm.py",
+        "--arm",
+        "fixed_length"
+      ],
+      "started_unix": 1794128235.2347143,
+      "exit_code": 0,
+      "finished_unix": 1794133213.6370695
+    },
+    {
+      "stage": "validation",
+      "pid": 3380033,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/evaluate.py"
+      ],
+      "started_unix": 1794133213.9323206,
+      "exit_code": 0,
+      "finished_unix": 1794135402.4786057
+    },
+    {
+      "stage": "analysis",
+      "pid": 3407015,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/analyze.py"
+      ],
+      "started_unix": 1794135402.4829144,
+      "exit_code": 0,
+      "finished_unix": 1794135414.2289402
+    }
+  ],
+  "header_environment_recovery": true,
+  "comparison": "/path/to/ece285_math_rl_project/runs/Length_norm_pair_seed17_48_20261107/comparison.json"
+}

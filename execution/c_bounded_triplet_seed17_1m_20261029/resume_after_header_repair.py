@@ -1,7 +1,7 @@
 """Continue admitted smoke checkpoints after header-only environment repair."""
 from pathlib import Path
 import sys,os,fcntl,time,traceback
-ROOT=Path('/srv/research/ece285_math_rl_project')
+ROOT=Path('/path/to/ece285_math_rl_project')
 sys.path.insert(0,str(ROOT/'experiments/c_bounded_pilot_20261029_v2'))
 from pilot_common import *
 from controller import run

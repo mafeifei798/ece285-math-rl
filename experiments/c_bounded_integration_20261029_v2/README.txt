@@ -20,7 +20,7 @@ original group8/temp1/cap2048/prompt/verifier; raw generated IDs retained. Saved
 text phase:40 real saved responses/real C scoring/real actor forward+backward;
 actor text is explicitly retokenized and NOT claimed exact historical tokens.
 
-All new server files are under /srv/research/ece285_math_rl_project.
+All new server files are under /path/to/ece285_math_rl_project.
 Physical GPU1 sharing was authorized. Audit-only vLLM cache fraction0.15 instead
 of baseline0.3, for headroom with existing jobs. Do not compare this one-batch
 runtime as a dedicated-card benchmark or claim full training-memory acceptance.

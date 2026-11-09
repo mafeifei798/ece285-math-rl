@@ -5,7 +5,7 @@ import subprocess,json
 REMOTE=r'''
 from pathlib import Path
 import collections,json,hashlib,os
-root=Path('/srv/research/ece285_math_rl_project');out=root/'runs/CD_PRM7B_pair_seed17_20261028'
+root=Path('/path/to/ece285_math_rl_project');out=root/'runs/CD_PRM7B_pair_seed17_20261028'
 os.environ['HF_HOME']=str(root/'cache/huggingface');os.environ['HF_MODULES_CACHE']=str(root/'cache/modules')
 os.environ['HF_HUB_OFFLINE']='1';os.environ['TOKENIZERS_PARALLELISM']='false'
 def read(p):return json.loads(p.read_text())
@@ -68,7 +68,7 @@ if (out/'data_ready.json').exists():
 print(json.dumps(result,ensure_ascii=False))
 '''
 if __name__=='__main__':
-    cmd=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -']
+    cmd=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes','USER@GPU_HOST','/path/to/ece285_math_rl_project/.venv/bin/python -']
     r=subprocess.run(cmd,input=REMOTE,text=True,capture_output=True,timeout=180)
     assert r.returncode==0,r.stderr[-3000:]
     d=json.loads(r.stdout);(Path(__file__).parent/'independent_input_audit.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n');print(json.dumps(d,ensure_ascii=False,indent=2))

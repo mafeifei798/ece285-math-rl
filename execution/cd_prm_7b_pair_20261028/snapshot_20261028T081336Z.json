@@ -1,6 +1,6 @@
 {
   "checked_unix": 1793175215.7744656,
-  "remote_run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "remote_run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
   "controller.json": {
     "status": "running",
     "pid": 3237174,
@@ -14,7 +14,7 @@
     "active_child": {
       "stage": "generate",
       "pid": 3238739,
-      "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/generate.log"
+      "log": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/generate.log"
     },
     "actor_optimizer_updates": 0,
     "automatic_RL_launch": false,
@@ -23,9 +23,9 @@
   "dispatch.json": {
     "pid": 3237174,
     "started_unix": 1793174084.2960937,
-    "cwd": "/srv/research/ece285_math_rl_project",
-    "source": "/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
-    "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+    "cwd": "/path/to/ece285_math_rl_project",
+    "source": "/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
+    "run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
     "source_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
     "gpu": 1,
     "gpu_sharing_authorized": true,

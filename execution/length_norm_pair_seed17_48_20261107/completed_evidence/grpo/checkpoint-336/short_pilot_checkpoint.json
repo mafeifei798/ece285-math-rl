@@ -1,0 +1,13 @@
+{
+  "arm": "grpo",
+  "global_step": 336,
+  "loss_rows": 1536,
+  "files_sha256": {
+    "adapter_model.safetensors": "4264731a623abbcd712107208cfc062352b80254bda58bc26e54289383316449",
+    "optimizer.pt": "2e356ea48d9a6559ccf51b90237f623181c154e9491b1045f426881a0e068afb",
+    "scheduler.pt": "0070d40a1c3a96d11bd6ee55235c4bda5954b399cb3860cc99e7db5de8519713",
+    "rng_state.pth": "b68b170467184b6e8b24a490022b5c7b9f0b952c33ac21d86150f52518e5ec12",
+    "trainer_state.json": "36ed143f2b113848da750dd1d434a1de4563add89269279c5ca2eab68c27129a"
+  },
+  "source_release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150"
+}

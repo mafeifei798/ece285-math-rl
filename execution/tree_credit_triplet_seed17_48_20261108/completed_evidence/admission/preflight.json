@@ -1,0 +1,336 @@
+{
+  "passed": true,
+  "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "source_contract": {
+    "arm": "C_bounded",
+    "global_step": 288,
+    "actor_adapter_digest": "1734da9cf0b9642e1be2cfef5ca36072dc07ef568a893dca9100b015975bdebf",
+    "accounting_sha256": "9339b84925e2273021946245b98c9b5a5e9c9176725a6a7b044412375a8a2802",
+    "source_release_sha256": "b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba",
+    "complete_generation_boundary": true,
+    "files_sha256": {
+      "adapter_model.safetensors": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+      "optimizer.pt": "5acce471a2c25e49d90ca4f4a3ab4448a4a8f8779207038c58139be031adac24",
+      "scheduler.pt": "206c97a06f7e8c8e8410cfc838fd897e9765af302b84c1f4b89868f0858fbc6e",
+      "rng_state.pth": "d3941657086b1a12c98f2665bf21b6ecf3d9e36f313467439b068d1d5bfcc700",
+      "trainer_state.json": "b677a4fb39b048f152f412b12018f153b84af5a57436ef94b4cb4e70ad65d49f"
+    }
+  },
+  "question_groups": [
+    [
+      "math/train/geometry/672",
+      "math/train/number_theory/377",
+      "math/train/algebra/395",
+      "math/train/precalculus/533"
+    ],
+    [
+      "math/train/intermediate_algebra/796",
+      "math/train/prealgebra/250",
+      "math/train/geometry/483",
+      "math/train/algebra/788"
+    ],
+    [
+      "math/train/precalculus/362",
+      "math/train/prealgebra/156",
+      "math/train/algebra/1612",
+      "math/train/intermediate_algebra/166"
+    ],
+    [
+      "math/train/algebra/1269",
+      "math/train/number_theory/743",
+      "math/train/geometry/279",
+      "math/train/geometry/700"
+    ],
+    [
+      "math/train/number_theory/735",
+      "math/train/prealgebra/770",
+      "math/train/geometry/821",
+      "math/train/intermediate_algebra/977"
+    ],
+    [
+      "math/train/geometry/346",
+      "math/train/precalculus/317",
+      "math/train/number_theory/793",
+      "math/train/geometry/490"
+    ],
+    [
+      "math/train/counting_and_probability/754",
+      "math/train/precalculus/636",
+      "math/train/precalculus/573",
+      "math/train/geometry/847"
+    ],
+    [
+      "math/train/geometry/66",
+      "math/train/number_theory/445",
+      "math/train/precalculus/744",
+      "math/train/algebra/634"
+    ],
+    [
+      "math/train/algebra/678",
+      "math/train/prealgebra/455",
+      "math/train/precalculus/171",
+      "math/train/prealgebra/126"
+    ],
+    [
+      "math/train/number_theory/667",
+      "math/train/precalculus/737",
+      "math/train/algebra/1632",
+      "math/train/intermediate_algebra/571"
+    ],
+    [
+      "math/train/geometry/825",
+      "math/train/prealgebra/269",
+      "math/train/intermediate_algebra/988",
+      "math/train/algebra/557"
+    ],
+    [
+      "math/train/intermediate_algebra/397",
+      "math/train/prealgebra/45",
+      "math/train/number_theory/406",
+      "math/train/geometry/154"
+    ],
+    [
+      "math/train/intermediate_algebra/1072",
+      "math/train/geometry/495",
+      "math/train/intermediate_algebra/1160",
+      "math/train/geometry/428"
+    ],
+    [
+      "math/train/algebra/904",
+      "math/train/geometry/222",
+      "math/train/number_theory/447",
+      "math/train/number_theory/733"
+    ],
+    [
+      "math/train/intermediate_algebra/740",
+      "math/train/counting_and_probability/100",
+      "math/train/intermediate_algebra/801",
+      "math/train/precalculus/281"
+    ],
+    [
+      "math/train/algebra/538",
+      "math/train/counting_and_probability/469",
+      "math/train/number_theory/472",
+      "math/train/algebra/1460"
+    ],
+    [
+      "math/train/precalculus/179",
+      "math/train/algebra/173",
+      "math/train/prealgebra/762",
+      "math/train/prealgebra/283"
+    ],
+    [
+      "math/train/prealgebra/403",
+      "math/train/number_theory/494",
+      "math/train/intermediate_algebra/1208",
+      "math/train/algebra/105"
+    ],
+    [
+      "math/train/algebra/6",
+      "math/train/intermediate_algebra/866",
+      "math/train/algebra/99",
+      "math/train/intermediate_algebra/349"
+    ],
+    [
+      "math/train/algebra/939",
+      "math/train/algebra/1551",
+      "math/train/prealgebra/1024",
+      "math/train/algebra/456"
+    ],
+    [
+      "math/train/intermediate_algebra/1028",
+      "math/train/precalculus/244",
+      "math/train/counting_and_probability/634",
+      "math/train/geometry/221"
+    ],
+    [
+      "math/train/counting_and_probability/619",
+      "math/train/number_theory/68",
+      "math/train/prealgebra/401",
+      "math/train/intermediate_algebra/1289"
+    ],
+    [
+      "math/train/counting_and_probability/569",
+      "math/train/algebra/553",
+      "math/train/number_theory/500",
+      "math/train/algebra/1147"
+    ],
+    [
+      "math/train/algebra/87",
+      "math/train/intermediate_algebra/1125",
+      "math/train/geometry/518",
+      "math/train/geometry/319"
+    ],
+    [
+      "math/train/intermediate_algebra/1083",
+      "math/train/algebra/1138",
+      "math/train/algebra/1265",
+      "math/train/geometry/347"
+    ],
+    [
+      "math/train/intermediate_algebra/181",
+      "math/train/precalculus/515",
+      "math/train/number_theory/550",
+      "math/train/algebra/1489"
+    ],
+    [
+      "math/train/geometry/331",
+      "math/train/precalculus/690",
+      "math/train/prealgebra/426",
+      "math/train/intermediate_algebra/1156"
+    ],
+    [
+      "math/train/precalculus/704",
+      "math/train/geometry/30",
+      "math/train/geometry/366",
+      "math/train/prealgebra/649"
+    ],
+    [
+      "math/train/geometry/298",
+      "math/train/algebra/150",
+      "math/train/number_theory/462",
+      "math/train/intermediate_algebra/1207"
+    ],
+    [
+      "math/train/intermediate_algebra/50",
+      "math/train/counting_and_probability/361",
+      "math/train/prealgebra/241",
+      "math/train/prealgebra/733"
+    ],
+    [
+      "math/train/number_theory/343",
+      "math/train/prealgebra/1189",
+      "math/train/precalculus/504",
+      "math/train/intermediate_algebra/971"
+    ],
+    [
+      "math/train/intermediate_algebra/232",
+      "math/train/algebra/286",
+      "math/train/number_theory/518",
+      "math/train/algebra/591"
+    ],
+    [
+      "math/train/prealgebra/273",
+      "math/train/algebra/777",
+      "math/train/number_theory/71",
+      "math/train/prealgebra/21"
+    ],
+    [
+      "math/train/algebra/763",
+      "math/train/algebra/575",
+      "math/train/number_theory/259",
+      "math/train/algebra/565"
+    ],
+    [
+      "math/train/intermediate_algebra/990",
+      "math/train/number_theory/329",
+      "math/train/prealgebra/573",
+      "math/train/intermediate_algebra/991"
+    ],
+    [
+      "math/train/geometry/39",
+      "math/train/intermediate_algebra/428",
+      "math/train/algebra/716",
+      "math/train/number_theory/183"
+    ],
+    [
+      "math/train/precalculus/379",
+      "math/train/prealgebra/498",
+      "math/train/geometry/96",
+      "math/train/counting_and_probability/35"
+    ],
+    [
+      "math/train/prealgebra/685",
+      "math/train/geometry/223",
+      "math/train/algebra/474",
+      "math/train/algebra/1596"
+    ],
+    [
+      "math/train/prealgebra/145",
+      "math/train/geometry/535",
+      "math/train/prealgebra/262",
+      "math/train/algebra/430"
+    ],
+    [
+      "math/train/number_theory/437",
+      "math/train/algebra/969",
+      "math/train/geometry/374",
+      "math/train/prealgebra/808"
+    ],
+    [
+      "math/train/prealgebra/1178",
+      "math/train/prealgebra/60",
+      "math/train/algebra/1713",
+      "math/train/geometry/219"
+    ],
+    [
+      "math/train/precalculus/279",
+      "math/train/precalculus/287",
+      "math/train/geometry/142",
+      "math/train/number_theory/474"
+    ],
+    [
+      "math/train/algebra/1013",
+      "math/train/geometry/41",
+      "math/train/prealgebra/1035",
+      "math/train/precalculus/422"
+    ],
+    [
+      "math/train/algebra/1146",
+      "math/train/prealgebra/188",
+      "math/train/intermediate_algebra/845",
+      "math/train/prealgebra/707"
+    ],
+    [
+      "math/train/algebra/86",
+      "math/train/algebra/742",
+      "math/train/intermediate_algebra/1260",
+      "math/train/precalculus/455"
+    ],
+    [
+      "math/train/number_theory/146",
+      "math/train/geometry/216",
+      "math/train/intermediate_algebra/460",
+      "math/train/algebra/942"
+    ],
+    [
+      "math/train/prealgebra/1167",
+      "math/train/precalculus/24",
+      "math/train/algebra/179",
+      "math/train/precalculus/397"
+    ],
+    [
+      "math/train/number_theory/719",
+      "math/train/prealgebra/580",
+      "math/train/counting_and_probability/604",
+      "math/train/intermediate_algebra/28"
+    ]
+  ],
+  "train_sha256": "91931fa7ee301c03ce6bb705c728c8f5f45eedecbb7a8ca17481fd06eca6270e",
+  "validation_sha256": "4d0b842eb7a1ec1ce58ce31e96a13f85419619532436af300afa10ee3b2f1053",
+  "source_release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78",
+  "validated_acceptance_sha256": "176bbf0c01e3c4bf60b0b65e350106e03048d55dc0b4aab6119724d6e41f71a2",
+  "seed": 17,
+  "variants": [
+    "chain_cb",
+    "tree_vr",
+    "tree_cb"
+  ],
+  "start_step": 288,
+  "target_step": 336,
+  "updates_per_arm": 48,
+  "evaluations": [
+    "validation"
+  ],
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.56.2",
+    "trl": "0.23.1",
+    "peft": "0.17.1",
+    "vllm": "0.10.2"
+  },
+  "live_sampler_matches_frozen_schedule": true,
+  "paired_statistics_identity_check": true,
+  "same_optimizer_and_scheduler_source": true,
+  "vllm_rng_note": "Each arm starts a new V1 engine with seed0; historical vLLM RNG is not resumed bitwise."
+}

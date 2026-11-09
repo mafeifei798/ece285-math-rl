@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-11-09T22:35:57.725458+00:00",
+  "request": "Make the English read more naturally.",
+  "changes": [
+    "Rewrote the abstract and prose in direct academic English.",
+    "Removed repetitive disclaimers and shortened headings.",
+    "Kept the important limits and evidence distinctions."
+  ],
+  "displayed_equations_unchanged": true,
+  "all_four_table_bodies_unchanged": true,
+  "bibliography_unchanged": true,
+  "old_source_sha256": "8948429fb53252c67f79fb708a4ea06fe7a881fc701d3076ebb2a9cff3a5c639",
+  "new_source_sha256": "d74eea2ff4f970d72e4d2d9559fed5767553ec25584c238dc176ee3531bfc69f",
+  "body_pages": 5,
+  "reference_pages": 1,
+  "GPU_used": false
+}

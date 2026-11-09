@@ -1,0 +1,58 @@
+{
+  "arm": "A",
+  "stage_target": 288,
+  "global_step": 288,
+  "generated_completion_tokens": 6308962,
+  "generated_completions": 9216,
+  "generated_groups": 1152,
+  "correct_completions": 3611,
+  "truncated_completions": 572,
+  "prm_input_tokens": 0,
+  "prm_padded_tokens": 0,
+  "prm_scored_completions": 0,
+  "prm_forward_seconds": 0.0,
+  "outcome_group_counts": {
+    "mixed": 899,
+    "all_wrong": 215,
+    "all_correct": 38
+  },
+  "status_counts": {
+    "exact": 3211,
+    "symbolic": 4324,
+    "missing_or_invalid_box": 949,
+    "unparseable": 139,
+    "truncated": 572,
+    "unit_symbolic": 17,
+    "unit_exact": 4
+  },
+  "loss_rows": 9216,
+  "loss_wrong_positive": 0,
+  "process_nonzero_rows": 0,
+  "process_abs_sum": 0.0,
+  "outcome_abs_sum": 5778.742750167847,
+  "positive_advantage_rows": 3307,
+  "empty_rows": 3,
+  "short_wrong_rows": 120,
+  "elapsed_seconds": 3892.321490020491,
+  "peak_allocated_GiB": 19.72392511367798,
+  "peak_reserved_GiB": 20.634765625,
+  "latest_generation": {
+    "step_before_update": 287,
+    "rows": 32,
+    "tokens": 32601,
+    "wrong_positive": 0,
+    "mean_abs_process": 0.0,
+    "max_abs_process": 0.0,
+    "second_normalizations": 0,
+    "prompt_groups": [
+      "math/train/algebra/781",
+      "math/train/precalculus/660",
+      "math/train/precalculus/90",
+      "math/train/geometry/116"
+    ]
+  },
+  "stop_reason": "common_update_target_reached",
+  "unix": 1794011162.0764675,
+  "pid": 1650915,
+  "engine": "V1"
+}

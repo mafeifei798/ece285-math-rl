@@ -8,7 +8,7 @@
     "seconds": 57.50328917475417,
     "tokens": 26557,
     "reused_exact_ids": true,
-    "measurement_from": "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v2/result.json",
+    "measurement_from": "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v2/result.json",
     "source_sha256": "b2420c8dacdf5ebd583925e10aa4b21433ec5f4cddd4b1264cfc412ed9f09921"
   },
   "prm_cost": {

@@ -1,9 +1,9 @@
 {
   "pid": 1748802,
   "unix": 1793266676.1781566,
-  "run": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2",
-  "source": "/srv/research/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2",
-  "log": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/header_recovery_controller.log",
+  "run": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2",
+  "source": "/path/to/ece285_math_rl_project/experiments/c_bounded_pilot_20261029_v2",
+  "log": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/header_recovery_controller.log",
   "source_release_sha256": "1fc07144ab795cd27a092618faf929dee9b8ca3af6c64031841ca12e37f9de96",
   "authorized_arms": [
     "A",
@@ -14,9 +14,9 @@
   "seed": 17,
   "sharing_GPU1": true,
   "D_adaptation": false,
-  "recovery_evidence": "/srv/research/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/recovery_evidence.json",
+  "recovery_evidence": "/path/to/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/recovery_evidence.json",
   "previous_controller_pid": 1696326,
-  "recovery_source": "/srv/research/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/resume_after_header_repair.py",
+  "recovery_source": "/path/to/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/resume_after_header_repair.py",
   "recovery_source_sha256": "dddd3cb07395d726c4159da7bac1789676ade287e731b46c597a5f5179aa4291",
   "zero_updates_environment_recovery": false,
   "resume_from_saved_checkpoint": true

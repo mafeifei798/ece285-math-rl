@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "adapter_exact": true,
+  "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/A/milestones/checkpoint-115",
+  "source_step": 115,
+  "optimizer_exact": true,
+  "scheduler_exact": true,
+  "torch_cpu_rng_exact": true,
+  "torch_cuda_rng_exact": true,
+  "first_new_optimizer_step": 116,
+  "prompt_order_checked": true,
+  "loss_input_exact": true,
+  "actor_updated": true,
+  "vllm_sampling_RNG_not_bitwise_resumed": true
+}

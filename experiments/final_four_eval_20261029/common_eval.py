@@ -33,7 +33,7 @@ def release_check():
     for n,h in release['files'].items():assert sha(HERE/n)==h,('source_changed',n)
     return sha(HERE/'release.json')
 def guard():
-    assert ROOT.resolve().is_relative_to(Path('/srv/research'))
+    assert ROOT.resolve().is_relative_to(Path('/path/to/project_parent'))
 def unchanged():
     before=read(AUDIT/'protected_before.json')
     for p,h in before.items():assert sha(ROOT/p)==h,('protected_input_changed',p)

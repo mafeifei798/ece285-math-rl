@@ -1,5 +1,5 @@
 用户授权：仅重评旧6M A（checkpoint-284），统一MATH500/GSM8K，与原54.0%/67.02%及当前1M A比较。禁止新训练、PRM调用、提示/验答改变、额外seed、自动跟进任务。
-远端项目/srv/research/ece285_math_rl_project；source experiments/a6m_protocol_recheck_20261029；run runs/A6M_protocol_recheck_20261029；audit audits/A6M_protocol_recheck_20261029。
+远端项目/path/to/ece285_math_rl_project；source experiments/a6m_protocol_recheck_20261029；run runs/A6M_protocol_recheck_20261029；audit audits/A6M_protocol_recheck_20261029。
 已派发唯一controller PID3173527；dispatch.json保存receipt，禁止再运行dispatch.py或prepare_remote.py。inspect_remote.py只读；工具会话53639为只读等待，不是GPU进程。健康运行不干扰。
 1819条新生成，GPU1共享（先前授权仍适用），推理设置和本轮四模型对照全部一致，adapter ID1；只有单模型不执行四模型轮换。保护797旧文件，checkpoint权重3016479cf0dca6e0b627551f027e20b706d0c80d1a2574191b4f1386542fd862。源release d367ded2061e6efb3205baf303177ef0dbcb710b293f0763237a403f4ce5df8b。
 有限controller先生成，退出GPU进程后CPU重算新旧7276条验答、校验hash/旧结果/同题统计，输出comparison.json。失败不自动重试，有已提交批次不得重算；先诊断证据。

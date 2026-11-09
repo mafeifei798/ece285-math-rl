@@ -1,0 +1,265 @@
+{
+  "checked_at": "2026-11-07T22:31:10.629060-08:00",
+  "namespace": "ecepxie",
+  "new_resources_created": false,
+  "queries": {
+    "quota": [
+      {
+        "name": "a100-limit",
+        "hard": {
+          "limits.nvidia.com/a100": "12",
+          "requests.nvidia.com/a100": "12"
+        },
+        "used": {
+          "requests.nvidia.com/a100": "0"
+        },
+        "scopeSelector": {
+          "matchExpressions": [
+            {
+              "operator": "NotIn",
+              "scopeName": "PriorityClass",
+              "values": [
+                "opportunistic",
+                "opportunistic2"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "gh200-limit",
+        "hard": {
+          "limits.nvidia.com/gh200": "0",
+          "requests.nvidia.com/gh200": "0"
+        },
+        "used": {
+          "requests.nvidia.com/gh200": "0"
+        },
+        "scopeSelector": {
+          "matchExpressions": [
+            {
+              "operator": "NotIn",
+              "scopeName": "PriorityClass",
+              "values": [
+                "opportunistic",
+                "opportunistic2"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "h100-limit",
+        "hard": {
+          "limits.nvidia.com/h100": "0",
+          "requests.nvidia.com/h100": "0"
+        },
+        "used": {
+          "requests.nvidia.com/h100": "0"
+        },
+        "scopeSelector": {
+          "matchExpressions": [
+            {
+              "operator": "NotIn",
+              "scopeName": "PriorityClass",
+              "values": [
+                "opportunistic",
+                "opportunistic2"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "h200-limit",
+        "hard": {
+          "limits.nvidia.com/h200": "0",
+          "requests.nvidia.com/h200": "0"
+        },
+        "used": {
+          "requests.nvidia.com/h200": "0"
+        },
+        "scopeSelector": {
+          "matchExpressions": [
+            {
+              "operator": "NotIn",
+              "scopeName": "PriorityClass",
+              "values": [
+                "opportunistic",
+                "opportunistic2"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "high-priority-ban",
+        "hard": {
+          "pods": "0"
+        },
+        "used": {
+          "pods": "0"
+        },
+        "scopeSelector": {
+          "matchExpressions": [
+            {
+              "operator": "In",
+              "scopeName": "PriorityClass",
+              "values": [
+                "system-node-critical",
+                "system-cluster-critical",
+                "kubevirt-cluster-critical",
+                "contributor-batch-high",
+                "postgres-operator-pod",
+                "batch-cluster-default",
+                "default",
+                "owner"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "low-priority-ban",
+        "hard": {
+          "pods": "0"
+        },
+        "used": {
+          "pods": "0"
+        },
+        "scopeSelector": {
+          "matchExpressions": [
+            {
+              "operator": "In",
+              "scopeName": "PriorityClass",
+              "values": [
+                "nice",
+                "batch-low"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "reached-quota",
+        "hard": {
+          "pods": "200"
+        },
+        "used": {
+          "pods": "3"
+        },
+        "scopeSelector": null
+      }
+    ],
+    "pvc": {
+      "count": 108,
+      "capacity_distribution": {
+        "100Gi": 15,
+        "40Gi": 4,
+        "30Gi": 7,
+        "50Gi": 7,
+        "200Gi": 7,
+        "500Gi": 8,
+        "120Gi": 2,
+        "160Gi": 1,
+        "1Gi": 4,
+        "20Gi": 12,
+        "5Ti": 1,
+        "128Gi": 1,
+        "192Gi": 1,
+        "150Gi": 3,
+        "10Gi": 5,
+        "6Ti": 1,
+        "400Gi": 1,
+        "12Gi": 1,
+        "800Gi": 3,
+        "2000Gi": 1,
+        "2Ti": 2,
+        "64Gi": 1,
+        "32Gi": 1,
+        "1000Gi": 2,
+        "5Gi": 3,
+        "700Gi": 1,
+        "300Gi": 3,
+        "242Gi": 1,
+        "2560Gi": 1,
+        "1536Gi": 1,
+        "1Ti": 2,
+        "25Gi": 1,
+        "3584Gi": 1,
+        "251Gi": 1,
+        "512Gi": 1,
+        "60Gi": 1
+      },
+      "storage_class_distribution": {
+        "rook-cephfs": 44,
+        "rook-ceph-block": 33,
+        "rook-cephfs-central": 7,
+        "rook-ceph-block-east": 8,
+        "linstor-unl": 1,
+        "linstor-ha": 1,
+        "rook-cephfs-haosu": 2,
+        "rook-cephfs-east": 6,
+        "rook-ceph-block-south-east": 5,
+        "rook-cephfs-fullerton": 1
+      },
+      "capacity_is_not_free_bytes": true,
+      "individual_volume_names_omitted": true
+    },
+    "limits": [
+      {
+        "apiVersion": "v1",
+        "kind": "LimitRange",
+        "metadata": {
+          "name": "ecepxie-mem"
+        },
+        "spec": {
+          "limits": [
+            {
+              "default": {
+                "cpu": "100m",
+                "memory": "1Gi"
+              },
+              "defaultRequest": {
+                "cpu": "100m",
+                "memory": "1Gi"
+              },
+              "min": {
+                "cpu": "1m",
+                "memory": "256"
+              },
+              "type": "Container"
+            },
+            {
+              "max": {
+                "memory": "1Ti"
+              },
+              "type": "Pod"
+            }
+          ]
+        }
+      },
+      {
+        "apiVersion": "v1",
+        "kind": "LimitRange",
+        "metadata": {
+          "name": "ephemeral-storage-default-limit"
+        },
+        "spec": {
+          "limits": [
+            {
+              "default": {
+                "ephemeral-storage": "50Gi"
+              },
+              "defaultRequest": {
+                "ephemeral-storage": "0"
+              },
+              "type": "Container"
+            }
+          ]
+        }
+      }
+    ],
+    "can_create_pvc": "yes"
+  }
+}

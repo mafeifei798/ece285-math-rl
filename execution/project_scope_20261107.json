@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-07",
+  "user_instruction": "之前600万都跑完了，用seed17的结果就行了",
+  "primary_experiment": "seed17 A / C_mix / C_bounded, common288 updates, approx6M generated tokens",
+  "primary_report": "/path/to/ece285_math_rl_project/execution/abc_seed17_resumed_v1_20261104/RESULTS.txt",
+  "seed42_role": "completed supplementary archive; retain all raw results, not the primary report focus",
+  "new_training": false,
+  "new_evaluation": false,
+  "claim_scope": "Report seed17 results as a single-seed main experiment; do not claim stable multi-seed gains. Existing seed42 evidence remains available when discussing robustness.",
+  "evidence_sha256": {
+    "/path/to/ece285_math_rl_project/execution/abc_seed17_resumed_v1_20261104/completed_evidence/comparison.json": "17402d9d5ba9285d13ff36d442090aa5a6bb3aebb82370dd3a6ca974fca96097",
+    "/path/to/ece285_math_rl_project/execution/abc_seed17_resumed_v1_20261104/independent_acceptance.json": "033dba39800aa7d57984d72c3db6814771df9d61da6fff35940a3cdeb176a997",
+    "/path/to/ece285_math_rl_project/execution/ac_seed42_v1_20261106/completed_evidence/comparison.json": "431b05b0531db577af070d193820b2b629bb9c67cfc3897c3002f9ed9069f7dc",
+    "/path/to/ece285_math_rl_project/execution/ac_seed42_v1_20261106/two_seed_summary.json": "1a7dc66cc605186b532309b042b0bbd34e09188966038a47f1aade23cf24a928"
+  }
+}

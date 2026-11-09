@@ -1,0 +1,14 @@
+{
+  "status": "waiting_by_user",
+  "user_instruction": "那先等等吧",
+  "seed42_started": false,
+  "automatic_training_queue": false,
+  "dsmlp_probe_server_stopped": true,
+  "blind_audit_completed": true,
+  "blind_audit_has_no_new_scoring_implementation_mismatch": true,
+  "process_validity_not_proven": true,
+  "course_gpu_observed": "RTX A5000 24564 MiB",
+  "course_RAM_bytes": 17179869184,
+  "current_configuration_fits_unchanged": false,
+  "report": "/path/to/ece285_math_rl_project/execution/abc_seed17_resumed_v1_20261104/blind_audit_20261105/REVIEW.txt"
+}

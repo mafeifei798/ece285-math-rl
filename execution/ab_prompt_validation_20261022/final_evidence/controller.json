@@ -12,7 +12,7 @@
   ],
   "master_port": "52667",
   "child_pid": null,
-  "log": "/srv/research/ece285_math_rl_project/runs/AB_prompt_validation_20261022/analyze.log",
+  "log": "/path/to/ece285_math_rl_project/runs/AB_prompt_validation_20261022/analyze.log",
   "last_exit_code": 0,
   "finished_unix": 1792727266.8470924,
   "all_predictions_reverified": true,

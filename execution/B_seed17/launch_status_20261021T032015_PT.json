@@ -78,6 +78,6 @@
   "B_controller_alive": true,
   "B_heartbeat_age_seconds": 20.209254026412964,
   "A_heartbeat_age_seconds": 20.402991771697998,
-  "GPU": "GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 1459150, /srv/research/ece285_math_rl_project/.venv/bin/python, 33764 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1511394, /srv/research/rna_structure_autoencoder_20260905/env/bin/python, 7102 MiB\n",
+  "GPU": "GPU-1a276ae3-0aca-b6da-3393-5d35876d840a, 1459150, /path/to/ece285_math_rl_project/.venv/bin/python, 33764 MiB\nGPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 1511394, /path/to/project_parent/rna_structure_autoencoder_20260905/env/bin/python, 7102 MiB\n",
   "A_sources_unchanged": true
 }

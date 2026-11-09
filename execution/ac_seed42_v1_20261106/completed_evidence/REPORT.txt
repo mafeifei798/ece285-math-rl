@@ -1,0 +1,11 @@
+Seed42 A/C-bounded independent training complete.
+All arms: step288, V1, unchanged reward/loss, common prompt order.
+A training tokens=6308962 {"math500": 0.528, "gsm8k": 0.6747536012130402}
+C_bounded training tokens=6229129 {"math500": 0.548, "gsm8k": 0.6793025018953753}
+{"math500": {"C_bounded minus A": {"delta_pp": 2.0, "wins": 35, "losses": 25, "paired_question_bootstrap95_pp": [-1.0, 5.0], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.2450608330229457}}, "gsm8k": {"C_bounded minus A": {"delta_pp": 0.45489006823351025, "wins": 91, "losses": 85, "paired_question_bootstrap95_pp": [-1.5163002274450341, 2.427975739196333], "bootstrap_replicates": 10000, "seed": 285, "exact_mcnemar_two_sided_p": 0.7063708402623414}}}
+One training seed; intervals cover questions only, not training-seed variation.
+3M/6M labels are approximate token equivalents; all arms have identical prompt schedule and update count.
+V1 sampling RNG restarts with the same TRL default seed0. Both arms share restart boundaries2/144 and prompt permutation seed42.
+Short wrong output is a diagnostic, not proof of hacking; correct final answers do not certify valid derivations.
+No test-based checkpoint, prompt, reward or coefficient selection.
+Shared-GPU timing does not measure isolated algorithm efficiency.

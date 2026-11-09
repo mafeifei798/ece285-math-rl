@@ -1,0 +1,106 @@
+LATEST USER SCOPE — 2026-11-07 America/Los_Angeles
+User requests the completed seed17 A/C_mix/C_bounded approx6M experiment as the
+main project evidence. No further training or additional seed is requested.
+Seed42 has already completed; retain all its original evidence as supplementary
+archive, rather than making the two-seed mean the primary report focus.
+State single-seed scope for the main comparison; do not claim robust multi-seed gains.
+See execution/project_scope_20261107.json for current reporting scope.
+Older waiting/launch recommendations below are historical, not current instructions.
+
+LATEST USER STEERING — 2026-11-05 America/Los_Angeles
+User chose “那先等等吧” after the course GPU resource check. Seed42 is WAITING,
+not launched and not automatically queued. DSMLP short resource-check server
+was stopped; visible UI returned to Start My Server. Current course medium
+profile gave RTX A5000 24GB and16GiB CPU RAM, below unchanged experiment need.
+Blinded20-pair/40-response assistant review is complete: saved annotation freeze
+precedes key reveal;40/40 expected protocol scores agree,6 unboxed-correct
+responses fail the fixed format rule,3 answer-correct responses contain invalid
+reasoning. This targeted review is not a human panel or a population estimate.
+See blind_audit_20261105/REVIEW.txt and WAITING.json. Preserve prior results.
+Do not start seed42 until the user's resource wait is resolved.
+
+LATEST VERIFIED STATUS — 2026-11-05 America/Los_Angeles
+The finite pipeline is COMPLETE. Controller stage=complete, comparison.passed=true,
+all three arms reached288. No project processes remained in the live snapshot;
+GPU showed no compute processes. Do not redispatch or start additional training.
+Results: A MATH500265/500 (53.0%), GSM8K882/1319 (66.87%);
+C_mix270/500 (54.0%),893/1319 (67.70%);
+C_bounded289/500 (57.8%),915/1319 (69.37%).
+Downloaded75 completed artifact files and verified their hashes. Independent
+local audit verified6,957 prediction rows,27,648 training signal rows, equal
+question/update controls, and paired statistics. Remote frozen-verifier CPU
+acceptance regraded5,457 final test rows and checked1,535 protected files.
+See RESULTS.txt, results.html, independent_acceptance.json, completed_evidence/.
+Next recommendation only: blinded error review, then at most an independently
+authorized seed42 A/C_bounded pair. No such training has been started.
+Historical resume details below are retained; queued/running text below is old.
+
+ECE285 — explicitly authorized resume on 2026-11-04
+
+User: “现在可以继续了”. This revokes the prior GPU pause only for the already
+authorized seed17 A / C_mix / C_bounded continuation. No additional experiment.
+
+REMOTE ROOT: /path/to/ece285_math_rl_project
+REMOTE SOURCE: experiments/abc_seed17_resumed_v1_20261104
+REMOTE RUN: runs/ABC_seed17_resumed_V1_20261104
+REMOTE AUDIT: audits/ABC_seed17_resumed_V1_20261104
+LOCAL EVIDENCE: /path/to/ece285_math_rl_project/execution/abc_seed17_resumed_v1_20261104
+SSH: port 11032, USER@GPU_HOST; identity /home/USER/.ssh/fym_125_76_110_84_ed25519
+PYTHON: /path/to/ece285_math_rl_project/.venv/bin/python
+
+DISPATCHED — DO NOT DISPATCH AGAIN:
+Controller PID 3061487, create_time 1793861776.62.
+Source release SHA256 b858db9bf3bc5aada20298c0ac4f77c79b63ce25902e7adcde684d1ba21fb2ba.
+GPU now index 0, UUID GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac,
+NVIDIA A100-SXM4-80GB. This is the old GPU1 reindexed. Sharing is authorized;
+other jobs must remain untouched. Identity is checked separately from index.
+
+Use status_remote.py for lightweight read-only live status. It refreshes
+live_status.json. inspect_remote.py is a fuller historical hash inventory;
+do not repeatedly rehash checkpoints during healthy training unnecessarily.
+After a status refresh run render_status.py to regenerate local review.html.
+Never rerun prepare_remote.py or dispatch.py: admission and dispatch succeeded.
+
+RESUMPTION VERIFIED:
+A: saved step115, 2,390,451 tokens; first new real optimizer update116 accepted.
+C_mix: complete saved step50, 1,034,873 tokens; queued, not yet newly trained.
+C_bounded: complete saved step50, 1,038,895 tokens; queued, not yet newly trained.
+Start-checkpoint hashes, optimizer/scheduler/RNG/accounting and prompt prefixes
+were verified and copied into the new independent run. Old sources/results
+remain protected. CPU admission passed 536 reference rows and 1,535 protected
+files. runtime.py, advantages.py, evaluate.py are byte-identical to paused code.
+
+FIXED PLAN:
+1. Sequential A115→144, C_mix50→144, C_bounded50→144.
+2. Common144 gate, common validation, CPU acceptance.
+3. C_mix144→288, C_bounded144→288, A144→288.
+4. Common greedy MATH500/GSM8K, CPU final acceptance, comparison.json.
+Step144≈3M and step288≈6M generated completion tokens PER ARM; actual token
+counts differ because answer lengths differ. Equal problem schedule and equal
+update counts take precedence over exact token equality.
+seed17, V1, 4 questions/update, 8 answers/question, 32 rows/update, frozen C PRM.
+No changes to reward/loss, coefficient, prompt, verifier, data or optimizer.
+No new adaptation, extra seed, extra model, C/D full training, or new automation.
+
+IMPORTANT LIMITS:
+Adapter/optimizer/scheduler and torch CPU/CUDA RNG are exactly restored.
+vLLM sampling RNG is recreated, so the continuation is not bitwise identical
+to uninterrupted generation. A has an extra restart at115 compared with the
+other two arms at50; disclose this asymmetric restart history in analysis.
+Existing C PRM anchor-data caveat is retained; do not silently fix its weights.
+One seed cannot establish general gains. Paired intervals cover question
+sampling, not training-seed variance. No scientific benefit claim yet.
+
+FINITE CONTROLLER / FAILURE RULE:
+Existing controller serializes stages with its run lock and the shared lock
+receipts/abc_seed17_resume_v1_gpu1.lock (historical filename intentional).
+48h pipeline wall limit, 18h stage/wait limits; full checkpoint every5 updates.
+No automatic retries. On failure inspect PID+creation time, locks, intent,
+checkpoint contract, saved raw generation and receipt before any action.
+Never restart from scratch or silently regenerate a committed batch. Preserve
+failure evidence; only repair runtime faults that keep experimental semantics.
+Do not kill healthy processes, change other jobs, or manufacture extra work.
+
+Status files are timestamped snapshots. Always refresh live state before
+claiming progress/completion. Final result requires comparison.json passed and
+all common144/288 training, prediction and protected-file acceptance checks.

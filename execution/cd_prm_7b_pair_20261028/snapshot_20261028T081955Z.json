@@ -1,6 +1,6 @@
 {
   "checked_unix": 1793175594.848326,
-  "remote_run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "remote_run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
   "controller.json": {
     "status": "running",
     "pid": 3237174,
@@ -17,7 +17,7 @@
     "active_child": {
       "stage": "adapt_C",
       "pid": 3299090,
-      "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/adapt_C.log"
+      "log": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/adapt_C.log"
     },
     "actor_optimizer_updates": 0,
     "automatic_RL_launch": false,
@@ -26,9 +26,9 @@
   "dispatch.json": {
     "pid": 3237174,
     "started_unix": 1793174084.2960937,
-    "cwd": "/srv/research/ece285_math_rl_project",
-    "source": "/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
-    "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+    "cwd": "/path/to/ece285_math_rl_project",
+    "source": "/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
+    "run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
     "source_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
     "gpu": 1,
     "gpu_sharing_authorized": true,
@@ -219,6 +219,6 @@
   },
   "D": {},
   "child_alive": true,
-  "child_log_tail": "`torch_dtype` is deprecated! Use `dtype` instead!\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 107.51it/s]\nSome weights of the model checkpoint at /srv/research/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n{\"stage\": \"adapting\", \"pid\": 3299090, \"unix\": 1793175565.232738, \"arm\": \"C\", \"step\": 1, \"losses\": {\"fail\": 0.2851971425116062, \"success\": 0.13236173335462809, \"anchor_positive\": 0.006863168557174504, \"anchor_negative\": 0.5443962905555964}, \"total_loss\": 0.6931886054226197, \"gradient_norm_before_clip\": 1.395028829574585, \"input_tokens\": 3402, \"elapsed_seconds\": 12.599604845046997, \"peak_allocated_GiB\": 14.128238677978516, \"steps_total\": 512}\n",
+  "child_log_tail": "`torch_dtype` is deprecated! Use `dtype` instead!\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 107.51it/s]\nSome weights of the model checkpoint at /path/to/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n{\"stage\": \"adapting\", \"pid\": 3299090, \"unix\": 1793175565.232738, \"arm\": \"C\", \"step\": 1, \"losses\": {\"fail\": 0.2851971425116062, \"success\": 0.13236173335462809, \"anchor_positive\": 0.006863168557174504, \"anchor_negative\": 0.5443962905555964}, \"total_loss\": 0.6931886054226197, \"gradient_norm_before_clip\": 1.395028829574585, \"input_tokens\": 3402, \"elapsed_seconds\": 12.599604845046997, \"peak_allocated_GiB\": 14.128238677978516, \"steps_total\": 512}\n",
   "gpu": "0, 10729 MiB, 70423 MiB, 99 %\n1, 40329 MiB, 40824 MiB, 100 %\n"
 }

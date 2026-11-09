@@ -1,0 +1,12 @@
+{
+  "groups": 20,
+  "answer_correct_cached_minima_compared": 94,
+  "maximum_cached_vs_rescored_minimum_difference": 0.0,
+  "historical_advantages_compared": 160,
+  "maximum_historical_vs_rescored_advantage_difference": 5.960464477539063e-08,
+  "outputs_with_unchanged_reasoning_step_matches": 197,
+  "matched_unchanged_steps": 1586,
+  "mean_per_output_unchanged_step_score_original_minus_deleted": -0.0010182817629935932,
+  "GPU_calls": 0,
+  "note": "New rescore and historical cached signal compared separately; zero sign flips in counterfactual replay do not imply unchanged magnitudes."
+}

@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "manifest_files_verified": 81,
+  "metrics": {
+    "source": {
+      "n": 500,
+      "correct": 319,
+      "truncated": 27,
+      "missing_or_invalid_box": 21,
+      "tokens": 313068,
+      "wrong_status_counts": {
+        "symbolic": 128,
+        "missing_or_invalid_box": 21,
+        "truncated": 27,
+        "unparseable": 5
+      }
+    },
+    "grpo": {
+      "n": 500,
+      "correct": 321,
+      "truncated": 28,
+      "missing_or_invalid_box": 18,
+      "tokens": 317412,
+      "wrong_status_counts": {
+        "symbolic": 129,
+        "missing_or_invalid_box": 18,
+        "truncated": 28,
+        "unparseable": 4
+      }
+    },
+    "fixed_length": {
+      "n": 500,
+      "correct": 318,
+      "truncated": 39,
+      "missing_or_invalid_box": 18,
+      "tokens": 334344,
+      "wrong_status_counts": {
+        "symbolic": 122,
+        "truncated": 39,
+        "missing_or_invalid_box": 18,
+        "unparseable": 3
+      }
+    }
+  },
+  "same_checkpoint_seed_settings_and_order": true,
+  "updates_per_arm": 48,
+  "wrong_positive_tokens": 0,
+  "extra_advantage_normalizations": 0,
+  "no_update_gate_passed": true,
+  "no_optimizer_in_smoke": true,
+  "paired_wins": 22,
+  "paired_losses": 25,
+  "independent_standard_library_bootstrap_95CI_pp": [
+    -3.2,
+    2.0
+  ],
+  "primary_paired_comparison": {
+    "difference_percentage_points": -0.6,
+    "paired_bootstrap_95CI_pp": [
+      -3.2,
+      2.0
+    ],
+    "wins": 22,
+    "losses": 25,
+    "both_correct": 296,
+    "both_wrong": 157,
+    "mcnemar_exact_two_sided_p": 0.7708669945730263,
+    "n": 500
+  },
+  "test_sets_used": false,
+  "limits": "Single seed continuation and previously used validation; bootstrap covers question sampling only."
+}

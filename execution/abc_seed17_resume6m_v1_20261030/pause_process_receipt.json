@@ -6,7 +6,7 @@
     "pid": 3319102,
     "unix": 1793344944.0529747,
     "child_pid": 3334407,
-    "log": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/logs/A_to144.log",
+    "log": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/logs/A_to144.log",
     "started_unix": 1793344944.0523853,
     "deadline_unix": 1793517108.8133893
   },
@@ -15,20 +15,20 @@
       "pid": 3319102,
       "created": 1793344308.29,
       "cmdline": [
-        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
         "-B",
         "-u",
-        "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/controller.py"
+        "/path/to/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/controller.py"
       ]
     },
     "3334407": {
       "pid": 3334407,
       "created": 1793344943.57,
       "cmdline": [
-        "/srv/research/ece285_math_rl_project/.venv/bin/python",
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
         "-B",
         "-u",
-        "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/train_arm.py",
+        "/path/to/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/train_arm.py",
         "--arm",
         "A",
         "--target",

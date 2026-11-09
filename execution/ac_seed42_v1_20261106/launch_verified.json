@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "snapshot_unix": 1793992713.6586704,
+  "snapshot_UTC": "2026-11-06T19:18:33.658670+00:00",
+  "controller": {
+    "stage": "A_resume_to144",
+    "pid": 1486797,
+    "unix": 1793992583.2635705,
+    "child_pid": 1493206,
+    "child_create_time": 1793992582.78,
+    "log": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106/logs/A_resume_to144.log",
+    "started_unix": 1793992583.2622073,
+    "deadline_unix": 1794165026.2213194,
+    "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac"
+  },
+  "controller_create_time": 1793992225.67,
+  "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+  "gpu_snapshot": "0, GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, NVIDIA A100-SXM4-80GB, 26881, 54272, 96\n",
+  "source_release_sha256": "285cba59327cbb17ccd6cfb825083952d00d480d6003b51803fd605ae2c63a81",
+  "startup_audit_passed": true,
+  "protected_historical_files": 3380,
+  "A_resume_step3_acceptance": {
+    "passed": true,
+    "adapter_exact": true,
+    "source": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106/A/milestones/checkpoint-2",
+    "source_step": 2,
+    "optimizer_exact": true,
+    "scheduler_exact": true,
+    "torch_cpu_rng_exact": true,
+    "torch_cuda_rng_exact": true,
+    "first_new_optimizer_step": 3,
+    "prompt_order_checked": true,
+    "loss_input_exact": true,
+    "actor_updated": true,
+    "vllm_sampling_RNG_not_bitwise_resumed": true
+  },
+  "progress": {
+    "A": {
+      "global_step": 4,
+      "generated_completion_tokens": 84680,
+      "loss_wrong_positive": 0
+    },
+    "C_bounded": {
+      "global_step": 2,
+      "generated_completion_tokens": 46571,
+      "loss_wrong_positive": 0
+    }
+  },
+  "training_complete": false,
+  "evaluation_complete": false,
+  "run": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106",
+  "source": "/path/to/ece285_math_rl_project/experiments/ac_seed42_v1_20261106"
+}

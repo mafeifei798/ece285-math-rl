@@ -1,0 +1,843 @@
+{
+  "unix": 1794103423.7136579,
+  "controller": {
+    "stage": "complete",
+    "pid": 2802466,
+    "unix": 1794103421.8606782,
+    "active_child": null,
+    "children": [
+      {
+        "stage": "recover_uniform",
+        "pid": 2802471,
+        "started_unix": 1794090153.3592982,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_recovery_20261107/train_arm.py",
+          "--arm",
+          "uniform"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794095154.0040278
+      },
+      {
+        "stage": "train_prefix_recovered_gate",
+        "pid": 2871342,
+        "started_unix": 1794095154.084492,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_recovery_20261107/train_arm.py",
+          "--arm",
+          "prefix"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794100357.0818071
+      },
+      {
+        "stage": "validation",
+        "pid": 2938778,
+        "started_unix": 1794100357.1644323,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/evaluate.py"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794103406.565499
+      },
+      {
+        "stage": "analysis",
+        "pid": 2979201,
+        "started_unix": 1794103406.5693839,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/analyze.py"
+        ],
+        "exit_code": 0,
+        "finished_unix": 1794103421.8588696
+      }
+    ],
+    "recovery": true,
+    "comparison": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/comparison.json"
+  },
+  "launch": {
+    "pid": 2722088,
+    "unix": 1794084386.476224,
+    "source_release_sha256": "c836587c30f1a12c50fac5a0c76dd1f6f66f4088a4b890739935c68496fa7767",
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+    "variants": [
+      "bounded",
+      "uniform",
+      "prefix"
+    ],
+    "additional_updates_per_arm": 48,
+    "seed": 17,
+    "validation_only": true,
+    "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+    "no_automatic_retries": true
+  },
+  "arms": {
+    "bounded": {
+      "progress": {
+        "arm": "bounded",
+        "global_step": 336,
+        "additional_updates": 48,
+        "target_step": 336,
+        "generated_tokens": 1021112,
+        "loss_rows": 1536,
+        "elapsed_seconds": 5149.769901433028,
+        "pid": 2722171,
+        "unix": 1794089580.528636,
+        "latest_generation": {
+          "step_before_update": 335,
+          "question_ids": [
+            "math/train/number_theory/719",
+            "math/train/prealgebra/580",
+            "math/train/counting_and_probability/604",
+            "math/train/intermediate_algebra/28"
+          ],
+          "tokens": 30847,
+          "rows": 32,
+          "seconds": 99.90360053535551,
+          "statuses": {
+            "correct_unchanged": 17,
+            "first_step_unchanged": 3,
+            "invalid_fallback": 4,
+            "all_wrong_unchanged": 8
+          },
+          "protected_tokens": 0,
+          "correct": 17.0,
+          "empty": 0,
+          "short_wrong": 0,
+          "truncated": 4,
+          "answer_statuses": {
+            "exact": 16,
+            "symbolic": 4,
+            "truncated": 4,
+            "unit_symbolic": 8
+          },
+          "group_types": {
+            "mixed": 3,
+            "all_wrong": 1
+          },
+          "PRM_cost": {
+            "prm_forward_seconds": 3.1105669056996703,
+            "prm_input_tokens": 26439,
+            "prm_padded_tokens": 26439,
+            "prm_scored_completions": 28
+          },
+          "wrong_positive_tokens": 0,
+          "post_scalar_normalizations": 0
+        },
+        "peak_allocated_GiB": 35.43276834487915
+      },
+      "first_update_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source_step": 288,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "correct_question_order": true,
+        "advantage_exact_at_loss": true,
+        "actual_optimizer_update": true,
+        "vllm_engine_seed": 0,
+        "no_historical_vllm_rng_exact_claim": true
+      },
+      "result": {
+        "passed": true,
+        "arm": "bounded",
+        "global_step": 336,
+        "additional_updates": 48,
+        "loss_rows": 1536,
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/bounded/checkpoint-336",
+        "adapter_sha256": "ebc054810ade1b495a06fa3bc46bbb28e6e340ad115e188f7488790f368ec151",
+        "source_checkpoint_unchanged": true,
+        "actor_base_unchanged": true,
+        "PRM_frozen": true,
+        "seconds": 5185.8169758319855,
+        "progress": {
+          "arm": "bounded",
+          "global_step": 336,
+          "additional_updates": 48,
+          "target_step": 336,
+          "generated_tokens": 1021112,
+          "loss_rows": 1536,
+          "elapsed_seconds": 5149.769901433028,
+          "pid": 2722171,
+          "unix": 1794089580.528636,
+          "latest_generation": {
+            "step_before_update": 335,
+            "question_ids": [
+              "math/train/number_theory/719",
+              "math/train/prealgebra/580",
+              "math/train/counting_and_probability/604",
+              "math/train/intermediate_algebra/28"
+            ],
+            "tokens": 30847,
+            "rows": 32,
+            "seconds": 99.90360053535551,
+            "statuses": {
+              "correct_unchanged": 17,
+              "first_step_unchanged": 3,
+              "invalid_fallback": 4,
+              "all_wrong_unchanged": 8
+            },
+            "protected_tokens": 0,
+            "correct": 17.0,
+            "empty": 0,
+            "short_wrong": 0,
+            "truncated": 4,
+            "answer_statuses": {
+              "exact": 16,
+              "symbolic": 4,
+              "truncated": 4,
+              "unit_symbolic": 8
+            },
+            "group_types": {
+              "mixed": 3,
+              "all_wrong": 1
+            },
+            "PRM_cost": {
+              "prm_forward_seconds": 3.1105669056996703,
+              "prm_input_tokens": 26439,
+              "prm_padded_tokens": 26439,
+              "prm_scored_completions": 28
+            },
+            "wrong_positive_tokens": 0,
+            "post_scalar_normalizations": 0
+          },
+          "peak_allocated_GiB": 35.43276834487915
+        },
+        "metrics": {
+          "train_runtime": 5149.3441,
+          "train_samples_per_second": 124.288,
+          "train_steps_per_second": 3.884,
+          "total_flos": 0.0,
+          "train_loss": 6.486012160253484e-05
+        }
+      },
+      "failure": null,
+      "last_checkpoint": {
+        "path": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/bounded/checkpoint-336",
+        "global_step": 336
+      }
+    },
+    "uniform": {
+      "progress": {
+        "arm": "uniform",
+        "global_step": 336,
+        "additional_updates": 48,
+        "target_step": 336,
+        "generated_tokens": 1037167,
+        "loss_rows": 1536,
+        "elapsed_seconds": 4962.006325509399,
+        "pid": 2802471,
+        "unix": 1794095145.725878,
+        "latest_generation": {
+          "step_before_update": 335,
+          "question_ids": [
+            "math/train/number_theory/719",
+            "math/train/prealgebra/580",
+            "math/train/counting_and_probability/604",
+            "math/train/intermediate_algebra/28"
+          ],
+          "tokens": 24418,
+          "rows": 32,
+          "seconds": 102.6435434287414,
+          "statuses": {
+            "correct_unchanged": 22,
+            "invalid_fallback": 1,
+            "all_wrong_unchanged": 8,
+            "prefix_protected": 1
+          },
+          "protected_tokens": 315,
+          "correct": 22.0,
+          "empty": 0,
+          "short_wrong": 0,
+          "truncated": 1,
+          "answer_statuses": {
+            "exact": 22,
+            "truncated": 1,
+            "unit_symbolic": 8,
+            "symbolic": 1
+          },
+          "group_types": {
+            "mixed": 2,
+            "all_wrong": 1,
+            "all_correct": 1
+          },
+          "PRM_cost": {
+            "prm_forward_seconds": 3.231054613366723,
+            "prm_input_tokens": 26405,
+            "prm_padded_tokens": 26405,
+            "prm_scored_completions": 31
+          },
+          "wrong_positive_tokens": 0,
+          "post_scalar_normalizations": 0,
+          "cached_first_batch": false,
+          "pre_failure_PRM_seconds_unavailable": false
+        },
+        "peak_allocated_GiB": 35.43276834487915
+      },
+      "first_update_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source_step": 288,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "correct_question_order": true,
+        "advantage_exact_at_loss": true,
+        "actual_optimizer_update": true,
+        "vllm_engine_seed": 0,
+        "no_historical_vllm_rng_exact_claim": true,
+        "cached_first_batch_recovery": true,
+        "sampling_rng_after_fault_bitwise_preserved": false
+      },
+      "result": {
+        "passed": true,
+        "arm": "uniform",
+        "global_step": 336,
+        "additional_updates": 48,
+        "loss_rows": 1536,
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/uniform/checkpoint-336",
+        "adapter_sha256": "28592f49e6ad4e1bdd71d314dd81cec631b7c1c63df625f289f1e79eb5f1f9c8",
+        "source_checkpoint_unchanged": true,
+        "actor_base_unchanged": true,
+        "PRM_frozen": true,
+        "seconds": 4992.311950206757,
+        "progress": {
+          "arm": "uniform",
+          "global_step": 336,
+          "additional_updates": 48,
+          "target_step": 336,
+          "generated_tokens": 1037167,
+          "loss_rows": 1536,
+          "elapsed_seconds": 4962.006325509399,
+          "pid": 2802471,
+          "unix": 1794095145.725878,
+          "latest_generation": {
+            "step_before_update": 335,
+            "question_ids": [
+              "math/train/number_theory/719",
+              "math/train/prealgebra/580",
+              "math/train/counting_and_probability/604",
+              "math/train/intermediate_algebra/28"
+            ],
+            "tokens": 24418,
+            "rows": 32,
+            "seconds": 102.6435434287414,
+            "statuses": {
+              "correct_unchanged": 22,
+              "invalid_fallback": 1,
+              "all_wrong_unchanged": 8,
+              "prefix_protected": 1
+            },
+            "protected_tokens": 315,
+            "correct": 22.0,
+            "empty": 0,
+            "short_wrong": 0,
+            "truncated": 1,
+            "answer_statuses": {
+              "exact": 22,
+              "truncated": 1,
+              "unit_symbolic": 8,
+              "symbolic": 1
+            },
+            "group_types": {
+              "mixed": 2,
+              "all_wrong": 1,
+              "all_correct": 1
+            },
+            "PRM_cost": {
+              "prm_forward_seconds": 3.231054613366723,
+              "prm_input_tokens": 26405,
+              "prm_padded_tokens": 26405,
+              "prm_scored_completions": 31
+            },
+            "wrong_positive_tokens": 0,
+            "post_scalar_normalizations": 0,
+            "cached_first_batch": false,
+            "pre_failure_PRM_seconds_unavailable": false
+          },
+          "peak_allocated_GiB": 35.43276834487915
+        },
+        "metrics": {
+          "train_runtime": 4961.6309,
+          "train_samples_per_second": 128.99,
+          "train_steps_per_second": 4.031,
+          "total_flos": 0.0,
+          "train_loss": -0.00620705483204022
+        },
+        "cached_first_batch_recovery": true,
+        "sampling_rng_after_fault_bitwise_preserved": false
+      },
+      "failure": null,
+      "last_checkpoint": {
+        "path": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/uniform/checkpoint-336",
+        "global_step": 336
+      }
+    },
+    "prefix": {
+      "progress": {
+        "arm": "prefix",
+        "global_step": 336,
+        "additional_updates": 48,
+        "target_step": 336,
+        "generated_tokens": 1032677,
+        "loss_rows": 1536,
+        "elapsed_seconds": 5162.619416177273,
+        "pid": 2871342,
+        "unix": 1794100349.899614,
+        "latest_generation": {
+          "step_before_update": 335,
+          "question_ids": [
+            "math/train/number_theory/719",
+            "math/train/prealgebra/580",
+            "math/train/counting_and_probability/604",
+            "math/train/intermediate_algebra/28"
+          ],
+          "tokens": 23226,
+          "rows": 32,
+          "seconds": 101.60304300952703,
+          "statuses": {
+            "correct_unchanged": 22,
+            "prefix_protected": 1,
+            "all_wrong_unchanged": 8,
+            "first_step_unchanged": 1
+          },
+          "protected_tokens": 326,
+          "correct": 22.0,
+          "empty": 0,
+          "short_wrong": 0,
+          "truncated": 1,
+          "answer_statuses": {
+            "exact": 22,
+            "symbolic": 2,
+            "unit_symbolic": 7,
+            "truncated": 1
+          },
+          "group_types": {
+            "mixed": 2,
+            "all_wrong": 1,
+            "all_correct": 1
+          },
+          "PRM_cost": {
+            "prm_forward_seconds": 3.061282617971301,
+            "prm_input_tokens": 25025,
+            "prm_padded_tokens": 25025,
+            "prm_scored_completions": 31
+          },
+          "wrong_positive_tokens": 0,
+          "post_scalar_normalizations": 0,
+          "cached_first_batch": false,
+          "pre_failure_PRM_seconds_unavailable": false
+        },
+        "peak_allocated_GiB": 35.43276834487915
+      },
+      "first_update_acceptance": {
+        "passed": true,
+        "adapter_exact": true,
+        "source_step": 288,
+        "optimizer_exact": true,
+        "scheduler_exact": true,
+        "torch_cpu_rng_exact": true,
+        "torch_cuda_rng_exact": true,
+        "correct_question_order": true,
+        "advantage_exact_at_loss": true,
+        "actual_optimizer_update": true,
+        "vllm_engine_seed": 0,
+        "no_historical_vllm_rng_exact_claim": true,
+        "cached_first_batch_recovery": false,
+        "sampling_rng_after_fault_bitwise_preserved": null
+      },
+      "result": {
+        "passed": true,
+        "arm": "prefix",
+        "global_step": 336,
+        "additional_updates": 48,
+        "loss_rows": 1536,
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/prefix/checkpoint-336",
+        "adapter_sha256": "0245e4f16f429e7adaf3b32383035d756e473e0a569cdbe415e73b530016ea49",
+        "source_checkpoint_unchanged": true,
+        "actor_base_unchanged": true,
+        "PRM_frozen": true,
+        "seconds": 5194.414664030075,
+        "progress": {
+          "arm": "prefix",
+          "global_step": 336,
+          "additional_updates": 48,
+          "target_step": 336,
+          "generated_tokens": 1032677,
+          "loss_rows": 1536,
+          "elapsed_seconds": 5162.619416177273,
+          "pid": 2871342,
+          "unix": 1794100349.899614,
+          "latest_generation": {
+            "step_before_update": 335,
+            "question_ids": [
+              "math/train/number_theory/719",
+              "math/train/prealgebra/580",
+              "math/train/counting_and_probability/604",
+              "math/train/intermediate_algebra/28"
+            ],
+            "tokens": 23226,
+            "rows": 32,
+            "seconds": 101.60304300952703,
+            "statuses": {
+              "correct_unchanged": 22,
+              "prefix_protected": 1,
+              "all_wrong_unchanged": 8,
+              "first_step_unchanged": 1
+            },
+            "protected_tokens": 326,
+            "correct": 22.0,
+            "empty": 0,
+            "short_wrong": 0,
+            "truncated": 1,
+            "answer_statuses": {
+              "exact": 22,
+              "symbolic": 2,
+              "unit_symbolic": 7,
+              "truncated": 1
+            },
+            "group_types": {
+              "mixed": 2,
+              "all_wrong": 1,
+              "all_correct": 1
+            },
+            "PRM_cost": {
+              "prm_forward_seconds": 3.061282617971301,
+              "prm_input_tokens": 25025,
+              "prm_padded_tokens": 25025,
+              "prm_scored_completions": 31
+            },
+            "wrong_positive_tokens": 0,
+            "post_scalar_normalizations": 0,
+            "cached_first_batch": false,
+            "pre_failure_PRM_seconds_unavailable": false
+          },
+          "peak_allocated_GiB": 35.43276834487915
+        },
+        "metrics": {
+          "train_runtime": 5162.175,
+          "train_samples_per_second": 123.979,
+          "train_steps_per_second": 3.874,
+          "total_flos": 0.0,
+          "train_loss": -0.006769622517107824
+        },
+        "cached_first_batch_recovery": false,
+        "sampling_rng_after_fault_bitwise_preserved": null
+      },
+      "failure": null,
+      "last_checkpoint": {
+        "path": "/path/to/ece285_math_rl_project/runs/Prefix_triplet_seed17_48_20261107/prefix/checkpoint-336",
+        "global_step": 336
+      }
+    }
+  },
+  "evaluation": {
+    "done": 2000,
+    "total": 2000,
+    "arm": "uniform",
+    "seconds": 3024.753381252289,
+    "unix": 1794103403.6728113,
+    "pid": 2938778
+  },
+  "evaluation_summary": {
+    "passed": true,
+    "summary": {
+      "source": {
+        "n": 500,
+        "correct": 317.0,
+        "accuracy": 0.634,
+        "tokens": 321099,
+        "truncated": 33,
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 744.0674418993294,
+        "predictions_sha256": "b2a53bedc48f36bc7691de9b8f59cd681c82af0c1c589125715cb2643289f154"
+      },
+      "bounded": {
+        "n": 500,
+        "correct": 319.0,
+        "accuracy": 0.638,
+        "tokens": 323059,
+        "truncated": 32,
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 755.7354388516396,
+        "predictions_sha256": "6a4dc10d7a61ecf5f1a9ddbf5ab4b6078847ee7a26007e606c52d918fa9ef2f5"
+      },
+      "uniform": {
+        "n": 500,
+        "correct": 327.0,
+        "accuracy": 0.654,
+        "tokens": 314077,
+        "truncated": 25,
+        "empty": 0,
+        "short_wrong": 1,
+        "inference_seconds": 757.7179478323087,
+        "predictions_sha256": "a3df9959e89eb28d22db0b3cff732788e83444d652c2518a743b3d9a046735c6"
+      },
+      "prefix": {
+        "n": 500,
+        "correct": 328.0,
+        "accuracy": 0.656,
+        "tokens": 313743,
+        "truncated": 25,
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 762.8760106926784,
+        "predictions_sha256": "cff2672069f36d0c052928e438eadb0a615d26a982d06f0f10b353a36417cfac"
+      }
+    },
+    "seconds": 3025.244155406952,
+    "contract_sha256": "6ded937c01d5a688d02f9c83335728754fa7299fe4113f385001d21c048adcc4",
+    "test_sets_evaluated": false,
+    "PRM_at_evaluation": false
+  },
+  "comparison": {
+    "passed": true,
+    "validation_summary": {
+      "source": {
+        "n": 500,
+        "correct": 317.0,
+        "accuracy": 0.634,
+        "tokens": 321099,
+        "truncated": 33,
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 744.0674418993294,
+        "predictions_sha256": "b2a53bedc48f36bc7691de9b8f59cd681c82af0c1c589125715cb2643289f154"
+      },
+      "bounded": {
+        "n": 500,
+        "correct": 319.0,
+        "accuracy": 0.638,
+        "tokens": 323059,
+        "truncated": 32,
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 755.7354388516396,
+        "predictions_sha256": "6a4dc10d7a61ecf5f1a9ddbf5ab4b6078847ee7a26007e606c52d918fa9ef2f5"
+      },
+      "uniform": {
+        "n": 500,
+        "correct": 327.0,
+        "accuracy": 0.654,
+        "tokens": 314077,
+        "truncated": 25,
+        "empty": 0,
+        "short_wrong": 1,
+        "inference_seconds": 757.7179478323087,
+        "predictions_sha256": "a3df9959e89eb28d22db0b3cff732788e83444d652c2518a743b3d9a046735c6"
+      },
+      "prefix": {
+        "n": 500,
+        "correct": 328.0,
+        "accuracy": 0.656,
+        "tokens": 313743,
+        "truncated": 25,
+        "empty": 0,
+        "short_wrong": 0,
+        "inference_seconds": 762.8760106926784,
+        "predictions_sha256": "cff2672069f36d0c052928e438eadb0a615d26a982d06f0f10b353a36417cfac"
+      }
+    },
+    "training_costs": {
+      "bounded": {
+        "new_updates": 48,
+        "new_training_responses": 1536,
+        "new_generation_tokens": 1021112,
+        "PRM_input_tokens": 984128,
+        "PRM_seconds": 124.49875136837363,
+        "total_seconds": 5185.8169758319855,
+        "peak_sampled_GPU_GiB": 40.064453125,
+        "protected_tokens_if_prefix": 48947,
+        "signal_statuses": {
+          "correct_unchanged": 774,
+          "first_step_unchanged": 145,
+          "invalid_fallback": 167,
+          "prefix_protected": 215,
+          "no_low_score_fallback": 11,
+          "all_wrong_unchanged": 224
+        },
+        "group_types": {
+          "all_correct": 14,
+          "mixed": 150,
+          "all_wrong": 28
+        },
+        "empty": 0,
+        "short_wrong": 5,
+        "truncated": 70
+      },
+      "uniform": {
+        "new_updates": 48,
+        "new_training_responses": 1536,
+        "new_generation_tokens": 1037167,
+        "PRM_input_tokens": 963768,
+        "PRM_seconds": 120.53993703983724,
+        "total_seconds": 5084.568799257278,
+        "peak_sampled_GPU_GiB": 39.177734375,
+        "protected_tokens_if_prefix": 46895,
+        "signal_statuses": {
+          "correct_unchanged": 796,
+          "first_step_unchanged": 139,
+          "invalid_fallback": 172,
+          "prefix_protected": 209,
+          "no_low_score_fallback": 12,
+          "all_wrong_unchanged": 208
+        },
+        "group_types": {
+          "all_correct": 15,
+          "mixed": 151,
+          "all_wrong": 26
+        },
+        "empty": 0,
+        "short_wrong": 5,
+        "truncated": 92,
+        "PRM_seconds_incomplete": true
+      },
+      "prefix": {
+        "new_updates": 48,
+        "new_training_responses": 1536,
+        "new_generation_tokens": 1032677,
+        "PRM_input_tokens": 975235,
+        "PRM_seconds": 124.88272660691291,
+        "total_seconds": 5194.414664030075,
+        "peak_sampled_GPU_GiB": 38.064453125,
+        "protected_tokens_if_prefix": 56209,
+        "signal_statuses": {
+          "prefix_protected": 244,
+          "correct_unchanged": 793,
+          "first_step_unchanged": 145,
+          "invalid_fallback": 138,
+          "no_low_score_fallback": 15,
+          "all_wrong_unchanged": 200,
+          "alignment_fallback:byte_reconstruction_mismatch": 1
+        },
+        "group_types": {
+          "mixed": 148,
+          "all_wrong": 25,
+          "all_correct": 19
+        },
+        "empty": 0,
+        "short_wrong": 3,
+        "truncated": 86
+      }
+    },
+    "paired_comparisons": {
+      "prefix_minus_uniform": {
+        "difference_percentage_points": 0.2,
+        "paired_bootstrap_95CI_pp": [
+          -2.0,
+          2.6
+        ],
+        "wins": 18,
+        "losses": 17,
+        "both_correct": 310,
+        "both_wrong": 155,
+        "mcnemar_exact_two_sided_p": 1.0,
+        "n": 500
+      },
+      "prefix_minus_bounded": {
+        "difference_percentage_points": 1.7999999999999998,
+        "paired_bootstrap_95CI_pp": [
+          -0.6,
+          4.2
+        ],
+        "wins": 23,
+        "losses": 14,
+        "both_correct": 305,
+        "both_wrong": 158,
+        "mcnemar_exact_two_sided_p": 0.18774155899882317,
+        "n": 500
+      },
+      "uniform_minus_bounded": {
+        "difference_percentage_points": 1.6,
+        "paired_bootstrap_95CI_pp": [
+          -1.0,
+          4.2
+        ],
+        "wins": 27,
+        "losses": 19,
+        "both_correct": 300,
+        "both_wrong": 154,
+        "mcnemar_exact_two_sided_p": 0.3019956131896606,
+        "n": 500
+      },
+      "bounded_minus_source": {
+        "difference_percentage_points": 0.4,
+        "paired_bootstrap_95CI_pp": [
+          -2.0,
+          2.8000000000000003
+        ],
+        "wins": 21,
+        "losses": 19,
+        "both_correct": 298,
+        "both_wrong": 162,
+        "mcnemar_exact_two_sided_p": 0.8746293123804207,
+        "n": 500
+      },
+      "uniform_minus_source": {
+        "difference_percentage_points": 2.0,
+        "paired_bootstrap_95CI_pp": [
+          -0.4,
+          4.3999999999999995
+        ],
+        "wins": 23,
+        "losses": 13,
+        "both_correct": 304,
+        "both_wrong": 160,
+        "mcnemar_exact_two_sided_p": 0.13249816396273675,
+        "n": 500
+      },
+      "prefix_minus_source": {
+        "difference_percentage_points": 2.1999999999999997,
+        "paired_bootstrap_95CI_pp": [
+          0.2,
+          4.3999999999999995
+        ],
+        "wins": 20,
+        "losses": 9,
+        "both_correct": 308,
+        "both_wrong": 163,
+        "mcnemar_exact_two_sided_p": 0.06142834573984146,
+        "n": 500
+      }
+    },
+    "main_conclusion": "inconclusive",
+    "same_question_order": true,
+    "same_update_count": true,
+    "same_settings_except_signal": true,
+    "source_checkpoint_unchanged": true,
+    "old_protected_files_verified": 1535,
+    "single_seed": 17,
+    "validation_previously_used": true,
+    "test_sets_used": false,
+    "limits": "Question bootstrap does not measure training-seed variance. Small short-pilot differences can be inconclusive. No automatic budget expansion.",
+    "recovery": {
+      "reason": "Overstrict first stochastic generation bitwise-equality gate",
+      "bounded_rerun": false,
+      "uniform_first_batch_reused_without_resampling": true,
+      "uniform_updates_before_recovery": 0,
+      "uniform_sampling_rng_after_fault_bitwise_preserved": false,
+      "uniform_failed_attempt_seconds": 92.25684905052185,
+      "uniform_first_PRM_forward_seconds_unavailable": true,
+      "seed_and_model_and_loss_and_question_order_settings_unchanged": true,
+      "extra_limitation": "Fault recovery reused valid on-policy cached responses, but could not preserve post-generation sampling RNG exactly."
+    }
+  },
+  "controller_alive": false,
+  "gpu": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac, 0 MiB, 0 %\n"
+}

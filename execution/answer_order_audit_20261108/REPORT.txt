@@ -1,0 +1,21 @@
+答案框顺序与训练配置：CPU只读审计
+实际LoRA学习率5e-6（constant），num_iterations=1；未启动训练或PRM评分。
+严格“开头框＋正文”＝首框之前至多20个非空白字符，框后至少100个非空白字符。占位框单独统计；它不是已提交的数学答案。
+位置＝解码文本字符位置/全文字符数，不是token位置。
+seed / model / dataset: 首框在开头20字符内；非占位首框＋正文；占位首框＋正文；首框相对位置中位数
+initial/initial/math500: 89.0%；80.0%；8.2%；0.073%。
+initial/initial/gsm8k: 96.3%；89.5%；6.6%；0.092%。
+17/A/math500: 96.2%；66.0%；30.0%；0.067%。
+17/A/gsm8k: 99.5%；58.1%；41.4%；0.092%。
+17/C_bounded/math500: 95.4%；32.0%；63.2%；0.073%。
+17/C_bounded/gsm8k: 98.6%；20.5%；78.0%；0.097%。
+42/A/math500: 96.8%；70.6%；25.6%；0.067%。
+42/A/gsm8k: 99.6%；72.0%；27.6%；0.091%。
+42/C_bounded/math500: 95.0%；57.6%；37.4%；0.068%。
+42/C_bounded/gsm8k: 99.1%；49.7%；49.4%；0.094%。
+
+seed17训练曝光：{"A": {"updates": 288, "question_occurrences": 1152, "distinct_question_ids": 1152, "completions": 9216, "observed_unique_fraction_of6993_training_questions": 0.16473616473616473}, "C_bounded": {"updates": 288, "question_occurrences": 1152, "distinct_question_ids": 1152, "completions": 9216, "observed_unique_fraction_of6993_training_questions": 0.16473616473616473}}
+
+这些数字不能证明事后编理由，不能用第一框提前率直接推导faithfulness，也不能把正确率差距归因于RL方法。
+所有预测文件均无PRM分数。本次没有补算PRM，因此未回答“后置论证是否被PRM高估”。
+见results.json的分组正确率、输入hash及限制。原始预测和验答结果不变。

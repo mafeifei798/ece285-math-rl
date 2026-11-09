@@ -1,0 +1,54 @@
+{
+  "stage": "failed",
+  "pid": 2722088,
+  "unix": 1794089680.4288392,
+  "active_child": null,
+  "children": [
+    {
+      "stage": "preflight",
+      "pid": 2722091,
+      "started_unix": 1794084386.5373068,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/preflight.py"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794084394.321999
+    },
+    {
+      "stage": "train_bounded",
+      "pid": 2722171,
+      "started_unix": 1794084394.384804,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/train_arm.py",
+        "--arm",
+        "bounded"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794089588.0857546
+    },
+    {
+      "stage": "train_uniform",
+      "pid": 2794271,
+      "started_unix": 1794089588.1699862,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/train_arm.py",
+        "--arm",
+        "uniform"
+      ],
+      "exit_code": 1,
+      "finished_unix": 1794089680.4268353
+    }
+  ],
+  "error": "train_uniform failed with exit code 1; no automatic retry",
+  "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/controller.py\", line 27, in main\n    for arm in ARMS:child('train_'+arm,'train_arm.py',['--arm',arm])\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/prefix_triplet_seed17_48_20261107/controller.py\", line 23, in child\n    if code:raise RuntimeError(f'{label} failed with exit code {code}; no automatic retry')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: train_uniform failed with exit code 1; no automatic retry\n",
+  "automatic_retry": false
+}

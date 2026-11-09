@@ -2,7 +2,7 @@
   "new_generation_calls": 0,
   "rows": 32,
   "original_token_IDs_retained": true,
-  "source": "/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029",
+  "source": "/path/to/ece285_math_rl_project/runs/C_bounded_no_update_20261029",
   "source_tokens_sha256": "4f04b41c7230efc609b011be94ce186e017cf3f4626fff65eebad57ebd73e518",
   "source_signals_sha256": "0caada0365eee4a9e1d79a5bc6dc2f6c2a119acf5d4574beda8257fd4a978e14",
   "reference_logps_recomputed": true,

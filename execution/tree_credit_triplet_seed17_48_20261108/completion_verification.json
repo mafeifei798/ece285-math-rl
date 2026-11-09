@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "manifest_files_verified": 108,
+  "raw_batches_independently_verified": 144,
+  "raw_responses_independently_verified": 4608,
+  "independent_local_standard_library_statistics": {
+    "tree_cb_minus_chain_cb": {
+      "difference_percentage_points": -1.7999999999999998,
+      "wins": 17,
+      "losses": 26,
+      "paired_bootstrap_95CI_pp": [
+        -4.3999999999999995,
+        0.8
+      ],
+      "mcnemar_exact_two_sided_p": 0.2220528201560228,
+      "n": 500
+    },
+    "tree_vr_minus_chain_cb": {
+      "difference_percentage_points": -2.4,
+      "wins": 12,
+      "losses": 24,
+      "paired_bootstrap_95CI_pp": [
+        -4.8,
+        0.0
+      ],
+      "mcnemar_exact_two_sided_p": 0.06524533522315323,
+      "n": 500
+    },
+    "tree_cb_minus_tree_vr": {
+      "difference_percentage_points": 0.6,
+      "wins": 23,
+      "losses": 20,
+      "paired_bootstrap_95CI_pp": [
+        -2.0,
+        3.2
+      ],
+      "mcnemar_exact_two_sided_p": 0.7607916425613439,
+      "n": 500
+    }
+  },
+  "evaluation_dataset": "previously used validation500",
+  "test_sets_used": false,
+  "limits": "Single-seed48-update continuation; question bootstrap excludes train-seed/evaluation-run numerical uncertainty."
+}

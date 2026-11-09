@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "metadata_files_verified": 15,
+  "table_columns": [
+    4,
+    3,
+    4,
+    2
+  ],
+  "proposed_not_dispatched": true,
+  "files": {
+    "review.html": "fe87939b91063f2ed1e0cbf56584507c1fb7ab4d4886933248627ec02cbab01c",
+    "PLAN.txt": "cfc82f3a2d25205bb0b9bd206ad17685d811cc0986cfe79d4873c33d20667c0e",
+    "recommendation.json": "c7b1fab915aa4e08fc9259876f3537b20c0f9dcc472546357b2a01a92ae5772c",
+    "source_audit.json": "b14f305d0af2e6caef04974c9dc410cc8f5105d38524230cb617efa5d0b7046f",
+    "model_metadata_audit.json": "30fcbcbbd09c68463b38331364474cded7b28ef0098482c6d047df056202ef87"
+  }
+}

@@ -14,7 +14,7 @@ payload=base64.b64encode(zlib.compress(json.dumps(files).encode())).decode()
 remote=r'''
 from pathlib import Path
 import json,zlib,base64,os,subprocess
-r=Path('/srv/research/ece285_math_rl_project');s=r/'experiments/abc_seed17_resume6m_v1_20261030';p=r/'runs/ABC_seed17_resume6M_V1_20261030';a=r/'audits/ABC_seed17_resume6M_V1_20261030'
+r=Path('/path/to/ece285_math_rl_project');s=r/'experiments/abc_seed17_resume6m_v1_20261030';p=r/'runs/ABC_seed17_resume6M_V1_20261030';a=r/'audits/ABC_seed17_resume6M_V1_20261030'
 assert not s.exists() and not p.exists() and not a.exists(),'Existing attempt; inspect PID/checkpoints/receipts before action'
 files=json.loads(zlib.decompress(base64.b64decode(PAYLOAD)));s.mkdir();p.mkdir();a.mkdir()
 for n,v in files.items():
@@ -26,6 +26,6 @@ result=subprocess.run([str(r/'.venv/bin/python'),'-B',str(s/'preflight.py')],cap
 assert result.returncode==0,{'returncode':result.returncode,'stdout':result.stdout[-3500:],'stderr':result.stderr[-5000:]}
 d=json.loads((a/'preflight.json').read_text());print(json.dumps({'passed':d['passed'],'protected_files':d['protected_files'],'CPU_reference_rows':d['CPU_reference_rows'],'origins':d['originals'],'no_optimizer_started':True,'source':str(s),'run':str(p),'source_release_sha256':d['source_release_sha256']}))
 '''.replace('PAYLOAD',repr(payload))
-r=subprocess.run(SSH+['/srv/research/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,capture_output=True)
+r=subprocess.run(SSH+['/path/to/ece285_math_rl_project/.venv/bin/python -B -'],input=remote,text=True,capture_output=True)
 assert r.returncode==0,(r.stdout[-5000:],r.stderr[-5000:])
 d=json.loads(r.stdout);(HERE/'admission.json').write_text(json.dumps(d,indent=2)+'\n');print(json.dumps(d,indent=2))

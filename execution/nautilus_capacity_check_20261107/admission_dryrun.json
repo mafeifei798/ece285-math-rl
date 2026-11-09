@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-11-07T22:36:52.690074-08:00",
+  "results": [
+    {
+      "name": "100Gi_PVC",
+      "passed": true,
+      "returncode": 0,
+      "dry_run_server": true,
+      "persisted": false,
+      "stderr": "",
+      "admitted_kind": "PersistentVolumeClaim",
+      "admitted_name": "ece285-math-rl-admission-audit",
+      "admitted_storage_spec": {
+        "accessModes": [
+          "ReadWriteMany"
+        ],
+        "resources": {
+          "requests": {
+            "storage": "100Gi"
+          }
+        },
+        "storageClassName": "rook-cephfs",
+        "volumeMode": "Filesystem"
+      }
+    },
+    {
+      "name": "single_A10080_Job",
+      "passed": true,
+      "returncode": 0,
+      "dry_run_server": true,
+      "persisted": false,
+      "stderr": "",
+      "admitted_kind": "Job",
+      "admitted_name": "ece285-math-rl-admission-audit",
+      "admitted_pod_spec": {
+        "nodeSelector": {
+          "nautilus.io/gpu-class": "a100-80"
+        },
+        "priorityClassName": null,
+        "tolerations": null,
+        "restartPolicy": "Never",
+        "containers": [
+          {
+            "command": [
+              "python",
+              "-c",
+              "print(\"dry-run-only validation placeholder\")"
+            ],
+            "image": "python:3.11-slim",
+            "imagePullPolicy": "IfNotPresent",
+            "name": "admission-only",
+            "resources": {
+              "limits": {
+                "cpu": "8",
+                "ephemeral-storage": "60Gi",
+                "memory": "64Gi",
+                "nvidia.com/a100": "1"
+              },
+              "requests": {
+                "cpu": "8",
+                "ephemeral-storage": "60Gi",
+                "memory": "64Gi",
+                "nvidia.com/a100": "1"
+              }
+            },
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File"
+          }
+        ]
+      }
+    }
+  ],
+  "non_persistence_check": {
+    "job": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "pvc": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "scheduler_or_volume_binding_tested": false,
+  "new_GPU_work_started": false
+}

@@ -1,0 +1,17 @@
+{
+  "missing_keys": [],
+  "unexpected_keys": [
+    "lm_head.weight"
+  ],
+  "mismatched_keys": [],
+  "error_msgs": [],
+  "required_scoring_tensors_exactly_matched": 342,
+  "expected_unused_head": "lm_head.weight",
+  "frozen": true,
+  "context": 4096,
+  "microbatch": 1,
+  "native_marker_id": [
+    151651
+  ],
+  "normalize_crlf": false
+}

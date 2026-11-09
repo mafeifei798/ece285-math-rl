@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "optimizer_steps": 0,
+  "optimizer_constructed": false,
+  "source_checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/C_bounded/checkpoint-288",
+  "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+  "actor_base_unchanged": true,
+  "actor_adapter_unchanged": true,
+  "PRM_frozen": true,
+  "generations": [
+    {
+      "mode": "chain_cb",
+      "rows": 32,
+      "unique_generation_tokens": 14949,
+      "expanded_leaf_tokens": 14949,
+      "seconds": 96.6970431311056,
+      "PRM_cost": {
+        "prm_forward_seconds": 2.018712405115366,
+        "prm_input_tokens": 14469,
+        "prm_padded_tokens": 14469,
+        "prm_scored_completions": 28
+      },
+      "fallback_roots": 0,
+      "raw_ID_mask_logprob_provenance_exact": true
+    },
+    {
+      "mode": "tree_cb",
+      "rows": 32,
+      "unique_generation_tokens": 9127,
+      "expanded_leaf_tokens": 13348,
+      "seconds": 62.96377750299871,
+      "PRM_cost": {
+        "prm_forward_seconds": 2.222907747142017,
+        "prm_input_tokens": 15745,
+        "prm_padded_tokens": 15745,
+        "prm_scored_completions": 32
+      },
+      "fallback_roots": 4,
+      "raw_ID_mask_logprob_provenance_exact": true
+    }
+  ],
+  "loss_checks": [
+    {
+      "variant": "chain_cb",
+      "row": 11,
+      "outcome": 0.0,
+      "length": 2048,
+      "loss": 0.011046696454286575,
+      "gradient_L2": 0.0012452196376207363,
+      "advantages_and_components_unchanged_at_loss": true,
+      "post_construction_normalizations": 0
+    },
+    {
+      "variant": "chain_cb",
+      "row": 18,
+      "outcome": 1.0,
+      "length": 98,
+      "loss": -0.012545944191515446,
+      "gradient_L2": 0.004738827257669574,
+      "advantages_and_components_unchanged_at_loss": true,
+      "post_construction_normalizations": 0
+    },
+    {
+      "variant": "tree_vr",
+      "row": 18,
+      "outcome": 1.0,
+      "length": 116,
+      "loss": -0.007807738613337278,
+      "gradient_L2": 0.0041227437723891465,
+      "advantages_and_components_unchanged_at_loss": true,
+      "post_construction_normalizations": 0
+    },
+    {
+      "variant": "tree_vr",
+      "row": 25,
+      "outcome": 1.0,
+      "length": 706,
+      "loss": -0.0039062013383954763,
+      "gradient_L2": 0.0005537532667143172,
+      "advantages_and_components_unchanged_at_loss": true,
+      "post_construction_normalizations": 0
+    },
+    {
+      "variant": "tree_cb",
+      "row": 18,
+      "outcome": 1.0,
+      "length": 116,
+      "loss": -0.003655383363366127,
+      "gradient_L2": 0.0019373845367163824,
+      "advantages_and_components_unchanged_at_loss": true,
+      "post_construction_normalizations": 0
+    },
+    {
+      "variant": "tree_cb",
+      "row": 25,
+      "outcome": 1.0,
+      "length": 706,
+      "loss": -0.003944504540413618,
+      "gradient_L2": 0.000559752540087197,
+      "advantages_and_components_unchanged_at_loss": true,
+      "post_construction_normalizations": 0
+    }
+  ],
+  "max_torch_allocated_GiB": 32.25543260574341,
+  "seconds": 198.45685648918152,
+  "post_construction_normalizations": 0,
+  "scope": "Actual chain and tree batches; tree_vr/tree_cb compared on identical tree leaves. Smoke loaded C PRM; formal tree_vr will not load/score a PRM."
+}

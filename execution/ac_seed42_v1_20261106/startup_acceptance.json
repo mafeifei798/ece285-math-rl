@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "snapshot_unix": 1793992689.471621,
+  "arms": {
+    "A": {
+      "completed_updates": 2,
+      "rows": 64,
+      "tokens": 45960,
+      "wrong_positive": 0,
+      "max_independent_advantage_error": 9.058772976189289e-08,
+      "nonzero_process_rows": 0,
+      "max_abs_process_contribution": 0.0
+    },
+    "C_bounded": {
+      "completed_updates": 2,
+      "rows": 64,
+      "tokens": 46571,
+      "wrong_positive": 0,
+      "max_independent_advantage_error": 9.058772976189289e-08,
+      "nonzero_process_rows": 23,
+      "max_abs_process_contribution": 0.09903833270072937
+    }
+  },
+  "same_fresh_initialization": true,
+  "same_prompt_order": true,
+  "same_training_settings": true,
+  "first_generated_batch_token_ids_identical": true,
+  "checkpoint_file_checks": {
+    "A": {
+      "adapter_model.safetensors": true,
+      "optimizer.pt": true,
+      "scheduler.pt": true,
+      "rng_state.pth": true,
+      "trainer_state.json": true
+    },
+    "C_bounded": {
+      "adapter_model.safetensors": true,
+      "optimizer.pt": true,
+      "scheduler.pt": true,
+      "rng_state.pth": true,
+      "trainer_state.json": true
+    }
+  },
+  "process_identities": {
+    "controller": {
+      "pid": 1486797,
+      "create_time": 1793992225.67,
+      "status": "sleeping",
+      "cmdline": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/ac_seed42_v1_20261106/controller.py"
+      ]
+    },
+    "child": {
+      "pid": 1493206,
+      "create_time": 1793992582.78,
+      "status": "sleeping",
+      "cmdline": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/ac_seed42_v1_20261106/train_arm.py",
+        "--arm",
+        "A",
+        "--target",
+        "144"
+      ]
+    }
+  },
+  "files_sha256": {
+    "dispatch.json": "d37cd0618786da3b71b194bce690be644f9fecd78e1741551137b182daf944dc",
+    "started.json": "01181a04a86c37531c2a21bd57974bc33202b090f087bdcc0e5744d6142edf14",
+    "common_initialization.json": "40ee6a50817c278d224d5700db14a03927d8c309d4fd1cfa2d7e809aed8b08bd",
+    "acceptance_gate.json": "9ae5937e705e86c59c513b5f1ffb50018b1c4d6cdc4a79c675b157d22a550d61",
+    "controller.json": "6f1a06b6478eed864f39295f537d4daf760743dd73d4da9ea600623f3ef60ec9",
+    "A/resume_build_2.json": "2e16b772e761f7b192bc6fd90e86d83923fbf0da620b27de642574a1d144cd22",
+    "A/optimizer_acceptance_2.json": "7ef2fe6b50b2809890fcf174380726ee1a6a848e4cc36872609109c3af14b9ae",
+    "A/resume_acceptance_2.json": "6dad246ed4de7e05399bb435105f9653da2a4c4f42b0fc69dd4cd1c3b3534414",
+    "A/stage_2_result.json": "c982ae2b8f2afccc52a6a3c08ad4f1cc58edaeb67e4fd5c00f79c5b18550ed35",
+    "A/checkpoint-2/pilot_checkpoint.json": "fb1c134e39136da6327889e636b06ca4d924c95667495588a513e92a3495463b",
+    "A/checkpoint-2/completion_accounting.json": "2b5271700343cc78c73df125e9e5b581a7a176f60ceaea38d19fe84004ec3755",
+    "A/checkpoint-2/trainer_state.json": "da319f9bb13963cfc54f25cae38abb72fce924cfb4557c2d341ed50443b51ee2",
+    "A/first2_rollouts.jsonl": "3d879aad72424bbdfb66712d18768fb5811aa7d4d75aa779c42cac48f84b2c80",
+    "C_bounded/resume_build_2.json": "49cf07344c3d111c13d555b00671fd7b995b8ec362509a81e00de8704da03ce7",
+    "C_bounded/optimizer_acceptance_2.json": "7ef2fe6b50b2809890fcf174380726ee1a6a848e4cc36872609109c3af14b9ae",
+    "C_bounded/resume_acceptance_2.json": "6dad246ed4de7e05399bb435105f9653da2a4c4f42b0fc69dd4cd1c3b3534414",
+    "C_bounded/stage_2_result.json": "5d17e4ab6bf1732922c66bec7f5d64c828eb72056fa4c8a51931139e94260e9a",
+    "C_bounded/checkpoint-2/pilot_checkpoint.json": "fdf22aaf53580937b5f8f3fb6a76f546e1fc3b6620ed89ddc2fbc2d227acabe1",
+    "C_bounded/checkpoint-2/completion_accounting.json": "b59f5e3c1771a82ba979570830adf290d451566e668efbe544729f01af5ae1d3",
+    "C_bounded/checkpoint-2/trainer_state.json": "cc818589492244a44e9da6928d6179af918974b659633fd502cadae8fa197064",
+    "C_bounded/first2_rollouts.jsonl": "bab3fdd7697fe681b6369378ff0180da833a9ae508839b558ab8cfb835413529",
+    "admission.json": "2220882fc52a910b809a77d0c417c7ae8f0440dab7b29fed8b53617ceb9d769e"
+  },
+  "no_new_model_calls": true
+}

@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "acceptance": {
+    "passed": true,
+    "adapter_exact": true,
+    "source_step": 288,
+    "optimizer_exact": true,
+    "scheduler_exact": true,
+    "torch_cpu_rng_exact": true,
+    "torch_cuda_rng_exact": true,
+    "correct_question_order": true,
+    "advantage_exact_at_loss": true,
+    "actual_optimizer_update": true,
+    "vllm_engine_seed": 0,
+    "no_historical_vllm_rng_exact_claim": true
+  },
+  "progress": {
+    "arm": "fixed_length",
+    "global_step": 289,
+    "additional_updates": 1,
+    "target_step": 336,
+    "generated_tokens": 12654,
+    "loss_rows": 32,
+    "elapsed_seconds": 56.06711304374039,
+    "pid": 3312711,
+    "unix": 1794128322.761375,
+    "latest_generation": {
+      "step_before_update": 288,
+      "question_ids": [
+        "math/train/geometry/672",
+        "math/train/number_theory/377",
+        "math/train/algebra/395",
+        "math/train/precalculus/533"
+      ],
+      "tokens": 12654,
+      "rows": 32,
+      "seconds": 39.01116934046149,
+      "statuses": {
+        "prefix_protected": 8,
+        "correct_unchanged": 17,
+        "first_step_unchanged": 3,
+        "invalid_fallback": 3,
+        "no_low_score_fallback": 1
+      },
+      "protected_tokens": 2110,
+      "correct": 17.0,
+      "empty": 0,
+      "short_wrong": 0,
+      "truncated": 0,
+      "answer_statuses": {
+        "symbolic": 18,
+        "exact": 11,
+        "missing_or_invalid_box": 3
+      },
+      "group_types": {
+        "mixed": 4
+      },
+      "PRM_cost": {
+        "prm_forward_seconds": 1.9676145017147064,
+        "prm_input_tokens": 13839,
+        "prm_padded_tokens": 13839,
+        "prm_scored_completions": 29
+      },
+      "wrong_positive_tokens": 0,
+      "post_scalar_normalizations": 0,
+      "arm": "fixed_length",
+      "loss_type": "dr_grpo"
+    },
+    "peak_allocated_GiB": 32.342949867248535
+  },
+  "controller": {
+    "stage": "train_fixed_length",
+    "pid": 3240355,
+    "unix": 1794128235.2347312,
+    "active_child": {
+      "stage": "train_fixed_length",
+      "pid": 3312711,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/train_arm.py",
+        "--arm",
+        "fixed_length"
+      ],
+      "started_unix": 1794128235.2347143
+    },
+    "children": [
+      {
+        "stage": "no_update_header_recovered",
+        "pid": 3240362,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/smoke_no_update.py"
+        ],
+        "started_unix": 1794122820.1199105,
+        "exit_code": 0,
+        "finished_unix": 1794122941.6098342
+      },
+      {
+        "stage": "train_grpo",
+        "pid": 3242362,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/train_arm.py",
+          "--arm",
+          "grpo"
+        ],
+        "started_unix": 1794122941.6568184,
+        "exit_code": 0,
+        "finished_unix": 1794128234.7949321
+      },
+      {
+        "stage": "train_fixed_length",
+        "pid": 3312711,
+        "command": [
+          "/path/to/ece285_math_rl_project/.venv/bin/python",
+          "-B",
+          "-u",
+          "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/train_arm.py",
+          "--arm",
+          "fixed_length"
+        ],
+        "started_unix": 1794128235.2347143
+      }
+    ],
+    "header_environment_recovery": true
+  }
+}

@@ -22,6 +22,6 @@
   "material_advantage_change": 0.01,
   "new_training": false,
   "new_rollouts": false,
-  "source_root": "/home/researcher/Desktop/python/ece285_math_rl_project",
+  "source_root": "/path/to/ece285_math_rl_project",
   "inference_scope": "all complete PRM-eligible partners in any group whose native PRM input changes; legacy and normalized encodings scored on same frozen model/backend and padding shape"
 }

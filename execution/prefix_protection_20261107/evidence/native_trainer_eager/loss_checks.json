@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "optimizer_steps": 0,
+  "loss_checks": [
+    {
+      "variant": "bounded",
+      "loss": 0.03773128613829613,
+      "gradient_L2": 0.00688801188384843,
+      "selected_row": 18,
+      "selected_status": "prefix_protected",
+      "advantage_unchanged": true
+    },
+    {
+      "variant": "uniform",
+      "loss": 0.026569198817014694,
+      "gradient_L2": 0.004867733500194337,
+      "selected_row": 18,
+      "selected_status": "prefix_protected",
+      "advantage_unchanged": true
+    },
+    {
+      "variant": "prefix",
+      "loss": 0.026569198817014694,
+      "gradient_L2": 0.006136176654827423,
+      "selected_row": 18,
+      "selected_status": "prefix_protected",
+      "advantage_unchanged": true
+    }
+  ],
+  "statuses": {
+    "correct_unchanged": 18,
+    "all_wrong_unchanged": 8,
+    "prefix_protected": 5,
+    "invalid_fallback": 1
+  },
+  "generation_seconds": 98.67358374595642,
+  "generation_tokens": 16064
+}

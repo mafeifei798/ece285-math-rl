@@ -1,0 +1,21 @@
+{
+  "pid": 4021805,
+  "create_time": 1794182515.0,
+  "unix": 1794182515.4834418,
+  "command": [
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/path/to/ece285_math_rl_project/experiments/budget_extension_seed17_12m_20261108/controller.py"
+  ],
+  "release_sha256": "55b3eba70d0d08fb0cc0d68c1ce07be4d71fb8522eee3677bc16c990ec23b908",
+  "seed": 17,
+  "arms": [
+    "A",
+    "C_bounded"
+  ],
+  "source_step": 288,
+  "final_step": 576,
+  "zero_update_gate": true,
+  "automatic_seed42_dispatch": false
+}

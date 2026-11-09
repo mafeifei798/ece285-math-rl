@@ -1,0 +1,20 @@
+{
+  "ready_at_utc": "2026-11-09T00:53:05.638742+00:00",
+  "execute_only_after_controller_complete": true,
+  "commands": [
+    "python3 execution/budget_extension_seed17_12m_20261108/finish_cpu.py",
+    "python3 execution/budget_extension_seed17_12m_20261108/collect_completed.py",
+    "python3 execution/budget_extension_seed17_12m_20261108/verify_local.py",
+    "python3 execution/budget_extension_seed17_12m_20261108/runtime_closeout.py",
+    "python3 execution/budget_extension_seed17_12m_20261108/render_final.py"
+  ],
+  "scripts_sha256": {
+    "independent_acceptance.py": "976c0b440e8daa3d9f5ecc92faf1876d14a747f67911432915f834346e656041",
+    "finish_cpu.py": "f29865965b0acdd39e3e2c3888a2ca5f8d9dfeaa97992d46338df079b89639e8",
+    "collect_completed.py": "530e945405b06c20e58d97456518b8399e5df96a95b80901b5b3b5505ead2eb6",
+    "verify_local.py": "3f2c9df22d0a6a0153e17cfb308189edf4044b45295129665b61dfc5cb361c61",
+    "runtime_closeout.py": "85d9e17f2a6619e1f23e1482536ccd06e76a333d6e3678695ee8cae5376c1b25",
+    "render_final.py": "7c523bf0473f5344525df8c713ece9bd9df88134c96fdcf7c32c4c2a01c989fb"
+  },
+  "scope": "CPU verification and read-only retrieval, local independent stats, release evidence and actual report; no new training or generation."
+}

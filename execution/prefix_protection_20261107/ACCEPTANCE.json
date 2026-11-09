@@ -1,0 +1,32 @@
+{
+  "stage": "no_update_validation_complete",
+  "passed": true,
+  "formal_training_started": false,
+  "optimizer_steps": 0,
+  "three_arm_training_controller_implemented": false,
+  "source_sha256": {
+    "signals.py": "4dd10788522dceff3a9db009c5178fb8b26a9f9e57f88deeca9d9330b15ba1a6",
+    "pilot_protocol.json": "ab6f87418ce9ec935f1f843d8830594bf71e8117243bd4873ba915265e2ac071",
+    "token_loss.py": "661a384303db2967210a4b08ea6f8394b8da94fcd116788a929078935c44a3e7",
+    "native_sync.py": "b7940d422c690e047b4058e3d16ed28ba8f5a8d784a423227d7a1d7386449417",
+    "validation_controller.py": "50396f604cdf7e184e965d3f25fc516275d4c044bc0261da3707009f37fb75a2",
+    "native_trainer_no_update.py": "a0217996f4f1e1f0eecd485d49cd6febe9775b90f1b88ebdd4ace218b24724d3",
+    "test_plumbing.py": "605f02ea73fb6aac4d73ac3d4b37e48b42587418097bffc7aa4c159aad21ce6d",
+    "runtime_mixin.py": "48fe86fba5424835e3337eb9199ee225f9207054605ce0c8797a15cf09a64411",
+    "README.txt": "d7226e4ce2879ea5d8a4f7887c0e25f711355f7b7bbde040b7570048ee96abc5",
+    "cpu_validate.py": "7496a338981bf582830a7b7e2d6e76f878708fdfaeafb921fab0d6f83b1bc0b6",
+    "merged_probe.py": "8430d965166127433250e7e2e55150e75ad76386f25d0f6ad8b3e5f81c080d86",
+    "native_grpo_trainer.py": "44c159654d5a020a0f40178cadac1d9ff92d44ac295d431c6578ba966d070f46",
+    "no_update.py": "473729b8b2d69efef19b5acaafa2ba6a5d594ba8462bc0bbd7bfdf577edf811f"
+  },
+  "evidence_sha256": {
+    "cpu_validation.json": "6ecfdf63efb19b32b06094314478826899a4ddd29792e834ef87ca7f6e498996",
+    "plumbing_validation.json": "4fb9990cce882b1df218665e5d23ad588879f964a8982ac2d09431312f70198a",
+    "no_update_result.json": "f633366cfe93ddcc6fbbe8b61956e73d725674d39220b53b903959f59a9419b2",
+    "native_trainer_eager/result.json": "430da2a2e8b04ec83e667feeb91a8665c78a82d4b6ae0d54c42a4ad29ec998ca",
+    "native_trainer_eager/hot_reload_probe.json": "a38566964b02e35c32e335e5e9965ccc595fa69a0bd4e2501be6620843f82cc2"
+  },
+  "report_sha256": "2af9d8538a2b8e979c7f8463277abba63934f2f591f2c076d77382b14b146932",
+  "original_protected_files_verified": 1535,
+  "scope": "Validated independent trainer components. Short training plan is not dispatched."
+}

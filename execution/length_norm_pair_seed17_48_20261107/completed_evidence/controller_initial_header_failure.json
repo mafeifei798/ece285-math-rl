@@ -1,0 +1,37 @@
+{
+  "stage": "failed",
+  "pid": 3236854,
+  "unix": 1794122549.5068543,
+  "active_child": null,
+  "children": [
+    {
+      "stage": "preflight",
+      "pid": 3236857,
+      "started_unix": 1794122517.6652644,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/preflight.py"
+      ],
+      "exit_code": 0,
+      "finished_unix": 1794122526.413927
+    },
+    {
+      "stage": "no_update",
+      "pid": 3236944,
+      "started_unix": 1794122526.4965873,
+      "command": [
+        "/path/to/ece285_math_rl_project/.venv/bin/python",
+        "-B",
+        "-u",
+        "/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/smoke_no_update.py"
+      ],
+      "exit_code": 1,
+      "finished_unix": 1794122549.50416
+    }
+  ],
+  "error": "no_update failed with exit code 1; no automatic retry",
+  "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/controller.py\", line 27, in main\n    child('no_update','smoke_no_update.py')\n  File \"/path/to/ece285_math_rl_project/experiments/length_norm_pair_seed17_48_20261107/controller.py\", line 23, in child\n    if code:raise RuntimeError(f'{label} failed with exit code {code}; no automatic retry')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: no_update failed with exit code 1; no automatic retry\n",
+  "automatic_retry": false
+}

@@ -22,7 +22,7 @@ old error groups, if available, are disclosed as illustrations only.
 192 fixed ProcessBench solutions are diagnostics, not the full benchmark.
 Noisy final-answer labels remain noisy, even after parser repairs.
 
-All server work and caches stay below /srv/research/ece285_math_rl_project.
+All server work and caches stay below /path/to/ece285_math_rl_project.
 Run root: runs/CD_PRM7B_pair_seed17_20261028.
 Controller is finite, locks against duplicates, saves PRM checkpoints and fails
 closed. It never launches actor training, other seeds, or automatic retries.

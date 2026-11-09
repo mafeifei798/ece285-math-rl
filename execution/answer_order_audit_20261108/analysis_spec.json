@@ -1,0 +1,24 @@
+{
+  "post_hoc_descriptive_only": true,
+  "first_box_relative_position": "decoded character start / total decoded characters",
+  "early_relative_threshold": 0.1,
+  "leading_prefix_nonwhitespace_characters": 20,
+  "minimum_post_box_nonwhitespace_characters": 100,
+  "placeholder_contents": [
+    "",
+    "?",
+    ".",
+    "...",
+    "\u2026",
+    "\\dots",
+    "\\ldots",
+    "\\cdots",
+    "answer",
+    "unknown",
+    "tbd",
+    "n/a"
+  ],
+  "primary_files": "seed17:initial+6M A+6M C-bounded, same benchmark question IDs; seed42 A/C as descriptive replication",
+  "no_causal_faithfulness_claim": true,
+  "no_new_training_or_PRM_calls": true
+}

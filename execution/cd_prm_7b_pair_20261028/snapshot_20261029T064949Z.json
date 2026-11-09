@@ -1,6 +1,6 @@
 {
   "checked_unix": 1793256589.5106711,
-  "remote_run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "remote_run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
   "controller.json": {
     "status": "failed",
     "pid": 3237174,
@@ -19,21 +19,21 @@
     "active_child": {
       "stage": "paired_wiring",
       "pid": 3503363,
-      "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/paired_wiring.log"
+      "log": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/paired_wiring.log"
     },
     "actor_optimizer_updates": 0,
     "automatic_RL_launch": false,
     "stage_started_unix": 1793181919.746665,
     "failure": "paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log",
-    "traceback": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
+    "traceback": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
     "failed_unix": 1793181921.917148
   },
   "dispatch.json": {
     "pid": 3237174,
     "started_unix": 1793174084.2960937,
-    "cwd": "/srv/research/ece285_math_rl_project",
-    "source": "/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
-    "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+    "cwd": "/path/to/ece285_math_rl_project",
+    "source": "/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
+    "run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
     "source_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
     "gpu": 1,
     "gpu_sharing_authorized": true,
@@ -347,10 +347,10 @@
     "stage_started_unix": 1793256577.7128513
   },
   "postprocess_child_alive": true,
-  "postprocess_log_tail": "`torch_dtype` is deprecated! Use `dtype` instead!\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 101.66it/s]\nSome weights of the model checkpoint at /srv/research/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n",
+  "postprocess_log_tail": "`torch_dtype` is deprecated! Use `dtype` instead!\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 101.66it/s]\nSome weights of the model checkpoint at /path/to/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n",
   "child_alive": false,
-  "child_log_tail": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 128, in <module>\n    elif a.mode=='wiring':wiring()\n                          ^^^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 121, in wiring\n    assert ok,err\n           ^^\nAssertionError: 0.0006128824315965176\n",
-  "controller_log_tail": "Traceback (most recent call last):\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 47, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
+  "child_log_tail": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 128, in <module>\n    elif a.mode=='wiring':wiring()\n                          ^^^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/adapt.py\", line 121, in wiring\n    assert ok,err\n           ^^\nAssertionError: 0.0006128824315965176\n",
+  "controller_log_tail": "Traceback (most recent call last):\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 47, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028/controller.py\", line 39, in main\n    if code:raise RuntimeError(f'{name} exited {code}; no automatic retry; preserve checkpoint and inspect log')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: paired_wiring exited 1; no automatic retry; preserve checkpoint and inspect log\n",
   "scoring_B.json": {
     "arm": "B",
     "sha256": "639f61e50e73204dc490d7351d25016d4fc2e61332ebc6e559ccbe6d63042dfa",

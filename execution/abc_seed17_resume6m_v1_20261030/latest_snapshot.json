@@ -8,19 +8,19 @@
     "child_pid": null,
     "automatic_resume": false,
     "GPU_released": true,
-    "pause_receipt": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/pause_receipt.json"
+    "pause_receipt": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/pause_receipt.json"
   },
   "dispatch": {
     "pid": 3319102,
     "unix": 1793344308.7806535,
     "command": [
-      "/srv/research/ece285_math_rl_project/.venv/bin/python",
+      "/path/to/ece285_math_rl_project/.venv/bin/python",
       "-B",
       "-u",
-      "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/controller.py"
+      "/path/to/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030/controller.py"
     ],
-    "run": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030",
-    "source": "/srv/research/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030",
+    "run": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030",
+    "source": "/path/to/ece285_math_rl_project/experiments/abc_seed17_resume6m_v1_20261030",
     "source_release_sha256": "2da0f5c832929347bfde6dccfc146802652cb6c458add4edbca1264b9d1dcf02",
     "seed": 17,
     "arms": [
@@ -45,7 +45,7 @@
     "stage": "complete",
     "pid": 1748802,
     "unix": 1793280544.5933266,
-    "comparison": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/comparison.json",
+    "comparison": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/comparison.json",
     "no_6M_started": true,
     "D_adaptation": false
   },
@@ -145,7 +145,7 @@
           "empty_rows": 1,
           "short_wrong_rows": 18
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/milestones/checkpoint-50",
         "adapter_sha256": "90d9797ddfc6001688861d124e62383f004baffe4bc481755fe580880fcff5c3",
         "PRM_frozen": true,
         "engine": "V1",
@@ -163,7 +163,7 @@
       "stage_result144": null,
       "stage_result288": null,
       "last_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/checkpoint-115",
+        "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/A/checkpoint-115",
         "global_step": 115,
         "checkpoint_contract_sha256": "97589d35e5738f03a28f609f25cbad536d93b3209e09ed26148b1c3a490d0508"
       },
@@ -205,8 +205,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 5003,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/final_adapter",
         "adapter_sha256": "098ff54736b7dfa4ebb78d4299d3d5ba47b3a364538f9f9cc6294065dd811c60",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -221,7 +221,7 @@
         }
       },
       "old_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
+        "path": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/A/checkpoint-48",
         "global_step": 48,
         "checkpoint_contract_sha256": "f3560ddd1b366359f6001c8f659989410bd05b958dbbc51696e9880a7903841d"
       },
@@ -320,7 +320,7 @@
           "empty_rows": 2,
           "short_wrong_rows": 21
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/milestones/checkpoint-50",
         "adapter_sha256": "e2167ff479aa1a49a6f14533a2f9e7a66728f83bd626e09f58ee9d429da35dfb",
         "PRM_frozen": true,
         "engine": "V1",
@@ -338,7 +338,7 @@
       "stage_result144": null,
       "stage_result288": null,
       "last_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/checkpoint-50",
+        "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_mix/checkpoint-50",
         "global_step": 50,
         "checkpoint_contract_sha256": "9485e28de46d30be25729c7f73f7518b749492f6f9a787cc01d41b14d6a3beff"
       },
@@ -380,8 +380,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 1853,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/final_adapter",
         "adapter_sha256": "33893118df867b8e3ecdf40dc9fe3fd2e5615ce23f3f91609b71ba531833d13f",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -396,7 +396,7 @@
         }
       },
       "old_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
+        "path": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_mix/checkpoint-48",
         "global_step": 48,
         "checkpoint_contract_sha256": "ee9ca47c420e36ce441c51ccc0ece2aee2bc310997709032082e6ee469ef0178"
       },
@@ -495,7 +495,7 @@
           "empty_rows": 0,
           "short_wrong_rows": 20
         },
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/milestones/checkpoint-50",
         "adapter_sha256": "4426fad6b3e832906708f7bf593a8a5a489e91e0436e0041e9e427a28c55fc98",
         "PRM_frozen": true,
         "engine": "V1",
@@ -513,7 +513,7 @@
       "stage_result144": null,
       "stage_result288": null,
       "last_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/checkpoint-50",
+        "path": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resume6M_V1_20261030/C_bounded/checkpoint-50",
         "global_step": 50,
         "checkpoint_contract_sha256": "9ca411bf1ee819bb7a2cda64dd0fdcf93eb864a675cee696872c18048755f74e"
       },
@@ -555,8 +555,8 @@
         },
         "target_tokens": 1000000,
         "budget_overshoot": 9017,
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "adapter": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/final_adapter",
         "adapter_sha256": "40625255a00385ebbdde82c6b6b652c62ecf78e1612fcb45f0674cffb9323f42",
         "PRM_frozen": true,
         "originals_preserved": true,
@@ -571,7 +571,7 @@
         }
       },
       "old_checkpoint": {
-        "path": "/srv/research/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
+        "path": "/path/to/ece285_math_rl_project/runs/C_bounded_triplet_seed17_1M_20261029_v2/C_bounded/checkpoint-48",
         "global_step": 48,
         "checkpoint_contract_sha256": "a7503d6eed6a8a6ad74d971cb30bd3528c1eaa5a6ed311855d650af497302d65"
       },

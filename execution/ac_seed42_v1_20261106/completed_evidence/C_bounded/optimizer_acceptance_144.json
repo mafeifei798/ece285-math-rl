@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "start_step": 2,
+  "trainable_parameters": 18464768,
+  "PRM_in_optimizer": false,
+  "resume": {
+    "adapter_exact": true,
+    "source": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106/C_bounded/milestones/checkpoint-2",
+    "source_step": 2,
+    "optimizer_exact": true,
+    "scheduler_exact": true
+  }
+}

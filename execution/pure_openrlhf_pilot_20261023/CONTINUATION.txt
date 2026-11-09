@@ -2,10 +2,10 @@ ECE285 bounded PURE P-VR/P-PRM pilot — user authorized 2026-10-23
 
 Purpose: run one small controlled comparison, measure empty/short-response exploitation and mathematical accuracy before deciding on 6M. No 6M extension is authorized by this pilot. Do not launch C/D, other seeds/models or extra experiments.
 
-Local root: /home/researcher/Desktop/python/ece285_math_rl_project
-Remote root: /srv/research/ece285_math_rl_project
-SSH: ssh -p 11032 -i /home/researcher/.ssh/research_server_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes researcher@server.example.invalid
-Remote Python: /srv/research/ece285_math_rl_project/.venv/bin/python (plain python absent)
+Local root: /path/to/ece285_math_rl_project
+Remote root: /path/to/ece285_math_rl_project
+SSH: ssh -p 11032 -i /home/USER/.ssh/fym_125_76_110_84_ed25519 -o BatchMode=yes -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes USER@GPU_HOST
+Remote Python: /path/to/ece285_math_rl_project/.venv/bin/python (plain python absent)
 Controller originally PID464098, launched 2026-10-23 09:06:29 UTC.
 Controller receipt: runs/PURE_OpenRLHF_pair_pilot_seed17_20261023/controller.json
 Dispatch receipt and preflight: audits/PURE_OpenRLHF_pilot_20261023/{dispatch,preflight}.json
@@ -16,7 +16,7 @@ Runs: runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023 and runs/PURE_OpenRLHF_PPRM_p
 Read live receipts/PIDs/locks/checkpoints before any action. Never dispatch again. Healthy controller automatically runs stage targets 2,10,20,40, alternating arms, resuming optimizer+adapter+RNG. It then evaluates both on MATH500500/GSM8K1319 and writes comparison.json. Never interrupt healthy workers or other GPU jobs. Sharing GPU1 was explicitly allowed; memory gates are part of controller. Old A/B, veRL and no-update OpenRLHF results remain immutable.
 
 Read-only status command (local, needs network):
-python3 /home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/inspect_remote.py
+python3 /path/to/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/inspect_remote.py
 It saves snapshots and latest_snapshot.json, never launches work. Then run build_review.py to refresh the local review.html. No need to invent a fresh script per wakeup.
 
 Frozen protocol: same Qwen2.5-Math-1.5B base; seed17 zero LoRA r16 alpha32 dropout0; official PURE-PRM-7B only for P-PRM; official OpenRLHF signal/loss functions pinned41f9363b8cc4af044b7fc5f7f9bbbf62139e9553. AdamW LR5e-7 betas .9/.95, clip1, constant; one update per4questions x8 responses, cap2048. At most40 batches/1280responses each (hard2,621,440 generated training tokens each, expected~1M). Equal updates/questions/sample count, not equal actual tokens; report actual token/PRM/walltime costs separately. Sampling seeds17+32*batch_index+row_index. Same prompt/verifier/data order. No new reward, filtering or loss. Native BF16 signed softmin, actual-peer-length baseline, k1KL.001, official zero-preserving normalization ONCE; loss never normalizes again.

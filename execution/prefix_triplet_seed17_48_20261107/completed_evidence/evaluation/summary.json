@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "summary": {
+    "source": {
+      "n": 500,
+      "correct": 317.0,
+      "accuracy": 0.634,
+      "tokens": 321099,
+      "truncated": 33,
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 744.0674418993294,
+      "predictions_sha256": "b2a53bedc48f36bc7691de9b8f59cd681c82af0c1c589125715cb2643289f154"
+    },
+    "bounded": {
+      "n": 500,
+      "correct": 319.0,
+      "accuracy": 0.638,
+      "tokens": 323059,
+      "truncated": 32,
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 755.7354388516396,
+      "predictions_sha256": "6a4dc10d7a61ecf5f1a9ddbf5ab4b6078847ee7a26007e606c52d918fa9ef2f5"
+    },
+    "uniform": {
+      "n": 500,
+      "correct": 327.0,
+      "accuracy": 0.654,
+      "tokens": 314077,
+      "truncated": 25,
+      "empty": 0,
+      "short_wrong": 1,
+      "inference_seconds": 757.7179478323087,
+      "predictions_sha256": "a3df9959e89eb28d22db0b3cff732788e83444d652c2518a743b3d9a046735c6"
+    },
+    "prefix": {
+      "n": 500,
+      "correct": 328.0,
+      "accuracy": 0.656,
+      "tokens": 313743,
+      "truncated": 25,
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 762.8760106926784,
+      "predictions_sha256": "cff2672069f36d0c052928e438eadb0a615d26a982d06f0f10b353a36417cfac"
+    }
+  },
+  "seconds": 3025.244155406952,
+  "contract_sha256": "6ded937c01d5a688d02f9c83335728754fa7299fe4113f385001d21c048adcc4",
+  "test_sets_evaluated": false,
+  "PRM_at_evaluation": false
+}

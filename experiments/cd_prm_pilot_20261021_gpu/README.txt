@@ -28,7 +28,7 @@ prepare.py -> preflight_model.py -> adapt.py -> check.py，由 run_pilot.py 一�
 原始策略采样是推理；技术 smoke 适配器仅用于实现验证，绝不会加载进 C/D 或用于结果评分。
 
 远程目录
-/srv/research/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu
+/path/to/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu
 
 关键文件（完成后产生）
 pipeline_status.json：一次性流水线状态与源码哈希。

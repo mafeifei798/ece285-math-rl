@@ -1,0 +1,371 @@
+{
+  "decision": "本轮没有确认树状＋PRM 优于链式 C-bounded。结合较高回退率和额外耗时，不建议把当前树状配置扩到3M/6M；继续保留链式 C-bounded 作为主线。",
+  "primary_comparison": {
+    "difference_percentage_points": -1.7999999999999998,
+    "paired_bootstrap_95CI_pp": [
+      -4.3999999999999995,
+      0.8
+    ],
+    "wins": 17,
+    "losses": 26,
+    "both_correct": 302,
+    "both_wrong": 155,
+    "mcnemar_exact_two_sided_p": 0.2220528201560228,
+    "n": 500
+  },
+  "PRM_incremental_comparison": {
+    "difference_percentage_points": 0.6,
+    "paired_bootstrap_95CI_pp": [
+      -2.0,
+      3.2
+    ],
+    "wins": 23,
+    "losses": 20,
+    "both_correct": 296,
+    "both_wrong": 161,
+    "mcnemar_exact_two_sided_p": 0.7607916425613439,
+    "n": 500
+  },
+  "validation": {
+    "source": {
+      "n": 500,
+      "correct": 320.0,
+      "accuracy": 0.64,
+      "tokens": 314364,
+      "truncated": 27,
+      "missing_or_invalid_box": 22,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.044,
+      "status_counts": {
+        "exact": 293,
+        "symbolic": 153,
+        "missing_or_invalid_box": 22,
+        "truncated": 27,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 712.1447136467323,
+      "predictions_sha256": "b8401f515448f265a506a8a140c013c2d9fc2be7f97ef4fb2af3a3f689920a6a"
+    },
+    "chain_cb": {
+      "n": 500,
+      "correct": 328.0,
+      "accuracy": 0.656,
+      "tokens": 312228,
+      "truncated": 27,
+      "missing_or_invalid_box": 20,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.04,
+      "status_counts": {
+        "exact": 302,
+        "symbolic": 147,
+        "missing_or_invalid_box": 20,
+        "truncated": 27,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 723.3143298979849,
+      "predictions_sha256": "de0cf7c5d3037de7775d27d43fc02c7b1fba9af726e9de56d938c73d4703228e"
+    },
+    "tree_vr": {
+      "n": 500,
+      "correct": 316.0,
+      "accuracy": 0.632,
+      "tokens": 314864,
+      "truncated": 26,
+      "missing_or_invalid_box": 20,
+      "truncation_rate": 0.052,
+      "missing_or_invalid_box_rate": 0.04,
+      "status_counts": {
+        "exact": 292,
+        "symbolic": 157,
+        "missing_or_invalid_box": 20,
+        "truncated": 26,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 722.8700605016202,
+      "predictions_sha256": "b95a70abbfb58a4f9969ad5e4720989b2349f70073c4a736ad8416ea97fa1fce"
+    },
+    "tree_cb": {
+      "n": 500,
+      "correct": 319.0,
+      "accuracy": 0.638,
+      "tokens": 318570,
+      "truncated": 28,
+      "missing_or_invalid_box": 17,
+      "truncation_rate": 0.056,
+      "missing_or_invalid_box_rate": 0.034,
+      "status_counts": {
+        "exact": 294,
+        "symbolic": 157,
+        "missing_or_invalid_box": 17,
+        "truncated": 28,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 723.0419318666682,
+      "predictions_sha256": "d939b18920d09766aa5ae41267c39a4344cf27f29aba34afdee82378e319f54d"
+    }
+  },
+  "costs": {
+    "chain_cb": {
+      "new_updates": 48,
+      "leaf_responses": 1536,
+      "unique_generation_tokens": 1033392,
+      "expanded_leaf_training_tokens": 1033392,
+      "PRM_input_tokens": 948949,
+      "PRM_seconds": 120.96051540225744,
+      "seconds": 5039.353208065033,
+      "peak_sampled_GPU_GiB": 38.064453125,
+      "empty": 0,
+      "short_wrong": 3,
+      "truncated": 97,
+      "statuses": {
+        "exact": 703,
+        "symbolic": 598,
+        "truncated": 97,
+        "missing_or_invalid_box": 95,
+        "unit_exact": 14,
+        "unit_symbolic": 16,
+        "unparseable": 13
+      },
+      "group_types": {
+        "mixed": 150,
+        "all_wrong": 27,
+        "all_correct": 15
+      },
+      "wrong_positive_total_tokens": 0,
+      "wrong_positive_prm_tokens": 0,
+      "fork_fallbacks": 0
+    },
+    "tree_vr": {
+      "new_updates": 48,
+      "leaf_responses": 1536,
+      "unique_generation_tokens": 980089,
+      "expanded_leaf_training_tokens": 1034557,
+      "PRM_input_tokens": 0,
+      "PRM_seconds": 0.0,
+      "seconds": 8247.999958515167,
+      "peak_sampled_GPU_GiB": 28.015625,
+      "empty": 0,
+      "short_wrong": 4,
+      "truncated": 93,
+      "statuses": {
+        "exact": 714,
+        "symbolic": 591,
+        "missing_or_invalid_box": 95,
+        "truncated": 93,
+        "unit_symbolic": 19,
+        "unit_exact": 10,
+        "unparseable": 14
+      },
+      "group_types": {
+        "mixed": 147,
+        "all_wrong": 31,
+        "all_correct": 14
+      },
+      "wrong_positive_total_tokens": 4804,
+      "wrong_positive_prm_tokens": 0,
+      "fork_fallbacks": 277
+    },
+    "tree_cb": {
+      "new_updates": 48,
+      "leaf_responses": 1536,
+      "unique_generation_tokens": 960821,
+      "expanded_leaf_training_tokens": 1026155,
+      "PRM_input_tokens": 1005493,
+      "PRM_seconds": 127.14799786172807,
+      "seconds": 7651.147801160812,
+      "peak_sampled_GPU_GiB": 40.1875,
+      "empty": 0,
+      "short_wrong": 1,
+      "truncated": 68,
+      "statuses": {
+        "exact": 737,
+        "symbolic": 596,
+        "missing_or_invalid_box": 96,
+        "truncated": 68,
+        "unit_exact": 9,
+        "unit_symbolic": 17,
+        "unparseable": 13
+      },
+      "group_types": {
+        "all_correct": 21,
+        "mixed": 145,
+        "all_wrong": 26
+      },
+      "wrong_positive_total_tokens": 3163,
+      "wrong_positive_prm_tokens": 0,
+      "fork_fallbacks": 264
+    }
+  },
+  "evaluation_wall_seconds": 2885.719923019409,
+  "independent_statistics": {
+    "tree_cb_minus_chain_cb": {
+      "difference_percentage_points": -1.7999999999999998,
+      "wins": 17,
+      "losses": 26,
+      "paired_bootstrap_95CI_pp": [
+        -4.3999999999999995,
+        0.8
+      ],
+      "mcnemar_exact_two_sided_p": 0.2220528201560228,
+      "n": 500
+    },
+    "tree_vr_minus_chain_cb": {
+      "difference_percentage_points": -2.4,
+      "wins": 12,
+      "losses": 24,
+      "paired_bootstrap_95CI_pp": [
+        -4.8,
+        0.0
+      ],
+      "mcnemar_exact_two_sided_p": 0.06524533522315323,
+      "n": 500
+    },
+    "tree_cb_minus_tree_vr": {
+      "difference_percentage_points": 0.6,
+      "wins": 23,
+      "losses": 20,
+      "paired_bootstrap_95CI_pp": [
+        -2.0,
+        3.2
+      ],
+      "mcnemar_exact_two_sided_p": 0.7607916425613439,
+      "n": 500
+    }
+  },
+  "post_hoc_interpretation": {
+    "post_hoc_descriptive_only": true,
+    "no_training_or_regeneration": true,
+    "arms": {
+      "tree_vr": {
+        "roots": 384,
+        "fallback_roots": 277,
+        "fallback_rate": 0.7213541666666666,
+        "nonempty_forks": 107,
+        "forks_at_least32_tokens": 60,
+        "forks_at_least32_tokens_fraction_of_all_roots": 0.15625,
+        "unique_vs_expanded_token_saving_fraction": 0.05264862158392436,
+        "walltime_ratio_to_chain": 1.6367179711306965,
+        "counts": {
+          "answer_correct_leaves": 782,
+          "answer_correct_leaves_empty_prefix": 591,
+          "answer_correct_leaves_nonempty_prefix": 191,
+          "answer_correct_leaves_prefix_at_least32_tokens": 122
+        },
+        "fallback_examples": [
+          {
+            "problem_id": "math/train/geometry/672",
+            "prefix_length": 0,
+            "first_answer_marker_token_position": 1,
+            "root_total_tokens": 259,
+            "completion_start": " \\boxed{(6,1)}\n\nTo find the coordinates of the point where the diagonals of a parallelogram intersect, we can use the fact that the diagonals of a parallelogram bisect each other. This means the intersection point is the midpoint of both diagonals.\n\nGiven the opposite vertices of the parallelogram \\((1, -5)\\) and \\((11, 7)\\), we can calculate the midpoint using the midpoint formula:\n\n\\[\n\\text{Midpoint} = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_"
+          },
+          {
+            "problem_id": "math/train/number_theory/377",
+            "prefix_length": 0,
+            "first_answer_marker_token_position": 1,
+            "root_total_tokens": 382,
+            "completion_start": " \\boxed{.}\n\nLet's identify and sum up all the two-digit prime numbers less than 50 that are palindromic. Palindromic primes less than 50 are: 11, 13, 17, 31, 37.\n\nApproach:\n1. Identify all two-digit prime numbers less than 50.\n2. Check which of these prime numbers are palindromic.\n3. Filter out the numbers that are greater than or equal to 50 if not to sum up only the ones less than 50.\n\nLet's use Python to determine the sum of all such palindrom"
+          },
+          {
+            "problem_id": "math/train/number_theory/377",
+            "prefix_length": 0,
+            "first_answer_marker_token_position": 1,
+            "root_total_tokens": 171,
+            "completion_start": " \\boxed{} Palindromic primes are two-digit prime numbers such that the number formed when the digits are reversed is also prime. The only primes with the characteristics of palindrome primes less than 50 are: {11, 13, 17, 31, 37, 71, 73, 79, 97}\nNow, we take out the numbers not prime, we get: 11, 13, 17, 31, 71, 73\nAmong the final 6 numbers, we note that 71 is a palindromic prime because 71 and 17 are prime. Then, by adding the remaining numbers,"
+          }
+        ]
+      },
+      "tree_cb": {
+        "roots": 384,
+        "fallback_roots": 264,
+        "fallback_rate": 0.6875,
+        "nonempty_forks": 120,
+        "forks_at_least32_tokens": 73,
+        "forks_at_least32_tokens_fraction_of_all_roots": 0.19010416666666666,
+        "unique_vs_expanded_token_saving_fraction": 0.06366874400066269,
+        "walltime_ratio_to_chain": 1.518279724651139,
+        "counts": {
+          "answer_correct_leaves": 823,
+          "answer_correct_leaves_empty_prefix": 579,
+          "answer_correct_leaves_nonempty_prefix": 244,
+          "answer_correct_leaves_prefix_at_least32_tokens": 146,
+          "answer_correct_leaves_positive_outcome_reversed_by_process": 1,
+          "reversed_suffix_tokens": 378
+        },
+        "fallback_examples": [
+          {
+            "problem_id": "math/train/geometry/672",
+            "prefix_length": 0,
+            "first_answer_marker_token_position": 1,
+            "root_total_tokens": 259,
+            "completion_start": " \\boxed{(6,1)}\n\nTo find the coordinates of the point where the diagonals of a parallelogram intersect, we can use the fact that the diagonals of a parallelogram bisect each other. This means the intersection point is the midpoint of both diagonals.\n\nGiven the opposite vertices of the parallelogram \\((1, -5)\\) and \\((11, 7)\\), we can calculate the midpoint using the midpoint formula:\n\n\\[\n\\text{Midpoint} = \\left( \\frac{x_1 + x_2}{2}, \\frac{y_1 + y_"
+          },
+          {
+            "problem_id": "math/train/number_theory/377",
+            "prefix_length": 0,
+            "first_answer_marker_token_position": 1,
+            "root_total_tokens": 808,
+            "completion_start": " \\boxed{.}\n\nLet's identify and sum up all the two-digit prime numbers less than 50 that are palindromic. Palindromic primes less than 50 are: 11, 13, 17, 31, 37.\n\nApproach:\n1. Identify all two-digit prime numbers less than 50.\n2. Check which of these prime numbers are palindromic.\n3. Filter out the numbers that are greater than or equal to 50 if not to sum up only the ones less than 50.\n\nLet's use Python to determine the sum of all such palindrom"
+          },
+          {
+            "problem_id": "math/train/number_theory/377",
+            "prefix_length": 0,
+            "first_answer_marker_token_position": 1,
+            "root_total_tokens": 171,
+            "completion_start": " \\boxed{} Palindromic primes are two-digit prime numbers such that the number formed when the digits are reversed is also prime. The only primes with the characteristics of palindrome primes less than 50 are: {11, 13, 17, 31, 37, 71, 73, 79, 97}\nNow, we take out the numbers not prime, we get: 11, 13, 17, 31, 71, 73\nAmong the final 6 numbers, we note that 71 is a palindromic prime because 71 and 17 are prime. Then, by adding the remaining numbers,"
+          }
+        ]
+      }
+    },
+    "interpretation_limits": [
+      "A32-token prefix is a coverage descriptor, not a mathematical-validity label or tuned branch threshold.",
+      "First boxed output can precede substantial reasoning; masking at its first token prevents meaningful later forks in this fixed protocol.",
+      "Tree changes sampling, dependency structure and credit scale; coverage/cost statistics do not establish the cause of accuracy differences.",
+      "Original NumPy20k secondary tree_vr interval ends at-0.2pp; independent stdlib20k ends at0.0pp. Exact McNemar p0.065; do not claim a robust significant loss from that boundary."
+    ]
+  },
+  "runtime_closeout": {
+    "passed": true,
+    "unix": 1794164052.3268697,
+    "controller_stage": "complete",
+    "our_live_controller_or_children": [],
+    "GPU_apps_after_closeout": "",
+    "CUDA_initialized_by_check": false,
+    "sampling_correction_coverage": {
+      "chain_cb": {
+        "vllm_sampling_correction_enabled": false,
+        "batches": 48,
+        "old_logps_absent": 48,
+        "sampling_ratio_absent": 48,
+        "sampling_ratio_reconstructions_applicable": 0,
+        "note": "Optional ratio branch in the prior independent verifier was not applicable; its max-error0 is not evidence of reconstructed sampling ratios. Current single-iteration loss uses detached current log-probabilities when cached old log-probabilities are absent."
+      },
+      "tree_vr": {
+        "vllm_sampling_correction_enabled": false,
+        "batches": 48,
+        "old_logps_absent": 48,
+        "sampling_ratio_absent": 48,
+        "sampling_ratio_reconstructions_applicable": 0,
+        "note": "Optional ratio branch in the prior independent verifier was not applicable; its max-error0 is not evidence of reconstructed sampling ratios. Current single-iteration loss uses detached current log-probabilities when cached old log-probabilities are absent."
+      },
+      "tree_cb": {
+        "vllm_sampling_correction_enabled": false,
+        "batches": 48,
+        "old_logps_absent": 48,
+        "sampling_ratio_absent": 48,
+        "sampling_ratio_reconstructions_applicable": 0,
+        "note": "Optional ratio branch in the prior independent verifier was not applicable; its max-error0 is not evidence of reconstructed sampling ratios. Current single-iteration loss uses detached current log-probabilities when cached old log-probabilities are absent."
+      }
+    }
+  },
+  "independent_acceptance_passed": true,
+  "test_sets_used": false
+}

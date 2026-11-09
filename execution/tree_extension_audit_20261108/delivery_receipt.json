@@ -1,0 +1,44 @@
+{
+  "scope": "Read-only source audit and independent local CPU algebra/reference; no remote execution.",
+  "historical_inputs_unchanged": true,
+  "gpu_jobs_started": 0,
+  "training_updates": 0,
+  "files": {
+    "REPORT.txt": {
+      "bytes": 9291,
+      "sha256": "7cb3519ec92812bfa538da8607be87ae9524289be357f91ec0d1323929e45905"
+    },
+    "review.html": {
+      "bytes": 12870,
+      "sha256": "594c440a2d85999ebb74950b63ed5cd843e22278844960b55c38a9d2fdb00560"
+    },
+    "sources.json": {
+      "bytes": 5437,
+      "sha256": "09cb44ad66eebbd2799905c1b58f97456764cf1833a5b175832c3ee4525b8dd5"
+    },
+    "plan.json": {
+      "bytes": 3891,
+      "sha256": "042e9dbb9031e8343f919914fec1dd9f565c44b49a3ad3ef081fb34530399c8d"
+    },
+    "cpu_credit_contract.py": {
+      "bytes": 9691,
+      "sha256": "0e114a8b605b85d4aeaf17df066b1a5481057aa787cfdf7f0cc24e0c895e2b9a"
+    },
+    "cpu_verification.json": {
+      "bytes": 3756,
+      "sha256": "314068266c446ba0530ea65c82cbef82d36f0be9d2b98c44206db79ce145bc54"
+    },
+    "cost_projection.json": {
+      "bytes": 1743,
+      "sha256": "0bb13582ed85fc80de64483fc7244bb89328c1c4674718b84bf6983a396ca9dd"
+    },
+    "historical_inputs.json": {
+      "bytes": 2257,
+      "sha256": "66d377665d739232b9e5b8bac0d3232d11377310d0e064b24c030148cfde8dcb"
+    },
+    "render_report.py": {
+      "bytes": 5852,
+      "sha256": "be66ce00407e8022ac1b305aaebcf2b29d663f6585ba79b4a34617f42fe8fd77"
+    }
+  }
+}

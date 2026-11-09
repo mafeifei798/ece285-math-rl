@@ -12,7 +12,7 @@ import math
 import random
 import statistics
 
-ROOT = Path('/home/researcher/Desktop/python/ece285_math_rl_project')
+ROOT = Path('/path/to/ece285_math_rl_project')
 OUT = Path(__file__).resolve().parent
 AB = ROOT / 'execution/ab_corrected_6m_seed17_20261022/final_evidence'
 summary = json.loads((AB / 'results_summary.json').read_text())

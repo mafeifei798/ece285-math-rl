@@ -10,7 +10,7 @@ import fcntl
 import traceback
 import math
 
-ROOT = Path('/srv/research/ece285_math_rl_project')
+ROOT = Path('/path/to/ece285_math_rl_project')
 SOURCE = ROOT/'experiments/cd_prm_7b_pair_20261028'
 RUN = ROOT/'runs/CD_PRM7B_pair_seed17_20261028'
 OUT = RUN/'wiring_recovery'

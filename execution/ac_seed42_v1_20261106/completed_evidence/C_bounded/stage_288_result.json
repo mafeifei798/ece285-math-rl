@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "arm": "C_bounded",
+  "start_step": 144,
+  "global_step": 288,
+  "accounting": {
+    "generated_completion_tokens": 6229129,
+    "generated_completions": 9216,
+    "generated_groups": 1152,
+    "correct_completions": 3701,
+    "truncated_completions": 536,
+    "prm_input_tokens": 5594827,
+    "prm_padded_tokens": 5594827,
+    "prm_scored_completions": 7586,
+    "prm_forward_seconds": 749.3566333074123,
+    "outcome_group_counts": {
+      "mixed": 907,
+      "all_wrong": 206,
+      "all_correct": 39
+    },
+    "status_counts": {
+      "exact": 3279,
+      "symbolic": 4289,
+      "missing_or_invalid_box": 964,
+      "unparseable": 130,
+      "truncated": 536,
+      "unit_symbolic": 11,
+      "unit_exact": 7
+    },
+    "loss_rows": 9216,
+    "loss_wrong_positive": 0,
+    "process_nonzero_rows": 3541,
+    "process_abs_sum": 146.1377719193697,
+    "outcome_abs_sum": 5831.975019454956,
+    "positive_advantage_rows": 3612,
+    "empty_rows": 4,
+    "short_wrong_rows": 112
+  },
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106/C_bounded/milestones/checkpoint-288",
+  "adapter_sha256": "25a099d7ef9765e205f2e71f006194b1dcc466ce110b0f59162b79b3adf80ad8",
+  "PRM_frozen": true,
+  "engine": "V1",
+  "source_release_sha256": "285cba59327cbb17ccd6cfb825083952d00d480d6003b51803fd605ae2c63a81",
+  "seconds": 4242.609184026718,
+  "peak_reserved_GiB": 34.05078125,
+  "metrics": {
+    "train_runtime": 4150.0618,
+    "train_samples_per_second": 154.215,
+    "train_steps_per_second": 4.819,
+    "total_flos": 0.0,
+    "train_loss": 0.00011523117943726093
+  }
+}

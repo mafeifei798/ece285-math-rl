@@ -7,7 +7,7 @@ controller PID3319102、训练PID3334407均已退出；其他GPU作业未触碰�
 ----- EARLIER PLAN (SUSPENDED) -----
 用户已明确授权：仅seed17，将当前A/C-mix/C-bounded从原1M完整checkpoint续跑到约6M；相同题目顺序和更新次数；统一V1；奖励/loss不变；约3M留验证点；结束后共同MATH500/GSM8K评测。不得启动seed42、D适配、新模型、额外奖励/loss、超预算、从头重训或新自动任务。
 
-全部远端操作在/srv/research/ece285_math_rl_project。
+全部远端操作在/path/to/ece285_math_rl_project。
 source experiments/abc_seed17_resume6m_v1_20261030
 run runs/ABC_seed17_resume6M_V1_20261030
 audit audits/ABC_seed17_resume6M_V1_20261030

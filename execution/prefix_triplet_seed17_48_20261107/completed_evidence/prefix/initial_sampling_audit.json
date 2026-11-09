@@ -1,0 +1,8 @@
+{
+  "same_rows": 14,
+  "rows": 32,
+  "same_questions": true,
+  "first_batch_token_equality_is_descriptive_not_acceptance": true,
+  "cached_first_batch": false,
+  "sampling_rng_after_fault_bitwise_preserved": null
+}

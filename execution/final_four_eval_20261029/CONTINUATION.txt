@@ -1,5 +1,5 @@
 用户授权：初始Qwen2.5-Math-1.5B与已完成1M seed17的A/C-mix/C-bounded统一greedy评测MATH500500题、GSM8K1319题，共7276条。保留旧结果，禁止新训练/新PRM/新seed/改提示验答/选checkpoint/自动跟进任务。
-远端全部位于/srv/research/ece285_math_rl_project。独立source experiments/final_four_eval_20261029；run runs/Final_four_eval_seed17_1M_20261029；audit audits/Final_four_eval_seed17_1M_20261029。
+远端全部位于/path/to/ece285_math_rl_project。独立source experiments/final_four_eval_20261029；run runs/Final_four_eval_seed17_1M_20261029；audit audits/Final_four_eval_seed17_1M_20261029。
 本地dispatch.json保存唯一派发PID，严禁重复运行dispatch.py或prepare_remote.py。先运行inspect_remote.py只读核查PID/锁/批次/receipt，不能打断健康进程或其他作业。
 共享GPU1（已有授权），显存利用率参数.15、batch64、max_num_seqs64、max_model_len4096、cap2048、seed285、bf16、greedy/top_p1/top_k-1。一个vLLM引擎加载三个LoRA，按64题块交错四模型，固定轮换先后次序。初始模型请求无LoRA，三个arm分别adapterID1/2/3。不加载PRM。
 CPU预检已通过，保护609个旧文件和模型/数据/验证器hash；三个final_adapter均与checkpoint-48匹配。headers只沿用先前已验证的项目局部CPATH，缓存用独立cache/final_four_eval_20261029。

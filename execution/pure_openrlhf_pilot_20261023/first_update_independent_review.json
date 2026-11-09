@@ -5,7 +5,7 @@
   "passed": true,
   "source_file": "runs/PURE_OpenRLHF_PVR_pilot_seed17_20261023/batches/0001.json",
   "source_sha256": "f1b94f3c38466aac3846fb501bb3ae2e701b806ff29a8e527b8cfa95c964d5f7",
-  "local_evidence_file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/first_update_readonly_evidence.json",
+  "local_evidence_file": "/path/to/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/first_update_readonly_evidence.json",
   "local_evidence_sha256": "4988bd922fd8e2e337d0e087e02c9c1e04cf2d725f3c19393fd3bb6454bd2e77",
   "checks": {
     "pvr_uses_no_prm": true,
@@ -83,7 +83,7 @@
     "files": 11,
     "all_actual_hashes_match": true,
     "checked_at_utc": "2026-10-23T09:18:24.243946+00:00",
-    "evidence_file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/first_update_checkpoint_hash_checks.json"
+    "evidence_file": "/path/to/ece285_math_rl_project/execution/pure_openrlhf_pilot_20261023/first_update_checkpoint_hash_checks.json"
   },
   "batch_observations": {
     "responses": 32,

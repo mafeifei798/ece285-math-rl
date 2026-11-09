@@ -17,7 +17,7 @@
   "kl_coefficient": 0.0,
   "source_functions": [
     {
-      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf_extra/openrlhf/utils/utils.py",
+      "path": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf_extra/openrlhf/utils/utils.py",
       "sha256": "c5de92d748498b20ecf673bab91c92c71e26dcc3c0dce180ce7c503f983b2924",
       "function": "right_padding",
       "class_name": null,
@@ -25,7 +25,7 @@
       "end_line": 146
     },
     {
-      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf_extra/openrlhf/utils/utils.py",
+      "path": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf_extra/openrlhf/utils/utils.py",
       "sha256": "c5de92d748498b20ecf673bab91c92c71e26dcc3c0dce180ce7c503f983b2924",
       "function": "turn_process_reward_logits_to_reward",
       "class_name": null,
@@ -33,7 +33,7 @@
       "end_line": 183
     },
     {
-      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+      "path": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
       "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
       "function": "process_experiences",
       "class_name": "NaiveExperienceMaker",
@@ -43,15 +43,15 @@
   ],
   "input_provenance": {
     "inputs": {
-      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
+      "path": "/path/to/ece285_math_rl_project/execution/pure_empty_boundary_20261022/inputs.jsonl",
       "sha256": "e3d564b97c914ab60b56a0911a12fa4bc06ee4adc490e7898ae761fbc1f3400d"
     },
     "aligned": {
-      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/qwen_single/scored.jsonl",
+      "path": "/path/to/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/qwen_single/scored.jsonl",
       "sha256": "3681d0cdf0d017d877339eaeb6481421bf4faa23b4b09570afba49f99d811d72"
     },
     "scored": {
-      "path": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/scoring_single/scored.jsonl",
+      "path": "/path/to/ece285_math_rl_project/execution/pure_official_prm_offline_20261022/remote/scoring_single/scored.jsonl",
       "sha256": "b26d649b75ca8996100cce076e3ec6597bc4ed4282018ebf9c537bb9a8c2ccb5"
     }
   },

@@ -1,19 +1,19 @@
 {
   "checked_utc": "2026-10-21T02:28:07.323584+00:00",
-  "remote_root": "/srv/research/ece285_math_rl_project",
+  "remote_root": "/path/to/ece285_math_rl_project",
   "preflight": {
     "status": "completed",
     "passed": true,
     "pid": 1302813,
     "started_unix": 1792549594.560879,
-    "adapter": "/srv/research/ece285_math_rl_project/runs/pilot_A_seed17/final_adapter",
+    "adapter": "/path/to/ece285_math_rl_project/runs/pilot_A_seed17/final_adapter",
     "cuda_visible_devices": "1",
     "purpose": "compiler and LoRA inference plumbing only; no accuracy selection",
     "header_receipt_sha256": "27a323af35cb1581643f32adbf311fa3faf1125cf760e013b0a4be843bbd4317",
     "fresh_header_compile_passed": true,
     "include_paths": [
-      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
-      "/srv/research/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
+      "/path/to/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11/Include",
+      "/path/to/ece285_math_rl_project/cache/python_dev_headers/Python-3.11.11"
     ],
     "adapter_sha256": "4b1dd4642a861ff014291b56aa721a6ee7c7246b61c661cae4feef0f7ec63e0e",
     "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",

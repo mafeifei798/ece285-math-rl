@@ -17,7 +17,7 @@ LoRA导出与评测引擎真实推理通过。
 600万按完整更新到达预算时停止，实际超出量单独报告。
 保留原始混合奖励及组内标准化，不启用bounded-advantage，不启动C/D。
 
-服务器目录：/srv/research/ece285_math_rl_project
+服务器目录：/path/to/ece285_math_rl_project
 控制器：runs/AB_corrected_seed17_6M_20261022/controller.json
 控制器PID：3039862
 正式A：runs/A_corrected_seed17_6M_20261022

@@ -1,7 +1,7 @@
 {
   "passed": true,
   "arm": "B",
-  "run": "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022",
+  "run": "/path/to/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022",
   "audited_unix": 1792678715.6982796,
   "source_release_sha256": "9eac99ad38cf0ebb389f295655024eff1a09ff530ca05462bd2d9bcfcdbe6907",
   "source_files_checked": 34,
@@ -56,7 +56,7 @@
   "actual_completion_tokens": 6008457,
   "overshoot_tokens": 8457,
   "prm_scoring_seconds": 593.3455388541333,
-  "checkpoint": "/srv/research/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
+  "checkpoint": "/path/to/ece285_math_rl_project/runs/B_corrected_seed17_6M_20261022/checkpoint-280",
   "checkpoint_files_checked": 16,
   "adapter_tensors_checked": 392,
   "checkpoint_adapter_sha256": "c98d03b3a4d67223cf36552cbd1c11bbcf17148b15843fbd1b26b373abfa957f",

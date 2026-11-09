@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "step": 288,
+  "summary": {
+    "A": {
+      "math500": {
+        "n": 500,
+        "correct": 264.0,
+        "accuracy": 0.528,
+        "generated_tokens": 359825,
+        "truncated": 42,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "50c7692d2ab20cdb82ced657f45f7d2d43524f6feda7c04a22a80166e3827cd3",
+        "inference_seconds": 726.8338086605072
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 890.0,
+        "accuracy": 0.6747536012130402,
+        "generated_tokens": 524747,
+        "truncated": 35,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "39baf12538fd2e9afa2c31b66a498286c544ce810d3a969585bdca62b23b9d7f",
+        "inference_seconds": 1688.6910336017609
+      }
+    },
+    "C_bounded": {
+      "math500": {
+        "n": 500,
+        "correct": 274.0,
+        "accuracy": 0.548,
+        "generated_tokens": 355998,
+        "truncated": 36,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "314685d0a18fd7dff74deea97c2bd1567aa479886689682ab9d0fc034c98496b",
+        "inference_seconds": 722.315639257431
+      },
+      "gsm8k": {
+        "n": 1319,
+        "correct": 896.0,
+        "accuracy": 0.6793025018953753,
+        "generated_tokens": 491582,
+        "truncated": 24,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "5b26f21b5a408fc3c2ae8dd173d59b33e1c24b4569cc00f9b60a875b419d8434",
+        "inference_seconds": 1506.330754518509
+      }
+    }
+  },
+  "contract_sha256": "bda8b0eb8e543cf987a952a5a038001c2903be962ca727d3bfea6e856d835667",
+  "seconds": 4679.292653560638,
+  "new_training": false,
+  "new_PRM_calls": 0
+}

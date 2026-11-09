@@ -1,7 +1,7 @@
 C 有界过程优势：独立接入与真实模型无更新验收完成
 
 最终独立版本：experiments/c_bounded_integration_20261029_v2
-服务器运行证据：/srv/research/ece285_math_rl_project/runs/C_bounded_no_update_20261029_v2
+服务器运行证据：/path/to/ece285_math_rl_project/runs/C_bounded_no_update_20261029_v2
 Source release：5e374d1634696ef1575aa7d43fdca8f0703c1ca4f54d466f7e2ecd076020e5bc
 
 公式：Aout=(y-mean(y))/(sample_std(y)+1e-4)

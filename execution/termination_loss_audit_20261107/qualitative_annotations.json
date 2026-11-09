@@ -1,0 +1,135 @@
+{
+  "reviewer": "assistant qualitative review, not independent human annotation",
+  "categories": {
+    "off_question_continuation": 8,
+    "on_question_failed_or_unfinished": 9,
+    "literal_loop": 3
+  },
+  "rows": [
+    {
+      "sample_id": "A-00",
+      "category": "off_question_continuation",
+      "evidence": "The circumradius",
+      "problem_id": "math/train/prealgebra/348"
+    },
+    {
+      "sample_id": "A-01",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "Let's carefully re-examine",
+      "problem_id": "math/train/precalculus/722"
+    },
+    {
+      "sample_id": "A-02",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "revised code",
+      "problem_id": "math/train/number_theory/562"
+    },
+    {
+      "sample_id": "A-03",
+      "category": "off_question_continuation",
+      "evidence": "left and right foci",
+      "problem_id": "math/train/algebra/37"
+    },
+    {
+      "sample_id": "A-04",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "However, this is not the correct interpretation",
+      "problem_id": "math/train/intermediate_algebra/665"
+    },
+    {
+      "sample_id": "A-05",
+      "category": "literal_loop",
+      "evidence": "Let's box the correct answer:",
+      "problem_id": "math/train/algebra/396"
+    },
+    {
+      "sample_id": "A-06",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "revisit the critical points",
+      "problem_id": "math/train/intermediate_algebra/1114"
+    },
+    {
+      "sample_id": "A-07",
+      "category": "off_question_continuation",
+      "evidence": "Given two circles",
+      "problem_id": "math/train/algebra/1046"
+    },
+    {
+      "sample_id": "A-08",
+      "category": "off_question_continuation",
+      "evidence": "Some ducks are marching",
+      "problem_id": "math/train/precalculus/608"
+    },
+    {
+      "sample_id": "A-09",
+      "category": "off_question_continuation",
+      "evidence": "Pharoah Company",
+      "problem_id": "math/train/prealgebra/721"
+    },
+    {
+      "sample_id": "C_bounded-00",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "Given the complexity",
+      "problem_id": "math/train/counting_and_probability/384"
+    },
+    {
+      "sample_id": "C_bounded-01",
+      "category": "literal_loop",
+      "evidence": "# Let's solve it step by step in Python",
+      "problem_id": "math/train/counting_and_probability/739"
+    },
+    {
+      "sample_id": "C_bounded-02",
+      "category": "off_question_continuation",
+      "evidence": "Steve wanted to make",
+      "problem_id": "math/train/intermediate_algebra/333"
+    },
+    {
+      "sample_id": "C_bounded-03",
+      "category": "off_question_continuation",
+      "evidence": "Boundedness in",
+      "problem_id": "math/train/number_theory/821"
+    },
+    {
+      "sample_id": "C_bounded-04",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "Let's simplify and evaluate",
+      "problem_id": "math/train/geometry/521"
+    },
+    {
+      "sample_id": "C_bounded-05",
+      "category": "off_question_continuation",
+      "evidence": "Alex is working on",
+      "problem_id": "math/train/prealgebra/756"
+    },
+    {
+      "sample_id": "C_bounded-06",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "Let's check",
+      "problem_id": "math/train/precalculus/470"
+    },
+    {
+      "sample_id": "C_bounded-07",
+      "category": "literal_loop",
+      "evidence": "Given the reference solution",
+      "problem_id": "math/train/intermediate_algebra/69"
+    },
+    {
+      "sample_id": "C_bounded-08",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "Let's manually recheck",
+      "problem_id": "math/train/precalculus/470"
+    },
+    {
+      "sample_id": "C_bounded-09",
+      "category": "on_question_failed_or_unfinished",
+      "evidence": "Let's verify this again",
+      "problem_id": "math/train/number_theory/255"
+    }
+  ],
+  "caveats": [
+    "Randomly sampled responses, not unique problems.",
+    "On-question classification does not assert mathematical validity.",
+    "Not a population prevalence estimate."
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "source": "/home/researcher/.triton/cache",
-  "destination": "/srv/research/ece285_math_rl_project/cache/pilot_v2/triton",
+  "source": "/home/USER/.triton/cache",
+  "destination": "/path/to/ece285_math_rl_project/cache/pilot_v2/triton",
   "files": 699,
   "source_bytes": 5171892,
   "new_copies_verified": 699,

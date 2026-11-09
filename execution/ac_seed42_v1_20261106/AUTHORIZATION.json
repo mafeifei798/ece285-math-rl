@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-06",
+  "source": "Latest explicit user instruction conveyed by codex_delegation",
+  "source_thread": "01a1b1eb-1f70-7a20-b000-16f7168ae8a8",
+  "supersedes_previous_wait": true,
+  "arms": [
+    "A",
+    "C_bounded"
+  ],
+  "seed": 42,
+  "start": "common initial base + fresh LoRA",
+  "updates": 288,
+  "approx_generated_tokens_per_arm": 6000000,
+  "no_reward_loss_change": true,
+  "no_other_jobs_touched": true,
+  "no_new_paid_resources": true
+}

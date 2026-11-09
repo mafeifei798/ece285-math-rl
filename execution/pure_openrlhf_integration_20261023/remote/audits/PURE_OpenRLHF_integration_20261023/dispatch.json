@@ -1,14 +1,14 @@
 {
   "pid": 88194,
-  "run": "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_no_update_20261023_v1",
-  "log": "/srv/research/ece285_math_rl_project/audits/PURE_OpenRLHF_integration_20261023/runner.log",
+  "run": "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_no_update_20261023_v1",
+  "log": "/path/to/ece285_math_rl_project/audits/PURE_OpenRLHF_integration_20261023/runner.log",
   "command": [
-    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
     "-B",
     "-u",
-    "/srv/research/ece285_math_rl_project/experiments/pure_openrlhf_integration_20261023/no_update.py",
+    "/path/to/ece285_math_rl_project/experiments/pure_openrlhf_integration_20261023/no_update.py",
     "--run",
-    "/srv/research/ece285_math_rl_project/runs/PURE_OpenRLHF_no_update_20261023_v1",
+    "/path/to/ece285_math_rl_project/runs/PURE_OpenRLHF_no_update_20261023_v1",
     "--authorized-no-update"
   ],
   "launched": 1792744327.65592,

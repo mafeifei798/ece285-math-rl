@@ -1,0 +1,15 @@
+{
+  "arm": "C_bounded",
+  "global_step": 365,
+  "actor_adapter_digest": "67e2ff7eaeade59c6bf65a34f0c18a03bdb605830b423358eed8b521919651f0",
+  "source_release_sha256": "55b3eba70d0d08fb0cc0d68c1ce07be4d71fb8522eee3677bc16c990ec23b908",
+  "complete_generation_boundary": true,
+  "accounting_sha256": "c02a9830f6ddaa1bf3a27619d72b40a283a86e907c93d29dabf339ec36304cee",
+  "files_sha256": {
+    "adapter_model.safetensors": "9d885503829d0cb19646d1321664f4cc3edb34f840f3738476ccb449df8fd525",
+    "optimizer.pt": "6fa9c3739169ffeeb974cb9a172952a2be15f750b69a11365fb6d7f301944723",
+    "scheduler.pt": "10d7129dcf36910ec84bc03b5277fd2676f8ac5ad63b3faec2bebae04add28ad",
+    "rng_state.pth": "2b5b23b7feb1b011d38f2bbdae3515ee9b836458afd3ef349ab160d38c4b2fef",
+    "trainer_state.json": "191b63c912589e641fae5f9ee078947b3457bb7dc18c03ac4b51f39119f8a1a3"
+  }
+}

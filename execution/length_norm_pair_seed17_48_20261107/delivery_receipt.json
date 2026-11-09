@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "files": {
+    "REPORT.txt": "63b5f53a15e207c815f3b61886c4002e91c4a212571338c4d57c855a87bcee8b",
+    "review.html": "bb8cc2f457590549deb5bbc217223a41ad0e7572194c50760fa6616ea446b27a",
+    "result_summary.json": "13c409ec9a73b78226f38da2437613424d47f14c72606d37af021801a8e60050",
+    "completion_verification.json": "65822e0e89ca0b1476141e75e14a34fc822ba021adc0ec785d76fe4c823dfc1e",
+    "independent_tensor_acceptance.json": "cc8fade91521ebdda466447b036587a368d54ad15f6e64ec548978f15ca2fb8b",
+    "completed_manifest.json": "1d4c31a5d55c5e71110cf6b1033b23dd9759e1ad66f6c7522e5655025f39f7b4",
+    "evaluation_repeatability.json": "fdf0e5846c93cabb8349a1193fdeb575d2e8b5598f30df4e1350d4c1324bce98"
+  }
+}

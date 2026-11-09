@@ -5,12 +5,12 @@
     "nice",
     "-n",
     "15",
-    "/srv/research/ece285_math_rl_project/.venv/bin/python",
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
     "-u",
     "-B",
-    "/srv/research/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/run_pilot.py"
+    "/path/to/ece285_math_rl_project/experiments/cd_prm_pilot_20261021_gpu/run_pilot.py"
   ],
   "C_D_RL_started": false,
-  "prior_CPU_attempt": "/srv/research/ece285_math_rl_project/experiments/cd_prm_pilot_20261021",
+  "prior_CPU_attempt": "/path/to/ece285_math_rl_project/experiments/cd_prm_pilot_20261021",
   "scope": "64 initial-actor inference samples -> C/D 32 PRM steps each -> fixed paired diagnostics -> exit"
 }

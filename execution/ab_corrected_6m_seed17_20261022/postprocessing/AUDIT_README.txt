@@ -1,8 +1,8 @@
 Independent completed-training audit, corrected A/B seed17 6M
 
 Run only after the selected formal arm has status=completed:
-  python -B audit_completed_training.py --root /srv/research/ece285_math_rl_project --arm A
-  python -B audit_completed_training.py --root /srv/research/ece285_math_rl_project --arm B --output /a/new/output/path.json
+  python -B audit_completed_training.py --root /path/to/ece285_math_rl_project --arm A
+  python -B audit_completed_training.py --root /path/to/ece285_math_rl_project --arm B --output /a/new/output/path.json
 
 No model, torch, safetensors, numpy or project modules are imported. The verifier reads project files only.
 Without --output it writes stdout only. With --output it uses exclusive creation, never overwrites,

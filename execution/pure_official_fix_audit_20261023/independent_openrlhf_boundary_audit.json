@@ -9,7 +9,7 @@
       "claim": "nomask_separator_adv defaults False; advantage normalization enabled by default.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/cli/train_pure_ray.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/cli/train_pure_ray.py",
           "line_start": 240,
           "line_end": 242,
           "sha256": "3d4967c8014247cbbaf01bce575c3ed37f242aa483e488e04e9fca70d15f20ef",
@@ -21,14 +21,14 @@
       "claim": "Published OpenRLHF example uses generate_max_len=2048, reward_baseline=token and reward_mode=PRMVR; thus 2048 has an official script precedent distinct from veRL 7168 and the paper 8192.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/examples/scripts/train_pure.sh",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/examples/scripts/train_pure.sh",
           "line_start": 23,
           "line_end": 24,
           "sha256": "71100bfa923377d6f03241907f097b5cf3c53b551a270a8d83dc326759422a9f",
           "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/examples/scripts/train_pure.sh#L23-L24"
         },
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/examples/scripts/train_pure.sh",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/examples/scripts/train_pure.sh",
           "line_start": 44,
           "line_end": 44,
           "sha256": "71100bfa923377d6f03241907f097b5cf3c53b551a270a8d83dc326759422a9f",
@@ -40,7 +40,7 @@
       "claim": "For reinforce/rloo, raw returns first zero all process_reward_mask positions before copying to advantages. The code is independent of reward_mode and applies equally to VR, PRM, PRMVR.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
           "line_start": 232,
           "line_end": 250,
           "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
@@ -52,14 +52,14 @@
       "claim": "The process mask always includes last valid response token (including EOS) in addition to step separator boundaries, in both native and vLLM rollout implementations.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
           "line_start": 295,
           "line_end": 317,
           "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
           "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/experience_maker.py#L295-L317"
         },
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
           "line_start": 1094,
           "line_end": 1116,
           "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
@@ -71,7 +71,7 @@
       "claim": "VR has a zero-initialized process reward matrix and skips PRM forward, yet still passes the same process_reward_mask to the shared advantage path.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
           "line_start": 445,
           "line_end": 478,
           "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
@@ -83,21 +83,21 @@
       "claim": "The nonpacked replay buffer removes padding before normalization. Its initial-zero mask equals advantage==0, not exclusively explicit boundaries. Count excludes all these zero entries, mean sums all entries, variance numerator still includes zero entries, population denominator has no Bessel correction, clamp floor is 1e-8; original zeros are restored afterwards.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
           "line_start": 115,
           "line_end": 148,
           "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
           "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/replay_buffer.py#L115-L148"
         },
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
           "line_start": 178,
           "line_end": 186,
           "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
           "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/ppo_utils/replay_buffer.py#L178-L186"
         },
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/replay_buffer.py",
           "line_start": 213,
           "line_end": 254,
           "sha256": "421b73119fd800fb503abe107cc6549ad418d5908cfae42b776224fde715667d",
@@ -109,14 +109,14 @@
       "claim": "Trainer wires mask_separator_adv=not nomask_separator_adv; the original process_reward_mask is deleted before buffer append, then one normalization occurs unless explicitly disabled.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/pure_trainer.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/pure_trainer.py",
           "line_start": 114,
           "line_end": 118,
           "sha256": "84115c07708973fa8233492895ed156777b6f60a9596dfd1bfaade7d254b30d9",
           "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/pure_trainer.py#L114-L118"
         },
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/pure_trainer.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/pure_trainer.py",
           "line_start": 225,
           "line_end": 231,
           "sha256": "84115c07708973fa8233492895ed156777b6f60a9596dfd1bfaade7d254b30d9",
@@ -128,14 +128,14 @@
       "claim": "At exactly zero advantage the PPO token policy-loss contribution is zero. This proves zero direct EOS-only policy-gradient contribution, not globally fixed EOS probability after shared-parameter updates.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/pure_trainer.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/pure_trainer.py",
           "line_start": 345,
           "line_end": 369,
           "sha256": "84115c07708973fa8233492895ed156777b6f60a9596dfd1bfaade7d254b30d9",
           "url": "https://github.com/CJReinforce/PURE/blob/41f9363b8cc4af044b7fc5f7f9bbbf62139e9553/openrlhf/trainer/pure_trainer.py#L345-L369"
         },
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/models/loss.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/models/loss.py",
           "line_start": 65,
           "line_end": 89,
           "sha256": "9238e0aa7bc71ef33e346fa54d40bfdaad44849b7b03ac45879bd6346d4b1347",
@@ -147,7 +147,7 @@
       "claim": "This branch baseline differs from current veRL: process baseline uses actual peer response lengths and step token lengths; verifier signal is solved-1 and sequence LOO. Moving only boundary+normalization therefore is a hybrid adaptation, not full OpenRLHF reproduction.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/trainer/ppo_utils/experience_maker.py",
           "line_start": 699,
           "line_end": 726,
           "sha256": "05ae7184e2223ffeb3a329b05a551e884967264be76b5d7d756acad5409e30cb",
@@ -159,7 +159,7 @@
       "claim": "The avg_ratio>10 condition skips a PPO update loss; it is not an output-length >10-token filter.",
       "evidence": [
         {
-          "file": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/models/loss.py",
+          "file": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/source_openrlhf/openrlhf/models/loss.py",
           "line_start": 81,
           "line_end": 84,
           "sha256": "9238e0aa7bc71ef33e346fa54d40bfdaad44849b7b03ac45879bd6346d4b1347",
@@ -182,10 +182,10 @@
     ]
   },
   "adapter": {
-    "file": "/home/researcher/Desktop/python/ece285_math_rl_project/experiments/pure_official_fix_audit_20261023/boundary_adapter.py",
+    "file": "/path/to/ece285_math_rl_project/experiments/pure_official_fix_audit_20261023/boundary_adapter.py",
     "sha256": "1092ab1628b3dd0434e738f5c47cb1637eb1e715d49c7e3ddf82a826f6dc15ee",
     "api": "apply_openrlhf_boundary_norm(raw_advantages, valid_mask, boundary_mask, *, input_stage=\"raw_pre_whitening\") -> (CPU float32 normalized tensor, receipt)",
-    "verified_self_test": "/home/researcher/Desktop/python/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/boundary_adapter_self_test.json"
+    "verified_self_test": "/path/to/ece285_math_rl_project/execution/pure_official_fix_audit_20261023/boundary_adapter_self_test.json"
   },
   "not_claimed": [
     "No proof of improved math accuracy.",

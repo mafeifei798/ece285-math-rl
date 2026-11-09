@@ -1,0 +1,9 @@
+{
+  "files": {
+    "train_arm.py": "fee10b4d3099b036f1139177c73e29f6e48117fda04968473ee493dc046cb4a9",
+    "controller.py": "2fdfa18fad5dca965b4448af82596e1cd86ce560605895cbce11bbae6af77600",
+    "common.py": "02a0e53b92d4c9c953e831f5709522f9550ce096ba6f6e8594a0a4a4f3390230"
+  },
+  "original_release_sha256": "c836587c30f1a12c50fac5a0c76dd1f6f66f4088a4b890739935c68496fa7767",
+  "scope": "Replay saved uniform first on-policy batch with zero prior updates, then complete its48 updates and prefix48; no bounded rerun, no objective changes; post-fault sampling RNG not exactly preserved"
+}

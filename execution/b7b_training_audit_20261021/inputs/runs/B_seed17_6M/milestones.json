@@ -7,7 +7,7 @@
       "actual_completion_tokens": 6012570,
       "overshoot": 12570,
       "global_step": 285,
-      "checkpoint": "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285",
+      "checkpoint": "/path/to/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285",
       "checkpoint_sha256": {
         "completion_accounting.json": "582a72d767ec78e0a039b038e4a4058e83b6a9fbea720cce6b485c99b8c5414b",
         "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
@@ -26,12 +26,12 @@
         "adapter_model.safetensors": "8d181886baf9f29f5c7a2da7929081e8c5bb2b6d3ec1b4cf80b60decdb7662ed",
         "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b"
       },
-      "evaluation_dir": "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/evaluation",
+      "evaluation_dir": "/path/to/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/evaluation",
       "status": "completed",
       "saved_unix": 1792592768.9525204,
       "evaluation": {
         "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-        "adapter": "/srv/research/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285",
+        "adapter": "/path/to/ece285_math_rl_project/runs/B_seed17_6M/milestones/6000000/checkpoint-285",
         "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
         "greedy": true,
         "started_unix": 1792592794.250081,

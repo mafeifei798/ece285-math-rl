@@ -31,3 +31,11 @@ id_ed25519*
 **/raw_generation/
 **/snapshots/
 **/plot_cache/
+# Local TeX build intermediates; keep the submitted source and PDF.
+*.aux
+*.out
+*.xdv
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+**/previous_draft/

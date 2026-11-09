@@ -15,7 +15,7 @@
   },
   "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
   "backend_args": {
-    "output_dir": "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v3/disabled_training_output",
+    "output_dir": "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v3/disabled_training_output",
     "overwrite_output_dir": false,
     "do_train": false,
     "do_eval": false,
@@ -45,7 +45,7 @@
     "log_level": "passive",
     "log_level_replica": "warning",
     "log_on_each_node": true,
-    "logging_dir": "/srv/research/ece285_math_rl_project/runs/PURE_no_update_20261022_v3/disabled_training_output/runs/Oct23_13-36-42_localhost",
+    "logging_dir": "/path/to/ece285_math_rl_project/runs/PURE_no_update_20261022_v3/disabled_training_output/runs/Oct23_13-36-42_localhost",
     "logging_strategy": "steps",
     "logging_first_step": false,
     "logging_steps": 10,

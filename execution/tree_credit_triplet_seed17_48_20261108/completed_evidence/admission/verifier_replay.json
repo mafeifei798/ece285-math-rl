@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "records_rechecked": 2000,
+  "mismatches": [],
+  "counts": {
+    "source": {
+      "n": 500,
+      "correct": 320.0
+    },
+    "chain_cb": {
+      "n": 500,
+      "correct": 328.0
+    },
+    "tree_vr": {
+      "n": 500,
+      "correct": 316.0
+    },
+    "tree_cb": {
+      "n": 500,
+      "correct": 319.0
+    }
+  },
+  "seconds": 3.5014190673828125,
+  "source_verifier_unchanged": true,
+  "predictions_modified": false
+}

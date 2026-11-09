@@ -1,0 +1,19 @@
+{
+  "pid": 3240355,
+  "create_time": 1794122819.27,
+  "unix": 1794122819.758167,
+  "command": [
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/path/to/ece285_math_rl_project/experiments/length_norm_header_recovery_20261107/controller.py"
+  ],
+  "change": "Add existing verified project-local CPATH only",
+  "prior_training_updates": 0,
+  "prior_emitted_training_batches": 0,
+  "initial_release_sha256": "8a9678579944333dd47eb06b7a16cd83d44fa3718c18a5a2eeef520e20b1d150",
+  "recovery_controller_sha256": "9363dff56c5766a950a19cc5681265bc179f717c1103e85626e5972a5138ec87",
+  "original_failure_preserved": true,
+  "same48_updates_per_arm": true,
+  "same_model_reward_loss_seed_budget": true
+}

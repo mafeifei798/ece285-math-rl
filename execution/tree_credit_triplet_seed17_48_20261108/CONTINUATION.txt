@@ -1,0 +1,82 @@
+User authorized implementation + real-model zero-update gate + three 48-update arms, seed17, same C-bounded CP288 to336, then common validation500.
+Remote root /path/to/ece285_math_rl_project.
+Source experiments/tree_credit_triplet_seed17_48_20261108; run runs/Tree_credit_triplet_seed17_48_20261108; audit audits/Tree_credit_triplet_seed17_48_20261108.
+SSH via execution/ac_seed42_v1_20261106/inspect_remote.py SSH constant.
+No existing run existed at initial snapshot. GPU0 A10080GB empty; CP hashes match.
+Implementation passed 3083 stdlib checks. Prepared release: a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78
+Not yet launched at this file creation. Inspect launch_receipt/controller/PIDs before any dispatch. Never duplicate a run or restart training from source if current state already has updates.
+No reward/verifier/prompt/LR/KL/loss-reduction changes beyond explicit tree credit; no new PRM training, teacher, extra seed or 3M/6M expansion.
+The tree VR arm loads no PRM; CB arms use existing C-adapted 7B PRM. Both tree arms use 2 roots, one fork each, three added suffixes ->8 leaves; path cap2048.
+Current CPU spec is paper-formula TreeRL-style, not full official OpenRLHF RLOO/selected-leaf reproduction. Wrong shared prefixes may have positive outcome credit, but wrong PRM/unique-suffix positives are forbidden.
+Use existing project header CPATH from audits/C_bounded_triplet_seed17_1M_20261029_v2/python_header_repair.json; set VLLM_USE_V1=1 and VLLM_ENABLE_V1_MULTIPROCESSING=0.
+Monitor finite existing controller through training, eval and CPU verification, then collect evidence, independently recompute credits/stats and report. Do not create automation.
+
+LATEST LAUNCH RECEIPT (overrides earlier not-launched note):
+{
+  "pid": 3466405,
+  "create_time": 1794139625.5,
+  "unix": 1794139625.983511,
+  "command": [
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/path/to/ece285_math_rl_project/experiments/tree_credit_triplet_seed17_48_20261108/controller.py"
+  ],
+  "release_sha256": "a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78",
+  "authorized_arms": [
+    "chain_cb",
+    "tree_vr",
+    "tree_cb"
+  ],
+  "updates_per_arm": 48,
+  "seed": 17,
+  "zero_update_gate_required": true,
+  "automatic_expansion": false,
+  "header_receipt_sha256": "7610da3c7376ccc15a81c56bd52f459277c1e3d4b603f6a1cce216c4a92c9d4d"
+}
+
+Use inspect_remote.py now, not launch_remote.py. Controller executes CPU -> real-model zero-update -> chain_cb48 -> tree_vr48 -> tree_cb48 -> common validation500 -> analysis. Keep following in current task, no automation.
+
+VERIFIED: CPU preflight passed; actual chain/tree no-update passed (see zero_update_passed.json); chain_cb first optimizer update passed. Controller3466405 healthy. Continue existing pipeline; do not redispatch.
+
+CURRENT FINITE WATCHER: local exec session 78861 runs execution/tree_credit_triplet_seed17_48_20261108/monitor.py, checks existing remote controller every55s and refreshes review.html; emits only phase / every8updates changes. Use write_stdin to wait, no new monitor/dispatch unless proven exited.
+Last confirmed chain_cb 8/48; first save/optimizer update passed. Other two arms wait behind it. No-update actual chain32 + tree32 accepted with 6 finite backward probes, unchanged actor/base/PRM, Torch peak32.26GiB. First tree batch had4/8 fallback roots; recorded, do not change frozen sampler mid-run.
+Prepared CPU closeout (not executed): finish_cpu.py uploads/runs independent_cpu_verify.py and mechanism_diagnostics.py only after controller complete. Verify all144 raw batches/4608responses in float64, prefix/logprob provenance and actual importance ratios, wrong-PRM/unique-suffix signs; measure fallback rate, whole-PRM-min location and mixed-group correct credit reversals. These diagnostics are under execution/, outside immutable training release.
+After controller complete: run finish_cpu.py (CPU only), collect_completed.py (compressed transport, receipts/predictions/logs; no model re-generation), then independent local hash/bootstrap verification and render final report. Do not stop after just reporting a complete controller. User expects complete three-arm results + resource cost + interpretation.
+Source release remains a930ad56fe9ee560f7a6667fdc85b2f82d2b94d3438c8f8def25d46d08932f78. Remote controller3466405 launch create_time1794139625.5. GPU0 UUID9fa4fe23 currently our one A10080GB. Leave healthy current training alone.
+
+POSTPROCESSING NOW READY (do not run before controller complete):
+1. python3 execution/tree_credit_triplet_seed17_48_20261108/finish_cpu.py (SSH escalation; CPU only;3 checks, timeout600). It checks remote complete, installs immutable helper copies in audit, runs independent_cpu_verify.py, mechanism_diagnostics.py, verifier_replay.py; outputs independent_tensor_acceptance.json, mechanism_diagnostics.json, verifier_replay.json.
+2. python3 execution/tree_credit_triplet_seed17_48_20261108/collect_completed.py (SSH; compressed binary transport, allJSON/JSONL/log receipts and predictions, finalCP metadata hashes; excludes raw.pt/model weights but raw tensor hashes preserved).
+3. python3 execution/tree_credit_triplet_seed17_48_20261108/verify_local_completed.py (local; verify every manifest SHA, allvalidationcounts, independent stdlib paired20k bootstrap+exactMcNemar; requires2000 verifier replaymatches).
+4. Read actualcomparison, independentreports; inspect important win/loss cases as needed; then python3 execution/tree_credit_triplet_seed17_48_20261108/render_final.py (only after accepted; makes REPORT/result_summary/review/deliveryhashes). Choose conclusion based on allthree comparisons, not justPRM scores; do not claim mathstep validity or full officialTreeRL reproduction.
+5. Final read-only remote PID/GPU check and local deliveryhash/link QA; append COMPLETE toCONTINUATION; report actualvalresults/intervals/costs/limits and full report link. No additional training automatically.
+EXTRA SOURCE PROTECTION: expected_source_files.json contains prior verified8-file CP288 snapshot. Fresh source8_integrity_during_control.json passed; identicalexpected8 JSON installed under remoteaudit. FinalindependentCPU verifies all8 inclLoRAconfig/trainingargs, in addition to original5-file sourcecontract.
+Analysis_plan.json recorded before validation results; primarytree_cb-chain_cb, secondarytree_vr-chain_cb andtree_cb-tree_vr. 0.2 processbound can reverse a small positive tree credit on correct mixed-group suffixes; report observed reversalcount, no mid-runchange. Fallback-root rate is also a planned mechanism diagnostic.
+
+LATEST VERIFIED PHASE: chain_cb completed48 updates,1,033,392 generated tokens. See chain_cb_training_complete.json. Existing controller3466405 now train_tree_vr, do not redispatch. Monitor78861 alive.
+
+VERIFIED tree_vr first actual optimizer update passed, see first_update_tree_vr.json. Continue existing controller/watcher; no source changes.
+
+LATEST: tree_vr16/48 healthy; chain_cb complete48/48; tree_cb not yet started. Tree initial4updates averaged~180sec/update, slower than chain~104sec due two generation rounds; user informed remaining~4–5h at that point. Budget remains48updates each, not time-based expansion. CPU prompt_provenance_additional_check.json passed all32 actualsmokeHF/vLLMprompt IDs, and independent_cpu_verify.py now checks every finaltraining prompt as well. No source changes aftertraining launch.
+
+LATEST CONFIRMED: tree_vr40/48,817,256 unique generated tokens, healthy. chain_cb complete48; tree_cb still waiting. Monitor78861 and controller3466405 remainexisting active. Intermittent SSH connectionclosed errors recovered automatically; lastsnapshot fresh and updatesadvance. Do not restart any training or change source.
+
+LATEST VERIFIED PHASE: tree_vr completed48,980,089 unique tokens; see tree_vr_training_complete.json. chain_cb also complete48. Existing controller3466405 now train_tree_cb, third/finalarm. Monitor78861 staysrunning. Do not redispatch.
+
+VERIFIED: third/final arm tree_cb first actual optimizer update passed. Source/optimizer/RNG restored, per-token advantages unchanged at loss. No remaining arms after tree_cb; controller then evaluates source+3 final adapters onvalidation500 and runsanalysis.
+
+LATESTPHASE (authoritative): chain_cb COMPLETE48:1,033,392 unique/expanded tokens,5039.353s,finaladapter96929a85f472fe099a4c5f2ca1277d2085309c86370ede10dda0ea765bec29f3. tree_vr COMPLETE48:980,089unique,1,034,557expanded,8247.99996s,finaladapter09df15f168afe85af0d79cb797dc102be5d17948ca3aafb8efd29f1ff6e8ce04. tree_cb firstupdate VERIFIED15,073unique/15,172expanded, no failure. Now wait finaltree_cb48 then commonvalidation+analysis. User informed remaining~2–2.5h training +40–60min common eval; do not end task after just dispatch/progress.
+CPUextras: prompt_provenance_additional_check.json passed all32 realtree HF/vLLMpromptIDs. FinalF64helper checks everytraining prompt,8sourcefiles,rawcreditcomponents,actualimportance-ratio reconstruction. Mechanismhelper includes sampler-vs-otherwalltime breakdown, earlyfork<=16/ge32 counts and exacttiedminimumregions; these are analysis only, no trainingmodifications.
+Preparedcloseoutwrapper finish_cpu.py now takes a CPUcloseout.lock and writes cpu_closeout_running.json to avoid duplicate processing after intermittentSSHfailures. If disconnect duringcloseout, inspect PID/lock/reports before retry, never restarttraining. Allhelpersarelocal underexecution untilfinish_cpu upload. Next collect_completed.py, verify_local_completed.py, render_final.py, then truefinalPID/GPU/fileSHA checks and COMPLETE note.
+Finalreportmust label validation500 asvalidation, NOT MATH500test; source is old C-bounded288, NOT initialQwen. One-seed48-stepcontinuation only. Tree-only arm has PRM-trained starting policy but noPRM in this continuation. Wholepackage changes sampling+credit+outcome-std scaling; cannot isolate causal component. Actualphasecosts, not theoreticaltokensavings, decide practicalvalue. No automatic6M/extra seeds ortrainingfrominitial.
+
+LATEST VERIFIED: all three arms completed48 updates atCP336. tree_cb unique960821 /expanded1026155,7651.1478sec,adapterSHA e058ccfe2b1f334c923c987fa1cfbbc2bdf428fe6b1cce39515e82286b665bb3; source8 and actorbase/PRM unchanged. Existing controller3466405 now commonvalidation (source+3 finals,500 each). Monitor78861 alive. Wait validation+analysis completion, then finish_cpu.py -> collect_completed.py -> verify_local_completed.py -> render_final.py; no newtraining. Actual accuracy still pending.
+
+
+COMPLETE — 2026-11-08T18:57:56.508720+00:00
+All3x48updates,2000 common validation predictions, independent CPU credit/mask/prefix replay and unchanged-verifier replay completed. All108 collected evidence-file hashes,144raw batches/4608responses accepted;8delivery artifacts and7analysis-script hashes verified;9HTML links resolve. All14immutable localtraining-source files match the originalrelease. Our controller/children exited and GPU compute-app list empty at finalread-only runtime_closeout. Do not redispatch or train further automatically.
+Fresh commonvalidation500: source320/500(64.0%),chain_cb328(65.6%),tree_vr316(63.2%),tree_cb319(63.8%). Primarytree_cb-chain_cb -1.8pp,95%pairedCI[-4.4,+0.8],17wins26losses. PRMincrement+0.6pp,CI[-2.0,+3.2]. Secondarytree_vr intervalupper differs by1question between two20kbootstraps(-0.2 vs0.0pp),McNemar0.065;do not claim robustsignificance.
+Actualcosts chain1.40h/treeVR2.29h/treeCB2.13h, total5.82h +48.1min commonvalidation. Treefallbacks277/384(72.1%) and264/384(68.8%): first1-2tokens oftenboxed, followedbylongreasoning, so fixedstop-at-first-answer rule leavesnoeligiblefork. Prefix>=32coverage15.6%/19.0%. This is an adaptation/format-compatibility limitation, NOT evidence that officialTreeRL is ineffective. Do not expandcurrenttreeconfigto3M/6M.
+Importantacceptancecoverageclarification: all3preserved vllm_importance_sampling_correction=False,num_iterations1;144raw batches containneithercachedoldlogps norsamplingratio. OptionalF64samplingratio reconstructionwasnotapplicable; itsmaxerror0mustnotbeclaimedascompletedratio reconstruction. runtime_closeout.json confirmsactualcoverageCPU-only;token/credit/advantagefingerprintacceptanceisvalid. Trainingcode/settingswerenotchanged.
+Finalreview.html,REPORT.txt,result_summary.json,completion_verification.json,interpretation.json,runtime_closeout.json,completed_manifest.json,delivery_receipt.json are finalactualdeliverables. OriginalA/B/C/D,PURE,prefix,lengthresultsandCsourcecheckpointpreserved. validation500isnotMATH500test;noadditionaltestbenchmarks,newseed,teacher,PRMadaptationorlongtraining. Allremoteartifactsremainunder/path/to/ece285_math_rl_project.

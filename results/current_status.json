@@ -1,34 +1,48 @@
 {
-  "snapshot_date": "2026-10-31",
-  "state": "paused_by_user",
+  "snapshot_date": "2026-11-09",
+  "state": "GPU_stopped_by_user",
   "automatic_resume": false,
-  "state_source": "execution/abc_seed17_resume6m_v1_20261030/pause_receipt.json",
-  "source_is_saved_pause_receipt_not_new_GPU_probe": true,
-  "completed_common_evaluation": "results/unified_four_model_1m.json",
-  "common_evaluated_update": 48,
-  "historical_a6m_recheck": "results/historical_a6m_v1_recheck.json",
-  "incomplete_continuation_checkpoints": {
+  "state_source": "execution/ac_status_cpu_20261109/summary.json; execution/budget_extension_seed17_12m_20261108/USER_STOP.json",
+  "source_is_saved_evidence_not_new_GPU_probe": true,
+  "completed_main_AB": "results/corrected_ab_seed17_6m.json",
+  "completed_V1_seed17": "execution/abc_seed17_resumed_v1_20261104/completed_evidence/comparison.json",
+  "completed_V1_seed42": "execution/ac_seed42_v1_20261106/completed_evidence/comparison.json",
+  "common_evaluated_updates": 288,
+  "completed_V1_seed17_arms": [
+    "A",
+    "C_mix",
+    "C_bounded"
+  ],
+  "completed_V1_seed42_arms": [
+    "A",
+    "C_bounded"
+  ],
+  "incomplete_larger_budget_extension": {
     "A": {
-      "checkpoint_step": 115,
-      "checkpoint_generated_tokens": 2390451,
-      "checkpoint_contract_sha256": "97589d35e5738f03a28f609f25cbad536d93b3209e09ed26148b1c3a490d0508",
-      "completed_updates_beyond_checkpoint": 0
-    },
-    "C_mix": {
-      "checkpoint_step": 50,
-      "checkpoint_generated_tokens": 1034873,
-      "checkpoint_contract_sha256": "9485e28de46d30be25729c7f73f7518b749492f6f9a787cc01d41b14d6a3beff",
-      "completed_updates_beyond_checkpoint": 0
+      "saved_step": 432,
+      "saved_generated_tokens": 9321966,
+      "last_observed_update": 432,
+      "last_observed_generated_tokens": 9321966,
+      "new_updates_observed": 144,
+      "stage_wall_hours": 4.551500659651227,
+      "stage_exit_code": 0,
+      "common_9M_evaluation": false,
+      "common_12M_evaluation": false
     },
     "C_bounded": {
-      "checkpoint_step": 50,
-      "checkpoint_generated_tokens": 1038895,
-      "checkpoint_contract_sha256": "9ca411bf1ee819bb7a2cda64dd0fdcf93eb864a675cee696872c18048755f74e",
-      "completed_updates_beyond_checkpoint": 0
+      "saved_step": 365,
+      "saved_generated_tokens": 7845984,
+      "last_observed_update": 368,
+      "last_observed_generated_tokens": 7909112,
+      "new_updates_observed": 80,
+      "stage_wall_hours": 3.1728849958048926,
+      "stage_exit_code": -15,
+      "common_9M_evaluation": false,
+      "common_12M_evaluation": false
     }
   },
-  "new_three_arm_3m_validation_complete": false,
-  "new_three_arm_6m_test_complete": false,
+  "common_9M_evaluation": false,
+  "common_12M_evaluation": false,
   "new_training_or_inference_for_publication": false,
-  "warning": "Paused arms have different steps. They are not a new fair comparison. No stable process-reward accuracy gain established."
+  "warning": "The two A/B and A/C studies use different protocols/scorers. Seed42 intervals include zero. No common larger-budget accuracy result exists."
 }

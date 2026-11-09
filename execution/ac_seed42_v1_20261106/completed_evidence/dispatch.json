@@ -1,0 +1,32 @@
+{
+  "pid": 1486797,
+  "create_time": 1793992225.67,
+  "unix": 1793992226.1561875,
+  "command": [
+    "/path/to/ece285_math_rl_project/.venv/bin/python",
+    "-B",
+    "-u",
+    "/path/to/ece285_math_rl_project/experiments/ac_seed42_v1_20261106/controller.py"
+  ],
+  "run": "/path/to/ece285_math_rl_project/runs/AC_seed42_V1_20261106",
+  "source": "/path/to/ece285_math_rl_project/experiments/ac_seed42_v1_20261106",
+  "source_release_sha256": "285cba59327cbb17ccd6cfb825083952d00d480d6003b51803fd605ae2c63a81",
+  "seed": 42,
+  "start_steps": {
+    "A": 0,
+    "C_bounded": 0
+  },
+  "milestones": [
+    2,
+    144,
+    288
+  ],
+  "VLLM_USE_V1": "1",
+  "gpu_index": 0,
+  "gpu_uuid": "GPU-9fa4fe23-1ce5-d116-daab-3271dcbaa0ac",
+  "reward_loss_changed": false,
+  "requested_new_seed": true,
+  "new_PRM_adaptation": false,
+  "no_automatic_retry": true,
+  "existing_results_preserved": true
+}

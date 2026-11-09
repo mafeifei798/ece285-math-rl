@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "start_step": 144,
+  "trainable_parameters": 18464768,
+  "PRM_in_optimizer": false,
+  "resume": {
+    "adapter_exact": true,
+    "source": "/path/to/ece285_math_rl_project/runs/ABC_seed17_resumed_V1_20261104/A/milestones/checkpoint-144",
+    "source_step": 144,
+    "optimizer_exact": true,
+    "scheduler_exact": true
+  }
+}

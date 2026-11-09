@@ -1,0 +1,45 @@
+{
+  "header": {
+    "passed": true,
+    "url": "https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu/pool/main/p/python3.11/libpython3.11-dev_3.11.18-1+jammy1_amd64.deb",
+    "deb_sha256": "699348b4e36dd6b3d354a4e778a63ae110e33a0e12f64ee2d134bb9c2149ef31",
+    "headers_version": "3.11.18",
+    "runtime_version": "3.11.11 (main, Dec  4 2024, 08:55:07) [GCC 11.4.0]",
+    "ABI": "CPython3.11; header-only extension compile/load probe passed",
+    "CPATH": "/path/to/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include/python3.11:/path/to/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include",
+    "system_python_or_packages_changed": false,
+    "only_extracted_into_project": true,
+    "probe": "HEADER_VERSION_HEX 0x30b12f0\nPROBE_BINARY /path/to/ece285_math_rl_project/cache/pilot_v2/triton/VCI3VT47H2THYHFU6OOM5I7YLEIAH5FQ6I5UTUQYCBXY66VWA5DA/ece285_py311_header_probe.cpython-311-x86_64-linux-gnu.so\n",
+    "unix": 1793266583.7860487
+  },
+  "header_path": "/path/to/ece285_math_rl_project/audits/C_bounded_triplet_seed17_1M_20261029_v2/python_header_repair.json",
+  "arm_state": {
+    "grpo": {
+      "intent": false,
+      "updates": 0,
+      "raw_count": 0,
+      "checkpoint_count": 0
+    },
+    "fixed_length": {
+      "intent": false,
+      "updates": 0,
+      "raw_count": 0,
+      "checkpoint_count": 0
+    }
+  },
+  "no_update_raw": [],
+  "no_update_rollouts": false,
+  "headers": [
+    {
+      "path": "/path/to/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include/python3.11",
+      "exists": true,
+      "Python_h_exists": true
+    },
+    {
+      "path": "/path/to/ece285_math_rl_project/cache/pilot_v2/python311_headers/extracted/usr/include",
+      "exists": true,
+      "Python_h_exists": false
+    }
+  ],
+  "gpu": ""
+}

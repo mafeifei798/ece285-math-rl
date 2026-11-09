@@ -1,0 +1,10 @@
+{
+  "R01_claimed_simplification_is_false": true,
+  "R01_quadratic_at_gold": "49/9",
+  "R07_denominator_factors": "{41: 1, 271: 1}",
+  "R07_period": 5,
+  "R16_at_omega1": "1",
+  "R18_global_bound_identity": true,
+  "R18_attained_max": "1/4",
+  "method": "Independent calculations by assistant; no model-generated code executed."
+}

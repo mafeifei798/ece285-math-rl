@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "step": 144,
+  "summary": {
+    "A": {
+      "validation": {
+        "n": 500,
+        "correct": 266.0,
+        "accuracy": 0.532,
+        "generated_tokens": 371986,
+        "truncated": 54,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "9c5fae8efee46248595a536f265cbbc001185b30e7916ada6fca9aa42210f1c3",
+        "inference_seconds": 718.7935345172882
+      }
+    },
+    "C_bounded": {
+      "validation": {
+        "n": 500,
+        "correct": 270.0,
+        "accuracy": 0.54,
+        "generated_tokens": 369347,
+        "truncated": 56,
+        "empty": 0,
+        "short_wrong": 0,
+        "predictions_sha256": "6ff17330bd8ad7d22cea864ead02b8c5d61088f3b14ad3ddce3c1b7faac81d08",
+        "inference_seconds": 726.5706205368042
+      }
+    }
+  },
+  "contract_sha256": "2bb7eac6e634a6b1b3aeae20a0fd96b79c73f0c195ec2bcdd5029a17fde08227",
+  "seconds": 1483.8811399936676,
+  "new_training": false,
+  "new_PRM_calls": 0
+}

@@ -1,12 +1,12 @@
 {
   "observed_unix": 1792558039.2605948,
-  "remote_root": "/srv/research/ece285_math_rl_project",
+  "remote_root": "/path/to/ece285_math_rl_project",
   "controller.json": {
     "status": "training",
     "pid": 1459141,
     "started_unix": 1792557940.745946,
-    "origin_run": "/srv/research/ece285_math_rl_project/runs/A_seed17",
-    "source_checkpoint": "/srv/research/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
+    "origin_run": "/path/to/ece285_math_rl_project/runs/A_seed17",
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
     "target_completion_tokens": 24000000,
     "scope": "A seed 17 continuation only; other arms and seeds are not queued",
     "training_from_base": false,
@@ -17,12 +17,12 @@
     "status": "restoring_and_training",
     "pid": 1459150,
     "started_unix": 1792557948.022674,
-    "source_checkpoint": "/srv/research/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
     "source_global_step": 280,
     "source_completion_tokens": 6020163
   },
   "resume_audit.json": {
-    "source_checkpoint": "/srv/research/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
     "source_global_step": 280,
     "adapter_restored_exactly": true,
     "adapter_tensor_count": 392,
@@ -98,12 +98,12 @@
         "actual_completion_tokens": 6020163,
         "global_step": 280,
         "status": "completed_preserved",
-        "checkpoint": "/srv/research/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
-        "evaluation_dir": "/srv/research/ece285_math_rl_project/runs/A_seed17/evaluation",
+        "checkpoint": "/path/to/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
+        "evaluation_dir": "/path/to/ece285_math_rl_project/runs/A_seed17/evaluation",
         "adapter_sha256": "5d28f2e3ec751663fd75550b7ecd56b2099f50e539877a3e1e35881c9877ae5b",
         "evaluation": {
           "model_revision": "4a83ca6e4526a4f2da3aa259ec36c259f66b2ab2",
-          "adapter": "/srv/research/ece285_math_rl_project/runs/A_seed17/final_adapter",
+          "adapter": "/path/to/ece285_math_rl_project/runs/A_seed17/final_adapter",
           "config_sha256": "4ab0c2e83e6486a8f85feb3f779c264352d01d9e8d735793538e56f9c652258c",
           "greedy": true,
           "started_unix": 1792549114.6398847,
@@ -272,8 +272,8 @@
     "raw_vllm_engine_seed": 0,
     "seed_scope": "actor adapter initialization, data shuffling, torch RNG; pinned TRL colocated vLLM engine seed is 0",
     "continuation_started_unix": 1792557948.0219886,
-    "origin_run": "/srv/research/ece285_math_rl_project/runs/A_seed17",
-    "source_checkpoint": "/srv/research/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
+    "origin_run": "/path/to/ece285_math_rl_project/runs/A_seed17",
+    "source_checkpoint": "/path/to/ece285_math_rl_project/runs/A_seed17/checkpoint-280",
     "continuation_plan": {
       "version": 1,
       "authorization": "Continue the existing baseline to 24M completion tokens per run; retain 6M, 12M and 24M results; do not restart training from the base model.",
@@ -304,12 +304,12 @@
     "continuation_plan_sha256": "a47787eaa6775500945bf0d45750c5df085ad9d424d5193a936ac6136c175dc7",
     "argument_changes": {
       "output_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17",
-        "/srv/research/ece285_math_rl_project/runs/A_seed17_24M"
+        "/path/to/ece285_math_rl_project/runs/A_seed17",
+        "/path/to/ece285_math_rl_project/runs/A_seed17_24M"
       ],
       "logging_dir": [
-        "/srv/research/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
-        "/srv/research/ece285_math_rl_project/runs/A_seed17_24M/tensorboard"
+        "/path/to/ece285_math_rl_project/runs/A_seed17/runs/Oct21_07-43-00_localhost",
+        "/path/to/ece285_math_rl_project/runs/A_seed17_24M/tensorboard"
       ]
     },
     "continuation_code_sha256": "b5c48eb6b85a801906acc054eb5e35dab7e15a7e926129c7b491639c8dfe46fe",
@@ -344,7 +344,7 @@
   "log_tail": [
     "INFO 10-21 12:46:08 [__init__.py:36] No IOProcessor plugins requested by the model",
     "The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'bos_token_id': None, 'pad_token_id': 151643}.",
-    "/srv/research/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/model_executor/layers/sampler.py:876: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:306.)",
+    "/path/to/ece285_math_rl_project/.venv/lib/python3.11/site-packages/vllm/model_executor/layers/sampler.py:876: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:306.)",
     "  selected_logprobs = logprobs[[",
     "{\"event\": \"optimizer_step\", \"step\": 281, \"completion_tokens\": 6039985, \"elapsed_seconds\": 25.5, \"stop_reason\": null}",
     "{'loss': 0.001, 'grad_norm': 0.11970159411430359, 'learning_rate': 5e-06, 'num_tokens': 6896513.0, 'completions/mean_length': 619.4375, 'completions/min_length': 108.0, 'completions/max_length': 2048.0, 'completions/clipped_ratio': 0.03125, 'completions/mean_terminated_length': 573.3547973632812, 'completions/min_terminated_length': 108.0, 'completions/max_terminated_length': 2046.0, 'rewards/outcome_accuracy/mean': 0.5, 'rewards/outcome_accuracy/std': 0.5080004930496216, 'reward': 0.5, 'reward_std': 0.4355512857437134, 'frac_reward_zero_std': 0.0, 'project/generated_completion_tokens': 6039985.0, 'project/mixed_group_fraction': 1.0, 'kl': 0.024952459973064833, 'entropy': 0.2876491853967309, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.16075514874141877}",

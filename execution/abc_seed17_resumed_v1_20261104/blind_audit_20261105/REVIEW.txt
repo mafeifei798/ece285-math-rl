@@ -1,0 +1,43 @@
+盲审与课程 GPU 检查 — 2026-11-05
+当前状态：用户选择“那先等等吧”；seed42未启动，等待合适课程资源或新的资源选择指令。
+
+盲审范围与方法
+固定抽样20对、40条回答：MATH500与GSM8K各5个C-bounded胜出、5个失利题。
+隐藏模型名与原评分，随机打乱题序及X/Y顺序；先冻结逐条审查注释和SHA256，再揭盲。
+审查者是本助手，不是三位组员或独立人工评审；定向胜负抽样不能估计全体错误率。
+
+结果
+40条回答对原“正常结束+最后有效答案框”协议的预期判分均与保存记录一致，未发现新的评分实现不一致。
+6条正文数学结果正确/主要计算正确，但缺有效答案框而得0：A2条，C-bounded4条。原始分数不变。
+3条终答正确但存在未纠正推导错误：A2条，C-bounded1条。
+• A，圆与半圆题：把7(sqrt(5)-1)/2错误地等同14/3；给定文字缺图，几何部分无法完整独立判定。
+• C-bounded，三次单位根题：错误排除omega=1，称分母为0；实际上分母是2，该情形也给出1。
+• A，二元函数极值题：偏导符号与代数错误，且只检查若干直线不足以证明全局最大，尽管最终1/4正确。
+另见算对后坚持错误开头答案、虚构“参考答案”、重复直至截断的情况。模型声称运行Python不等于真实工具执行。
+因此，准确率提升仍是可报告的结果，但不能把它直接写成“推导有效性已提高”。
+
+种子复验判定
+本次未发现需要修改验答规则、reward或loss的新实现问题。固定协议的seed42复验在方法上仍可继续；已知格式/过程缺陷应保留作分析，不用事后改分。
+不过你已选择等待资源，本轮不分配新训练任务，也不启用自动等待后开跑的控制器。
+
+ECE285课程资源实测
+教师Piazza @42（2026-10-14 PT）明确提供DataHub的ECE285_FA26_002/scipy-ml-notebook 1GPU环境。
+已用课程1 GPU [medium]档短时启动并实际检查：NVIDIA RTX A5000，24564MiB显存，空闲24247MiB；驱动535.161.08；系统内存硬上限17179869184bytes（16GiB）。
+Python3.11.9，torch2.2.1+cu121，transformers4.46.3；当前环境未装TRL、PEFT、vLLM。
+本项目旧环境：torch2.8.0、transformers4.56.2、TRL0.23.1、PEFT0.17.1、vLLM0.10.2。
+上一轮观测进程显存峰值A25.62GiB、C-bounded34.71GiB，所以当前课程配置不能原样承载配对实验。
+集群状态页有L40S、H100等节点，不代表本账号的课程profile可分配它们；尚未验证更高显存档授权。
+建议至少48GB可用显存，并核实足够系统内存、存储和固定软件栈；是否需64GB系统内存应由加载pilot确认。
+官方CLI说明默认容器6小时、可配置至12小时，长期任务需要配对相同的断点计划；不能默认当前网页profile已设12小时。
+检查环境已由本助手Stop My Server，页面明确回到Start My Server；没有训练、安装依赖、上传模型或修改课程已有文件。
+
+来源
+https://piazza.com/class/muwwwlp9vfi76w/post/42
+https://datahub.ucsd.edu/hub/spawn
+https://datahub.ucsd.edu/hub/status
+https://support.ucsd.edu/services?id=kb_article_view&sysparm_article=KB0032269
+https://support.ucsd.edu/services?id=kb_article_view&sysparm_article=KB0032273
+
+后续已经授权但当前等待的范围
+A/C-bounded，seed42，各自从共同初始模型开始，288次更新，约6M生成token；固定同题序、相同更新数、相同reward/loss和V1。
+不得加载seed17策略checkpoint冒充独立seed；固定已有C PRM。保留全部原结果。

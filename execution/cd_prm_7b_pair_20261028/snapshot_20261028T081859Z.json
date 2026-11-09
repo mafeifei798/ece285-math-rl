@@ -1,6 +1,6 @@
 {
   "checked_unix": 1793175539.5228581,
-  "remote_run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+  "remote_run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
   "controller.json": {
     "status": "running",
     "pid": 3237174,
@@ -16,7 +16,7 @@
     "active_child": {
       "stage": "preflight",
       "pid": 3296477,
-      "log": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/preflight.log"
+      "log": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028/preflight.log"
     },
     "actor_optimizer_updates": 0,
     "automatic_RL_launch": false,
@@ -25,9 +25,9 @@
   "dispatch.json": {
     "pid": 3237174,
     "started_unix": 1793174084.2960937,
-    "cwd": "/srv/research/ece285_math_rl_project",
-    "source": "/srv/research/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
-    "run": "/srv/research/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
+    "cwd": "/path/to/ece285_math_rl_project",
+    "source": "/path/to/ece285_math_rl_project/experiments/cd_prm_7b_pair_20261028",
+    "run": "/path/to/ece285_math_rl_project/runs/CD_PRM7B_pair_seed17_20261028",
     "source_release_sha256": "421f103ae5a221f4f5970cddd0986a3370773499de2389514edee90d3f64ace7",
     "gpu": 1,
     "gpu_sharing_authorized": true,
@@ -147,6 +147,6 @@
   "C": {},
   "D": {},
   "child_alive": true,
-  "child_log_tail": "`torch_dtype` is deprecated! Use `dtype` instead!\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.14it/s]\nLoading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  3.53it/s]\nLoading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.12it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.50it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.37it/s]\nSome weights of the model checkpoint at /srv/research/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n{\"stage\": \"model_preflight_passed\", \"pid\": 3296477, \"unix\": 1793175538.9476428, \"peak_GiB\": 13.865128993988037}\n",
+  "child_log_tail": "`torch_dtype` is deprecated! Use `dtype` instead!\n\nLoading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]\nLoading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  6.14it/s]\nLoading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  3.53it/s]\nLoading checkpoint shards:  75%|███████▌  | 3/4 [00:00<00:00,  4.12it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.50it/s]\nLoading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00,  4.37it/s]\nSome weights of the model checkpoint at /path/to/ece285_math_rl_project/models/qwen25_math_prm_7b were not used when initializing Qwen2ForProcessRewardModel: ['lm_head.weight']\n- This IS expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).\n- This IS NOT expected if you are initializing Qwen2ForProcessRewardModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).\n{\"stage\": \"model_preflight_passed\", \"pid\": 3296477, \"unix\": 1793175538.9476428, \"peak_GiB\": 13.865128993988037}\n",
   "gpu": "0, 10729 MiB, 70423 MiB, 99 %\n1, 39287 MiB, 41866 MiB, 100 %\n"
 }

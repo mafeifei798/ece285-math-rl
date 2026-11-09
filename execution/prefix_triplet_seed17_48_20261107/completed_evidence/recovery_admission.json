@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "zero_optimizer_updates_before_recovery": true,
+  "raw_sha256": "7c65e094eda28e2312db1de5fe87b8e9e7a7cc01430b9f6d01b78a47769f26c5",
+  "cached_rows": 32,
+  "rollouts_sha256_before_append": "ac21fdf750bd6fb6f6d06995e5641b0d8d6812487642095c923a5c3006fcc509",
+  "source_adapter_sha256": "a562e002250d113f00776ee6e9d7d39d438ff76e10a6751111d0f2e557565073",
+  "bounded_final_adapter_sha256": "ebc054810ade1b495a06fa3bc46bbb28e6e340ad115e188f7488790f368ec151",
+  "uniform_failed_attempt_seconds": 92.25684905052185,
+  "first_group_signature_equality_replaced_by_descriptive_audit": true,
+  "post_generation_sampling_rng_available": false,
+  "no_new_rollout_for_uniform_first_step": true,
+  "new_reward_or_loss": false,
+  "new_seed": false,
+  "new_release_sha256": "c773146de60e9bf573f1a4d65069e27068300f1ca54ae76813b2725624a88d84",
+  "unix": 1794090094.4893794
+}

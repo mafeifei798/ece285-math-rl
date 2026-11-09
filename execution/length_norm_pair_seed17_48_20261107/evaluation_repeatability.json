@@ -1,0 +1,39 @@
+{
+  "same_source_adapter": true,
+  "common_contract_differences": {},
+  "old_source_correct": 317.0,
+  "new_source_correct": 319.0,
+  "new_wins": [
+    "math/train/counting_and_probability/382",
+    "math/train/intermediate_algebra/449",
+    "math/train/geometry/136",
+    "math/train/geometry/62",
+    "math/train/geometry/613",
+    "math/train/precalculus/34",
+    "math/train/counting_and_probability/441",
+    "math/train/prealgebra/1016",
+    "math/train/number_theory/385",
+    "math/train/counting_and_probability/477",
+    "math/train/precalculus/502"
+  ],
+  "new_losses": [
+    "math/train/algebra/815",
+    "math/train/number_theory/438",
+    "math/train/intermediate_algebra/25",
+    "math/train/geometry/807",
+    "math/train/precalculus/406",
+    "math/train/algebra/1184",
+    "math/train/algebra/549",
+    "math/train/prealgebra/310",
+    "math/train/number_theory/597"
+  ],
+  "same_response_token_rows": 299,
+  "n": 500,
+  "old_eval_model_count": 4,
+  "new_eval_model_count": 3,
+  "runtime_log_markers": {
+    "old_has_EngineCore_DP0": false,
+    "new_has_EngineCore_DP0": false
+  },
+  "interpretation": "Observed repeatability discrepancy: identical source adapter and common contract fields, but20 changed binary outcomes and a net+2 correct in the new run. The evaluation used3rather than4model-switching sequences; the concrete cause is not established. Primary comparison uses only this new common evaluation. Do not attribute old-versus-new small differences to training."
+}

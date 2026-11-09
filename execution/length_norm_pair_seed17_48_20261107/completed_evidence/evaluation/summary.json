@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "summary": {
+    "source": {
+      "n": 500,
+      "correct": 319.0,
+      "accuracy": 0.638,
+      "tokens": 313068,
+      "truncated": 27,
+      "missing_or_invalid_box": 21,
+      "truncation_rate": 0.054,
+      "missing_or_invalid_box_rate": 0.042,
+      "status_counts": {
+        "exact": 290,
+        "symbolic": 157,
+        "missing_or_invalid_box": 21,
+        "truncated": 27,
+        "unparseable": 5
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 729.764995040372,
+      "predictions_sha256": "cee4a66ba754bb95cb609bb48c86bcd81b6cd2b6cf68f5fae164f30c8a07b4d1"
+    },
+    "grpo": {
+      "n": 500,
+      "correct": 321.0,
+      "accuracy": 0.642,
+      "tokens": 317412,
+      "truncated": 28,
+      "missing_or_invalid_box": 18,
+      "truncation_rate": 0.056,
+      "missing_or_invalid_box_rate": 0.036,
+      "status_counts": {
+        "exact": 296,
+        "symbolic": 154,
+        "missing_or_invalid_box": 18,
+        "truncated": 28,
+        "unparseable": 4
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 701.8999666227028,
+      "predictions_sha256": "a313b00f1b0ffb9679215f9e029fae1eb3703ef987a14eb9a322d63b75f0145a"
+    },
+    "fixed_length": {
+      "n": 500,
+      "correct": 318.0,
+      "accuracy": 0.636,
+      "tokens": 334344,
+      "truncated": 39,
+      "missing_or_invalid_box": 18,
+      "truncation_rate": 0.078,
+      "missing_or_invalid_box_rate": 0.036,
+      "status_counts": {
+        "exact": 290,
+        "symbolic": 150,
+        "truncated": 39,
+        "missing_or_invalid_box": 18,
+        "unparseable": 3
+      },
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 731.8908186685294,
+      "predictions_sha256": "89648016cb62cd48c952a31f021e01e33d26c7aa5d7a5233e47fd235a80d6eed"
+    }
+  },
+  "seconds": 2167.49528837204,
+  "contract_sha256": "6531d9c72752dccc1804060d0cc146e8cc694e078ccf42efad9697a904704285",
+  "test_sets_evaluated": false,
+  "PRM_at_evaluation": false
+}

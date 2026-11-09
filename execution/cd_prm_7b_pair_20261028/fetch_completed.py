@@ -17,7 +17,7 @@ for a in ['C','D']:FILES.extend([f'{a}/initialization.json',f'{a}/completion.jso
 REMOTE='names='+repr(FILES)+r'''
 from pathlib import Path
 import json,hashlib
-root=Path('/srv/research/ece285_math_rl_project');out=root/'runs/CD_PRM7B_pair_seed17_20261028'
+root=Path('/path/to/ece285_math_rl_project');out=root/'runs/CD_PRM7B_pair_seed17_20261028'
 post=json.loads((out/'wiring_recovery/postprocess.json').read_text());assert post['status']=='complete',post
 data={n:(out/n).read_text() for n in names}
 data['release.json']=(root/'experiments/cd_prm_7b_pair_20261028/release.json').read_text()
@@ -26,8 +26,8 @@ print(json.dumps(data))
 
 
 def main():
-    cmd=['ssh','-p','11032','-i','/home/researcher/.ssh/research_server_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
-      'researcher@server.example.invalid','/srv/research/ece285_math_rl_project/.venv/bin/python -B -']
+    cmd=['ssh','-p','11032','-i','/home/USER/.ssh/fym_125_76_110_84_ed25519','-o','BatchMode=yes','-o','IdentitiesOnly=yes','-o','StrictHostKeyChecking=yes',
+      'USER@GPU_HOST','/path/to/ece285_math_rl_project/.venv/bin/python -B -']
     result=subprocess.run(cmd,input=REMOTE,text=True,capture_output=True,timeout=120)
     if result.returncode:raise RuntimeError(result.stderr[-2000:])
     data=json.loads(result.stdout);assert set(data)==set(FILES+['release.json'])

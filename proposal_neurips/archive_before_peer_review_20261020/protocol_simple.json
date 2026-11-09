@@ -2,7 +2,7 @@
   "version": "2.3-authorized-24m-continuation",
   "date": "2026-10-20",
   "status": "A_seed17_24M_continuation_running_actual_update_verified_other_runs_not_queued",
-  "execution_root": "/srv/research/ece285_math_rl_project",
+  "execution_root": "/path/to/ece285_math_rl_project",
   "execution_contract": "Immutable original training/baseline_config.json plus explicit operations/continuation_24m.json; continuation receipts under runs/A_seed17_24M",
   "supersedes_execution_scope": "protocol.json version 1.0 online adaptation",
   "title": "Asymmetric Offline Process-Reward Adaptation for Mathematical RL",

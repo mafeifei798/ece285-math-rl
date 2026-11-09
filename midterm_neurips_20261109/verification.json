@@ -1,0 +1,226 @@
+{
+  "created_utc": "2026-11-09T22:35:15.852181+00:00",
+  "GPU_used": false,
+  "model_calls": 0,
+  "optimizer_updates": 0,
+  "submitted_anything": false,
+  "scope": "Recount frozen saved labels and replay scalar algebra only.",
+  "main_training": {
+    "A": {
+      "responses": 9088,
+      "completion_tokens": 6022435,
+      "updates": 284,
+      "groups": {
+        "mixed": 884,
+        "all_correct": 29,
+        "all_wrong": 223
+      },
+      "wrong_positive_advantages": {},
+      "max_FP64_advantage_difference": 9.058772976189289e-08,
+      "homogeneous_absolute_advantage_share": 0.0,
+      "normalization_cancellation_max_difference": 0.0,
+      "historical_native_tensor_audit_passed": true
+    },
+    "B": {
+      "responses": 8960,
+      "completion_tokens": 6008457,
+      "updates": 280,
+      "groups": {
+        "mixed": 878,
+        "all_wrong": 212,
+        "all_correct": 30
+      },
+      "wrong_positive_advantages": {
+        "all_wrong": 571,
+        "mixed": 6
+      },
+      "max_FP64_advantage_difference": 9.944479265500128e-06,
+      "homogeneous_absolute_advantage_share": 0.19915840326585635,
+      "normalization_cancellation_max_difference": 1.3038181645441682e-14,
+      "historical_native_tensor_audit_passed": true
+    }
+  },
+  "main_evaluation_recount": {
+    "math500": {
+      "A_correct": 270,
+      "B_correct": 269,
+      "n": 500,
+      "A_accuracy": 0.54,
+      "B_accuracy": 0.538,
+      "B_minus_A_pp": -0.2,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.0,
+        3.5999999999999996
+      ],
+      "A_only_correct": 47,
+      "B_only_correct": 46
+    },
+    "gsm8k": {
+      "A_correct": 884,
+      "B_correct": 857,
+      "n": 1319,
+      "A_accuracy": 0.6702047005307051,
+      "B_accuracy": 0.6497346474601972,
+      "B_minus_A_pp": -2.047005307050796,
+      "paired_question_bootstrap_95ci_pp": [
+        -4.245640636846096,
+        0.0758150113722517
+      ],
+      "A_only_correct": 120,
+      "B_only_correct": 93
+    }
+  },
+  "historical_verifier_regrade": {
+    "passed": true
+  },
+  "targeted_case_checks": {
+    "graph_colorings": 54,
+    "arithmetic_value": 34,
+    "high_PRM_top10_counts_verified": true,
+    "representative_population_labels": false
+  },
+  "formula_checks": {
+    "binary_group_patterns_tested": 256,
+    "bounded_process_max_abs": 0.14801036246023225,
+    "max_group_process_sum_abs": 1.0668549377257364e-16,
+    "wrong_advantage_never_positive": true,
+    "all_wrong_reward_advantage_zero": true,
+    "sampled_KL_estimator_nonnegative": true,
+    "detached_ratio_finite_difference": 0.9999999999732445
+  },
+  "separate_preliminary_experiment": {
+    "17": {
+      "A": {
+        "math500": 0.53,
+        "gsm8k": 0.66868840030326
+      },
+      "C_bounded": {
+        "math500": 0.578,
+        "gsm8k": 0.6937073540561031
+      },
+      "paired": {
+        "math500": {
+          "delta_pp": 4.8,
+          "wins": 54,
+          "losses": 30,
+          "paired_question_bootstrap95_pp": [
+            1.4000000000000001,
+            8.4
+          ],
+          "bootstrap_replicates": 10000,
+          "seed": 285,
+          "exact_mcnemar_two_sided_p": 0.011634454119925829
+        },
+        "gsm8k": {
+          "delta_pp": 2.501895375284306,
+          "wins": 111,
+          "losses": 78,
+          "paired_question_bootstrap95_pp": [
+            0.45489006823351025,
+            4.548900682335103
+          ],
+          "bootstrap_replicates": 10000,
+          "seed": 285,
+          "exact_mcnemar_two_sided_p": 0.01968834560535602
+        }
+      }
+    },
+    "42": {
+      "A": {
+        "math500": 0.528,
+        "gsm8k": 0.6747536012130402
+      },
+      "C_bounded": {
+        "math500": 0.548,
+        "gsm8k": 0.6793025018953753
+      },
+      "paired": {
+        "math500": {
+          "delta_pp": 2.0,
+          "wins": 35,
+          "losses": 25,
+          "paired_question_bootstrap95_pp": [
+            -1.0,
+            5.0
+          ],
+          "bootstrap_replicates": 10000,
+          "seed": 285,
+          "exact_mcnemar_two_sided_p": 0.2450608330229457
+        },
+        "gsm8k": {
+          "delta_pp": 0.45489006823351025,
+          "wins": 91,
+          "losses": 85,
+          "paired_question_bootstrap95_pp": [
+            -1.5163002274450341,
+            2.427975739196333
+          ],
+          "bootstrap_replicates": 10000,
+          "seed": 285,
+          "exact_mcnemar_two_sided_p": 0.7063708402623414
+        }
+      }
+    }
+  },
+  "requirements": {
+    "source_url": "https://piazza.com/class/muwwwlp9vfi76w/post/61",
+    "source_title": "Project mid-term report",
+    "post_author": "Ruiyi Zhang",
+    "verified_using": "Authenticated Safari UI, original post and instructor followup",
+    "verified_date_America_Los_Angeles": "2026-11-09",
+    "deadline_local": "2026-11-09 23:59 America/Los_Angeles",
+    "submission_destination": "Gradescope",
+    "length": "around 5 pages, excluding references",
+    "required_contents": [
+      "Revised project proposal content",
+      "Detailed methods: mathematical setup, model, algorithm, theoretical analysis if any",
+      "Discussion of proposed method: novelty, advantages, limitations"
+    ],
+    "experimental_results_required": false,
+    "clarification_author": "Pengtao Xie",
+    "clarification_quote": "It's ok to not include results in the mid-term report.",
+    "specific_layout_template_stated_in_this_post": false,
+    "submitted_anything": false,
+    "started_GPU_jobs": false
+  },
+  "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
+  "source_sha256": "0eb32069393a7f326f01063888abcdb1d8e57339994236a22cb9e8354d6b033f",
+  "inputs_sha256": {
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json": "891b34d4206ae3dd8de98ac8855a9c8a291276c008317bf3a48297e15fe9ea9c",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/signal_audit/analysis.json": "6055698d9bbc7b035110229b65a97f621b90834d3f81224af3841e0e5ef53b8b",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/A_corrected_seed17_6M_20261022/rollouts.jsonl": "6ceb2e86ba1ddb53feeaca21fa30f7588b6b25dfcc1dd8549dd5928775d31caf",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/A_corrected_seed17_6M_20261022/run_config.json": "f9708fe8a7fec69d6afacb6476bd9c7acf657e837c5ac1dbb3c59d736b0afd6f",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/A.json": "349499cb60cd50d89c5e46d7cf6d6f62485d603193dfdcb2db24954ce9d08dff",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/rollouts.jsonl": "adfc269057091108f0c84274b78164d1795d19b85856297f9876d60e191ff304",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/run_config.json": "a63df550f14190b05b63e65f18e0732a60c57394b3f98d805579df65a739d4b8",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/training_audit/B.json": "49080a483822eec80b5fd623168095267bdc9fd09115c9465de352ece25aa399",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/A_corrected_seed17_6M_20261022/evaluation/math500.jsonl": "febc9a0bb4ec58f499e6dc9bf0e9ab9dc5dd01690a1d8193eec772416fd21670",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/evaluation/math500.jsonl": "8707a8d3244e31319425d88e254da3ae51003e507c4e1cfb04f32524b0840835",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/A_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": "021a9ec789d5844b6768a74eed7f56f8b4b88302a48a47605d62de9215b88354",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": "4a6e1aaad49a608d35d18a3c294d8c93f490b7617cdfd82c2da2574e06bd9c87",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/eval_audit/verified.json": "f99a72e883f2a819b2984b6261182808514ce479b0b7cd34f6a06a49050c1d49",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/case_review/graph_group_independent_check.json": "e6578577c5f111943da4be12bc980a32da6ed63cc91c6d5f80228b561943e5e0",
+    "execution/ab_corrected_6m_seed17_20261022/final_evidence/case_review/prm_high_wrong_review.json": "4c6571f5e2410d05b0c5d6b7f0bcf281b3c6e4556a13bc5556851941456bbe8f",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/comparison.json": "17402d9d5ba9285d13ff36d442090aa5a6bb3aebb82370dd3a6ca974fca96097",
+    "execution/ac_seed42_v1_20261106/completed_evidence/comparison.json": "431b05b0531db577af070d193820b2b629bb9c67cfc3897c3002f9ed9069f7dc",
+    "execution/midterm_requirements_20261109/requirements.json": "e1664ee72c14704f19e02b88afad91429727758fe35d2df466fbe187e698e97a"
+  },
+  "passed": true,
+  "subsequent_author_only_edit": {
+    "created_utc": "2026-11-09T22:40:27.550418+00:00",
+    "requested_author_order": [
+      "Hongyi Ding",
+      "Yang Zeng",
+      "Jasmine Jiang"
+    ],
+    "PDF_metadata_order_verified": true,
+    "first_page_visual_inspection_passed": true,
+    "all_body_and_reference_text_unchanged": true,
+    "body_pages": 5,
+    "reference_pages": 1,
+    "previous_source_sha256": "d74eea2ff4f970d72e4d2d9559fed5767553ec25584c238dc176ee3531bfc69f",
+    "source_sha256": "0eb32069393a7f326f01063888abcdb1d8e57339994236a22cb9e8354d6b033f",
+    "previous_pdf_sha256": "e0c070e45cebb36379f0b65f93d1197478661bd1574347f7d5715458af2b50d3",
+    "pdf_sha256": "8f50702fefdbaba3d95dba6ded8c65308bc8cd5870ae0f0991cf931b43d559e0"
+  }
+}

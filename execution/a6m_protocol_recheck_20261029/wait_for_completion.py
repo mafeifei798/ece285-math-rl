@@ -4,7 +4,7 @@ import subprocess
 REMOTE=r'''
 from pathlib import Path
 import json,time,os
-p=Path('/srv/research/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029');last=None
+p=Path('/path/to/ece285_math_rl_project/runs/A6M_protocol_recheck_20261029');last=None
 for _ in range(720):
  def read(n):
   f=p/(n+'.json');return json.loads(f.read_text()) if f.exists() else {}
@@ -18,4 +18,4 @@ for _ in range(720):
   except ProcessLookupError:print('CONTROLLER_NOT_ALIVE: inspect receipts',flush=True);break
  time.sleep(20)
 '''
-subprocess.run(SSH+['/srv/research/ece285_math_rl_project/.venv/bin/python -B -'],input=REMOTE,text=True,check=True)
+subprocess.run(SSH+['/path/to/ece285_math_rl_project/.venv/bin/python -B -'],input=REMOTE,text=True,check=True)

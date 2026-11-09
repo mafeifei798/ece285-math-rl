@@ -1,0 +1,232 @@
+{
+  "passed": true,
+  "validation_summary": {
+    "source": {
+      "n": 500,
+      "correct": 317.0,
+      "accuracy": 0.634,
+      "tokens": 321099,
+      "truncated": 33,
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 744.0674418993294,
+      "predictions_sha256": "b2a53bedc48f36bc7691de9b8f59cd681c82af0c1c589125715cb2643289f154"
+    },
+    "bounded": {
+      "n": 500,
+      "correct": 319.0,
+      "accuracy": 0.638,
+      "tokens": 323059,
+      "truncated": 32,
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 755.7354388516396,
+      "predictions_sha256": "6a4dc10d7a61ecf5f1a9ddbf5ab4b6078847ee7a26007e606c52d918fa9ef2f5"
+    },
+    "uniform": {
+      "n": 500,
+      "correct": 327.0,
+      "accuracy": 0.654,
+      "tokens": 314077,
+      "truncated": 25,
+      "empty": 0,
+      "short_wrong": 1,
+      "inference_seconds": 757.7179478323087,
+      "predictions_sha256": "a3df9959e89eb28d22db0b3cff732788e83444d652c2518a743b3d9a046735c6"
+    },
+    "prefix": {
+      "n": 500,
+      "correct": 328.0,
+      "accuracy": 0.656,
+      "tokens": 313743,
+      "truncated": 25,
+      "empty": 0,
+      "short_wrong": 0,
+      "inference_seconds": 762.8760106926784,
+      "predictions_sha256": "cff2672069f36d0c052928e438eadb0a615d26a982d06f0f10b353a36417cfac"
+    }
+  },
+  "training_costs": {
+    "bounded": {
+      "new_updates": 48,
+      "new_training_responses": 1536,
+      "new_generation_tokens": 1021112,
+      "PRM_input_tokens": 984128,
+      "PRM_seconds": 124.49875136837363,
+      "total_seconds": 5185.8169758319855,
+      "peak_sampled_GPU_GiB": 40.064453125,
+      "protected_tokens_if_prefix": 48947,
+      "signal_statuses": {
+        "correct_unchanged": 774,
+        "first_step_unchanged": 145,
+        "invalid_fallback": 167,
+        "prefix_protected": 215,
+        "no_low_score_fallback": 11,
+        "all_wrong_unchanged": 224
+      },
+      "group_types": {
+        "all_correct": 14,
+        "mixed": 150,
+        "all_wrong": 28
+      },
+      "empty": 0,
+      "short_wrong": 5,
+      "truncated": 70
+    },
+    "uniform": {
+      "new_updates": 48,
+      "new_training_responses": 1536,
+      "new_generation_tokens": 1037167,
+      "PRM_input_tokens": 963768,
+      "PRM_seconds": 120.53993703983724,
+      "total_seconds": 5084.568799257278,
+      "peak_sampled_GPU_GiB": 39.177734375,
+      "protected_tokens_if_prefix": 46895,
+      "signal_statuses": {
+        "correct_unchanged": 796,
+        "first_step_unchanged": 139,
+        "invalid_fallback": 172,
+        "prefix_protected": 209,
+        "no_low_score_fallback": 12,
+        "all_wrong_unchanged": 208
+      },
+      "group_types": {
+        "all_correct": 15,
+        "mixed": 151,
+        "all_wrong": 26
+      },
+      "empty": 0,
+      "short_wrong": 5,
+      "truncated": 92,
+      "PRM_seconds_incomplete": true
+    },
+    "prefix": {
+      "new_updates": 48,
+      "new_training_responses": 1536,
+      "new_generation_tokens": 1032677,
+      "PRM_input_tokens": 975235,
+      "PRM_seconds": 124.88272660691291,
+      "total_seconds": 5194.414664030075,
+      "peak_sampled_GPU_GiB": 38.064453125,
+      "protected_tokens_if_prefix": 56209,
+      "signal_statuses": {
+        "prefix_protected": 244,
+        "correct_unchanged": 793,
+        "first_step_unchanged": 145,
+        "invalid_fallback": 138,
+        "no_low_score_fallback": 15,
+        "all_wrong_unchanged": 200,
+        "alignment_fallback:byte_reconstruction_mismatch": 1
+      },
+      "group_types": {
+        "mixed": 148,
+        "all_wrong": 25,
+        "all_correct": 19
+      },
+      "empty": 0,
+      "short_wrong": 3,
+      "truncated": 86
+    }
+  },
+  "paired_comparisons": {
+    "prefix_minus_uniform": {
+      "difference_percentage_points": 0.2,
+      "paired_bootstrap_95CI_pp": [
+        -2.0,
+        2.6
+      ],
+      "wins": 18,
+      "losses": 17,
+      "both_correct": 310,
+      "both_wrong": 155,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "n": 500
+    },
+    "prefix_minus_bounded": {
+      "difference_percentage_points": 1.7999999999999998,
+      "paired_bootstrap_95CI_pp": [
+        -0.6,
+        4.2
+      ],
+      "wins": 23,
+      "losses": 14,
+      "both_correct": 305,
+      "both_wrong": 158,
+      "mcnemar_exact_two_sided_p": 0.18774155899882317,
+      "n": 500
+    },
+    "uniform_minus_bounded": {
+      "difference_percentage_points": 1.6,
+      "paired_bootstrap_95CI_pp": [
+        -1.0,
+        4.2
+      ],
+      "wins": 27,
+      "losses": 19,
+      "both_correct": 300,
+      "both_wrong": 154,
+      "mcnemar_exact_two_sided_p": 0.3019956131896606,
+      "n": 500
+    },
+    "bounded_minus_source": {
+      "difference_percentage_points": 0.4,
+      "paired_bootstrap_95CI_pp": [
+        -2.0,
+        2.8000000000000003
+      ],
+      "wins": 21,
+      "losses": 19,
+      "both_correct": 298,
+      "both_wrong": 162,
+      "mcnemar_exact_two_sided_p": 0.8746293123804207,
+      "n": 500
+    },
+    "uniform_minus_source": {
+      "difference_percentage_points": 2.0,
+      "paired_bootstrap_95CI_pp": [
+        -0.4,
+        4.3999999999999995
+      ],
+      "wins": 23,
+      "losses": 13,
+      "both_correct": 304,
+      "both_wrong": 160,
+      "mcnemar_exact_two_sided_p": 0.13249816396273675,
+      "n": 500
+    },
+    "prefix_minus_source": {
+      "difference_percentage_points": 2.1999999999999997,
+      "paired_bootstrap_95CI_pp": [
+        0.2,
+        4.3999999999999995
+      ],
+      "wins": 20,
+      "losses": 9,
+      "both_correct": 308,
+      "both_wrong": 163,
+      "mcnemar_exact_two_sided_p": 0.06142834573984146,
+      "n": 500
+    }
+  },
+  "main_conclusion": "inconclusive",
+  "same_question_order": true,
+  "same_update_count": true,
+  "same_settings_except_signal": true,
+  "source_checkpoint_unchanged": true,
+  "old_protected_files_verified": 1535,
+  "single_seed": 17,
+  "validation_previously_used": true,
+  "test_sets_used": false,
+  "limits": "Question bootstrap does not measure training-seed variance. Small short-pilot differences can be inconclusive. No automatic budget expansion.",
+  "recovery": {
+    "reason": "Overstrict first stochastic generation bitwise-equality gate",
+    "bounded_rerun": false,
+    "uniform_first_batch_reused_without_resampling": true,
+    "uniform_updates_before_recovery": 0,
+    "uniform_sampling_rng_after_fault_bitwise_preserved": false,
+    "uniform_failed_attempt_seconds": 92.25684905052185,
+    "uniform_first_PRM_forward_seconds_unavailable": true,
+    "seed_and_model_and_loss_and_question_order_settings_unchanged": true,
+    "extra_limitation": "Fault recovery reused valid on-policy cached responses, but could not preserve post-generation sampling RNG exactly."
+  }
+}

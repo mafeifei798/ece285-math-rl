@@ -2,7 +2,7 @@
   "status": "dispatched",
   "pid": 3039862,
   "started_unix": 1792654332.481423,
-  "controller": "/srv/research/ece285_math_rl_project/runs/AB_corrected_seed17_6M_20261022/controller.json",
-  "log": "/srv/research/ece285_math_rl_project/logs/ab_corrected_6m_seed17_20261022_controller.log",
+  "controller": "/path/to/ece285_math_rl_project/runs/AB_corrected_seed17_6M_20261022/controller.json",
+  "log": "/path/to/ece285_math_rl_project/logs/ab_corrected_6m_seed17_20261022_controller.log",
   "scope": "Real-model two-step engineering pilots, then corrected-only A/B seed17 from common base, 6M generated completion tokens each, fixed greedy MATH500/GSM8K evaluation. Preserve old code/results. No bounded advantages, C/D, new rewards/loss, seed changes or budget extensions."
 }
