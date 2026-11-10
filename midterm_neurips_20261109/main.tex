@@ -82,7 +82,7 @@ We use the base Qwen2.5-Math-1.5B \citep{yang2024}, rank-16 LoRA (alpha 32, drop
 
 \clearpage
 \section{Experiments and accuracy}
-We train on 6,993 MATH problems, hold out 500 for validation, and test on MATH500 (500) and GSM8K (1,319) \citep{hendrycks2021,cobbe2021}. Evaluation uses one greedy response, a 2,048-token cap, and the fixed verifier. GSM8K is evaluation-only. All intervals use 10,000 paired question-bootstrap samples (seed 285), measuring question-level rather than training-seed uncertainty.
+We train on 6,993 MATH problems, hold out 500 for validation, and test on MATH500 (500) and GSM8K (1,319) \citep{hendrycks2021,cobbe2021}. Evaluation uses one greedy response, a 2,048-token cap, and the fixed verifier. GSM8K is evaluation-only. All intervals use 10,000 paired question-bootstrap samples (seed 285).
 
 \subsection{Direct PRM mixing: historical V0 comparison}
 These runs use corrected percentage/unit verification and CRLF handling for PRM inputs; earlier buggy runs are excluded. A/B share initialization and 1,120 question groups, stopping after a complete update reaches 6M tokens. A uses 6,022,435 tokens and 284 updates; B uses 6,008,457 and 280. A has 16 extra groups: generation budgets are approximately matched, updates and total compute are not.
@@ -121,7 +121,7 @@ Seed & Policy & Tokens (M) & MATH500 & GSM8K & Wrong-positive \\
 \end{tabular}\label{tab:followup}
 \end{table}
 \begin{table}[h!]
-\caption{V1 paired changes (pp, 95\% intervals). Seed 42 is inconclusive; seeds are not pooled as independent test questions.}
+\caption{V1 paired accuracy changes in percentage points, with 95\% intervals.}
 \centering\small
 \begin{tabular}{@{}llrr@{}}
 \toprule
@@ -135,8 +135,8 @@ Seed & Comparison & MATH500 & GSM8K \\
 \end{tabular}\label{tab:paired}
 \end{table}
 
-\paragraph{Why there are two A results.}
-V0 and V1 are independent runs with different stopping rules. V1 also enables prefix caching, chunked prefill, and asynchronous scheduling, with different vLLM memory allocation. Seed-17 follow-up restart histories differ between arms; seed 42 has matched restart boundaries. The two A scores (54.00\%/53.00\%) therefore do not isolate seed noise or one configuration change. We compare methods within protocols.
+\paragraph{Protocol differences.}
+The two A scores come from separate runs. V0 uses token-based stopping; V1 fixes 288 updates and enables prefix caching, chunked prefill, and asynchronous scheduling with a different memory allocation. Seed-17 restart boundaries differ between arms; seed 42 has matched boundaries.
 
 \clearpage
 \section{What goes wrong with the process signal?}
@@ -191,15 +191,17 @@ D sharply reduces acceptance of valid derivations. C largely preserves it, altho
 
 \section{Costs, limitations, and remaining experiments}
 \paragraph{Resource accounting.}
-V0 takes 2.70 hours for A and 2.22 for B; peak allocated memory is 31.60 and 44.88\,GiB. B scores 5.28M PRM input tokens (7.72M padded) in 593 seconds. In V1 seed 42, full A/C-bounded runs take 2.28/2.50 hours; C-bounded scores 5.59M input tokens in 749 seconds. For V1 seed 17, C-mix/C-bounded score 5.53/5.54M tokens in 1,681/2,071 seconds. Seed-17 continuation timers exclude earlier segments, so we do not present them as full-run times. PRM scoring times are included in training time; load varies on the shared GPU.
+V0 takes 2.70 hours for A and 2.22 for B; peak allocated memory is 31.60 and 44.88\,GiB. B scores 5.28M PRM input tokens (7.72M padded) in 593 seconds. In V1 seed 42, full A/C-bounded runs take 2.28/2.50 hours; C-bounded scores 5.59M input tokens in 749 seconds. For V1 seed 17, C-mix/C-bounded score 5.53/5.54M tokens in 1,681/2,071 seconds. Seed-17 timers cover continuation segments only and are excluded from full-run comparisons. PRM scoring times are included in training time; load varies on the shared GPU.
 
 \paragraph{Limits of the evidence.}
-Two training seeds do not establish reliable gains, and question-bootstrap intervals do not capture seed variation. A difference whose interval includes zero is unresolved, not evidence of equivalence. C-bounded changes gating, scale, and normalization together and discards process feedback on failed answers. Targeted cases do not estimate failure prevalence, and accuracy does not establish process validity. PRM exposure and validation overlap, response-length normalization, asymmetric seed-17 restarts, and disabled sampling correction remain limitations. Test outputs have been inspected; further design must use validation only.
+Two seeds do not establish reliable gains; question-bootstrap intervals omit seed variation. Intervals containing zero leave differences unresolved. C-bounded changes gating, scale, and normalization together and discards process feedback on failed answers. Targeted cases do not estimate failure prevalence, and accuracy does not establish process validity. PRM exposure and validation overlap, response-length normalization, asymmetric seed-17 restarts, and disabled sampling correction remain limitations. Test outputs have been inspected; further design must use validation only.
 
 \paragraph{Plan for the final report.}
-By November 16, freeze evaluation code and complete a blinded review of 100 stratified derivations, reporting reviewer agreement and sampling weights. By November 23, run two controls \emph{from the initial model}: shuffled within-correct PRM rankings and centered random corrections with matched magnitude. Each uses seed 17, V1, the same question order, and 288 updates (about 6M tokens), compared with the existing C-bounded run. Allow roughly 6--14 shared-GPU hours for both, plus evaluation; 48-update continuations will serve only as debugging checks. By November 30, finish analysis and, if resources allow, repeat the more informative control with seed 42. Dates are tentative.
+By November 16, freeze evaluation and blindly review 100 stratified derivations; report agreement and sampling weights. By November 23, run two controls \emph{from the initial model}: shuffled within-correct PRM rankings and centered random corrections with matched magnitude. Match C-bounded seed 17's V1 settings, question order, and 288 updates (about 6M tokens). Allow roughly 6--14 shared-GPU hours for both, plus evaluation. By November 30, finish analysis and, if resources allow, repeat the more informative control with seed 42. Dates are tentative.
 
-Full training runs test the learning procedure, but do not reduce evaluation uncertainty by themselves. With 10\% paired disagreement, a two-sided 5\% test at 80\% power needs about a 4.0-point difference on 500 questions (about 2.4 on GSM8K). Smaller effects may remain unresolved. Better accuracy and reviewed process validity than matched controls would support useful PRM feedback. Similar scores would leave the ranking contribution unresolved. Code and aggregate evidence are available online.\footnote{\url{https://github.com/mafeifei798/ece285-math-rl}}
+With 10\% paired disagreement, 80\% power at a two-sided 5\% level requires about 4.0 percentage points on 500 questions or 2.4 on GSM8K. Full runs cannot shrink this uncertainty. Gains over controls in accuracy and reviewed process validity would support useful PRM feedback; smaller effects may leave the ranking contribution unresolved.
+
+The clearest finding is that group normalization can amplify small PRM rewards into substantial training signals. C-bounded controls this effect, but its accuracy gains remain preliminary. Code and aggregate evidence are available online.\footnote{\url{https://github.com/mafeifei798/ece285-math-rl}}
 
 \clearpage
 \begin{thebibliography}{15}

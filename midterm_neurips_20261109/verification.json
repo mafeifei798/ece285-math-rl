@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-10T06:46:48.985360+00:00",
+  "created_utc": "2026-11-10T06:58:14.356560+00:00",
   "GPU_used": false,
   "model_calls": 0,
   "optimizer_updates": 0,
@@ -183,7 +183,7 @@
     "started_GPU_jobs": false
   },
   "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
-  "source_sha256": "aa3756dfeebd91069ef438998f4832f32de9f1ac25fec97db01806253cef11ae",
+  "source_sha256": "a2e64c929183c29a4f0a58b166d2af3944ec4a3c18564a0dfb6bb66604f592b0",
   "inputs_sha256": {
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json": "891b34d4206ae3dd8de98ac8855a9c8a291276c008317bf3a48297e15fe9ea9c",
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/signal_audit/analysis.json": "6055698d9bbc7b035110229b65a97f621b90834d3f81224af3841e0e5ef53b8b",

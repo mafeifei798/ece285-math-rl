@@ -3,8 +3,8 @@
   "scope": "Clarity, measured costs and statistical-power revision",
   "GPU_used": false,
   "training_started": false,
-  "PDF_sha256": "870f8b88570cf94ef53963ab05fdef958a1a12ede96611700a9b87836d5528bd",
-  "TeX_sha256": "aa3756dfeebd91069ef438998f4832f32de9f1ac25fec97db01806253cef11ae",
+  "PDF_sha256": "52997059b50cc2a2e88fad0a145d620fc59c4805ba15adacd867036442136415",
+  "TeX_sha256": "a2e64c929183c29a4f0a58b166d2af3944ec4a3c18564a0dfb6bb66604f592b0",
   "earlier_version_preserved": "previous_draft/before_clarity_revision",
   "changes": [
     "Seed42 abstract aligned with inconclusive intervals",
@@ -16,5 +16,11 @@
     "Separate training-settings subsection",
     "Future controls start from initial model for 288 updates; approximate MDE retained",
     "Repeated caveats consolidated in Section7"
-  ]
+  ],
+  "last_edit": "Remove repeated qualifications, shorten protocol comparison, and end with the main finding.",
+  "equations_unchanged": true,
+  "table_bodies_unchanged": true,
+  "references_unchanged": true,
+  "body_pages": 5,
+  "reference_pages": 1
 }
