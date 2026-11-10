@@ -2,16 +2,133 @@
   "verified_date": "2026-11-09",
   "method": "Read original arXiv records and primary paper text, official Qwen model card, and versioned TRL documentation. No secondary performance summaries are used as evidence.",
   "entries": [
-    {"key": "cheng2025", "first_author": "Jie Cheng", "year": 2025, "title": "Stop Summation: Min-Form Credit Assignment Is All Process Reward Model Needs for Reasoning", "url": "https://arxiv.org/abs/2504.15275v3", "venue": "NeurIPS 2025, as stated on the arXiv record", "supports": "PURE uses min-form process credit assignment; our response-level minimum plus scalar GRPO is not its reproduction."},
-    {"key": "cobbe2021", "first_author": "Karl Cobbe", "year": 2021, "title": "Training Verifiers to Solve Math Word Problems", "url": "https://arxiv.org/abs/2110.14168v2", "supports": "GSM8K dataset provenance."},
-    {"key": "hendrycks2021", "first_author": "Dan Hendrycks", "year": 2021, "title": "Measuring Mathematical Problem Solving With the MATH Dataset", "url": "https://arxiv.org/abs/2103.03874v2", "supports": "MATH dataset provenance."},
-    {"key": "hu2021", "first_author": "Edward J. Hu", "year": 2021, "title": "LoRA: Low-Rank Adaptation of Large Language Models", "url": "https://arxiv.org/abs/2106.09685v2", "supports": "Low-rank adapter updates with frozen base weights."},
-    {"key": "trl", "author": "Hugging Face", "access_year": 2026, "title": "TRL v0.23.1: GRPO Trainer", "url": "https://huggingface.co/docs/trl/v0.23.1/grpo_trainer", "supports": "The explicitly selected grpo loss has per-response token averaging; detached old-policy log probabilities and KL estimator. Access year is not asserted as software release year."},
-    {"key": "lightman2023", "first_author": "Hunter Lightman", "year": 2023, "title": "Let's Verify Step by Step", "url": "https://arxiv.org/abs/2305.20050", "supports": "Outcome-versus-process supervision and human step labels."},
-    {"key": "shao2024", "first_author": "Zhihong Shao", "year": 2024, "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models", "url": "https://arxiv.org/abs/2402.03300v3", "supports": "GRPO, critic-free group-relative advantages and clipped policy objective. Exact report reduction and epsilon match our pinned implementation, not all published variants."},
-    {"key": "yang2024", "first_author": "An Yang", "year": 2024, "title": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement", "url": "https://arxiv.org/abs/2409.12122", "supports": "Qwen2.5-Math actor family."},
-    {"key": "zhang2025", "first_author": "Zhenru Zhang", "year": 2025, "title": "The Lessons of Developing Process Reward Models in Mathematical Reasoning", "url": "https://arxiv.org/abs/2501.07301v2", "additional_primary_url": "https://huggingface.co/Qwen/Qwen2.5-Math-PRM-7B", "supports": "PRM label/evaluation concerns and official double-newline step marker / positive-class scoring interface. Probability scores are not asserted to be calibrated correctness probabilities."}
+    {
+      "key": "cheng2025",
+      "first_author": "Jie Cheng",
+      "year": 2025,
+      "title": "Stop Summation: Min-Form Credit Assignment Is All Process Reward Model Needs for Reasoning",
+      "url": "https://arxiv.org/abs/2504.15275v3",
+      "venue": "NeurIPS 2025, as stated on the arXiv record",
+      "supports": "PURE uses min-form process credit assignment; our response-level minimum plus scalar GRPO is not its reproduction."
+    },
+    {
+      "key": "cobbe2021",
+      "first_author": "Karl Cobbe",
+      "year": 2021,
+      "title": "Training Verifiers to Solve Math Word Problems",
+      "url": "https://arxiv.org/abs/2110.14168v2",
+      "supports": "GSM8K dataset provenance."
+    },
+    {
+      "key": "ding2026",
+      "first_author": "Ruiyi Ding",
+      "year": 2026,
+      "title": "PRPO: Aligning Process Reward with Outcome Reward in Policy Optimization",
+      "url": "https://arxiv.org/abs/2601.07182v3",
+      "supports": "Aligns fine-grained process and outcome training signals. External accuracy is not treated as a matched baseline."
+    },
+    {
+      "key": "hendrycks2021",
+      "first_author": "Dan Hendrycks",
+      "year": 2021,
+      "title": "Measuring Mathematical Problem Solving With the MATH Dataset",
+      "url": "https://arxiv.org/abs/2103.03874v2",
+      "supports": "MATH dataset provenance."
+    },
+    {
+      "key": "hu2021",
+      "first_author": "Edward J. Hu",
+      "year": 2021,
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "url": "https://arxiv.org/abs/2106.09685v2",
+      "supports": "Low-rank adapter updates with frozen base weights."
+    },
+    {
+      "key": "jia2026",
+      "first_author": "Tianyu Jia",
+      "year": 2026,
+      "title": "The Weakest Link Tells It All: Outcome-Supervised Process Reward Modeling via Learnable Credit Assignment",
+      "url": "https://arxiv.org/abs/2606.27739v2",
+      "supports": "Softmax-weighted-sum pooling and stop-gradient weights inspire the C/D adaptation pilot. Not a full LCA reproduction."
+    },
+    {
+      "key": "lightman2023",
+      "first_author": "Hunter Lightman",
+      "year": 2023,
+      "title": "Let's Verify Step by Step",
+      "url": "https://arxiv.org/abs/2305.20050",
+      "supports": "Outcome-versus-process supervision and human step labels."
+    },
+    {
+      "key": "liu2025",
+      "first_author": "Zichen Liu",
+      "year": 2025,
+      "title": "Understanding R1-Zero-Like Training: A Critical Perspective",
+      "url": "https://arxiv.org/abs/2503.20783v2",
+      "supports": "Dr. GRPO identifies length normalization bias; our reported runs keep the grpo response-normalized loss."
+    },
+    {
+      "key": "rezaei2026",
+      "first_author": "Mohammad Rezaei",
+      "year": 2026,
+      "title": "Process Rewards for Outcome-Guided Reasoning Steps in LLM Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2604.02341v2",
+      "supports": "PROGRS v2 centers incorrect-subset process rewards and keeps correct ones absolute. We do not adopt its unbiased-gradient claim."
+    },
+    {
+      "key": "shao2024",
+      "first_author": "Zhihong Shao",
+      "year": 2024,
+      "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+      "url": "https://arxiv.org/abs/2402.03300v3",
+      "supports": "GRPO, critic-free group-relative advantages and clipped policy objective. Exact report reduction and epsilon match our pinned implementation, not all published variants."
+    },
+    {
+      "key": "tan2026",
+      "first_author": "Zelin Tan",
+      "year": 2026,
+      "title": "PAPO: Stabilizing Rubric Integration Training via Decoupled Advantage Normalization",
+      "url": "https://arxiv.org/abs/2603.26535v4",
+      "supports": "Correct-subset process standardization differs from our raw bounded centering without process-std normalization."
+    },
+    {
+      "key": "trl",
+      "author": "Hugging Face",
+      "access_year": 2026,
+      "title": "TRL v0.23.1: GRPO Trainer",
+      "url": "https://huggingface.co/docs/trl/v0.23.1/grpo_trainer",
+      "supports": "The explicitly selected grpo loss has per-response token averaging; detached old-policy log probabilities and KL estimator. Access year is not asserted as software release year."
+    },
+    {
+      "key": "yang2024",
+      "first_author": "An Yang",
+      "year": 2024,
+      "title": "Qwen2.5-Math Technical Report: Toward Mathematical Expert Model via Self-Improvement",
+      "url": "https://arxiv.org/abs/2409.12122",
+      "supports": "Qwen2.5-Math actor family."
+    },
+    {
+      "key": "zhang2025",
+      "first_author": "Zhenru Zhang",
+      "year": 2025,
+      "title": "The Lessons of Developing Process Reward Models in Mathematical Reasoning",
+      "url": "https://arxiv.org/abs/2501.07301v2",
+      "additional_primary_url": "https://huggingface.co/Qwen/Qwen2.5-Math-PRM-7B",
+      "supports": "PRM label/evaluation concerns and official double-newline step marker / positive-class scoring interface. Probability scores are not asserted to be calibrated correctness probabilities."
+    },
+    {
+      "key": "zheng2024",
+      "first_author": "Chujie Zheng",
+      "year": 2024,
+      "title": "ProcessBench: Identifying Process Errors in Mathematical Reasoning",
+      "url": "https://arxiv.org/abs/2412.06559v4",
+      "supports": "Expert first-error annotation and valid-chain evaluation. 2024 is first arXiv year, not claimed conference year."
+    }
   ],
   "project_repository_verified_public": "https://github.com/mafeifei798/ece285-math-rl",
-  "limitations": ["This is not an exhaustive literature review or a novelty certification.", "Primary-source bibliographic checks do not establish absence of benchmark exposure."]
+  "limitations": [
+    "This is not an exhaustive literature review or a novelty certification.",
+    "Primary-source bibliographic checks do not establish absence of benchmark exposure."
+  ],
+  "total_references": 15
 }

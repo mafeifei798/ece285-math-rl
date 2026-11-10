@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-09T22:35:15.852181+00:00",
+  "created_utc": "2026-11-10T06:05:39.511264+00:00",
   "GPU_used": false,
   "model_calls": 0,
   "optimizer_updates": 0,
@@ -184,7 +184,7 @@
     "started_GPU_jobs": false
   },
   "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
-  "source_sha256": "0eb32069393a7f326f01063888abcdb1d8e57339994236a22cb9e8354d6b033f",
+  "source_sha256": "83faaa3a8828cff93b10a9e69ca1460a9559379c4d570ef7d6988b413edb34a8",
   "inputs_sha256": {
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json": "891b34d4206ae3dd8de98ac8855a9c8a291276c008317bf3a48297e15fe9ea9c",
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/signal_audit/analysis.json": "6055698d9bbc7b035110229b65a97f621b90834d3f81224af3841e0e5ef53b8b",
@@ -205,22 +205,5 @@
     "execution/ac_seed42_v1_20261106/completed_evidence/comparison.json": "431b05b0531db577af070d193820b2b629bb9c67cfc3897c3002f9ed9069f7dc",
     "execution/midterm_requirements_20261109/requirements.json": "e1664ee72c14704f19e02b88afad91429727758fe35d2df466fbe187e698e97a"
   },
-  "passed": true,
-  "subsequent_author_only_edit": {
-    "created_utc": "2026-11-09T22:40:27.550418+00:00",
-    "requested_author_order": [
-      "Hongyi Ding",
-      "Yang Zeng",
-      "Jasmine Jiang"
-    ],
-    "PDF_metadata_order_verified": true,
-    "first_page_visual_inspection_passed": true,
-    "all_body_and_reference_text_unchanged": true,
-    "body_pages": 5,
-    "reference_pages": 1,
-    "previous_source_sha256": "d74eea2ff4f970d72e4d2d9559fed5767553ec25584c238dc176ee3531bfc69f",
-    "source_sha256": "0eb32069393a7f326f01063888abcdb1d8e57339994236a22cb9e8354d6b033f",
-    "previous_pdf_sha256": "e0c070e45cebb36379f0b65f93d1197478661bd1574347f7d5715458af2b50d3",
-    "pdf_sha256": "8f50702fefdbaba3d95dba6ded8c65308bc8cd5870ae0f0991cf931b43d559e0"
-  }
+  "passed": true
 }

@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-09",
+  "scope": "Midterm report completeness and evidence revision",
+  "main_comparison": "V0 historical A/B; V1 initial/A/C-mix/C-bounded shown separately",
+  "reported_training_seeds": [
+    17,
+    42
+  ],
+  "new_training": false,
+  "GPU_used": false,
+  "main_changes": [
+    "Both completed seeds with paired intervals",
+    "Same-scorer C-mix control",
+    "V1 initial model",
+    "Explicit V0/V1 distinction",
+    "C/D PRM pilot",
+    "Matched-sample advantage figure",
+    "15 primary references",
+    "Tentative validation-only controls"
+  ],
+  "PDF_sha256": "c390d200360056af7f571dca7f2746c0067ac853b3893b73e8f4be0b86c6d7e5",
+  "TeX_sha256": "83faaa3a8828cff93b10a9e69ca1460a9559379c4d570ef7d6988b413edb34a8",
+  "old_draft_preserved": true
+}
