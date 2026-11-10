@@ -1,25 +1,25 @@
 ECE285 midterm report — November 9, 2026
 Authors: Hongyi Ding, Yang Zeng, Jasmine Jiang
-Format: five body pages plus one reference page, original NeurIPS 2025 style.
-
+Format: five body pages plus one reference page, unchanged NeurIPS 2025 style.
 Build: tectonic --keep-logs --keep-intermediates main.tex
-Or run pdflatex twice; all 15 author-year references are inline, no BibTeX needed.
-Keep figures/all_wrong_advantage_ecdf.pdf alongside the source.
+Or run pdflatex twice. All 15 author-year references are inline.
+Keep figures/b_advantage_by_group.pdf alongside main.tex.
 
-Content: corrected historical V0 A/B comparison; separate V1 initial/A/C-mix/
-C-bounded results including both completed seeds, paired confidence intervals,
-matched-sample advantage replay, C/D reward-model adaptation, and future controls.
-V0/V1 are distinct protocols and cannot be pooled into one controlled comparison.
-No operational latest-status narrative is included.
+Scope: corrected historical V0 A/B; separate V1 initial/A/C-mix/C-bounded
+results with both completed seeds and paired intervals; actual B advantage
+distributions by outcome group; C/D PRM adaptation counts; V1 measured costs;
+full-run future controls and an explicit approximate detection limit.
+V0/V1 are distinct protocols and cannot be pooled as one controlled comparison.
+Seed42 remains inconclusive. Planned training is not completed work.
 
 CPU verification (inside original project checkout):
   python verify_report.py
   python make_report_figure.py
-The second command requires numpy and matplotlib. It reads saved evidence,
-generates the plot and report_evidence.json, and never calls a model.
-Source evidence paths and SHA256 hashes are in the verification JSON files.
-Full raw data stay in the original project, outside this source bundle.
+  python verify_revision.py
+The figure script requires numpy and matplotlib; no script calls a model.
+The scripts read original saved evidence. Raw problem/response files are not
+bundled. Source paths and SHA256 hashes are retained in the JSON receipts.
 
-No GPU use, training, model calls, verifier changes, or submission during revision.
-Historical source/results are preserved; previous_draft retains the earlier report.
-The stable final PDF is ece285_midterm_report_20261109.pdf. The user submits it.
+No GPU use, training, model calls, verifier changes, or submission during editing.
+Original experiment results and earlier drafts are preserved.
+The user submits the final PDF.

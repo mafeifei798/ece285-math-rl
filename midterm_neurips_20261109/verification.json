@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-10T06:05:39.511264+00:00",
+  "created_utc": "2026-11-10T06:46:48.985360+00:00",
   "GPU_used": false,
   "model_calls": 0,
   "optimizer_updates": 0,
@@ -76,7 +76,6 @@
   "targeted_case_checks": {
     "graph_colorings": 54,
     "arithmetic_value": 34,
-    "high_PRM_top10_counts_verified": true,
     "representative_population_labels": false
   },
   "formula_checks": {
@@ -184,7 +183,7 @@
     "started_GPU_jobs": false
   },
   "style_sha256": "67a960f35da6fecb5a0ce0202fa400459f4c8bb6c294f1a3fdd82fbbd39244c2",
-  "source_sha256": "83faaa3a8828cff93b10a9e69ca1460a9559379c4d570ef7d6988b413edb34a8",
+  "source_sha256": "aa3756dfeebd91069ef438998f4832f32de9f1ac25fec97db01806253cef11ae",
   "inputs_sha256": {
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/results_summary.json": "891b34d4206ae3dd8de98ac8855a9c8a291276c008317bf3a48297e15fe9ea9c",
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/signal_audit/analysis.json": "6055698d9bbc7b035110229b65a97f621b90834d3f81224af3841e0e5ef53b8b",
@@ -200,7 +199,6 @@
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/raw/runs/B_corrected_seed17_6M_20261022/evaluation/gsm8k.jsonl": "4a6e1aaad49a608d35d18a3c294d8c93f490b7617cdfd82c2da2574e06bd9c87",
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/eval_audit/verified.json": "f99a72e883f2a819b2984b6261182808514ce479b0b7cd34f6a06a49050c1d49",
     "execution/ab_corrected_6m_seed17_20261022/final_evidence/case_review/graph_group_independent_check.json": "e6578577c5f111943da4be12bc980a32da6ed63cc91c6d5f80228b561943e5e0",
-    "execution/ab_corrected_6m_seed17_20261022/final_evidence/case_review/prm_high_wrong_review.json": "4c6571f5e2410d05b0c5d6b7f0bcf281b3c6e4556a13bc5556851941456bbe8f",
     "execution/abc_seed17_resumed_v1_20261104/completed_evidence/comparison.json": "17402d9d5ba9285d13ff36d442090aa5a6bb3aebb82370dd3a6ca974fca96097",
     "execution/ac_seed42_v1_20261106/completed_evidence/comparison.json": "431b05b0531db577af070d193820b2b629bb9c67cfc3897c3002f9ed9069f7dc",
     "execution/midterm_requirements_20261109/requirements.json": "e1664ee72c14704f19e02b88afad91429727758fe35d2df466fbe187e698e97a"

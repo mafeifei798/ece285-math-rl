@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "GPU_used": false,
+  "model_calls": 0,
+  "training_updates": 0,
+  "costs": {
+    "17": {
+      "A": {
+        "PRM_input_tokens": 0,
+        "PRM_forward_seconds": 0.0,
+        "continuation_only_seconds": 13240.206614732742
+      },
+      "C_mix": {
+        "PRM_input_tokens": 5534256,
+        "PRM_forward_seconds": 1680.6834829617292,
+        "continuation_only_seconds": 17713.668737649918
+      },
+      "C_bounded": {
+        "PRM_input_tokens": 5544633,
+        "PRM_forward_seconds": 2070.6050775479525,
+        "continuation_only_seconds": 22700.117034196854
+      }
+    },
+    "42": {
+      "A": {
+        "PRM_input_tokens": 0,
+        "PRM_forward_seconds": 0.0,
+        "full_run_seconds": 8223.716998577118
+      },
+      "C_bounded": {
+        "PRM_input_tokens": 5594827,
+        "PRM_forward_seconds": 749.3566333074123,
+        "full_run_seconds": 8994.148386955261
+      }
+    }
+  },
+  "ProcessBench_counts": {
+    "B": {
+      "valid_accepted": 58,
+      "valid_total": 64,
+      "first_error_hits": 87,
+      "error_total": 128
+    },
+    "C": {
+      "valid_accepted": 56,
+      "valid_total": 64,
+      "first_error_hits": 94,
+      "error_total": 128
+    },
+    "D": {
+      "valid_accepted": 9,
+      "valid_total": 64,
+      "first_error_hits": 45,
+      "error_total": 128
+    }
+  },
+  "power_estimate": {
+    "method": "Normal approximation to a paired binary difference; assumed discordance 0.10.",
+    "two_sided_alpha": 0.05,
+    "power": 0.8,
+    "n500_MDE_pp": 3.962039811599345,
+    "n1319_MDE_pp": 2.4393911255047067,
+    "limitation": "Question-level approximation, not a guarantee of detecting small effects or seed variability."
+  },
+  "requirements": {
+    "source_url": "https://piazza.com/class/muwwwlp9vfi76w/post/61",
+    "source_title": "Project mid-term report",
+    "post_author": "Ruiyi Zhang",
+    "verified_using": "Authenticated Safari UI, original post and instructor followup",
+    "verified_date_America_Los_Angeles": "2026-11-09",
+    "deadline_local": "2026-11-09 23:59 America/Los_Angeles",
+    "submission_destination": "Gradescope",
+    "length": "around 5 pages, excluding references",
+    "required_contents": [
+      "Revised project proposal content",
+      "Detailed methods: mathematical setup, model, algorithm, theoretical analysis if any",
+      "Discussion of proposed method: novelty, advantages, limitations"
+    ],
+    "experimental_results_required": false,
+    "clarification_author": "Pengtao Xie",
+    "clarification_quote": "It's ok to not include results in the mid-term report.",
+    "specific_layout_template_stated_in_this_post": false,
+    "submitted_anything": false,
+    "started_GPU_jobs": false
+  },
+  "inputs_sha256": {
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/comparison.json": "17402d9d5ba9285d13ff36d442090aa5a6bb3aebb82370dd3a6ca974fca96097",
+    "execution/ac_seed42_v1_20261106/completed_evidence/comparison.json": "431b05b0531db577af070d193820b2b629bb9c67cfc3897c3002f9ed9069f7dc",
+    "execution/cd_prm_7b_pair_20261028/artifacts/summary.json": "eda2d3082c9fba2b56fccd45b3e62a77f85567f96a11ec164104dc7386db749f",
+    "execution/midterm_requirements_20261109/requirements.json": "e1664ee72c14704f19e02b88afad91429727758fe35d2df466fbe187e698e97a"
+  }
+}

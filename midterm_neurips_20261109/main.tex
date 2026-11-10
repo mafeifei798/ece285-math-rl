@@ -21,23 +21,23 @@
 \maketitle
 
 \begin{abstract}
-We compare outcome-only GRPO with process reward mixing for Qwen2.5-Math-1.5B. At about 6M generated tokens, outcome-only training reaches 54.00\% on MATH500 and 67.02\% on GSM8K; adding a frozen 7B PRM gives 53.80\% and 64.97\%. Neither difference is conclusive. Saved signals show PRM errors and normalization that gives low-scored wrong responses positive advantages. A bounded, correct-answer-only correction improves accuracy in two follow-up seeds, but the second has smaller, inconclusive gains. We include a matched-scorer control and distinguish signal constraints from evidence of reasoning quality.
+We compare outcome-only GRPO with process reward mixing for Qwen2.5-Math-1.5B. At about 6M generated tokens, outcome-only training reaches 54.00\% on MATH500 and 67.02\% on GSM8K; adding a frozen 7B PRM gives 53.80\% and 64.97\%. Neither difference is conclusive. Saved signals show PRM errors and normalization that gives low-scored wrong responses positive advantages. A bounded, correct-answer-only correction improves seed-17 answer accuracy. Seed 42 has smaller point gains, with both confidence intervals including zero. A matched-scorer control helps separate scorer adaptation from advantage construction.
 \end{abstract}
 
 \section{Research question and motivation}
 Final-answer verification is cheap, but cannot distinguish valid reasoning from a lucky answer. Process supervision could help, yet an imperfect score can produce a misleading update. We ask whether PRM scores remain useful after GRPO transforms them into advantages, and whether the resulting policy solves more problems correctly.
 
-Our original proposal compared PRM adaptation using successful and failed responses with adaptation using failures alone. We report that pilot alongside the policy experiments. Our contribution is a controlled reward comparison, a training-signal audit, and a bounded advantage variant. Higher answer accuracy alone does not establish more valid reasoning.
+Three findings guide the study. First, direct PRM mixing shows no clear accuracy benefit. Second, group normalization gives 577 wrong training responses positive advantages, including responses with low absolute PRM scores. Third, bounding the process correction gives promising seed-17 results, but seed 42 remains inconclusive. We also report the PRM adaptation pilot from our original proposal.
 
 \section{Related work and scope}
 GRPO learns from groups of responses without a learned critic \citep{shao2024}; LoRA reduces the trainable parameter count \citep{hu2021}. Human process supervision \citep{lightman2023} and Qwen's PRM study \citep{zhang2025} motivate step feedback, but also leave label reliability and distribution shift as concerns. ProcessBench tests first-error identification rather than only final-answer selection \citep{zheng2024}. PURE assigns min-form step credit \citep{cheng2025}; simply taking a minimum score and applying response-level GRPO, as in our B baseline, does not reproduce PURE.
 
-The closest advantage methods are PAPO, which separately normalizes process signals within correct responses \citep{tan2026}, and PROGRS, which centers process rewards within incorrect responses while retaining correct-response scores \citep{rezaei2026}. Our correction instead centers raw PRM scores only within correct responses and bounds its magnitude without a process standard deviation. PRPO also aligns process and outcome signals, at finer granularity \citep{ding2026}. These precedents limit our novelty claim to an empirical comparison and a bounded variant. Dr.~GRPO identifies length bias in response-normalized losses \citep{liu2025}; we retain that loss throughout the reported comparison, so our correction does not resolve this separate issue.
+The closest advantage methods are PAPO, which separately normalizes process signals within correct responses \citep{tan2026}, and PROGRS, whose outcome-conditioned centering subtracts the incorrect-subset mean from wrong responses and leaves correct-response scores unchanged \citep[their Eq.~(2)]{rezaei2026}. Our correction instead centers raw PRM scores only within correct responses and bounds its magnitude without a process standard deviation. PRPO also aligns process and outcome signals, at finer granularity \citep{ding2026}. Our contribution is an empirical comparison and a bounded variant of these ideas. Dr.~GRPO analyzes length bias in response-normalized losses \citep{liu2025}, which we retain.
 
 \clearpage
 \section{Rewards and policy updates}
 \subsection{Outcome verification and process scoring}
-For a problem $q$, the policy samples $G=8$ normal chain-of-thought responses. Let $v_i=1$ when response $i$ ends normally and its answer is parseable under the fixed protocol. The binary outcome reward $y_i$ is one if its final boxed answer matches the reference. Truncated or unparseable responses receive zero. For eligible responses, we split steps at canonical double line breaks, append Qwen's step marker, and read the positive-class probabilities:
+For a problem $q$, the policy samples $G=8$ chain-of-thought responses. Let $v_i=1$ when response $i$ ends normally and its answer is parseable under the fixed protocol. The binary outcome reward $y_i$ is one if its final boxed answer matches the reference. Truncated or unparseable responses receive zero. For eligible responses, we split steps at canonical double line breaks, append Qwen's step marker, and read the positive-class probabilities:
 \begin{equation}
  \widetilde m_i=\begin{cases}
  \min_{1\leq k\leq K_i}p_\phi(\mathrm{valid}\mid q,s_{i,\leq k}),&v_i=1,\\
@@ -75,10 +75,10 @@ For C-bounded, we first compute outcome advantages and then add a correction. Le
  \qquad c_i=0.2\,y_i(\widetilde m_i-\bar m_+).
  \label{eq:bounded}
 \end{equation}
-Set $c_i=0$ when $I_+$ is empty, with no normalization after addition. Since scores lie in $[0,1]$, $|c_i|\leq0.2$ and $\sum_i c_i=0$. Wrong answers cannot receive positive reward advantages; all-wrong groups have zero reward advantages, although KL may still contribute a gradient. These are algebraic properties, not a guarantee of better mathematics. The rule discards potentially useful process feedback on failed responses and changes gating, scale, and normalization together.
+Set $c_i=0$ when $I_+$ is empty, with no normalization after addition. Since scores lie in $[0,1]$, $|c_i|\leq0.2$ and $\sum_i c_i=0$. Wrong answers cannot receive positive reward advantages; all-wrong groups have zero reward advantages, although KL may still contribute a gradient. The correction therefore stays small even in homogeneous-outcome groups.
 
-\paragraph{Common training settings.}
-We use the base Qwen2.5-Math-1.5B \citep{yang2024}, rank-16 LoRA (alpha 32, dropout 0), AdamW, constant learning rate $5\times10^{-6}$, and gradient clipping at 1. Each update uses four prompts and eight responses per prompt (microbatch 1, accumulation 32). Sampling uses temperature 1, top-$p$ 1, and no top-$k$ restriction. Prompt and completion limits are each 2,048 tokens. The implementation uses TRL 0.23.1, vLLM 0.10.2, and one A100 80\,GB. Sampling importance correction is disabled; reward replay does not establish numerical identity between sampling and learning.
+\subsection{Common training settings}
+We use the base Qwen2.5-Math-1.5B \citep{yang2024}, rank-16 LoRA (alpha 32, dropout 0), AdamW, constant learning rate $5\times10^{-6}$, and gradient clipping at 1. Each update uses four prompts and eight responses per prompt (microbatch 1, accumulation 32). Sampling uses temperature 1, top-$p$ 1, and no top-$k$ restriction. Prompt and completion limits are each 2,048 tokens. The implementation uses TRL 0.23.1, vLLM 0.10.2, and one A100 80\,GB. Sampling importance correction is disabled.
 
 \clearpage
 \section{Experiments and accuracy}
@@ -99,7 +99,7 @@ GSM8K & 67.02 & 64.97 & $-2.05$ & $[-4.25,\,+0.08]$ \\
 \bottomrule
 \end{tabular}\label{tab:main}
 \end{table}
-Both intervals include zero, establishing neither benefit nor equivalence. Checks regraded all 3,638 predictions. For 7,304 scored B responses, step spans and text hashes match PRM inputs; replayed advantages match loss inputs without duplicate normalization.
+B does not show a clear benefit in this comparison. Checks regraded all 3,638 predictions. For 7,304 scored B responses, step spans and text hashes match PRM inputs; replayed advantages match loss inputs without duplicate normalization.
 
 \subsection{Adapted scorer and advantage construction: V1 comparison}
 V1 fixes 288 updates and question order within each seed. C-mix and C-bounded share the adapted scorer, isolating advantage construction. The initial model below uses V1 evaluation; it is not a matched V0 baseline.
@@ -153,53 +153,53 @@ The 0.2 factor mostly cancels. A has zero reward advantages in such groups; B st
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=\linewidth]{figures/all_wrong_advantage_ecdf.pdf}
-\caption{Matched-sample offline replay on the 1,696 responses in C-mix's 212 all-wrong groups (seed 17). We hold responses and adapted PRM scores fixed. Direct mixing gives 524 wrong responses positive advantages; C-bounded gives zero throughout. The bounded curve is a formula replay, not a separately trained policy's distribution or evidence of improved accuracy.}
+\includegraphics[width=\linewidth]{figures/b_advantage_by_group.pdf}
+\caption{Actual V0 B advantages by group type, taken from the values passed into the policy loss. All-wrong groups alone give 571 of 1,696 responses (33.7\%) positive advantages, with magnitudes comparable to the mixed groups. All curves use recorded training advantages.}
 \label{fig:advantage}
 \end{figure}
 
 \subsection{Score errors versus misleading updates}
 Positive advantages for wrong final answers are not inherently harmful: a failed response can contain useful reasoning. We therefore inspect concrete, checkable errors rather than interpreting the counts alone. One saved response reports $4\cdot6+8\cdot3-28/2=36$ and claims its code returns 36; direct evaluation gives 34. Its PRM minimum is 0.9797, but its actual advantage is $-1.072$. Here the PRM misses an error, yet the update still penalizes the response.
 
-Another response to a nine-vertex coloring problem uses node index 9, outside the valid range 0--8, and claims inconsistent counts of 132 and 12. Exhaustive enumeration of the original graph gives 54. Its minimum PRM score is only 0.0538, yet it receives advantage $+1.070$ in an all-wrong group. This shows how relative scaling can reward a clearly defective response without a high absolute score. These examples establish possible failure mechanisms, not their population frequency or causal contribution to the accuracy gap.
+Another response to a nine-vertex coloring problem uses node index 9, outside the valid range 0--8, and claims inconsistent counts of 132 and 12. Exhaustive enumeration of the original graph gives 54. Its minimum PRM score is only 0.0538, yet it receives advantage $+1.070$ in an all-wrong group. This shows how relative scaling can reward a clearly defective response without a high absolute score. 
 
 \subsection{Formatting is a separate source of error}
-On GSM8K in V0, B has fewer terminated-but-unparseable outputs than A (53 versus 89), but more parsed wrong answers (368 versus 314) and truncations (41 versus 32). Missing answers alone do not explain the lower B score. Average step counts are similar (11.917/11.899), and PRM scores do not rise monotonically; these observations do not establish reward hacking.
+On GSM8K in V0, B has fewer terminated-but-unparseable outputs than A (53 versus 89), but more parsed wrong answers (368 versus 314) and truncations (41 versus 32). Missing answers alone do not explain the lower B score. Average step counts are similar (11.917/11.899), and PRM scores do not rise monotonically.
 
-A separate rule-based MATH500 audit finds leading placeholder boxes in 8.2\% of initial-model outputs, 30.0\% of V1 A, and 63.2\% of C-bounded (seed 17). A leading placeholder is an empty/template box within the first 20 non-whitespace characters, followed by at least 100 characters of body text. This is a format shift, not evidence that the model chose an answer before reasoning. In 200 selected correct C-bounded outputs, deleting the placeholder slightly \emph{increases} the mean minimum PRM score: original minus edited is $-0.00445$ (paired 95\% interval $[-0.00890,-0.00009]$). That check does not support the simple explanation that the PRM rewards adding the placeholder.
+A separate rule-based MATH500 audit finds leading placeholder boxes in 8.2\% of initial-model outputs, 30.0\% of V1 A, and 63.2\% of C-bounded (seed 17). A leading placeholder is an empty/template box within the first 20 non-whitespace characters, followed by at least 100 characters of body text. This measures output format, not when an answer was chosen. In 200 selected correct C-bounded outputs, deleting the placeholder slightly \emph{increases} the mean minimum PRM score: original minus edited is $-0.00445$ (paired 95\% interval $[-0.00890,-0.00009]$). That check does not support the simple explanation that the PRM rewards adding the placeholder.
 
 \clearpage
 \section{PRM adaptation from the original proposal}\label{sec:adaptation}
-We carried out a paired 7B PRM pilot using 512 questions with four policy responses each, plus 2,048 shared step-label anchors (1,024 positive and 1,024 negative). C uses successful and failed responses; D uses failures alone. Both start from the same PRM, freeze the base and classification head, and train rank-8 LoRA (alpha 16) for 512 updates with the same batches, optimizer, and learning rate $2\times10^{-5}$.
+The pilot uses 512 questions with four responses each and 2,048 shared step-label anchors, balanced positive/negative. C uses successful and failed responses; D uses failures alone. Both start from the same frozen 7B PRM and train rank-8 LoRA (alpha 16) for 512 matched updates at learning rate $2\times10^{-5}$.
 
-Following LCA's pooling \citep{jia2026}, let $e_{ik}=1-p_{ik}$ and $E_i=\sum_k w_{ik}e_{ik}$, where $w_{ik}=\sg[\operatorname{softmax}_k(e_i/0.2)]$. Success and failure losses are $-\log(1-E_i)$ and $-\log E_i$, with numerical clipping. C includes both outcome-conditioned terms and balanced step-anchor cross-entropy; D omits only the success term. This is an LCA-inspired adaptation pilot, not a full reproduction; C/D name reward models, distinct from policy C-mix and C-bounded.
+Following LCA's pooling \citep{jia2026}, define $e_{ik}=1-p_{ik}$ and $E_i=\sum_k w_{ik}e_{ik}$, with detached $w_{ik}=\operatorname{softmax}_k(e_i/0.2)$. C combines $-\log(1-E_i)$ on successes, $-\log E_i$ on failures, and step-anchor cross-entropy; D removes only the success term. C/D are reward models, distinct from the policy variants C-mix/C-bounded. This pilot is not a full LCA reproduction.
 
 \begin{table}[h!]
-\caption{Fixed ProcessBench diagnostic: 64 valid and 128 invalid solutions. Acceptance means all step scores are $\geq0.5$; first-error accuracy requires the first score below 0.5 to match the label. $H$ is their harmonic mean. This selected subset is not a prevalence estimate.}
+\caption{ProcessBench diagnostic: 64 valid and 128 invalid solutions. We show counts: acceptance requires all scores $\geq0.5$; an error hit requires the first score below 0.5 to match the label. $H$ is the harmonic mean of the corresponding rates.}
 \centering\small
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
-Scorer & Valid mean min & Valid acceptance & First-error accuracy & $H$ \\
+Scorer & Valid mean min & Valid accepted & First-error hits & $H$ \\
 \midrule
-Unadapted B & 0.879 & 90.63\% & 67.97\% & 77.68\% \\
-C & 0.842 & 87.50\% & 73.44\% & 79.85\% \\
-D & 0.155 & 14.06\% & 35.16\% & 20.09\% \\
+Unadapted B & 0.879 & 58/64 & 87/128 & 77.68\% \\
+C & 0.842 & 56/64 & 94/128 & 79.85\% \\
+D & 0.155 & 9/64 & 45/128 & 20.09\% \\
 \bottomrule
 \end{tabular}\label{tab:adaptation}
 \end{table}
-D lowers scores even on human-labeled valid derivations. C preserves much more valid-solution acceptance, but direct mixing still produces wrong-positive advantages (Table~\ref{tab:followup}). D has no full policy-RL run. This single-seed diagnostic retains inherited PRM training exposure; it is not a clean held-out comparison of adaptation algorithms.
+D sharply reduces acceptance of valid derivations. C largely preserves it, although its difference from B is only two solutions. Adapting the scorer alone still leaves wrong-positive advantages under direct mixing (Table~\ref{tab:followup}). D was not used for full policy RL.
 
 \section{Costs, limitations, and remaining experiments}
 \paragraph{Resource accounting.}
-In V0, A takes 2.70 hours and B 2.22 hours; peak allocated memory is 31.60 and 44.88\,GiB, respectively. B scores another 5.28M PRM input tokens (7.72M padded), taking 593 seconds including preprocessing and transfer. Shared load prevents a speed comparison. Generation budgets exclude scoring, padding, and backward compute; these costs need separate reporting.
+V0 takes 2.70 hours for A and 2.22 for B; peak allocated memory is 31.60 and 44.88\,GiB. B scores 5.28M PRM input tokens (7.72M padded) in 593 seconds. In V1 seed 42, full A/C-bounded runs take 2.28/2.50 hours; C-bounded scores 5.59M input tokens in 749 seconds. For V1 seed 17, C-mix/C-bounded score 5.53/5.54M tokens in 1,681/2,071 seconds. Seed-17 continuation timers exclude earlier segments, so we do not present them as full-run times. PRM scoring times are included in training time; load varies on the shared GPU.
 
-\paragraph{What the results support.}
-V1 RL improves initial-model accuracy. Direct mixing shows no clear benefit; bounded gains are seed-sensitive. C-mix versus C-bounded controls the scorer, but combines gating, magnitude, and normalization changes. Two seeds cannot establish seed-level reliability. The verifier can reject equivalent answers, and accuracy does not establish process validity. Test inspection, inherited PRM exposure, and validation overlap limit generalization claims; further design must use validation only.
+\paragraph{Limits of the evidence.}
+Two training seeds do not establish reliable gains, and question-bootstrap intervals do not capture seed variation. A difference whose interval includes zero is unresolved, not evidence of equivalence. C-bounded changes gating, scale, and normalization together and discards process feedback on failed answers. Targeted cases do not estimate failure prevalence, and accuracy does not establish process validity. PRM exposure and validation overlap, response-length normalization, asymmetric seed-17 restarts, and disabled sampling correction remain limitations. Test outputs have been inspected; further design must use validation only.
 
-\paragraph{Tentative milestones.}
-By November 16, freeze evaluation code and prepare a blinded, independently checked sample of 100 derivations, stratified by method and correctness, reporting agreement and sampling weights. By November 23, subject to the shared-card budget, compare C-bounded with two seed-17 controls: shuffled within-correct PRM rankings and a centered random correction with matched magnitude. Each continues the same checkpoint for 48 updates, with matched question order and validation protocol. By November 30, repeat the more informative control with seed 42 if feasible, then finish error analysis, accuracy intervals, and separate generation/scoring cost totals. These are project targets, not course deadlines.
+\paragraph{Plan for the final report.}
+By November 16, freeze evaluation code and complete a blinded review of 100 stratified derivations, reporting reviewer agreement and sampling weights. By November 23, run two controls \emph{from the initial model}: shuffled within-correct PRM rankings and centered random corrections with matched magnitude. Each uses seed 17, V1, the same question order, and 288 updates (about 6M tokens), compared with the existing C-bounded run. Allow roughly 6--14 shared-GPU hours for both, plus evaluation; 48-update continuations will serve only as debugging checks. By November 30, finish analysis and, if resources allow, repeat the more informative control with seed 42. Dates are tentative.
 
-If real PRM rankings outperform the controls and improve independently assessed process validity without an accuracy loss, that would support a useful process signal. If controls match the gain, the likely benefit is generic signal regularization rather than PRM ranking. If accuracy or validity deteriorates, we will report that limitation rather than claim a successful repair. Code, configurations, and aggregate evidence are available in the project repository.\footnote{\url{https://github.com/mafeifei798/ece285-math-rl}}
+Full training runs test the learning procedure, but do not reduce evaluation uncertainty by themselves. With 10\% paired disagreement, a two-sided 5\% test at 80\% power needs about a 4.0-point difference on 500 questions (about 2.4 on GSM8K). Smaller effects may remain unresolved. Better accuracy and reviewed process validity than matched controls would support useful PRM feedback. Similar scores would leave the ranking contribution unresolved. Code and aggregate evidence are available online.\footnote{\url{https://github.com/mafeifei798/ece285-math-rl}}
 
 \clearpage
 \begin{thebibliography}{15}

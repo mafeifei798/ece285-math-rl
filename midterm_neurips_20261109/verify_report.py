@@ -151,12 +151,8 @@ def main():
                 for colors in product(range(3), repeat=len(graph["vertices"])))
     assert count == graph["colorings_3_colors"] == 54
     assert 4*6 + 8*3 - 28/2 == 34
-    case = read(EVIDENCE / "case_review/prm_high_wrong_review.json")["summary"]
-    assert len(case["mathematical_error_high_PRM"]) == 4
-    assert len(case["correct_math_but_boxing_or_unit_protocol"]) == 4
-    assert len(case["actual_positive_advantage_among_selected"]) == 1
     result["targeted_case_checks"] = {"graph_colorings": count, "arithmetic_value": 34,
-        "high_PRM_top10_counts_verified": True, "representative_population_labels": False}
+        "representative_population_labels": False}
 
     # Verify the seven algebraic constraints used in the brief bounded section.
     rng = random.Random(285)

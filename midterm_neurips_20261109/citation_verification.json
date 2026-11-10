@@ -73,7 +73,8 @@
       "year": 2026,
       "title": "Process Rewards for Outcome-Guided Reasoning Steps in LLM Reinforcement Learning",
       "url": "https://arxiv.org/abs/2604.02341v2",
-      "supports": "PROGRS v2 centers incorrect-subset process rewards and keeps correct ones absolute. We do not adopt its unbiased-gradient claim."
+      "supports": "PROGRS v2 Section III-A.2, Eq. (2): outcome-conditioned centering only on incorrect responses; correct responses retain absolute scores. C-bounded centers the correct subset and gives wrong responses no process correction. No unbiased-gradient claim is adopted.",
+      "additional_primary_url": "https://arxiv.org/html/2604.02341v2"
     },
     {
       "key": "shao2024",
