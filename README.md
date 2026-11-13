@@ -2,9 +2,11 @@
 
 ECE285 三人项目：用 **Qwen2.5-Math-1.5B、GRPO 和 LoRA** 比较结果奖励与过程奖励，检查 PRM 打分如何变成实际训练信号。成员按报告顺序为 **Hongyi Ding、Yang Zeng、Jasmine Jiang**。主要硬件是一张共享 A100 80GB。
 
-这是截至 **2026-11-09** 的代码与结果审阅快照。训练和推理按用户要求停止；本次同步没有使用 GPU，也不会自动恢复旧任务。
+代码与报告快照截至 **2026-11-09**；**2026-11-13** 补充了基于现有日志的长度与格式分析。历史训练停止记录保留，本次同步没有使用 GPU，也不会自动恢复旧任务。
 
 ## 阅读入口
+
+- **最新 CPU 分析**：[长度相关性与格式配对统计](execution/length_confound_audit_20261112/README.md)，含 seed17/42 汇总、脚本与复现边界。
 
 - **期中报告**：[PDF](midterm_neurips_20261109/ece285_midterm_report_20261109.pdf) · [LaTeX](midterm_neurips_20261109/main.tex) · [引用核对](midterm_neurips_20261109/citation_verification.json)
 - **当前进度**：[方案与边界](docs/CURRENT_PLAN.txt) · [机器可读状态](results/current_status.json)

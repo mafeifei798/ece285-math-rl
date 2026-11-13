@@ -1,0 +1,49 @@
+{
+  "export_date": "2026-11-13",
+  "files": [
+    {
+      "path": "execution/length_confound_audit_20261112/audit.py",
+      "source_sha256": "6ad3c4c93d7b4724facde6f3dbca34c27d55cab59c43f374f746239feff7b376",
+      "public_sha256": "6ad3c4c93d7b4724facde6f3dbca34c27d55cab59c43f374f746239feff7b376",
+      "bytes": 4888,
+      "export_changed": false
+    },
+    {
+      "path": "execution/length_confound_audit_20261112/results.json",
+      "source_sha256": "5c6591dbb72f1fd3539abc0960bf99b68ae9dcbb56329bb424ffb4c244d895bd",
+      "public_sha256": "5c6591dbb72f1fd3539abc0960bf99b68ae9dcbb56329bb424ffb4c244d895bd",
+      "bytes": 7068,
+      "export_changed": false
+    },
+    {
+      "path": "execution/length_confound_audit_20261112/format_pairs.py",
+      "source_sha256": "1a63e4c10b97096b9575b0c1ff5508807bc951817bf0e091d10f38ee94e11ba6",
+      "public_sha256": "1a63e4c10b97096b9575b0c1ff5508807bc951817bf0e091d10f38ee94e11ba6",
+      "bytes": 3508,
+      "export_changed": false
+    },
+    {
+      "path": "execution/length_confound_audit_20261112/format_pairs.json",
+      "source_sha256": "25c3761a3122e3ac7776fc3661b4a9ea67ef2225affed37d35778558e66788d0",
+      "public_sha256": "2fe712376789e6b2ff41642a39eebad5518d92ccb231c01a67df74f9b2d6f249",
+      "bytes": 8142,
+      "export_changed": true
+    },
+    {
+      "path": "execution/length_confound_audit_20261112/README.md",
+      "source_sha256": "559f88024192649d9013806d6b61d08c2fe4ce87c910238472b92a6df0409d53",
+      "public_sha256": "559f88024192649d9013806d6b61d08c2fe4ce87c910238472b92a6df0409d53",
+      "bytes": 4083,
+      "export_changed": false
+    }
+  ],
+  "transform": "Only public format_pairs.json drops response-ending examples and updates the associated limit; numerical aggregates unchanged. Source files preserved.",
+  "GPU_used": false,
+  "new_training": false,
+  "checks": {
+    "python_syntax": true,
+    "aggregate_arithmetic": true,
+    "source_input_hashes": true,
+    "public_aggregate_equality": true
+  }
+}

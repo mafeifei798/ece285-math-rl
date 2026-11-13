@@ -1,0 +1,187 @@
+{
+  "GPU_used": false,
+  "training_started": false,
+  "evaluations": {
+    "17/A/math500": {
+      "n": 500,
+      "truncated_by_finish_reason": 32,
+      "missing_box_status": 14,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 465
+    },
+    "17/A/gsm8k": {
+      "n": 1319,
+      "truncated_by_finish_reason": 33,
+      "missing_box_status": 83,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 1419
+    },
+    "17/C_bounded/math500": {
+      "n": 500,
+      "truncated_by_finish_reason": 34,
+      "missing_box_status": 25,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 694
+    },
+    "17/C_bounded/gsm8k": {
+      "n": 1319,
+      "truncated_by_finish_reason": 10,
+      "missing_box_status": 123,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 687
+    },
+    "42/A/math500": {
+      "n": 500,
+      "truncated_by_finish_reason": 42,
+      "missing_box_status": 15,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 465
+    },
+    "42/A/gsm8k": {
+      "n": 1319,
+      "truncated_by_finish_reason": 35,
+      "missing_box_status": 42,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 334
+    },
+    "42/C_bounded/math500": {
+      "n": 500,
+      "truncated_by_finish_reason": 36,
+      "missing_box_status": 17,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 603
+    },
+    "42/C_bounded/gsm8k": {
+      "n": 1319,
+      "truncated_by_finish_reason": 24,
+      "missing_box_status": 87,
+      "missing_box_nonstop": 0,
+      "missing_box_at_length_cap": 0,
+      "missing_box_max_tokens": 458
+    }
+  },
+  "signals": {
+    "17/mixed": {
+      "groups": 893,
+      "correct_rows": 3592,
+      "correct_count_histogram": {
+        "1": 107,
+        "4": 132,
+        "6": 119,
+        "7": 104,
+        "3": 164,
+        "5": 163,
+        "2": 104
+      },
+      "global_spearman": -0.43463228280313554,
+      "within_group_centered_pearson": -0.27152667829105354,
+      "within_group_rank_correlation": -0.18293679171083838,
+      "absolute_process_contribution": 148.0479437559843,
+      "length_match_feasibility_only": {
+        "1.1": {
+          "groups_with_possible_nontrivial_pair": 529,
+          "correct_rows_with_possible_partner": 1675
+        },
+        "1.25": {
+          "groups_with_possible_nontrivial_pair": 668,
+          "correct_rows_with_possible_partner": 2528
+        }
+      }
+    },
+    "17/all_correct": {
+      "groups": 41,
+      "correct_rows": 328,
+      "correct_count_histogram": {
+        "8": 41
+      },
+      "global_spearman": -0.4319870154143882,
+      "within_group_centered_pearson": -0.27984830862984555,
+      "within_group_rank_correlation": -0.22622332168200057,
+      "absolute_process_contribution": 13.431952370042382,
+      "length_match_feasibility_only": {
+        "1.1": {
+          "groups_with_possible_nontrivial_pair": 40,
+          "correct_rows_with_possible_partner": 220
+        },
+        "1.25": {
+          "groups_with_possible_nontrivial_pair": 41,
+          "correct_rows_with_possible_partner": 281
+        }
+      }
+    },
+    "42/mixed": {
+      "groups": 907,
+      "correct_rows": 3389,
+      "correct_count_histogram": {
+        "4": 141,
+        "1": 160,
+        "6": 132,
+        "7": 84,
+        "3": 115,
+        "2": 145,
+        "5": 130
+      },
+      "global_spearman": -0.49431648830535513,
+      "within_group_centered_pearson": -0.27330459203282165,
+      "within_group_rank_correlation": -0.16412337597846555,
+      "absolute_process_contribution": 134.83327777683735,
+      "length_match_feasibility_only": {
+        "1.1": {
+          "groups_with_possible_nontrivial_pair": 470,
+          "correct_rows_with_possible_partner": 1507
+        },
+        "1.25": {
+          "groups_with_possible_nontrivial_pair": 608,
+          "correct_rows_with_possible_partner": 2309
+        }
+      }
+    },
+    "42/all_correct": {
+      "groups": 39,
+      "correct_rows": 312,
+      "correct_count_histogram": {
+        "8": 39
+      },
+      "global_spearman": -0.47885312449362555,
+      "within_group_centered_pearson": -0.35318640483616626,
+      "within_group_rank_correlation": -0.25572870121185703,
+      "absolute_process_contribution": 11.3044942588931,
+      "length_match_feasibility_only": {
+        "1.1": {
+          "groups_with_possible_nontrivial_pair": 39,
+          "correct_rows_with_possible_partner": 216
+        },
+        "1.25": {
+          "groups_with_possible_nontrivial_pair": 39,
+          "correct_rows_with_possible_partner": 274
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/math500.jsonl": "f937529b292edbcfc39bd5ee1fa0525666aa9c161f6acd5b339156e74312b71a",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/gsm8k.jsonl": "05c1a8707547722edd00f6f24bc2565995e28d6d320f3466b9aad498edbc2437",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/math500.jsonl": "7bd8fa1e0d162c9e99c5a25e90612427849a2f8ed3b85cdda2915d1f6f53f971",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl": "2c9f1f078c766b1ca23247e34161423388ff27c7e92d6a056da0a2c7d106318b",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/C_bounded/compact_signals.jsonl": "6d6b6c6ec36568e98662c85a1cdd11545561aaa0244f8c4d32e00e9a06b7d12e",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/math500.jsonl": "50c7692d2ab20cdb82ced657f45f7d2d43524f6feda7c04a22a80166e3827cd3",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/gsm8k.jsonl": "39baf12538fd2e9afa2c31b66a498286c544ce810d3a969585bdca62b23b9d7f",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/math500.jsonl": "314685d0a18fd7dff74deea97c2bd1567aa479886689682ab9d0fc034c98496b",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl": "5b26f21b5a408fc3c2ae8dd173d59b33e1c24b4569cc00f9b60a875b419d8434",
+    "execution/ac_seed42_v1_20261106/completed_evidence/C_bounded/compact_signals.jsonl": "5080e1428e03e32a3b08afc48bf179df226837c96e45863bfac8bda4f4870ff5"
+  },
+  "limits": [
+    "Associations are descriptive and conditional on answer correctness; not causal process validity.",
+    "No significance test treating responses or pairs as independent; repeated problems and policy updates are dependent.",
+    "Length ratios are illustrative feasibility checks, not selected training thresholds or a disjoint permutation algorithm.",
+    "Marginal and within-group correlations cannot exclude nonlinear or format/step-count confounding.",
+    "Frozen verifier statuses are read unchanged, not newly graded."
+  ]
+}

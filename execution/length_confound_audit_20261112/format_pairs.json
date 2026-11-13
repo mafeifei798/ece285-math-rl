@@ -1,0 +1,272 @@
+{
+  "GPU_used": false,
+  "regraded": false,
+  "strata": {
+    "17/math500": {
+      "A_eligible=True/C_eligible=True": {
+        "n": 419,
+        "A_correct": 254,
+        "C_correct": 280,
+        "C_wins": 45,
+        "C_losses": 19,
+        "net_C_minus_A": 26,
+        "delta_pp_within_stratum": 6.205250596658711,
+        "contribution_pp_full_dataset": 5.2
+      },
+      "A_eligible=False/C_eligible=True": {
+        "n": 22,
+        "A_correct": 0,
+        "C_correct": 9,
+        "C_wins": 9,
+        "C_losses": 0,
+        "net_C_minus_A": 9,
+        "delta_pp_within_stratum": 40.90909090909091,
+        "contribution_pp_full_dataset": 1.8
+      },
+      "A_eligible=False/C_eligible=False": {
+        "n": 24,
+        "A_correct": 0,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 0,
+        "net_C_minus_A": 0,
+        "delta_pp_within_stratum": 0.0,
+        "contribution_pp_full_dataset": 0.0
+      },
+      "A_eligible=True/C_eligible=False": {
+        "n": 35,
+        "A_correct": 11,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 11,
+        "net_C_minus_A": -11,
+        "delta_pp_within_stratum": -31.428571428571427,
+        "contribution_pp_full_dataset": -2.2
+      }
+    },
+    "17/gsm8k": {
+      "A_eligible=False/C_eligible=True": {
+        "n": 43,
+        "A_correct": 0,
+        "C_correct": 26,
+        "C_wins": 26,
+        "C_losses": 0,
+        "net_C_minus_A": 26,
+        "delta_pp_within_stratum": 60.46511627906977,
+        "contribution_pp_full_dataset": 1.9711902956785443
+      },
+      "A_eligible=True/C_eligible=True": {
+        "n": 1143,
+        "A_correct": 846,
+        "C_correct": 889,
+        "C_wins": 85,
+        "C_losses": 42,
+        "net_C_minus_A": 43,
+        "delta_pp_within_stratum": 3.7620297462817147,
+        "contribution_pp_full_dataset": 3.2600454890068233
+      },
+      "A_eligible=True/C_eligible=False": {
+        "n": 60,
+        "A_correct": 36,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 36,
+        "net_C_minus_A": -36,
+        "delta_pp_within_stratum": -60.0,
+        "contribution_pp_full_dataset": -2.7293404094010616
+      },
+      "A_eligible=False/C_eligible=False": {
+        "n": 73,
+        "A_correct": 0,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 0,
+        "net_C_minus_A": 0,
+        "delta_pp_within_stratum": 0.0,
+        "contribution_pp_full_dataset": 0.0
+      }
+    },
+    "42/math500": {
+      "A_eligible=True/C_eligible=True": {
+        "n": 418,
+        "A_correct": 255,
+        "C_correct": 263,
+        "C_wins": 24,
+        "C_losses": 16,
+        "net_C_minus_A": 8,
+        "delta_pp_within_stratum": 1.9138755980861244,
+        "contribution_pp_full_dataset": 1.6
+      },
+      "A_eligible=True/C_eligible=False": {
+        "n": 25,
+        "A_correct": 9,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 9,
+        "net_C_minus_A": -9,
+        "delta_pp_within_stratum": -36.0,
+        "contribution_pp_full_dataset": -1.8
+      },
+      "A_eligible=False/C_eligible=False": {
+        "n": 28,
+        "A_correct": 0,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 0,
+        "net_C_minus_A": 0,
+        "delta_pp_within_stratum": 0.0,
+        "contribution_pp_full_dataset": 0.0
+      },
+      "A_eligible=False/C_eligible=True": {
+        "n": 29,
+        "A_correct": 0,
+        "C_correct": 11,
+        "C_wins": 11,
+        "C_losses": 0,
+        "net_C_minus_A": 11,
+        "delta_pp_within_stratum": 37.93103448275862,
+        "contribution_pp_full_dataset": 2.2
+      }
+    },
+    "42/gsm8k": {
+      "A_eligible=True/C_eligible=True": {
+        "n": 1178,
+        "A_correct": 849,
+        "C_correct": 879,
+        "C_wins": 74,
+        "C_losses": 44,
+        "net_C_minus_A": 30,
+        "delta_pp_within_stratum": 2.5466893039049237,
+        "contribution_pp_full_dataset": 2.274450341167551
+      },
+      "A_eligible=False/C_eligible=True": {
+        "n": 30,
+        "A_correct": 0,
+        "C_correct": 17,
+        "C_wins": 17,
+        "C_losses": 0,
+        "net_C_minus_A": 17,
+        "delta_pp_within_stratum": 56.666666666666664,
+        "contribution_pp_full_dataset": 1.288855193328279
+      },
+      "A_eligible=True/C_eligible=False": {
+        "n": 64,
+        "A_correct": 41,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 41,
+        "net_C_minus_A": -41,
+        "delta_pp_within_stratum": -64.0625,
+        "contribution_pp_full_dataset": -3.10841546626232
+      },
+      "A_eligible=False/C_eligible=False": {
+        "n": 47,
+        "A_correct": 0,
+        "C_correct": 0,
+        "C_wins": 0,
+        "C_losses": 0,
+        "net_C_minus_A": 0,
+        "delta_pp_within_stratum": 0.0,
+        "contribution_pp_full_dataset": 0.0
+      }
+    }
+  },
+  "missing_details": {
+    "17/A/math500": {
+      "n": 14,
+      "first_placeholder": 13,
+      "finish_reasons": {
+        "stop": 14
+      },
+      "last_token_ids": {
+        "151643": 14
+      }
+    },
+    "17/C_bounded/math500": {
+      "n": 25,
+      "first_placeholder": 25,
+      "finish_reasons": {
+        "stop": 25
+      },
+      "last_token_ids": {
+        "151643": 25
+      }
+    },
+    "17/A/gsm8k": {
+      "n": 83,
+      "first_placeholder": 83,
+      "finish_reasons": {
+        "stop": 83
+      },
+      "last_token_ids": {
+        "151643": 83
+      }
+    },
+    "17/C_bounded/gsm8k": {
+      "n": 123,
+      "first_placeholder": 122,
+      "finish_reasons": {
+        "stop": 123
+      },
+      "last_token_ids": {
+        "151643": 123
+      }
+    },
+    "42/A/math500": {
+      "n": 15,
+      "first_placeholder": 14,
+      "finish_reasons": {
+        "stop": 15
+      },
+      "last_token_ids": {
+        "151643": 15
+      }
+    },
+    "42/C_bounded/math500": {
+      "n": 17,
+      "first_placeholder": 17,
+      "finish_reasons": {
+        "stop": 17
+      },
+      "last_token_ids": {
+        "151643": 17
+      }
+    },
+    "42/A/gsm8k": {
+      "n": 42,
+      "first_placeholder": 41,
+      "finish_reasons": {
+        "stop": 42
+      },
+      "last_token_ids": {
+        "151643": 42
+      }
+    },
+    "42/C_bounded/gsm8k": {
+      "n": 87,
+      "first_placeholder": 87,
+      "finish_reasons": {
+        "stop": 87
+      },
+      "last_token_ids": {
+        "151643": 87
+      }
+    }
+  },
+  "eligibility": "stop plus final complete nonempty box <=2048 chars, exactly the verifier pre-equivalence gate; does not require correct or symbolically parseable",
+  "limits": [
+    "Post-treatment selection: strata do not establish a causal effect of fixing output format.",
+    "Counts use original correctness labels, not relaxed extraction."
+  ],
+  "inputs_sha256": {
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/math500.jsonl": "f937529b292edbcfc39bd5ee1fa0525666aa9c161f6acd5b339156e74312b71a",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/math500.jsonl": "7bd8fa1e0d162c9e99c5a25e90612427849a2f8ed3b85cdda2915d1f6f53f971",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/A/gsm8k.jsonl": "05c1a8707547722edd00f6f24bc2565995e28d6d320f3466b9aad498edbc2437",
+    "execution/abc_seed17_resumed_v1_20261104/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl": "2c9f1f078c766b1ca23247e34161423388ff27c7e92d6a056da0a2c7d106318b",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/math500.jsonl": "50c7692d2ab20cdb82ced657f45f7d2d43524f6feda7c04a22a80166e3827cd3",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/math500.jsonl": "314685d0a18fd7dff74deea97c2bd1567aa479886689682ab9d0fc034c98496b",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/A/gsm8k.jsonl": "39baf12538fd2e9afa2c31b66a498286c544ce810d3a969585bdca62b23b9d7f",
+    "execution/ac_seed42_v1_20261106/completed_evidence/evaluation/288/C_bounded/gsm8k.jsonl": "5b26f21b5a408fc3c2ae8dd173d59b33e1c24b4569cc00f9b60a875b419d8434"
+  },
+  "public_export": "Response-ending snippets omitted; numerical aggregates unchanged."
+}
